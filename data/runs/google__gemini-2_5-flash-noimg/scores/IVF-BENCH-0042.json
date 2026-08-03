@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided 0DD grade as very poor-quality blastocyst with absent/degenerative ICM and TE, but overstates image-based morphology despite no image being available and includes a likely imprecise explanation of expansion '0' as early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, BMI, prior cycle, sperm quality, and endometrium well with embryo prognosis, though some links (e.g., PCOS and subtle oocyte quality issues) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is clear and internally consistent: extremely poor embryo morphology drives the poor prognosis despite favorable patient factors. Minor issue is treating the embryo as essentially non-viable with very strong certainty from grading alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner-based interpretation and general IVF practice, but recommending strongly against transfer and calling the embryo non-viable is stronger than typical guideline-based counseling; routine PGT-A/DHEA suggestions are not strongly guideline-driven in this young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, lab review, sperm DNA fragmentation consideration, protocol review, and lifestyle/metabolic optimization. Some recommendations are broad or lower-evidence, but overall useful."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014727,
+  "judge_latency_ms": 4623.9396250020945,
+  "judge_prompt_tokens": 3109,
+  "judge_completion_tokens": 360
+}

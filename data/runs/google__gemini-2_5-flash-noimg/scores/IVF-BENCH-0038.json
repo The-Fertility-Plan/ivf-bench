@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 2BA components, but no image was available and it incorrectly labels stage 2 as 'full blastocyst'; otherwise avoids major fabrication."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, diagnosis, prior failed cycles, sperm parameters, endometrium, ovarian response, and lifestyle with embryo quality in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and probability estimate is tied to favorable age/endometrium versus prior failures, though some speculative causes of failure are presented without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and uterine evaluation, but recommendations for ERA, NK/immunologic testing, endometrial scratch, and routine PGT-A after two failures are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current transfer and contingency planning, though several suggested tests/interventions are controversial and would need stronger qualification."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013695,
+  "judge_latency_ms": 3640.8272920016316,
+  "judge_prompt_tokens": 3200,
+  "judge_completion_tokens": 273
+}

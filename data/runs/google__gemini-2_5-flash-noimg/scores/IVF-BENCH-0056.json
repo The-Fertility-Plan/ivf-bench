@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets ICM A and TE C from the provided grade, but it misstates Gardner expansion 2 as a 'full blastocyst' and adds positive appearance claims despite no image being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm, BMI, smoking, and endometrium with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and consistent, but the implantation estimate appears optimistic for a day-5 2AC embryo with TE C and smoking, and it overinterprets endometrial thickness as 'highly receptive.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET, smoking cessation, and lifestyle optimization are guideline-consistent, but recommending PGT-A in a 32-year-old after a single failed transfer is not routine and the morphology interpretation of stage 2 is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, counseling, luteal support, and future lifestyle optimization, though some recommendations remain generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013887,
+  "judge_latency_ms": 3701.22983300098,
+  "judge_prompt_tokens": 3009,
+  "judge_completion_tokens": 324
+}

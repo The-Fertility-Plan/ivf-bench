@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly uses the provided 2BA data and appropriately notes no image was available, but it misstates/creates ambiguity around expansion by calling stage 2 'blastocoel fills the embryo completely' and labels the embryo 'high-quality' somewhat strongly for a day-5 2BA without image-based detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior failed cycles, male-factor context, sperm parameters, endometrial thickness, and ovarian response with embryo quality in a clinically meaningful way, though some inferences (e.g., DFI/endometrial receptivity) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, and the implantation estimate is tied to age, morphology, and prior failures; however, there are minor issues such as overcalling RIF after only two failed cycles and some unsupported causal assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: calling two failed cycles RIF, suggesting ERA/immunologic testing relatively early, and recommending aggressive luteal support/advanced sperm selection without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for proceeding with transfer and contingency planning, including sperm DNA fragmentation testing and future evaluation, though some suggestions are more aggressive than standard practice."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01356,
+  "judge_latency_ms": 4435.696334003296,
+  "judge_prompt_tokens": 2685,
+  "judge_completion_tokens": 367
+}

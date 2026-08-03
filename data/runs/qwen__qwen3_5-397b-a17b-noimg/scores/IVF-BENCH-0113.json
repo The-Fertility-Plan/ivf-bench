@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0113",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately notes that no image was available and bases comments on the Gardner score, with generally accurate ICM/TE interpretation. However, it incorrectly labels stage 3 as 'expanded blastocyst' with thinning zona; in standard Gardner grading, 3 is full blastocyst, while expanded/thinning zona is stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, prior live birth, PCOS, endometrial thickness, sperm parameters, BMI/lifestyle, and ovarian response with embryo quality in a clinically meaningful way. It misses AMH because unavailable and slightly overinterprets low yield as possible DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall reasoning is logical and structured, and the implantation estimate is tied to embryo grade, age, and prior live birth. Minor issues include the grading-stage inconsistency and some speculative statements about protocol choice and ovarian reserve."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including single embryo transfer and consideration of PGT-A after failure. However, the Gardner stage interpretation is inaccurate, assisted hatching is presented somewhat loosely, and recommending PGT-A as 'highly recommended' after one failure at age 36 is stronger than guideline-based consensus."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including eSET, luteal support, metabolic assessment, protocol review, and male factor optimization. Some suggestions are somewhat speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014121,
+  "judge_latency_ms": 4289.806665998185,
+  "judge_prompt_tokens": 2732,
+  "judge_completion_tokens": 395
+}

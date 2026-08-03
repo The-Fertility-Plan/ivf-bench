@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner grade 1DD as poor-quality blastocyst with absent/degenerative ICM and TE, but overstates certainty by calling it non-viable and references image-based features despite no image being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, endometrium, prior live birth, recurrent ectopics, smoking, alcohol use, prior IVF history, and sperm parameters with prognosis, though some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and consistent: very poor morphology drives low implantation estimate despite favorable age/endometrium. Minor issue is excessive certainty that the embryo is definitively non-viable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading and general IVF counseling, but a strong recommendation against transfer based solely on 1DD is more absolute than typical guideline-based counseling, and PGT-A suggestion in a 29-year-old with low embryo yield is not well nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including counseling, lifestyle modification, ectopic workup, protocol review, and psychological support. Some recommendations are useful but a few are broad or not tightly tailored to this exact low-yield case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014286,
+  "judge_latency_ms": 3992.958875001932,
+  "judge_prompt_tokens": 2992,
+  "judge_completion_tokens": 354
+}

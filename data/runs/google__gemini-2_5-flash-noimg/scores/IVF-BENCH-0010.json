@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets ICM B and TE A, but misstates Gardner expansion 2 as a full blastocyst; stage 2 is an early blastocyst, and without an image it also adds unsupported discussion about appearance and development timing."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, ovarian response, sperm parameters, endometrial thickness, and prior cycle history reasonably well, though AMH is unavailable and some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but it contains a notable inconsistency around embryo stage/day by treating the 2BA as a full blastocyst and speculating extensively about an unusual day-4 blastocyst transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are guideline-consistent, but the grading interpretation is incorrect and suggestions like ERA, adjunct supplements, and concern about rapid day-4 blastocyst/aneuploidy are not strongly guideline-based for this first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including SET, luteal support, lifestyle optimization, and endometriosis review, though some recommendations are broader than necessary for a first transfer."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015165,
+  "judge_latency_ms": 4327.248417001101,
+  "judge_prompt_tokens": 3285,
+  "judge_completion_tokens": 354
+}

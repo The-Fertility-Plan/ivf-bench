@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately notes that no image was available and bases comments on the provided Gardner score, but it misstates/overstates some grading details: 3AB is not clearly 'high-quality/top-tier,' and the TE description given ('few cells forming a loose epithelium') is closer to C than classic B by Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of maternal age, prior miscarriage/failed cycles, endometrial thickness, ovarian response, paternal age, and semen parameters with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and well-structured, with probability estimates tied to age-related aneuploidy risk and prior history; minor issue is some overconfidence in morphology labels and assumptions around TE grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based, but includes some recommendations that are more controversial or not routinely guideline-supported for this scenario (e.g., broad thrombophilia workup after a single miscarriage, ERA, TESE based on age/SDF concerns alone, strong endorsement of PGT-A)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, monitoring, and future planning, though some suggestions are broader than necessary and a few are not universally recommended."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013161,
+  "judge_latency_ms": 5147.401374997571,
+  "judge_prompt_tokens": 2747,
+  "judge_completion_tokens": 328
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately limits analysis to the reported 1DD grade and correctly interprets D/D as degenerative or absent, but it overstates non-viability, incorrectly says stage 1 means blastocoel less than 50% despite the provided descriptor saying at least half, and adds no image-based features were available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior outcomes, sperm motility/paternal age, endometrium, and lifestyle with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the poor morphology, but there are notable issues: contradiction around expansion stage interpretation, certainty of 'non-viable' from morphology alone, and some overreach in attributing cause to aneuploidy or lab issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of very poor prognosis are aligned, but recommending routine PGT-A as strongly indicated and declaring transfer medically futile/discard-level based on morphology alone are stronger than guideline-supported evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps including counseling, record review, consideration of sperm DNA fragmentation testing, and future cycle planning, though the recommendation to cancel transfer is somewhat overly absolute."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012936,
+  "judge_latency_ms": 4561.2710839996,
+  "judge_prompt_tokens": 2492,
+  "judge_completion_tokens": 364
+}

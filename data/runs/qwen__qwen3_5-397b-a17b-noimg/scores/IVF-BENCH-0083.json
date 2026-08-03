@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0083",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately interprets the provided Gardner 4AB data, including hatching status and strong ICM; however, no image was available and it repeats a slight inconsistency by calling TE grade B while describing 'few cells forming a loose epithelium,' which is closer to a weaker TE description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of maternal age, prior miscarriage, ovarian response, tubal factor diagnosis, endometrial thickness, paternal age, and sperm parameters with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and well-structured, with probability estimates tied to age-related aneuploidy and morphology; minor issue is some overinterpretation of AMH/oocyte yield discrepancy and TE wording."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with Gardner grading principles and standard IVF counseling regarding age-related aneuploidy, miscarriage risk, and proceeding with transfer; slight deviations include speculative comments about protocol adequacy and paternal DNA fragmentation without supporting testing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides useful immediate advice to proceed with transfer and ensure luteal support, but the recommendations are incomplete/truncated and lack fuller future-cycle planning details."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.011679,
+  "judge_latency_ms": 3758.8704169975244,
+  "judge_prompt_tokens": 2313,
+  "judge_completion_tokens": 316
+}

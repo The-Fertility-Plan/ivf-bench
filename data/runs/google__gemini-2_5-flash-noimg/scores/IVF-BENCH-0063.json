@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 3AB data appropriately and notes no image was available, but repeats an incorrect TE description from the prompt ('few cells forming a loose epithelium' is closer to C than B) and cannot truly assess image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, uterine factor, prior failed cycles, sperm parameters, endometrium, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable discussion of competing favorable and unfavorable factors; minor issues include somewhat optimistic framing and reliance on uncertain assumptions about uterine factor severity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice and Gardner grading, but recommendations such as ERA/EMMA/ALICE, assisted hatching, and broad PGT-A endorsement after two failures are more controversial and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for uterine evaluation, transfer preparation, and future-cycle planning, though some recommendations are broad or contingent on missing details."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014829,
+  "judge_latency_ms": 3692.6117499970132,
+  "judge_prompt_tokens": 3353,
+  "judge_completion_tokens": 318
+}

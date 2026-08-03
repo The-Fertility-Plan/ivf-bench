@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly interprets AA ICM/TE quality from the provided Gardner components, but it inaccurately states that score 2 means a full blastocyst and treats the embryo as a blastocyst despite the transfer being listed as Day 4. It also cannot assess image-specific features such as zona pellucida or overall appearance because no image was provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior IVF outcomes, male factor, sperm parameters, endometrium, and lifestyle risks, and relates them to prognosis. Some interpretations are a bit overstated, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but there are notable issues: misclassification of Gardner stage 2, tension between calling the embryo 'among the best grades' and then substantially lowering prognosis, and speculative claims about Day 4 blastocyst timing and underlying causes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-consistent, such as SET, smoking/alcohol cessation, and uterine evaluation after repeated failures. However, ERA is not routinely recommended, immunologic testing is weakly supported, thrombophilia screening is not universally indicated after a single miscarriage, and strong endorsement of PGT-A in a 32-year-old is more debatable than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current transfer and future planning, including lifestyle modification, luteal support, SET, and further workup if unsuccessful. Some recommendations are somewhat generic or controversial, but they are still practical and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015888,
+  "judge_latency_ms": 5261.073458001192,
+  "judge_prompt_tokens": 3166,
+  "judge_completion_tokens": 426
+}

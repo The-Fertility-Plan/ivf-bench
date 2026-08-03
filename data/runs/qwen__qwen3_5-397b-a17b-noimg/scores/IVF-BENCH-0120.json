@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0120",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately interprets the provided Gardner 4AA description, including strong ICM and TE quality and expanded/hatching status. Minor issue: it conflates stage 4 with hatching, whereas true hatching is stage 5, though the lab text itself was mixed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, ovarian reserve, tubal factor diagnosis, endometrial thickness, prior IVF outcomes, paternal age, and semen parameters with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, especially in adjusting prognosis downward for prior failures despite excellent morphology. Minor overreach in labeling this as RIF/RPL and in some causal inferences about male factor/aneuploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based on embryo grading, eSET, and avoiding empiric immunotherapy, but includes some less guideline-supported suggestions or framing (ERA, inherited thrombophilia workup after one miscarriage, 'mandatory' eSET, TESE based on SDF)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management and contingency planning, including luteal support review, selective thrombophilia evaluation, PGT-A discussion, sperm DNA fragmentation testing, and uterine assessment. Some recommendations are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013506,
+  "judge_latency_ms": 4040.414333998342,
+  "judge_prompt_tokens": 2787,
+  "judge_completion_tokens": 343
+}

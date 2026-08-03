@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3BA data, correctly identifies ICM B and TE A, but inaccurately interprets expansion 3 as having thinning zona/ready to hatch; thinning zona is more characteristic of expanded blastocyst stage 4, and no image-specific features could be verified."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, tubal factor diagnosis, sperm parameters, BMI, endometrium, and prior cycle reasonably well with embryo quality, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and structured, with conclusions generally supported by the case data; minor issues include overstatement of embryo quality as 'top-tier' and somewhat optimistic probability estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognosis, but includes weaker-evidence recommendations such as ERA after two failures and relatively early PGT-A suggestion at age 33 after one failed cycle; also contains a grading-stage inaccuracy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and contingency planning, including SET and luteal support, though some future recommendations are broader and not all are strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012639,
+  "judge_latency_ms": 3980.602583003929,
+  "judge_prompt_tokens": 2643,
+  "judge_completion_tokens": 314
+}

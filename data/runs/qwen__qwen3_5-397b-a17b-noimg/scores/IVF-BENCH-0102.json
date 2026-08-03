@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0102",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "No image was available, and the response appropriately states this. It accurately interprets the provided Gardner 3AA data, including strong ICM and TE and thinning zona, though it overstates 3AA as unequivocally 'highest' quality and calls stage 3 'fully expanded/top-tier' rather than simply expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, PCOS/high AMH response, BMI, prior failed cycles, endometrial thickness, sperm parameters, and lifestyle factors with embryo morphology and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to morphology, age, and prior failures. Minor issues include somewhat inflated baseline implantation assumptions and labeling 3 prior failed cycles as RIF without transfer-count detail."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is guideline-consistent (age-related euploidy concerns, OHSS risk in PCOS, consideration of freeze-all, chronic endometritis workup), but some recommendations are weakly supported or controversial, such as aspirin, NK-cell testing, MTHFR testing, and ERA framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for fresh transfer risk assessment, luteal support, possible freeze-all, and future workup/planning. It is useful and fairly specific, though some suggested adjuncts are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013908,
+  "judge_latency_ms": 4322.2409170048195,
+  "judge_prompt_tokens": 2791,
+  "judge_completion_tokens": 369
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets 0DD as very poor morphology with deficient ICM and TE, but there was no image to assess and it makes overconfident claims such as 'non-viable' and discusses developmental delay from Day 4 in a way that is not morphologically grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior live birth, male factor, sperm parameters, endometrium, and lifestyle reasonably well, though it overstates FSH as a strong ovarian reserve marker and does not fully nuance how embryo quality can dominate prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and consistent, but it contains notable issues: calling a Day 4 early blastocyst 'delayed' is questionable, and concluding the embryo is essentially certainly non-viable goes beyond the evidence from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner descriptors is broadly correct, but recommending against transfer/discard solely on a poor morphology grade is too absolute and not well aligned with evidence-based caution, especially without image review or broader cycle context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as counseling, reviewing lab conditions, considering PGT-A, and maintaining protocol, but the transfer recommendation is overly rigid and lacks nuanced alternatives or acknowledgment of context-dependent decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014358,
+  "judge_latency_ms": 4347.3696669971105,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 366
+}

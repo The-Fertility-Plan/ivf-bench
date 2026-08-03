@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 3AA components, but no image was available and it repeats a likely inconsistency by calling stage 3 'expanded blastocyst with thinning zona' rather than noting stage 3 is typically full blastocyst while expanded is stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, endometrium, sperm, BMI, and cycle response well with embryo quality, though some links are somewhat generalized and diagnosis remains nonspecific."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and internally consistent, with conclusions generally supported by the data; minor issue is overconfidence around prognosis and the day-4/stage-3 blastocyst interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice such as SET and luteal support, but it blurs Gardner staging terminology and gives a somewhat high implantation estimate; PGT-A suggestion is acceptable but somewhat broad."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, monitoring, SET, luteal support, and future planning, though recommendations are somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.013278,
+  "judge_latency_ms": 3534.03166699718,
+  "judge_prompt_tokens": 2891,
+  "judge_completion_tokens": 307
+}

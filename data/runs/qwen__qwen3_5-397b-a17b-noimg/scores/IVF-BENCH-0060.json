@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately notes that no image was provided and bases morphology on the reported 3AA grade, accurately describing expansion, ICM, and TE from the metadata. However, it overstates 3AA as the 'highest tier' and adds unsupported claims such as no fragmentation/degeneration and euploid competence."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian reserve, BMI, prior IVF outcomes, ectopic history, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way. It misses some nuance around whether two prior cycles truly constitute implantation failure and may overemphasize stress."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: calling 3AA the highest tier, labeling two prior cycles as recurrent implantation failure, and using ectopic history to reduce implantation probability in a somewhat imprecise way. The probability estimate is plausible but not fully well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice (single blastocyst transfer, luteal support, early ectopic surveillance, tubal review if indicated). However, recommending ERA and PGT-A in a 25-year-old with unexplained infertility is not strongly guideline-supported, and morphology should not be equated with euploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for the current transfer and future workup, including luteal support, early beta-hCG/scan, tubal assessment, BMI optimization, and sperm DNA fragmentation testing. Some recommendations are more speculative than necessary, but overall they are practical."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014457,
+  "judge_latency_ms": 4321.510708999995,
+  "judge_prompt_tokens": 2689,
+  "judge_completion_tokens": 426
+}

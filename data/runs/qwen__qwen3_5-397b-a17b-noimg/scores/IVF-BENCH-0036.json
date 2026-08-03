@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It appropriately notes no image was available and uses the provided grade, but it misinterprets Gardner expansion '0' as no blastocoel rather than the prompt's stated early blastocyst with blastocoel less than half the embryo, leading to an inaccurate morphology conclusion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, DOR, prior live birth, sperm parameters, endometrial thickness, BMI, and lifestyle factors with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and internally mostly consistent, but the core reasoning is weakened by the incorrect interpretation of the embryo grade, which drives an overly pessimistic prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but there are deviations: nonstandard handling of the 0DD notation, overstatement that transfer is not clinically supported, and recommendations such as routine PGT-A/GH/DHEA are stronger than guideline-based evidence would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps such as verifying the embryo grade, counseling, considering other embryos, reviewing protocol, and male factor workup; however, some recommendations are too definitive given the uncertain grading interpretation."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013305,
+  "judge_latency_ms": 3957.5282500009052,
+  "judge_prompt_tokens": 2695,
+  "judge_completion_tokens": 348
+}

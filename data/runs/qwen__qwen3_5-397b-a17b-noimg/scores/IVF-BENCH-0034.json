@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Appropriately notes no image was available and relies on the Gardner score; correctly identifies D-grade ICM and TE as degenerative/absent, but overstates certainty by calling the embryo definitively non-viable and highlights a stage-description inconsistency without resolving it."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, PCOS, ovarian response, sperm concentration/motility, paternal age, endometrium, BMI, and lifestyle with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and structured, with the very poor morphology driving the low prognosis; minor issues include treating 1DD as categorically non-viable and inferring too much from a Day 4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading and general IVF practice, but recommendations such as 'do not transfer' and 'ICSI is mandatory' are stronger than guideline-based evidence supports, and routine PGT-A recommendation is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current-cycle decision-making and future planning, including male-factor workup, culture strategy, and lifestyle optimization, though some recommendations lack nuance or flexibility."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012885,
+  "judge_latency_ms": 3860.8570830037934,
+  "judge_prompt_tokens": 2655,
+  "judge_completion_tokens": 328
+}

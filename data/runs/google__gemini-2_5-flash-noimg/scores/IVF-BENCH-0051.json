@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 3AB data appropriately and avoids image fabrication, but repeats an inaccurate descriptor by calling stage 3 'expanded blastocyst' and describes TE as 'few cells forming a loose epithelium,' which is closer to C than classic B."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, tubal factor diagnosis, prior IVF failures, sperm quality, endometrium, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable adjustment of prognosis for prior failed cycles, though some inferences about implantation failure causes and lifestyle impact are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and uterine evaluation after repeated failure, but overstates support for ERA and especially PGT-A as a high-priority next step in a 30-year-old with limited embryo numbers; selective immune testing is also weakly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, luteal support, uterine assessment, and counseling, though some recommendations are broader than guideline-supported."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014958,
+  "judge_latency_ms": 3772.8540829994017,
+  "judge_prompt_tokens": 3316,
+  "judge_completion_tokens": 334
+}

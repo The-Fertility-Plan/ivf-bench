@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 1DD grade as poor-quality blastocyst with absent/degenerative ICM and TE, but no image was available and it overstates viability as definitively non-viable; also does not address image-specific features such as zona or overall appearance beyond the grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, tubal factor, endometrium, semen parameters, and first-cycle status well, and appropriately contrasts favorable prognosis factors with poor embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and largely consistent: severe embryo morphology drives prognosis despite favorable patient factors. Minor issues include treating 1DD as essentially non-viable and discussing Day-4/extended culture somewhat inconsistently."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing very poor prognosis for a DD embryo, but 'strong recommendation against transfer' and 'discard the embryo' are more absolute than guideline-based counseling would usually support; PGT-A suggestion in a 25-year-old is also somewhat overextended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points, review of fertilization/development, consideration of sperm DNA fragmentation, and future cycle planning. Some recommendations are useful but a bit too categorical for the current transfer decision."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013452,
+  "judge_latency_ms": 4893.444291999913,
+  "judge_prompt_tokens": 2784,
+  "judge_completion_tokens": 340
+}

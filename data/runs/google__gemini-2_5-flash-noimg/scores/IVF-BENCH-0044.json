@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies on the provided Gardner grade rather than an image and contains a notable grading error: it interprets expansion 2 as a full blastocyst, whereas in standard Gardner criteria full blastocyst is stage 3. It accurately reflects the supplied ICM A and TE B descriptors but overstates image-based morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, especially maternal age, ovarian reserve, tubal factor, prior miscarriage, endometrium, and sperm parameters, and connects them to prognosis. Minor overreach occurs when implying ovarian reserve suggests better oocyte quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with age-driven aneuploidy risk appropriately emphasized. The main weakness is that the implantation estimate may be somewhat optimistic for a 40-year-old with an untested day-5 2AB embryo and is partly based on the expansion-stage misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET consideration and counseling about age-related aneuploidy. However, the Gardner staging explanation is inaccurate, and suggestions such as ERA for failed euploid transfers are more controversial and not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for the current transfer and future planning, including counseling, luteal support, and consideration of PGT-A or embryo banking. It is useful clinically, though some recommendations remain somewhat generic rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.015066,
+  "judge_latency_ms": 4452.334708003036,
+  "judge_prompt_tokens": 3007,
+  "judge_completion_tokens": 403
+}

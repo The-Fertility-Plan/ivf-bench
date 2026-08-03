@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately interprets the provided Gardner 3AA data, including expanded blastocyst, high-grade ICM and TE, and thinning zona. Slight limitation because no image was available and it overstates stage 3 as 'fully expanded' rather than simply expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of maternal age, PCOS, AMH, oocyte yield, endometrial thickness, BMI, lifestyle, paternal age, and semen parameters with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and structured, and the implantation estimate is generally supported. Minor issues include some overreach on paternal-age effects and calling SET 'mandatory,' which is stronger than necessary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly consistent with IVF practice: recognizes 3AA as high quality, supports SET, considers OHSS risk in PCOS, and discusses freeze-all when indicated. Small deviations include overstating PGT-A indication based on paternal age and overly absolute wording."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for transfer management, OHSS assessment, luteal support, lifestyle modification, metabolic screening, and future planning with reasonable nuance."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012951,
+  "judge_latency_ms": 3371.4329159993213,
+  "judge_prompt_tokens": 2737,
+  "judge_completion_tokens": 316
+}

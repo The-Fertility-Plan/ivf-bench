@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "No image was available, and the response appropriately limited morphology to the provided Gardner 3BA data. It accurately described grade 3 expansion, B-grade ICM, and A-grade TE, though it slightly overstated grade 3 as 'fully expanded' and inferred thinning zona from the lab note rather than direct visualization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH, oocyte yield/maturity, uterine factor, endometrial thickness, BMI, sperm parameters, smoking, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear link from embryo quality and patient factors to prognosis. Minor issues include somewhat assertive quantitative adjustments and a few speculative inferences (e.g., trigger timing/PCO morphology) not directly supported by the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Overall consistent with Gardner grading principles and standard IVF practice, including attention to uterine evaluation and smoking cessation. Small deviations include overconfidence in specific success-rate estimates and suggesting PGT-A relatively early in a 33-year-old without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including uterine workup, lifestyle modification, and review of trigger strategy. Some recommendations are useful but a few are broad or contingent on missing details about the uterine factor."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013065,
+  "judge_latency_ms": 4125.312250005663,
+  "judge_prompt_tokens": 2555,
+  "judge_completion_tokens": 360
+}

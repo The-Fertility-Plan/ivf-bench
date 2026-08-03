@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets AA components from the provided Gardner data, but it repeats an incorrect definition of stage 2 as a full blastocyst and adds speculative image-based implications despite no image being available. It also fails to address the inconsistency between a 2AA blastocyst label and a Day 4 transfer."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, tubal factor, endometrial thickness, ovarian response, prior cycle history, and sperm parameters, and relates them to prognosis. Minor overstatement of sperm quality and limited discussion of missing AMH prevent a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there is a notable inconsistency in treating a 2AA embryo as both a full blastocyst and a Day 4 transfer, then rationalizing this as unusually rapid development. The implantation estimate is plausible but somewhat optimistic given the ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are guideline-concordant, but the Gardner staging description is inaccurate, ERA is suggested too readily for future failure scenarios, and the discussion around Day 4 versus blastocyst timing is not well aligned with standard embryology conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and contingency planning, including SET, luteal support, and possible further evaluation if unsuccessful. Some recommendations are generic and a few future tests are suggested without enough prioritization."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.014937,
+  "judge_latency_ms": 4588.945417002833,
+  "judge_prompt_tokens": 2989,
+  "judge_completion_tokens": 398
+}

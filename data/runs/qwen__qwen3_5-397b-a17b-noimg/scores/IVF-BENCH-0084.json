@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 3AB data appropriately and notes the lack of image, but introduces some inconsistency by calling it both 'expanded blastocyst' and grade 3/full blastocyst, and overstates TE quality as 'clinically excellent' despite the textual description being closer to looser/fewer cells."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, tubal factor diagnosis, prior failed cycle, sperm parameters, and endometrial thickness well with embryo prognosis, though some links (e.g., paternal age impact) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall reasoning is structured and internally logical, with prognosis tied to age, diagnosis, embryo grade, and lining; minor issues include slight overstatement of morphology and confidence in implantation estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on eSET and favorable prognosis for a day-5 good-quality blastocyst, but includes weaker-evidence recommendations such as routine activity restriction, ERA after limited failure history, and broad PGT-A suggestion after one failed cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management and contingency planning, including eSET and possible further testing, though some recommendations are more aggressive than typically indicated after only one prior failed cycle."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013095,
+  "judge_latency_ms": 6076.966708002146,
+  "judge_prompt_tokens": 2690,
+  "judge_completion_tokens": 335
+}

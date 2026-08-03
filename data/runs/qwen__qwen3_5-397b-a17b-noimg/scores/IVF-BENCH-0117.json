@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0117",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately interprets the provided Gardner 2AA data, correctly describing full blastocyst expansion, strong ICM, and cohesive TE. Minor issue: calls 2AA 'top-tier/highest' when 2AA is good but not the highest possible stage/grade combination, and image-specific observations cannot be verified."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, ovarian reserve markers, ovarian response, sperm parameters, endometrial thickness, BMI, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with probability estimates tied to age, morphology, and uterine factors. Minor overstatements include DOR misclassification claims and strong conclusions from borderline BMI/paternal age without supporting testing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with IVF practice: SET recommendation, acknowledgment of age-related aneuploidy, and reasonable future planning. Slight deviations include overenthusiastic endorsement of PGT-A and embryo banking as broadly recommended rather than individualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for immediate transfer and future cycles, including SET, luteal support, possible progesterone monitoring, consideration of PGT-A, and follow-up testing if outcomes are poor."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013341,
+  "judge_latency_ms": 3772.757584003557,
+  "judge_prompt_tokens": 2762,
+  "judge_completion_tokens": 337
+}

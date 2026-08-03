@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Given no image was available, the response appropriately anchored morphology to the provided 2BB grade and correctly described full blastocyst, B-grade ICM, and B-grade TE. Minor issue: it adds interpretive detail about zona thinning/hatching preference that is not directly supported by the provided data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve markers, diagnosis, oocyte maturity, sperm parameters, endometrial thickness, BMI, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent overall, with probability estimates broadly matching the case. Minor overreach includes strong claims about TE being 'most critical' and some speculative links such as BMI/nutrition to TE grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: transfer is reasonable, SET is appropriate, and tubal factor is favorable. Small deviations include speculative progesterone timing adjustments based on expansion grade and somewhat liberal discussion of PGT-A in a 31-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support, SET, cryopreservation, reserve monitoring, and future PGT-A discussion. Some suggestions are useful but not all are tightly evidence-based for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013572,
+  "judge_latency_ms": 4349.527332997241,
+  "judge_prompt_tokens": 2729,
+  "judge_completion_tokens": 359
+}

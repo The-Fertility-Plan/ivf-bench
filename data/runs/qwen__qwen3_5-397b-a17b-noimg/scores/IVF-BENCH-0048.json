@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly accurate from the provided Gardner 3AA data, but it incorrectly states the embryo has fully hatched or is hatching; grade 3 indicates a full blastocyst with thinning zona, not hatching. No image-based details could be verified."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, diagnosis, prior cycles, ovarian response, sperm parameters, and endometrial thickness well with embryo quality, though some assumptions were added (e.g., implied trilaminar lining, poor responder phenotype)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with probability estimates tied to embryo quality and patient history. Minor issues include overcalling 3AA as the highest possible grade and some speculative inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, including SET for a good-quality day-5 blastocyst in a 33-year-old and cautious discussion of PGT-A. Small deviations include overstating routine need for intensified luteal support and speculative protocol changes without reserve data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, reserve reassessment, and contingency workup after further loss. Some recommendations are somewhat generic or conditional rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01383,
+  "judge_latency_ms": 3692.390541997156,
+  "judge_prompt_tokens": 2845,
+  "judge_completion_tokens": 353
+}

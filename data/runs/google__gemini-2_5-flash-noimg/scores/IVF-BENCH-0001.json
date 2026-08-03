@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 1DD grade as poor-quality blastocyst with absent/degenerative ICM and TE, but no image was available and it adds limited morphology beyond the coded grade; it also loosely paraphrases expansion rather than noting this is an early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF outcomes, tubal factor, sperm quality, and endometrial thickness well with embryo prognosis, though it somewhat overstates recurrent implantation failure and attributes poor morphology primarily to age without acknowledging uncertainty."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and consistent: very poor morphology plus age and prior losses support a very low prognosis. Minor issues include treating a Day 4 transfer as if this were a standard blastocyst-stage transfer and making strong viability claims from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing 1DD as very poor prognosis and discussing counseling, PGT-A, and future planning, but recommending not to transfer based solely on morphology is stronger than typical guideline-based counseling, and ERA is suggested despite limited evidence for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and future-cycle options including PGT-A, embryo accumulation, and donor oocytes, with practical next steps. It is somewhat less nuanced regarding immediate transfer decision-making and Day 4 context."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014415,
+  "judge_latency_ms": 4820.290125004249,
+  "judge_prompt_tokens": 2920,
+  "judge_completion_tokens": 377
+}

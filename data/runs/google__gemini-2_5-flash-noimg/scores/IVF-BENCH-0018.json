@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 2BB components, but no image was available and it overstates expansion as 'excellent/good expansion' despite stage 2 being an early/full blastocyst rather than advanced expansion; no direct image-based observations possible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, sperm parameters, endometrium, BMI, and lifestyle factors well with prognosis, though some links (e.g., underweight impact magnitude) are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with probability reasoning tied to embryo grade and patient factors; minor issue is somewhat strong penalization for smoking/alcohol without precise calibration."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF counseling on embryo grading and lifestyle optimization, but recommending PGT-A primarily because of a fair 2BB embryo in a 33-year-old is not strongly guideline-supported and transfer-day framing is somewhat imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and future planning, including smoking cessation, alcohol abstinence, nutrition, and protocol review; however, some recommendations are broad and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014244,
+  "judge_latency_ms": 3578.5130000003846,
+  "judge_prompt_tokens": 3143,
+  "judge_completion_tokens": 321
+}

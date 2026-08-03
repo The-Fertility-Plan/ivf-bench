@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly interprets the provided Gardner 2AA components, but no image was available and it repeats a grading inconsistency by calling stage 2 a 'full blastocyst'; it cannot assess image-specific features like zona or actual appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, FSH, male factor, endometrium, prior cycle history, and lifestyle with embryo quality well, though some points are overstated and AMH absence is handled somewhat heavily despite strong response data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable inconsistencies: it labels 2AA as both full blastocyst and not fully expanded, and it conflates implantation probability with live birth per transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age-related aneuploidy risk, morphology interpretation, and single-embryo transfer counseling, but there are deviations such as overenthusiastic endorsement of PGT-A, questionable comments on day-4/2AA transfer context, and grading terminology issues."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, counseling, and future planning including reserve assessment and discussion of PGT-A, though some recommendations remain somewhat generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014754,
+  "judge_latency_ms": 5116.981917002704,
+  "judge_prompt_tokens": 3133,
+  "judge_completion_tokens": 357
+}

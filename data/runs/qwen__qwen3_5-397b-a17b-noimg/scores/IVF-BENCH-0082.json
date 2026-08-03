@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 4BB text appropriately and acknowledges no image was available, but incorrectly equates grade 4 with hatching/herniating; in Gardner, hatching is typically stage 5. Otherwise ICM/TE interpretation is reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, male factor, prior cycle, sperm parameters, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a plausible prognosis and rationale. Minor issues include overinterpreting low blastocyst yield from incomplete cycle data and the stage/hatching inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice, but there are notable deviations: misstatement of Gardner expansion stage, somewhat liberal endorsement of PGT-A in a 28-year-old with only one failed cycle, and speculative emphasis on sperm DNA fragmentation without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical transfer and future-cycle recommendations, including proceeding with transfer, avoiding assisted hatching, reviewing luteal support, and considering sperm testing/protocol review. Some suggestions are more speculative than essential."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012441,
+  "judge_latency_ms": 3736.201583997172,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 317
+}

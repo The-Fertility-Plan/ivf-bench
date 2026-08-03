@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0086",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner score appropriately and acknowledges no image was available, but misstates stage 3 as fully expanded with thinning zona; thinning zona is more characteristic of expanded blastocyst stage 4, and the TE description is somewhat inconsistent with the supplied text."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, prior IVF outcomes, endometrial thickness, male factor context, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and structured, with a plausible probability estimate tied to embryo and patient factors, though there is some overinterpretation of smoking/BMI effect sizes and morphology staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based on embryo quality, smoking cessation, and avoiding routine PGT-A in young patients, but recommendations such as ERA, thrombophilia testing after a single miscarriage, and broad recurrent failure workup are more controversial and not routinely guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future optimization, including lifestyle changes and possible male-factor evaluation, though some suggested investigations may be premature."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012747,
+  "judge_latency_ms": 3804.0330419971724,
+  "judge_prompt_tokens": 2624,
+  "judge_completion_tokens": 325
+}

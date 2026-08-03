@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately limits morphology to the provided Gardner text and correctly discusses B-grade ICM and TE, but it overstates a scoring inconsistency by claiming 'fills the embryo' implies 3 rather than 2, and cannot assess image-specific features like zona pellucida because no image was provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, smoking, semen data, diagnosis, prior cycle history, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some points are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from embryo grade and patient factors to prognosis, though there are minor issues such as questionable interpretation of the Gardner expansion discrepancy and some speculative deductions about male factor and protocol choice."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned with IVF practice in emphasizing age, morphology, smoking cessation, and transfer timing, but it misstates Gardner expansion criteria, treats a Day 4 blastocyst as highly nonstandard without nuance, and includes recommendations like immediate SIS/hysteroscopy that may not be routine in this exact context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as verifying embryo timing, counseling smoking cessation, and evaluating the endometrium, but the recommendations are incomplete due to truncation and some are more cautionary than directly management-focused."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013233,
+  "judge_latency_ms": 4511.807540999143,
+  "judge_prompt_tokens": 2511,
+  "judge_completion_tokens": 380
+}

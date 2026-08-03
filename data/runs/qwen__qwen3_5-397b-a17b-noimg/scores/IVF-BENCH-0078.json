@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It appropriately notes that no image was available and correctly interprets DD as degenerative/absent ICM and TE, but it misstates/overinterprets the expansion stage by treating 0DD as collapsed/degenerating and calling the embryo definitively non-viable despite the provided note describing an early blastocyst with blastocoel less than half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, diagnosis, protocol, and semen parameters with embryo quality and prognosis, though some links are speculative and stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there is a key inconsistency between the stated lab description of an early blastocyst and the conclusion that transfer is impossible/0% implantation, which overreaches from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard, the categorical statement that transfer is contraindicated and implantation is 0% based solely on a poor morphology grade is not well aligned with routine IVF practice; recommending universal ICSI and implying protocol causation are also not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for current-cycle counseling and future planning, including protocol review, sperm DNA fragmentation testing, and lifestyle optimization, though some recommendations are too definitive for the available data."
+    }
+  ],
+  "extracted_probability": 0.0,
+  "judge_cost_usd": 0.013437,
+  "judge_latency_ms": 4214.895916004025,
+  "judge_prompt_tokens": 2599,
+  "judge_completion_tokens": 376
+}

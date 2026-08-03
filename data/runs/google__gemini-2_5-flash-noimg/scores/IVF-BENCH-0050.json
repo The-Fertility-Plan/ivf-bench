@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner grade rather than fabricating image-specific findings, but it incorrectly interprets 2 as a full blastocyst and repeats an inconsistent TE description ('few cells' for B grade), limiting morphological precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, tubal factor diagnosis, endometrial thickness, sperm parameters, BMI, lifestyle, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and conclusions generally follow from the data, though the implantation estimate is somewhat optimistic for an untested day-5 2AB embryo and rests partly on the grading misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially favoring single embryo transfer in a young good-prognosis patient; minor issues include overstatement of embryo quality and somewhat casual mention of PGT-A in a 24-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, cryopreservation, and contingency planning, though recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.0132,
+  "judge_latency_ms": 3569.425207999302,
+  "judge_prompt_tokens": 2760,
+  "judge_completion_tokens": 328
+}

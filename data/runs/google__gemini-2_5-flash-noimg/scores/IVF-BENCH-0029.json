@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor ICM and TE from 1DD, but it misstates expansion: the prompt defines 1 as blastocoel at least half the embryo, while the response says less than half. It also discusses image-based features despite no image being provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, endometrium, ovarian response, sperm parameters, lifestyle, and first-cycle status with embryo quality and prognosis. Minor overreach occurs when inferring lab/culture issues without supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear: very poor morphology outweighs favorable patient factors, leading to very low implantation odds. There is a minor inconsistency around day-4 staging and some speculative explanations, but conclusions are generally supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing 1DD as very poor prognosis and recommending counseling and standard luteal support. However, the incorrect expansion-stage interpretation, speculative recommendation to review lab conditions after a single cycle, and somewhat casual mention of supplements/washout cycle reduce guideline fidelity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, proceeding with transfer if desired, luteal support, and future-cycle considerations. Some recommendations are useful but not highly tailored, and a few are speculative rather than clearly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014022,
+  "judge_latency_ms": 4326.831667000079,
+  "judge_prompt_tokens": 2834,
+  "judge_completion_tokens": 368
+}

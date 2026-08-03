@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "It appropriately limits morphology to the provided Gardner 3AA data, accurately describing expanded blastocyst, strong ICM, and cohesive TE. Minor issue: it calls 3AA the highest score/premium top-quality, whereas higher expansion stages (e.g., 4-6AA) also exist."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve markers, BMI, male factor context, endometrial thickness, first-cycle status, and embryo quality into prognosis in a comprehensive and clinically relevant way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with probability estimates tied to embryo quality and patient modifiers. Minor overreach includes implying morphology strongly predicts euploidy and some speculative comments about male factor/DFI and thick endometrium."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based, especially support for single embryo transfer and lifestyle optimization. Small deviations include somewhat aggressive PGT-A framing at age 34 and speculative assisted hatching/DFI suggestions without stronger case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including eSET, luteal support, and lifestyle measures. Slightly less actionable because some recommendations are generic or speculative rather than tightly tailored to the available data."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013797,
+  "judge_latency_ms": 4074.2209580057533,
+  "judge_prompt_tokens": 2809,
+  "judge_completion_tokens": 358
+}

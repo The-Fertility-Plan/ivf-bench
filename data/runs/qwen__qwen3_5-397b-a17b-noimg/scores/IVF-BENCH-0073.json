@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "No image was available, and the response appropriately based morphology on the provided Gardner 4AA data. It accurately described stage 4, ICM A, and TE A, but slightly overstated stage 4 as 'hatching/herniating' when the provided note itself uses that wording despite classic Gardner stage 4 being expanded and stage 5 being hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH, BMI, endometrial thickness, prior IVF history, oocyte maturity yield, and sperm data with embryo quality and prognosis, including the discrepancy in the male factor label."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age and morphology. Minor issues include some overconfidence in morphology as a predictor and slight inconsistency around stage 4 versus hatching terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: single embryo transfer in a 33-year-old with a high-grade day-5 blastocyst, no assisted hatching, and standard luteal support are guideline-concordant. However, calling SET 'mandatory' and strongly recommending PGT-A after a single failed transfer in a good-prognosis 33-year-old is somewhat stronger than typical guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for the current transfer and contingency planning, including SET, luteal support timing, avoiding assisted hatching, evaluating sperm DNA fragmentation, and reviewing trigger strategy if future cycles are needed."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013419,
+  "judge_latency_ms": 4635.537499998463,
+  "judge_prompt_tokens": 2558,
+  "judge_completion_tokens": 383
+}

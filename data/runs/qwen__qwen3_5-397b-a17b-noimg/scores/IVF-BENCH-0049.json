@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0049",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided 4AA metadata and notes the lack of an actual image, but it overstates stage 4 as hatching/herniating (more typical of stage 5) and adds unverified features like no fragmentation/vacuolization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometriosis, prior outcomes, BMI, sperm parameters, and endometrial thickness well with embryo quality, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a plausible probability adjustment from embryo quality to patient-specific prognosis; minor issues include overstating RIF/RPL implications from limited history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based on embryo grading and endometriosis considerations, but recommendations such as aspirin, ERA, thrombophilia/immune workup, and routine PGT-A discussion in a 28-year-old are not strongly guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps for transfer and contingency planning, including luteal support and future FET/endometriosis strategies, though some suggestions are more optional than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.012627,
+  "judge_latency_ms": 3909.79879200313,
+  "judge_prompt_tokens": 2634,
+  "judge_completion_tokens": 315
+}

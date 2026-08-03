@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0118",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately states that no image was available and bases morphology on the provided Gardner 3AA text, accurately describing ICM and TE grades. However, it incorrectly describes stage 3 as 'fully expanded' with thinning zona, whereas the provided data labels 3AA as expanded blastocyst with thinning zona, creating some inconsistency with standard Gardner staging/image-based precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, oocyte maturity, endometrial thickness, prior miscarriage/failed cycle, sperm parameters, BMI, and diagnosis with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially around morphology versus age-related aneuploidy risk. Minor issues include overcalling the embryo as 'highest potential available' and some imprecision around expansion stage and RIF threshold."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including eSET consideration, luteal support, and discussion of PGT-A after failure. Small deviations include suggesting aspirin despite limited indication and mentioning ERA relatively early, which is not strongly guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, monitoring, and contingency planning, including eSET, beta timing, ultrasound follow-up, and future workup options. It is useful, though some recommendations could be more tightly prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013422,
+  "judge_latency_ms": 4520.462250002311,
+  "judge_prompt_tokens": 2554,
+  "judge_completion_tokens": 384
+}

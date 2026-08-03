@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0077",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "No image was available, and the response appropriately based morphology on the provided Gardner 4BA data. It accurately described ICM B and TE A, but it incorrectly labels stage 4 as a hatching blastocyst/herniating through zona, which corresponds more to stage 5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age-related aneuploidy risk, ovarian reserve markers, PCOS context, prior IVF outcomes, sperm quality, BMI, and endometrial thickness with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and well structured, with probability reasoning tied to morphology and age. Minor issue: the staging inconsistency (calling 4BA hatching) slightly weakens the chain of reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including SET and cautious discussion of PGT-A. Minor deviations include overstatement of morphology as a proxy for euploidy and some speculative protocol suggestions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, monitoring, and future planning, including SET, luteal support, and reserve-focused planning. Some recommendations are somewhat generic or speculative rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013827,
+  "judge_latency_ms": 3824.163083001622,
+  "judge_prompt_tokens": 2894,
+  "judge_completion_tokens": 343
+}

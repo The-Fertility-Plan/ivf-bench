@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies on the provided Gardner score rather than an image and contains a key grading error: it interprets score 2 as a full blastocyst, whereas full blastocyst is stage 3. It also repeats the supplied ICM/TE descriptors but cannot assess image-specific features such as zona pellucida or overall appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, endometrium, sperm parameters, diagnosis, and prior cycle history, and connects them to prognosis. It misses some nuance around Day 4 transfer context and overstates euploidy likelihood."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but there are notable issues: misclassification of expansion stage, overinterpretation of a Day 4 blastocyst as strongly favorable, and a relatively high implantation estimate not fully justified by a stage 2 AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a young patient and luteal support are guideline-concordant, but the Gardner grading interpretation is incorrect and the discussion of Day 4 blastocyst quality and optional PGT-A is somewhat oversimplified relative to evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, atraumatic ultrasound-guided transfer, cryopreservation, and review of male factor if unsuccessful. It is useful, though somewhat generic and not highly tailored to the Day 4 context."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.01488,
+  "judge_latency_ms": 4824.866916002065,
+  "judge_prompt_tokens": 2920,
+  "judge_completion_tokens": 408
+}

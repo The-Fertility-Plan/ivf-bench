@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0055",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "No image was available, and the response appropriately relied on the provided 3AB grade. It accurately described expansion 3 and ICM A, but it incorrectly paraphrased TE B as 'few cells forming a loose epithelium,' which corresponds more to TE C than classic TE B."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, endometriosis, sperm quality, BMI, endometrial thickness, lifestyle, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent overall, with a probability estimate that follows from the favorable age/embryo factors tempered by endometriosis. Minor issue: it somewhat overstates certainty and embryo quality despite the TE description inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially support for single embryo transfer in a young patient with a good-quality day-5 blastocyst. Some suggestions such as ERA and immune testing are more controversial and not routine after a first failed transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, luteal support, and evaluation pathways if unsuccessful. Slightly reduced because some future recommendations are broad or controversial rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015231,
+  "judge_latency_ms": 4109.320709001622,
+  "judge_prompt_tokens": 3287,
+  "judge_completion_tokens": 358
+}

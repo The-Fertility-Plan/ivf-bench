@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately notes that no image was available and bases morphology on the provided Gardner score, but it inaccurately interprets 3AB as fully expanded with thinning zona; stage 3 is a full blastocyst, whereas thinning zona is more consistent with stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, prior live birth/miscarriage/ectopic, AMH, partner age, sperm, and endometrium, though some links (e.g., AMH-PCOS discordance implications) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a plausible probability estimate tied to embryo and patient factors, though there are minor inconsistencies such as overstating embryo quality and assumptions about fresh vs frozen transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, luteal support, early ectopic surveillance), but there are notable deviations: incorrect Gardner stage interpretation, overstatement that 3AB is 'top-tier,' and 'strongly recommended' PGT-A for paternal age 41/miscarriage is stronger than guideline-based support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical steps for transfer and future planning, including SET, progesterone monitoring consideration, early pregnancy surveillance, weight optimization, and sperm DNA fragmentation testing, though some recommendations are more assertive than necessary."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01377,
+  "judge_latency_ms": 4103.549125000427,
+  "judge_prompt_tokens": 2675,
+  "judge_completion_tokens": 383
+}
