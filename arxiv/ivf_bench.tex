@@ -543,7 +543,7 @@ reasoning loop; every system answered all 103 held-out cases.}
 \begin{tikzpicture}
 \begin{axis}[
   width=\textwidth, height=6.4cm,
-  ybar, bar width=4.4pt,
+  ybar, bar width=3.4pt,
   ymin=2.5, ymax=5.3,
   ylabel={Score (1--5)}, ylabel style={font=\small},
   symbolic x coords={Morphology,Clinical,Reasoning,Guideline,Recommendation},
@@ -560,8 +560,10 @@ reasoning loop; every system answered all 103 held-out cases.}
 \addplot[fill=black!45, draw=none] coordinates {(Morphology,3.60)(Clinical,4.92)(Reasoning,3.98)(Guideline,3.22)(Recommendation,4.31)};
 \addplot[fill=black!28, draw=none] coordinates {(Morphology,3.48)(Clinical,4.31)(Reasoning,3.88)(Guideline,3.44)(Recommendation,3.98)};
 \addplot[fill=black!16, draw=none] coordinates {(Morphology,3.07)(Clinical,4.51)(Reasoning,3.73)(Guideline,2.89)(Recommendation,4.06)};
+\addplot[fill=black!34, draw=none] coordinates {(Morphology,3.34)(Clinical,4.40)(Reasoning,3.90)(Guideline,3.54)(Recommendation,3.98)};
+\addplot[fill=black!22, draw=none] coordinates {(Morphology,3.48)(Clinical,4.42)(Reasoning,3.80)(Guideline,3.04)(Recommendation,3.90)};
 \addplot[fill=black!8,  draw=none] coordinates {(Morphology,2.99)(Clinical,3.91)(Reasoning,3.18)(Guideline,2.85)(Recommendation,3.64)};
-\legend{GPT-5.4, Ours (9B-ORPO), Opus 4.6, Qwen 397B, Sonnet 4.6, Qwen 9B base}
+\legend{GPT-5.4, Ours (9B-ORPO), Opus 4.6, Qwen 397B, Sonnet 4.6, Gemini Flash, Kimi K2.5, Qwen 9B base}
 \end{axis}
 \end{tikzpicture}
 \caption{Per-rubric scores on the held-out split. Clinical integration is the strongest rubric for every system, while morphology
@@ -609,8 +611,9 @@ The Brier scores appear more favorable than they are. They span 0.241 to 0.289, 
 combinations improve on and seven do not. Even that comparison is the wrong
 reference point: the clinical pregnancy rate in this cohort is 0.350, so a constant
 predictor that returns 35\% for every case, disregarding the embryo, the image,
-and the patient entirely, scores 0.2274, and every system in the study performs
-worse.
+and the patient entirely, scores 0.2274, and every language model in the study
+performs worse; Section~\ref{sec:controls} reports the one baseline that does
+not.
 
 \begin{table}[H]
 \centering
