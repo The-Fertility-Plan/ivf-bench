@@ -25,7 +25,7 @@ largest randomized trial of that approach did not demonstrate noninferiority to
 trained embryologists. We present IVF-Bench, a rubric-based benchmark for
 evaluating whether vision-language models can perform the full assessment: 753
 day-5 blastocyst cases from the public Kromp dataset, each pairing a real embryo
-image and expert Gardner annotation with real cycle data and outcomes, together
+image and its Gardner annotation with real cycle data and outcomes, together
 with patient-history fields sampled from published population distributions and
 explicitly labeled as generated, since no public dataset links such context to
 embryo images. Models produce open-ended assessments graded on five clinical

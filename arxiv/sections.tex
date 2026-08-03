@@ -199,7 +199,8 @@ image itself. Because our judge does not observe the image, a system can score w
 rubric by restating the Gardner grade it was given, so these values constitute an
 upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
-shows that it is large for most systems and negligible for one.
+shows that it is large for most systems and negligible for one, subject to the
+confound noted there.
 
 \textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
 of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
@@ -248,6 +249,18 @@ $+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
 \end{table}
 
 FIG_ABLATION_PLACEHOLDER
+
+One confound must be stated before the findings, because it bounds them. The
+judge is shown the stored case prompt, which contains the marker indicating an
+attached image, while in the withheld condition the model received a prompt
+stating that no image was provided. In a sample of forty judge records from the
+withheld arm, thirty-five justifications refer explicitly to the absence of an
+image, so part of the measured drop reflects the judge penalizing a model for
+correctly reporting that it had no image to describe, rather than the model's
+inability to describe one. The direction of the effect is not in doubt, since a
+system with no image cannot grounds its description in one, but the magnitudes
+below are upper bounds on the image's contribution, and a corrected design would
+present the judge with the same prompt the model received.
 
 Three findings follow. The image carries substantial information for most
 systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to

@@ -59,7 +59,7 @@ largest randomized trial of that approach did not demonstrate noninferiority to
 trained embryologists. We present IVF-Bench, a rubric-based benchmark for
 evaluating whether vision-language models can perform the full assessment: 753
 day-5 blastocyst cases from the public Kromp dataset, each pairing a real embryo
-image and expert Gardner annotation with real cycle data and outcomes, together
+image and its Gardner annotation with real cycle data and outcomes, together
 with patient-history fields sampled from published population distributions and
 explicitly labeled as generated, since no public dataset links such context to
 embryo images. Models produce open-ended assessments graded on five clinical
@@ -121,7 +121,7 @@ contribution of this work, which is an instrument for measuring whether a model
 can use patient context at all.
 
 \textbf{IVF-Bench} comprises 753 day-5 blastocyst cases, each pairing a real
-embryo image and its expert Gardner annotation with the cycle data and recorded
+embryo image and its silver-standard Gardner annotation with the cycle data and recorded
 outcomes of the same patient, together with the patient-history fields that no
 public dataset supplies and that we therefore generate from published population
 distributions, labeling each as generated and defending the choice in
@@ -272,8 +272,8 @@ methods opened up by DPO \citep{rafailov2023dpo}.
 Open embryo data is rare, because embryo images are sensitive clinical records
 and most published systems are trained on private single-clinic collections. We
 build on the Kromp blastocyst dataset \citep{kromp2023}, which is public under CC
-BY 4.0 and links day-5 embryo images to expert Gardner grades, selected cycle
-variables, and pregnancy outcomes. Of the 837 patients in the release, 754 have
+BY 4.0 and links day-5 embryo images to Gardner grades, selected cycle variables, and
+pregnancy outcomes. Of the 837 patients in the release, 754 have
 complete clinical records, and one of those references an image that is missing
 from the distributed archive, which leaves 753 usable cases.
 
@@ -323,14 +323,18 @@ generated values being mistaken for measured ones.
 
 This procedure yields a case-level reasoning task that can be constructed and
 reproduced entirely from public sources, at two costs that bear directly on the
-interpretation of our results. First, the generated fields are sampled
-independently of the recorded outcomes, so that although their marginal
-distributions are realistic they carry no information about which patients
-conceived, and no model can extract predictive signal from them because none is
-present; the outcome metrics in Section~\ref{sec:results} are consequently
-bounded by the data before any model is involved, and should be read as a floor
-that quantifies what is missing rather than as a verdict on what vision-language
-models can achieve given measured context. Second, the fields are sampled
+interpretation of our results. First, the generated fields are sampled without reference to the recorded
+outcomes. Two of them are nonetheless conditioned on the patient's real age,
+namely basal FSH and partner age, which correlate with it at 0.32 and 0.73
+respectively, and each therefore functions as a weak age proxy: taken alone they
+reach AUROC 0.527 and 0.532 against clinical pregnancy. Because age is itself
+supplied as a measured field, these fields add no information a model did not
+already have, but the stronger claim that the generated context is entirely
+uninformative is not one we can make. The outcome metrics in
+Section~\ref{sec:results} should be read as a floor that quantifies what is
+missing rather than as a verdict on what vision-language models can achieve given
+measured context. Second, apart from those two dependencies and the conditioning
+of previous outcomes on previous cycle count, the fields are sampled
 independently of one another, so genuine clinical correlations, such as that
 between polycystic ovary syndrome and body mass index, are absent, and a model
 that has internalized those correlations receives no credit for them here.
@@ -681,7 +685,8 @@ image itself. Because our judge does not observe the image, a system can score w
 rubric by restating the Gardner grade it was given, so these values constitute an
 upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
-shows that it is large for most systems and negligible for one.
+shows that it is large for most systems and negligible for one, subject to the
+confound noted there.
 
 \textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
 of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
@@ -763,6 +768,18 @@ entirely from the annotation rather than the image.}
 \label{fig:ablation}
 \end{figure}
 
+
+One confound must be stated before the findings, because it bounds them. The
+judge is shown the stored case prompt, which contains the marker indicating an
+attached image, while in the withheld condition the model received a prompt
+stating that no image was provided. In a sample of forty judge records from the
+withheld arm, thirty-five justifications refer explicitly to the absence of an
+image, so part of the measured drop reflects the judge penalizing a model for
+correctly reporting that it had no image to describe, rather than the model's
+inability to describe one. The direction of the effect is not in doubt, since a
+system with no image cannot grounds its description in one, but the magnitudes
+below are upper bounds on the image's contribution, and a corrected design would
+present the judge with the same prompt the model received.
 
 Three findings follow. The image carries substantial information for most
 systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
