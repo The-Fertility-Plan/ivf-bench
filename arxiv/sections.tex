@@ -172,12 +172,14 @@ FIG_BASERATE_PLACEHOLDER
 
 This is the result we most want a reader to retain, and it is not a verdict on
 the models, for the reason given in Section~\ref{sec:synthetic}: the
-patient-context fields we supply are sampled independently of outcome and
-therefore contain no signal any model could exploit, while the measured data that
-remain are age, AMH, endometrial thickness, oocyte counts, and a single
-morphology grade from one day-5 frame. Predicting a live birth from that
-combination approaches the limit of what the public data support, and no
-architectural change addresses it; the inputs that would move the number are
+patient-context fields we supply add no prognostic information beyond the
+measured covariates, while the measured data that remain are age, AMH,
+endometrial thickness, oocyte counts, and a single morphology grade from one
+day-5 frame. Predicting clinical pregnancy from that combination appears to
+approach the limit of what the public data support, since a logistic regression
+given the same measured fields reaches a cross-validated AUROC of 0.538
+(Section~\ref{sec:controls}), inside the range the language models span; the
+inputs that would move the number are
 embryo genetics, longitudinal development rather than a single frame, uterine and
 endometrial context, and the lifestyle and history data that at present never
 leave the physician's notes. IVF-Bench is constructed so that these fields can be
@@ -257,13 +259,14 @@ Gemini 2.5 Flash & 100 & 3.33 & 3.72 & $-0.39$ & 3.24 & 3.16 & $+0.08$ \\
 \bottomrule
 \end{tabular}
 \caption{Scores with the embryo image supplied and withheld, on identical cases
-per system, with the judge shown the same prompt the model received. Only two of
-the eight differences are significant at the 95\% level after accounting for the
-eight comparisons: Opus 4.6's morphology drop of $+0.23$
-($p{=}0.003$) and Qwen 397B's of $+0.18$ ($p{=}0.005$). GPT-5.4's morphology
-difference of $+0.07$ ($p{=}0.13$) and Gemini's of $+0.08$ ($p{=}0.32$) are not
-distinguishable from zero, while Gemini's overall score is substantially
-\emph{higher} without the image ($-0.39$, $p<0.001$).}
+per system, with the judge shown the same prompt the model received. Four of the
+eight differences survive Bonferroni correction across the eight comparisons
+($\alpha{=}0.00625$): Opus 4.6 on both overall ($p<0.001$) and morphology
+($p{=}0.003$), Qwen 397B on morphology ($p{=}0.005$), and Gemini 2.5 Flash on
+overall ($p<0.001$), the last of these because its score is substantially
+\emph{higher} without the image. GPT-5.4's morphology difference of $+0.07$
+($p{=}0.13$), Gemini's of $+0.08$ ($p{=}0.32$) and Qwen 397B's overall difference
+($p{=}0.06$) are not distinguishable from zero.}
 \label{tab:ablation}
 \end{table}
 
@@ -326,8 +329,8 @@ additional analysis rather than argument.
 
 \textbf{Is the ceiling really the data?} Our claim that the outcome ceiling
 reflects the available data rather than model capacity rests, so far, on the
-observation that the generated fields are uninformative by construction, which
-says nothing about the measured ones. We therefore fit logistic regression to the
+observation that the generated fields add nothing beyond the measured covariates,
+which says nothing about what those measured covariates themselves support. We therefore fit logistic regression to the
 measured fields alone, namely age, AMH, endometrial thickness, oocytes retrieved,
 mature oocytes, transfer day, and the three Gardner components, with missing
 values imputed at the column median. Cross-validated within the 550-case split it
@@ -397,13 +400,15 @@ Reasoning coherence & 3.18 & 3.93 & $+23.5\%$ \\
 Guideline alignment & 2.85 & 3.93 & $+38.2\%$ \\
 Recommendation usefulness & 3.64 & 4.37 & $+20.0\%$ \\
 \midrule
-Brier score $\downarrow$ & 0.285 & \textbf{0.245} & $-14.2\%$ \\
-AUROC $\uparrow$ & 0.450 & 0.547 & $+21.7\%$ \\
+Brier score $\downarrow$ & 0.285 & \textbf{0.245} & $-0.040$ \\
+AUROC $\uparrow$ & 0.450 & 0.547 & $+0.098$ \\
 \bottomrule
 \end{tabular}
-\caption{Base Qwen 3.5-9B against the same model after ORPO on 550 preference
+\caption{Base Qwen 3.5-9B against the same model after ORPO on 500 training
 pairs, measured on the 103-case held-out split. Every rubric improves, guideline
-alignment most of all.}
+alignment most of all. Rubric changes are given as percentages of the base score;
+Brier and AUROC are given as absolute differences, since neither has zero as its
+reference point.}
 \label{tab:orpo}
 \end{table}
 
