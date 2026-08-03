@@ -18,19 +18,29 @@ ARXIV = ROOT / "arxiv"
 sys.path.insert(0, str(ROOT / "src"))
 
 ABSTRACT = r"""
-Embryo selection is still done by eye, and the machine learning built to improve
-it looks only at the embryo. The largest randomised trial of that approach failed
-to beat trained embryologists. But the embryo is only half the case. A patient's
-history and lifestyle shape the outcome too, and that information stays in the
-physician's notes, reaching neither the embryologist nor the model. No public
-dataset pairs it with embryo images and real outcomes, so the question has gone
-untested. IVF-Bench tests it: 753 real day-5 cases that ask a model to read the
-embryo, weigh the patient, put a number on the odds, and say what to do next,
-scored against five clinical rubrics and against what actually happened.
-Post-training a 9B open model on 550 preference pairs lifts all five rubrics and
-carries it past Claude Opus 4.6 at a twentieth of the cost. Outcome prediction
-stalls for every system, at a floor we trace to the missing data rather than the
-models.
+Embryo selection in {IVF} remains a morphology-driven judgment, and the deep
+learning systems built to standardize it operate on images alone, ranking
+blastocysts without the patient context that clinicians actually weigh; the
+largest randomized trial of that approach did not demonstrate noninferiority to
+trained embryologists. We present IVF-Bench, a rubric-based benchmark for
+evaluating whether vision-language models can perform the full assessment: 753
+day-5 blastocyst cases from the public Kromp dataset, each pairing a real embryo
+image and expert Gardner annotation with real cycle data and outcomes, together
+with patient-history fields sampled from published population distributions and
+explicitly labeled as generated, since no public dataset links such context to
+embryo images. Models produce open-ended assessments graded on five clinical
+rubrics by an {LLM} judge, and their stated implantation probabilities are scored
+against recorded outcomes. Across seven frontier and open-weight systems,
+clinical integration is uniformly strong while outcome discrimination is not,
+with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
+constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
+on 550 benchmark-derived preference pairs improves all five rubrics and places it
+second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
+$p{=}0.007$) at roughly one twentieth of the inference cost, indicating that the
+reasoning component of embryo assessment does not require frontier-scale models,
+while the prediction ceiling reflects the absence of context-linked outcome data
+rather than a limitation of the models themselves. We release the benchmark, the
+trained model, and all 5,194 responses with judge transcripts.
 """
 
 CITATION = r"""@article{correa2026ivfbench,

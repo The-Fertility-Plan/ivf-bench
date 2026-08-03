@@ -54,38 +54,44 @@ ABSTRACT_PLACEHOLDER
 % ============================================================
 \section{Introduction}
 
-Few decisions in IVF matter more than which embryo to transfer, and in most
-clinics it is still made by eye. An embryologist looks at the blastocyst on day 5
-and assigns a Gardner grade: how far it has expanded, how well formed the inner
-cell mass is, how cohesive the trophectoderm is \citep{gardner1999}. The grade is
-useful. It is also subjective. Show the same day-5 embryos to embryologists at
-different centres and ask each to pick one, and they agree less often than the
-confidence of the decision suggests \citep{storr2017}.
+Few decisions in IVF carry more weight than the choice of which embryo to
+transfer, and in most clinics that choice still rests on visual assessment: an
+embryologist examines the blastocyst on day 5 and assigns a Gardner grade
+capturing the degree of expansion, the organization of the inner cell mass, and
+the cohesion of the trophectoderm \citep{gardner1999}. The grade is clinically
+useful, but it is also subjective, and when embryologists at different centres
+are shown the same day-5 embryos and asked to select one for transfer, their
+agreement falls well short of what the confidence of the decision would
+suggest \citep{storr2017}.
 
-That gap has attracted a decade of machine learning work, almost all of it
-framed as a scoring problem: feed in an image or a time-lapse video, return a
-number, rank the embryos by that number. The largest randomised trial of this
-approach put a deep learning ranker against trained embryologists across 14
-clinics and 1,066 patients, and it did not demonstrate noninferiority
-\citep{illingworth2024}. A ranker that cannot beat a human ranker is not obviously
-the thing to build next.
+That variability has motivated a decade of machine learning work, nearly all of
+it framed as a scoring problem in which an image or a time-lapse sequence is
+mapped to a scalar and embryos are ranked by that scalar. The largest randomized
+evaluation of this paradigm, a double-blind trial across 14 clinics and 1,066
+patients, compared a deep learning ranker against trained embryologists and did
+not demonstrate noninferiority \citep{illingworth2024}, which suggests that
+further refinement of image-only ranking is unlikely to be the most productive
+direction.
 
-We think the framing is the problem, not the architecture. An embryo image is a
-fraction of what determines whether a transfer works. The rest is the patient:
-her ovarian reserve, her endometrium, her BMI and lifestyle, what happened in her
-previous cycles, what the andrology report says. In a real clinic most of that
-lives with the physician and never reaches the embryologist at the microscope,
-let alone the imaging model. A system that sees only pixels is not failing at
-prediction so much as being asked to predict without the inputs that matter.
+We argue that the limitation lies in the framing rather than in the
+architecture. The embryo image captures only part of what determines whether a
+transfer succeeds; the remainder is patient-level, comprising ovarian reserve,
+endometrial receptivity, body mass index and lifestyle, the history of previous
+cycles, and the andrology profile. In clinical practice most of this information
+resides with the treating physician and rarely reaches the embryologist at the
+microscope, still less the imaging model, so a system operating on pixels alone
+is not so much failing at prediction as being asked to predict without the
+covariates that govern the outcome.
 
-Vision-language models can in principle take both. Nobody can show it, because
-the data to show it does not exist in public. Embryo images are sensitive
-clinical records, outcome-linked patient context is more sensitive still, and the
-regulatory and privacy path to assembling the two together is long enough that
-every serious dataset in this field is private. That is the actual bottleneck.
-
-So the first thing needed is a way to measure whether a model can use patient
-context at all. That is what we built.
+Vision-language models are, in principle, capable of consuming both modalities,
+but the claim has never been testable, because the data required to test it are
+not publicly available: embryo images are sensitive clinical records,
+outcome-linked patient context is more sensitive still, and the regulatory and
+privacy requirements for assembling the two together are stringent enough that
+essentially every substantial dataset in this field remains private. This, rather
+than model capacity, is the binding constraint, and it motivates the first
+contribution of this work, which is an instrument for measuring whether a model
+can use patient context at all.
 
 \textbf{IVF-Bench} is an open benchmark of 753 day-5 blastocyst cases. Each case
 pairs a real embryo image and its expert Gardner annotation with real cycle and
@@ -107,24 +113,27 @@ We evaluate seven frontier and open-weight models, then post-train a 9B open
 model on preference pairs drawn from the benchmark. What we found:
 
 \begin{enumerate}
-\item Post-training beats scale on this task. 550 preference pairs move a 9B open
-      model past Claude Opus 4.6 into second place of eight, at a twentieth of
-      the inference cost. The reasoning half of embryo assessment does not
-      require a frontier model, and the recipe is reproducible by anyone.
-\item That gain shows up on all five rubrics at once, not on one, which is what
-      distinguishes a recipe that improves the whole assessment from a tuning
-      trick that moves a single number.
-\item Outcome prediction stays weak for everyone, and we quantify how weak
-      against a baseline that ignores its inputs entirely. We read that as a
-      ceiling set by the available data, not by the models, for the reason given
-      above.
-\item Morphology is the weakest rubric everywhere, and our judge cannot see the
-      image, so we treat that as a bound rather than a measurement.
+\item Targeted post-training substitutes for scale on this task: 550 preference
+      pairs are sufficient to move a 9B open model past Claude Opus 4.6 into
+      second position of eight at roughly one twentieth of the inference cost,
+      indicating that the reasoning component of embryo assessment is accessible
+      to models far below frontier scale.
+\item The improvement is distributed across all five rubrics rather than
+      concentrated in one, which distinguishes a procedure that improves the
+      assessment as a whole from one that optimizes a single reported quantity.
+\item Outcome discrimination remains weak for every system evaluated, and we
+      quantify the deficit against a baseline that ignores its inputs entirely,
+      attributing the ceiling to the available data rather than to model
+      capacity, for the reason given above.
+\item Morphology grounding is the weakest rubric throughout, though our judge
+      does not observe the image, so we treat those scores as an upper bound on
+      image comprehension rather than a measurement of it.
 \end{enumerate}
 
-The practical conclusion is that the field's next unlock is a public dataset that
-links embryo images to real patient context and real outcomes. IVF-Bench is the
-instrument for measuring what such a dataset would buy.
+The practical implication is that progress in this area depends less on model
+development than on the construction of a public dataset linking embryo images to
+measured patient context and recorded outcomes, and IVF-Bench provides the
+instrument with which the value of such a dataset can be quantified.
 
 % ============================================================
 \section{Related work}
@@ -209,32 +218,29 @@ never reached a public research corpus, because assembling images plus
 outcome-linked patient records is exactly the combination that regulatory and
 privacy review is built to slow down.
 
-So we generated it. Each field is sampled from a published population
-distribution; Appendix~\ref{app:distributions} gives every parameter and its
-source. Generation is deterministic per case, seeded from a hash of the case
-identifier, so cases regenerate exactly and adding new cases does not perturb
-existing ones. Every case file carries a \texttt{synthetic\_fields} list naming
-exactly which fields were generated, so no reader has to guess and no result can
-quietly depend on generated data being mistaken for measured data.
+We therefore generate these fields, sampling each from a published population
+distribution, with every parameter and its source given in
+Appendix~\ref{app:distributions}. Generation is deterministic per case, seeded
+from a hash of the case identifier, so that cases regenerate exactly and the
+addition of new cases does not perturb existing ones, and each case record
+enumerates its generated fields explicitly, so that no result can depend on
+generated values being mistaken for measured ones.
 
-This buys a case-level reasoning task that can be built and reproduced entirely
-from public sources. It costs two things, and both matter for reading the
-results.
-
-First, the generated fields are sampled independently of the recorded outcomes.
-They are realistic in their marginal distributions and they carry no information
-about which patient conceived. A model cannot extract predictive signal from them
-because there is none to extract. The outcome-prediction numbers in
-Section~\ref{sec:results} are therefore bounded by the data before any model is
-involved, and should be read as a floor that measures what is missing, not as a
-verdict on what vision-language models can do with real context.
-
-Second, the fields are sampled independently of each other, so genuine clinical
-correlations such as the one between PCOS and BMI are absent. A model that knows
-those correlations is not rewarded for it here.
-
-Neither cost is fixable with a better generator. Both are fixed by a real
-dataset, which is the point.
+This procedure yields a case-level reasoning task that can be constructed and
+reproduced entirely from public sources, at two costs that bear directly on the
+interpretation of our results. First, the generated fields are sampled
+independently of the recorded outcomes, so that although their marginal
+distributions are realistic they carry no information about which patients
+conceived, and no model can extract predictive signal from them because none is
+present; the outcome metrics in Section~\ref{sec:results} are consequently
+bounded by the data before any model is involved, and should be read as a floor
+that quantifies what is missing rather than as a verdict on what vision-language
+models can achieve given measured context. Second, the fields are sampled
+independently of one another, so genuine clinical correlations, such as that
+between polycystic ovary syndrome and body mass index, are absent, and a model
+that has internalized those correlations receives no credit for them here.
+Neither limitation can be remedied by a more sophisticated generator; both are
+remedied by a real dataset, which is precisely the argument of this paper.
 
 \subsection{Splits}
 

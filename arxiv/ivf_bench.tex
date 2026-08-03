@@ -48,56 +48,72 @@
 \maketitle
 
 \begin{abstract}
-Embryo selection is still done by eye, and the machine learning built to improve
-it looks only at the embryo. The largest randomised trial of that approach failed
-to beat trained embryologists. But the embryo is only half the case. A patient's
-history and lifestyle shape the outcome too, and that information stays in the
-physician's notes, reaching neither the embryologist nor the model. No public
-dataset pairs it with embryo images and real outcomes, so the question has gone
-untested. IVF-Bench tests it: 753 real day-5 cases that ask a model to read the
-embryo, weigh the patient, put a number on the odds, and say what to do next,
-scored against five clinical rubrics and against what actually happened.
-Post-training a 9B open model on 550 preference pairs lifts all five rubrics and
-carries it past Claude Opus 4.6 at a twentieth of the cost. Outcome prediction
-stalls for every system, at a floor we trace to the missing data rather than the
-models.
+Embryo selection in {IVF} remains a morphology-driven judgment, and the deep
+learning systems built to standardize it operate on images alone, ranking
+blastocysts without the patient context that clinicians actually weigh; the
+largest randomized trial of that approach did not demonstrate noninferiority to
+trained embryologists. We present IVF-Bench, a rubric-based benchmark for
+evaluating whether vision-language models can perform the full assessment: 753
+day-5 blastocyst cases from the public Kromp dataset, each pairing a real embryo
+image and expert Gardner annotation with real cycle data and outcomes, together
+with patient-history fields sampled from published population distributions and
+explicitly labeled as generated, since no public dataset links such context to
+embryo images. Models produce open-ended assessments graded on five clinical
+rubrics by an {LLM} judge, and their stated implantation probabilities are scored
+against recorded outcomes. Across seven frontier and open-weight systems,
+clinical integration is uniformly strong while outcome discrimination is not,
+with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
+constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
+on 550 benchmark-derived preference pairs improves all five rubrics and places it
+second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
+$p{=}0.007$) at roughly one twentieth of the inference cost, indicating that the
+reasoning component of embryo assessment does not require frontier-scale models,
+while the prediction ceiling reflects the absence of context-linked outcome data
+rather than a limitation of the models themselves. We release the benchmark, the
+trained model, and all 5,194 responses with judge transcripts.
 \end{abstract}
 
 % ============================================================
 \section{Introduction}
 
-Few decisions in IVF matter more than which embryo to transfer, and in most
-clinics it is still made by eye. An embryologist looks at the blastocyst on day 5
-and assigns a Gardner grade: how far it has expanded, how well formed the inner
-cell mass is, how cohesive the trophectoderm is \citep{gardner1999}. The grade is
-useful. It is also subjective. Show the same day-5 embryos to embryologists at
-different centres and ask each to pick one, and they agree less often than the
-confidence of the decision suggests \citep{storr2017}.
+Few decisions in IVF carry more weight than the choice of which embryo to
+transfer, and in most clinics that choice still rests on visual assessment: an
+embryologist examines the blastocyst on day 5 and assigns a Gardner grade
+capturing the degree of expansion, the organization of the inner cell mass, and
+the cohesion of the trophectoderm \citep{gardner1999}. The grade is clinically
+useful, but it is also subjective, and when embryologists at different centres
+are shown the same day-5 embryos and asked to select one for transfer, their
+agreement falls well short of what the confidence of the decision would
+suggest \citep{storr2017}.
 
-That gap has attracted a decade of machine learning work, almost all of it
-framed as a scoring problem: feed in an image or a time-lapse video, return a
-number, rank the embryos by that number. The largest randomised trial of this
-approach put a deep learning ranker against trained embryologists across 14
-clinics and 1,066 patients, and it did not demonstrate noninferiority
-\citep{illingworth2024}. A ranker that cannot beat a human ranker is not obviously
-the thing to build next.
+That variability has motivated a decade of machine learning work, nearly all of
+it framed as a scoring problem in which an image or a time-lapse sequence is
+mapped to a scalar and embryos are ranked by that scalar. The largest randomized
+evaluation of this paradigm, a double-blind trial across 14 clinics and 1,066
+patients, compared a deep learning ranker against trained embryologists and did
+not demonstrate noninferiority \citep{illingworth2024}, which suggests that
+further refinement of image-only ranking is unlikely to be the most productive
+direction.
 
-We think the framing is the problem, not the architecture. An embryo image is a
-fraction of what determines whether a transfer works. The rest is the patient:
-her ovarian reserve, her endometrium, her BMI and lifestyle, what happened in her
-previous cycles, what the andrology report says. In a real clinic most of that
-lives with the physician and never reaches the embryologist at the microscope,
-let alone the imaging model. A system that sees only pixels is not failing at
-prediction so much as being asked to predict without the inputs that matter.
+We argue that the limitation lies in the framing rather than in the
+architecture. The embryo image captures only part of what determines whether a
+transfer succeeds; the remainder is patient-level, comprising ovarian reserve,
+endometrial receptivity, body mass index and lifestyle, the history of previous
+cycles, and the andrology profile. In clinical practice most of this information
+resides with the treating physician and rarely reaches the embryologist at the
+microscope, still less the imaging model, so a system operating on pixels alone
+is not so much failing at prediction as being asked to predict without the
+covariates that govern the outcome.
 
-Vision-language models can in principle take both. Nobody can show it, because
-the data to show it does not exist in public. Embryo images are sensitive
-clinical records, outcome-linked patient context is more sensitive still, and the
-regulatory and privacy path to assembling the two together is long enough that
-every serious dataset in this field is private. That is the actual bottleneck.
-
-So the first thing needed is a way to measure whether a model can use patient
-context at all. That is what we built.
+Vision-language models are, in principle, capable of consuming both modalities,
+but the claim has never been testable, because the data required to test it are
+not publicly available: embryo images are sensitive clinical records,
+outcome-linked patient context is more sensitive still, and the regulatory and
+privacy requirements for assembling the two together are stringent enough that
+essentially every substantial dataset in this field remains private. This, rather
+than model capacity, is the binding constraint, and it motivates the first
+contribution of this work, which is an instrument for measuring whether a model
+can use patient context at all.
 
 \textbf{IVF-Bench} is an open benchmark of 753 day-5 blastocyst cases. Each case
 pairs a real embryo image and its expert Gardner annotation with real cycle and
@@ -119,24 +135,27 @@ We evaluate seven frontier and open-weight models, then post-train a 9B open
 model on preference pairs drawn from the benchmark. What we found:
 
 \begin{enumerate}
-\item Post-training beats scale on this task. 550 preference pairs move a 9B open
-      model past Claude Opus 4.6 into second place of eight, at a twentieth of
-      the inference cost. The reasoning half of embryo assessment does not
-      require a frontier model, and the recipe is reproducible by anyone.
-\item That gain shows up on all five rubrics at once, not on one, which is what
-      distinguishes a recipe that improves the whole assessment from a tuning
-      trick that moves a single number.
-\item Outcome prediction stays weak for everyone, and we quantify how weak
-      against a baseline that ignores its inputs entirely. We read that as a
-      ceiling set by the available data, not by the models, for the reason given
-      above.
-\item Morphology is the weakest rubric everywhere, and our judge cannot see the
-      image, so we treat that as a bound rather than a measurement.
+\item Targeted post-training substitutes for scale on this task: 550 preference
+      pairs are sufficient to move a 9B open model past Claude Opus 4.6 into
+      second position of eight at roughly one twentieth of the inference cost,
+      indicating that the reasoning component of embryo assessment is accessible
+      to models far below frontier scale.
+\item The improvement is distributed across all five rubrics rather than
+      concentrated in one, which distinguishes a procedure that improves the
+      assessment as a whole from one that optimizes a single reported quantity.
+\item Outcome discrimination remains weak for every system evaluated, and we
+      quantify the deficit against a baseline that ignores its inputs entirely,
+      attributing the ceiling to the available data rather than to model
+      capacity, for the reason given above.
+\item Morphology grounding is the weakest rubric throughout, though our judge
+      does not observe the image, so we treat those scores as an upper bound on
+      image comprehension rather than a measurement of it.
 \end{enumerate}
 
-The practical conclusion is that the field's next unlock is a public dataset that
-links embryo images to real patient context and real outcomes. IVF-Bench is the
-instrument for measuring what such a dataset would buy.
+The practical implication is that progress in this area depends less on model
+development than on the construction of a public dataset linking embryo images to
+measured patient context and recorded outcomes, and IVF-Bench provides the
+instrument with which the value of such a dataset can be quantified.
 
 % ============================================================
 \section{Related work}
@@ -221,32 +240,29 @@ never reached a public research corpus, because assembling images plus
 outcome-linked patient records is exactly the combination that regulatory and
 privacy review is built to slow down.
 
-So we generated it. Each field is sampled from a published population
-distribution; Appendix~\ref{app:distributions} gives every parameter and its
-source. Generation is deterministic per case, seeded from a hash of the case
-identifier, so cases regenerate exactly and adding new cases does not perturb
-existing ones. Every case file carries a \texttt{synthetic\_fields} list naming
-exactly which fields were generated, so no reader has to guess and no result can
-quietly depend on generated data being mistaken for measured data.
+We therefore generate these fields, sampling each from a published population
+distribution, with every parameter and its source given in
+Appendix~\ref{app:distributions}. Generation is deterministic per case, seeded
+from a hash of the case identifier, so that cases regenerate exactly and the
+addition of new cases does not perturb existing ones, and each case record
+enumerates its generated fields explicitly, so that no result can depend on
+generated values being mistaken for measured ones.
 
-This buys a case-level reasoning task that can be built and reproduced entirely
-from public sources. It costs two things, and both matter for reading the
-results.
-
-First, the generated fields are sampled independently of the recorded outcomes.
-They are realistic in their marginal distributions and they carry no information
-about which patient conceived. A model cannot extract predictive signal from them
-because there is none to extract. The outcome-prediction numbers in
-Section~\ref{sec:results} are therefore bounded by the data before any model is
-involved, and should be read as a floor that measures what is missing, not as a
-verdict on what vision-language models can do with real context.
-
-Second, the fields are sampled independently of each other, so genuine clinical
-correlations such as the one between PCOS and BMI are absent. A model that knows
-those correlations is not rewarded for it here.
-
-Neither cost is fixable with a better generator. Both are fixed by a real
-dataset, which is the point.
+This procedure yields a case-level reasoning task that can be constructed and
+reproduced entirely from public sources, at two costs that bear directly on the
+interpretation of our results. First, the generated fields are sampled
+independently of the recorded outcomes, so that although their marginal
+distributions are realistic they carry no information about which patients
+conceived, and no model can extract predictive signal from them because none is
+present; the outcome metrics in Section~\ref{sec:results} are consequently
+bounded by the data before any model is involved, and should be read as a floor
+that quantifies what is missing rather than as a verdict on what vision-language
+models can achieve given measured context. Second, the fields are sampled
+independently of one another, so genuine clinical correlations, such as that
+between polycystic ovary syndrome and body mass index, are absent, and a model
+that has internalized those correlations receives no credit for them here.
+Neither limitation can be remedied by a more sophisticated generator; both are
+remedied by a real dataset, which is precisely the argument of this paper.
 
 \subsection{Splits}
 
@@ -337,28 +353,33 @@ description is consistent with the Gardner annotation the model was handed, not
 whether the model read the image correctly. A judge that cannot see the image
 cannot catch a fluent description of an embryo that is not there.
 
-\textbf{Two things we got wrong the first time.} Both are worth reporting because
-they are easy to repeat and neither is visible in the output.
+\textbf{Two evaluation defects and their correction.} We report both because
+each is easy to reproduce inadvertently and neither is visible in the resulting
+scores.
 
-First, when a judge call failed, the pipeline wrote a score file containing five
-zeros and moved on. Because later runs skip cases that already have a score file,
-those failures became permanent. In our first pass this hollowed out 231 of the
-test-split scores, 211 of them belonging to a single model, so that model's row
-was computed from 309 of 550 cases while the table said 520. The judge now
-refuses to write a failed score, so the case simply stays pending.
+The first concerns failed judge calls. When a call errored, the pipeline
+persisted a score record containing five zeros and continued, and because
+subsequent runs skip cases for which a score record already exists, those
+failures became permanent. In our initial pass this silently invalidated 231 of
+the test-split scores, 211 of which belonged to a single model, so that the
+model's reported row was computed from 309 of 550 cases while the accompanying
+table indicated 520. The judge now declines to persist a failed score, leaving
+the case pending for a subsequent run.
 
-Second, our own model was served on vLLM without a reasoning parser. Qwen chat
-templates pre-fill \texttt{<think>} in the prompt, so the model emits its
-reasoning, a closing \texttt{</think>}, and then the answer, all in one field.
-Every hosted API returns reasoning separately. The result was that our model was
-graded on roughly 4,000 characters of raw thinking prepended to its answer while
-every other model was graded on the answer alone. Correcting this moved our model
-from 3.80 to 4.17 on the test split, from third place to second. The lesson
-generalises: if you compare a locally served reasoning model against hosted APIs,
-check what is actually inside the string you are grading.
+The second concerns how reasoning traces are delivered. Our post-trained model
+was served through vLLM without a reasoning parser, and because Qwen chat
+templates pre-fill \texttt{<think>} in the generation prompt, the model emits its
+reasoning, a closing \texttt{</think>}, and then its answer within a single
+field, whereas every hosted API returns reasoning in a separate field. Our model
+was consequently graded on approximately 4,000 characters of unfiltered reasoning
+prepended to its answer while all other systems were graded on the answer alone;
+correcting this raised its test-split score from 3.80 to 4.17 and moved it from
+third position to second. The general point is that comparisons between locally
+served reasoning models and hosted APIs require verifying the contents of the
+string being graded.
 
-All numbers below come after both fixes. Every score in the study is produced by
-GPT-5.4, and no score file contains a judge failure.
+All results reported below follow both corrections: every score in the study is
+produced by GPT-5.4, and no score record contains a judge failure.
 
 
 % ============================================================
@@ -451,11 +472,12 @@ $[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI $[+0.03,
 
 \subsection{What the numbers say}
 
-\textbf{1. Models explain cases well.} Clinical integration is the strongest
-rubric for every model in the study. GPT-5.4 scores a perfect 5.00 on both
-splits. The models pick up age, AMH, endometrial thickness, and prior cycle
-history and weave them into a coherent account of this patient's prognosis. If
-the task were writing the counselling note, this would be close to solved.
+\textbf{1. Case explanation is uniformly strong.} Clinical integration is the
+highest-scoring rubric for every system evaluated, with GPT-5.4 reaching a
+maximal 5.00 on both splits; models reliably incorporate age, AMH, endometrial
+thickness, and prior cycle history into a coherent account of the patient's
+prognosis, such that if the task were confined to producing the counselling
+narrative it would be close to solved.
 
 \textbf{2. Outcome prediction sits at the floor, and we can say exactly how far
 below useful that is.} AUROC spans 0.450 to 0.562 across the field, where 0.5 is
@@ -511,19 +533,20 @@ post-training bought is a model whose stated probabilities moved back toward the
 population rate, correcting the base model's overconfidence. On this data that is
 the right behaviour, and it is not predictive skill.
 
-\textbf{3. Morphology is the weakest rubric everywhere.} No model exceeds 3.98 on
-morphology grounding on either split, while on the test split five of eight
-exceed 4.30 on clinical integration. Models are better at reasoning about the
-structured data they are given in text than at reading the picture. Our judge
-cannot see the image either, so a model can score well here by restating the
-Gardner grade it was handed. These numbers are therefore an upper bound on true
-image reading, not a measurement of it.
+\textbf{3. Morphology grounding is the weakest rubric throughout.} No system
+exceeds 3.98 on morphology grounding on either split, whereas five of eight
+exceed 4.30 on clinical integration on the test split, indicating that models
+reason more effectively about the structured data supplied in text than about the
+image itself. Because our judge does not observe the image, a system can score
+well on this rubric by restating the Gardner grade it was given, so these values
+constitute an upper bound on image comprehension rather than a measurement of
+it.
 
-\textbf{4. Price and quality are only loosely related.} On the test split, Opus
-4.6 costs \$184.81 to run the 550 cases and scores 4.01, while our 9B model costs
-\$7.98 and scores 4.17. Gemini 2.5 Flash is the cheapest commercial system in the
-study and finishes seventh there, though it rises to fourth on held out, which is
-the largest split-to-split move of any model.
+\textbf{4. Cost and quality are only loosely coupled.} On the test split Opus
+4.6 requires \$184.81 to process the 550 cases and scores 4.01, while our 9B
+model requires \$7.98 and scores 4.17; Gemini 2.5 Flash, the least expensive
+commercial system evaluated, finishes seventh on that split while rising to
+fourth on held out, the largest between-split movement of any system.
 
 
 % ============================================================
@@ -531,8 +554,9 @@ the largest split-to-split move of any model.
 \label{sec:orpo}
 
 
-The obvious question about the gap between a 9B open model and a frontier system
-is whether it is a capability ceiling or a data problem. We tested it directly.
+The natural question raised by the gap between a 9B open model and a frontier
+system is whether that gap reflects a capability ceiling or a deficit of
+domain-specific training data, and we tested this directly.
 
 \subsection{Building preference pairs from the benchmark}
 
@@ -577,11 +601,11 @@ alignment most of all.}
 \label{tab:orpo}
 \end{table}
 
-Five hundred and fifty preference pairs moved a 9B model from last place to
-second, past Claude Opus 4.6. Every rubric improved, and that is the result worth
-holding onto: this is a recipe that lifts the whole assessment, not a trick that
-moves one number. It is also reproducible by anyone with the released dataset and
-two GPUs, which is the point of releasing it.
+Five hundred and fifty preference pairs moved a 9B model from last position to
+second, ahead of Claude Opus 4.6, and every rubric improved, which is the result
+worth emphasizing: the procedure raises the assessment as a whole rather than
+optimizing a single reported quantity, and it is reproducible by anyone with the
+released dataset and two GPUs.
 
 Its held-out Brier of 0.245 is second of the eight, behind Sonnet 4.6 at 0.242,
 and should be read alongside Table~\ref{tab:baserate}. What the fine-tune fixed
@@ -590,17 +614,19 @@ true rate of 0.350, and the trained model's is 0.396. Whether the same recipe yi
 when the context fields are measured rather than generated is the open question
 this benchmark exists to make answerable.
 
-The base model's AUROC is instructive in the other direction. On the test split
-it posts 0.554, the highest of the eight, and on held out it collapses to 0.450,
-below chance. That is what an overfitted ranking looks like when the distribution
-shifts. The post-trained model goes the other way, 0.531 to 0.547, which suggests
-the fine-tune regularised its probability estimates rather than sharpening them.
+The base model's AUROC is instructive in the opposite direction: it attains
+0.554 on the test split, the highest of the eight, and collapses to 0.450 on held
+out, below chance, which is the signature of a ranking that has overfitted to one
+distribution and fails to survive a shift, whereas the post-trained model moves
+from 0.531 to 0.547, suggesting that the fine-tune regularized its probability
+estimates rather than sharpening them.
 
-The economics are the part a clinic would care about. Running the 550 test cases
-costs \$184.81 with Opus 4.6 and \$7.98 with our model, which scores higher. At
-roughly 19 seconds and \$0.017 per case on hardware you already own, the
-post-trained small model is the sensible form factor for this workload, provided
-you want the explanation and not the prediction.
+The cost structure is the consideration most relevant to deployment: processing
+the 550 test cases requires \$184.81 with Opus 4.6 against \$7.98 with our model,
+which scores higher, and at approximately 19 seconds and \$0.017 per case on
+hardware already provisioned, a post-trained small model is the appropriate form
+factor for this workload, provided that the requirement is explanation rather
+than prediction.
 
 
 % ============================================================
@@ -608,39 +634,40 @@ you want the explanation and not the prediction.
 \label{sec:robustness}
 
 
-A benchmark paper should try to break its own benchmark. Four checks, all of
-which cost nothing to run because they reuse the collected responses.
+A benchmark paper should attempt to falsify its own instrument, and we report
+four such checks, each of which reuses the collected responses and therefore
+incurs no additional cost.
 
-\textbf{Do the five rubrics measure five things?} Partly. The mean correlation
-between distinct rubrics is 0.49 and the first principal component explains 60\%
-of the variance across 4,370 judgements, so there is a strong general "good
-answer" factor. But the structure is not degenerate: recommendation usefulness
-and clinical integration correlate at 0.69, while recommendation usefulness and
-guideline alignment correlate at only 0.28. Reporting the five separately is
-justified. Reporting the unweighted mean as though it were five independent
-measurements is not.
+\textbf{Do the five rubrics measure five distinct constructs?} Only partly: the
+mean correlation between distinct rubrics is 0.49 and the first principal
+component accounts for 60\% of the variance across 4,370 judgements, indicating a
+substantial general quality factor. The structure is nonetheless not degenerate,
+since recommendation usefulness correlates with clinical integration at 0.69 but
+with guideline alignment at only 0.28, which justifies reporting the five
+separately while cautioning against treating their unweighted mean as five
+independent measurements.
 
-\textbf{Does the judge reward length?} Yes, and unevenly. Pooling all models, the
-Spearman correlation between response length and overall score is 0.61. Broken
-down per model it ranges from $-0.01$ for Opus 4.6 to $+0.76$ for Gemini 2.5
-Flash. Gemini is also the lowest-scoring commercial model and the one whose score
-depends most on how much it wrote. Any future version of this benchmark should
-control for length, and any reader comparing two close scores should ask whether
-one model simply wrote more.
+\textbf{Does the judge reward verbosity?} It does, and unevenly: pooled across
+systems the Spearman correlation between response length and overall score is
+0.61, and per system it ranges from $-0.01$ for Opus 4.6 to $+0.76$ for Gemini
+2.5 Flash, which is both the lowest-scoring commercial system and the one whose
+score depends most heavily on output length. Future versions of this benchmark
+should control for length explicitly, and readers comparing closely spaced scores
+should consider whether one system simply produced more text.
 
-\textbf{Does patient-level leakage change anything?} No. Twenty-two patients
-contributed two embryos, and keeping only one embryo per patient removes 16 cases
-from the test split. No ranking changes and no score moves by more than 0.01. The
-defect is real and should be fixed by splitting on patient, but it did not
-contaminate these results.
+\textbf{Does patient-level leakage affect the results?} It does not: twenty-two
+patients contributed two embryos each, and retaining only one embryo per patient
+removes 16 cases from the test split without changing any ranking or moving any
+score by more than 0.01. The defect is real and should be addressed by splitting
+on patient rather than on image, but it did not contaminate these results.
 
-\textbf{Does the judge's own preference inflate our model?} We cannot rule it
-out, and this is the largest open question in the paper. GPT-5.4 is the judge, it
-wrote 92\% of the chosen responses our model learned from, and it sits at the top
-of the leaderboard. A model trained to sound like the judge should be expected to
-please the judge. Confirming the ranking with a second judge from a different
-family is the first thing we would do with more budget, and until that is done
-the sensible reading of our model's second place is "second according to
+\textbf{Does judge self-preference inflate our result?} We cannot exclude it,
+and this remains the principal open question in the paper: GPT-5.4 serves as the
+judge, produced 92\% of the chosen responses from which our model was trained,
+and occupies the top of the leaderboard, so a model optimized to resemble the
+judge should be expected to satisfy it. Confirming the ordering with a judge from
+a different model family is the most immediate extension of this work, and until
+that is done our model's second position should be read as second according to
 GPT-5.4."
 
 
