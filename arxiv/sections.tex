@@ -39,33 +39,14 @@ rather than whether the model read the image correctly, and a judge that cannot
 see the image cannot detect a fluent description of an embryo that is not
 there.
 
-\textbf{Two evaluation defects and their correction.} We report both because
-each is easy to reproduce inadvertently and neither is visible in the resulting
-scores.
-
-The first concerns failed judge calls: when a call errored, the pipeline
-persisted a score record containing five zeros and continued, and because
-subsequent runs skip cases for which a score record already exists, those
-failures became permanent. In our initial pass this silently invalidated 231 of
-the test-split scores, 211 of which belonged to a single model, so that the
-model's reported row was computed from 309 of 550 cases while the accompanying
-table indicated 520. The judge now declines to persist a failed score, leaving
-the case pending for a subsequent run.
-
-The second concerns how reasoning traces are delivered. Our post-trained model
-was served through vLLM without a reasoning parser, so that because Qwen chat
-templates pre-fill \texttt{<think>} in the generation prompt, the model emits its
-reasoning, a closing \texttt{</think>}, and then its answer within a single
-field, whereas every hosted API returns reasoning in a separate field. Our model
-was consequently graded on approximately 4,000 characters of unfiltered reasoning
-prepended to its answer while all other systems were graded on the answer alone;
-correcting this raised its test-split score from 3.80 to 4.17 and moved it from
-third position to second. The general point is that comparisons between locally
-served reasoning models and hosted APIs require verifying the contents of the
-string being graded.
-
-All results reported below follow both corrections: every score in the study is
-produced by GPT-5.4, and no score record contains a judge failure.
+\textbf{Two evaluation defects.} Two defects in our own pipeline, described in
+full in Appendix~\ref{app:defects}, invalidated an earlier version of these
+results: failed judge calls were persisted as all-zero score records that
+subsequent runs treated as complete, and our locally served model was graded on
+its chain of thought because vLLM was run without a reasoning parser, which
+depressed its test-split score from 4.17 to 3.80. All results reported below
+follow both corrections, so that every score in the study is produced by GPT-5.4
+and no score record contains a judge failure.
 
 % ===== RESULTS =====
 \subsection{Reading the two outcome metrics}
@@ -87,53 +68,42 @@ useless on the other.
 \begin{table}[H]
 \centering
 \small
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{clcccccccc}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccc}
 \toprule
-\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
-\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
-\textbf{AUROC}$\uparrow$ \\
+& \multicolumn{6}{c}{\textbf{Rubrics (1--5)}} & \multicolumn{2}{c}{\textbf{Outcome}} \\
+\cmidrule(lr){2-7}\cmidrule(lr){8-9}
+\textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} & \textbf{Reas} &
+\textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ & \textbf{AUROC}$\uparrow$ \\
 \midrule
-1 & GPT-5.4 & \textbf{4.54} & \textbf{3.96} & \textbf{5.00} & \textbf{4.66} & \textbf{4.15} & \textbf{4.92} & 0.245 & 0.553 \\
-2 & \textbf{Qwen9B-ORPO (ours)} & 4.17 & 3.60 & 4.83 & 4.00 & 3.96 & 4.44 & 0.249 & 0.531 \\
-3 & Opus 4.6 & 4.01 & 3.52 & 4.97 & 3.96 & 3.20 & 4.38 & 0.245 & 0.541 \\
-4 & Qwen 397B & 3.75 & 3.33 & 4.27 & 3.84 & 3.31 & 3.98 & 0.260 & 0.538 \\
-5 & Kimi K2.5 & 3.63 & 3.39 & 4.38 & 3.66 & 3.00 & 3.72 & \textbf{0.242} & 0.552 \\
-6 & Sonnet 4.6 & 3.58 & 2.92 & 4.48 & 3.64 & 2.79 & 4.06 & \textbf{0.241} & 0.544 \\
-7 & Gemini 2.5 Flash & 3.40 & 3.34 & 3.88 & 3.58 & 3.53 & 2.66 & 0.269 & 0.537 \\
-8 & Qwen 9B (base) & 3.35 & 3.08 & 3.93 & 3.38 & 2.81 & 3.56 & 0.255 & \textbf{0.554} \\
+\multicolumn{9}{l}{\emph{Test split, 550 cases}} \\
+GPT-5.4 & \textbf{4.54} & \textbf{3.96} & \textbf{5.00} & \textbf{4.66} & \textbf{4.15} & \textbf{4.92} & 0.245 & 0.553 \\
+\textbf{Qwen9B-ORPO (ours)} & 4.17 & 3.60 & 4.83 & 4.00 & 3.96 & 4.44 & 0.249 & 0.531 \\
+Opus 4.6 & 4.01 & 3.52 & 4.97 & 3.96 & 3.20 & 4.38 & 0.245 & 0.541 \\
+Qwen 397B & 3.75 & 3.33 & 4.27 & 3.84 & 3.31 & 3.98 & 0.260 & 0.538 \\
+Kimi K2.5 & 3.63 & 3.39 & 4.38 & 3.66 & 3.00 & 3.72 & 0.242 & 0.552 \\
+Sonnet 4.6 & 3.58 & 2.92 & 4.48 & 3.64 & 2.79 & 4.06 & \textbf{0.241} & 0.544 \\
+Gemini 2.5 Flash & 3.40 & 3.34 & 3.88 & 3.58 & 3.53 & 2.66 & 0.269 & 0.537 \\
+Qwen 9B (base) & 3.35 & 3.08 & 3.93 & 3.38 & 2.81 & 3.56 & 0.255 & \textbf{0.554} \\
+\midrule
+\multicolumn{9}{l}{\emph{Held-out split, 103 cases}} \\
+GPT-5.4 & \textbf{4.55} & \textbf{3.98} & \textbf{5.00} & \textbf{4.65} & \textbf{4.23} & \textbf{4.88} & 0.246 & \textbf{0.562} \\
+\textbf{Qwen9B-ORPO (ours)} & 4.11 & 3.56 & 4.76 & 3.93 & 3.93 & 4.37 & 0.245 & 0.547 \\
+Opus 4.6 & 4.01 & 3.60 & 4.92 & 3.98 & 3.22 & 4.31 & 0.247 & 0.551 \\
+Gemini 2.5 Flash & 3.83 & 3.34 & 4.40 & 3.90 & 3.54 & 3.98 & 0.289 & 0.504 \\
+Qwen 397B & 3.82 & 3.48 & 4.31 & 3.88 & 3.44 & 3.98 & 0.265 & 0.551 \\
+Kimi K2.5 & 3.73 & 3.48 & 4.42 & 3.80 & 3.04 & 3.90 & 0.254 & 0.518 \\
+Sonnet 4.6 & 3.65 & 3.07 & 4.51 & 3.73 & 2.89 & 4.06 & \textbf{0.242} & 0.534 \\
+Qwen 9B (base) & 3.31 & 2.99 & 3.91 & 3.18 & 2.85 & 3.64 & 0.285 & 0.450 \\
 \bottomrule
 \end{tabular}
-\caption{Test split, 550 cases, GPT-5.4 judge, every model with reasoning
-enabled. Qwen 9B base completed 520 of 550 cases; the other 30 ran out of tokens
-inside a reasoning loop. Rubrics are morphology grounding, clinical integration,
-reasoning coherence, guideline alignment, and recommendation usefulness.}
+\caption{IVF-Bench leaderboard on both splits, ordered within each split by
+overall score. Rubrics are morphology grounding, clinical integration, reasoning
+coherence, guideline alignment, and recommendation usefulness. All systems ran
+with reasoning enabled and were graded by GPT-5.4. Qwen 9B base completed 520 of
+550 test cases, the remaining 30 having exhausted their token budget inside a
+reasoning loop; every system answered all 103 held-out cases.}
 \label{tab:leaderboard}
-\end{table}
-
-\begin{table}[H]
-\centering
-\small
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{clcccccccc}
-\toprule
-\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
-\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
-\textbf{AUROC}$\uparrow$ \\
-\midrule
-1 & GPT-5.4 & \textbf{4.55} & \textbf{3.98} & \textbf{5.00} & \textbf{4.65} & \textbf{4.23} & \textbf{4.88} & 0.246 & \textbf{0.562} \\
-2 & \textbf{Qwen9B-ORPO (ours)} & 4.11 & 3.56 & 4.76 & 3.93 & 3.93 & 4.37 & 0.245 & 0.547 \\
-3 & Opus 4.6 & 4.01 & 3.60 & 4.92 & 3.98 & 3.22 & 4.31 & 0.247 & 0.551 \\
-4 & Gemini 2.5 Flash & 3.83 & 3.34 & 4.40 & 3.90 & 3.54 & 3.98 & 0.289 & 0.504 \\
-5 & Qwen 397B & 3.82 & 3.48 & 4.31 & 3.88 & 3.44 & 3.98 & 0.265 & 0.551 \\
-6 & Kimi K2.5 & 3.73 & 3.48 & 4.42 & 3.80 & 3.04 & 3.90 & 0.254 & 0.518 \\
-7 & Sonnet 4.6 & 3.65 & 3.07 & 4.51 & 3.73 & 2.89 & 4.06 & \textbf{0.242} & 0.534 \\
-8 & Qwen 9B (base) & 3.31 & 2.99 & 3.91 & 3.18 & 2.85 & 3.64 & 0.285 & 0.450 \\
-\bottomrule
-\end{tabular}
-\caption{Held-out split, 103 cases that were never used for training,
-hyperparameter search, or judge calibration. All eight models answered all 103.}
-\label{tab:heldout}
 \end{table}
 
 \subsection{Which gaps are real}

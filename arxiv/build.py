@@ -173,6 +173,7 @@ def main() -> None:
         ("RELEASE_PLACEHOLDER", section("RELEASE", sec)),
         ("PROMPT_APPENDIX_PLACEHOLDER", prompt_appendix()),
         ("RUBRIC_APPENDIX_PLACEHOLDER", rubric_appendix()),
+        ("DEFECTS_APPENDIX_PLACEHOLDER", (ARXIV / "defects.tex").read_text()),
         ("DISTRIBUTION_APPENDIX_PLACEHOLDER", distribution_appendix()),
         ("ARTIFACT_APPENDIX_PLACEHOLDER", artifact_appendix()),
     ]:
