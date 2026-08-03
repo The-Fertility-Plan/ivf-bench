@@ -97,7 +97,8 @@ than model capacity, is the binding constraint, and it motivates the first
 contribution of this work, which is an instrument for measuring whether a model
 can use patient context at all.
 
-\textbf{IVF-Bench} comprises 753 day-5 blastocyst cases, each pairing a real
+\textbf{IVF-Bench} comprises 753 blastocyst cases imaged on day 5, of which 641
+were transferred on day 5 and 112 on day 4, each pairing a real
 embryo image and its silver-standard Gardner annotation with the cycle data and recorded
 outcomes of the same patient, together with the patient-history fields that no
 public dataset supplies and that we therefore generate from published population
@@ -191,9 +192,9 @@ Open embryo data is rare, because embryo images are sensitive clinical records
 and most published systems are trained on private single-clinic collections. We
 build on the Kromp blastocyst dataset \citep{kromp2023}, which is public under CC
 BY 4.0 and links day-5 embryo images to Gardner grades, selected cycle variables, and
-pregnancy outcomes. Of the 837 patients in the release, 754 have
-complete clinical records, and one of those references an image that is missing
-from the distributed archive, which leaves 753 usable cases.
+pregnancy outcomes. The clinical annotation file contains 754 records spanning 732 patients, one of
+which references an image absent from the distributed archive, leaving 753 usable
+cases from 731 patients.
 
 Preparing the source data required more correction than we anticipated, and we
 document it because anyone reusing the dataset will encounter the same issues.

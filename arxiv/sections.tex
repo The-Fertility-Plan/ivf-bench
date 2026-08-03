@@ -139,10 +139,10 @@ precisely.} AUROC spans 0.450 to 0.562 across the systems evaluated, against 0.5
 for chance, so that the best value obtained, 0.562, corresponds to ranking a
 conceiving embryo above a non-conceiving one on 56\% of such pairs.
 
-The Brier scores appear more favorable than they are. They cluster between 0.241
-and 0.289, which improves on the 0.25 obtained by always predicting 50\% and
-invites the reading that calibration is adequate, but that is the wrong reference
-point: the clinical pregnancy rate in this cohort is 0.350, so a constant
+The Brier scores appear more favorable than they are. They span 0.241 to 0.289, straddling the
+0.25 obtained by always predicting 50\%, which nine of the sixteen model-split
+combinations improve on and seven do not. Even that comparison is the wrong
+reference point: the clinical pregnancy rate in this cohort is 0.350, so a constant
 predictor that returns 35\% for every case, disregarding the embryo, the image,
 and the patient entirely, scores 0.2274, and every system in the study performs
 worse.
@@ -191,11 +191,16 @@ What post-training achieved is a model whose stated probabilities moved back
 toward the population rate, correcting the overconfidence of the base model,
 which on these data is the correct behavior and is not predictive skill.
 
-\textbf{3. Morphology grounding is the weakest rubric throughout.} No system
-exceeds 3.98 on morphology grounding on either split, whereas five of eight
-exceed 4.30 on clinical integration on the test split, indicating that models
-reason more effectively about the structured data supplied in text than about the
-image itself. Because our judge does not observe the image, a system can score well on this
+\textbf{3. Morphology grounding and guideline alignment are the two weak
+rubrics, and clinical integration the strong one.} Averaged across systems,
+guideline alignment is lowest on both splits (3.34 on test, 3.39 held out) with
+morphology grounding just above it (3.39 and 3.44), while clinical integration
+reaches 4.47 and 4.53; no system reaches 3.99 on morphology grounding on either
+split. Morphology is the single weakest rubric for only two of eight systems on
+test and three of eight held out, so the accurate statement is that both rubrics
+sit roughly a point below clinical integration rather than that morphology is
+uniquely weak. Models reason more effectively about the structured data supplied
+in text than about the image itself. Because our judge does not observe the image, a system can score well on this
 rubric by restating the Gardner grade it was given, so these values constitute an
 upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
@@ -337,11 +342,12 @@ domain-specific training data, and we tested this directly.
 
 \subsection{Building preference pairs from the benchmark}
 
-For each of the 550 test-split cases we already had seven scored responses, and
-we took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
-\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, of
+For each of the 550 test-split cases we already had scored responses from the
+seven baseline systems, or from six on the 30 cases the base 9B model failed to
+complete, and we took the highest-scoring as \texttt{chosen} and the
+lowest-scoring as \texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, of
 which 500 were used for training and 50 held for evaluation during the run. We then fine-tuned Qwen 3.5-9B with ORPO
-\citep{hong2024orpo}, LoRA rank 16 and alpha 32 applied to all linear layers
+\citep{hong2024orpo}, LoRA rank 8 and alpha 36 applied to all linear layers
 including the vision tower, three epochs on two H100s, with the learning rate and
 the preference weight chosen by an eight-trial search.
 

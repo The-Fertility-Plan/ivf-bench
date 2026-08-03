@@ -24,13 +24,13 @@ blastocysts without the patient context that clinicians actually weigh; the
 largest randomized trial of that approach did not demonstrate noninferiority to
 trained embryologists. We present IVF-Bench, a rubric-based benchmark for
 evaluating whether vision-language models can perform the full assessment: 753
-day-5 blastocyst cases from the public Kromp dataset, each pairing a real embryo
+blastocyst cases from the public Kromp dataset, each pairing a real embryo
 image and its Gardner annotation with real cycle data and outcomes, together
 with patient-history fields sampled from published population distributions and
 explicitly labeled as generated, since no public dataset links such context to
 embryo images. Models produce open-ended assessments graded on five clinical
 rubrics by an {LLM} judge, and their stated implantation probabilities are scored
-against recorded outcomes. Across seven frontier and open-weight systems,
+against recorded outcomes. Across eight systems, seven of them frontier or open-weight baselines,
 clinical integration is uniformly strong while outcome discrimination is not,
 with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
 constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
