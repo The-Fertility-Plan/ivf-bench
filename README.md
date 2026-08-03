@@ -50,8 +50,8 @@ at roughly one twentieth of the inference cost. Against its own base model it
 gains 24%, and all five rubrics move, not one.
 
 **Most of the middle of the leaderboard is a statistical tie.** On the held-out
-split, Gemini Flash vs Qwen 397B and Kimi vs Sonnet are not separable. Full
-intervals come from `scripts/paper_analysis.py`.
+split, Gemini Flash against Qwen 397B and Kimi against Sonnet are not separable.
+Full intervals are reproduced by `scripts/paper_analysis.py`.
 
 The 550-case test leaderboard is in [`data/runs/leaderboard.md`](data/runs/leaderboard.md).
 
@@ -111,6 +111,9 @@ export OPENAI_API_KEY=...        # or OPENROUTER_API_KEY / AWS credentials
 # 4. Reproduce the paper's statistics (bootstrap CIs, rubric structure,
 #    verbosity bias, patient-level robustness). Costs nothing.
 .venv/bin/python scripts/paper_analysis.py
+
+# 5. Reproduce the image ablation, after collecting the --no-image arms
+.venv/bin/python scripts/image_ablation.py
 ```
 
 Case generation is deterministic: every synthetic field is seeded from a hash of
@@ -128,16 +131,17 @@ with backoff, and fails fast on billing and authentication errors.
 **Serve local reasoning models with a reasoning parser.** vLLM without
 `--reasoning-parser` returns the chain of thought inside `message.content`, so a
 judge scores the thinking along with the answer while hosted APIs hand back the
-answer alone. This is not a fair comparison. `scripts/fix_inlined_cot.py` repairs
-already-collected runs; the runner now splits on `</think>` automatically.
+answer alone. That is not a fair comparison. The runner now splits on `</think>`
+automatically, so this is handled for you, but it is worth knowing if you collect
+responses through another path.
 
 ## Layout
 
 ```
 src/ivf_bench/          benchmark construction, inference runner, judge, metrics
-scripts/                analysis, preference-dataset build, training entrypoint
-configs/                ORPO training and hyperparameter-sweep configs
-docs/                   distribution parameters and sources for generated fields
+scripts/                paper statistics, image ablation, preference-pair build,
+                        training entrypoint
+configs/                ORPO training config for the released model
 data/cases/             550 test cases
 data/validation_cases/  100 validation cases
 data/held_out_cases/    103 held-out cases
@@ -153,10 +157,13 @@ highest-scoring model output becomes `chosen` and the lowest-scoring becomes
 `rejected`.
 
 ```bash
-.venv/bin/python scripts/build_orpo_dataset.py
-.venv/bin/python scripts/push_orpo_to_hf.py
+.venv/bin/python scripts/build_orpo_dataset.py     # writes data/orpo/{train,eval}.jsonl
 bash scripts/lambda_train.sh configs/training_orpo_qwen_vlm_final.yaml
 ```
+
+The dataset is uploaded to the Hub as an `Image()`-typed dataset so the trainer
+decodes it to PIL; the released copy is linked above if you would rather skip
+that step.
 
 Training itself runs on 2x H100 through
 [AITraining](https://github.com/monostate/aitraining), which wraps TRL's ORPO
