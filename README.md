@@ -26,15 +26,24 @@ model's stated probability against the real clinical pregnancy outcome.
 | # | Model | Overall | Morph | Clinical | Reasoning | Guideline | Recommend | Brier | AUROC | Cost / 550 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | GPT-5.4 | 4.55 | 3.98 | 5.00 | 4.65 | 4.23 | 4.88 | 0.246 | 0.562 | $61.10 |
-| 2 | **IVF-Bench-Qwen9B-ORPO (ours)** | **4.11** | 3.56 | 4.76 | 3.93 | 3.93 | 4.37 | **0.245** | 0.547 | **$7.98** |
+| 2 | **IVF-Bench-Qwen9B-ORPO (ours)** | **4.11** | 3.56 | 4.76 | 3.93 | 3.93 | 4.37 | 0.245 | 0.547 | $7.98* |
 | 3 | Claude Opus 4.6 | 4.01 | 3.60 | 4.92 | 3.98 | 3.22 | 4.31 | 0.247 | 0.551 | $184.81 |
 | 4 | Gemini 2.5 Flash | 3.83 | 3.34 | 4.40 | 3.90 | 3.54 | 3.98 | 0.289 | 0.504 | $7.77 |
 | 5 | Qwen 3.5-397B | 3.82 | 3.48 | 4.31 | 3.88 | 3.44 | 3.98 | 0.265 | 0.551 | $10.94 |
 | 6 | Kimi K2.5 | 3.73 | 3.48 | 4.42 | 3.80 | 3.04 | 3.90 | 0.254 | 0.518 | $10.99 |
-| 7 | Claude Sonnet 4.6 | 3.65 | 3.07 | 4.51 | 3.73 | 2.89 | 4.06 | 0.242 | 0.534 | $38.39 |
+| 7 | Claude Sonnet 4.6 | 3.65 | 3.07 | 4.51 | 3.73 | 2.89 | 4.06 | **0.242** | 0.534 | $38.39 |
 | 8 | Qwen 3.5-9B (base) | 3.31 | 2.99 | 3.91 | 3.18 | 2.85 | 3.64 | 0.285 | 0.450 | $6.37 |
 
-Three findings worth your attention:
+\* Our model's cost is not comparable with the rest of the column. Its inference
+ran on hardware we already operated, so the $7.98 is almost entirely judge cost,
+while every other row is inference plus judge. Per case of inference the honest
+figures are $0.044 for our model against $0.310 for Opus 4.6.
+
+Note also that the best Brier score belongs to Sonnet 4.6, not to us, and that
+**every model here is worse than a constant predictor** that returns the cohort's
+35% pregnancy rate and ignores the embryo entirely (0.227).
+
+Findings worth your attention:
 
 **Models explain well and predict badly, and the ceiling is the data.** Clinical
 integration tops out at a perfect 5.00. Outcome AUROC never exceeds 0.562, where
@@ -44,14 +53,23 @@ patient-context fields in these cases are sampled independently of outcome, so
 they carry no signal to find. The benchmark is built so those fields can be
 swapped from generated to measured when such a dataset exists.
 
-**A 9B open model, post-trained on 550 preference pairs, beats Claude Opus 4.6.**
+**A 9B open model, post-trained on 500 training pairs, beats Claude Opus 4.6.**
 The gap is 0.10 points with a 95% bootstrap interval of [0.03, 0.17] (p=0.007),
-at roughly one twentieth of the inference cost. Against its own base model it
-gains 24%, and all five rubrics move, not one.
+at roughly one seventh of the marginal inference cost ($0.044 against $0.310 per
+case). Against its own base model it gains 24%, and all five rubrics move, not
+one. The comparison is made by a single judge that also authored 92% of the
+training targets, which is the largest caveat on it.
 
 **Most of the middle of the leaderboard is a statistical tie.** On the held-out
 split, Gemini Flash against Qwen 397B and Kimi against Sonnet are not separable.
 Full intervals are reproduced by `scripts/paper_analysis.py`.
+
+**The embryo image adds little once the Gardner grade is supplied in text.**
+Withholding it changes morphology grounding by 0.07 to 0.23 points on a
+five-point scale, and by nothing measurable for half the systems tested. The
+grade is itself a human reading of the image, so this bounds the residual a model
+extracts beyond an expert summary rather than showing the image is unnecessary.
+Reproduce with `scripts/image_ablation.py`.
 
 The 550-case test leaderboard is in [`data/runs/leaderboard.md`](data/runs/leaderboard.md).
 
@@ -59,7 +77,7 @@ The 550-case test leaderboard is in [`data/runs/leaderboard.md`](data/runs/leade
 
 753 cases built from the public [Kromp blastocyst
 dataset](https://doi.org/10.1038/s41597-023-02182-3) (CC BY 4.0). Each one has a
-real day-5 embryo image, its expert Gardner grade, real cycle data and outcomes
+real day-5 embryo image, its silver-standard Gardner grade, real cycle data and outcomes
 for that patient, and patient-history fields generated from published population
 distributions.
 
@@ -174,8 +192,8 @@ trainer. `configs/` holds the sweep and final configurations.
 ```bibtex
 @article{correa2026ivfbench,
   author  = {Correa, Andrew G. A. and Yoon, Brittany},
-  title   = {{IVF-Bench}: Vision-Language Models Explain Embryo Cases Well and
-             Predict Outcomes Poorly},
+  title   = {{IVF-Bench}: A Rubric-Based Standard for Evaluating
+             Vision-Language Models on {IVF} Clinical Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }
