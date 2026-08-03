@@ -71,10 +71,10 @@ against recorded outcomes. Across eight systems, seven of them frontier or open-
 clinical integration is uniformly strong while outcome discrimination is not,
 with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
 constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
-on 550 benchmark-derived preference pairs improves all five rubrics and places it
+on 500 benchmark-derived training pairs improves all five rubrics and places it
 second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
 $p{=}0.007$, as scored by a single judge that also authored most of the training
-targets) at roughly one twentieth of the inference cost, indicating that the
+targets) at roughly one seventh of the marginal inference cost, indicating that the
 reasoning component of embryo assessment does not require frontier-scale models,
 while the prediction ceiling reflects the absence of context-linked outcome data
 rather than a limitation of the models themselves. We release the benchmark, the
@@ -192,10 +192,11 @@ distributions, labeling each as generated and defending the choice in
 Section~\ref{sec:synthetic}. A model is asked to describe the embryo, integrate
 the patient factors, estimate an implantation probability, and recommend next
 steps, and its answer is scored on five clinical rubrics while the stated
-probability is compared against the recorded outcome. Because the generated
-fields are sampled independently of those outcomes, they carry no information
-about which patients conceived, so every outcome-prediction result reported here
-is bounded by the data before any model is involved.
+probability is compared against the recorded outcome. The generated fields are
+sampled without reference to those outcomes and add no prognostic information
+beyond the measured covariates, as Section~\ref{sec:synthetic} quantifies, so
+every outcome-prediction result reported here is bounded by the data before any
+model is involved.
 
 We evaluate seven frontier and open-weight systems and then post-train a 9B open
 model on preference pairs derived from the benchmark, obtaining the following results:
@@ -215,8 +216,9 @@ model on preference pairs derived from the benchmark, obtaining the following re
       quantify the deficit against a baseline that ignores its inputs entirely,
       attributing the ceiling to the available data rather than to model
       capacity, for the reason given above.
-\item Morphology grounding is the weakest rubric throughout, and because our
-      judge does not observe the image we treat those scores as an upper bound on
+\item Morphology grounding and guideline alignment are the two weak rubrics,
+      averaging roughly a point below clinical integration, and because our judge
+      does not observe the image we treat morphology scores as an upper bound on
       image comprehension. Removing the image entirely costs between 0.07 and
       0.23 points on a five-point scale, and nothing measurable for half the
       systems tested, so once the expert grade is supplied in text the pixels add
@@ -263,7 +265,7 @@ for a single decision rather than for medicine in general, but the methodologica
 inheritance is direct, and we adopt the same principle of grading against
 criteria rather than against a reference answer.
 
-\textbf{Preference optimisation.} We post-train with ORPO
+\textbf{Preference optimization.} We post-train with ORPO
 \citep{hong2024orpo}, which folds the preference objective into the supervised
 loss and removes the need for a separate reference model, in the family of
 methods opened up by DPO \citep{rafailov2023dpo}.
@@ -289,7 +291,7 @@ converted 500 AMH values and 144 endometrial thickness values into dates, so tha
 a value of 1.26 appears as \texttt{J\"an.26}; we recover these by mapping the
 month abbreviations back to numbers. Oocyte counts occasionally appear in
 additive form such as \texttt{7+1}, which we sum, and missing values remain
-missing, presented to models as "not available" rather than imputed. One record
+missing, presented to models as ``not available'' rather than imputed. One record
 carries a live birth without the clinical pregnancy that must precede it, and we
 retain it unaltered, on the view that silently repairing a source dataset is less
 defensible than reporting the inconsistency.
@@ -320,10 +322,12 @@ privacy review is designed to constrain.
 We therefore generate these fields, sampling each from a published population
 distribution, with every parameter and its source given in
 Appendix~\ref{app:distributions}. Generation is deterministic per case, seeded
-from a hash of the case identifier, so that cases regenerate exactly and the
-addition of new cases does not perturb existing ones, and each case record
-enumerates its generated fields explicitly, so that no result can depend on
-generated values being mistaken for measured ones.
+from a hash of the case identifier, and each case record enumerates its generated
+fields explicitly, so that no result can depend on generated values being
+mistaken for measured ones. Identifiers are assigned positionally over the sorted
+corpus, so regeneration is exact for a fixed corpus, while changing its size or
+the split proportions reassigns identifiers and therefore resamples the profiles
+that depend on them.
 
 This procedure yields a case-level reasoning task that can be constructed and
 reproduced entirely from public sources, at two costs that bear directly on the
@@ -372,8 +376,10 @@ paper meets a lower bar than that.
 \subsection{Splits}
 
 The 753 cases are partitioned deterministically into 550 test, 100 validation,
-and 103 held out, with the test split carrying the main leaderboard and the
-validation split reserved for judge and threshold work. The held-out split
+and 103 held out, with the test split carrying the main leaderboard. The
+validation split was reserved for judge and threshold calibration and, in the end,
+was not used: no system was run against it, and we release it unused so that
+future work has a split untouched by anything reported here. The held-out split
 remained untouched through all training, hyperparameter search, and judge
 calibration, and exists to answer a single question: whether the test-split
 ordering survives on cases that nothing was optimized against.
@@ -464,7 +470,7 @@ full in Appendix~\ref{app:defects}, invalidated an earlier version of these
 results: failed judge calls were persisted as all-zero score records that
 subsequent runs treated as complete, and our locally served model was graded on
 its chain of thought because vLLM was run without a reasoning parser, which
-depressed its test-split score from 4.17 to 3.80. All results reported below
+depressed its test-split score from 4.17 to 3.81. All results reported below
 follow both corrections, so that every score in the study is produced by GPT-5.4
 and no score record contains a judge failure.
 

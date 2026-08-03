@@ -34,10 +34,10 @@ against recorded outcomes. Across eight systems, seven of them frontier or open-
 clinical integration is uniformly strong while outcome discrimination is not,
 with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
 constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
-on 550 benchmark-derived preference pairs improves all five rubrics and places it
+on 500 benchmark-derived training pairs improves all five rubrics and places it
 second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
 $p{=}0.007$, as scored by a single judge that also authored most of the training
-targets) at roughly one twentieth of the inference cost, indicating that the
+targets) at roughly one seventh of the marginal inference cost, indicating that the
 reasoning component of embryo assessment does not require frontier-scale models,
 while the prediction ceiling reflects the absence of context-linked outcome data
 rather than a limitation of the models themselves. We release the benchmark, the
