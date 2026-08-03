@@ -627,9 +627,10 @@ Qwen9B-ORPO (ours) & 0.2491 & 0.2447 \\
 Qwen 9B (base) & 0.2552 & 0.2851 \\
 \bottomrule
 \end{tabular}
-\caption{Brier score against a predictor that ignores its inputs. No model in
-this study beats the cohort base rate on either split. Model rows are computed on
-the cases where a probability could be extracted.}
+\caption{Brier score against a predictor that ignores its inputs. No language
+model in this study beats the cohort base rate on either split; a fitted tabular
+baseline does on one of the two, as Section~\ref{sec:controls} reports. Model rows
+are computed on the cases where a probability could be extracted.}
 \label{tab:baserate}
 \end{table}
 
@@ -1047,11 +1048,13 @@ GPT-5.4 rather than as an unconditional ranking.
       clinical pregnancy.} Both endpoints are computed in the code; the
       leaderboard reports clinical pregnancy. Treat the outcome metrics as a
       stress test rather than a matched forecast.
-\item \textbf{Part of the patient context is generated}, for the reasons and with
-      the consequences set out in Section~\ref{sec:synthetic}. The two that bind
-      hardest: those fields are independent of outcome, so they cap what any
-      outcome metric here can show, and they are independent of each other, so
-      real clinical correlations such as PCOS with BMI are absent.
+\item \textbf{Part of the patient context is generated}, for the reasons and
+      with the consequences set out in Section~\ref{sec:synthetic}. The two that
+      bind hardest are that these fields add no prognostic information beyond the
+      measured covariates, so they cap what any outcome metric here can show, and
+      that they are drawn independently of one another, so genuine clinical
+      correlations such as that between polycystic ovary syndrome and body mass
+      index are absent.
 \item \textbf{One clinic, one scanner, one population.} Everything here comes from
       the Kromp release. Transfer to other labs is untested.
 \item \textbf{Splits are per image rather than per patient.} Quantified above;
@@ -1067,20 +1070,23 @@ GPT-5.4 rather than as an unconditional ranking.
 \label{sec:release}
 
 
-Everything required to reproduce this paper is public, comprising the benchmark,
-the evaluation code, all 5,194 model responses, every judge transcript, the
-preference dataset, and the post-trained model, with locations and licenses given
-in Appendix~\ref{app:artifacts}. We do not redistribute the embryo images, which
+Every artifact we produced is public, comprising the benchmark, the evaluation
+code, all 5,194 leaderboard responses together with the 426 from the ablation
+arms, every judge transcript, the preference dataset, and the post-trained model,
+with locations and licenses given in Appendix~\ref{app:artifacts}. Re-running the
+baselines additionally requires paid access to the dated hosted endpoints listed
+in Table~\ref{tab:models}, which we cannot make public. We do not redistribute the embryo images, which
 remain with the source dataset \citep{kromp2023} under CC BY 4.0, and our release
 instead rebuilds every case from that source deterministically.
 
-The study cost \$813 as recorded in those artifacts: \$432 for 51.5 hours of a
+The study cost \$840 as recorded in those artifacts: \$432 for 51.5 hours of a
 two-H100 instance covering preference-data preparation, the hyperparameter
-search, training, and local inference, plus \$328 of API spend on the test split
-and \$53 on the held-out split. A further \$15 was spent re-running judge calls
-that the two defects in Section~\ref{sec:setup} had invalidated; those superseded
-calls are not counted in the per-model figures, which reflect the final scores
-only.
+search, training, and local inference, \$328 of API spend on the test split,
+\$53 on the held-out split, and \$27 for the image ablation of
+Section~\ref{sec:ablation} across its inference and both rounds of judging. A
+further \$15 was spent re-running judge calls that the two defects in
+Section~\ref{sec:setup} had invalidated; those superseded calls, like the
+confounded first round of the ablation, are not counted in any reported figure.
 
 
 \clearpage
@@ -1127,7 +1133,7 @@ Provide a comprehensive clinical assessment including:
 
 \section{Rubric definitions}
 \label{app:rubrics}
-The judge returns a score and a one-line justification for each rubric, plus the numeric probability it extracted from the response. Rubric text The text below is what the judge sees, verbatim.
+The judge returns a score and a one-line justification for each rubric, plus the numeric probability it extracted from the response. The text below is what the judge sees, verbatim.
 
 \paragraph{Morphological Accuracy}
 How accurately does the response describe the embryo's morphological features as visible in the image? Consider: expansion stage assessment, ICM description, TE description, zona pellucida observations, overall blastocyst appearance.
@@ -1182,7 +1188,7 @@ Are the recommendations specific, practical, and useful for a clinician? Does th
 
 \section{Generated patient-context distributions}
 \label{app:distributions}
-These are the fields that no public dataset carries alongside embryo images and outcomes, and that we therefore generate. Each is drawn independently, from the distribution shown, seeded deterministically from the case identifier. Sources are the nearest published population estimate we could find for an IVF-treated cohort; where registries disagree by geography we chose a Western-representative central value.
+These are the fields that no public dataset carries alongside embryo images and outcomes, and that we therefore generate. Each is drawn from the distribution shown, seeded deterministically from the case identifier; basal FSH and partner age are conditioned on the patient's real age and the rest are drawn independently, as Section~\ref{sec:synthetic} sets out. Sources are the nearest published population estimate we could find for an IVF-treated cohort; where registries disagree by geography we chose a Western-representative central value.
 
 \begin{table}[H]
 \centering\footnotesize
@@ -1205,7 +1211,7 @@ Physical activity & Categorical: sedentary 0.30, light 0.25, moderate 0.25, acti
 Diet & Categorical: standard 0.50, health-conscious 0.25, Mediterranean 0.15, vegetarian 0.05, restricted 0.05 & \citet{gaskins2019} \\
 \bottomrule
 \end{tabular}
-\caption{Generated patient-context fields. Because each is sampled independently of the recorded outcome and of the other fields, they carry no outcome signal and no inter-field correlation.}
+\caption{Generated patient-context fields. None is sampled with reference to the recorded outcome. Basal FSH and partner age are conditioned on the patient's real age and therefore act as weak age proxies; the remainder are drawn independently of one another, so genuine inter-field clinical correlations are absent.}
 \end{table}
 
 
@@ -1225,18 +1231,18 @@ table indicated 520. The judge now declines to persist a failed score, leaving
 the case pending for a subsequent run.
 
 The second concerns how reasoning traces are delivered. Our post-trained model
-was served through vLLM without a reasoning parser, so that because Qwen chat
+was served through vLLM without a reasoning parser, and because Qwen chat
 templates pre-fill \texttt{<think>} in the generation prompt, the model emits its
 reasoning, a closing \texttt{</think>}, and then its answer within a single
 field, whereas every hosted API returns reasoning in a separate field. Our model
 was consequently graded on approximately 4,000 characters of unfiltered reasoning
 prepended to its answer while all other systems were graded on the answer alone;
-correcting this raised its test-split score from 3.80 to 4.17 and moved it from
+correcting this raised its test-split score from 3.81 to 4.17 and moved it from
 third position to second. The general point is that comparisons between locally
 served reasoning models and hosted APIs require verifying the contents of the
 string being graded.
 
-All results reported below follow both corrections: every score in the study is
+All results reported in this paper follow both corrections: every score in the study is
 produced by GPT-5.4, and no score record contains a judge failure.
 
 
@@ -1251,8 +1257,8 @@ To cite this work:
 \begin{lstlisting}
 @article{correa2026ivfbench,
   author  = {Correa, Andrew G. A. and Yoon, Brittany},
-  title   = {{IVF-Bench}: Vision-Language Models Explain Embryo Cases Well and
-             Predict Outcomes Poorly},
+  title   = {{IVF-Bench}: A Rubric-Based Standard for Evaluating
+             Vision-Language Models on {IVF} Clinical Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }

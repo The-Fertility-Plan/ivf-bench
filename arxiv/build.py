@@ -46,8 +46,8 @@ trained model, and all 5,194 responses with judge transcripts.
 
 CITATION = r"""@article{correa2026ivfbench,
   author  = {Correa, Andrew G. A. and Yoon, Brittany},
-  title   = {{IVF-Bench}: Vision-Language Models Explain Embryo Cases Well and
-             Predict Outcomes Poorly},
+  title   = {{IVF-Bench}: A Rubric-Based Standard for Evaluating
+             Vision-Language Models on {IVF} Clinical Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }"""
@@ -80,8 +80,8 @@ def rubric_appendix() -> str:
 
     out = [
         "The judge returns a score and a one-line justification for each rubric, "
-        "plus the numeric probability it extracted from the response. Rubric text "
-        "The text below is what the judge sees, verbatim.\n"
+        "plus the numeric probability it extracted from the response. The text "
+        "below is what the judge sees, verbatim.\n"
     ]
     for key, r in RUBRIC_DEFINITIONS.items():
         out.append("\\paragraph{%s}" % r["name"].replace("&", "\\&"))
@@ -131,9 +131,10 @@ def distribution_appendix() -> str:
     body = "\n".join(f"{a} & {b} & {c} \\\\" for a, b, c in rows)
     return (
         "These are the fields that no public dataset carries alongside embryo "
-        "images and outcomes, and that we therefore generate. Each is drawn "
-        "independently, from the distribution shown, seeded deterministically "
-        "from the case identifier. Sources are the nearest published population "
+        "images and outcomes, and that we therefore generate. Each is drawn from "
+        "the distribution shown, seeded deterministically from the case "
+        "identifier; basal FSH and partner age are conditioned on the patient's "
+        "real age and the rest are drawn independently, as Section~\\ref{sec:synthetic} sets out. Sources are the nearest published population "
         "estimate we could find for an IVF-treated cohort; where registries "
         "disagree by geography we chose a Western-representative central "
         "value.\n\n"
@@ -141,9 +142,11 @@ def distribution_appendix() -> str:
         "\\begin{tabular}{p{3.1cm}p{7.4cm}p{2.6cm}}\n\\toprule\n"
         "\\textbf{Field} & \\textbf{Distribution} & \\textbf{Source} \\\\\n\\midrule\n"
         f"{body}\n\\bottomrule\n\\end{{tabular}}\n"
-        "\\caption{Generated patient-context fields. Because each is sampled "
-        "independently of the recorded outcome and of the other fields, they "
-        "carry no outcome signal and no inter-field correlation.}\n"
+        "\\caption{Generated patient-context fields. None is sampled with "
+        "reference to the recorded outcome. Basal FSH and partner age are "
+        "conditioned on the patient's real age and therefore act as weak age "
+        "proxies; the remainder are drawn independently of one another, so "
+        "genuine inter-field clinical correlations are absent.}\n"
         "\\end{table}\n"
     )
 
