@@ -31,18 +31,19 @@ because greedy decoding traps it in a repetition loop.}
 \end{table}
 
 \textbf{The judge.} GPT-5.4 grades every response against the five rubrics in a
-single call and also extracts the numeric probability. It sees the case text and
-the response, but not the embryo image. This is a deliberate limitation and we
-are explicit about what it costs us: the morphology rubric measures whether a
-description is consistent with the Gardner annotation the model was handed, not
-whether the model read the image correctly. A judge that cannot see the image
-cannot catch a fluent description of an embryo that is not there.
+single call and additionally extracts the numeric probability, observing the case
+text and the response but not the embryo image. This is a deliberate limitation
+whose cost we state explicitly: the morphology rubric measures whether a
+description is consistent with the Gardner annotation supplied to the model
+rather than whether the model read the image correctly, and a judge that cannot
+see the image cannot detect a fluent description of an embryo that is not
+there.
 
 \textbf{Two evaluation defects and their correction.} We report both because
 each is easy to reproduce inadvertently and neither is visible in the resulting
 scores.
 
-The first concerns failed judge calls. When a call errored, the pipeline
+The first concerns failed judge calls: when a call errored, the pipeline
 persisted a score record containing five zeros and continued, and because
 subsequent runs skip cases for which a score record already exists, those
 failures became permanent. In our initial pass this silently invalidated 231 of
@@ -52,7 +53,7 @@ table indicated 520. The judge now declines to persist a failed score, leaving
 the case pending for a subsequent run.
 
 The second concerns how reasoning traces are delivered. Our post-trained model
-was served through vLLM without a reasoning parser, and because Qwen chat
+was served through vLLM without a reasoning parser, so that because Qwen chat
 templates pre-fill \texttt{<think>} in the generation prompt, the model emits its
 reasoning, a closing \texttt{</think>}, and then its answer within a single
 field, whereas every hosted API returns reasoning in a separate field. Our model
@@ -70,14 +71,16 @@ produced by GPT-5.4, and no score record contains a judge failure.
 \subsection{Reading the two outcome metrics}
 
 \textbf{Brier score} (lower is better) is the mean squared error between the
-stated probability and what happened. It rewards being honest about the odds.
-Always saying 50\% scores 0.25, which is the comparison most papers use and the
-wrong one: the sharper test is a constant set to the cohort's own pregnancy rate,
-and we report against that in Table~\ref{tab:baserate}. \textbf{AUROC} (higher is
-better, 0.5 is chance) is the probability that a randomly chosen success is
-ranked above a randomly chosen failure. It rewards telling embryos apart.
-Counselling a patient needs the first. Choosing which embryo to transfer needs
-the second, and a model can be respectable on one while useless on the other.
+stated probability and the observed outcome, and it rewards honesty about the
+odds; always predicting 50\% yields 0.25, which is the comparison most papers
+adopt and the wrong one, since the sharper reference is a constant set to the
+cohort's own pregnancy rate, against which we report in
+Table~\ref{tab:baserate}. \textbf{AUROC} (higher is better, with 0.5 denoting
+chance) is the probability that a randomly chosen success is ranked above a
+randomly chosen failure, and it rewards discrimination between embryos.
+Counseling a patient depends on the first quantity and selecting an embryo for
+transfer on the second, and a system can be respectable on one while remaining
+useless on the other.
 
 \subsection{The leaderboard}
 
@@ -135,20 +138,20 @@ hyperparameter search, or judge calibration. All eight models answered all 103.}
 
 \subsection{Which gaps are real}
 
-A leaderboard without error bars invites readers to take a 0.02 difference
-seriously. We resample cases with replacement 10,000 times and, for each adjacent
-pair of models, bootstrap the paired per-case difference on the cases both models
-answered.
+A leaderboard reported without intervals invites readers to treat a difference
+of 0.02 as meaningful, so we resample cases with replacement 10,000 times and, for
+each adjacent pair of systems, bootstrap the paired per-case difference over the
+cases both answered.
 
-On the test split every adjacent gap is separable at the 95\% level, the
-narrowest being Kimi K2.5 over Sonnet 4.6 at $+0.052$ (95\% CI $[+0.005,
-+0.098]$, $p{=}0.031$). On the held-out split, with 103 cases instead of 550, two
-gaps disappear: Gemini Flash over Qwen 397B ($+0.015$, CI $[-0.049, +0.082]$,
+On the test split every adjacent gap is separable at the 95\% level, the narrowest
+being Kimi K2.5 over Sonnet 4.6 at $+0.052$ (95\% CI $[+0.005, +0.098]$,
+$p{=}0.031$), whereas on the held-out split, with 103 cases rather than 550, two
+gaps close: Gemini Flash over Qwen 397B ($+0.015$, CI $[-0.049, +0.082]$,
 $p{=}0.66$) and Kimi K2.5 over Sonnet 4.6 ($+0.076$, CI $[-0.023, +0.169]$,
-$p{=}0.12$). Those pairs should be read as ties. The two results we care about
-most survive on both splits: GPT-5.4 over our model ($+0.44$ held out, CI
-$[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI $[+0.03,
-+0.17]$, $p{=}0.007$).
+$p{=}0.12$), both of which should be read as ties. The two comparisons that carry
+the paper's argument survive on both splits: GPT-5.4 over our model ($+0.44$ held
+out, CI $[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI
+$[+0.03, +0.17]$, $p{=}0.007$).
 
 \subsection{What the numbers say}
 
@@ -156,21 +159,21 @@ $[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI $[+0.03,
 highest-scoring rubric for every system evaluated, with GPT-5.4 reaching a
 maximal 5.00 on both splits; models reliably incorporate age, AMH, endometrial
 thickness, and prior cycle history into a coherent account of the patient's
-prognosis, such that if the task were confined to producing the counselling
+prognosis, such that if the task were confined to producing the counseling
 narrative it would be close to solved.
 
-\textbf{2. Outcome prediction sits at the floor, and we can say exactly how far
-below useful that is.} AUROC spans 0.450 to 0.562 across the field, where 0.5 is
-chance. The best number in the study, 0.562, means that given one embryo that led
-to a clinical pregnancy and one that did not, the best model ranks them correctly
-56\% of the time.
+\textbf{2. Outcome prediction sits at a floor, and the deficit can be stated
+precisely.} AUROC spans 0.450 to 0.562 across the systems evaluated, against 0.5
+for chance, so that the best value obtained, 0.562, corresponds to ranking a
+conceiving embryo above a non-conceiving one on 56\% of such pairs.
 
-Brier scores look better than they are. They cluster between 0.241 and 0.289,
-which beats the 0.25 you get by always saying 50\%, and it is tempting to read
-that as decent calibration. It is not the right comparison. The clinical
-pregnancy rate in this cohort is 0.350, so a constant predictor that says
-"35\%" for every case, ignoring the embryo, the image, and the patient entirely,
-scores 0.2274. Every model in the study loses to it.
+The Brier scores appear more favorable than they are. They cluster between 0.241
+and 0.289, which improves on the 0.25 obtained by always predicting 50\% and
+invites the reading that calibration is adequate, but that is the wrong reference
+point: the clinical pregnancy rate in this cohort is 0.350, so a constant
+predictor that returns 35\% for every case, disregarding the embryo, the image,
+and the patient entirely, scores 0.2274, and every system in the study performs
+worse.
 
 \begin{table}[H]
 \centering
@@ -193,25 +196,26 @@ the cases where a probability could be extracted.}
 \label{tab:baserate}
 \end{table}
 
-This is the number we most want a reader to take away, and it is not a verdict on
-the models. Section~\ref{sec:synthetic} explains why. The patient-context fields
-we added are sampled independently of outcome, so they contain no signal any
-model could use, and what remains of the real data is age, AMH, endometrial
-thickness, oocyte counts, and one morphology grade from a single day-5 frame.
-Predicting a live birth from that is close to the limit of what the public data
-supports, and no architecture fixes it. The inputs that would move this number
-are embryo genetics, longitudinal development rather than one frame, uterine and
-endometrial context, and the lifestyle and history data that today never leaves
-the physician's notes. IVF-Bench is built so those fields can be swapped from
-generated to measured as they become available, which is exactly the experiment
-the field cannot currently run.
+This is the result we most want a reader to retain, and it is not a verdict on
+the models, for the reason given in Section~\ref{sec:synthetic}: the
+patient-context fields we supply are sampled independently of outcome and
+therefore contain no signal any model could exploit, while the measured data that
+remain are age, AMH, endometrial thickness, oocyte counts, and a single
+morphology grade from one day-5 frame. Predicting a live birth from that
+combination approaches the limit of what the public data support, and no
+architectural change addresses it; the inputs that would move the number are
+embryo genetics, longitudinal development rather than a single frame, uterine and
+endometrial context, and the lifestyle and history data that at present never
+leave the physician's notes. IVF-Bench is constructed so that these fields can be
+substituted from generated to measured as they become available, which is exactly
+the experiment the field is currently unable to run.
 
-The same reasoning reframes the calibration result for our post-trained model in
-Section~\ref{sec:orpo}. Its held-out Brier of 0.245 is second of the eight,
-behind Sonnet 4.6 at 0.242, and all eight sit below a constant. What
-post-training bought is a model whose stated probabilities moved back toward the
-population rate, correcting the base model's overconfidence. On this data that is
-the right behaviour, and it is not predictive skill.
+The same reasoning reframes the calibration result reported for our post-trained
+model in Section~\ref{sec:orpo}: its held-out Brier of 0.245 is second of the
+eight, behind Sonnet 4.6 at 0.242, and all eight fall below a constant predictor.
+What post-training achieved is a model whose stated probabilities moved back
+toward the population rate, correcting the overconfidence of the base model,
+which on these data is the correct behavior and is not predictive skill.
 
 \textbf{3. Morphology grounding is the weakest rubric throughout.} No system
 exceeds 3.98 on morphology grounding on either split, whereas five of eight
@@ -243,12 +247,12 @@ took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
 including the vision tower, three epochs on two H100s, with the learning rate and
 the preference weight chosen by an eight-trial search.
 
-Two properties of this dataset matter for interpreting the result. The pairs come
-from the test split, so the trained model is in-domain on the 550-case
-leaderboard and the held-out split is the honest measurement. And the chosen
-responses are close to a monoculture: GPT-5.4 wrote 460 of the 500 training
-pairs' chosen side, 92\%, which means the student is largely distilling one
-teacher, and that teacher is also the judge.
+Two properties of this dataset bear on the interpretation of the result. The
+pairs are drawn from the test split, so the trained model is in-domain on the
+550-case leaderboard and the held-out split provides the honest measurement, and
+the chosen responses approach a monoculture, since GPT-5.4 authored 460 of the
+500 chosen sides in the training split, or 92\%, which means the student is
+largely distilling a single teacher that also serves as the judge.
 
 \subsection{What it bought}
 
@@ -310,7 +314,7 @@ incurs no additional cost.
 
 \textbf{Do the five rubrics measure five distinct constructs?} Only partly: the
 mean correlation between distinct rubrics is 0.49 and the first principal
-component accounts for 60\% of the variance across 4,370 judgements, indicating a
+component accounts for 60\% of the variance across 4,370 judgments, indicating a
 substantial general quality factor. The structure is nonetheless not degenerate,
 since recommendation usefulness correlates with clinical integration at 0.69 but
 with guideline alignment at only 0.28, which justifies reporting the five
@@ -371,12 +375,12 @@ GPT-5.4."
 \end{itemize}
 
 % ===== RELEASE =====
-Everything needed to reproduce this paper is public: the benchmark, the
-evaluation code, all 5,194 model responses, every judge transcript, the
-preference dataset, and the post-trained model. Appendix~\ref{app:artifacts}
-gives the locations and the licences. We do not redistribute the embryo images,
-which remain with the source dataset \citep{kromp2023} under CC BY 4.0; our
-release rebuilds every case from that source deterministically.
+Everything required to reproduce this paper is public, comprising the benchmark,
+the evaluation code, all 5,194 model responses, every judge transcript, the
+preference dataset, and the post-trained model, with locations and licenses given
+in Appendix~\ref{app:artifacts}. We do not redistribute the embryo images, which
+remain with the source dataset \citep{kromp2023} under CC BY 4.0, and our release
+instead rebuilds every case from that source deterministically.
 
 The study cost \$813 as recorded in those artifacts: \$432 for 51.5 hours of a
 two-H100 instance covering preference-data preparation, the hyperparameter
