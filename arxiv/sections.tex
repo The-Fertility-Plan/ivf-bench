@@ -267,31 +267,37 @@ distinguishable from zero, while Gemini's overall score is substantially
 \label{tab:ablation}
 \end{table}
 
-The corrected result is a negative one about our own instrument, and it is the
-most important limitation in this paper. Removing the embryo image changes
-morphology grounding by between 0.07 and 0.23 points on a five-point scale, and
-for two of the four systems the change is not distinguishable from zero. A model
-handed the Gardner grade in text can therefore produce a morphology description
-that this benchmark scores almost as highly as one produced with the image in
-front of it. The rubric is measuring consistency with the supplied annotation far
-more than fidelity to the image, exactly as the blind judge described in
-Section~\ref{sec:setup} would predict, and the quantity we can attribute to the
-visual channel is small.
+The corrected result is a finding about the models and about the Gardner grade,
+not a defect in the instrument. Withholding the embryo image moves morphology
+grounding by between 0.07 and 0.23 points on a five-point scale, and for two of
+four systems by an amount indistinguishable from zero, which means that once a
+model has been given the expansion, inner cell mass and trophectoderm grades in
+text, the pixels add very little that these systems can use. That is worth
+stating plainly, because a decade of work in this area has concentrated on the
+image: an expert has already compressed the salient morphology into three
+ordinal values, and for current vision-language models that compression carries
+nearly all of the accessible signal. The negative randomized result for image-only
+ranking \citep{illingworth2024} and the small increment measured here are two
+views of the same fact.
 
-Two secondary observations survive. Opus 4.6 shows the clearest dependence on the
-image, on both overall score and morphology, which inverts the conclusion we drew
-from the confounded run and is a reminder that an experimental artifact can
-manufacture a confident story in either direction. Gemini 2.5 Flash scores
-markedly better without the image on every rubric other than morphology, so for
-that system the visual input degrades the assessment rather than informing it.
+Two per-system observations follow. Opus 4.6 shows the clearest dependence on the
+image, on both overall score and morphology grounding, which inverts the
+conclusion we drew from the confounded run and is a reminder that an
+experimental artifact can manufacture a confident story in either direction.
+Gemini 2.5 Flash scores markedly better without the image on every rubric other
+than morphology, so for that system the visual input degrades the assessment
+rather than informing it, which is the kind of per-system dissociation a
+leaderboard alone cannot reveal.
 
-The consequence for the benchmark is direct. Morphology grounding as currently
-measured should be read as a weak proxy for image use, and a version of this
-benchmark that genuinely measures whether a model reads an embryo will need a
-judge that can see the image, or reference descriptions written by embryologists
-against which a description can be checked. The expert-annotated morphological
-descriptions of \citet{neu2026dataset} are the obvious substrate for that, and
-building it is the single change that would most improve this work.
+One limit of this design should be stated. Because the prompt supplies the grade
+and the image together, the experiment cannot separate a model that cannot read
+the image from a model for which the grade has already answered the question.
+Withholding the grade rather than the image, and withholding both, would separate
+them, and that two-by-two is the natural next experiment. Separately, our judge
+does not see the image, so these differences bound the visual contribution as this
+benchmark can observe it; a judge with sight, or reference descriptions written by
+embryologists such as those of \citet{neu2026dataset}, would measure image
+comprehension directly rather than by difference.
 
 \subsection{Two controls on the headline claims}
 \label{sec:controls}
