@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the reported 0DD grade, so it does not analyze visible image features such as zona, cell appearance, or actual blastocoel/ICM/TE morphology. The grade-based interpretation is broadly plausible but not image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH/diagnosis discrepancy, oocyte maturity yield, smoking, endometrium, BMI, partner factors, and transfer timing with embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with conclusions generally supported by the poor embryo grade and clinical context. Minor issues include overstatement of non-viability and some certainty around causes such as smoking/trigger timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice and Gardner grading principles, including counseling on poor prognosis, smoking cessation, and protocol review. Slight deviations include somewhat absolute statements about futility/non-viability and speculative protocol changes without full cycle details."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for the current transfer decision, counseling, smoking cessation, AMH/diagnosis verification, trigger review, culture strategy, and possible sperm DNA fragmentation testing."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.0129,
+  "judge_latency_ms": 4031.6255419966183,
+  "judge_prompt_tokens": 2670,
+  "judge_completion_tokens": 326
+}

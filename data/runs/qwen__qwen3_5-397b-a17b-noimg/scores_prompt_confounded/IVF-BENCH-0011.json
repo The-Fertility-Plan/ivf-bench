@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was reviewed and bases morphology only on the reported 1DD grade. It also introduces a grading inconsistency discussion and labels the embryo non-viable without image-based description of visible features such as zona, ICM/TE appearance, or overall morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH/low oocyte yield, tubal factor, endometrium, sperm parameters, BMI/lifestyle, and prior cycle history reasonably well with embryo prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable issues: it emphasizes Day 4 blastocyst transfer as asynchronous/lower success in a way that may overstate the problem, and it treats 1DD as essentially non-viable with very strong certainty despite limited image assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are deviations: use of 'D' in Gardner grading is nonstandard in many settings, the recommendation that PGT-A is strongly indicated is stronger than guideline consensus for this exact scenario, and calling cancellation the soundest recommendation is more opinionated than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps including counseling, transfer versus cancellation framing, future cycle planning, embryo banking, possible protocol changes, and donor oocyte discussion. Some recommendations are useful though a few are more speculative than case-specific."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014031,
+  "judge_latency_ms": 4725.543708002078,
+  "judge_prompt_tokens": 2707,
+  "judge_completion_tokens": 394
+}

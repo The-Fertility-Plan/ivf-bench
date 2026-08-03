@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner grade, so it does not assess visible image features. It also interprets expansion grade 1 as less than half despite the prompt text stating at least half, and adds strong claims about non-viability without image-based confirmation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, endometrium, AMH, sperm parameters, BMI/lifestyle, and tubal factor reasonably well with embryo quality, though some links (e.g., attributing poor embryo quality to DOR/lab issues) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with the low implantation estimate following from the stated DD grading. Minor issues include overstatement that 1DD is essentially non-viable and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations go beyond guideline-based certainty: declaring the embryo non-viable, suggesting PGT-A in a 27-year-old with likely low embryo numbers, and recommending adjuvants like DHEA/CoQ10 despite limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear next steps for verifying grading, counseling, transfer decision-making depending on embryo availability, and future cycle planning with concrete alternatives."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013536,
+  "judge_latency_ms": 4039.134708000347,
+  "judge_prompt_tokens": 2632,
+  "judge_completion_tokens": 376
+}

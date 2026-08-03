@@ -496,6 +496,7 @@ async def score_run(
 
     meta = json.loads((run_dir / "run_meta.json").read_text())
     model = meta["model"]
+    run_included_image = meta.get("include_image", True)
 
     resp_files = sorted(responses_dir.glob("IVF-BENCH-*.json"))
     rubric_text = _build_rubric_text()
@@ -546,6 +547,14 @@ async def score_run(
             case_file = cases_dir / f"{case_id}.json"
             case_data = json.loads(case_file.read_text())
             case_prompt = case_data.get("prompt", "")
+            # For a text-only ablation arm the model was told no image was
+            # supplied. Showing the judge the unmodified prompt makes it penalise
+            # a model for correctly reporting that it had nothing to describe, so
+            # the judge must see the prompt the model actually received.
+            if not run_included_image:
+                case_prompt = case_prompt.replace(
+                    "[IMAGE ATTACHED]",
+                    "[NO IMAGE PROVIDED - reason from the data below]")
 
             result = await _judge_one(
                 backend, api_key, judge_model,

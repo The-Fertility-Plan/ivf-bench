@@ -22,6 +22,8 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{natbib}
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
 \bibliographystyle{unsrtnat}
 
 \setlist{nosep,leftmargin=*}
@@ -629,30 +631,37 @@ the cases where a probability could be extracted.}
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  width=0.86\textwidth, height=5.2cm,
-  xbar, bar width=8pt,
-  xmin=0.20, xmax=0.30,
+  width=0.86\textwidth, height=5.6cm,
+  xbar, bar width=9pt,
+  xmin=0.20, xmax=0.31,
+  xtick={0.20,0.22,0.24,0.26,0.28,0.30},
   xlabel={Brier score on the held-out split (lower is better)}, xlabel style={font=\small},
-  symbolic y coords={Gemini Flash,Qwen 9B base,Qwen 397B,Kimi K2.5,Opus 4.6,GPT-5.4,Ours 9B-ORPO,Sonnet 4.6,Constant at base rate},
+  symbolic y coords={Gemini Flash,Qwen 9B base,Qwen 397B,Kimi K2.5,Opus 4.6,
+                     GPT-5.4,Ours 9B-ORPO,Sonnet 4.6},
   ytick=data, y tick label style={font=\small},
   x tick label style={font=\small},
   xmajorgrids, grid style={black!12},
   axis lines*=left,
+  enlarge y limits=0.08,
   nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
                                               /pgf/number format/precision=3},
 ]
+% one series only: a second \addplot would make pgfplots group the bars and
+% offset every one of them from its category label
 \addplot[fill=black!25, draw=none] coordinates {
   (0.2888,Gemini Flash) (0.2851,Qwen 9B base) (0.2648,Qwen 397B) (0.2541,Kimi K2.5)
   (0.2469,Opus 4.6) (0.2465,GPT-5.4) (0.2447,Ours 9B-ORPO) (0.2423,Sonnet 4.6)};
-\addplot[fill=red!65, draw=none] coordinates {(0.2274,Constant at base rate)};
+\draw[red!70, very thick] (axis cs:0.2274,Gemini Flash) -- (axis cs:0.2274,Sonnet 4.6);
+\node[red!70, font=\scriptsize, anchor=south, rotate=90] at (axis cs:0.2274,Kimi K2.5)
+  {constant at the base rate, 0.227};
 \end{axis}
 \end{tikzpicture}
 \caption{Brier score of every evaluated system against a constant predictor that
 returns the cohort's clinical pregnancy rate of 0.350 for every case, ignoring
-the embryo, the image, and the patient. No system reaches the constant. We
-attribute this to the absence of outcome-linked patient context in the available
-data rather than to model capacity, for the reason given in
-Section~\ref{sec:synthetic}.}
+the embryo, the image, and the patient. No system reaches the constant, shown as
+the vertical line. We attribute this to the absence of outcome-linked patient
+context in the available data rather than to model capacity, for the reason given
+in Section~\ref{sec:synthetic}.}
 \label{fig:baserate}
 \end{figure}
 
@@ -1038,8 +1047,10 @@ calls are not counted in the per-model figures, which reflect the final scores
 only.
 
 
+\clearpage
 \bibliography{references}
 
+\clearpage
 \appendix
 \section{Case prompt template}
 \label{app:prompt}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the lab grade, so it does not assess visible image features. It also introduces a likely error by stating expansion score 1 typically means blastocoel <1/2 volume while the provided descriptor says at least half, and it infers non-viability without image-based confirmation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, endometrial thickness, sperm quality, and lifestyle with embryo quality and prognosis. It misses some nuance, such as overcalling the history as RIF/RPL and not fully contextualizing day-4 transfer practices."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the low prognosis follows from the stated DD grading, but there are notable inconsistencies: confusion around Gardner expansion staging, strong conclusions from potentially inconsistent grading data, and categorical statements about transfer cancellation despite uncertainty in the grading notation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF principles, especially regarding poor morphology and age-related aneuploidy risk. However, recommending PGT-A as 'critical,' suggesting ERA for this history, and proposing TESE for possible sperm DNA fragmentation go beyond routine guideline-based recommendations and are not universally supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps: verify grading, reconsider transfer if degeneration is confirmed, optimize endometrium, and discuss future-cycle options. Some recommendations are practical and specific, though a few are overly assertive or not sufficiently evidence-nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014457,
+  "judge_latency_ms": 4927.951291996578,
+  "judge_prompt_tokens": 2754,
+  "judge_completion_tokens": 413
+}

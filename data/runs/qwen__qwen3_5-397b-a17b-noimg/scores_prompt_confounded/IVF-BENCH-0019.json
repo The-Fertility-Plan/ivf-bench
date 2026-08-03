@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was available and bases morphology only on the reported Gardner grade. It also misstates stage 1 as blastocoel less than half the embryo despite the provided lab description indicating at least half, and adds strong claims like 'arrested/non-viable' without image-based confirmation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, male factor, prior ectopics, smoking, ovarian response, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some inferences (e.g., sperm DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the low implantation estimate follows from the poor grade, but there are notable issues: reliance on a missing image, contradiction with the provided expansion description, and overconfident conclusions that a DD embryo is definitively non-viable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice (poor prognosis with DD morphology, smoking cessation, review of male factor, ectopic precautions), but recommending outright cancellation/'do not transfer' and suggesting PGT-A in a 29-year-old with very low embryo yield are stronger than standard guideline-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for immediate counseling, transfer decision-making, smoking cessation, sperm DNA fragmentation testing, protocol review, and ectopic-risk mitigation. Some recommendations are somewhat prescriptive rather than nuanced, but still practical."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.01383,
+  "judge_latency_ms": 4346.435708001081,
+  "judge_prompt_tokens": 2620,
+  "judge_completion_tokens": 398
+}
