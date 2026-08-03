@@ -1,4 +1,10 @@
 \documentclass[11pt]{article}
+% cmap + T1 + a Type 1 text font so fi/fl ligatures survive copy-paste and
+% full-text indexing. Without these, "five" extracts as " ve".
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -42,32 +48,31 @@
 \maketitle
 
 \begin{abstract}
-Embryo selection still rests on a subjective morphology grade, and the machine
-learning built to improve it scores images alone. The largest randomised trial of
-that approach did not beat trained embryologists. The information that drives the
-decision, the patient's history and lifestyle, sits with the physician and
-reaches neither the embryologist nor the model, and no public dataset carries it
-alongside embryo images and outcomes. We propose IVF-Bench, a standard for
-measuring how well vision-language models reason about a transfer decision: 753
-real day-5 cases, with open-ended answers graded against five clinical rubrics
-and against the recorded outcome. Across eight systems, post-training a 9B open
-model on 550 preference pairs lifts every rubric and takes it past Claude Opus
-4.6 at a twentieth of the cost, while outcome prediction stays at a floor we
-argue is set by the missing data rather than by the models. Benchmark, model, and
-all 5,194 responses are released.
+Embryo selection is still done by eye, and the machine learning built to improve
+it looks only at the embryo. The largest randomised trial of that approach failed
+to beat trained embryologists. But the embryo is only half the case. A patient's
+history and lifestyle shape the outcome too, and that information stays in the
+physician's notes, reaching neither the embryologist nor the model. No public
+dataset pairs it with embryo images and real outcomes, so the question has gone
+untested. IVF-Bench tests it: 753 real day-5 cases that ask a model to read the
+embryo, weigh the patient, put a number on the odds, and say what to do next,
+scored against five clinical rubrics and against what actually happened.
+Post-training a 9B open model on 550 preference pairs lifts all five rubrics and
+carries it past Claude Opus 4.6 at a twentieth of the cost. Outcome prediction
+stalls for every system, at a floor we trace to the missing data rather than the
+models.
 \end{abstract}
 
 % ============================================================
 \section{Introduction}
 
-Choosing which embryo to transfer is one of the decisions in IVF that most
-affects whether a patient goes home with a baby. In most clinics that choice
-still rests on how the embryo looks under a microscope on day 5, summarised by
-the Gardner grade: how far the blastocyst has expanded, how well formed the inner
-cell mass is, and how cohesive the trophectoderm is \citep{gardner1999}. The
-grade is useful and it is also subjective. When embryologists at different
-centres are shown the same day-5 embryos and asked to pick one, they agree less
-often than the confidence of the decision suggests \citep{storr2017}.
+Few decisions in IVF matter more than which embryo to transfer, and in most
+clinics it is still made by eye. An embryologist looks at the blastocyst on day 5
+and assigns a Gardner grade: how far it has expanded, how well formed the inner
+cell mass is, how cohesive the trophectoderm is \citep{gardner1999}. The grade is
+useful. It is also subjective. Show the same day-5 embryos to embryologists at
+different centres and ask each to pick one, and they agree less often than the
+confidence of the decision suggests \citep{storr2017}.
 
 That gap has attracted a decade of machine learning work, almost all of it
 framed as a scoring problem: feed in an image or a time-lapse video, return a

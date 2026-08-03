@@ -18,19 +18,19 @@ ARXIV = ROOT / "arxiv"
 sys.path.insert(0, str(ROOT / "src"))
 
 ABSTRACT = r"""
-Embryo selection still rests on a subjective morphology grade, and the machine
-learning built to improve it scores images alone. The largest randomised trial of
-that approach did not beat trained embryologists. The information that drives the
-decision, the patient's history and lifestyle, sits with the physician and
-reaches neither the embryologist nor the model, and no public dataset carries it
-alongside embryo images and outcomes. We propose IVF-Bench, a standard for
-measuring how well vision-language models reason about a transfer decision: 753
-real day-5 cases, with open-ended answers graded against five clinical rubrics
-and against the recorded outcome. Across eight systems, post-training a 9B open
-model on 550 preference pairs lifts every rubric and takes it past Claude Opus
-4.6 at a twentieth of the cost, while outcome prediction stays at a floor we
-argue is set by the missing data rather than by the models. Benchmark, model, and
-all 5,194 responses are released.
+Embryo selection is still done by eye, and the machine learning built to improve
+it looks only at the embryo. The largest randomised trial of that approach failed
+to beat trained embryologists. But the embryo is only half the case. A patient's
+history and lifestyle shape the outcome too, and that information stays in the
+physician's notes, reaching neither the embryologist nor the model. No public
+dataset pairs it with embryo images and real outcomes, so the question has gone
+untested. IVF-Bench tests it: 753 real day-5 cases that ask a model to read the
+embryo, weigh the patient, put a number on the odds, and say what to do next,
+scored against five clinical rubrics and against what actually happened.
+Post-training a 9B open model on 550 preference pairs lifts all five rubrics and
+carries it past Claude Opus 4.6 at a twentieth of the cost. Outcome prediction
+stalls for every system, at a floor we trace to the missing data rather than the
+models.
 """
 
 CITATION = r"""@article{correa2026ivfbench,

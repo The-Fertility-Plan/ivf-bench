@@ -1,4 +1,10 @@
 \documentclass[11pt]{article}
+% cmap + T1 + a Type 1 text font so fi/fl ligatures survive copy-paste and
+% full-text indexing. Without these, "five" extracts as " ve".
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -48,14 +54,13 @@ ABSTRACT_PLACEHOLDER
 % ============================================================
 \section{Introduction}
 
-Choosing which embryo to transfer is one of the decisions in IVF that most
-affects whether a patient goes home with a baby. In most clinics that choice
-still rests on how the embryo looks under a microscope on day 5, summarised by
-the Gardner grade: how far the blastocyst has expanded, how well formed the inner
-cell mass is, and how cohesive the trophectoderm is \citep{gardner1999}. The
-grade is useful and it is also subjective. When embryologists at different
-centres are shown the same day-5 embryos and asked to pick one, they agree less
-often than the confidence of the decision suggests \citep{storr2017}.
+Few decisions in IVF matter more than which embryo to transfer, and in most
+clinics it is still made by eye. An embryologist looks at the blastocyst on day 5
+and assigns a Gardner grade: how far it has expanded, how well formed the inner
+cell mass is, how cohesive the trophectoderm is \citep{gardner1999}. The grade is
+useful. It is also subjective. Show the same day-5 embryos to embryologists at
+different centres and ask each to pick one, and they agree less often than the
+confidence of the decision suggests \citep{storr2017}.
 
 That gap has attracted a decade of machine learning work, almost all of it
 framed as a scoring problem: feed in an image or a time-lapse video, return a
