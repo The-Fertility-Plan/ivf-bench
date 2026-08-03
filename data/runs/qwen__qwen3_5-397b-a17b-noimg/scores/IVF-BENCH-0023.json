@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score, so it does not actually analyze visible image features. It also overstates non-viability/arrest from 1DD alone and discusses features like degeneration and failed TE/ICM without image confirmation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, tubal factor, prior IVF outcomes, sperm parameters, and endometrial thickness with embryo quality reasonably well. Some links are speculative, but overall the patient factors are meaningfully connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and the low implantation estimate follows from the poor embryo grade, but there are notable issues: it treats 1DD as essentially non-viable with excessive certainty, infers developmental arrest/asynchrony somewhat strongly, and labels prior outcomes as recurrent implantation failure without sufficient basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are stronger than guideline-based evidence supports, especially 'strongly' recommending PGT-A at age 35 with low embryo yield and suggesting D-grade embryos are categorically non-viable/discarded. The day-4 synchrony concern is also overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for counseling, transfer decision-making, luteal support, protocol review, and possible further testing. Some recommendations are somewhat overconfident or not fully individualized, but they are still practical and specific."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014292,
+  "judge_latency_ms": 4325.663083996915,
+  "judge_prompt_tokens": 2744,
+  "judge_completion_tokens": 404
+}

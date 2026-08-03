@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score. It also inaccurately describes stage 3 as an expanded blastocyst with thinning zona, which corresponds more to stage 4, so morphology is not image-grounded and includes grading-related inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian response, prior failed cycles, endometrial thickness, semen parameters, and lifestyle with embryo quality and prognosis. Some links are speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality and prior failures. Minor issues include overcalling recurrent implantation failure and using speculative penalties, but the overall chain is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly consistent with IVF practice, but there are notable deviations: stage 3 grading is mischaracterized, assisted hatching is recommended too strongly, ERA/thrombophilia workup are not routinely guideline-supported after only two failed cycles, and PGT-A is framed somewhat aggressively for age 30."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including luteal support review, possible further workup, sperm DNA fragmentation testing, and protocol reassessment. Some recommendations are more assertive than evidence supports, but they are practical and specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013599,
+  "judge_latency_ms": 3976.5431669948157,
+  "judge_prompt_tokens": 2753,
+  "judge_completion_tokens": 356
+}

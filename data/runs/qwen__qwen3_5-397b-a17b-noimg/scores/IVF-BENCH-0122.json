@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0122",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the reported 3AA grade, so it does not actually assess visible image features. It is broadly consistent with Gardner 3AA but includes overstatements such as calling it the highest quality available and describing grade 3 as fully expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH, oocyte yield, BMI, smoking, endometrial thickness, prior cycle history, and sperm data with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to embryo quality and patient factors. Minor issues include some overconfident statements about embryo quality and euploidy likelihood."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including eSET in a young patient with a good-quality blastocyst, smoking cessation, and not routinely recommending PGT-A at age 26. Minor deviations include overstating 3AA as the gold standard/highest quality and some speculative comments about male factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including eSET, smoking cessation, luteal support considerations, lifestyle modification, and further male-factor workup if failure occurs. Useful and practical, though some recommendations remain somewhat general."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013131,
+  "judge_latency_ms": 3759.7905840011663,
+  "judge_prompt_tokens": 2637,
+  "judge_completion_tokens": 348
+}

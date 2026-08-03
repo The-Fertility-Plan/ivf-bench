@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner 2BB label rather than the actual image. It also inaccurately calls expansion 2 'full blastocyst' and adds interpretive comments not grounded in visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, male factor, sperm parameters, prior cycle history, smoking, and endometrium with embryo quality and prognosis in a generally clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly structured, but there are notable issues: confusion around Day 4 transfer versus blastocyst grading, overinterpretation of rapid development as aneuploidy risk, and a probability estimate that may be somewhat inflated given the stated concerns."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly aligned (e.g., smoking cessation, considering overall prognosis), but there are deviations such as suggesting PGT-A strongly after one failed cycle in a 29-year-old and discussing ERA/adjuncts with limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including smoking cessation, clarifying embryo timing, and future-cycle considerations. Some recommendations are less evidence-based, but overall it is usable and specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014994,
+  "judge_latency_ms": 4170.697583002038,
+  "judge_prompt_tokens": 3253,
+  "judge_completion_tokens": 349
+}

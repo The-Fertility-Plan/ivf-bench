@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no actual image was provided and bases morphology only on the Gardner score, so it does not truly assess visible image features. It also inaccurately equates stage 3 with a fully expanded blastocyst/thinning zona, which is closer to stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, maturation rate, smoking, prior biochemical pregnancy, sperm data, BMI, and endometrium with embryo quality in a clinically meaningful way, though some inferences are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: misinterpretation of Gardner stage 3, overstatement that 3AA is the highest grade, and some speculative deductions about male factor and endometrial asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (SET, luteal support review, smoking cessation, review of trigger/maturation), but statements such as SET being 'mandatory,' routine PGT-A suggestion at age 35 after one biochemical pregnancy, and confidence around endometrial thickness are stronger than guideline-based nuance would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, progesterone review, smoking cessation, trigger review, DFI testing, and uterine cavity evaluation if needed. Some recommendations could be more nuanced, but they are practical."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01401,
+  "judge_latency_ms": 4337.617958000919,
+  "judge_prompt_tokens": 2750,
+  "judge_completion_tokens": 384
+}

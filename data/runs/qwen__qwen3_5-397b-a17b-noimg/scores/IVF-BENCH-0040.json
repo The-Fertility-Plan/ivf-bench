@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was provided and bases morphology only on the reported 2AA grade. It also misstates Gardner expansion by calling stage 2 a full blastocyst and adds image-level claims like symmetry, cohesion, and zona observations not actually verified from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, endometrial thickness, sperm parameters, prior cycle history, and lack of AMH reasonably well with embryo prognosis, though some assumptions are made and interactions are not fully nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with prognosis tied to age, morphology, and clinical context. Minor issues include overcalling 2AA as top-tier and some uncertainty around fresh versus frozen transfer affecting estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, especially SET in a good-prognosis 31-year-old. However, the Gardner grading interpretation is inaccurate, and routine PGT-A suggestion in a young good-prognosis patient is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as SET, luteal support, OHSS monitoring, cryopreservation, and metabolic assessment. Recommendations are useful, though some are somewhat generic and depend on unconfirmed fresh/FET context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013149,
+  "judge_latency_ms": 4108.2000420065015,
+  "judge_prompt_tokens": 2663,
+  "judge_completion_tokens": 344
+}

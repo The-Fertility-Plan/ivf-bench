@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was available and bases morphology only on the Gardner score, so it does not assess visible image features. It also inaccurately interprets stage 2 as 'full blastocyst' and adds unsupported comments about hatching/day timing."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis context, prior miscarriage, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: confusion around Gardner stage/day, unsupported adjustment of probabilities, and overemphasis on a possible timing discrepancy reduce coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: stage 2 grading is misdescribed, PGT-A is too strongly recommended after a single miscarriage in a 30-year-old, and some metabolic screening suggestions are not clearly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, lifestyle modification, lab clarification, and contingency planning after another loss, though some recommendations are stronger than the evidence supports."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013017,
+  "judge_latency_ms": 3773.3785420059576,
+  "judge_prompt_tokens": 2619,
+  "judge_completion_tokens": 344
+}

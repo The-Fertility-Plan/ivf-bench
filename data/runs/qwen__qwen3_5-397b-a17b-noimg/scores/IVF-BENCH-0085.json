@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was attached and bases morphology only on the provided Gardner score. It also inaccurately equates stage 4 with hatching/herniating, which corresponds more to stage 5, so image-based morphological assessment is limited and partly incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, endometrial thickness, BMI/lifestyle, prior cycle history, and sperm parameters with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well structured, with prognosis tied to age-related aneuploidy risk and favorable uterine/diagnostic factors. Minor issues include overcalling AMH as reflecting egg quality and the stage 4 versus hatching inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET and luteal support, but there are notable deviations: misstatement of Gardner expansion stage, assumption that ICSI is standard for this sperm count, and overly strong recommendation for PGT-A after a single failed transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer management, luteal support, beta-hCG timing, cryopreservation, and future-cycle considerations. Some recommendations are somewhat generic or conditional rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013323,
+  "judge_latency_ms": 3926.8395839972072,
+  "judge_prompt_tokens": 2626,
+  "judge_completion_tokens": 363
+}

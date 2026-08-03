@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was reviewed and relies on the reported Gardner score. It also misinterprets the expansion stage by calling 0DD non-viable/collapsed despite the lab data describing an early blastocyst with blastocoel less than half the embryo, so morphology is only partially accurate and not image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, diagnosis, protocol, and semen parameters with embryo outcome reasonably well, though some links are speculative and it overstates expected oocyte yield/protocol effect."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it says no image was available yet makes definitive viability claims, conflates the grading notation, and gives an absolute 0% implantation estimate based on morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are stronger than guideline-based evidence supports, including categorical cancellation/no transfer, routine ICSI for unexplained infertility with normal semen, and broad attribution to over-suppression."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for current-cycle counseling and future planning, including protocol review, sperm DNA fragmentation testing, and lifestyle changes, though some recommendations are overly definitive rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.0,
+  "judge_cost_usd": 0.013269,
+  "judge_latency_ms": 4170.044124999549,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 366
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0105",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the written Gardner grade. It gives generally correct grade-based descriptions, but it does not analyze the actual visible embryo and overstates details such as calling 3AA 'top-tier/highest' and 'fully expanded.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young age, BMI, tubal factor, prior failed cycle, sperm motility, endometrial thickness, and oocyte maturity, and relates them to prognosis. AMH is unavailable and not discussed, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the prognosis estimate tied to age, embryo grade, and diagnosis. Minor issues include some overconfident claims about morphology/euploidy and extrapolating from one prior failed cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and attention to hydrosalpinx/luteal support are guideline-consistent. However, suggesting ERA, immunologic/thrombophilia workup, and broad RIF evaluation after only one failed transfer is not well aligned with current evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for this transfer and contingency planning, including SET, luteal support, and hydrosalpinx assessment. Some future-cycle suggestions are less evidence-based, but the advice is still specific and usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013695,
+  "judge_latency_ms": 3743.9447090000613,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 385
+}

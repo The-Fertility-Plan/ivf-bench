@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states the image was not provided and bases morphology only on the 0DD lab grade, so it does not analyze visible image features. It also overstates grade 0DD as definitively non-viable/developmentally arrested without image-based nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, prior cycle, semen data, endometrium, and maturation rate with embryo quality reasonably well, though some links are speculative (e.g., insulin resistance, sperm DNA fragmentation)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with conclusions flowing from poor embryo grade and patient factors. Minor issues include overcertainty about non-viability and transfer cancellation based solely on the reported grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is consistent with IVF practice, but there are deviations: Gardner grading typically uses 1-6 expansion and A-C morphology, so interpreting 0DD as standard is problematic; recommending routine cancellation and PGT-A in a 28-year-old after limited failures is more aggressive than guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as cycle review, trigger/timing reassessment, male-factor workup, metabolic screening, and protocol adjustment. Some recommendations are practical, though a few are somewhat speculative or overly definitive."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012969,
+  "judge_latency_ms": 5209.360875000129,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 349
+}

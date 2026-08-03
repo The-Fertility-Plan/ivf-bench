@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the written Gardner score, so it does not actually assess visible image features. It also inaccurately paraphrases TE B as 'few cells forming a loose epithelium,' which is closer to grade C than standard grade B wording."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm quality, endometrial thickness, BMI, and prior cycle outcome with embryo quality and prognosis in a clinically meaningful way, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: it calls 3AB 'high-quality/top-tier' somewhat strongly, adjusts prognosis downward for a single failed cycle without strong justification, and includes speculative concerns such as implantation dysfunction and hydrosalpinx impact without case-specific evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-concordant (eSET in a young patient, hydrosalpinx consideration, luteal support, OHSS awareness), but suggesting assisted hatching for a young Day-5 blastocyst after one failure, PGT-A after a single failed transfer at age 25, and ERA after only two failures are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, including eSET, checking for hydrosalpinx, progesterone monitoring, and lifestyle optimization. Some recommendations are actionable but not all are appropriately selective or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013989,
+  "judge_latency_ms": 4666.013374997419,
+  "judge_prompt_tokens": 2608,
+  "judge_completion_tokens": 411
+}

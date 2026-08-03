@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the text score. It also inaccurately interprets Gardner 3 as 'expanded blastocyst' with thinning zona, which corresponds more to stage 4, so image-based morphological assessment is limited and partly incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, tubal factor diagnosis, prior live birth, endometrial thickness, BMI, ovarian response, and sperm parameters with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis estimate tied to embryo quality and patient factors. Minor issue: overstating morphology quality and stage interpretation slightly weakens the chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, standard luteal support, and not routinely recommending PGT-A in a 28-year-old good-prognosis patient are broadly guideline-consistent. Minor deviations include mention of ERA/chronic endometritis workup after a single failure and some overstatement of BMI effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for this transfer and future planning, including SET, luteal support, alcohol cessation, and weight counseling. Some suggestions are somewhat generic rather than highly tailored."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012669,
+  "judge_latency_ms": 3536.476875000517,
+  "judge_prompt_tokens": 2573,
+  "judge_completion_tokens": 330
+}

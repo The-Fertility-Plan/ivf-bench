@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the supplied Gardner 3AA label rather than analyzing visible morphology. It repeats the grading descriptors accurately but does not assess image-specific features, so morphology is only weakly grounded in the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior biochemical pregnancy, male factor, sperm parameters, endometrium, and lifestyle factors with embryo quality in a generally coherent way. Some links are overstated, such as inferring embryo genetic potential from morphology and calling 7 MII from 19 COCs a clearly good yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with conclusions generally following from embryo quality and patient factors. Minor issues include overconfidence in morphology as a predictor of euploidy and a somewhat assertive smoking-related probability adjustment without strong case-specific calibration."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including smoking cessation and standard luteal support. However, recommending PGT-A as highly recommended mainly due to age 35 and one prior biochemical pregnancy, and suggesting ERA after failure, is more aggressive than current guideline-supported routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for this transfer and future planning, including smoking cessation, lifestyle optimization, progesterone support, and possible further testing if failures recur. It is useful clinically, though some recommendations could be more nuanced regarding indications for PGT-A and ERA."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.015072,
+  "judge_latency_ms": 4143.077584005368,
+  "judge_prompt_tokens": 3034,
+  "judge_completion_tokens": 398
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner score. It also inaccurately interprets expansion 2 as 'good expansion' and 'full blastocyst'; by standard Gardner criteria, stage 2 is an early blastocyst rather than a full blastocyst. It gives no image-based assessment of zona pellucida or overall visual appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, sperm quality, BMI, smoking, and endometrial thickness, and connects them to prognosis. Some links are somewhat overstated, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate appears optimistic for a day-5 2AC embryo with TE C and smoking/BMI risk factors. The morphology interpretation error also weakens the logic chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly guideline-consistent (SET, smoking cessation, luteal support, counseling), but the morphology interpretation is not aligned with Gardner criteria, and suggesting PGT-A after a single unsuccessful cycle in a 32-year-old without other indications is somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for the current transfer and future planning, including SET, counseling, luteal support, follow-up, smoking cessation, and weight optimization. It is useful, though some recommendations could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014634,
+  "judge_latency_ms": 4181.377957997029,
+  "judge_prompt_tokens": 3003,
+  "judge_completion_tokens": 375
+}

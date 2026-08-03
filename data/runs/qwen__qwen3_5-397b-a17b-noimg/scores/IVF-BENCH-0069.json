@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no visual image was provided and bases morphology only on the reported 2BB grade, so it does not assess actual image features. It is broadly consistent with Gardner grading but includes unsupported image-level statements such as zona thinning/hatching implications and overinterprets TE importance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian response, tubal factor diagnosis, endometrial thickness, sperm parameters, BMI, AMH/FSH, and first-cycle status with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age and morphology. Minor issues include some overstatement about TE being 'most critical' and speculative comments about progesterone timing for a grade 2 blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including proceeding with transfer and favoring SET at age 31. However, suggestions such as altering progesterone timing based on expansion grade and implying routine PGT-A may reduce time-to-pregnancy in a 31-year-old are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, luteal support monitoring, SET, cryopreservation, and future-cycle discussion. Some recommendations are somewhat generic or speculative, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013689,
+  "judge_latency_ms": 4371.966124999744,
+  "judge_prompt_tokens": 2723,
+  "judge_completion_tokens": 368
+}

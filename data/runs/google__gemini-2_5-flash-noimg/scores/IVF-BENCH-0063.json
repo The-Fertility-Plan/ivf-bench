@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner 3AB label rather than analyzing visible morphology. It also inaccurately paraphrases TE B as 'few cells forming a loose epithelium,' which is closer to a C-grade description than standard B-grade wording."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, uterine factor, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality and prognosis. The main limitation is some overinterpretation of lifestyle/stress effects and lack of sharper distinction between embryo competence and uterine receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, especially around the uncertainty introduced by age-related aneuploidy and uterine factor. Minor issues include somewhat optimistic framing of morphology as reassurance against aneuploidy and broad probability assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are notable deviations: ERA/EMMA/ALICE are suggested too readily, assisted hatching is presented as a consideration without strong indication, and the implantation estimates for euploid embryos may be somewhat inflated. PGT-A discussion is reasonable but a bit stronger than guideline-supported certainty."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for uterine evaluation, transfer preparation, and future planning, including hysteroscopy/imaging and consideration of PGT-A. It loses some specificity by recommending several optional add-on tests without prioritization based on evidence."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.015936,
+  "judge_latency_ms": 4135.391083000286,
+  "judge_prompt_tokens": 3347,
+  "judge_completion_tokens": 393
+}

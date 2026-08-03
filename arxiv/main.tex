@@ -107,7 +107,7 @@ about which patients conceived, so every outcome-prediction result reported here
 is bounded by the data before any model is involved.
 
 We evaluate seven frontier and open-weight systems and then post-train a 9B open
-model on preference pairs derived from the benchmark, obtaining four results:
+model on preference pairs derived from the benchmark, obtaining the following results:
 
 \begin{enumerate}
 \item Targeted post-training substitutes for scale on this task: 550 preference
@@ -122,9 +122,12 @@ model on preference pairs derived from the benchmark, obtaining four results:
       quantify the deficit against a baseline that ignores its inputs entirely,
       attributing the ceiling to the available data rather than to model
       capacity, for the reason given above.
-\item Morphology grounding is the weakest rubric throughout, though our judge
-      does not observe the image, so we treat those scores as an upper bound on
-      image comprehension rather than a measurement of it.
+\item Morphology grounding is the weakest rubric throughout, and because our
+      judge does not observe the image we treat those scores as an upper bound on
+      image comprehension; an ablation that removes the image recovers its
+      contribution directly, halving GPT-5.4's morphology score while leaving
+      Opus 4.6 almost unchanged, which shows that systems differ sharply in how
+      much they use the visual input.
 \end{enumerate}
 
 The practical implication is that progress in this area depends less on model

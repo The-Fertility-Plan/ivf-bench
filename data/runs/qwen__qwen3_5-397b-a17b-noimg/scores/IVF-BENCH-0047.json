@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was provided and bases morphology almost entirely on the supplied Gardner grade. It also inaccurately describes stage 3 as fully expanded/thinning zona, which is closer to stage 4, so image-specific morphology is not reliably assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, prior failed cycles, BMI, sperm parameters, endometrial thickness, and ovarian response with embryo quality in a clinically meaningful way, though AMH is unavailable and some inferences are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the implantation estimate tied to morphology, age-related aneuploidy risk, and prior history. Minor issues include overcalling 3AA as the highest category and the stage-3 expansion interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, caution about untested embryo aneuploidy risk, and not routinely using assisted hatching are broadly guideline-consistent. However, ERA and embryo glue are presented as considerations despite limited evidence, and PGT-A is framed somewhat strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, luteal support considerations, protocol clarification, and possible future testing. Some suggestions are less evidence-based, but overall the advice is practical."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013212,
+  "judge_latency_ms": 4499.31566700252,
+  "judge_prompt_tokens": 2654,
+  "judge_completion_tokens": 350
+}

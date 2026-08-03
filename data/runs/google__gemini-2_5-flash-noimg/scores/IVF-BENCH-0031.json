@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly says no image was provided and relies almost entirely on the Gardner label. It also inaccurately interprets expansion 2 as 'full blastocyst' rather than matching standard Gardner staging, so morphology is only partially accurate and lacks image-based detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian response, prior live birth, endometrium, sperm, and smoking, and relates them to prognosis. Some interpretation of the DOR diagnosis is speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable inconsistencies, especially around the Day 4/'blastocyst' issue and the incorrect expansion-stage interpretation. The implantation estimate is plausible but not fully supported by the grading details presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, prenatal vitamins, luteal support), but there are deviations such as overemphasis on PGT-A in a young patient and incorrect Gardner stage interpretation. Discussion of Day 4 blastocyst transfer is also not well aligned with standard embryology conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and future planning, including smoking cessation, alcohol avoidance, supplementation, luteal support, and counseling. Some suggestions are somewhat generic or speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015273,
+  "judge_latency_ms": 3967.4461250033346,
+  "judge_prompt_tokens": 3351,
+  "judge_completion_tokens": 348
+}

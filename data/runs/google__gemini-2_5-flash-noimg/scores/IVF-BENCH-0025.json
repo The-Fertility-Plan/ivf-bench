@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies almost entirely on the provided Gardner score and gives little image-specific morphology; also treats 1DD as a definitive blastocyst despite transfer day 4 context and does not describe visible structural details such as zona, collapse, or cell distribution from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, tubal factor, endometrium, semen parameters, and first-cycle status well, and appropriately contrasts favorable prognosis factors with poor embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear, but there are notable issues: calling the embryo essentially non-viable with certainty, recommending against transfer categorically, and some overinterpretation from morphology alone. The COC/MII discrepancy is noted but speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is broadly correct, but the strong recommendation to discard/not transfer based solely on poor morphology is more absolute than guideline-based practice, especially without considering clinic policy, developmental timing, or patient preference. PGT-A suggestion in a 25-year-old is also somewhat overextended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, review of fertilization/development, consideration of sperm DNA fragmentation, and future cycle planning. However, recommendations are somewhat one-sided and insufficiently nuanced for a poor-quality embryo transfer decision."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013539,
+  "judge_latency_ms": 4657.799499997054,
+  "judge_prompt_tokens": 2778,
+  "judge_completion_tokens": 347
+}

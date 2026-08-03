@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner score, so it does not assess visible morphology from the image. It also inaccurately paraphrases TE B as 'few cells forming a loose epithelium,' which is closer to a C-grade description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian response, sperm parameters, endometrial thickness, diagnosis, and first-cycle status, and connects them to prognosis, though some points are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the prognosis estimate generally follows from the favorable profile. Minor issues include overconfidence and treating unexplained infertility as uniformly favorable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general prognosis framing are guideline-consistent, but recommending PGT-A after a single failed transfer in a 28-year-old and suggesting ERA/immunologic workup relatively early are not strongly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical for transfer management and contingency planning, especially SET and luteal support, though some future steps are broader than necessary for this favorable first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.01386,
+  "judge_latency_ms": 3668.8842500007013,
+  "judge_prompt_tokens": 2935,
+  "judge_completion_tokens": 337
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was provided and relies on the lab score rather than visual analysis. It also contains a clear grading error by calling the TE 'Grade E' instead of A, so morphology assessment is not image-grounded and includes an inaccuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, endometriosis, prior biochemical pregnancy, sperm motility, endometrial thickness, and embryo quality into prognosis and management."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a plausible probability range tied to embryo quality and patient factors. Minor issues include overconfident statements about morphology/euploidy and some speculative assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-consistent, including SET and cautious consideration of fresh vs freeze-all. However, suggestions such as routine aggressive luteal support, low-dose aspirin/immunologic protocol language, and broad PGT-A framing are not strongly evidence-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including SET, lifestyle changes, sperm DNA fragmentation testing if failure occurs, and endometriosis-focused planning. Some recommendations are somewhat speculative rather than tightly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013674,
+  "judge_latency_ms": 3826.6601670038654,
+  "judge_prompt_tokens": 2808,
+  "judge_completion_tokens": 350
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was reviewed and bases morphology only on the lab grade. It also inaccurately describes Gardner 3 as a full blastocyst with cavity completely filling the embryo; that corresponds more to stage 4, while stage 3 is a full blastocyst before expansion. Thus morphology is not image-based and includes a staging error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, sperm parameters, diagnosis, and cycle history with embryo quality and prognosis. Some points are speculative, such as assuming trilaminar lining or likely ICSI, preventing a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall reasoning is structured and mostly logical, but there are inconsistencies: implantation is listed as 55-65% while clinical pregnancy is higher at 60-70%, and live birth is nearly the same as implantation. There is also overstatement of 3AA as the highest grade and some unsupported assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a 30-year-old with a good-quality day-5 blastocyst and standard luteal support are broadly guideline-consistent. Minor deviations include overstating morphology, casual PGT-A discussion in a young first-cycle patient, and some non-guideline lifestyle specifics."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, luteal support, SET, cryopreservation, and possible future male-factor workup. It is practical, though some advice is generic and a few recommendations rely on assumptions not provided in the case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013695,
+  "judge_latency_ms": 4234.318249997159,
+  "judge_prompt_tokens": 2580,
+  "judge_completion_tokens": 397
+}

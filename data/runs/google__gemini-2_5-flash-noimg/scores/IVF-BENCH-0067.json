@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the supplied Gardner 3AA label rather than analyzing visible morphology. It gives generally correct generic 3AA descriptors but does not assess image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, AMH, BMI, prior miscarriage, sperm parameters, endometrium, diagnosis, and ovarian response, and connects them to prognosis. Some interactions are somewhat overstated, such as equating oocyte yield with egg quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to embryo grade, age, and endometrium. Minor issues include overconfidence in morphology predicting euploidy and some speculative causes of miscarriage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and standard luteal support are guideline-consistent, but recommending consideration of PGT-A for this already-created transfer and suggesting broad thrombophilia/immunologic testing after a single miscarriage are not strongly aligned with routine ASRM/ESHRE practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer and contingency planning, including SET, luteal support, review of prior loss, and future workup options. Some suggestions are broader than necessary for this specific history."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014292,
+  "judge_latency_ms": 4424.141959003464,
+  "judge_prompt_tokens": 3069,
+  "judge_completion_tokens": 339
+}

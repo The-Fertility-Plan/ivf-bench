@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner 2BB label. It also inaccurately describes expansion 2 as a full blastocyst; in Gardner grading, full blastocyst is stage 3, so this is a meaningful morphology error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, prior IVF outcomes, ectopic history, sperm motility, endometrium, and lifestyle, and connects them to prognosis. AMH is unavailable and not overinterpreted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the probability estimate tied to embryo quality and prior history. Minor issues include overstating stress effects and some speculative links, but overall conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-consistent (SET, uterine cavity assessment, luteal support), but several suggestions are less aligned or overly broad for routine use, such as ERA, NK/immunologic workup, MTHFR testing, and strong endorsement of PGT-A in a 29-year-old without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including uterine evaluation, progesterone support, and further workup if unsuccessful. Some recommendations are somewhat generic or controversial, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.016137,
+  "judge_latency_ms": 3888.367790998018,
+  "judge_prompt_tokens": 3624,
+  "judge_completion_tokens": 351
+}

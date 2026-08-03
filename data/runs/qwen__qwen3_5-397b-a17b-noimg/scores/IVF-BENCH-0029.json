@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the reported Gardner score; it also misstates stage 1 as blastocoel less than half rather than at least half, and makes strong non-visual claims not grounded in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, endometrium, sperm parameters, BMI/lifestyle, and ovarian reserve context reasonably well, though some inferences about cycle attrition and embryo count are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: incorrect interpretation of expansion stage, overstatement that D grades are categorically non-viable, and a firm cancel-transfer recommendation despite the stated transfer context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard practice: Gardner grading typically uses A-C rather than D, stage 1 is misdefined, and recommending outright cancellation/discard based solely on a reported 1DD is stronger than guideline-based evidence would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for reserve testing, lab review, culture strategy, and future planning, but some recommendations (cancel transfer, ICSI, PGT-A) are insufficiently nuanced for a first cycle in a young tubal-factor patient."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012663,
+  "judge_latency_ms": 4100.969375002023,
+  "judge_prompt_tokens": 2536,
+  "judge_completion_tokens": 337
+}

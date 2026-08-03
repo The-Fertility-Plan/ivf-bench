@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the text. It also misinterprets Gardner expansion 2 as a full blastocyst and calls 2AB top-tier/high-grade, which is inaccurate for standard Gardner grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian response, BMI, endometrium, sperm parameters, and prior cycle history well with prognosis, though some claims are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: incorrect interpretation of expansion grade, overstatement of embryo quality, and a probability estimate that may be somewhat inflated for a 2AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET, OHSS assessment, and not routinely using PGT-A at age 24 are broadly guideline-consistent, but the grading interpretation and some statements about blastocyst stage/quality are not fully aligned with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, OHSS review, luteal support considerations, cryopreservation, and future counseling; recommendations are useful though some are based on an overstated embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013167,
+  "judge_latency_ms": 4009.4567499982077,
+  "judge_prompt_tokens": 2699,
+  "judge_completion_tokens": 338
+}

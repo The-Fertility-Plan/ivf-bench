@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response explicitly states no image was reviewed and bases morphology only on the text. It also misinterprets Gardner 0DD by claiming score 0 means no blastocoel, whereas the provided lab data defines it as an early blastocyst with blastocoel less than half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, prior live birth, sperm parameters, endometrial thickness, BMI, and lifestyle with embryo prognosis reasonably well, though some links are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it is undermined by the incorrect interpretation of the embryo grade and overconfident conclusion of non-viability from that misread premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard, but there are notable deviations: incorrect Gardner grading interpretation, overly absolute statement that transfer is not clinically supported, and strong endorsement of adjuncts like GH/DHEA without clear evidence-based nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as confirming embryo grading, discussing transfer counseling, considering sperm DNA fragmentation testing, and reviewing future protocol options, though some advice is based on the grading misinterpretation."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012897,
+  "judge_latency_ms": 3990.48508299893,
+  "judge_prompt_tokens": 2689,
+  "judge_completion_tokens": 322
+}

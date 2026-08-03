@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "gpt-5.4-2026-03-05-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the reported 3AA grade, so it does not actually assess visible image features. Its grade-based statements are generally correct, but image-specific morphology is omitted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, BMI, FSH, endometrial thickness, infertility diagnosis, prior IVF failures, sperm parameters, partner age, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, especially in adjusting prognosis downward for repeated failed cycles despite good morphology. Minor issue: it repeats the prompt's inaccurate interpretation that expansion 3 is 'expanded blastocyst' with thinning zona."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice: single embryo transfer, caution with add-ons, uterine cavity review, progesterone optimization, and selective consideration of PGT-A. Small deviation is accepting the prompt's incorrect Gardner stage wording."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear practical next steps for the current transfer and structured future planning, including cavity assessment, progesterone review, transfer strategy, male-factor follow-up, and selective testing."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01518,
+  "judge_latency_ms": 3882.0713750028517,
+  "judge_prompt_tokens": 3370,
+  "judge_completion_tokens": 338
+}

@@ -129,7 +129,7 @@ about which patients conceived, so every outcome-prediction result reported here
 is bounded by the data before any model is involved.
 
 We evaluate seven frontier and open-weight systems and then post-train a 9B open
-model on preference pairs derived from the benchmark, obtaining four results:
+model on preference pairs derived from the benchmark, obtaining the following results:
 
 \begin{enumerate}
 \item Targeted post-training substitutes for scale on this task: 550 preference
@@ -144,9 +144,12 @@ model on preference pairs derived from the benchmark, obtaining four results:
       quantify the deficit against a baseline that ignores its inputs entirely,
       attributing the ceiling to the available data rather than to model
       capacity, for the reason given above.
-\item Morphology grounding is the weakest rubric throughout, though our judge
-      does not observe the image, so we treat those scores as an upper bound on
-      image comprehension rather than a measurement of it.
+\item Morphology grounding is the weakest rubric throughout, and because our
+      judge does not observe the image we treat those scores as an upper bound on
+      image comprehension; an ablation that removes the image recovers its
+      contribution directly, halving GPT-5.4's morphology score while leaving
+      Opus 4.6 almost unchanged, which shows that systems differ sharply in how
+      much they use the visual input.
 \end{enumerate}
 
 The practical implication is that progress in this area depends less on model
@@ -512,16 +515,81 @@ which on these data is the correct behavior and is not predictive skill.
 exceeds 3.98 on morphology grounding on either split, whereas five of eight
 exceed 4.30 on clinical integration on the test split, indicating that models
 reason more effectively about the structured data supplied in text than about the
-image itself. Because our judge does not observe the image, a system can score
-well on this rubric by restating the Gardner grade it was given, so these values
-constitute an upper bound on image comprehension rather than a measurement of
-it.
+image itself. Because our judge does not observe the image, a system can score well on this
+rubric by restating the Gardner grade it was given, so these values constitute an
+upper bound on image comprehension rather than a measurement of it; the ablation
+in Section~\ref{sec:ablation} measures the image's contribution directly and
+shows that it is large for most systems and negligible for one.
 
 \textbf{4. Cost and quality are only loosely coupled.} On the test split Opus
 4.6 requires \$184.81 to process the 550 cases and scores 4.01, while our 9B
 model requires \$7.98 and scores 4.17; Gemini 2.5 Flash, the least expensive
 commercial system evaluated, finishes seventh on that split while rising to
 fourth on held out, the largest between-split movement of any system.
+
+
+\subsection{What the embryo image contributes}
+\label{sec:ablation}
+
+Because each prompt supplies the Gardner grade in text alongside the image, a
+system could in principle score well on morphology grounding without consulting
+the image at all, which would make the vision component of this benchmark
+decorative. We tested this directly by re-running four systems on the same cases
+with the image removed and the attachment marker replaced, holding everything
+else constant, and grading both arms with the same judge; differences are
+evaluated by paired bootstrap over the cases each system answered in both
+conditions.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+& & \multicolumn{3}{c}{\textbf{Overall}} & \multicolumn{3}{c}{\textbf{Morphology grounding}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Model} & \textbf{n} & \textbf{image} & \textbf{none} & \textbf{$\Delta$} &
+\textbf{image} & \textbf{none} & \textbf{$\Delta$} \\
+\midrule
+GPT-5.4          & 100 & 4.50 & 3.99 & $+0.51$ & 3.94 & 1.98 & $+1.96$ \\
+Qwen 397B        & 126 & 3.71 & 3.40 & $+0.31$ & 3.29 & 1.98 & $+1.31$ \\
+Gemini 2.5 Flash & 100 & 3.33 & 3.47 & $-0.14$ & 3.24 & 2.34 & $+0.90$ \\
+Opus 4.6         & 100 & 3.93 & 3.80 & $+0.13$ & 3.29 & 3.15 & $+0.14$ \\
+\bottomrule
+\end{tabular}
+\caption{Scores with the embryo image present and removed, on identical cases.
+Every difference shown is significant at the 95\% level by paired bootstrap: the
+largest, GPT-5.4's morphology drop, has a confidence interval of
+$[+1.90, +2.02]$, while the smallest, Opus 4.6's morphology drop of
+$+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
+\label{tab:ablation}
+\end{table}
+
+Three findings follow. The image carries substantial information for most
+systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
+1.98, and reduces Qwen 397B's by 40\%, which establishes that the vision channel
+is doing real work and that the benchmark is measuring it rather than rewarding
+restatement of the supplied grade.
+
+The exception is instructive. Opus 4.6 loses only 0.14 points of morphology
+grounding when the image is withheld, an order of magnitude less than GPT-5.4,
+which indicates that its morphology descriptions are derived almost entirely from
+the Gardner annotation in the prompt rather than from the image itself. Opus
+places third overall on both splits while making the least use of the visual
+input of any system tested, a dissociation that a leaderboard alone would not
+reveal and that we would not have detected without this ablation.
+
+Gemini 2.5 Flash presents the opposite pathology: its overall score is
+\emph{higher} without the image ($-0.14$, $p{=}0.040$) even though its morphology
+grounding falls by 0.90, so the image degrades its performance on the remaining
+four rubrics by more than it contributes to the one rubric that depends on it.
+For this system the visual input is, on balance, a distraction.
+
+Taken together these results support the construction of the benchmark, in that
+the morphology rubric responds to the presence of the image as it should, while
+also confirming the caution attached to it in Section~\ref{sec:results}: the
+absolute morphology scores remain an upper bound, since the judge cannot verify a
+description against the image, but the differences between conditions are
+measured directly and are large.
 
 
 % ============================================================
@@ -652,11 +720,13 @@ GPT-5.4."
 
 
 \begin{itemize}
-\item \textbf{The judge cannot see the embryo.} Morphology grounding therefore
-      measures consistency with the Gardner grade in the prompt, not fidelity to
-      the image. The natural fix is the expert-written morphological descriptions
-      released by \citet{neu2026dataset}, which would let a future version score
-      image reading against something real.
+\item \textbf{The judge cannot see the embryo}, so morphology grounding measures
+      consistency with the Gardner grade supplied in the prompt rather than
+      fidelity to the image; the ablation of Section~\ref{sec:ablation} recovers
+      the image's contribution by differencing rather than by direct
+      verification, and the natural remedy is the expert-written morphological
+      descriptions released by \citet{neu2026dataset}, which would allow a future
+      version to score image reading against a reference.
 \item \textbf{One judge, and it is also a contestant.} GPT-5.4 grades a
       leaderboard it appears on, and it wrote 92\% of the responses our model was
       trained to imitate. Scoring a subset with a judge from a different family

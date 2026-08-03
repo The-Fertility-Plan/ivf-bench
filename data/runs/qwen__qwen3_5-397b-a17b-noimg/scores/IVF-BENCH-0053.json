@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was reviewed and relies only on the reported 1DD grade. It correctly notes poor ICM/TE by the provided label, but it overstates non-viability and does not analyze visible morphology from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, endometrial thickness, BMI, lifestyle, and sperm factors with embryo prognosis in a clinically meaningful way, though AMH is unavailable and some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable overreaches: equating 1DD with absolute non-viability, stating transfer is contraindicated, and giving strong conclusions that are not fully supported by morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are too absolute for guideline-based care, especially canceling transfer solely because of poor morphology and presenting PGT-A as 'critical' rather than individualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer decision-making, future cycle planning, endometriosis management, and adjunct testing. However, some actions are overly prescriptive given the uncertainty."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012924,
+  "judge_latency_ms": 3884.053417001269,
+  "judge_prompt_tokens": 2568,
+  "judge_completion_tokens": 348
+}

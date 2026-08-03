@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately interprets the provided Gardner 1DD grade as poor-quality blastocyst with severely compromised ICM and TE, but gives little image-specific morphology beyond the grade and does not discuss visible structural details such as zona or overall contour."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, prior live birth, tubal factor, endometrium, and sperm parameters well, and appropriately contrasts favorable patient factors with very poor embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and consistent overall, with the low implantation estimate matching the severe morphology; minor issue is some overstatement such as calling ovarian reserve 'good' despite AMH being relatively low for age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and the poor prognosis of a 1DD embryo, but recommending against transfer categorically and stating PGT-A is unnecessary because morphology alone makes development impossible is somewhat stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points, transfer decision options, and future-cycle considerations including review of fertilization/culture and protocol reassessment, though some recommendations remain somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012723,
+  "judge_latency_ms": 4462.260291998973,
+  "judge_prompt_tokens": 2686,
+  "judge_completion_tokens": 311
+}

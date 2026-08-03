@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology almost entirely on the Gardner score. It also inaccurately equates score 3 with an expanded blastocyst/thinning zona, which is closer to stage 4, so image-based morphological assessment is limited and partly incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian reserve, male factor context, endometrium, and lifestyle, and relates them to prognosis. Some links are somewhat generalized rather than deeply case-specific."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with conclusions generally supported by the presented factors. Minor issues include overconfidence in the implantation estimate and some imprecise morphology-based assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but suggesting PGT-A should be strongly considered after a single failed transfer and mentioning ERA relatively early are more aggressive than evidence-based guideline norms. There is also a Gardner staging inaccuracy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer management and future planning, including SET, progesterone support, and modifiable lifestyle factors. Some future recommendations are useful but not sufficiently nuanced regarding indications for PGT-A/ERA."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014562,
+  "judge_latency_ms": 4851.454458999797,
+  "judge_prompt_tokens": 3184,
+  "judge_completion_tokens": 334
+}

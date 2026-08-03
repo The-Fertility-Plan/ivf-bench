@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies the embryo as very poor quality with absent/degenerative ICM and TE, but it introduces uncertainty and contradiction about the expansion stage and relies heavily on the provided Gardner grade rather than a precise image-based morphology description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, ovarian response, sperm data, endometrium, BMI, and lifestyle reasonably well with embryo prognosis, though some links are somewhat generic and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall conclusion of extremely poor prognosis is logical, but there is a notable inconsistency in discussing the Gardner expansion stage and some overstatements such as calling 37 not advanced maternal age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are deviations: suggesting cancellation based on a poor embryo is not universally standard, PGT-A is presented too strongly, and sperm parameters are mischaracterized as normal despite low concentration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear counseling points, transfer discussion, and future-cycle considerations including lifestyle optimization and possible additional testing, though some recommendations are broader than strictly case-specific."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014172,
+  "judge_latency_ms": 3778.7101669964613,
+  "judge_prompt_tokens": 3094,
+  "judge_completion_tokens": 326
+}

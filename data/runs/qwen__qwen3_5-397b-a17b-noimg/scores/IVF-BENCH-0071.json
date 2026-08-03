@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no visual image was provided and bases morphology only on the Gardner score, so it does not actually assess image-visible features. It also inaccurately equates 3 with 'expanded blastocyst'; in standard Gardner grading, 3 is full blastocyst and 4 is expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH, ovarian response, maturation rate, diagnosis, endometrium, BMI/lifestyle, and sperm factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well structured, linking morphology, age-related aneuploidy, and uterine factors to prognosis. Minor issues include the grading-stage error and some overconfident statements about top-tier quality and miscarriage risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (SET, counseling, luteal support discussion), but there are notable deviations: incorrect Gardner stage interpretation, overstatement that 3AA is the 'highest' score, and somewhat speculative trigger-timing/PGT-A recommendations without stronger nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, luteal support review, counseling, trigger review, and possible sperm DNA fragmentation testing. Some suggestions are useful but a few are speculative rather than tightly case-driven."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 3652.4559169993154,
+  "judge_prompt_tokens": 2780,
+  "judge_completion_tokens": 352
+}

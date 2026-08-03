@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner 3AA label rather than the actual image. It also inaccurately describes stage 3 as 'expanded blastocyst' with thinning zona, which corresponds more to stage 4, so morphology is partly fabricated/misstated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, prior live birth, BMI, sperm quality, endometrial thickness, prior cycles, and ovarian markers, and relates them to prognosis. It misses some nuance around age-related aneuploidy and overinterprets morphology as implying euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it treats morphology as strongly predictive of euploidy, gives an arguably inflated implantation estimate, and contains an internal inconsistency by calling a natural cycle retrieval of 13 COCs/11 MII 'quite good' without questioning the protocol label."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are broadly guideline-consistent, but there are deviations: misstatement of Gardner stage 3, overconfidence in implantation rates for an untested 3AA embryo at age 36, and suggesting ERA relatively early despite limited evidence for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and contingency planning, including SET, pregnancy testing timing, review of diagnosis, possible PGT-A discussion, protocol reassessment, and uterine evaluation if repeated failure occurs. Some suggestions are somewhat generic but still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015264,
+  "judge_latency_ms": 4451.331042000675,
+  "judge_prompt_tokens": 2973,
+  "judge_completion_tokens": 423
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no actual image was provided and bases morphology only on the Gardner text. It also inaccurately interprets grade 4 as hatching/herniating, which corresponds more to stage 5, so image-based morphological assessment is limited and partly incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, male factor, prior failed cycle, sperm parameters, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some inferences about blast yield are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the prognosis tied to embryo grade and patient factors. Minor issues include overinterpreting blastulation yield from incomplete cycle data and the stage-4 versus hatching inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: misapplication of Gardner staging, somewhat liberal endorsement of PGT-A in a 28-year-old with male factor, and suggestions like routine progesterone checks that are not universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including luteal support review, sperm DNA fragmentation testing, protocol review, and ICSI confirmation. Some recommendations are useful but not highly nuanced or prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013068,
+  "judge_latency_ms": 4011.1938749978435,
+  "judge_prompt_tokens": 2556,
+  "judge_completion_tokens": 360
+}

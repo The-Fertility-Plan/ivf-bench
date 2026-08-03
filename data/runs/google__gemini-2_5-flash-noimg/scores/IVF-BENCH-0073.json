@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner 4AA label, adding an inaccurate description that stage 4 means a hatching/herniating blastocyst rather than expanded blastocyst; thus morphology is not image-based and includes a grading-stage error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, sperm parameters, diagnosis, endometrium, and first-cycle status, and relates them to prognosis, though some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with conclusions mostly supported by the presented factors; the main issue is overreliance on morphology and the expansion-stage misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, especially single embryo transfer for a young patient with a high-quality blastocyst and cautious use of PGT-A; minor deviations include overstating prognostic certainty and the grading-stage error."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, luteal support continuation, follow-up timing, SET recommendation, and future planning, though some advice is generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.013239,
+  "judge_latency_ms": 4043.9448340039235,
+  "judge_prompt_tokens": 2798,
+  "judge_completion_tokens": 323
+}

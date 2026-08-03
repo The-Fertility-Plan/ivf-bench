@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was available and bases morphology only on the provided Gardner score. It also inaccurately interprets stage 3 as 'fully expanded with thinning zona,' which is closer to stage 4, so morphology is not reliably matched to the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, BMI, AMH, PCOS, prior live birth/miscarriage/ectopic history, partner age, sperm parameters, and endometrium, and relates them to prognosis. Some links are somewhat overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a clear connection between embryo quality, patient factors, and prognosis. Minor issues include overcalling embryo quality as 'top-tier' and some speculative deductions about AMH/PCOS discordance and paternal-age effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET, luteal support, and early monitoring after prior ectopic. However, there are deviations such as strongly recommending PGT-A mainly for paternal age/miscarriage, implying stage-3 blastocyst is fully expanded, and stating deep fundal placement minimizes ectopic risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, progesterone monitoring consideration, SDF testing, weight optimization, and early pregnancy surveillance. Some recommendations are useful but not always sufficiently nuanced or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014022,
+  "judge_latency_ms": 4325.209999995423,
+  "judge_prompt_tokens": 2669,
+  "judge_completion_tokens": 401
+}

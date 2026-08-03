@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0065",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score; it also mislabels expansion stage 3 as an expanded/full blastocyst with thinning zona, which is inconsistent with standard Gardner grading and the provided lab description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior live birth, endometrial thickness, tubal factor, BMI, and paternal age with embryo quality in a clinically meaningful way, though some inferences are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and mostly consistent, but there are notable issues such as overinterpreting AMH as implying better oocyte competence, assuming trilaminar lining, and giving somewhat optimistic success estimates for an untested age-42 embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, hydrosalpinx assessment, and considering PGT-A are broadly guideline-consistent, though the TESE suggestion based on paternal age/SDF is more speculative than standard first-line guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including eSET, luteal support, hydrosalpinx check, and possible PGT-A/SDF testing, though some recommendations could be more individualized and less assumptive."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.01314,
+  "judge_latency_ms": 3642.228167002031,
+  "judge_prompt_tokens": 2665,
+  "judge_completion_tokens": 343
+}

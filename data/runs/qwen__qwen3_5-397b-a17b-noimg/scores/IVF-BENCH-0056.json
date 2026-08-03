@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the textual Gardner score, so it does not assess visible image features such as actual blastocyst appearance or zona pellucida; the textual interpretation is mostly correct but not image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, tubal factor, ovarian reserve, BMI, smoking, endometrial thickness, prior cycle history, and sperm parameters with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally consistent, with the implantation estimate logically tied to embryo grade and patient factors; minor overstatement around exact impact sizes prevents a perfect score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, smoking cessation, weight optimization), but suggestions such as low-dose aspirin for TE-C and routine PGT-A recommendation at age 32 are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, lifestyle modification, and contingency planning, though some recommendations could be more tightly tailored to standard protocols."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012699,
+  "judge_latency_ms": 3581.697624998924,
+  "judge_prompt_tokens": 2623,
+  "judge_completion_tokens": 322
+}

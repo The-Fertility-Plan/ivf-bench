@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0121",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the reported 3BB grade. It gives a generally correct generic 3BB description, but it does not analyze the actual image and includes a likely grading terminology error by calling stage 3 'expanded blastocyst' rather than full blastocyst/full blastocyst with thinning zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI/lifestyle, prior cycle history, and male factor reasonably well with embryo quality and prognosis, though some assumptions are made (e.g., implied trilaminar lining, ICSI use)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to age and embryo grade. Minor issues include overstatement of AMH as predicting oocyte quality and some speculative assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceeding with transfer if clinically appropriate, luteal support, OHSS monitoring, vitrification). However, suggesting PGT-A partly because of male factor/paternal-contributed aneuploidy is not strongly guideline-supported, and there is some imprecision in Gardner staging terminology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including OHSS monitoring, luteal support, cryopreservation, and possible further male-factor workup. Recommendations are useful, though not highly individualized beyond general IVF practice."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013587,
+  "judge_latency_ms": 4235.968583001522,
+  "judge_prompt_tokens": 2654,
+  "judge_completion_tokens": 375
+}

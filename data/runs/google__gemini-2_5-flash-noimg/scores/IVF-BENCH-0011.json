@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It accurately interprets the provided 1DD grade as very poor quality, but it does not truly analyze image-visible morphology and overstates certainty by calling the ICM/TE absent or non-viable based solely on grading; it also introduces unsupported comments about day-4 blastocyst timing."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, sperm quality, tubal factor, endometrium, and lifestyle well, linking them to prognosis, though some links (e.g., DOR directly implying poorer quality) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent, with prognosis driven appropriately by very poor embryo morphology plus maternal age, though the absolute certainty of non-viability and speculation about accelerated day-4 development weaken it slightly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and future planning is broadly evidence-based, but strongly advising against transfer of a poor-quality embryo and recommending PGT-A strongly despite very low embryo numbers are more assertive than guideline-based individualized counseling would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for counseling, transfer decision-making, future stimulation considerations, possible embryo/oocyte banking, and donor oocyte discussion, though some recommendations are not sufficiently individualized to low-yield cycles."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014691,
+  "judge_latency_ms": 4703.105708998919,
+  "judge_prompt_tokens": 3072,
+  "judge_completion_tokens": 365
+}

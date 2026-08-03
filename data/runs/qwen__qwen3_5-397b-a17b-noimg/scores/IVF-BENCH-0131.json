@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was provided and relies mainly on the reported 1DD grade. It correctly notes severe poor-quality ICM/TE, but it misstates stage 1 as '<50%' despite the prompt saying 'at least half,' and it adds strong claims like 'non-viable' without image-based morphological detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior outcomes, sperm motility, paternal age, endometrium, and lifestyle with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: very poor embryo morphology drives a very low implantation estimate, with patient factors modifying background prognosis. Minor issues include overconfident assertions of absolute non-viability and some speculative attribution to aneuploidy/lab issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The poor prognosis assigned to a 1DD embryo is broadly aligned with IVF practice, but recommending PGT-A as strongly indicated and stating such embryos are categorically discarded/not transferable is more rigid than guideline-based individualized care. Some recommendations exceed what can be concluded from the provided data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for this transfer and future planning, including counseling, protocol review, and possible sperm DNA fragmentation testing. However, the advice is somewhat one-sided and lacks nuanced alternatives if transfer were still being considered."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013008,
+  "judge_latency_ms": 4472.022957997979,
+  "judge_prompt_tokens": 2486,
+  "judge_completion_tokens": 370
+}

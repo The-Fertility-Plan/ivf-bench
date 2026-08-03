@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the provided Gardner score by calling expansion grade 2 a Day-4 blastocyst and discussing accelerated blastulation/asynchrony, despite the lab data explicitly defining it as full blastocyst. It gives little image-specific morphology beyond restating the score and adds speculative features not clearly supported by the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrial thickness, male factor context, first-cycle status, and lifestyle reasonably well with embryo quality, though some links are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but key reasoning is weakened by the incorrect premise that this is an unusually early Day-4 blastocyst with embryo-endometrial asynchrony. The implantation estimate is otherwise internally explained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are notable deviations: misapplication of Gardner expansion interpretation, overemphasis on Day-4 blastocyst asynchrony, and recommendations like ERA and routine adjuncts/monitoring that are not standard first-line guideline-based steps."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides concrete next steps for transfer support, beta-hCG timing, and future-cycle considerations such as PGT-A and sperm DNA fragmentation testing, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.013083,
+  "judge_latency_ms": 4126.062750001438,
+  "judge_prompt_tokens": 2591,
+  "judge_completion_tokens": 354
+}

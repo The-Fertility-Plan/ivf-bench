@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score, so it does not assess visible image features. It notes the grade/text discrepancy appropriately, but also labels 2BB as 'good quality' and cannot comment on actual ICM/TE/zona appearance from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, FSH, BMI, prior IVF outcomes, ectopic history, sperm parameters, lining, and lifestyle factors with embryo quality and prognosis. AMH is unavailable and diagnosis/protocol are not deeply explored, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the probability estimate tied to embryo grade and prior history. Minor issues include overstatement of baseline rates and some speculative causal inferences, but no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but several recommendations are not strongly guideline-supported for routine use, including ERA, NK cell testing, and broad immune/thrombophilia workup after this history. PGT-A at age 29 is debatable rather than standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for proceeding with transfer, luteal support monitoring, transfer technique, and future investigations. Some recommendations are more speculative than evidence-based, but they are specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.014043,
+  "judge_latency_ms": 4234.251207999478,
+  "judge_prompt_tokens": 2791,
+  "judge_completion_tokens": 378
+}

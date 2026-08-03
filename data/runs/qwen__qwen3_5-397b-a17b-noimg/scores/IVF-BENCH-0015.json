@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score, so it does not assess visible image features. It also overstates non-viability and discusses stage ambiguity rather than actual image morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, BMI, diagnosis, protocol, paternal age, sperm parameters, and endometrium with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable issues: it treats a poor-grade embryo as definitively non-viable, infers embryonic arrest, and makes strong conclusions from limited evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF guidance, including categorical advice not to transfer based solely on poor morphology, calling the cycle a cancelled transfer, and strongly recommending PGT-A/TESE-related steps without sufficient case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decision-making, future protocol review, sperm DNA fragmentation testing, lifestyle changes, and counseling, though some recommendations are overly definitive."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012969,
+  "judge_latency_ms": 4232.565540994983,
+  "judge_prompt_tokens": 2683,
+  "judge_completion_tokens": 328
+}

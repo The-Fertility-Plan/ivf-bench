@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0110",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and bases morphology only on the Gardner score, so it does not actually assess visible image features. It is broadly consistent with 3AA descriptors but includes an inaccuracy by calling grade 3 'fully expanded' rather than expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, prior cycle history, and missing endometrial data with embryo quality and prognosis. Minor overinterpretation is present, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, linking embryo quality and patient age to prognosis while acknowledging unknown ploidy and endometrial factors. Minor issues include some speculative statements and a slightly imprecise implantation/pregnancy framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with standard IVF practice, including eSET for a good-prognosis patient and consideration of endometrial readiness and luteal support. Small deviations include overemphasis on stress effects and a somewhat simplified PGT-A discussion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including eSET, checking endometrium, luteal support, cryopreservation, and possible sperm DNA fragmentation testing. Some suggestions are generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013359,
+  "judge_latency_ms": 3714.5828749999055,
+  "judge_prompt_tokens": 2638,
+  "judge_completion_tokens": 363
+}

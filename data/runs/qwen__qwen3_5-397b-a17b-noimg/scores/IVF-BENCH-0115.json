@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no visual image was provided and bases morphology only on the reported 2BB grade. It also inaccurately describes stage 2 as a full blastocyst and adds limited image-specific detail, so morphology is only partially accurate and not image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrial thickness, prior cycle outcomes, unexplained infertility, smoking, and semen parameters with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall reasoning is structured and mostly logical, but there are notable issues: mislabeling Gardner expansion stage 2, inferring a low blastulation rate from incomplete data, and giving a probability estimate that is not fully anchored to the stated evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (proceed with transfer, smoking cessation, consider sperm DNA fragmentation in recurrent poor outcomes), but strong endorsement of PGT-A and ERA after this history is more aggressive than guideline-supported routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for the current transfer and future planning, including luteal support review, smoking cessation, and additional testing options, though some suggestions are somewhat overreaching."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012999,
+  "judge_latency_ms": 3824.807666002016,
+  "judge_prompt_tokens": 2688,
+  "judge_completion_tokens": 329
+}

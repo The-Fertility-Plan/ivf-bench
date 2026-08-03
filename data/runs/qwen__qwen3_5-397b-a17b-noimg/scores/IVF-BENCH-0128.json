@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0128",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was available and bases morphology only on the Gardner score, so it does not actually assess visible image features. It also overstates 3AA as the 'highest tier' and adds speculative details not image-confirmed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH/oocyte yield, prior live birth, male factor, partner age, and endometrial thickness with embryo quality in a clinically meaningful way, though some inferences (e.g., PCOS phenotype, sperm DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear explanation for how embryo morphology, age-related aneuploidy risk, BMI, and prior live birth affect prognosis. Minor issues include somewhat simplified quantitative adjustments and a few speculative assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, attention to OHSS risk, luteal support, and consideration of PGT-A at age 37 are broadly aligned with IVF practice guidelines. However, presenting PGT-A as strongly recommended rather than individualized and implying 3AA is the top possible morphology are slight deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including SET, OHSS monitoring, progesterone assessment, nutritional labs, weight optimization, and possible sperm DNA fragmentation testing. It is useful, though some suggestions are more generalized than case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014055,
+  "judge_latency_ms": 4068.0163750002976,
+  "judge_prompt_tokens": 2725,
+  "judge_completion_tokens": 392
+}

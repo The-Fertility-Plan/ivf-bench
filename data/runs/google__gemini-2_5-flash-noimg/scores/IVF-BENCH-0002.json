@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner score rather than image-based morphology. It also inaccurately interprets expansion 2 as 'full blastocyst' and adds limited/no direct observations of visible features such as zona pellucida or overall appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, diagnosis, prior miscarriage, sperm parameters, endometrium, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear link from favorable factors to prognosis. Minor issues include overconfidence in the implantation estimate and some imprecision around Day 4/expansion-stage interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: ERA is suggested despite limited routine indication, PGT-A is framed strongly after a single failed transfer/miscarriage in a young patient, and 'immunological workup' is not guideline-supported in routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for proceeding with transfer, counseling, and contingency planning. However, some recommendations are somewhat generic or not ideally prioritized for this specific low-risk case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013728,
+  "judge_latency_ms": 3845.8930420019897,
+  "judge_prompt_tokens": 2846,
+  "judge_completion_tokens": 346
+}

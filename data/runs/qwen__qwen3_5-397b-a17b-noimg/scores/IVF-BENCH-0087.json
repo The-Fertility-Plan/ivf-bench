@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was available and bases morphology only on the provided Gardner grade. It therefore does not assess visible image features directly and also overstates 3AA as the 'highest' score/top-tier without image-based confirmation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, semen parameters, endometrial thickness, prior cycle history, and embryo grade into prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well structured, with the implantation estimate tied to age, morphology, and endometrium. Minor issues include some overinterpretation of low BMI effects and assumptions about protocol intent/ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially single embryo transfer in a young patient with a good-quality day-5 blastocyst. Small deviations include overconfident statements about morphology and somewhat speculative progesterone/BMI comments."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, luteal support review, nutrition, cryopreservation, and possible sperm DNA fragmentation testing if unsuccessful. Useful, though some suggestions are more speculative than essential."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013221,
+  "judge_latency_ms": 3695.9126670044498,
+  "judge_prompt_tokens": 2802,
+  "judge_completion_tokens": 321
+}

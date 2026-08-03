@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies almost entirely on the provided Gardner score and misstates stage 1 as blastocoel less than half the embryo, whereas the prompt defines it as at least half. It gives little image-specific morphology and adds speculative interpretation beyond visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, ovarian response, endometrium, sperm parameters, lifestyle, and first-cycle status with embryo quality and prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor ICM/TE drives low prognosis despite favorable patient factors. Minor issues include overinterpretation of lab/culture concerns and some uncertainty around day-4 versus day-5 staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: use of 'D' grading is nonstandard in classic Gardner terminology, PGT-A is suggested somewhat prematurely for a 28-year-old first-cycle patient, and citing elective single embryo transfer is not very relevant when only one embryo is available."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, proceeding only with informed consent, luteal support, and future-cycle review. Some suggestions are generic or speculative, but overall the recommendations are usable."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013794,
+  "judge_latency_ms": 3806.8228749980335,
+  "judge_prompt_tokens": 2828,
+  "judge_completion_tokens": 354
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no direct image was provided and bases morphology on the Gardner score rather than the image. It also overstates 3AA as the 'highest' score and adds non-visual assumptions, so image-specific morphological assessment is limited and partly inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, male factor, endometrial thickness, and first-cycle status with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with probability estimates tied to embryo quality and patient factors. Minor issues include overconfidence in morphology-euploidy linkage and some speculative interpretation of male factor and lining thickness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, especially eSET for a good-prognosis patient. However, routine assisted hatching suggestion, PGT-A framing at age 34 after one failure, and implying elevated FSH independently raises aneuploidy risk are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer, luteal support, lifestyle optimization, and contingency planning. Some suggestions are useful but a few are generic or not tightly tailored to this exact case."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013419,
+  "judge_latency_ms": 4033.2614999933867,
+  "judge_prompt_tokens": 2803,
+  "judge_completion_tokens": 334
+}

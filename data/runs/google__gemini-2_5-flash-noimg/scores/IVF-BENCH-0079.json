@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided Gardner 3AB grade, but it relies heavily on the lab annotation rather than image-specific visual analysis and includes a slight inconsistency by calling TE 'B' while repeating 'few cells forming a loose epithelium,' which is closer to a C-style description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF failure, male factor, endometrium, and lifestyle factors with embryo quality in a clinically meaningful way, though BMI and some nuances of prognosis are underemphasized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible implantation estimate tied to morphology and age-related aneuploidy risk; minor issues include overconfidence in some reserve markers and the TE description mismatch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with IVF practice: SET recommendation, counseling on age-related aneuploidy, luteal support, and cautious future consideration of PGT-A are appropriate. Slight overstatement of PGT-A and ERA utility prevents a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, lifestyle modification, luteal support, and future protocol review; useful but not highly tailored beyond standard IVF management."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014337,
+  "judge_latency_ms": 4399.487875001796,
+  "judge_prompt_tokens": 3099,
+  "judge_completion_tokens": 336
+}

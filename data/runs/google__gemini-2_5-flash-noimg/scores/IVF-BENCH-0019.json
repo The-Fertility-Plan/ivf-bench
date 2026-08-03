@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies almost entirely on the provided Gardner 1DD label and explicitly states no actual image-based assessment; adds unsupported claims such as non-viability and does not describe visible morphology beyond the grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, endometrium, prior live birth, recurrent ectopics, smoking, alcohol use, prior IVF history, and sperm parameters with prognosis, though some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and consistent: very poor morphology drives poor prognosis despite favorable age and uterine factors. Minor issue is overstatement of certainty from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF principles regarding poor-grade embryo prognosis, smoking cessation, and ectopic risk workup, but the strong recommendation against transfer and labeling the embryo as definitively non-viable are stronger than guideline-based caution would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including counseling, lifestyle modification, tubal evaluation, protocol review, and psychological support; useful clinically, though some recommendations are broad and not tightly tailored to a day-4 transfer context."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013653,
+  "judge_latency_ms": 3997.13645799784,
+  "judge_prompt_tokens": 2986,
+  "judge_completion_tokens": 313
+}

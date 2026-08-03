@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the Gardner score, adding a likely grading inconsistency by calling stage 3 'expanded' with thinning zona. It does not analyze visible image features directly, so morphology is only partially grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age-related aneuploidy risk, low AMH/DOR, tubal factor, sperm quality, endometrium, and first-cycle status, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking embryo quality and uterine factors with age-related risk. Minor overreach occurs in implying morphology may suggest euploidy and in the optimistic probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, especially SET for a good-quality day-5 blastocyst and standard luteal support. Some caution is warranted because the morphology terminology is imperfect and PGT-A is presented somewhat strongly after a single failed transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, counseling, luteal support, and future-cycle considerations. It is useful, though some suggestions remain somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013983,
+  "judge_latency_ms": 3944.202165999741,
+  "judge_prompt_tokens": 3011,
+  "judge_completion_tokens": 330
+}

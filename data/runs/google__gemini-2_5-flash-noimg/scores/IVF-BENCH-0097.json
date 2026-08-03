@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states no image was provided and relies almost entirely on the supplied Gardner 4AA grade rather than analyzing visible morphology. It gives generally correct grade-based descriptions but fabricates image-specific assessment by calling expansion 4 a hatching blastocyst and does not evaluate actual visual features such as zona, symmetry, debris, or collapse."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior IVF failure, sperm parameters, endometrial thickness, and unexplained infertility, and connects them to prognosis. Some interactions are somewhat overstated, especially implying ovarian reserve strongly predicts egg quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: strong embryo morphology plus favorable patient factors leads to a good prognosis and SET recommendation. Minor issues include overconfidence in implantation probability and slight imprecision around the expansion-stage terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET for an excellent day-5 blastocyst at age 35 is guideline-concordant, and the overall counseling is broadly evidence-based. However, recommending ERA, immunologic testing, and even laparoscopy after limited failure is not strongly supported by current ASRM/ESHRE guidance and lowers alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the transfer and contingency planning, including SET, luteal support, beta-hCG timing, and escalation options if unsuccessful. Some recommendations are generic and a few future tests are insufficiently nuanced, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014328,
+  "judge_latency_ms": 4314.767916999699,
+  "judge_prompt_tokens": 2866,
+  "judge_completion_tokens": 382
+}
