@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0549",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response includes likely fabricated image findings such as significant coarse granularity and multiple prominent vacuoles, and it downgrades the embryo despite the provided 4AA/hatching description. Basic features like expansion and zona thinning are reasonable, but the morphology assessment appears overcalled from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, ovarian response, sperm parameters, endometrial thickness, and prior IVF outcomes well, and connects these to prognosis. It misses AMH being unavailable rather than interpretable and somewhat overstates implications of prior failures."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis reasoning is generally clear, but the probability adjustments are somewhat ad hoc and the strong emphasis on image-based dysmorphism and RIF workup is not fully supported by the presented data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are evidence-based (proceeding with transfer, considering PGT-A in future, optimizing luteal support), but several suggested tests/interventions such as NK cell activity, HLA typing, MTHFR, intralipids, and routine ERA/EMMA/ALICE for RIF are not well supported by current ESHRE/ASRM guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and future planning, including transfer strategy, luteal support considerations, and future embryo selection options. However, some actionable items are not guideline-supported, which limits clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.0227,
+  "judge_latency_ms": 6865.379124996252,
+  "judge_prompt_tokens": 3403,
+  "judge_completion_tokens": 379
+}

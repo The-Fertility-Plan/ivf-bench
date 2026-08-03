@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0231",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AA grade, but it over-interprets a cropped image by claiming specific visible structures (e.g., clear halo/zona thinning, distinct ICM localization) that may not be directly assessable, and TE assessment is largely inferred from metadata rather than image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, endometrial thickness, sperm parameters, and infertility diagnosis well with embryo quality, though it somewhat overstates how strongly morphology predicts euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with a probability estimate that follows from favorable factors, though phrases like 'textbook' and 'single strongest predictor' are somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF principles on morphology, age, and transfer suitability, but it overstates 3AA as 'top-tier' and 'highly predictive of euploidy,' and suggests optional PGT-A in a way that is not strongly guideline-driven for a 32-year-old without recurrent implantation failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as proceeding with transfer, discussing PGT-A only if needed, considering sperm DNA fragmentation testing after failure, and lifestyle optimization, though recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01293,
+  "judge_latency_ms": 4404.545749996032,
+  "judge_prompt_tokens": 2460,
+  "judge_completion_tokens": 370
+}

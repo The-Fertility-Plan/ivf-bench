@@ -1,0 +1,43 @@
+# VLM ORPO Fine-Tuning Config for Qwen 3.5-VL-9B on IVF-Bench
+# Requires: aitraining >= 0.0.53
+# Run: aitraining --config configs/training_orpo_qwen_vlm.yaml
+
+task: llm-orpo
+base_model: Qwen/Qwen3.5-9B
+project_name: ivf-bench-qwen9b-orpo
+log: wandb
+backend: local
+
+data:
+  path: data/orpo
+  train_split: train
+  valid_split: eval
+  chat_template: tokenizer
+  column_mapping:
+    text_column: chosen
+    rejected_text_column: rejected
+    prompt_text_column: prompt
+    image_column: images
+
+params:
+  epochs: 5
+  batch_size: 1
+  gradient_accumulation: 8
+  lr: 5e-5
+  optimizer: adamw_torch
+  scheduler: cosine
+  block_size: 16384
+  model_max_length: 16384
+  max_prompt_length: 8192
+  peft: true
+  target_modules: all-linear
+  lora_r: 8
+  lora_alpha: 36
+  lora_dropout: 0.05
+  mixed_precision: bf16
+  padding: right
+  save_strategy: epoch
+  eval_strategy: epoch
+  save_total_limit: 3
+  dpo_beta: 0.1
+  seed: 42

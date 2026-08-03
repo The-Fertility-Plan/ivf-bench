@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided Gardner data by interpreting 1 as blastocoel <50% rather than at least half the embryo, and it adds image features like vacuolization and zona irregularity that are not reliably supported from the prompt alone. ICM/TE being poorly defined is directionally consistent with DD."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve diagnosis, sperm parameters, endometrium, and first-cycle status with embryo quality and prognosis. Some links are somewhat overstated, but overall the patient factors are meaningfully connected to expected outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor embryo morphology drives prognosis down while young age and favorable uterine factors modestly improve it. Minor issues include overconfident claims about aneuploidy and developmental arrest and the incorrect expansion-stage interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and emphasis on informed consent are appropriate, but there are notable deviations: incorrect Gardner stage interpretation, speculative miscarriage/aneuploidy assertions, and several adjunct recommendations (DHEA, GH, testosterone, broad autoimmune testing, PGT-A rationale) that are not strongly guideline-based for this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer counseling and future workup/planning, including reserve assessment and protocol review. It is practical, though some suggested add-ons are more speculative than standard and should be framed more cautiously."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.021325,
+  "judge_latency_ms": 8973.569374997169,
+  "judge_prompt_tokens": 3074,
+  "judge_completion_tokens": 397
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0312",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 2AA grading appropriately and gives a plausible blastocyst description, but it includes image-specific details like exact ICM position, zona thickness uniformity, and subtle granularity/heterogeneity that may not be reliably verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve markers, response to stimulation, BMI, prior biochemical pregnancy, sperm parameters, endometrium, and transfer timing with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it treats a Day 4 transfer of a reported 2AA blastocyst as a major synchrony concern, which is not well supported, and some probability adjustments are speculative or double-count overlapping factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF concepts and Gardner grading, but several recommendations go beyond guideline-based practice or are weakly supported (routine ERA/EMMA/ALICE, immunologic workup, thrombophilia testing after limited failure, broad PGT-A endorsement in a young patient with small cohort)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical suggestions for luteal support, monitoring, and future cycle options, though some recommendations are more speculative than standard and could lead to overtesting."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.026055,
+  "judge_latency_ms": 5486.780000035651,
+  "judge_prompt_tokens": 4197,
+  "judge_completion_tokens": 338
+}

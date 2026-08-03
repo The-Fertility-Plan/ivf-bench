@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0471",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image, calls stage 3 'fully expanded' with thinning zona more typical of stage 4 wording, and localizes ICM position/fine TE details that may not be reliably verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, response to stimulation, BMI, prior failed cycle, endometrial thickness, and sperm data with embryo quality in a clinically meaningful way, though some inferences about male factor etiology are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability range derived from embryo quality, age, ploidy uncertainty, and BMI; minor issues include somewhat imprecise use of implantation vs live birth effects and overconfident morphology claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially single embryo transfer and attention to obesity-related risk, but routine endorsement of PGT-A, ERA, and sperm DNA fragmentation testing after limited failure is more debatable than guideline-mandated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for this transfer and future planning, including SET, luteal support considerations, weight management, and contingency testing, though some suggestions would benefit from stronger prioritization and indication thresholds."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.0114975,
+  "judge_latency_ms": 8182.02545895474,
+  "judge_prompt_tokens": 2367,
+  "judge_completion_tokens": 372
+}

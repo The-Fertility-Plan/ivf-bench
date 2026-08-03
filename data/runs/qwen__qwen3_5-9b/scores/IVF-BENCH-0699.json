@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0699",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very early/poor-quality embryo with absent or poorly defined ICM/TE and notes the zona pellucida, but it repeatedly vacillates between morula and blastocyst and overfocuses on dataset inconsistency rather than a clean morphology read."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior live birth, endometrial thickness, partner age, and sperm motility with prognosis, though some links are generic and diagnosis/BMI are not meaningfully used."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is highly repetitive and internally inconsistent, repeatedly changing assumptions about embryo stage and transfer timing; the overall conclusion is understandable but the reasoning chain is not clean or stable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It generally respects Gardner grading concepts and recognizes poor prognosis for a 0DD embryo, but the suggestion of PGT-A in this specific context is not well tailored and the handling of Day 4 versus blastocyst staging is muddled."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers some practical steps such as clarifying staging/transfer timing and considering future PGT-A, but recommendations are broad, repetitive, and not sharply prioritized for immediate transfer management."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.01435625,
+  "judge_latency_ms": 7033.95754203666,
+  "judge_prompt_tokens": 8749,
+  "judge_completion_tokens": 342
+}

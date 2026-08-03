@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0289",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology, calling 2AA 'top-tier' and 'one of the highest grades possible' despite 2AA being a relatively early/full blastocyst rather than an advanced expanded/hatching blastocyst. It also infers features like a robust TE and dense ICM from a limited image and does not address uncertainty well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including age, AMH, BMI, endometrial thickness, sperm parameters, and first-cycle status, and relates them to prognosis. However, it overemphasizes low AMH as affecting embryo aneuploidy risk and uses some speculative language."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats 2AA as near-maximal quality, labels the case 'high risk, high reward' somewhat dramatically, and links low AMH to higher aneuploidy risk in a 32-year-old more strongly than evidence supports. The implantation estimate is plausible but not tightly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, such as proceeding with transfer and counseling on weight and lifestyle. However, the suggestion that low AMH itself is associated with higher aneuploidy and the optional PGT-A framing based on low AMH/BMI are not strongly guideline-based, and the morphology interpretation is somewhat misaligned with Gardner grading nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, counseling, and future planning, including proceeding with transfer, considering PGT-A if additional embryos exist, and addressing weight/stress. It is useful, though some recommendations remain generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.0126025,
+  "judge_latency_ms": 6146.761041018181,
+  "judge_prompt_tokens": 2479,
+  "judge_completion_tokens": 427
+}

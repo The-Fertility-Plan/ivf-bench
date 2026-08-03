@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes very poor-quality development and absent/degenerative ICM/TE consistent with 0DD, but it over-interprets the image as a compacted morula, describes vacuolization and perivitelline debris that may not be clearly visible, and adds unsupported zona details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, BMI, endometriosis, prior failed cycle, ovarian reserve, sperm parameters, and endometrial thickness, though some links to embryo morphology are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the poor prognosis estimate follows from the very poor embryo grade plus adverse clinical factors, but there are some overstatements such as implying high aneuploidy from paternal age/endometriosis and calling this a 'perfect storm' without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but several recommendations are not tightly guideline-based or are overstated, including strong claims about PGT-A necessity, sperm DNA fragmentation/TESA, and endometriosis-related aneuploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for counseling, transfer selection, and future workup/planning, though some suggestions are more aggressive than the data support and could be better individualized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0117425,
+  "judge_latency_ms": 6231.245916977059,
+  "judge_prompt_tokens": 2477,
+  "judge_completion_tokens": 370
+}

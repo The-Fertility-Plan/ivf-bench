@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0215",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-specific certainty by calling the blastocyst fully expanded/open and infers detailed ICM/TE features that may not be clearly discernible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, BMI, prior failed cycle, sperm parameters, and endometrial thickness with embryo quality well, though it misses nuance around absent AMH and does not fully contextualize prior cycle details."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but the implantation estimate is somewhat optimistic and the claims that low BMI affects endogenous progesterone/luteal support and that former smoking materially lowers current implantation are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, single good-quality blastocyst transfer, and general prognosis, but it overemphasizes PGT-A in a 27-year-old after limited failure and makes non-guideline-based assertions about BMI-driven luteal support needs."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including proceeding with transfer, reviewing luteal support, nutritional optimization, smoking abstinence, and future metabolic evaluation, though some recommendations are broader than strictly case-specific."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0104125,
+  "judge_latency_ms": 7100.0867919647135,
+  "judge_prompt_tokens": 2215,
+  "judge_completion_tokens": 325
+}

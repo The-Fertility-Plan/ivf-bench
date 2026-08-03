@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0132",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BB grade, correctly describing a blastocyst with loosely grouped ICM and sparse TE, but it overstates image-specific details such as irregular zona and peripheral vacuoles/bubbles that are not clearly verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm parameters, endometrium, lifestyle, and prior biochemical pregnancy with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: it labels 3BB as lower-end quality, assumes very high euploidy (80-90%) for age 32, and draws stronger conclusions from prior biochemical pregnancy than warranted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic transfer recommendation is reasonable, but recommending PGT-A as highly recommended for a 32-year-old after one biochemical pregnancy is not well aligned with routine evidence-based practice, and claims about luteal defect/high responder status are insufficiently supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, luteal support, monitoring, and contingency planning, though some advice is too assertive rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01123,
+  "judge_latency_ms": 6179.677541949786,
+  "judge_prompt_tokens": 2518,
+  "judge_completion_tokens": 329
+}

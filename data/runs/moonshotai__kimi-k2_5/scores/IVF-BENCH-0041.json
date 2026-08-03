@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 0DD/early blastocyst label and poor ICM/TE, but it adds image-specific details such as a visible excluded fragment and precise zona observations that may not be reliably supported from the prompt/image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, prior cycle, male factor, sperm parameters, and endometrium with embryo quality well, though some links (e.g., strong emphasis on sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent: very poor morphology drives a very low implantation estimate despite favorable maternal age. Minor overreach appears in attributing causes and in calling transfer mainly for psychological closure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned with Gardner grading interpretation and counseling around poor prognosis, but several recommendations are more speculative than guideline-based (routine karyotype/oxidative stress testing, donor sperm suggestion, definitive 'do not freeze' language, and strong DFI emphasis)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete counseling points and future-cycle suggestions, including additional testing and protocol considerations. However, some recommendations are not sufficiently prioritized and a few are overly assertive for this single poor-quality embryo."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.0108225,
+  "judge_latency_ms": 7505.12833299581,
+  "judge_prompt_tokens": 2349,
+  "judge_completion_tokens": 330
+}

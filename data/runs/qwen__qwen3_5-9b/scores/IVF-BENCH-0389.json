@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0389",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality/degenerating blastocyst and absent discernible ICM/TE, but it overstates certainty from the image, misinterprets Gardner expansion 0 as no blastocoel rather than early blastocyst, and adds speculative features such as a triangular vacuole/remnant."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, elevated FSH, low MII yield, sperm parameters, endometrium, BMI, and lifestyle with prognosis reasonably well, though it overattributes embryo failure to ovarian response and does not acknowledge missing AMH or uncertainty around the male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly structured and internally consistent, but it makes overly absolute claims of non-viability and 0% implantation from morphology alone, which is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of poor morphology to predict very low potential is aligned, but recommending unequivocally not to transfer and assigning 0% implantation are not well aligned with cautious evidence-based IVF practice; some stimulation suggestions are speculative rather than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer avoidance, freezing, stimulation review, trigger optimization, counseling on donor oocytes, and possible PGT-A, though the advice would be stronger with more nuance and less absolutism."
+    }
+  ],
+  "extracted_probability": 0.0,
+  "judge_cost_usd": 0.012231,
+  "judge_latency_ms": 5210.3337079970515,
+  "judge_prompt_tokens": 2217,
+  "judge_completion_tokens": 372
+}

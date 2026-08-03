@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0361",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a high-quality blastocyst and Gardner 4AA, but it overstates image-specific certainty and includes somewhat imprecise localization/details (e.g., calling stage 4 'hatching' rather than expanded blastocyst with hatching/herniation as provided)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, sperm parameters, paternal age, and cycle context with embryo quality, but overinterprets the AMH/DOR discrepancy and low oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning has notable inconsistencies: it labels high AMH with 9 oocytes as a poor-responder paradox, implies low yield itself raises aneuploidy/mosaicism risk, and makes conclusions not well supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are standard (good prognosis with day-5 4AA, cautious PGT-A discussion), but several recommendations are not guideline-grounded, including overcalling poor response, suggesting protocol changes from limited evidence, and advising 'do not freeze it unless' without proper clinical nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and discussing stress management/PGT-A, but future planning is incomplete and some advice is too generic or based on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01257,
+  "judge_latency_ms": 5196.643416995357,
+  "judge_prompt_tokens": 2360,
+  "judge_completion_tokens": 366
+}

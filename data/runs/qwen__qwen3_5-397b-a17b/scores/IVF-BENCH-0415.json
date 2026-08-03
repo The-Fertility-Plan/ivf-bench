@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0415",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/degenerating embryo and correctly notes absent/degenerate ICM and TE, but it overstates certainty with terms like necrosis/arrested/non-viable and adds features not clearly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm parameters, prior failed cycle, unexplained infertility, and endometrial thickness with embryo quality in a clinically meaningful way, though some links (e.g., thick lining impact) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the very low implantation estimate matching the poor morphology; minor issues include strong conclusions about non-viability and transfer cancellation from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing extremely poor prognosis for a 0DD embryo, but recommendations such as definitive 'do not transfer,' routine protocol switch specifics, ICSI despite normal semen, and PGT-A emphasis in a 31-year-old are more assertive than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current-cycle management and future evaluation/planning, including uterine cavity assessment and protocol review, though some recommendations are stronger and less nuanced than ideal."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012402,
+  "judge_latency_ms": 4762.1324170031585,
+  "judge_prompt_tokens": 2344,
+  "judge_completion_tokens": 358
+}

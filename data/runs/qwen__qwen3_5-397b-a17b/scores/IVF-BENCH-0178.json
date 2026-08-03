@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0178",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It matches the provided poor Gardner grade overall, but it incorrectly states the blastocoel is less than half the embryo despite grade 1 being at least half, and it adds specific image features like vacuolation, dark granular cytoplasm, necrosis, and peripheral fragmentation that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, diagnosis, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it overinterprets the PCOS-versus-DOR issue."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the very poor embryo grade, but there are notable issues such as the incorrect expansion-stage description and somewhat overstated conclusions about DOR and protocol intent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on very poor prognosis for a 1DD embryo is broadly aligned with clinical practice, but some recommendations are less guideline-based or too assertive, including DHEA/CoQ10 suggestions, strong inference of DOR, and discussion of PGT-A despite likely low embryo numbers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for counseling, diagnostic reassessment, possible protocol changes, and sperm testing, though some proposed adjuncts are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.0113325,
+  "judge_latency_ms": 6535.403124988079,
+  "judge_prompt_tokens": 2361,
+  "judge_completion_tokens": 362
+}

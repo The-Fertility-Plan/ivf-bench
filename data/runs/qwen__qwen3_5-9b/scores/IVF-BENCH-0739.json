@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a high-quality hatching/expanded blastocyst with strong ICM and TE consistent with 4AA; minor inconsistency in calling grade 4 'hatching' and limited image-specific nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, prior miscarriage, male factor, sperm parameters, and endometrium with embryo quality well, though it somewhat overstates DOR and miscarriage implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical and structured, but there are notable issues: FSH 6.9 is not elevated, AMH 1.22 at age 36 does not clearly equal DOR, prior miscarriage is overstated as a strong negative predictor, and the implantation estimate appears optimistic for an untested embryo at age 36."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and acknowledging morphology limits, but recommendations for routine thrombophilia screening and broad miscarriage workup after a single prior loss are not guideline-based; PGT-A recommendation is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, uterine cavity assessment, luteal support, and future planning; however, some suggestions are more aggressive than standard practice for this history."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012441,
+  "judge_latency_ms": 4368.369709001854,
+  "judge_prompt_tokens": 2492,
+  "judge_completion_tokens": 331
+}

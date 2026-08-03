@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 2AA label appropriately, but adds image-specific details not reliably verifiable from the prompt/image context (exact ICM position, nuclear-cytoplasmic features, syncytial-like TE, zona thickness) and contains a stage wording inconsistency by calling grade 2 both 'full blastocyst' and advanced Day-5-like morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, diagnosis, endometrium, ovarian response, sperm parameters, and partner age with prognosis well, though AMH is unavailable and some links (e.g., top quartile/top 20% claims) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: Day-4 transfer with a reported 2AA blastocyst is unusual, the response treats grade 2 as both full blastocyst and accelerated development, and the probability adjustments are somewhat ad hoc and overconfident."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally supports single embryo transfer appropriately and gives standard luteal support concepts, but includes weaker or controversial recommendations such as ERA after a single failure and PGT-A mainly due to paternal age; some evidence citations/claims are not clearly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support, lifestyle, and contingency planning, though some suggestions are more speculative than necessary for a first-cycle good-prognosis patient."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.0126325,
+  "judge_latency_ms": 6452.278667013161,
+  "judge_prompt_tokens": 2707,
+  "judge_completion_tokens": 391
+}

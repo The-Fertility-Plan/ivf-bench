@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0162",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates certainty from the image, calling it 'not a blastocyst' and 'complete developmental arrest' while the provided lab grade is 0DD/early blastocyst. It describes absent blastocoel, ICM, and TE, but does not acknowledge the ambiguity of a very poor early blastocyst and adds features not clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, sperm parameters, endometrium, diagnosis, and lifestyle with the poor embryo assessment, though it could better discuss the implications of Day 4 timing and uncertainty around the male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there is an internal inconsistency in rejecting the embryo as 'clearly not an early blastocyst' despite the supplied 0DD grading and Day 4 context. The implantation estimate is directionally consistent with the poor grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The low prognosis assigned to a 0DD embryo is broadly aligned with IVF practice, but the strong recommendation against transfer is too absolute without acknowledging clinic-specific context, patient preference, or that Day 4/poor-quality embryos may still be managed case by case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It begins with a clear recommendation against transfer, but the response is truncated before providing a full practical plan for counseling, transfer decision-making, or future cycle optimization."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0114825,
+  "judge_latency_ms": 6442.931124998722,
+  "judge_prompt_tokens": 2271,
+  "judge_completion_tokens": 387
+}

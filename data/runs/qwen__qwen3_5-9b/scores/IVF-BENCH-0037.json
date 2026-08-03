@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality early blastocyst/morula-like embryo consistent with 1DD, but misstates Gardner 1 as less than half-filled rather than at least half the embryo and adds limited image-specific detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior cycle history, sperm data, BMI, endometrium, and embryo quality reasonably well, though it overinterprets FSH 8.5 as strong DOR without AMH and makes some speculative links."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is coherent and the low prognosis estimate fits the poor morphology, but there are notable issues such as calling FSH 8.5 elevated/strong DOR and some inconsistency around day-4 transfer versus blastocyst grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing poor prognosis and discussing counseling and possible further evaluation, but PGT-A is presented too strongly as critical, thrombophilia testing is not routinely guideline-supported for isolated biochemical losses, and donor eggs are introduced somewhat prematurely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, proceeding with transfer, and future workup/planning, though some recommendations are broader than necessary and not fully prioritized."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012804,
+  "judge_latency_ms": 4620.046625001123,
+  "judge_prompt_tokens": 2543,
+  "judge_completion_tokens": 345
+}

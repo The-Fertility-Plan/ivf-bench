@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0311",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 0DD/early blastocyst label, correctly noting poor/absent ICM and TE, but it adds image-specific claims like fragmentation, indistinct boundaries, and accelerated degeneration that are not clearly verifiable from the prompt alone and omits zona pellucida comment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most key factors well, including age-related aneuploidy risk, ovarian reserve, tubal factor, prior live birth/biochemical pregnancy, sperm data, endometrium, and lifestyle, and relates them to embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with embryo quality appropriately identified as the dominant prognostic factor; minor issue is calling age 37 'not advanced maternal age,' which is imprecise in IVF context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with Gardner grading interpretation and general IVF principles, but the statement that a 0DD embryo is 'non-viable' and has 'virtually no chance' is stronger than guideline-based caution would support without a quantified estimate or nuanced counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response provides limited concrete next-step recommendations for transfer management or future cycle planning; it is more descriptive than practically directive."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01029,
+  "judge_latency_ms": 5419.045874965377,
+  "judge_prompt_tokens": 2106,
+  "judge_completion_tokens": 335
+}

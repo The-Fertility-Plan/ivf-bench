@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0378",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality day-5 blastocyst and the reported 3AA grade, but it overstates certainty from the image alone and inaccurately suggests it is the 'highest' grade and possibly ready for hatching; 3AA is good quality but not the most expanded stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior cycle outcome, sperm parameters, endometrial thickness, and unexplained infertility reasonably well with embryo quality, though it overinterprets 6 MII oocytes as a likely ovarian reserve problem without AMH/AFC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable issues: calling 3AA the highest grade, labeling age 30 plus 3AA as a near-'perfect' scenario, and inferring DOR/low response too strongly from a single retrieval of 6 oocytes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general emphasis on age and morphology are guideline-consistent, but suggesting mild stimulation or natural cycle IVF if DOR is confirmed is not well supported here, and routine PGT-A at age 30 is not clearly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future evaluation, including SET and ovarian reserve workup, but some recommendations are too generic or based on uncertain assumptions."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0110325,
+  "judge_latency_ms": 6066.803666995838,
+  "judge_prompt_tokens": 2193,
+  "judge_completion_tokens": 370
+}

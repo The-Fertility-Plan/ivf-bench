@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It notes degeneration and poor differentiation consistent with 0DD, but it misstates expansion by saying no visible blastocoel while the provided score defines an early blastocyst with a small cavity, and it speculates the image may be a degenerating oocyte/1-cell embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte maturity, smoking, endometrium, and sperm parameters with prognosis reasonably well, though some interpretations are overstated and the DOR/AMH discrepancy is not handled with enough nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic that a 0DD embryo has very poor prognosis is coherent, but there are notable inconsistencies such as calling the embryo non-viable yet recommending vitrification, and drawing strong conclusions from uncertain staging/image interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis of a 0DD embryo is consistent with practice, recommendations such as 'do not transfer' framed as unethical and suggesting vitrification of a likely non-viable embryo are not well aligned with standard IVF guidance; donor egg recommendation is also premature for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It provides concrete next steps like clarifying diagnosis/staging, smoking cessation, and protocol review, but several recommendations are impractical or insufficiently nuanced for real clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01131,
+  "judge_latency_ms": 5406.277667032555,
+  "judge_prompt_tokens": 2436,
+  "judge_completion_tokens": 348
+}

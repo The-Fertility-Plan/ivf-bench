@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0164",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage, describing a transition morula/early blastocyst with blastocoel ~50%, whereas the provided lab grade defines a full blastocyst. It gives generic ICM/TE comments but includes features not reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR/AMH, oocyte yield, sperm quality, and endometrial thickness reasonably well with prognosis, though it overstates some links such as DOR independently implying poorer embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: calling 2AA 'top-tier' while also describing it as not fully expanded, and giving a high implantation estimate that is not well calibrated for a day-4 transfer and this clinical context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are important deviations from Gardner criteria and evidence-based prognosis framing, including incorrect interpretation of grade 2 versus full blastocyst and an overly optimistic implantation estimate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides little concrete management advice for the current transfer or future cycle planning; recommendations are mostly descriptive rather than specific clinical next steps."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.011121,
+  "judge_latency_ms": 5430.231833001017,
+  "judge_prompt_tokens": 2037,
+  "judge_completion_tokens": 334
+}

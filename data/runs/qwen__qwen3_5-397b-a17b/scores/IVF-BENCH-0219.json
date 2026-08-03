@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0219",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates certainty from a single image, calls the embryo 'top-tier/gold standard,' and describes specific visible details (e.g., exact ICM position, no fragmentation/degeneration) that may not be reliably confirmed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, endometrium, prior cycle history, and sperm data with prognosis well, though some inferences about male factor etiology and euploidy are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a plausible implantation estimate tied to age and morphology, but there is mild overreach in equating morphology with very high quality and in assumptions about receptivity and male factor cause."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but it inaccurately implies 3AA is the highest possible grade, overstates fresh transfer recommendation without key cycle data, and suggests PGT-A to address male factor/chromosomal issues in a way that is not strongly guideline-based for a 29-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including luteal support and possible further male-factor workup, though some recommendations are broader than the available data justify."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0110075,
+  "judge_latency_ms": 6161.763916024938,
+  "judge_prompt_tokens": 2321,
+  "judge_completion_tokens": 347
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0316",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately recognizes a good-quality blastocyst with strong ICM/TE, but overstates certainty from the image, introduces likely unsupported details (uniform junctions, minimal granularity), and notes a grading discrepancy without resolving Day 4 vs Gardner stage cleanly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve/response, BMI, sperm quality, diagnosis, endometrium, and first-cycle status with embryo quality reasonably well, though some links (e.g., exercise explaining thick endometrium) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: confusion around Gardner expansion grading, calling Day 4 blastulation accelerated/highly favorable, and making prognosis adjustments based on speculative factors. The probability rationale is only partially supported and the response appears truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in valuing morphology, age, and single-embryo prognosis, but misstates Gardner grading descriptors, overinterprets a 15 mm endometrium as potentially pathologic, and implies Day 4 blastocyst timing is especially favorable without strong guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides risk/favorable factor framing and a probability range, but offers limited concrete next-step recommendations for the current transfer or future cycle planning, and the response is incomplete/truncated."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.011751,
+  "judge_latency_ms": 4506.650791998254,
+  "judge_prompt_tokens": 2167,
+  "judge_completion_tokens": 350
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0432",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is consistent with a good-quality expanded blastocyst and matches the provided 3AA lab grade, including thinned zona, compact ICM, and cohesive TE. Slight issue: it labels Gardner 3 as 'expanded blastocyst,' whereas classic Gardner stage 3 is full blastocyst and stage 4 is expanded, though the lab data itself states expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, first cycle status, male factor, and smoking with embryo quality reasonably well. However, it overstates certainty about euploidy and sperm DNA fragmentation, and AMH is unavailable but not acknowledged as missing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but several claims are overstated or weakly supported, especially the magnitude of smoking-related implantation reduction and the strong recommendation to cancel despite otherwise favorable factors. Probability reasoning is directionally coherent but somewhat exaggerated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "SET for a good-prognosis 34-year-old with a good-quality day-5 blastocyst is guideline-concordant, but recommending cycle cancellation solely for current smoking, suggesting low-dose aspirin for uterine perfusion, and proposing ERA after a single failed transfer are not well supported by standard ASRM/ESHRE guidance. PGT-A is also framed too casually for this age group."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer strategy, smoking cessation counseling, follow-up testing, and future planning. Some recommendations are practical, but a few are not appropriately nuanced or evidence-based enough for top marks."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.011985,
+  "judge_latency_ms": 7432.161042001098,
+  "judge_prompt_tokens": 2400,
+  "judge_completion_tokens": 399
+}

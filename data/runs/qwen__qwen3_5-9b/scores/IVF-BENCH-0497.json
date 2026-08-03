@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0497",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the expansion stage by calling grade 1 'fully expanded'; Gardner 1 is an early blastocyst with blastocoel at least half the embryo, not fully expanded. It also adds confidence about image features that may not be directly supportable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, prior failed cycle, sperm parameters, endometrium, and lifestyle reasonably well, though it somewhat over-attributes embryo quality to low AMH and does not fully nuance the male-factor interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate is directionally consistent with a 1DD embryo, but there is an internal inconsistency in equating grade 1 with full expansion and some overreach in linking low reserve directly to poor embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner components is broadly aligned, and counseling about poor prognosis is appropriate, but the expansion-stage interpretation is incorrect and recommending donor eggs as the 'next logical step' after one poor cycle at age 35 with 4 MII oocytes is more aggressive than typical guideline-based counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer counseling and future workup, including expectation management and consideration of sperm DNA fragmentation testing, but some recommendations are not sufficiently nuanced and could better discuss alternative stimulation/embryology strategies before donor oocytes."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0118425,
+  "judge_latency_ms": 7176.610292051919,
+  "judge_prompt_tokens": 2409,
+  "judge_completion_tokens": 388
+}

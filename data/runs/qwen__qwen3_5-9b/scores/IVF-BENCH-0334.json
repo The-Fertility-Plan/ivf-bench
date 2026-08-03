@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0334",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label, correctly identifying strong ICM and looser TE, but it overstates thinning/hatching readiness and adds image-specific detail that may not be clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, uterine factor, endometrial thickness, prior ectopic, and sperm data well with prognosis, though it somewhat overinterprets low oocyte yield as DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are notable issues: calling the embryo 'morphologically excellent' despite 3AB, attributing low yield too strongly to DOR, and giving an implantation estimate that seems lower than expected for age 26 without fully justifying the magnitude."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based practice, including suggesting hCG checks at 48 hours post-transfer, implying PGT-A would 'guarantee' viability, and recommending protocol changes without sufficient basis; some recommendations are reasonable but not fully guideline-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps such as proceeding with transfer, uterine evaluation, luteal support consideration, and ectopic surveillance, though some specifics are not optimally framed or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012501,
+  "judge_latency_ms": 4200.3242499995395,
+  "judge_prompt_tokens": 2397,
+  "judge_completion_tokens": 354
+}

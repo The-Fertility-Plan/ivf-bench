@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0517",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner label but misstates expansion by calling 2BA a 'full blastocyst' and 'ready for hatching'; Gardner 2 is an early blastocyst, so the morphology description overcalls development and adds features not securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, BMI, prior IVF outcomes, sperm parameters, and endometrial thickness with prognosis reasonably well, though some claims about PCOS and aneuploidy are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it treats 2BA as morphologically excellent/full blastocyst, labels the history as RIF without transfer-count context, and links PCOS to higher aneuploidy too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF practice in supporting transfer and luteal support, but it misapplies Gardner staging, overstates PCOS-related aneuploidy risk, and presents PGT-A as a strong consideration in a very young patient where routine use is not guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as proceeding with transfer and ensuring progesterone support, but future planning is incomplete/truncated and lacks more specific workup options for repeated failures."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012108,
+  "judge_latency_ms": 5309.216583002126,
+  "judge_prompt_tokens": 2316,
+  "judge_completion_tokens": 344
+}

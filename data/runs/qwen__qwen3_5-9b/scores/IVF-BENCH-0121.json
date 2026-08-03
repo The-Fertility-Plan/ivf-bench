@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0121",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphology description is consistent with a Day 5 Gardner 3BB blastocyst, including expanded stage, loosely grouped ICM, and loose TE. It gives reasonable zona observations, though some image-specific details may be inferred rather than directly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, endometrium, prior cycle history, and sperm data with embryo quality and prognosis. However, it overinterprets missing embryology data, especially assuming fertilization and blastulation outcomes not provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: it assumes a 100% fertilization rate without data, infers a poor blast yield from a single displayed embryo, and states the sperm parameters are excellent despite a male-factor diagnosis without reconciling this fully."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and general transfer suitability are aligned with standard IVF practice, but the statement that age is the strongest predictor of embryo quality is oversimplified, and the recommendation for fresh transfer lacks discussion of OHSS risk in a high responder with AMH 7.13 and 20 oocytes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins with a practical recommendation to proceed with transfer, but the recommendations section is incomplete and lacks specific next steps, contingency planning, luteal support considerations, or future cycle strategy."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0106525,
+  "judge_latency_ms": 7912.486625020392,
+  "judge_prompt_tokens": 2101,
+  "judge_completion_tokens": 360
+}

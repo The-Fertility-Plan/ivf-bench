@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0135",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response broadly matches the provided 3AB grading and gives a plausible blastocyst description, but it overstates confidence from a reportedly low-resolution image and includes features like zona irregularity and a clearly visualized dense ICM/TE pattern that may not be reliably discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors including maternal age, BMI, prior failed cycle, low oocyte yield, male factor context, sperm parameters, and endometrial thickness with embryo quality, though it overinterprets FSH and paternal age effects and does not acknowledge missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis is tied to embryo and patient factors, but there are notable reasoning issues: calling 3AB 'top-tier'/'highest potential,' inferring diminished ovarian reserve from one low-yield cycle without AMH, and heavily attributing aneuploidy risk to paternal age 40."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are overstated relative to guidelines, especially strong endorsement of PGT-A in this setting, implying paternal age 40 as a major aneuploidy driver, and suggesting robust luteal support specifically because of BMI/stress without clear evidence basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for proceeding with transfer, luteal support, considering ICSI if not already used, and future lifestyle optimization/cycle planning, though some advice is generic and the PGT-A recommendation lacks nuance for a low-yield patient."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.0122025,
+  "judge_latency_ms": 7827.106749988161,
+  "judge_prompt_tokens": 2385,
+  "judge_completion_tokens": 416
+}

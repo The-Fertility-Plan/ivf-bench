@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0358",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label and gives plausible ICM/TE descriptions, but it overstates confidence from a single image, calls the embryo 'high-quality' despite a relatively early expansion grade 2, and adds specific positional/zona details that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian response, male factor, first-cycle status, and especially the very thin endometrium with embryo prognosis. AMH is unavailable and not discussed, but most relevant factors are connected appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent: good embryo and favorable age offset by a major uterine factor. The implantation estimate follows the argument, though the embryo is described somewhat too optimistically relative to a 2AB grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: concern for 4 mm lining, consideration of freeze-all/FET, and workup for thin endometrium are aligned with common IVF practice. However, the strong recommendation to cancel fresh transfer is somewhat more definitive than guideline-based individualized decision-making."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for immediate management and future planning, including freeze-all, endometrial evaluation, FET preparation options, target lining threshold, and male-factor follow-up."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.011165,
+  "judge_latency_ms": 6005.168583011255,
+  "judge_prompt_tokens": 2396,
+  "judge_completion_tokens": 345
+}

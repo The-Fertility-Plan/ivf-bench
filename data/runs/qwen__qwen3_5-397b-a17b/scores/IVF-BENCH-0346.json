@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0346",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a hatching/high-quality blastocyst with strong ICM and cohesive TE, and notes the stage-label discrepancy appropriately. Minor limitation is some confidence in image-specific details that may not be fully verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, AMH, ovarian response, BMI, unexplained infertility, sperm parameters, endometrial thickness, and prior cycle history with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a sensible probability estimate tied to morphology and patient factors. Minor issue is equating morphology too strongly with euploidy and some speculative comments about ICSI/DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with Gardner grading, single embryo transfer principles, and standard IVF counseling. Small deviations include somewhat strong endorsement of PGT-A after one failed transfer and speculative male-factor add-ons without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for this transfer and future planning, including eSET, no assisted hatching, lifestyle optimization, and possible further testing. Could be more specific on transfer protocol or follow-up contingencies."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01084,
+  "judge_latency_ms": 4820.459332957398,
+  "judge_prompt_tokens": 2428,
+  "judge_completion_tokens": 318
+}

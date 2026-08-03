@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it contradicts the provided Gardner 1 score by stating the blastocoel is less than half the embryo and adds image-specific details like collapse, dark fragmentation, and central granularity that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, sperm parameters, endometrium, diagnosis, and lifestyle with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent: very poor morphology plus age leads to very low implantation potential. Minor overstatements such as calling the endometrium 'perfect' and equating poor morphology too strongly with aneuploidy prevent a top score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: D-grade embryos are not universally considered non-viable, PGT-A is presented too strongly as recommended rather than individualized, and protocol changes/supplements are suggested with limited guideline-level support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step counseling for transfer versus cancellation and practical future-cycle considerations such as individualized protocol review and possible sperm DNA fragmentation testing, though some recommendations are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.01251,
+  "judge_latency_ms": 5894.399166922085,
+  "judge_prompt_tokens": 2405,
+  "judge_completion_tokens": 353
+}

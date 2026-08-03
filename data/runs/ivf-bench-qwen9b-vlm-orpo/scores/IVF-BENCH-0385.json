@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality blastocyst and correctly notes absent/poorly defined ICM and TE, but it appears to undercall the reported expansion by describing it as minimally expanded/partially collapsed rather than aligning more closely with the lab grade 1 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte maturity, endometrium, male factor, BMI/lifestyle, and first-cycle status well, though it could more explicitly distinguish embryo-driven prognosis from overall couple prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor morphology drives low implantation odds despite otherwise favorable patient factors. Minor issue is some ambiguity between image-based expansion assessment and the provided Gardner grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF counseling: poor ICM/TE implies low prognosis, transfer can still be reasonable if this is the only embryo, no bed rest, routine luteal support. Slight overreach in suggesting PGT-A broadly at age 35 without more nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management, follow-up, and future cycle review, including male-factor workup and lifestyle optimization. Useful and nuanced, though not highly specific on protocol changes for future cycles."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012777,
+  "judge_latency_ms": 4381.278000000748,
+  "judge_prompt_tokens": 2549,
+  "judge_completion_tokens": 342
+}

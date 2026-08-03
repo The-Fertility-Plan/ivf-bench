@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0300",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the expansion stage by calling a Gardner 1 embryo 'expanded' and '>50% blastocoel,' which is inconsistent with standard grading and likely overinterprets image details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates female age, ovarian reserve, endometriosis, sperm parameters, paternal age, and endometrial thickness reasonably well, though it somewhat overattributes poor embryo quality to paternal age and makes stronger causal claims than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor morphology, but there are notable inconsistencies such as describing the embryo as both grade 1 and expanded, and inferring likely good oocyte quality from reserve markers alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing poor prognosis for a 1DD embryo and discussing counseling, but it overstates PGT-A as 'highly recommended' based mainly on paternal age/poor morphology and labels 1DD as often untransferable, which is more clinic-specific than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps including counseling, transfer expectations, sperm DNA fragmentation testing, endometriosis optimization, and future-cycle considerations, though recommendations could be more nuanced about when PGT-A or surgery is actually indicated."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.011205,
+  "judge_latency_ms": 6136.763916991185,
+  "judge_prompt_tokens": 2298,
+  "judge_completion_tokens": 364
+}

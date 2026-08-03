@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE, but it misstates the expansion stage by calling Gardner 0 an early blastocyst/Stage 3 and adds image-specific details like TE on the right and collapse that are not reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, sperm parameters, endometrium, and lifestyle with embryo prognosis well, though it overinterprets the low oocyte yield/maturation as evidence of intrinsic oocyte defects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor morphology, but there are notable inconsistencies such as equating 0DD with early blastocyst/Stage 3 and making strong causal claims about aneuploidy/oocyte defects from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are reasonable, but recommending PGT-A as highly recommended in a 28-year-old with a first cycle and low embryo yield is not guideline-concordant, and the Gardner grading interpretation is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step counseling, possible extended culture, protocol review, and lifestyle suggestions, but some recommendations are too assertive for this case and not sufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0112725,
+  "judge_latency_ms": 5667.50487498939,
+  "judge_prompt_tokens": 2343,
+  "judge_completion_tokens": 361
+}

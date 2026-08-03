@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner expansion stage, stating grade 1 means the blastocoel is less than half the embryo, whereas the provided definition says at least half. It correctly recognizes very poor ICM/TE quality and overall poor blastocyst quality, but the expansion-stage description is a notable morphological error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm quality, endometrial thickness, prior IVF outcomes, and lifestyle with embryo prognosis in a clinically meaningful way. Some factors such as BMI and tubal factor are not deeply discussed, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from poor morphology and age. However, there are issues: the expansion-stage contradiction, overstatement that many clinics would discard such an embryo, and an inaccurate miscarriage statement for euploid embryos weaken the reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing 1DD as very poor prognosis and in recommending counseling and consideration of PGT-A in future cycles. However, it contains Gardner grading inaccuracies, overgeneralizes clinic practices, and presents some recommendations more strongly than guidelines would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer counseling, proceeding if this is the only embryo, and future planning including PGT-A discussion and lifestyle modification. It is useful, though not highly nuanced regarding day-4/day-5 discrepancy management or alternative protocol adjustments."
+    }
+  ],
+  "extracted_probability": 0.065,
+  "judge_cost_usd": 0.01347,
+  "judge_latency_ms": 5354.083874997741,
+  "judge_prompt_tokens": 2495,
+  "judge_completion_tokens": 399
+}

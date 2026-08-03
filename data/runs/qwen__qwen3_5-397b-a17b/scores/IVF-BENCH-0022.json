@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes very poor-quality/degenerative morphology, but it misinterprets the Gardner score as stage 1 rather than expansion 1 with a day-4 context, overstates non-viability from image alone, and describes specific features like collapse/necrosis and irregular zona detachment that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, AMH, endometrium, tubal factor, and sperm parameters with embryo quality reasonably well, though some links are speculative and it does not fully contextualize day-4 transfer timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it makes overly definitive claims such as 'non-viable' and 'will not result in pregnancy' from limited morphology data, and introduces speculative causes without sufficient support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While concern about a 1DD embryo is appropriate, recommending absolute cancellation and stating effectively zero chance is stronger than guideline-based morphology assessment supports; routine PGT-A in a 27-year-old and sperm DNA fragmentation testing are not standard first-line recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for the current cycle and future evaluation, including checking for other embryos and assessing hydrosalpinx, though some recommendations are too categorical and not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01124,
+  "judge_latency_ms": 8218.390207970515,
+  "judge_prompt_tokens": 2300,
+  "judge_completion_tokens": 366
+}

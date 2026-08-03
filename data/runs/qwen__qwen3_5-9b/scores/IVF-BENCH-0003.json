@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates certainty and includes likely inaccurate image-based claims: it calls 2AA 'top-tier,' describes a distinct ICM on the right and cohesive TE regions not clearly verifiable, and treats the embryo as a clear blastocyst despite acknowledging it may resemble a morula/earlier stage. It also does not address the inconsistency between the provided Gardner description and standard grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: female age, BMI, FSH, oocyte maturity, endometrial thickness, tubal factor context, and sperm parameters. It appropriately links these to prognosis, though it overemphasizes paternal age and does not discuss the absence of AMH or the limited significance of tubal factor once IVF is performed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has notable inconsistencies: it labels grade 2 as 'full blastocyst' and 'top-tier,' treats Day 4 blastocyst transfer as especially favorable, and suggests paternal age 41 materially raises embryo aneuploidy risk enough to lower implantation substantially. The probability estimate is therefore not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points are not well aligned with standard IVF practice/guidelines: Gardner 2 is not a full blastocyst, Day 4 blastocyst transfer is not standardly interpreted as a strong favorable sign, and 'strongly consider PGT-A' based mainly on paternal age 41 is not evidence-based for this profile. Proceeding with transfer is reasonable, but other recommendations deviate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as proceeding with transfer, lifestyle advice, and considering future testing, but recommendations are somewhat generic and include questionable emphasis on PGT-A. It lacks more specific transfer-cycle management or contingency planning."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.01286,
+  "judge_latency_ms": 8326.262707996648,
+  "judge_prompt_tokens": 2342,
+  "judge_completion_tokens": 467
+}

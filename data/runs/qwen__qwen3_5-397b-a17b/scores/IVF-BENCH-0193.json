@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0193",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes a very poor-quality early blastocyst/late morula with absent ICM/TE, but adds likely fabricated image details such as visible fissures/cracks in the zona and overinterprets peripheral extrusion/collapse from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, lifestyle, unexplained infertility, and semen data with the poor embryo outcome well, though some links (stress effect, retrieval being low for AMH) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: favorable patient factors but embryo quality is the dominant negative prognostic factor. Minor issues include strong claims of non-viability and discard/cancel recommendations based on limited context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and the poor prognosis of a 0DD embryo, but statements that such embryos would usually be discarded and that canceling transfer is often medically recommended are too absolute and not universally guideline-based; stress-management claims are weakly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, and future workup/planning (e.g., sperm DNA fragmentation testing, protocol review, ICSI consideration, extended culture), though some recommendations are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0108875,
+  "judge_latency_ms": 6906.597374996636,
+  "judge_prompt_tokens": 2321,
+  "judge_completion_tokens": 339
+}

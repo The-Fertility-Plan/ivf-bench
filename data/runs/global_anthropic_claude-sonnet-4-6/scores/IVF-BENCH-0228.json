@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0228",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Provides a structured morphology review, but it likely over-interprets the image by asserting granular/vacuolated ICM, debris, asymmetry, and possible downgrade to 3BB without clear visual certainty; some features appear fabricated or too confident for a single embryo image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm motility, endometrium, cycle history, and day-5 status well with embryo assessment, though it somewhat overstates the impact of AMH and lifestyle factors on implantation of an already formed blastocyst."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is organized and mostly consistent, but the probability calculation uses several speculative downward modifiers and may double-count factors such as age/aneuploidy and embryo morphology, making the final estimate more pessimistic than the presented baseline."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on general IVF principles, but several recommendations are not strongly guideline-based for this scenario, including early RIF workup after a first failed transfer, routine ERA, broad thrombophilia/immunologic testing, and strong endorsement of PGT-A in low-reserve patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear next steps for transfer counseling, luteal support considerations, and future planning, but some actions are overly aggressive or not clearly indicated in a first-cycle patient."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.020385,
+  "judge_latency_ms": 6831.686042016372,
+  "judge_prompt_tokens": 3033,
+  "judge_completion_tokens": 348
+}

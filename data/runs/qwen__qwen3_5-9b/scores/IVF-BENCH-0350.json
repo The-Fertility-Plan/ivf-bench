@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0350",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates certainty from the image, mislabels grade 3 as fully expanded, and assigns specific ICM/TE locations that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, BMI, PCOS, sperm quality, endometrial thickness, and protocol with embryo quality reasonably well, though it omits discussion of low mature oocyte yield and limited relevance of absent AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with a plausible probability estimate tied to embryo quality and patient factors, though some claims about low BMI causing luteal defect and the strength of prior live birth are somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are deviations: grade 3 terminology is imprecise, 'aggressive' luteal support is not clearly guideline-based, and some assertions about immune tolerance and underweight-specific management are not standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, luteal support, nutritional attention, and future planning after failure, though suggestions are somewhat generic and not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.0105325,
+  "judge_latency_ms": 6258.897958032321,
+  "judge_prompt_tokens": 2203,
+  "judge_completion_tokens": 335
+}

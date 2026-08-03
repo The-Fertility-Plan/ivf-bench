@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0191",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided 1DD label rather than the image, and it introduces uncertain or likely incorrect visual claims (e.g., clear blastocoel on the left, possible 1-cell embryo/zygote). It correctly identifies poor-quality/degenerative features in broad terms but includes fabricated or contradictory morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, endometrium, sperm parameters, lifestyle, and cycle history with embryo quality reasonably well, highlighting major prognostic factors. Some links are overstated, such as implying low AMH directly correlates with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly structured, and the low implantation estimate follows from the poor embryo grade. However, there are notable inconsistencies: it alternates between interpreting the image as a blastocyst versus a zygote/degenerating oocyte, and some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis assessment is broadly reasonable, recommending categorically 'Do Not Transfer' and suggesting cryopreservation of a clearly poor-quality/degenerate embryo are not well aligned with standard IVF practice. PGT-A is presented too strongly for a low-yield patient without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as clarifying data discrepancies, counseling on prognosis, considering sperm DNA fragmentation testing, and reviewing stimulation strategy. However, some recommendations are not appropriately nuanced or may be clinically inappropriate."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01234,
+  "judge_latency_ms": 6877.836042025592,
+  "judge_prompt_tokens": 2530,
+  "judge_completion_tokens": 401
+}

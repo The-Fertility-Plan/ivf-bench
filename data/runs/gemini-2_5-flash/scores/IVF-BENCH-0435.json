@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0435",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly recognizes a very poor-quality blastocyst with absent/degenerative ICM and TE, but it misstates the expansion stage: Gardner 1 means early blastocyst with blastocoel less than half the embryo, whereas the prompt defines blastocyst with blastocoel at least half the embryo. It also adds specific visual details like fragmentation/necrosis and compaction that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, prior IVF outcomes, sperm parameters, endometrial thickness, and lifestyle with embryo prognosis in a clinically meaningful way. It could be stronger on the uterine factor diagnosis and how that specifically affects transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent: very poor morphology plus age 42 and low reserve leads to very low implantation potential. Minor issues include overstatement of certainty and some unsupported morphology-to-viability claims, but overall the chain of reasoning is clear."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The discussion is broadly aligned with Gardner grading principles and common IVF practice, including counseling, caution with poor-quality embryo transfer, and consideration of PGT-A in future cycles. It loses points for the incorrect expansion-stage interpretation and somewhat absolute statements about non-viability."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical counseling points, shared decision-making, and future-cycle direction, but the recommendations are incomplete because the future planning section is truncated and lacks more specific alternatives or protocol adjustments."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0124675,
+  "judge_latency_ms": 6565.710666007362,
+  "judge_prompt_tokens": 2701,
+  "judge_completion_tokens": 381
+}

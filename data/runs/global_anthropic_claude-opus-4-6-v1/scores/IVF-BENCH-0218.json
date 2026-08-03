@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0218",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label and gives a plausible blastocyst description, but it over-interprets image details such as debris, vacuolation, granularity, and possible intracavitary fragments that may not be reliably visible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, tubal factor diagnosis, prior IVF/live birth history, sperm parameters, and missing endometrial data with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly internally consistent, with a probability estimate that broadly follows from morphology and patient factors; minor issues include somewhat speculative numeric adjustments and strong emphasis on developmental delay from a grade 2 day-5 blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET, morphology interpretation, and general counseling, but recommendations such as ERA/endometrial microbiome testing and strong endorsement of PGT-A/assisted hatching are more controversial or not routinely guideline-supported in this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer, checking endometrial readiness, luteal support, and future protocol optimization; however, some suggestions are broader than necessary and include non-routine add-ons."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.025405,
+  "judge_latency_ms": 6325.423792004585,
+  "judge_prompt_tokens": 4022,
+  "judge_completion_tokens": 353
+}

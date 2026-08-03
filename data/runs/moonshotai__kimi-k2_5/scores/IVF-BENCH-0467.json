@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0467",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA label and gives reasonable ICM/TE descriptions, but it overstates visible features such as zona thinning/full expansion and adds image-specific detail that may not be clearly verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, AMH, endometrium, sperm, BMI, and first-cycle status with embryo quality well, though some links (stress, lean BMI effects) are more speculative than core prognostic factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling AMH 3.6 'robust' despite a DOR diagnosis, conflating implantation with ongoing pregnancy/live birth, and making some unsupported causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned on transfer-worthiness and eSET, but several recommendations are not strongly guideline-based or are overstated, including aggressive luteal support based on BMI, aspirin, acupuncture/stress claims, and modified rest post-transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including eSET and consideration of PGT-A/future stimulation review, though some suggested adjuncts are not evidence-strong."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0116,
+  "judge_latency_ms": 4994.642749952618,
+  "judge_prompt_tokens": 2684,
+  "judge_completion_tokens": 326
+}

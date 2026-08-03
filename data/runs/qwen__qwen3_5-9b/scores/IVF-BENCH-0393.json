@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0393",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 1DD grade and correctly identifies poor ICM/TE quality, but it overstates expansion by calling the embryo 'expanded' and adds image-specific detail that may not be clearly verifiable from the prompt/image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, miscarriage history, ovarian response, sperm parameters, and endometrial thickness with embryo prognosis well, though it over-attributes poor morphology almost entirely to oocyte quality and does not address missing AMH or tubal factor nuance in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a probability estimate that broadly follows from poor morphology and age; minor issues include somewhat imprecise aneuploidy estimates and strong causal claims from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are mostly aligned with IVF practice and Gardner grading interpretation, including counseling on poor prognosis and considering RPL workup; however, the strong endorsement of PGT-A as 'highest priority' is somewhat more definitive than guideline-supported individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer counseling and future planning, including expectation management, RPL evaluation, and discussion of PGT-A/donor eggs, though it could be more specific about transfer decision thresholds and workup components."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012525,
+  "judge_latency_ms": 4220.6091249972815,
+  "judge_prompt_tokens": 2350,
+  "judge_completion_tokens": 365
+}

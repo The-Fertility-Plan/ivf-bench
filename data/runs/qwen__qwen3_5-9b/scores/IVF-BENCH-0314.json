@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0314",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/compacted embryo and absent ICM/TE, but it overstates image-specific detail and labels features like granular degeneration and intact zona that may not be confidently assessed from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, prior biochemical pregnancy/miscarriage, sperm parameters, and endometrium with embryo quality reasonably well, though it overemphasizes paternal age and underuses factors like day-4 transfer context and diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate matches the poor morphology, but there are notable overreaches such as claiming partner age is the most critical factor and inferring high aneuploidy risk too strongly from age 42 alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic recognition of poor prognosis is aligned, but several recommendations are not well aligned with evidence-based IVF practice, especially strong endorsement of PGT-A in this context and suggesting donor sperm primarily due to paternal age 42."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as expectation setting and future-cycle discussion, but recommendations are somewhat generic and include questionable suggestions rather than nuanced case-specific planning."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.010885,
+  "judge_latency_ms": 6172.707833989989,
+  "judge_prompt_tokens": 2272,
+  "judge_completion_tokens": 347
+}

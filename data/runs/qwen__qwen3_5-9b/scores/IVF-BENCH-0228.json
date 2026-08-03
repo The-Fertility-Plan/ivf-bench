@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0228",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies strong ICM and looser TE, but it overstates features such as being 'ready to hatch' and describes protrusion/asymmetry that may not be clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, oocyte yield, endometrium, prior cycle status, and sperm data with embryo quality reasonably well, though it overinterprets some links such as smoking causing TE grade and labels sperm as fully normal despite borderline motility."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling the patient a 'super responder' and later a 'confirmed low responder,' and inferring higher aneuploidy risk from low AMH at age 32 more strongly than evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology appropriately, but several recommendations are not well aligned with evidence-based IVF practice, including strong endorsement of immediate transfer over freeze without context, overcalling PGT-A based on DOR alone, and early discussion of donor eggs after only 1-2 failed cycles in a 32-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps on transfer, lifestyle, and future planning, but recommendations are somewhat generic and some are insufficiently nuanced or potentially inappropriate for this specific case."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.0118875,
+  "judge_latency_ms": 6129.048167029396,
+  "judge_prompt_tokens": 2499,
+  "judge_completion_tokens": 376
+}

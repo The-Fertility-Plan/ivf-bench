@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with 1DD, but it misstates expansion by saying the blastocoel is less than half the embryo despite the provided grade 1 definition saying at least half, and it adds specific features like fragmentation/disorganization that may not be directly verifiable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, male factor, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it somewhat overinterprets sperm contribution and does not fully discuss BMI or the limits of inferring causation from a single embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent in linking very poor morphology to poor prognosis, but there is some overstatement such as implying near-nonviability and inferring severe underlying gamete issues from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned with Gardner grading concepts and standard IVF prognostic thinking, but the expansion-stage description conflicts with the supplied grading definition and the strong claim of virtually negligible potential is somewhat stronger than guideline-based caution would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers limited practical next steps; it discusses prognosis and possible contributors but does not clearly provide specific transfer management or future cycle planning recommendations in the excerpt shown."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0101275,
+  "judge_latency_ms": 5980.580750037916,
+  "judge_prompt_tokens": 1861,
+  "judge_completion_tokens": 365
+}

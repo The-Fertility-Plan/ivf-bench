@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0708",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/degenerating embryo and appropriately notes absent/degenerative ICM and TE, but it adds uncertain image-specific details such as significant fragmentation, dark granular cells, and collapse/compaction that may not be clearly verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, prior failed cycle, tubal factor, sperm motility, and endometrial thickness with embryo prognosis well, though some links (e.g., sperm DNA fragmentation, hydrosalpinx impact on this embryo) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the very low implantation estimate matching the stated 0DD morphology; minor overreach appears in concluding the embryo has 'no' potential and recommending definite cancellation based on limited information."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with Gardner grading interpretation and general IVF practice, but categorical statements such as 'do not proceed' and 'effectively 0%' are stronger than typical guideline-based counseling; adjuncts like PICSI/MACS, DHEA, and routine PGT-A in low-yield patients are not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current and future cycles, including tubal reassessment, sperm workup, protocol reconsideration, and counseling; however, some recommendations are more assertive than nuanced for a single poor embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0129,
+  "judge_latency_ms": 6004.426916013472,
+  "judge_prompt_tokens": 2425,
+  "judge_completion_tokens": 375
+}

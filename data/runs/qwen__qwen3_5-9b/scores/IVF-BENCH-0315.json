@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0315",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonably identifies a blastocyst and comments on ICM/TE cohesion, but it inaccurately calls grade 2 'fully expanded' and infers details not clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, sperm parameters, endometrium, and first-cycle status with embryo quality in a clinically meaningful way, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there is a notable inconsistency in treating the transfer day as erroneous and in overstating prognosis from morphology alone; the implantation estimate is somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains important deviations from standard IVF guidance: misstates Gardner expansion stage 2, overemphasizes PGT-A for this first-cycle age-34 case, and recommends freeze-all/banking without a clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete suggestions on transfer timing, luteal support, cryopreservation, and future planning, but some recommendations are not well tailored and could mislead clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0102575,
+  "judge_latency_ms": 4774.62620800361,
+  "judge_prompt_tokens": 2315,
+  "judge_completion_tokens": 298
+}

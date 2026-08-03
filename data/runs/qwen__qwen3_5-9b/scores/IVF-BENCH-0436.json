@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0436",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a high-quality blastocyst and the reported 4AA grade, but it overstates image certainty by claiming features are 'clearly' visible and labels grade 4 as hatching/herniating, which is closer to grade 5 in standard Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, PCOS, endometrial thickness, prior cycle, sperm parameters, and partner age with embryo quality in a clinically meaningful way, though some links such as paternal age effects are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical and structured, but there are notable issues: euploidy likelihood '>90%' for age 31 is too high, and the recommendation for fresh transfer is not fully supported without OHSS/trigger details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains important deviations from guideline-consistent practice, including misclassification of Gardner expansion stage, overconfident euploidy estimates, and recommending not to freeze/proceed fresh despite PCOS where freeze-all may be considered depending on OHSS risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer planning, luteal support, metabolic assessment, and future PGT-A/FET considerations, though some recommendations are too definitive for the available data."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012234,
+  "judge_latency_ms": 4923.361916997237,
+  "judge_prompt_tokens": 2373,
+  "judge_completion_tokens": 341
+}

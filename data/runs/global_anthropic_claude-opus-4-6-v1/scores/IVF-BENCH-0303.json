@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0303",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage: the provided Gardner data defines 2AC here as a full blastocyst with blastocoel filling the embryo, but the model describes it as not yet full/transitioning and below ideal for day 5. ICM and TE descriptions are broadly consistent, but the expansion interpretation is a notable morphological error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, BMI, diagnosis, prior biochemical pregnancies, sperm parameters, endometrial thickness, stimulation response, and embryo morphology into prognosis and counseling."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally consistent, linking advanced maternal age, poor TE, and prior biochemical losses to lower success. Minor overreach exists in attributing prior losses and current prognosis strongly to aneuploidy and in the expansion-stage interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but several recommendations are not strongly guideline-based or are overstated for this scenario, including strong endorsement of PGT-A as the key intervention, ERA, thrombophilia workup after biochemical losses, growth hormone, and protocol claims."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and future planning, including counseling, luteal support, monitoring, and further evaluation. Some suggestions are more speculative than standard, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.02405,
+  "judge_latency_ms": 6291.0347080323845,
+  "judge_prompt_tokens": 3691,
+  "judge_completion_tokens": 373
+}

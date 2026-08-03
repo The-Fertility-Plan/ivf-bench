@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0534",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a high-quality hatching blastocyst and Gardner 4AA, but it overstates image-confirmable details and repeats a stage mismatch by calling expansion 4 'hatching' rather than expanded/hatching-through-zona depending on convention."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, BMI, tubal factor, sperm quality, prior cycle history, and endometrium with embryo quality, though it overinterprets the low oocyte yield without AMH and misses some nuance around fresh transfer receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Mostly logical, but there are notable issues: it labels the case 'high quality but low quantity' from limited data, states aneuploidy risk is '<5%' somewhat too strongly, and includes inconsistent protocol suggestions such as 'adding a GnRH antagonist trigger' after a long agonist cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer in a 26-year-old with a top-quality blastocyst is guideline-concordant, but recommending optional PGT-A in this young low-yield patient and the stimulation comments are not strongly evidence-based; also fresh transfer assumptions are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for SET, luteal support, and future stimulation review, but some advice is too generic or not fully tailored, and a few suggestions could mislead clinical planning."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012729,
+  "judge_latency_ms": 4765.665708000597,
+  "judge_prompt_tokens": 2453,
+  "judge_completion_tokens": 358
+}

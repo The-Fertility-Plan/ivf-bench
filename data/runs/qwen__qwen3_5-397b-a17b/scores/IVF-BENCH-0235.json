@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0235",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-specific certainty (e.g., exact ICM position, fully expanded/thinning zona) and relies partly on supplied grading rather than strictly visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of maternal age, endometriosis, BMI, ovarian reserve/response, prior IVF outcomes, endometrial thickness, and paternal age/sperm factors with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with probability estimates appropriately tempered by age-related aneuploidy risk; minor issue is labeling this history as possible RIF/RPL despite limited criteria fulfillment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with IVF practice: SET for a good-quality day-5 blastocyst, emphasis on age-related aneuploidy and consideration of PGT-A. Slight overreach includes suggesting aspirin/thrombophilia workup and TESE/PICSI without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycles, including SET, luteal support, PGT-A consideration, sperm DNA fragmentation testing, and endometriosis-focused planning; some recommendations could be more tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01098,
+  "judge_latency_ms": 5673.685292014852,
+  "judge_prompt_tokens": 2418,
+  "judge_completion_tokens": 329
+}

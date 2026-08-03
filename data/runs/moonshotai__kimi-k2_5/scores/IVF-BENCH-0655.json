@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label and gives a plausible blastocyst description, but it overstates image-specific certainty (e.g., exact ICM location, optical density, complete TE coverage, significant zona thinning) and includes details not clearly verifiable from the prompt/image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometrium, diagnosis, sperm parameters, and first-cycle status with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable issue in treating a Day 4 blastocyst as clearly advantageous without sufficient nuance, and some probability claims are stronger than the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognosis and eSET in a young patient, but recommendations such as routine assisted hatching/embryo glue for this scenario and the strong endorsement of Day 4 kinetics are not firmly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer and immediate management, but future cycle planning is underdeveloped and some suggested adjuncts lack nuance regarding evidence strength."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.00625625,
+  "judge_latency_ms": 5728.23858296033,
+  "judge_prompt_tokens": 2325,
+  "judge_completion_tokens": 335
+}

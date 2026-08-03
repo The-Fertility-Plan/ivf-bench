@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0380",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD, but it inaccurately states the blastocoel is less than half the embryo despite the provided grade 1 definition saying at least half, and it adds subjective details not clearly supportable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, endometrium, BMI, uterine factor, and prior ectopic with embryo quality reasonably well, though some links are overstated and uterine-factor implications are not fully nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the low implantation estimate follows from the poor 1DD morphology plus uterine-factor concerns, though there are minor issues such as overcalling age 35 as 'prime' and inferring likely PCOS from AMH alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including counseling, uterine evaluation, and early ectopic surveillance, but routine endorsement of PGT-A at age 35 and some prognostic statements are more assertive than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as counseling, hysteroscopic evaluation, early beta-hCG/ultrasound monitoring, and future-cycle planning, though recommendations could be more tailored to the exact uterine diagnosis and transfer context."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013173,
+  "judge_latency_ms": 3762.132167001255,
+  "judge_prompt_tokens": 2516,
+  "judge_completion_tokens": 375
+}

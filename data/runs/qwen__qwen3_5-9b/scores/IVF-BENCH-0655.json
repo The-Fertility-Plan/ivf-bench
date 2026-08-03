@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AB grade, but it relies heavily on the supplied Gardner score rather than image-specific detail and includes a likely grading inconsistency by calling grade 3 'expanded' with thinning zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm parameters, endometrium, diagnosis, and cycle history well with embryo quality, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with a plausible implantation estimate, but there are minor issues such as overinterpreting ICM grade as correlated with euploidy and the transfer-day/grading inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with IVF practice in supporting SET and considering prognosis factors, but it misstates Gardner expansion terminology, suggests universal immediate progesterone support without context, and recommends PGT-A somewhat loosely for future cycles in a young patient without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps including proceeding with SET, clarifying transfer timing, luteal support, and future male-factor workup, though some recommendations are broader than necessary for this specific case."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012093,
+  "judge_latency_ms": 4735.962874998222,
+  "judge_prompt_tokens": 2456,
+  "judge_completion_tokens": 315
+}

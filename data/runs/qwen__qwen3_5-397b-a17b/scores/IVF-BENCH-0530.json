@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response captures that this is a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misinterprets the Gardner expansion score: 1 means blastocoel at least half the embryo, not less than half. It also adds image-specific details like peripheral extrusions/collapse that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, DOR, low oocyte yield, prior miscarriage, paternal age, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links (e.g., sperm DNA fragmentation as a major driver here) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: very poor morphology plus age/DOR leads to very low implantation potential. The main weakness is overstatement of absolute non-viability and a morphology-stage misread that slightly undermines the chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but stating a 1DD embryo is categorically non-viable and should not be transferred is stronger than guideline-based morphology assessment supports. PGT-A recommendation is plausible but presented too strongly for a low-yield DOR patient without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps, including protocol review, consideration of sperm DNA fragmentation testing, counseling, and future-cycle planning. However, the immediate recommendation is overly absolute and lacks discussion of patient-specific context if no other embryos are available."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0119525,
+  "judge_latency_ms": 6090.470542025287,
+  "judge_prompt_tokens": 2339,
+  "judge_completion_tokens": 407
+}

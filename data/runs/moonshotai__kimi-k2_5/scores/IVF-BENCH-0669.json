@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with DD grading, but it misstates expansion grade 1 as blastocoel <50% despite the provided lab definition saying at least half the embryo, and it adds specific degeneration details not clearly verifiable from the visible image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, endometriosis, prior IVF outcomes, endometrial thickness, BMI/lifestyle, and sperm parameters with embryo prognosis reasonably well, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is clear and the poor prognosis follows from the embryo grade and history, but there are notable overreaches such as calling the embryo essentially non-viable and attributing the pattern mainly to ovarian factors without sufficient support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on very poor prognosis for a 1DD Day-5 blastocyst is broadly aligned with Gardner-based assessment, but the expansion-grade description conflicts with the provided grading definition and some claims about viability/ectopic risk are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers risk framing and prognosis but provides limited concrete next-step recommendations for this transfer or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.00593125,
+  "judge_latency_ms": 6295.550415990874,
+  "judge_prompt_tokens": 1969,
+  "judge_completion_tokens": 347
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst, but it incorrectly calls 3AA the highest possible grade and describes a Day 4 embryo as an expanded blastocyst without acknowledging the day-stage inconsistency; morphology description is otherwise broadly plausible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and first-cycle status with embryo quality in a clinically meaningful way, though it could better address the Day 4 timing issue and limits of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured and internally understandable, but there are notable issues: 3AA is not the highest possible grade, sperm parameters are characterized too confidently as normal, and the implantation estimate is somewhat optimistic for an untested embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognostic factors and single-embryo transfer logic, but recommending PGT-A after one failed cycle in a 27-year-old with unexplained infertility is not strongly guideline-supported, and the Day 4 expanded blastocyst framing is questionable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, lifestyle continuation, and future options such as freezing, though recommendations are somewhat generic and not highly tailored to the unusual Day 4/3AA scenario."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.00615,
+  "judge_latency_ms": 9850.445792078972,
+  "judge_prompt_tokens": 2136,
+  "judge_completion_tokens": 348
+}

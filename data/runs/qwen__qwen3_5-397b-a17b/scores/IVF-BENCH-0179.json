@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0179",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It notes poor-quality early blastulation/degeneration, but overstates certainty as 'non-viable,' introduces features like vacuolation/granularity that may not be reliably visible, and misinterprets/over-corrects the Gardner expansion description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, prior live birth/failures, endometrium, ovarian response, and sperm data with embryo prognosis, though it somewhat over-attributes poor outcome to BMI."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: Day 4 timing is conflated with blastocyst grading, the embryo is declared definitively non-viable, and the recommendation to cancel transfer is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent (poor prognosis with DD morphology, importance of BMI, considering protocol review), but declaring transfer 'clinically futile,' recommending no transfer categorically, and endorsing ERA/PGT-A broadly are not well aligned with standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions on transfer decision-making, weight optimization, protocol review, and additional testing, though some recommendations are too definitive or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01148,
+  "judge_latency_ms": 6232.09304100601,
+  "judge_prompt_tokens": 2462,
+  "judge_completion_tokens": 355
+}

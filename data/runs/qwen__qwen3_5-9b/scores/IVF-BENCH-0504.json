@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0504",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the reported 4AA, but it overstates certainty ('aligns perfectly'), ambiguously calls it grade 4 or early hatching despite the provided hatching status, and identifies image artifacts/specifically air bubbles without clear support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior miscarriage, sperm parameters, BMI/lifestyle, and endometrium with embryo quality well, though it somewhat overlabels AMH/oocyte yield as DOR and could better contextualize tubal factor and prior cycle history."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical overall: strong morphology tempered by age-related aneuploidy risk. Probability estimate is broadly consistent, though phrases like 'near-guarantee' in younger patients are overstated and some claims are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on morphology, age-related aneuploidy risk, and considering PGT-A, but it overstates PGT-A as 'crucial,' suggests donor eggs somewhat prematurely, and recommends luteal support rationale/short luteal phase based on age without clear guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, early beta-hCG/ultrasound follow-up, and future options including PGT-A and cycle strategy. Some recommendations are useful but not highly nuanced or individualized enough for a top score."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012651,
+  "judge_latency_ms": 5188.16966599843,
+  "judge_prompt_tokens": 2357,
+  "judge_completion_tokens": 372
+}

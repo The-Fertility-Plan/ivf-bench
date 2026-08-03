@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0324",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains a key grading inconsistency: it calls expansion 'Grade 2' while also describing a 'fully expanded blastocyst,' which corresponds to Gardner stage 3, not 2. It otherwise matches the provided ICM B and TE A labels, but adds confidence about visual features that may not be reliably inferable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, prior live birth, ovarian response, sperm quality, BMI, and endometrial thickness with embryo quality reasonably well. However, it overinterprets AMH as suggesting PCOS-like physiology and does not fully nuance unexplained infertility or transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable issues: the embryo is called both 2BA and 'high-quality'/'full blastocyst' in a way that conflicts with Gardner staging, and the implantation estimate is somewhat optimistic for age 37 with an untested day-5 2BA embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly standard (proceed with transfer, luteal support, discuss PGT-A), but there are deviations: the expansion-stage interpretation is not aligned with Gardner criteria, and the claim that high AMH can correlate with higher aneuploidy is not a standard evidence-based counseling point."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding, maintaining progesterone support, and discussing PGT-A/freeze-all in future cycles. It is useful, though somewhat generic and lacking details such as counseling on single embryo transfer or alcohol reduction around transfer."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01253,
+  "judge_latency_ms": 7918.868999986444,
+  "judge_prompt_tokens": 2408,
+  "judge_completion_tokens": 434
+}

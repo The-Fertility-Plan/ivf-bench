@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0140",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image alone (e.g., 'aligns perfectly,' specific side-based ICM/zona details, 'ready for hatching') and calls 3AA the highest possible score, which is not strictly correct."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, endometriosis, prior cycle, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to embryo quality and patient factors; minor issues include overconfident claims about euploidy and endometriosis/aneuploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general caution about PGT-A in a 29-year-old are guideline-concordant, but suggestions such as assisted hatching for prior failure/endometriosis, low-dose aspirin, and implying endometriosis is associated with higher aneuploidy are not strongly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including SET, luteal support, and contingency planning after failure; however, some recommendations are not strongly evidence-based and could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.011255,
+  "judge_latency_ms": 5352.447832992766,
+  "judge_prompt_tokens": 2372,
+  "judge_completion_tokens": 355
+}

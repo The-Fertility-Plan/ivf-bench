@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0402",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies the embryo as a 2AC blastocyst with strong ICM and poor TE, but it repeats an internal inconsistency by calling expansion 'full blastocyst/fully expanded' for grade 2 and adds image-specific details like zona thinning/intact that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response thoroughly integrates age, ovarian response, AMH/FSH, BMI, diagnosis, sperm factors, endometrium, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the prognosis is tied to TE-C, age, and patient factors, though there are some overconfident causal inferences (e.g., placentation risk, stress effects, PCOS-like interpretation) and the grading terminology is slightly inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but several recommendations are speculative or not guideline-driven for this case, including strong emphasis on acupuncture, DHEA/CoQ10, routine PGT-A framing, and protocol changes without enough supporting context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer, luteal support, monitoring, and future cycle considerations, though some suggestions are more opinion-based than evidence-based and would need clinician tailoring."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.0216,
+  "judge_latency_ms": 6191.169708967209,
+  "judge_prompt_tokens": 3225,
+  "judge_completion_tokens": 365
+}

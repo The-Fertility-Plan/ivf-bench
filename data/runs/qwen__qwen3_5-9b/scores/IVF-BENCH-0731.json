@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable grading confusion: it calls the embryo 2AA but then describes expansion as 'Grade 1' and ICM as 'Grade 2,' which is inconsistent with Gardner notation and the provided lab description of a full blastocyst with A/A ICM and TE. It gives a broadly favorable blastocyst description but with several inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors including age, ovarian response, sperm parameters, diagnosis, prior cycle history, BMI/lifestyle, and especially the thin 6.0 mm endometrium, and relates these to prognosis. It misses some nuance around fresh vs frozen transfer context and overstates some factors, but overall integration is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are internal inconsistencies in embryo grading interpretation and some overconfident conclusions such as 'positive pregnancy test is very likely.' The implantation estimate is plausible but not tightly justified given the thin lining and grading confusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are deviations: incorrect Gardner grading interpretation, overstatement of euploidy likelihood (80-90% at age 33), and recommendations like 'Do not freeze it unless...' and transfer delay thresholds are not well grounded in guideline-based individualized decision-making."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, paying attention to endometrial support, considering PGT-A selectively, and follow-up beta-hCG testing. However, some recommendations are somewhat generic or overly prescriptive without enough cycle-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013473,
+  "judge_latency_ms": 5587.696167000104,
+  "judge_prompt_tokens": 2356,
+  "judge_completion_tokens": 427
+}

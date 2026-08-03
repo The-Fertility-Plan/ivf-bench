@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerative ICM and TE, but it misstates the Gardner 1 expansion as blastocoel less than half the embryo and adds image-specific claims like significant collapse that are not supported by the provided lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, AMH, prior IVF outcomes, sperm parameters, and endometrium with embryo prognosis well, though some inferences about repeated poor blastulation across cycles are not fully supported by the case data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the very low implantation estimate follows from the 1DD grade, but there are minor inconsistencies such as overinterpreting prior cycles and image morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Overall it is broadly evidence-based regarding poor prognosis of a 1DD embryo, but it misapplies Gardner expansion criteria, is somewhat too absolute in recommending against transfer, and overstates support for PGT-A/lab audit based on the limited data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear counseling points and practical future-cycle considerations such as sperm DNA fragmentation testing, protocol review, and informed consent, though some recommendations are broader and less case-specific than ideal."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0123575,
+  "judge_latency_ms": 5475.939750031102,
+  "judge_prompt_tokens": 2813,
+  "judge_completion_tokens": 355
+}

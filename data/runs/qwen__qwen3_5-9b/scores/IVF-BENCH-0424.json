@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0424",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is broadly consistent with a 3BB blastocyst: expanded cavity, thinning zona, loosely grouped ICM, and sparse TE. Some image-specific details are somewhat inferred rather than strictly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, BMI, ovarian reserve markers, sperm data, endometrium, diagnosis, and lifestyle with embryo quality and prognosis. However, it overinterprets some factors such as paternal age and alcohol effects on this specific embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it incorrectly labels 6 MII/16 COCs as a fertilization rate, infers diminished reserve from limited evidence, and makes some conclusions stronger than supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Uses Gardner grading appropriately and gives generally standard counseling, but recommendations such as strongly advocating PGT-A based mainly on paternal age/one cycle and suggesting diminished reserve or more aggressive stimulation are not fully guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, lifestyle counseling, sperm DNA fragmentation testing consideration, and future-cycle discussion of ICSI/PGT-A. Some recommendations would benefit from more nuance."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.011829,
+  "judge_latency_ms": 4432.293165998999,
+  "judge_prompt_tokens": 2348,
+  "judge_completion_tokens": 319
+}

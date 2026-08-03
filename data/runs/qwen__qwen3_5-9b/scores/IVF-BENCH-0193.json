@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0193",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/compacting embryo and the provided 0DD grade, but it overstates certainty from the image and adds limited image-specific detail such as zona pellucida or clearer structural observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, sperm, stress, and first-cycle status with embryo quality reasonably well, though it overinterprets 6 oocytes as clearly low response and does not fully contextualize day-4 transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate follows from the poor morphology, but there are notable issues: it conflates day-4 transfer with cleavage-stage transfer, treats 0DD as near-nonviable with too much certainty, and makes some unsupported inferences about ovarian response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic morphology interpretation is broadly aligned, but several recommendations are not well aligned with evidence-based practice: donor eggs are premature after a first cycle in a 32-year-old, routine PGT-A is overstated, and advising cryopreservation of very poor embryos is questionable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling and suggests reviewing stimulation strategy for future cycles, but recommendations are somewhat generic and include weakly justified options; it lacks more specific next-step planning around lab review, fertilization/development data, and individualized protocol adjustment."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.011045,
+  "judge_latency_ms": 7131.914582976606,
+  "judge_prompt_tokens": 2246,
+  "judge_completion_tokens": 362
+}

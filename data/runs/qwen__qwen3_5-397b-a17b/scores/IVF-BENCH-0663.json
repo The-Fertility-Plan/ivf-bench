@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The morphology section contains a key grading inconsistency: it calls the embryo Gardner 2AB but describes it as a 'full blastocyst,' whereas full blastocyst is stage 3, not stage 2. It also overstates image-derived detail such as exact quadrant localization and absence of degeneration/fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including young maternal age, PCOS/high AMH, oocyte yield, BMI, sperm parameters, paternal age, and endometrial thickness, and relates them to prognosis. It misses some nuance around PCOS-specific transfer considerations and overemphasizes paternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but the morphology-to-grade reasoning is weakened by the stage mismatch, and the implantation estimate relies on somewhat speculative deductions such as a fixed paternal-age penalty and broad endometrial effect size."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are notable deviations: misapplication of Gardner stage terminology and recommending PGT-A largely because the male partner is 40 is not strongly guideline-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, luteal support, possible endometrial optimization, and future evaluation/lifestyle changes. However, some recommendations are generic and not fully tailored to whether this is fresh versus frozen transfer."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012867,
+  "judge_latency_ms": 8135.101250023581,
+  "judge_prompt_tokens": 2359,
+  "judge_completion_tokens": 386
+}

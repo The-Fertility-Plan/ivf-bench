@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0693",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates certainty from the image, calling it fully expanded while grade 3 is an expanded rather than fully expanded/hatching stage, and describes specific visible features somewhat more confidently than can be verified."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, prior live birth, endometrial thickness, tubal factor, and semen parameters with embryo quality well, though it overemphasizes paternal age as a major determinant of embryo aneuploidy and does not fully nuance prior cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it labels 3AA as the highest possible grade, overstates euploidy likelihood, and links male age too strongly to aneuploidy, making the probability estimate somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology appropriately in part, but several recommendations are not well aligned with standard practice: suggesting biopsy/PGT-A for this embryo in the current cycle is impractical if transfer is planned, and strongly recommending PGT-A mainly due to paternal age is not guideline-based for a 30-year-old with tubal factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides clear next-step suggestions such as proceeding with transfer and considering future planning, but some advice is too generic and the PGT-A recommendation for this cycle is not practically actionable in the stated transfer context."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.00649375,
+  "judge_latency_ms": 6793.111874954775,
+  "judge_prompt_tokens": 2147,
+  "judge_completion_tokens": 381
+}

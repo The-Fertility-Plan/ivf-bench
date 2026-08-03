@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0282",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label, but it incorrectly equates Gardner stage 2 with a full blastocyst and infers specific image details (e.g., ICM location, zona thinning) that may not be clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF outcomes, endometrial thickness, BMI, ovarian response, sperm parameters, and lifestyle with embryo quality in a clinically meaningful way, though some interactions are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the probability estimate appropriately adjusted downward for prior failures and thin lining; minor issue is the overstatement of 2AA as 'highest' quality despite stage/grade nuances."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET, caution about morphology vs aneuploidy, and considering further workup after repeated failures, but recommendations such as aspirin, sildenafil, L-arginine, and strong prioritization of ERA/PGT-A are more controversial and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future evaluation, including SET, progesterone optimization, and targeted workup, though some suggested adjuncts lack strong evidence and should be framed more cautiously."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01131,
+  "judge_latency_ms": 6243.792625027709,
+  "judge_prompt_tokens": 2502,
+  "judge_completion_tokens": 337
+}

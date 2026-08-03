@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0062",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-based certainty and includes details like clear eccentric ICM, uniform TE, and significant zona thinning/pre-hatching that may not be directly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, FSH, endometrium, first cycle status, sperm parameters, and male factor diagnosis with embryo quality well, though it leans heavily on alcohol and infers ovarian reserve from limited data without AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to embryo quality and patient factors; minor issues include overstating morphology as a proxy for genetic normality and the magnitude of alcohol-related adjustment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including SET for a good-quality day-5 blastocyst and lifestyle counseling, but statements implying morphology suggests high genetic normality and the exact implantation range are somewhat stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps such as SET, alcohol cessation, luteal support, prenatal vitamins, and future-cycle lifestyle optimization, though future planning is truncated and lacks more nuanced alternatives like discussion of cryopreservation/PGT only if clinically indicated."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01205,
+  "judge_latency_ms": 6848.960875009652,
+  "judge_prompt_tokens": 2780,
+  "judge_completion_tokens": 340
+}

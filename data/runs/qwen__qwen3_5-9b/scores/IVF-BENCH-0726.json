@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is largely consistent with a 3BA blastocyst: expanded cavity, thinned zona, B-grade ICM, and A-grade TE. Minor overstatement such as 'ready to hatch' for a stage 3 embryo and some image-specific localization detail may not be fully verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, BMI, tubal factor, endometrial thickness, oocyte yield, and sperm parameters with embryo quality reasonably well. However, it overemphasizes paternal age and infers diminished ovarian reserve despite missing AMH and a normal FSH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable reasoning issues: paternal age is treated as the dominant aneuploidy driver, euploidy estimates are not well supported, and the final probability may be overly reduced relative to the stated morphology and maternal age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF practice in recommending transfer of a usable Day 5 3BA embryo, but several statements are not guideline-aligned: paternal age impact on aneuploidy is overstated, FSH 6.8 is mischaracterized, and suggestions about more aggressive stimulation or donor gametes are premature from this single cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling about genetic risk, and future optimization including weight management and protocol review. Some recommendations are somewhat generic or overly aggressive, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012918,
+  "judge_latency_ms": 4690.178249999008,
+  "judge_prompt_tokens": 2391,
+  "judge_completion_tokens": 383
+}

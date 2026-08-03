@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0514",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes plausible blastocyst features and recognizes ICM/TE, but appears to overcall expansion relative to the provided Gardner 2BA and adds confidence beyond what is securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF outcomes, BMI, lining, semen, and lifestyle factors well, though some factors like alcohol/stress are given slightly more weight than typical."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, linking morphology and age-related aneuploidy risk to prognosis; minor issue is tension between calling the embryo better than reported grade while keeping a moderate probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice: supports single embryo transfer, acknowledges age-related aneuploidy, nuanced PGT-A discussion, and avoids unsupported immune add-ons; slight deviation in reinterpreting Gardner stage from the image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next-step recommendations for transfer, lifestyle optimization, luteal support, review of prior cycles, possible protocol adjustments, uterine reassessment, and future options with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013374,
+  "judge_latency_ms": 5061.918583000079,
+  "judge_prompt_tokens": 2943,
+  "judge_completion_tokens": 303
+}

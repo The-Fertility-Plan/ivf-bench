@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0218",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage: Gardner 2 is an early blastocyst, not a fully expanded blastocyst with zona distention. ICM/TE descriptions broadly follow the provided grade labels, but the morphology section overcalls visible features and relies more on the supplied score than accurate stage interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, prior live births, sperm parameters, BMI, and tubal factor, and connects them to prognosis. It misses some nuance such as the limited predictive value of AMH for implantation and the absence of endometrial data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: the embryo stage is internally inconsistent with the stated Gardner score, and the implantation estimate appears somewhat optimistic for a 2AB untested day-5 embryo at age 35. Conclusions are mostly supported but not fully calibrated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are generally in line with IVF practice, especially proceeding with transfer and favoring single embryo transfer, but the incorrect interpretation of Gardner stage 2 and somewhat inflated prognosis reduce alignment with standard grading criteria and evidence-based counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical advice, such as proceeding with transfer and considering eSET, but the recommendations are incomplete and truncated, with limited detail on luteal support, endometrial assessment, or future-cycle planning contingencies."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01065,
+  "judge_latency_ms": 6865.264791995287,
+  "judge_prompt_tokens": 2040,
+  "judge_completion_tokens": 370
+}

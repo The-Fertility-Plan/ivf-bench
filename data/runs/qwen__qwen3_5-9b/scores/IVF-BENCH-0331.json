@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0331",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst consistent with DD grading, but it misstates expansion by calling it clearly expanded and notes specific visible features like zona thinning and a distinct ICM cluster that may not be reliably supported; Gardner 1 indicates an early blastocyst rather than an expanded one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH/low oocyte yield, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality reasonably well, though it somewhat overstates links such as stress and paternal age effects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The overall structure is logical, but there is a major contradiction in recommending transfer and then saying the embryo should be cryopreserved if it survives the transfer, which is not clinically coherent; some causal claims are also overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Much of the counseling is broadly reasonable, but there are notable deviations from standard IVF practice, especially the incorrect cryopreservation statement after transfer and the inaccurate interpretation of Gardner stage 1 as expanded; donor egg counseling is somewhat premature after a first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical suggestions such as counseling, proceeding with transfer, lifestyle optimization, and discussing future options, but the erroneous cryopreservation recommendation and limited specificity on future stimulation/embryology strategy reduce usefulness."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.01125,
+  "judge_latency_ms": 6998.001875006594,
+  "judge_prompt_tokens": 2412,
+  "judge_completion_tokens": 348
+}

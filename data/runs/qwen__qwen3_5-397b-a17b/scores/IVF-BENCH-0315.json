@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0315",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it overstates image-specific certainty, infers ICM/TE details not clearly verifiable from a single image, and incorrectly equates grade 2 with a full blastocyst rather than expansion stage 3 in standard Gardner terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor diagnosis, sperm quality, BMI, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it calls 2AA the highest possible grade, treats a Day 4 blastocyst as clearly advanced/asynchronous, and links rapid development to aneuploidy risk without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from standard IVF guidance: misstates Gardner expansion terminology, overemphasizes Day 4 embryo-endometrial asynchrony, suggests PGT-A is highly recommended after one failed transfer at age 34, and proposes adjuncts for thin lining with limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical recommendations such as single embryo transfer, alcohol cessation, progesterone/endometrial support review, and future-cycle considerations, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.0118125,
+  "judge_latency_ms": 7145.117459003814,
+  "judge_prompt_tokens": 2613,
+  "judge_completion_tokens": 352
+}

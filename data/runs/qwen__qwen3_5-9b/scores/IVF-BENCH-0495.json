@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0495",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with 1DD, but it makes notable morphology errors, especially calling the embryo 'clearly expanded' and describing significant zona thinning despite Gardner 1 indicating an early blastocyst with blastocoel at least half the embryo, not an expanded blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF failures, sperm parameters, endometrial thickness, and embryo grade reasonably well, though it overstates FSH significance and infers blastulation/drop-off details not explicitly provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are important inconsistencies: misinterpreting the expansion grade, labeling FSH 7.2 as elevated/DOR, and suggesting only one blastocyst formed without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned (poor prognosis with 1DD, age-related aneuploidy risk), but several recommendations are weakly supported or not guideline-based, including ERA/thrombophilia-immunology workup for repeated failures, adjuncts like L-arginine, and overconfident endorsement of PGT-A."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps for transfer and future cycles, but several suggestions are nonspecific or controversial, and it lacks nuanced counseling about limited evidence for add-ons and individualized protocol selection."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.012954,
+  "judge_latency_ms": 4640.589540998917,
+  "judge_prompt_tokens": 2428,
+  "judge_completion_tokens": 378
+}

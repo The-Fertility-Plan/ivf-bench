@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0110",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-confirmable detail (e.g., exact ICM position, cell counts, tight junctions, 2x diameter) and infers features not reliably visible from a single embryo image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor, first cycle status, and day-5 3AA quality into prognosis well, though it makes some unsupported assumptions such as likely multiple blastocysts and implied ICSI."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and well-structured, with a plausible prognosis and management plan, but some quantitative claims are overconfident and a few links between morphology and euploidy are stronger than evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core recommendations like eSET for a good-prognosis 34-year-old and attention to transfer technique/luteal support are guideline-concordant, but suggestions such as aspirin, thrombophilia/MTHFR workup, endometrial scratch, and ERA after limited failure are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer strategy, endometrial checks, luteal support, and contingency planning, though some recommendations are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.0122475,
+  "judge_latency_ms": 6050.525625003502,
+  "judge_prompt_tokens": 2865,
+  "judge_completion_tokens": 339
+}

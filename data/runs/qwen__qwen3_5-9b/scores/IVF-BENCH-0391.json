@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0391",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst and absent/degenerate ICM/TE, but it overstates image-specific detail (e.g., visible cell count, 'glassy' degeneration) and incorrectly treats expansion as Gardner grade 0 rather than early blastocyst/grade 1-type description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, smoking, prior IVF failures/miscarriages, endometrium, ovarian reserve markers, and sperm data with prognosis well, though it overemphasizes paternal age and labels FSH 8.5 as DOR too strongly despite AMH being reasonable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the low implantation estimate fits the poor embryo grade, but there are notable overstatements such as claiming paternal age is a primary driver here and that PGT-A would likely have identified this embryo as aneuploid despite no biopsy/testing being done."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing very poor prognosis, counseling, smoking cessation, and considering PGT-A after recurrent failure/miscarriage, but it includes some non-guideline-level assertions (strong paternal-age claims, implying PGT-A would almost certainly exclude this embryo, and suggesting ICSI for DNA fragmentation without nuance)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, smoking cessation, consideration of PGT-A, sperm DNA fragmentation testing, and donor-oocyte discussion; however, recommendations could be more nuanced regarding whether to transfer such an embryo and broader recurrent pregnancy loss workup."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013566,
+  "judge_latency_ms": 5581.558042002143,
+  "judge_prompt_tokens": 2447,
+  "judge_completion_tokens": 415
+}

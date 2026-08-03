@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0243",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates image-specific certainty by assigning exact ICM/TE locations and saying the embryo is ready for hatching; 3AA does not itself prove visible thinning/hatching readiness, and morphology cannot confirm euploidy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, prior IVF outcomes, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a probability estimate that broadly follows from age and embryo grade, but there are minor issues such as equating AA morphology with euploidy potential and inferring luteal deficiency from PCOS."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading and proceeding with transfer, but it departs from evidence-based guidance by suggesting PCOS is associated with higher aneuploidy, implying routine luteal deficiency in PCOS, and leaning toward PGT-A/ERA after this history without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including luteal support review and possible further workup, though some suggestions would benefit from stronger prioritization and evidence-based caveats."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0123,
+  "judge_latency_ms": 4600.364124999032,
+  "judge_prompt_tokens": 2370,
+  "judge_completion_tokens": 346
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0203",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately identifies very poor ICM/TE quality consistent with a DD blastocyst and notes the stage-label discrepancy, but it adds speculative image features such as a right-sided cavity, 'ghost' appearance, instability, and necrosis that may not be reliably supported from the prompt/image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, semen parameters, endometrium, and stimulation response with embryo prognosis well, though some links (e.g., implying likely sperm DNA fragmentation or low blastocyst yield without full cycle data) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: severely poor morphology dominates prognosis despite favorable patient factors. Minor issues include overcalling non-viability from morphology alone and inferring broader lab/gamete problems without complete embryology data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but statements that DD embryos are effectively non-viable and recommendations such as strongly recommending PGT-A or not transferring may be stronger than guideline-supported, especially without discussing patient preferences and clinic-specific practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for current transfer counseling and future planning, including alternatives and additional testing, though some suggestions are more assertive than necessary and not fully individualized to available cycle details."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.011565,
+  "judge_latency_ms": 6245.128082984593,
+  "judge_prompt_tokens": 2508,
+  "judge_completion_tokens": 353
+}

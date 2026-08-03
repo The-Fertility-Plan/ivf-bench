@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0394",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality/degenerative morphology and absent-poor ICM/TE, but it misinterprets expansion stage by stating blastocoel less than half and calls the embryo collapsed/shrinking and non-viable with more certainty than the provided 1DD alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, BMI, endometrium, and sperm data reasonably well with embryo prognosis, though it over-speculates about sperm DNA fragmentation and does not acknowledge missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is an internal inconsistency between the stated Gardner 1 stage and the prompt text, and the conclusion that transfer should be canceled as medically futile is stronger than the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading, age-related aneuploidy discussion, and consideration of PGT-A are broadly aligned, but declaring a 1DD embryo definitively non-viable and recommending automatic cancellation is not fully guideline-consistent; sperm DNA fragmentation testing and testicular sperm are also more conditional than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer decision-making and future cycle planning, including PGT-A, possible ICSI, and lifestyle measures, though some recommendations are somewhat overconfident and insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01123,
+  "judge_latency_ms": 6735.454207984731,
+  "judge_prompt_tokens": 2260,
+  "judge_completion_tokens": 372
+}

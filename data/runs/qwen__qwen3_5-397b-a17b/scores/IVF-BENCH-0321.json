@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0321",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst and the provided 2AA label, but it overstates details not reliably verifiable from a single image and misdescribes grading by implying thinning zona/near hatching for grade 2."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, tubal factor, endometrium, smoking, and sperm parameters with embryo quality in a clinically meaningful way, though BMI and some nuances are underemphasized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical, but there are notable inconsistencies: calling 2AA the highest possible score, conflating expansion grades, and mixing implantation/live birth probabilities somewhat imprecisely."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on age-related aneuploidy, smoking cessation, and proceeding with transfer, but overstates 2AA as top-tier/highest possible, and 'strongly' recommending PGT-A in a low-yield first cycle is more debatable than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, luteal support, smoking cessation, and future-cycle considerations such as sperm DNA fragmentation testing and protocol review, though some suggestions are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.0110075,
+  "judge_latency_ms": 5451.668624999002,
+  "judge_prompt_tokens": 2465,
+  "judge_completion_tokens": 323
+}

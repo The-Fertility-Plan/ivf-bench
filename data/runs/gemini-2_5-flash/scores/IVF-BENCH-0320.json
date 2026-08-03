@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0320",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies an expanded blastocyst and thin zona, but it over-interprets the image by downgrading ICM/TE relative to the provided 3AA and claims significant intracavitary debris/fragmentation that may not be reliably supported from a single blastocyst image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, endometrium, male factor, prior cycle history, and lifestyle with embryo quality reasonably well, though it overstates the clinical significance of BMI 18.5 and alcohol in this specific transfer prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the reasoning is weakened by unsupported emphasis on visual fragmentation and by treating BMI 18.5 as a major adverse factor despite being at the low end of normal."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with standard IVF practice regarding embryo grading, transfer, and possible future PGT-A discussion, but it departs from evidence-based nuance by overstating underweight risk at BMI 18.5 and recommending transparency about image-based 'debris' not clearly established."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer, counseling, lifestyle optimization, and future-cycle considerations such as PGT-A and embryo review, though some recommendations are stronger than warranted by the data."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.0132525,
+  "judge_latency_ms": 5840.711833036039,
+  "judge_prompt_tokens": 3087,
+  "judge_completion_tokens": 369
+}

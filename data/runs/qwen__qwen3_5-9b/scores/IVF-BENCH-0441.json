@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0441",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates image-specific certainty (e.g., exact ICM location, 'ready for hatching') and relies heavily on the provided grade rather than strictly visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve markers, endometrium, BMI, male factor, and sperm data with embryo quality reasonably well, though it overemphasizes paternal age and underplays maternal age-related aneuploidy risk at 36."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling age 36 'young/favorable' with 'low' aneuploidy risk is overstated, and attributing major aneuploidy risk primarily to paternal age is not well balanced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF guidance: 3AA is not the 'highest' possible grade, paternal age is overstated as a major aneuploidy driver, and recommending PGT-A mainly because of paternal age and claiming it significantly increases live birth rate per transfer are too strong."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, counseling, and considering sperm DNA fragmentation testing/future planning, though embryo banking/freezing advice is somewhat inconsistent with the immediate transfer context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012699,
+  "judge_latency_ms": 4246.488833996409,
+  "judge_prompt_tokens": 2463,
+  "judge_completion_tokens": 354
+}

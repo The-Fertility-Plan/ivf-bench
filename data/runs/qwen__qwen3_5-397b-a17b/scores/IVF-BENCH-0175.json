@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0175",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible poor-quality assessment but misstates the provided Gardner expansion stage: 1 means blastocoel at least half the embryo, not less than half. It also infers specific image features such as an upper-pole cavity and detailed ICM/TE appearance that may not be clearly supportable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior live births, endometrial thickness, ovarian reserve, and sperm parameters with embryo quality reasonably well. However, some interpretations, especially the AMH-to-oocyte-yield discrepancy, are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: the embryo is called Day 4 morula/early blastocyst while also being tied to a Gardner 1DD blastocyst grade, and the explanation of expansion stage is internally inconsistent with the stated grading criteria."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response generally follows Gardner-based morphology concepts and recognizes age-related aneuploidy risk, but it misapplies the expansion-stage definition and makes somewhat nonstandard assumptions about expected oocyte yield from AMH alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers only limited practical guidance. It begins to identify favorable factors but does not provide clear, specific transfer recommendations, probability range, or future cycle planning in the excerpt shown."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0099775,
+  "judge_latency_ms": 5922.662790981121,
+  "judge_prompt_tokens": 1729,
+  "judge_completion_tokens": 377
+}

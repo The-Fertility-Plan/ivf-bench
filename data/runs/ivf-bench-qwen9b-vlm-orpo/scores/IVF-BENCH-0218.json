@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0218",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst and notes image limitations, but it overstates TE quality versus the reported 2AB (TE should be B/looser with fewer cells) and is somewhat inconsistent on expansion stage, calling it early-to-full/stage 3-4 despite the provided grade 2."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, diagnosis, prior live births, BMI, ovarian reserve, sperm parameters, and lifestyle well, with appropriate discussion of untested embryo status and missing endometrial data; only minor overinterpretation of semen and maturity yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with a plausible prognosis tied to embryo quality and patient factors; minor tension exists between describing the embryo as stronger than the stated 2AB and the final probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: SET is appropriate, hydrosalpinx treatment is emphasized, and it avoids unsupported add-ons. Small deviations include somewhat optimistic morphology framing and selective PGT-A discussion without strong nuance on age 35 limitations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including tubal reassessment, lining/progesterone review, and when to escalate evaluation; useful though not highly specific on protocol changes."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014328,
+  "judge_latency_ms": 6086.662166999304,
+  "judge_prompt_tokens": 2961,
+  "judge_completion_tokens": 363
+}

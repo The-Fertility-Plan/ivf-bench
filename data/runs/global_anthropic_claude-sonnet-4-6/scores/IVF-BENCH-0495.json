@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0495",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality 1DD blastocyst with deficient ICM/TE, but it adds several image-specific details that are likely fabricated or not reliably inferable from a single image, such as vacuolation, debris, fragmented material, irregular fluid distribution, thinned zona, and partial herniation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, BMI, prior IVF failures, sperm parameters, endometrial thickness, and embryo grade into prognosis well. However, it overstates some factors, mislabels the history as RIF too confidently, and makes questionable links such as stress materially affecting implantation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis is consistent with the embryo grade and age, but there are notable issues: calling 14 COCs/10 MII a 'good response for natural cycle' is implausible, the probability adjustment scheme is not evidence-based, and some conclusions rely on unsupported assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic statements about poor prognosis of a 1DD embryo are aligned with IVF practice, but several recommendations are not guideline-based or are controversial, including NK-cell testing/suppression, broad immunologic panels, ERA as routine RIF workup, and thrombophilia screening without indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for counseling, transfer decision-making, and future workup/planning. Still, some suggested actions are not evidence-based, which limits the practical quality despite good specificity."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.020465,
+  "judge_latency_ms": 6752.580499975011,
+  "judge_prompt_tokens": 2872,
+  "judge_completion_tokens": 407
+}

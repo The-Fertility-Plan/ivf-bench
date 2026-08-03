@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses the provided 2AB label broadly correctly, but adds likely ungrounded image-specific details such as asymmetric cavitation, cytoplasmic granularity, and zona thinning/irregular fluid distribution that may not be reliably visible; also calls it early-to-full blastocyst despite given full blastocyst grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, male factor context, first-cycle status, and lifestyle reasonably well with embryo quality, though some links are speculative and not all factors materially change prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: Day 4 blastulation is described as accelerated/positive yet also penalized, and the probability adjustment framework is somewhat ad hoc and may double-count factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF concepts, but recommending routine PGT-A after a first transfer failure in a 29-year-old and suggesting Day 4 transfers should generally be reserved are not strongly guideline-based; ERA is appropriately limited to repeat failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for luteal support review, beta-hCG timing, and future workup options, though some recommendations are more generic than case-specific and a few are debatable."
+    }
+  ],
+  "extracted_probability": 0.415,
+  "judge_cost_usd": 0.017925,
+  "judge_latency_ms": 5808.820917038247,
+  "judge_prompt_tokens": 2571,
+  "judge_completion_tokens": 338
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label, but it incorrectly calls stage 3 an expanded blastocyst and infers image-specific details such as exact ICM location and zona thinning that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, response to stimulation, sperm parameters, diagnosis, BMI, lifestyle, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are notable issues: misinterpretation of Gardner stage 3, overemphasis on Day 4 blastocyst asynchrony, and a probability estimate that may be somewhat optimistic relative to the uncertainties."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognosis, luteal support, and elective single embryo transfer, but ERA after one failed transfer and the discussion of Day 4 expanded blastocyst timing are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical recommendations for proceeding with transfer, SET, luteal support, freezing surplus embryos, and future investigations, though some suggestions are more speculative than standard first-line steps."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012273,
+  "judge_latency_ms": 5536.744249984622,
+  "judge_prompt_tokens": 2551,
+  "judge_completion_tokens": 308
+}

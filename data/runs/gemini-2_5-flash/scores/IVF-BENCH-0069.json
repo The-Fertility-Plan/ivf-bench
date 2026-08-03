@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BB label and gives reasonable ICM/TE descriptions, but it overstates some image-specific details such as zona thinning and full expansion, and relies heavily on the supplied Gardner score rather than strictly visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most key factors well: age, ovarian reserve/response, tubal factor diagnosis, endometrium, sperm, and lifestyle, and appropriately relates them to prognosis for a 2BB blastocyst."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, linking average embryo morphology with a favorable patient profile; however, the response is truncated before completing risk discussion and probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Uses Gardner terminology appropriately and makes generally evidence-based points about age, blastocyst quality, and tubal factor prognosis; no obvious guideline violations, though the incomplete response limits full assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers interpretation and prognostic framing but does not provide clear, specific transfer recommendations or future cycle planning steps, likely due to truncation."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0101775,
+  "judge_latency_ms": 5963.007875019684,
+  "judge_prompt_tokens": 2187,
+  "judge_completion_tokens": 314
+}

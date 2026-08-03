@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0358",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB description, especially the loose/sparse TE, but it over-interprets image details (irregular contour, non-crisp ICM, no degenerative features) from a single static image and uses some imprecise wording."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian response, semen parameters, diagnosis, prior cycle history, and especially the very thin endometrium into prognosis; AMH is appropriately noted as unavailable. Could more explicitly separate embryo-intrinsic quality from uterine receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the low implantation estimate tied to fair morphology and 4 mm lining. Minor issues include awkward/contradictory phrasing about embryo quality spectrum and some speculative comments about fresh-cycle hormonal causes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with IVF practice: SET at age 28, caution with thin endometrium, avoid unproven add-ons, and no routine PGT-A in a first cycle. Slight downgrade because specific progesterone suggestions and some management comments are somewhat prescriptive without full cycle context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling about thin lining, considering freeze-all in future if lining remains poor, cavity assessment, luteal support review, and future male-factor workup if needed. Useful and nuanced, though some recommendations remain general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.185,
+  "judge_cost_usd": 0.016455,
+  "judge_latency_ms": 4797.91770799784,
+  "judge_prompt_tokens": 3530,
+  "judge_completion_tokens": 391
+}

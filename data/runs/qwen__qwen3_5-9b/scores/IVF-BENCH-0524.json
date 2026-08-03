@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0524",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner score rather than the image, misstates grade 2 as an expanded/full blastocyst, calls it highest quality, and describes central ICM/peripheral TE features that may not be clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, prior cycle, sperm parameters, and endometrium with prognosis reasonably well, though it overstates diminished ovarian reserve and some implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: 2AA is incorrectly equated with expanded/full blastocyst and top/highest quality, and donor egg recommendation after one failed cycle is not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer and caution about routine PGT-A are aligned, but key deviations include incorrect Gardner interpretation and an overly aggressive donor egg suggestion for a 30-year-old with one prior failed cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical steps such as proceeding with SET and lifestyle optimization, but future planning is insufficiently nuanced and includes a premature donor egg recommendation."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.012285,
+  "judge_latency_ms": 4923.734000003606,
+  "judge_prompt_tokens": 2495,
+  "judge_completion_tokens": 320
+}

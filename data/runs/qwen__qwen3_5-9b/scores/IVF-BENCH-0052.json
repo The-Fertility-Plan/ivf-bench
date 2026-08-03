@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the reported 3AB grade, but it overstates image-specific certainty by claiming hatching/side-specific thinning and identifying artifacts as air bubbles without clear support from the provided data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, diagnosis, sperm parameters, endometrium, and oocyte maturity well with embryo quality, though it overreaches by inferring low aneuploidy/euploid likelihood and calling the scenario 'ideal' without AMH or fertilization/blastulation context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, linking young age and favorable morphology to prognosis, but some conclusions are overstated and the implantation estimate is somewhat optimistic for an untested 3AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice, especially support for single embryo transfer in a young patient with a good-quality blastocyst, though terms like 'top-tier' for 3AB and some prognostic claims are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, SET, luteal support, and cryopreservation planning, but lacks more nuanced contingency planning or protocol-specific details."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0107275,
+  "judge_latency_ms": 5363.325332989916,
+  "judge_prompt_tokens": 2317,
+  "judge_completion_tokens": 329
+}

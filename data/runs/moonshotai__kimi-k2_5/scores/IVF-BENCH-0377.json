@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0377",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphology description is consistent with the provided Gardner 3AB label and appropriately describes expansion, ICM, TE, and zona thinning. However, it leans heavily on the reported grade and includes some detail such as TE cohesiveness/cell boundaries that may not be confidently verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, PCOS, BMI, endometrial thickness, sperm parameters, and cycle history with embryo quality in a clinically meaningful way. It misses AMH because unavailable and somewhat overstates certain PCOS-specific effects, but overall linkage to prognosis is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is structured and mostly logical, but there are notable issues: conflicting implantation estimates (32-42%, 35-40%, and implied 50-60% if euploid), unsupported quantitative adjustments, and some overconfident claims about PCOS and aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard, including single embryo transfer and luteal support, but several points are not strongly guideline-based or are overstated: routine assisted hatching, strong recommendation for PGT-A in this exact scenario, ERA after failure, and claims about PCOS-associated high aneuploidy/endometrial dyssynchrony."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management and contingency planning, including eSET, monitoring, and future-cycle considerations. Some recommendations are more speculative than evidence-based, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.014793,
+  "judge_latency_ms": 5025.652500000433,
+  "judge_prompt_tokens": 2876,
+  "judge_completion_tokens": 411
+}

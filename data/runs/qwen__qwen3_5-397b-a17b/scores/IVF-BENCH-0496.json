@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0496",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology and absent/degenerate ICM/TE, but it misinterprets Gardner 1 as less than half the embryo volume; stage 1 is blastocoel at least half the embryo. It also overstates image-based certainty by calling the embryo definitively non-viable/arrested."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, BMI, prior biochemical pregnancy/miscarriage, sperm parameters, and endometrium with embryo quality and prognosis. It could be stronger by distinguishing tubal factor from embryo-related factors and avoiding overattribution of all prior outcomes to aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: the Gardner stage is misread, the embryo is declared non-viable with excessive certainty, and recommendations such as canceling transfer and assigning 0% viability are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent (poor prognosis with 1DD, age-related aneuploidy risk, consideration of PGT-A counseling), but several recommendations are not well aligned: definitive cancellation based solely on morphology, broad endorsement of PGT-A as highly recommended, routine thrombophilia/autoimmune workup after a single clinical miscarriage, and strong claims of zero chance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer decision-making, future cycle evaluation, male factor testing, weight optimization, and counseling. However, some actions are too categorical and insufficiently nuanced for a poor-quality but not absolutely impossible embryo."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01221,
+  "judge_latency_ms": 8117.196334002074,
+  "judge_prompt_tokens": 2322,
+  "judge_completion_tokens": 427
+}

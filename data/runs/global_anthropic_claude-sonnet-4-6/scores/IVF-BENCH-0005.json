@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response makes several image-specific claims that are likely overcalled or not reliably inferable from a single embryo image, including internal fragmentation, cytoplasmic granularity, irregular blastocoel shape, and downgrading the reported 2AA to 2BB/2BC. It also inconsistently describes a reported 2AA as 'Grade 2 – Full blastocyst,' which does not match standard Gardner expansion terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, endometriosis, prior failed cycles, sperm parameters, endometrial thickness, lifestyle, and protocol choice into the prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is clear and the probability estimate is explained, but there are notable logical issues: the Day 4 timing is treated as a major red flag despite the lab reporting a blastocyst-stage Gardner score, and the morphology-based downgrade is used heavily despite uncertain image interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are evidence-based, but several recommendations are not well aligned with mainstream ASRM/ESHRE practice for recurrent implantation failure, including broad immune testing, NK-cell profiling, thrombophilia workup without indication, EMMA/ALICE, and strong endorsement of ERA and freeze-all. The Gardner terminology is also used inconsistently."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives many concrete next steps for transfer strategy and future workup, including uterine assessment, sperm DNA testing, and endometriosis-focused planning. However, some actions are overly aggressive or not guideline-supported, which limits practical appropriateness."
+    }
+  ],
+  "extracted_probability": 0.22,
+  "judge_cost_usd": 0.024295,
+  "judge_latency_ms": 8741.262541967444,
+  "judge_prompt_tokens": 3599,
+  "judge_completion_tokens": 420
+}

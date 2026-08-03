@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0163",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner expansion score: 1 means blastocoel at least half the embryo, but it states less than half and describes a morula/very early blastocyst. It correctly recognizes very poor ICM/TE quality and overall low viability, but the stage description is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including young maternal age, tubal factor, BMI, smoking, prior failed cycles, paternal age, sperm parameters, and endometrial thickness, and relates them to prognosis. Some links, especially attributing poor morphology strongly to paternal age/SDF, are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor embryo grade drives a low implantation estimate despite favorable age and uterine factors. Minor issues include overinterpreting Day 4 transfer significance and the incorrect expansion-stage explanation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (smoking cessation, weight optimization, counseling, review of male factors), but there are deviations: PGT-A is not routinely supported in a 30-year-old solely for poor morphology, and suggestions like PICSI/MACS/testicular sperm are not standard first-line recommendations without clearer indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and specific, covering counseling, lifestyle changes, male-factor workup, and future cycle review. However, some proposed interventions are a bit aggressive or insufficiently nuanced for this exact profile."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0121825,
+  "judge_latency_ms": 6235.8306249952875,
+  "judge_prompt_tokens": 2491,
+  "judge_completion_tokens": 397
+}

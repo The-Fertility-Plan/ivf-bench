@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response likely misclassifies the embryo as a 6-8 cell morula and infers low fragmentation without clear support. It does recognize a stage/grade discrepancy, but the morphology description is not well matched to the provided Gardner 0DD context and lacks accurate blastocyst feature assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key patient factors well, including young age, ovarian reserve, endometrium, sperm parameters, and prior reproductive history, and relates them to prognosis. However, it overstates some associations, especially linking high AMH to aneuploidy/poor quality in this young patient."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is structured and acknowledges uncertainty, but it relies heavily on an assumed image-grade mismatch and then builds divergent prognoses from that assumption. Some conclusions, such as calling the embryo viable/good while also emphasizing 0DD, are not fully reconciled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It correctly notes that Gardner grading is for blastocysts, but several recommendations are not guideline-consistent: PGT-A is not standard of care solely for high AMH or a poor-looking embryo in a 24-year-old, and recommending freeze-all for a 0DD embryo is not well supported in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as clarifying embryo stage, discussing with the embryologist, and considering transfer strategy based on true developmental stage. Still, some recommendations are weakened by questionable premises and limited nuance around embryo selection alternatives."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0122375,
+  "judge_latency_ms": 7778.38208299363,
+  "judge_prompt_tokens": 2447,
+  "judge_completion_tokens": 408
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0452",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 4AB grading, but it incorrectly equates grade 4 with hatching/herniating; hatching is typically grade 5. Descriptions of ICM and TE are broadly appropriate but somewhat reliant on the supplied grade rather than strictly image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, prior ectopic, endometrial thickness, sperm parameters, and ovarian response with embryo quality in a clinically meaningful way. Could better distinguish ovarian reserve from oocyte competence and avoid overstating morphology as overcoming age-related aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible implantation estimate adjusted for age and history. Minor issues include overcalling the embryo as 'excellent/top-tier' and the grading-stage inconsistency affecting some downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age-related aneuploidy risk, luteal support, and early ultrasound after prior ectopic. However, the Gardner stage interpretation is inaccurate, and recommending PGT-A as 'highly recommended' is stronger than guideline-consistent individualized counseling would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, ensuring luteal support, early beta-hCG/ultrasound surveillance, and discussing future PGT-A or embryo banking. Recommendations are useful but could be more specific about transfer strategy and counseling nuances."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012594,
+  "judge_latency_ms": 4771.711374996812,
+  "judge_prompt_tokens": 2328,
+  "judge_completion_tokens": 374
+}

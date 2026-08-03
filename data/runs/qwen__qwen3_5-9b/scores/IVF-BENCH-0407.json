@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0407",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AA blastocyst, but it overstates certainty from the image alone (e.g., 'aligns perfectly,' specific left/right assignments, and 'top-tier/highest quality category'). A 3AA is high quality, but not uniquely the highest possible stage/grade combination."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior miscarriage, low oocyte yield, sperm parameters, endometrial thickness, and diagnosis reasonably well with embryo quality. However, it overinterprets FSH 9.0 as clearly elevated/DOR without AMH and gives limited attention to tubal factor being less relevant once embryos are created."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, and the implantation estimate is tied to age-related aneuploidy risk. Minor issues include overstating morphology as a strong predictor of euploidy and some unsupported assumptions about ovarian reserve and progesterone needs."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on proceeding with transfer and considering age-related aneuploidy risk, but several recommendations are too strong or not guideline-based: routine PGT-A as 'highly recommended,' donor egg counseling after a single further failure, and implying robust dual-route luteal support specifically because of age."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer and discussing future protocol review. Actionability is reduced by some recommendations being overly prescriptive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012963,
+  "judge_latency_ms": 4863.160125001741,
+  "judge_prompt_tokens": 2416,
+  "judge_completion_tokens": 381
+}

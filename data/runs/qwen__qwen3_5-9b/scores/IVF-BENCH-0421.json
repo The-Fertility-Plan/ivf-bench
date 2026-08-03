@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets Gardner expansion: a score of 1 is an early blastocyst, not a fully expanded blastocyst. It also overstates visible features such as a significantly expanded cavity and hatching readiness. The poor ICM/TE interpretation is directionally consistent with 1DD, but the morphology description contains important inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, oocyte yield, sperm parameters, endometrial thickness, diagnosis history, and prior IVF outcomes with embryo quality reasonably well. Some links are somewhat overstated, but overall the clinical context is meaningfully connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: the embryo is incorrectly described as fully expanded despite a 1DD grade, and the prior cycle history is summarized somewhat inconsistently. The implantation estimate is plausible for a very poor-quality blastocyst, but some conclusions rest on flawed morphology interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are important deviations from standard grading interpretation, and recommendations such as emphasizing stress as a known physiological implantation factor and suggesting PGT-A as highly beneficial at age 31 with low embryo numbers are not strongly guideline-based. The statement that freezing a 1DD embryo is generally not recommended is also too categorical."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as counseling, proceeding with transfer, reviewing stimulation strategy, and considering further workup after failure. However, several recommendations are generic or insufficiently specific, and some are based on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013218,
+  "judge_latency_ms": 6064.902416001132,
+  "judge_prompt_tokens": 2331,
+  "judge_completion_tokens": 415
+}

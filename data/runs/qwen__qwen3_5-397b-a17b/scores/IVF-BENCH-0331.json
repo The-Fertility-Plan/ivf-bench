@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0331",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly identifies very poor ICM/TE quality consistent with DD, but it misstates the Gardner expansion stage by saying 1 means blastocoel less than half the embryo, whereas the provided lab data defines 1 as blastocoel at least half the embryo. It also adds uncertain visual claims and overcalls non-viability from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, FSH, low oocyte yield, tubal factor, BMI, endometrium, and partner age/sperm factors with prognosis reasonably well, though some links such as former smoking and severe stress are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: incorrect interpretation of expansion stage, strong claims that the embryo is definitively non-viable, and a recommendation to cancel transfer despite the case already being a Day-5 transfer scenario."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While much of the discussion is broadly evidence-based, several points are not well aligned with standard IVF practice: equating 1DD with certain non-viability, advising outright cancellation based solely on this description, and suggesting testicular sperm/TESA from a single poor embryo outcome without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for future cycles, including protocol reconsideration, sperm DNA fragmentation testing, counseling, and discussion of embryo banking versus PGT-A. However, the immediate recommendation to cancel transfer is too absolute and reduces appropriateness."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01173,
+  "judge_latency_ms": 7699.484999990091,
+  "judge_prompt_tokens": 2232,
+  "judge_completion_tokens": 410
+}

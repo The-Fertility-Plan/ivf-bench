@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with 1DD, but it adds likely fabricated image details such as visible protrusion/early herniation, significant vacuolization, large TE gaps, and extensive fragmentation that may not be reliably supported by the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The response is truncated before integrating the patient factors, so there is essentially no demonstrated linkage between age, ovarian reserve, prior IVF history, sperm parameters, diagnosis, and embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The morphology discussion is internally consistent, but the response is incomplete and jumps to 'non-viable' and 'negligible developmental competence,' which is stronger than can be justified from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner terminology is appropriate, but declaring the embryo non-viable based solely on morphology overstates certainty and is not well aligned with evidence-based caution in IVF prognosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No practical recommendations for the current transfer or future cycle planning are provided because the response is incomplete."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.009123,
+  "judge_latency_ms": 3543.1707500029006,
+  "judge_prompt_tokens": 1481,
+  "judge_completion_tokens": 312
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies a blastocyst with good ICM and looser TE, but it incorrectly states Gardner 2 means expanded/full blastocyst and speculates it may be 3 or 4 despite the provided lab grade; some visible features are overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, tubal factor, sperm quality, endometrium, and embryo grade reasonably well, though it overstates low reserve/poor responder concerns from the given data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: misinterpretation of expansion grading, claiming an 86% fertilization rate from COCs/MII data without fertilization data, and extrapolating poor responder status too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice, including incorrect Gardner stage interpretation, unsupported recommendation for intensified luteal support due to 'poor response,' and mention of donor eggs/PGT-A in a 24-year-old with a reasonable oocyte yield."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and future counseling, but some recommendations are generic or not well justified for this case, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.01101,
+  "judge_latency_ms": 5834.723500011023,
+  "judge_prompt_tokens": 2424,
+  "judge_completion_tokens": 330
+}

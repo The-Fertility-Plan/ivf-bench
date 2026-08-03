@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage: a 2BA is an early blastocyst, not a fully expanded or hatching blastocyst. It also infers superior/inferior ICM and TE localization and hatching-related features that are not supported by the provided grade, though the B ICM and A TE descriptions are broadly consistent."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including young age, BMI, male factor context, prior failed cycles, sperm parameters, endometrial thickness, and embryo grade. It misses some nuance around absent AMH and overinterprets sperm quality relative to the male factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: it calls the embryo both 2BA and 'fully expanded/on the verge of hatching,' and labels it 'high-quality' while using a relatively modest implantation estimate. Some causal claims, such as prior failures implying immune causes, are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly standard, including proceeding with transfer and considering uterine evaluation after repeated failures. However, the morphology interpretation does not align with Gardner criteria, and recommending immune/NK-cell workup is not well supported by major guidelines; PGT-A discussion in a 26-year-old is also of limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable: proceed with transfer, ensure luteal support, continue healthy habits, and consider hysteroscopy if failure recurs. Future planning is reasonably specific, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012265,
+  "judge_latency_ms": 6181.7239170195535,
+  "judge_prompt_tokens": 2356,
+  "judge_completion_tokens": 425
+}

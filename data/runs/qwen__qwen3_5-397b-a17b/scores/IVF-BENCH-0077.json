@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0077",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately describes a hatching blastocyst with thinned zona, B-grade ICM, and strong TE consistent with 4BA. Minor issue: it labels expansion as '4' while also calling it hatching/herniating, which is closer to stage 5 in standard Gardner terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, prior live birth, sperm quality, BMI, PCOS, and endometrial thickness with embryo quality and prognosis. Slight overreach in inferring DOR/poor responder and likely lack of frozen embryos from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical and structured, but there are notable inconsistencies: stage-4 vs hatching terminology, strong claims that morphology increases euploid likelihood, and some speculative conclusions about reserve and embryo availability. Probability estimates are plausible but somewhat assertive given uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and no need for assisted hatching if already hatching, but some recommendations are less guideline-grounded or too strong, especially broad endorsement of PGT-A and metformin/adjuncts without clearer indication. Gardner grading terminology is also slightly off."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET, luteal support review, and discussion of future protocol options. Some suggestions are useful but not fully nuanced or individualized enough to merit the top score."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0118475,
+  "judge_latency_ms": 6410.858875024132,
+  "judge_prompt_tokens": 2531,
+  "judge_completion_tokens": 368
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets Gardner 2 as a full/hatched-or-about-to-hatch blastocyst; grade 2 is an early blastocyst, not full expansion. It also infers features like successful hatching that are not supported. ICM/TE comments are broadly consistent with the reported AA grades but not image-grounded enough."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, sperm parameters, BMI, and endometrial thickness with embryo quality reasonably well. However, it overstates FSH implications and labels recurrent implantation failure somewhat loosely without full context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: incorrect expansion-stage interpretation, unsupported claim that euploid success would be >90%, and probability framing that is somewhat overstated for morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard, but several points deviate from guideline-consistent practice: misapplication of Gardner grading, overconfident endorsement of PGT-A as the key explanation/solution, and nonstandard beta-hCG timing described as aggressive monitoring."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including proceeding with transfer, early ectopic surveillance, luteal support, and future evaluation options. Specificity is good, though some recommendations are not optimally nuanced or evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013209,
+  "judge_latency_ms": 4391.933291997702,
+  "judge_prompt_tokens": 2503,
+  "judge_completion_tokens": 380
+}

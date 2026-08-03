@@ -1,0 +1,390 @@
+% Sections filled with final numbers, spliced into main.tex by build.py
+
+% ===== RESULTS_SETUP =====
+We evaluate seven models through their public APIs plus our own post-trained
+model served locally, and we grade every response with the same judge.
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{llll}
+\toprule
+\textbf{Model} & \textbf{Served by} & \textbf{Size} & \textbf{Reasoning} \\
+\midrule
+GPT-5.4 (2026-03-05) & OpenAI & not disclosed & effort: high \\
+Claude Opus 4.6 & Bedrock & not disclosed & 8K thinking budget \\
+Claude Sonnet 4.6 & Bedrock & not disclosed & 8K thinking budget \\
+Qwen 3.5-397B-A17B & OpenRouter & 397B, 17B active & native \\
+Kimi K2.5 & OpenRouter & 1T, 32B active & native \\
+Gemini 2.5 Flash & OpenRouter & not disclosed & native \\
+Qwen 3.5-9B & OpenRouter & 9B & native \\
+\midrule
+\textbf{IVF-Bench-Qwen9B-ORPO} (ours) & local vLLM, 2$\times$H100 & 9B & native \\
+\bottomrule
+\end{tabular}
+\caption{The eight systems evaluated. Baselines run at temperature 0 with
+reasoning enabled. Our model uses the sampling settings recommended on the Qwen
+3.5 card (temperature 1.0, top-p 0.95, top-k 20, repetition penalty 1.05),
+because greedy decoding traps it in a repetition loop.}
+\label{tab:models}
+\end{table}
+
+\textbf{The judge.} GPT-5.4 grades every response against the five rubrics in a
+single call and also extracts the numeric probability. It sees the case text and
+the response, but not the embryo image. This is a deliberate limitation and we
+are explicit about what it costs us: the morphology rubric measures whether a
+description is consistent with the Gardner annotation the model was handed, not
+whether the model read the image correctly. A judge that cannot see the image
+cannot catch a fluent description of an embryo that is not there.
+
+\textbf{Two things we got wrong the first time.} Both are worth reporting because
+they are easy to repeat and neither is visible in the output.
+
+First, when a judge call failed, the pipeline wrote a score file containing five
+zeros and moved on. Because later runs skip cases that already have a score file,
+those failures became permanent. In our first pass this hollowed out 231 of the
+test-split scores, 211 of them belonging to a single model, so that model's row
+was computed from 309 of 550 cases while the table said 520. The judge now
+refuses to write a failed score, so the case simply stays pending.
+
+Second, our own model was served on vLLM without a reasoning parser. Qwen chat
+templates pre-fill \texttt{<think>} in the prompt, so the model emits its
+reasoning, a closing \texttt{</think>}, and then the answer, all in one field.
+Every hosted API returns reasoning separately. The result was that our model was
+graded on roughly 4,000 characters of raw thinking prepended to its answer while
+every other model was graded on the answer alone. Correcting this moved our model
+from 3.80 to 4.17 on the test split, from third place to second. The lesson
+generalises: if you compare a locally served reasoning model against hosted APIs,
+check what is actually inside the string you are grading.
+
+All numbers below come after both fixes. Every score in the study is produced by
+GPT-5.4, and no score file contains a judge failure.
+
+% ===== RESULTS =====
+\subsection{Reading the two outcome metrics}
+
+\textbf{Brier score} (lower is better) is the mean squared error between the
+stated probability and what happened. It rewards being honest about the odds.
+Always saying 50\% scores 0.25, which is the comparison most papers use and the
+wrong one: the sharper test is a constant set to the cohort's own pregnancy rate,
+and we report against that in Table~\ref{tab:baserate}. \textbf{AUROC} (higher is
+better, 0.5 is chance) is the probability that a randomly chosen success is
+ranked above a randomly chosen failure. It rewards telling embryos apart.
+Counselling a patient needs the first. Choosing which embryo to transfer needs
+the second, and a model can be respectable on one while useless on the other.
+
+\subsection{The leaderboard}
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{clcccccccc}
+\toprule
+\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
+\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
+\textbf{AUROC}$\uparrow$ \\
+\midrule
+1 & GPT-5.4 & \textbf{4.54} & \textbf{3.96} & \textbf{5.00} & \textbf{4.66} & \textbf{4.15} & \textbf{4.92} & 0.245 & 0.553 \\
+2 & \textbf{Qwen9B-ORPO (ours)} & 4.17 & 3.60 & 4.83 & 4.00 & 3.96 & 4.44 & 0.249 & 0.531 \\
+3 & Opus 4.6 & 4.01 & 3.52 & 4.97 & 3.96 & 3.20 & 4.38 & 0.245 & 0.541 \\
+4 & Qwen 397B & 3.75 & 3.33 & 4.27 & 3.84 & 3.31 & 3.98 & 0.260 & 0.538 \\
+5 & Kimi K2.5 & 3.63 & 3.39 & 4.38 & 3.66 & 3.00 & 3.72 & \textbf{0.242} & 0.552 \\
+6 & Sonnet 4.6 & 3.58 & 2.92 & 4.48 & 3.64 & 2.79 & 4.06 & \textbf{0.241} & 0.544 \\
+7 & Gemini 2.5 Flash & 3.40 & 3.34 & 3.88 & 3.58 & 3.53 & 2.66 & 0.269 & 0.537 \\
+8 & Qwen 9B (base) & 3.35 & 3.08 & 3.93 & 3.38 & 2.81 & 3.56 & 0.255 & \textbf{0.554} \\
+\bottomrule
+\end{tabular}
+\caption{Test split, 550 cases, GPT-5.4 judge, every model with reasoning
+enabled. Qwen 9B base completed 520 of 550 cases; the other 30 ran out of tokens
+inside a reasoning loop. Rubrics are morphology grounding, clinical integration,
+reasoning coherence, guideline alignment, and recommendation usefulness.}
+\label{tab:leaderboard}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{clcccccccc}
+\toprule
+\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
+\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
+\textbf{AUROC}$\uparrow$ \\
+\midrule
+1 & GPT-5.4 & \textbf{4.55} & \textbf{3.98} & \textbf{5.00} & \textbf{4.65} & \textbf{4.23} & \textbf{4.88} & 0.246 & \textbf{0.562} \\
+2 & \textbf{Qwen9B-ORPO (ours)} & 4.11 & 3.56 & 4.76 & 3.93 & 3.93 & 4.37 & 0.245 & 0.547 \\
+3 & Opus 4.6 & 4.01 & 3.60 & 4.92 & 3.98 & 3.22 & 4.31 & 0.247 & 0.551 \\
+4 & Gemini 2.5 Flash & 3.83 & 3.34 & 4.40 & 3.90 & 3.54 & 3.98 & 0.289 & 0.504 \\
+5 & Qwen 397B & 3.82 & 3.48 & 4.31 & 3.88 & 3.44 & 3.98 & 0.265 & 0.551 \\
+6 & Kimi K2.5 & 3.73 & 3.48 & 4.42 & 3.80 & 3.04 & 3.90 & 0.254 & 0.518 \\
+7 & Sonnet 4.6 & 3.65 & 3.07 & 4.51 & 3.73 & 2.89 & 4.06 & \textbf{0.242} & 0.534 \\
+8 & Qwen 9B (base) & 3.31 & 2.99 & 3.91 & 3.18 & 2.85 & 3.64 & 0.285 & 0.450 \\
+\bottomrule
+\end{tabular}
+\caption{Held-out split, 103 cases that were never used for training,
+hyperparameter search, or judge calibration. All eight models answered all 103.}
+\label{tab:heldout}
+\end{table}
+
+\subsection{Which gaps are real}
+
+A leaderboard without error bars invites readers to take a 0.02 difference
+seriously. We resample cases with replacement 10,000 times and, for each adjacent
+pair of models, bootstrap the paired per-case difference on the cases both models
+answered.
+
+On the test split every adjacent gap is separable at the 95\% level, the
+narrowest being Kimi K2.5 over Sonnet 4.6 at $+0.052$ (95\% CI $[+0.005,
++0.098]$, $p{=}0.031$). On the held-out split, with 103 cases instead of 550, two
+gaps disappear: Gemini Flash over Qwen 397B ($+0.015$, CI $[-0.049, +0.082]$,
+$p{=}0.66$) and Kimi K2.5 over Sonnet 4.6 ($+0.076$, CI $[-0.023, +0.169]$,
+$p{=}0.12$). Those pairs should be read as ties. The two results we care about
+most survive on both splits: GPT-5.4 over our model ($+0.44$ held out, CI
+$[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI $[+0.03,
++0.17]$, $p{=}0.007$).
+
+\subsection{What the numbers say}
+
+\textbf{1. Models explain cases well.} Clinical integration is the strongest
+rubric for every model in the study. GPT-5.4 scores a perfect 5.00 on both
+splits. The models pick up age, AMH, endometrial thickness, and prior cycle
+history and weave them into a coherent account of this patient's prognosis. If
+the task were writing the counselling note, this would be close to solved.
+
+\textbf{2. Outcome prediction sits at the floor, and we can say exactly how far
+below useful that is.} AUROC spans 0.450 to 0.562 across the field, where 0.5 is
+chance. The best number in the study, 0.562, means that given one embryo that led
+to a clinical pregnancy and one that did not, the best model ranks them correctly
+56\% of the time.
+
+Brier scores look better than they are. They cluster between 0.241 and 0.289,
+which beats the 0.25 you get by always saying 50\%, and it is tempting to read
+that as decent calibration. It is not the right comparison. The clinical
+pregnancy rate in this cohort is 0.350, so a constant predictor that says
+"35\%" for every case, ignoring the embryo, the image, and the patient entirely,
+scores 0.2274. Every model in the study loses to it.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+\textbf{Predictor} & \textbf{Brier (test)} & \textbf{Brier (held out)} \\
+\midrule
+Constant, the cohort base rate of 0.35 & \textbf{0.2278} & \textbf{0.2274} \\
+Constant, 0.50 & 0.2500 & 0.2500 \\
+\midrule
+GPT-5.4 & 0.2447 & 0.2465 \\
+Qwen9B-ORPO (ours) & 0.2491 & 0.2447 \\
+Qwen 9B (base) & 0.2552 & 0.2851 \\
+\bottomrule
+\end{tabular}
+\caption{Brier score against a predictor that ignores its inputs. No model in
+this study beats the cohort base rate on either split. Model rows are computed on
+the cases where a probability could be extracted.}
+\label{tab:baserate}
+\end{table}
+
+This is the number we most want a reader to take away, and it is not a verdict on
+the models. Section~\ref{sec:synthetic} explains why. The patient-context fields
+we added are sampled independently of outcome, so they contain no signal any
+model could use, and what remains of the real data is age, AMH, endometrial
+thickness, oocyte counts, and one morphology grade from a single day-5 frame.
+Predicting a live birth from that is close to the limit of what the public data
+supports, and no architecture fixes it. The inputs that would move this number
+are embryo genetics, longitudinal development rather than one frame, uterine and
+endometrial context, and the lifestyle and history data that today never leaves
+the physician's notes. IVF-Bench is built so those fields can be swapped from
+generated to measured as they become available, which is exactly the experiment
+the field cannot currently run.
+
+The same reasoning reframes the calibration result for our post-trained model in
+Section~\ref{sec:orpo}. Its held-out Brier of 0.245 is second of the eight,
+behind Sonnet 4.6 at 0.242, and all eight sit below a constant. What
+post-training bought is a model whose stated probabilities moved back toward the
+population rate, correcting the base model's overconfidence. On this data that is
+the right behaviour, and it is not predictive skill.
+
+\textbf{3. Morphology is the weakest rubric everywhere.} No model exceeds 3.98 on
+morphology grounding on either split, while on the test split five of eight
+exceed 4.30 on clinical integration. Models are better at reasoning about the
+structured data they are given in text than at reading the picture. Our judge
+cannot see the image either, so a model can score well here by restating the
+Gardner grade it was handed. These numbers are therefore an upper bound on true
+image reading, not a measurement of it.
+
+\textbf{4. Price and quality are only loosely related.} On the test split, Opus
+4.6 costs \$184.81 to run the 550 cases and scores 4.01, while our 9B model costs
+\$7.98 and scores 4.17. Gemini 2.5 Flash is the cheapest commercial system in the
+study and finishes seventh there, though it rises to fourth on held out, which is
+the largest split-to-split move of any model.
+
+% ===== ORPO =====
+The obvious question about the gap between a 9B open model and a frontier system
+is whether it is a capability ceiling or a data problem. We tested it directly.
+
+\subsection{Building preference pairs from the benchmark}
+
+For each of the 550 test-split cases we already had seven scored responses. We
+took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
+\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, split
+500 for training and 50 for evaluation. We then fine-tuned Qwen 3.5-9B with ORPO
+\citep{hong2024orpo}, LoRA rank 16 and alpha 32 applied to all linear layers
+including the vision tower, three epochs on two H100s, with the learning rate and
+the preference weight chosen by an eight-trial search.
+
+Two properties of this dataset matter for interpreting the result. The pairs come
+from the test split, so the trained model is in-domain on the 550-case
+leaderboard and the held-out split is the honest measurement. And the chosen
+responses are close to a monoculture: GPT-5.4 wrote 460 of the 500 training
+pairs' chosen side, 92\%, which means the student is largely distilling one
+teacher, and that teacher is also the judge.
+
+\subsection{What it bought}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Rubric} & \textbf{Base 9B} & \textbf{After ORPO} & \textbf{Change} \\
+\midrule
+Overall & 3.31 & \textbf{4.11} & $+24.0\%$ \\
+Morphology grounding & 2.99 & 3.56 & $+19.2\%$ \\
+Clinical integration & 3.91 & 4.76 & $+21.6\%$ \\
+Reasoning coherence & 3.18 & 3.93 & $+23.5\%$ \\
+Guideline alignment & 2.85 & 3.93 & $+38.2\%$ \\
+Recommendation usefulness & 3.64 & 4.37 & $+20.0\%$ \\
+\midrule
+Brier score $\downarrow$ & 0.285 & \textbf{0.245} & $-14.2\%$ \\
+AUROC $\uparrow$ & 0.450 & 0.547 & $+21.7\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Base Qwen 3.5-9B against the same model after ORPO on 550 preference
+pairs, measured on the 103-case held-out split. Every rubric improves, guideline
+alignment most of all.}
+\label{tab:orpo}
+\end{table}
+
+Five hundred and fifty preference pairs moved a 9B model from last place to
+second, past Claude Opus 4.6. Every rubric improved, and that is the result worth
+holding onto: this is a recipe that lifts the whole assessment, not a trick that
+moves one number. It is also reproducible by anyone with the released dataset and
+two GPUs, which is the point of releasing it.
+
+Its held-out Brier of 0.245 is second of the eight, behind Sonnet 4.6 at 0.242,
+and should be read alongside Table~\ref{tab:baserate}. What the fine-tune fixed
+is overconfidence: the base model's mean stated probability was 0.452 against a
+true rate of 0.350, and the trained model's is 0.396. Whether the same recipe yields real predictive skill
+when the context fields are measured rather than generated is the open question
+this benchmark exists to make answerable.
+
+The base model's AUROC is instructive in the other direction. On the test split
+it posts 0.554, the highest of the eight, and on held out it collapses to 0.450,
+below chance. That is what an overfitted ranking looks like when the distribution
+shifts. The post-trained model goes the other way, 0.531 to 0.547, which suggests
+the fine-tune regularised its probability estimates rather than sharpening them.
+
+The economics are the part a clinic would care about. Running the 550 test cases
+costs \$184.81 with Opus 4.6 and \$7.98 with our model, which scores higher. At
+roughly 19 seconds and \$0.017 per case on hardware you already own, the
+post-trained small model is the sensible form factor for this workload, provided
+you want the explanation and not the prediction.
+
+% ===== ROBUSTNESS =====
+A benchmark paper should try to break its own benchmark. Four checks, all of
+which cost nothing to run because they reuse the collected responses.
+
+\textbf{Do the five rubrics measure five things?} Partly. The mean correlation
+between distinct rubrics is 0.49 and the first principal component explains 60\%
+of the variance across 4,370 judgements, so there is a strong general "good
+answer" factor. But the structure is not degenerate: recommendation usefulness
+and clinical integration correlate at 0.69, while recommendation usefulness and
+guideline alignment correlate at only 0.28. Reporting the five separately is
+justified. Reporting the unweighted mean as though it were five independent
+measurements is not.
+
+\textbf{Does the judge reward length?} Yes, and unevenly. Pooling all models, the
+Spearman correlation between response length and overall score is 0.61. Broken
+down per model it ranges from $-0.01$ for Opus 4.6 to $+0.76$ for Gemini 2.5
+Flash. Gemini is also the lowest-scoring commercial model and the one whose score
+depends most on how much it wrote. Any future version of this benchmark should
+control for length, and any reader comparing two close scores should ask whether
+one model simply wrote more.
+
+\textbf{Does patient-level leakage change anything?} No. Twenty-two patients
+contributed two embryos, and keeping only one embryo per patient removes 16 cases
+from the test split. No ranking changes and no score moves by more than 0.01. The
+defect is real and should be fixed by splitting on patient, but it did not
+contaminate these results.
+
+\textbf{Does the judge's own preference inflate our model?} We cannot rule it
+out, and this is the largest open question in the paper. GPT-5.4 is the judge, it
+wrote 92\% of the chosen responses our model learned from, and it sits at the top
+of the leaderboard. A model trained to sound like the judge should be expected to
+please the judge. Confirming the ranking with a second judge from a different
+family is the first thing we would do with more budget, and until that is done
+the sensible reading of our model's second place is "second according to
+GPT-5.4."
+
+% ===== LIMITATIONS =====
+\begin{itemize}
+\item \textbf{The judge cannot see the embryo.} Morphology grounding therefore
+      measures consistency with the Gardner grade in the prompt, not fidelity to
+      the image. The natural fix is the expert-written morphological descriptions
+      released by \citet{neu2026dataset}, which would let a future version score
+      image reading against something real.
+\item \textbf{One judge, and it is also a contestant.} GPT-5.4 grades a
+      leaderboard it appears on, and it wrote 92\% of the responses our model was
+      trained to imitate. Scoring a subset with a judge from a different family
+      would settle how much that inflates our second place. It is unfinished
+      work, not a design choice.
+\item \textbf{The prompt asks for implantation probability and we score against
+      clinical pregnancy.} Both endpoints are computed in the code; the
+      leaderboard reports clinical pregnancy. Treat the outcome metrics as a
+      stress test rather than a matched forecast.
+\item \textbf{Part of the patient context is generated}, for the reasons and with
+      the consequences set out in Section~\ref{sec:synthetic}. The two that bind
+      hardest: those fields are independent of outcome, so they cap what any
+      outcome metric here can show, and they are independent of each other, so
+      real clinical correlations such as PCOS with BMI are absent.
+\item \textbf{One clinic, one scanner, one population.} Everything here comes from
+      the Kromp release. Transfer to other labs is untested.
+\item \textbf{Splits are per image rather than per patient.} Quantified above;
+      fix in the next version.
+\item \textbf{Small absolute sample.} 550 test cases and 103 held out is enough to
+      separate most models and not enough to separate close ones, which is why
+      every comparison in this paper carries an interval.
+\end{itemize}
+
+% ===== RELEASE =====
+Everything needed to reproduce this paper is public.
+
+\begin{itemize}
+\item \textbf{Benchmark and code}, including case construction, the inference
+      runner, the judge, the metrics, and the analysis that produced every
+      interval in this paper: \url{https://github.com/The-Fertility-Plan/ivf-bench}
+\item \textbf{Model outputs}: 5,194 responses and every judge transcript for both
+      splits, in the repository under \texttt{data/runs/}.
+\item \textbf{Trained model}:
+      \url{https://huggingface.co/thefertilityplan/ivf-bench-qwen9b-vlm-orpo}
+\item \textbf{Preference dataset}:
+      \url{https://huggingface.co/datasets/thefertilityplan/ivf-bench-orpo-qwen9b-clipped}
+\item \textbf{Source data}: the Kromp blastocyst dataset \citep{kromp2023}, CC BY
+      4.0, at \url{https://doi.org/10.6084/m9.figshare.20123153.v3}. We do not
+      redistribute the images; \texttt{ivf-bench download} fetches them and
+      rebuilds our cases deterministically.
+\end{itemize}
+
+Code is Apache 2.0. Benchmark cases inherit CC BY 4.0 from the source dataset.
+Appendix~\ref{app:artifacts} lists every artifact with its identifier.
+
+The study cost \$813 as recorded in the released artifacts: \$432 for 51.5 hours
+of a two-H100 instance covering preference-data preparation, the hyperparameter
+search, training, and local inference, plus \$328 of API spend on the test split
+and \$53 on the held-out split. A further \$15 was spent re-running judge calls
+that the two defects in Section~\ref{sec:setup} had invalidated; those superseded
+calls are not counted in the per-model figures, which reflect the final scores
+only.

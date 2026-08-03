@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0679",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Description is broadly consistent with a 3AA blastocyst, but it leans heavily on the provided lab grade and includes somewhat overconfident image-specific claims such as thinning/loosening zona and likely beginning to hatch that may not be clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte yield, sperm parameters, diagnosis, endometrium, and lifestyle with embryo quality reasonably well, though some links are speculative and it does not deeply address age-related aneuploidy versus morphology limits."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a plausible probability estimate tied to embryo grade and age; minor issues include overstating 3AA as the highest possible grade and inferring sperm DNA fragmentation without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age effects, and proceeding with transfer, but it overstates 3AA as the highest possible grade and presents PGT-A somewhat too favorably for a single untested embryo without sufficient nuance about current guideline uncertainty."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including discussion of PGT-A and sperm DNA fragmentation if failure occurs, though recommendations could be more specific about single embryo transfer and follow-up strategy."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.011823,
+  "judge_latency_ms": 4299.836250000226,
+  "judge_prompt_tokens": 2231,
+  "judge_completion_tokens": 342
+}

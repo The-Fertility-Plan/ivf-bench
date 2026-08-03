@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0239",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It misstates Gardner stage 2 as a full blastocyst and calls 2BA 'high-quality'/'one of the highest quality scores'; stage interpretation is inaccurate, though ICM B and TE A descriptions are broadly consistent."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, smoking, PCOS, BMI, prior failed cycle, endometrium, and sperm parameters with prognosis reasonably well, though some links (e.g., low MII yield implying dysfunction) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it labels the embryo excellent despite a 2BA score, uses questionable percentage deductions, and infers suboptimal ovarian response from 8 MII in PCOS without enough support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation, smoking cessation, and antagonist use in PCOS are guideline-concordant, but recommending PGT-A as 'highly recommended' after one failed cycle at age 36 is stronger than evidence-based guidance, and morphology grading interpretation is off."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including SET, smoking cessation, metabolic screening, and possible uterine evaluation/future planning; practical overall, though some recommendations are a bit overreaching."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012048,
+  "judge_latency_ms": 3662.130000004254,
+  "judge_prompt_tokens": 2346,
+  "judge_completion_tokens": 334
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It follows the provided 1DD label but misstates expansion as a positive 'expanded' stage and says the blastocoel is more than 50% of embryo volume; Gardner 1 is early blastocyst, not expanded. ICM/TE descriptions are broadly consistent with D grades but somewhat generic and partly inferred rather than image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF history, endometriosis, sperm factors, BMI/lifestyle, and endometrial thickness with embryo prognosis reasonably well. However, it overinterprets FSH 9.2 as clear DOR and does not acknowledge missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate is directionally consistent with a 1DD embryo at age 39. Still, there are notable issues: contradiction between calling expansion positive and using an incorrect stage definition, and some unsupported inferences such as implied single-blastocyst availability and likely aneuploidy certainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing poor prognosis for a 1DD day-5 blastocyst and cautioning about expectations. But it contains Gardner grading inaccuracies, overstates FSH interpretation, and includes recommendations with limited guideline support (routine DHEA/CoQ10, laparoscopy implication, speculative protocol changes)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, considering sperm DNA fragmentation testing, and future cycle planning. Some suggestions are useful, though a few are not sufficiently nuanced or evidence-based for routine recommendation."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.012365,
+  "judge_latency_ms": 7498.796834028326,
+  "judge_prompt_tokens": 2384,
+  "judge_completion_tokens": 427
+}

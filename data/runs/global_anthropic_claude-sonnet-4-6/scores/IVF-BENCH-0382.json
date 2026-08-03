@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0382",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly discusses a day-5 expanded blastocyst and comments on ICM/TE visibility, but it over-interprets the image by asserting vacuolization, cellular debris, scalloped blastocoel, and possible herniation that may not be reliably visible from a single embryo image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, prior failed cycles, endometrium, and response to stimulation with embryo quality and prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but the probability model is partly ad hoc and double-counts related factors such as age/aneuploidy and unknown euploid status, while heavily weighting uncertain image findings."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but several elements are not strongly guideline-based or are controversial for routine use after this history, including ERA, NK cell testing, MTHFR/thrombophilia emphasis, and suggesting PGT-A as a strong indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions for transfer support, stress/lifestyle optimization, sperm DNA fragmentation testing, and contingency planning after failure, though some proposed investigations may not be appropriate routinely."
+    }
+  ],
+  "extracted_probability": 0.26,
+  "judge_cost_usd": 0.01993,
+  "judge_latency_ms": 7293.969415943138,
+  "judge_prompt_tokens": 2957,
+  "judge_completion_tokens": 343
+}

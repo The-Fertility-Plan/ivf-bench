@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates image-specific certainty (e.g., exact ICM location, clear TE uniformity, thinned zona) rather than limiting claims to what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, BMI, prior failed cycle, sperm motility, endometrial thickness, and lifestyle factors with embryo quality in a clinically meaningful way, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with a plausible adjustment of expected success based on embryo quality and maternal factors; minor overconfidence in some causal links keeps it from being exemplary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognostic framing, but recommending PGT-A after a single failed transfer in a 32-year-old with DOR is more debatable and not clearly guideline-driven; some statements about progesterone pharmacokinetics are not strongly established."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including SET, luteal support consideration, alcohol cessation, weight management, and future planning; useful but could be more specific about timing, workup, and alternatives if transfer fails."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01065,
+  "judge_latency_ms": 5895.600125018973,
+  "judge_prompt_tokens": 2274,
+  "judge_completion_tokens": 331
+}

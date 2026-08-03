@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0273",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage: Gardner 2 is an early blastocyst with the blastocoel occupying about half the embryo, not a full/expanded blastocyst, and the lab data itself inconsistently labels 2 as full blastocyst. ICM and TE descriptions are broadly plausible, but the analysis overcalls the embryo as 'excellent/top-quality' and adds image-specific detail that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, oocyte yield, sperm parameters, endometrial thickness, smoking, and lifestyle with embryo prognosis reasonably well. It misses some nuance around BMI being near-normal and diagnosis/first cycle context, but overall connects patient factors to embryo quality and transfer outlook."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable issues: it says age 37 is not advanced maternal age despite later treating it as age-related risk, overemphasizes paternal age as aneuploidy risk, and bases prognosis partly on an incorrect interpretation of the Gardner stage. The implantation estimate is plausible but not tightly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (single high-quality blastocyst transfer, smoking cessation, consideration of PGT-A discussion at age 37), but there are deviations: incorrect Gardner stage interpretation, overstating morphology as 'one of the highest grades possible,' and suggesting age 37 may imply shorter luteal phase/lower progesterone without clear guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable: proceed with transfer, emphasize smoking cessation, maintain luteal support, discuss PGT-A in future cycles, and optimize lifestyle. They are somewhat generic and could be more nuanced about counseling rather than prescriptive PGT-A, but still provide clear next steps."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01273,
+  "judge_latency_ms": 8650.782125012483,
+  "judge_prompt_tokens": 2380,
+  "judge_completion_tokens": 452
+}

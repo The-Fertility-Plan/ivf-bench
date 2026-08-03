@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0419",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and contains a grading inconsistency: it calls 2AA a fully expanded/top-tier blastocyst and says the blastocoel distends the zona, whereas Gardner 2 indicates an early blastocyst rather than full expansion. It also claims features like no fragmentation/degeneration that may not be confidently assessed from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor diagnosis, prior live birth, sperm parameters, BMI, and endometrial thickness with prognosis reasonably well, though it somewhat overemphasizes prior live birth and under-discusses prior ectopic/tubal considerations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the prognosis is inflated by misclassifying the embryo as highest quality and by treating prior live birth as strongly boosting implantation probability. The probability estimate is therefore only partially supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly consistent with IVF practice (young age favorable, PGT-A not routinely indicated at 31 without specific indication), but the Gardner grading interpretation is incorrect and the recommendation to proceed with fresh transfer assumes facts not provided and does not address tubal pathology such as hydrosalpinx if relevant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps on transfer, PGT-A, lifestyle, stress support, and future protocol planning. However, recommendations are somewhat generic and miss case-specific nuances such as confirming tubal status/hydrosalpinx and ectopic risk counseling."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012816,
+  "judge_latency_ms": 5137.431875002221,
+  "judge_prompt_tokens": 2362,
+  "judge_completion_tokens": 382
+}

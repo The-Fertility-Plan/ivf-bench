@@ -1,0 +1,72 @@
+# Secrets
+.env
+.env.bak
+
+# Internal working material. Lives locally, never published.
+docs/*
+!docs/distribution_parameters.md
+ivf-bench-spec.md
+html_form_examples/
+logs/
+release/
+.claude/
+scripts/vision_only_samples/
+
+# Raw source images and intermediate model artifacts are distributed via
+# figshare and Hugging Face, not tracked here.
+data/raw/
+data/orpo/
+data/runs/*/raw/
+data/runs/*/responses_raw_with_cot/
+data/runs/*/scores_stale_cot/
+data/runs/*/scores_zero_judge_failure/
+data/runs/*/scores_opus_judged/
+data/runs/_zero_score_backup/
+
+# LaTeX build products
+arxiv/*.aux
+arxiv/*.log
+arxiv/*.out
+arxiv/*.fls
+arxiv/*.fdb_latexmk
+arxiv/*.blg
+arxiv/*.synctex.gz
+arxiv/submission/
+arxiv/ivf_bench_arxiv.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Environments, IDE, OS, testing
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.pytest_cache/
+.coverage
+htmlcov/
+scripts/diff_vision_weights.py
+scripts/infer_base_smoke.py
+scripts/infer_trained_smoke.py
+scripts/infer_trained_text_only.py
+scripts/infer_vlm_final.py
+scripts/plot_scaling_laws.py
+scripts/probe_vision_only_chosen.py
+scripts/push_orpo_clipped.py
+scripts/push_trained_model.py
+scripts/wandb_cleanup.py
+scripts/opus_retry.sh
+configs/probe_direct.yaml
+configs/probe_sweep.yaml
+configs/probe_vlm_smoke.yaml

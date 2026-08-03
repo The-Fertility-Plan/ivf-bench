@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0076",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA grade, but it overstates morphology by saying the embryo has 'successfully hatched or is about to hatch' despite grade 3 indicating expanded blastocyst rather than hatching, and relies heavily on the supplied grade rather than strictly image-grounded features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, endometrium, male factor, and first-cycle status with embryo quality in a clinically meaningful way, though some links (e.g., stress effects, implied hidden sperm defects) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with a plausible probability range tied to embryo quality and patient modifiers; minor issues include overstating embryo quality as 'top-tier' and some speculative assumptions about male factor and stress."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles and Gardner grading, but includes less evidence-based claims about stress/cortisol and suggests 'robust progesterone support' based on BMI/stress without clear guideline basis; the recommendation to proceed is reasonable but not especially nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, weight optimization, stress management, and possible sperm DNA fragmentation testing; however, recommendations are somewhat generic and lack protocol-specific detail."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.0111825,
+  "judge_latency_ms": 5512.643666006625,
+  "judge_prompt_tokens": 2391,
+  "judge_completion_tokens": 347
+}

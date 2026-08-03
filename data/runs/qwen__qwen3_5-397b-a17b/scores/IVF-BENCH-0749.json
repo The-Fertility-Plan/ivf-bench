@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and correctly notes the stage/description discrepancy, but it infers specific ICM location and cell-border detail not clearly verifiable from the prompt/image context and does not discuss zona features in a grounded way."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, prior cycle history, endometrium, smoking, and sperm motility with embryo quality well, though some links (e.g., sperm DNA fragmentation, low BMI effects) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate that broadly follows from the factors discussed; minor issues include over-attribution of outcome reduction to smoking/BMI and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, smoking cessation, and considering male-factor workup, but recommendations such as routine intensified luteal support, protocol change based on one yield, and broad PGT-A suggestion at age 34 are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including lifestyle modification and male-factor evaluation, but some recommendations lack nuance or supporting indications for this specific case."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012051,
+  "judge_latency_ms": 5768.471875111572,
+  "judge_prompt_tokens": 2402,
+  "judge_completion_tokens": 323
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0195",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonably identifies a very poor-quality early-stage embryo and notes the mismatch between the image/day and the reported Gardner 1DD, but it overstates specific features such as degeneration/arrest and comments on structures not clearly assessable from the provided information."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, BMI, prior IVF history, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links (especially paternal age to DNA fragmentation) are presented too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from the reported embryo grade, but there are notable inconsistencies: it calls the embryo a morula/very early blastocyst while also relying heavily on a 1DD blastocyst label, and some causal claims are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles regarding poor embryo quality and counseling, but several recommendations are overstated or not guideline-level standard (e.g., calling PGT-A 'essential,' asserting paternal age >40 is strongly associated with high DNA fragmentation, and suggesting testicular sperm/TESA too readily)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, and future workup/planning, including sperm DNA fragmentation testing, culture strategy, and lifestyle optimization, though some recommendations would benefit from more nuance and prioritization."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.01165,
+  "judge_latency_ms": 6763.648124993779,
+  "judge_prompt_tokens": 2344,
+  "judge_completion_tokens": 386
+}

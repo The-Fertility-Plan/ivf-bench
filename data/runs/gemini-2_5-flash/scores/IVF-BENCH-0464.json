@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0464",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "ICM and TE interpretation are reasonable, but the response overcalls the expansion stage and explicitly disputes the provided 2BA label, inferring 3BA/4BA and a thin zona that may not be securely supported from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, PCOS, endometrial thickness, sperm factors, and prior cycle history with embryo quality, though some links (e.g., BMI 18.2 as a major concern) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable issues: it treats BMI 18.2 as underweight/significantly concerning, and the morphology discussion conflicts with the supplied Gardner score, creating some inconsistency in the prognostic reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner components and emphasis on maternal age/aneuploidy are broadly aligned with IVF practice, but reassigning the embryo to 3BA/4BA despite the provided 2BA and overstating BMI-related risk reduce guideline-consistent precision."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers general prognostic commentary but limited concrete next-step recommendations for transfer management or future cycle planning; practical guidance is not well developed in the provided text."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01116,
+  "judge_latency_ms": 5743.070249969605,
+  "judge_prompt_tokens": 2394,
+  "judge_completion_tokens": 345
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed morphology section but appears to overcall features not reliably inferable from a single embryo image, including specific cell cluster counts, fragmentation, and a strong claim that the embryo is more like a compacting morula/early blastocyst rather than the reported 2AA. The staging discrepancy may be reasonable to flag, but the morphology description is not clearly image-grounded enough to be highly accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, prior IVF outcomes, ectopic history, sperm parameters, endometrium, and diagnosis with embryo quality and prognosis, highlighting how these factors modify transfer expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially around prognosis modifiers and the importance of prior ectopics. However, the implantation estimate is somewhat speculative and heavily driven by assumptions such as unconfirmed tubal pathology and morphology-image discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the response is broadly aligned with IVF practice, especially regarding ectopic risk and hydrosalpinx evaluation, but several recommendations are not strongly guideline-based or are controversial/routinely not recommended (e.g., NK cell testing, MTHFR, ERA in this context, broad thrombophilia workup, aspirin/LMWH without indication, strong PGT-A recommendation at age 32)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next steps, especially verifying embryo staging and assessing tubal status before transfer, plus future-cycle planning. It is practical overall, though some suggested tests/interventions may not be appropriate or necessary."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.01584,
+  "judge_latency_ms": 7221.384459058754,
+  "judge_prompt_tokens": 3275,
+  "judge_completion_tokens": 401
+}

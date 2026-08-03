@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0409",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response includes several likely fabricated image-specific details (vacuolization, debris, fragmentation, metabolic stress) and misstates the provided Gardner expansion context by describing ~50% volume/grade 2 while the lab data says full blastocyst. ICM/TE descriptions are broadly compatible with 2BB, but overall morphology interpretation is not reliably image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, prior miscarriage, tubal factor, endometrium, ovarian response, and sperm parameters, and connects them to prognosis. Some factors are overemphasized or weakly evidenced, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: inconsistent handling of the blastocyst stage versus the supplied Gardner score, somewhat arbitrary probability adjustments, and overconfident attribution of effects from stress and moderate alcohol. Conclusions are generally coherent but not fully well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard (proceeding with transfer, luteal support, considering PGT-A in future planning), several suggestions are not guideline-based or are overstated, including routine aspirin/heparin consideration, ERA after failed transfers, immunologic testing, and framing alcohol as the highest-yield intervention. This weakens alignment with ASRM/ESHRE-style evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and future-cycle planning, including luteal support review, additional testing, and contingency planning. However, some recommendations are not appropriately selective or evidence-based, limiting top-tier usefulness."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.02111,
+  "judge_latency_ms": 8019.560124957934,
+  "judge_prompt_tokens": 3001,
+  "judge_completion_tokens": 407
+}

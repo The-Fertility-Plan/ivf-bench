@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0683",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label and gives a reasonable ICM/TE interpretation, but it adds uncertain image-specific details such as a possible partial hatching cleft and borderline 3BB characterization that may overreach from a single static image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, ovarian response, prior cycle history, and semen parameters well with embryo quality, though some factors like unknown AMH are given more weight than they likely deserve for transfer prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the implantation estimate generally follows from the embryo grade and patient profile, with only minor overinterpretation of lifestyle factors such as stress and moderate alcohol."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with standard IVF practice and Gardner grading principles, including proceeding with transfer and not mandating PGT-A at age 32, though some statements about stress and selective testing are more advisory than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, lifestyle optimization, and contingency planning after failure; useful and specific, though not highly tailored to protocol-level clinical decision making."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01536,
+  "judge_latency_ms": 4778.635374997975,
+  "judge_prompt_tokens": 3440,
+  "judge_completion_tokens": 336
+}

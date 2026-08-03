@@ -1,0 +1,90 @@
+# VLM ORPO Sweep Config for Qwen 3.5-9B on IVF-Bench
+# Requires: aitraining >= 0.0.53 (VLM-patched fork)
+# Run on Lambda 2x H100 80GB:
+#   aitraining --config training_orpo_qwen_vlm_sweep.yaml
+#
+# Sweep also serves as smoke-test:
+#   - Confirms <think> tags are tokenized and contributing to loss
+#   - Confirms images decode + flow through ProcessorMixin
+#   - Confirms VLMORPOTrainer is selected (image_column set)
+#
+# Sweep design — based on Thinking Machines LoRA guidance + tributo sweep round 1:
+#   - lora_r=8, lora_alpha=36 fixed (already validated on tributo orpo sweep)
+#   - lr sweep range 1e-5 → 5e-4: VLM full-FT LR is ~10x lower than text LLM,
+#     so LoRA LR (20-100x full-FT) lands in 1e-4 to ~1e-3. Cap at 5e-4 because
+#     image projector layers are sensitive.
+#   - dpo_beta sweep range 0.05 → 0.3: lower than text ORPO since image features
+#     dominate gradient norms.
+
+task: llm-orpo
+base_model: Qwen/Qwen3.5-9B
+project_name: ivf-bench-qwen9b-vlm-orpo-sweep   # NEW project — true VLM training (vision encoder loaded)
+log: wandb
+backend: local
+
+data:
+  path: monostate/ivf-bench-orpo-qwen9b-clipped   # text-clipped: chosen<18K chars, rejected<12K chars (preserves images)
+  train_split: train
+  valid_split: eval
+  chat_template: tokenizer
+  column_mapping:
+    text_column: chosen
+    rejected_text_column: rejected
+    prompt_text_column: prompt
+    image_column: images   # triggers VLMORPOTrainer (bool(image_column) check)
+
+params:
+  # ---- Fixed params ----
+  # Sweep is for SEARCH only: 1 epoch per trial is plenty to rank (lr, dpo_beta).
+  # After the sweep, run training_orpo_qwen_vlm_final.yaml with the best params
+  # for the full 3-epoch production training.
+  epochs: 1
+  batch_size: 1
+  gradient_accumulation: 8
+  optimizer: adamw_torch
+  # Per Thinking Machines "LoRA Without Regret": use CONSTANT LR + no warmup
+  # for the sweep so eval_loss reflects the base LR, not its cosine position.
+  # Final retrain uses cosine + warmup.
+  scheduler: constant
+  warmup_ratio: 0
+  # Empirical: at block_size=8192 we hit OOM in attention backward at 15.14 GiB
+  # with ~5 GB shortfall. Attention backward is O(seq²) so cutting seq cuts it
+  # quadratically. block_size=6144 keeps all chosen (p99=5292) intact, only
+  # clips long-rejected outliers (~5-10% of rejected get truncated).
+  block_size: 6144
+  model_max_length: 6144
+  max_prompt_length: 1024
+  max_completion_length: 5120
+  peft: true
+  target_modules: all-linear
+  lora_r: 8
+  lora_alpha: 36
+  lora_dropout: 0.05
+  mixed_precision: bf16
+  attn_implementation: sdpa
+  # DDP + grad-ckpt (default) + chunked logps in patched VLMORPOTrainer.
+  # block_size=8192 brings logits/grad pair within budget.
+  padding: right
+  save_strategy: epoch
+  eval_strategy: epoch
+  save_total_limit: 1     # keep only best — sweep produces many runs
+  logging_steps: 5
+  seed: 42
+
+  # ---- Sweep config ----
+  use_sweep: true
+  sweep_backend: optuna
+  sweep_n_trials: 8
+  sweep_metric: eval_loss
+  sweep_direction: minimize
+  wandb_sweep: true
+
+  # Sweep over LR + dpo_beta (lora_r/alpha already settled).
+  # LR range per Thinking Machines "LoRA Without Regret": LoRA optimal LR is
+  # ~10x FullFT LR. For Qwen 9B FullFT ~1e-5/2e-5 → LoRA target 1e-4..5e-4.
+  # We sweep 5e-5 → 1e-3 (log) to bracket that with margin.
+  sweep_params: '{"lr": {"type": "loguniform", "low": 5e-5, "high": 1e-3}, "dpo_beta": {"type": "uniform", "low": 0.05, "high": 0.3}}'
+
+  # Defaults (overridden per-trial by sweep)
+  lr: 1e-4
+  dpo_beta: 0.1

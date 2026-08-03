@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0485",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the reported 2AA grade, but it overstates certainty from the image, mislabels expansion by calling grade 2 'full,' and describes specific ICM location/details that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR, ovarian response, sperm parameters, endometrium, and prior cycle reasonably well, though it incorrectly implies low AMH despite AMH being unavailable and does not fully contextualize prior failed IVF."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but the implantation estimate is somewhat inflated for a 36-year-old untested day-5 2AA embryo, and there are minor inconsistencies such as calling 2AA 'top-tier' while also misdescribing expansion stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains notable deviations from standard IVF guidance: Gardner 2 is not a full blastocyst, implantation/live birth expectations are overstated, and suggesting biopsy/PGT-A of a single fresh-transfer candidate with concern about biopsy loss is not well framed per current evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next-step suggestions such as proceeding with transfer and discussing future planning, but recommendations are somewhat generic and include weakly supported options like mild/natural stimulation and early donor-oocyte counseling after a single additional failure."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012678,
+  "judge_latency_ms": 5182.218624999223,
+  "judge_prompt_tokens": 2461,
+  "judge_completion_tokens": 353
+}

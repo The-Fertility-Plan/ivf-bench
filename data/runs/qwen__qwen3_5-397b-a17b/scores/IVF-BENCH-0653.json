@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely mirrors the provided Gardner label rather than cautiously describing image-visible features, and it incorrectly interprets 2 as a full blastocyst; in Gardner grading, full blastocyst is stage 3. It also adds specific ICM/TE localization and developmental claims not clearly verifiable from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, sperm quality, BMI, diagnosis, and cycle history with embryo prognosis reasonably well, though some links are overstated and the unexplained infertility interpretation is somewhat simplistic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: misclassification of the expansion stage, tension between Day 4 transfer and blastocyst timing, and some speculative claims about accelerated kinetics and implantation implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a young patient and not routinely recommending PGT-A are broadly guideline-consistent, but the grading interpretation is incorrect and some advice (freeze-all after one failure, progesterone/BMI linkage, pelvic blood flow claims) is less evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer strategy, luteal support, endometrial assessment, and future planning. However, some recommendations are generic or based on speculative rationale rather than case-specific evidence."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013107,
+  "judge_latency_ms": 9858.157208072953,
+  "judge_prompt_tokens": 2549,
+  "judge_completion_tokens": 364
+}

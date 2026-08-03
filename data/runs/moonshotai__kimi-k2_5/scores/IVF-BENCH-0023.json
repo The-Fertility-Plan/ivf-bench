@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD, but it overstates image-specific findings and likely fabricates details such as a precise ICM location, collapsing areas, apoptotic bodies, delayed-cleavage characterization, and a thickened zona not reliably inferable from the provided data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior IVF outcomes, endometrial thickness, oocyte yield, and sperm parameters reasonably well, though it overinterprets low oocyte number as diminished ovarian reserve despite missing AMH and does not fully contextualize that 4 oocytes can still occur without established DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable issues: Day 4 'accelerated blastulation' is questionable in this context, the embryo is called both delayed-cleavage and accelerated, and several conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic Gardner grading interpretation is aligned, but several recommendations are not strongly guideline-based or are overstated, including mandatory aggressive protocol changes, very high gonadotropin dosing, routine GH/DHEA use, embryo banking with PGT-A in a poor responder, and calling the transfer a 'compassionate transfer' or saying the embryo would likely be discarded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides concrete next steps for transfer counseling, luteal support, follow-up, and future cycle considerations, but some recommendations are too prescriptive or insufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0130675,
+  "judge_latency_ms": 7846.186916984152,
+  "judge_prompt_tokens": 2707,
+  "judge_completion_tokens": 420
+}

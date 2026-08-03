@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes very poor embryo quality and notes the 1DD discrepancy, but it likely overstates degeneration/non-viability from limited visible features, introduces morula-transition and granular/disorganized details that may not be reliably supported, and gives little image-grounded comment on zona or specific ICM/TE morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, endometrium, BMI/lifestyle, and DOR diagnosis with embryo quality reasonably well, though some inferences (e.g., hidden male factor or cytoplasmic maturity) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from a 1DD assessment, but there are inconsistencies around stage interpretation (morula/early blastocyst vs Gardner 1), and the statement that the embryo is essentially non-viable is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with poor-prognosis embryo management, but some recommendations are not strongly guideline-based for this exact scenario (routine sperm DNA fragmentation testing, empiric supplements, protocol changes despite adequate response), and the interpretation of Gardner stage has minor inaccuracies."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear counseling for the current transfer and concrete future-cycle considerations, including reassessing reserve, considering culture to day 5/6, and discussing transfer timing; however, some suggestions are somewhat speculative rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013029,
+  "judge_latency_ms": 5864.475667003717,
+  "judge_prompt_tokens": 2368,
+  "judge_completion_tokens": 395
+}

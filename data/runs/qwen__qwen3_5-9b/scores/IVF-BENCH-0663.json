@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It identifies the key grading discrepancy, but then incorrectly states that a full blastocyst corresponds to Grade 5 and leans toward calling the embryo an early blastocyst/morula-transition despite the provided Gardner score being 2AB. This creates notable morphological inaccuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/high AMH, ovarian response, sperm parameters, BMI, and endometrial thickness with embryo quality reasonably well, though some links are somewhat generic and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has important internal inconsistencies, especially around blastocyst expansion grading (calling full blastocyst Grade 5) and interpreting the embryo as early blastocyst while also relying on the supplied 2AB score. It is structured, but the logic is undermined by these contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF/Gardner criteria, particularly the incorrect expansion-stage mapping and the claim that 7.0 mm is 'ideal' rather than acceptable/borderline adequate. PGT-A comments are partly reasonable but overall guideline fidelity is weakened."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next-step recommendations including proceeding with transfer, luteal support, lifestyle optimization, and future-cycle considerations. Some suggestions are generic and one or two are debatable, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013062,
+  "judge_latency_ms": 5017.125124999438,
+  "judge_prompt_tokens": 2464,
+  "judge_completion_tokens": 378
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable grading inconsistencies: it calls expansion grade 2 'fully expanded' and says the embryo is 'hatched or ready to hatch,' which does not match Gardner stage 2. It also describes a thin, taut zona and specific sided ICM localization that may not be reliably supported. ICM/TE interpretation is broadly plausible but overall morphology description is only partially accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometrium, prior IVF outcomes, male factor context, and sperm parameters with embryo quality in a clinically meaningful way. It misses AMH being unavailable and could better distinguish embryo morphology from likely euploidy, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are important issues: morphology interpretation is inconsistent with the stated Gardner score, and the claim that euploid success would be '>90%' is overstated. The implantation estimate is directionally reasonable but supported by somewhat inflated baseline assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations from evidence-based guidance: overstating PGT-A benefit in a 31-year-old, suggesting ERA relatively readily despite limited routine support, and implying euploid transfer success rates above 90%. Gardner grading interpretation is also imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, luteal support, and future evaluation including sperm DNA fragmentation and possible PGT-A. Recommendations are useful, though some are not sufficiently nuanced regarding indications and evidence strength."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013443,
+  "judge_latency_ms": 5268.169666000176,
+  "judge_prompt_tokens": 2386,
+  "judge_completion_tokens": 419
+}

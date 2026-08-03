@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0159",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner score rather than the image, claims the crop is mainly ICM and states the score is 'top-tier'; also misstates stage 3 as expanded blastocyst, which is inconsistent with standard Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, ovarian response, prior live birth/ectopic, endometrium, BMI, and sperm factors with embryo quality reasonably well, though some points are overstated or weakly supported."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: underweight classification at BMI 18.8 is incorrect, paternal age concern is overstated, and aneuploidy risk is inconsistently minimized for age 37."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based practice: incorrect Gardner stage description, overconfident morphology-to-euploidy inference, questionable claim that moderate alcohol is acceptable pre-conception, and inaccurate aneuploidy risk estimate for age 37."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, close early hCG/ultrasound monitoring given ectopic history, and considering PGT-A in future cycles, though some advice lacks nuance."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.010535,
+  "judge_latency_ms": 5275.850249978248,
+  "judge_prompt_tokens": 2216,
+  "judge_completion_tokens": 333
+}

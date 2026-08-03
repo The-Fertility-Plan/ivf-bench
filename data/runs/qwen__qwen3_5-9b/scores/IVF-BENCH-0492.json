@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0492",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst, but it overstates image-specific certainty (e.g., 'clearly shows' thinned zona and robust TE) and adds details that may not be confidently verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior cycle, male factor, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overcalls some factors as more favorable than warranted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it incorrectly refers to fertilization from MII count, assumes embryo yield details not provided, and labels age 36 and 7.5 mm lining as more favorable/ideal than is fully justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on using Gardner grading and recognizing age-related aneuploidy risk, but recommendations such as routine CoQ10/Vitamin D, calling 3BA 'top tier,' and strong endorsement of PGT-A after one failed cycle are somewhat overstated relative to guideline-based nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer and possible future evaluation, though some suggestions are generic and not tightly tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012399,
+  "judge_latency_ms": 4792.3537079987,
+  "judge_prompt_tokens": 2368,
+  "judge_completion_tokens": 353
+}

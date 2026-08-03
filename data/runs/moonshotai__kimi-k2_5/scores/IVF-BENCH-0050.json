@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes a plausible blastocyst with appropriate ICM/TE comments, but it introduces a grading inconsistency by noting that 'full blastocyst' corresponds to grade 3 while still accepting 2AB, and some image-specific details (e.g., zona thinning, exact TE cohesiveness) may be overcalled."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, AMH, BMI, sperm parameters, endometrium, and cycle history with embryo quality in a clinically meaningful way, though it somewhat overstates the impact of AMH on embryo aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling 2AB 'high-quality' while highlighting a mismatch between the stated expansion description and Gardner grade, and inferring higher aneuploidy risk from low AMH despite young age and good response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles and Gardner grading concepts, but the handling of the expansion grade discrepancy is imperfect and the suggestion that low AMH meaningfully raises aneuploidy risk in a 24-year-old is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response provides risk/prognosis discussion but is truncated before clear transfer recommendations or future cycle planning, so practical next steps are limited."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0108175,
+  "judge_latency_ms": 7262.068125011865,
+  "judge_prompt_tokens": 2203,
+  "judge_completion_tokens": 354
+}

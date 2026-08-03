@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0467",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA label and gives a reasonable ICM/TE discussion, but it over-interprets image details, introduces uncertainty ranges like 2/BB–3BA and possible CB, and mentions features such as irregularity/artifact and compact ICM that may not be clearly supportable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve markers, diagnosis, oocyte yield, endometrium, semen parameters, BMI, lifestyle, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with prognosis appropriately tied to morphology, age, and untested status; minor issues include some overstatement of image-based certainty and a slightly optimistic implantation range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with standard IVF practice, including single embryo transfer and caution about add-ons; minor deviations include somewhat broad discussion of PGT-A and optimistic success framing for a 2BA untested embryo at age 36."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle planning, including SET, luteal support, avoiding unnecessary add-ons, and considering future stimulation/PGT-A strategy, though some advice remains somewhat general."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.016113,
+  "judge_latency_ms": 5144.510374993843,
+  "judge_prompt_tokens": 3566,
+  "judge_completion_tokens": 361
+}

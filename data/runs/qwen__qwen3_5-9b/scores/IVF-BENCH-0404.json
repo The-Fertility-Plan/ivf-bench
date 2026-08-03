@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0404",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies strong ICM and fair TE, but overstates hatching/recently hatched features and gives detailed zona thinning claims that may not be clearly supported from the provided information."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, endometrial thickness, sperm parameters, and embryo grade reasonably well, though it overinterprets ovarian reserve from 6 oocytes and AMH/FSH that are not clearly suggestive of DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable reasoning issues: calling 3AB 'top-tier/high-quality' somewhat strongly, attributing a quantified implantation penalty to stress, and linking this profile strongly to DOR and donor eggs despite limited support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from evidence-based IVF practice, including suggesting donor eggs after one cycle with 6 oocytes at age 34, implying stress meaningfully lowers implantation, and proposing vaginal estrogen/protocol changes without clear indication; PGT-A discussion is also not well framed for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and considering luteal support, but some advice is too speculative or not appropriately nuanced for this patient, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01248,
+  "judge_latency_ms": 4306.154999998398,
+  "judge_prompt_tokens": 2435,
+  "judge_completion_tokens": 345
+}

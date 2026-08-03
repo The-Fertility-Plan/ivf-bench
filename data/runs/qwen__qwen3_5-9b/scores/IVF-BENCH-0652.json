@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly vacillates between zygote, morula, early blastocyst, and degenerating blastocyst, without a stable morphology assessment. It does note a mismatch with the provided 2BA label, but the actual image description is inconsistent and includes speculative features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It mentions key factors such as age, BMI, AMH, sperm quality, endometrium, and ovarian response, and attempts to relate them to prognosis. However, integration is incomplete and muddled by repeated focus on data inconsistencies rather than a clear synthesis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The reasoning is highly repetitive and internally contradictory, cycling through multiple incompatible interpretations and never settling on a coherent final assessment. Probability discussion is also inconsistent and not cleanly tied to one conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response correctly recognizes that Gardner grading applies to blastocysts and that Day 4 transfer is inconsistent with a standard 2BA blastocyst label. However, it also makes questionable statements such as implying Day 4 blastocyst formation is biologically impossible and suggesting PGT-A in a vague, not case-grounded way."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "There are some potentially useful suggestions, such as clarifying embryo stage, considering Day 5 culture in future cycles, and addressing BMI, but recommendations remain vague and are not presented as a clear clinical plan for this transfer and future management."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01478125,
+  "judge_latency_ms": 9385.544375050813,
+  "judge_prompt_tokens": 8745,
+  "judge_completion_tokens": 385
+}

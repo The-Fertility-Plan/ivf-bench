@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor embryo quality consistent with 1DD, but it misstates the Gardner expansion stage (calling 1 a cavity less than half rather than at least half the embryo), describes a cleavage-to-morula transition rather than a blastocyst, and adds features like vacuoles and arrest that are not firmly supported by the provided grading alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, male factor, and cycle context reasonably well, highlighting favorable maternal factors versus poor embryo quality, though it over-attributes the outcome to sperm DNA fragmentation without sufficient evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis follows from the poor grade, but there are notable leaps such as inferring Day 4 arrest, near-non-viability, and sperm DNA fragmentation from limited data, plus some inconsistency in stage interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on very poor prognosis for a 1DD embryo is broadly aligned with clinical practice, but statements that such embryos are generally non-transferable/discarded and recommendations like routine PGT-A at age 34 or stress as a major implantation factor are somewhat overstated relative to guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for counseling, transfer decision-making, and future workup, including sperm DNA fragmentation testing and culture strategy, though some suggestions are more speculative than case-driven."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.0117,
+  "judge_latency_ms": 6723.416708002333,
+  "judge_prompt_tokens": 2322,
+  "judge_completion_tokens": 393
+}

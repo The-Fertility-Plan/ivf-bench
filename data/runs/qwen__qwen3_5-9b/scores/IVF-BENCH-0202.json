@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0202",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies the embryo as very poor quality and notes absent/degenerative ICM and TE, but it misstates Gardner stage 1 as blastocoel less than 50% rather than at least half the embryo, and speculates morula/early blastocyst features not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, sperm parameters, BMI, endometrial thickness, and oocyte maturity with embryo quality reasonably well, though it overemphasizes paternal age and infers causes not directly established by the data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor embryo grade, but there are notable inconsistencies such as misinterpreting the expansion grade and making unsupported claims about diminished reserve and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing 1DD as very poor prognosis and recommending counseling, but it contains Gardner grading inaccuracies and overstates recommendations like routine ICSI/PGT-A based mainly on paternal age without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, and future planning, but some recommendations are somewhat generic and not fully individualized to this specific cycle context."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.0111275,
+  "judge_latency_ms": 4994.889499968849,
+  "judge_prompt_tokens": 2327,
+  "judge_completion_tokens": 354
+}

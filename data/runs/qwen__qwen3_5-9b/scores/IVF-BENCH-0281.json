@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0281",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a hatching/hatched high-quality blastocyst consistent with 4AA and appropriately describes ICM, TE, and thinning/breached zona, though much of the detail appears inferred from the provided grade rather than uniquely image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior failed cycles, tubal factor, endometrial thickness, sperm parameters, and partner age with embryo quality well, but overstates FSH significance and labels RIF somewhat simplistically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the probability estimate is tied to age/history, but there are notable issues: calling 4AA the 'best possible'/'gold standard,' implying near-certainty in naive patients, and mixing unsupported claims about SDF and inflammation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from guideline-based practice: routine immune/thrombophilia workup for implantation failure is not generally recommended, fresh-to-freeze-all suggestion is overstated, and some claims about paternal age/SDF and FSH are stronger than evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including proceeding with transfer, luteal support, uterine cavity evaluation, and consideration of PGT-A/SDF testing, though some recommendations are not sufficiently nuanced or evidence-restricted."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012612,
+  "judge_latency_ms": 4747.714290999284,
+  "judge_prompt_tokens": 2489,
+  "judge_completion_tokens": 343
+}

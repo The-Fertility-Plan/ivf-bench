@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0394",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 1DD blastocyst and appropriately identifies poor ICM/TE, but it overstates certainty from the image, describes features like a 'well-formed' cavity and specific TE fragmentation that may not be reliably discernible, and does not comment on other visible structural details such as zona appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, sperm parameters, endometrium, and diagnosis with embryo quality reasonably well, though it overinterprets FSH 8.5 as DOR and does not acknowledge missing AMH or the limited predictive value of stress."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from poor morphology plus age, but there are notable issues: calling expansion 'good' for a grade 1 embryo, implying morphology strongly indicates aneuploidy, and recommending vitrification for an embryo supposedly being considered for fresh transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology appropriately and broadly reflects poorer prognosis for DD embryos, but several recommendations are not well aligned with guidelines or evidence: routine strong endorsement of PGT-A, suggesting donor eggs after one failed cycle at age 39, overstating stress effects, and the incorrect vitrification/thaw advice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical counseling points and future-cycle considerations, but recommendations are only moderately useful because some are generic and others are questionable or internally inconsistent, limiting clinical applicability."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013641,
+  "judge_latency_ms": 5083.476833002351,
+  "judge_prompt_tokens": 2572,
+  "judge_completion_tokens": 395
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0216",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets the image as a high-magnification crop of the ICM and assigns specific visible features like a nucleus/vacuole that are not reliably discernible. It loosely matches the provided 3AA label but the image-based morphology description is not well grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, and endometrial thickness with embryo quality, but omits or underuses important factors such as tubal factor context, prior biochemical pregnancy, day-5 transfer implications, and the limited significance of morphology for euploidy prediction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, linking favorable age and morphology to prognosis, but it makes unsupported claims such as 'align perfectly,' 'top 10%,' and implying morphology significantly predicts euploidy. The response is also incomplete/truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly consistent with Gardner grading concepts and standard IVF prognostic thinking, but overstates certainty from morphology and sperm parameters and does not demonstrate nuanced guideline-based counseling about implantation versus euploidy/live birth."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The visible response does not provide concrete transfer recommendations or future cycle planning; it is truncated before actionable next steps are given."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.009015,
+  "judge_latency_ms": 6055.298624967691,
+  "judge_prompt_tokens": 1608,
+  "judge_completion_tokens": 333
+}

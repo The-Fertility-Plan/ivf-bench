@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0520",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches the reported 2BA features, but it incorrectly describes grade 2 as a full blastocyst with thin stretched outer layer and adds speculative 'bubbly/fragmentation' detail not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, diagnosis, sperm parameters, and first-cycle context reasonably well, though it overemphasizes paternal age and does not fully contextualize tubal factor as favorable for embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is clear, but there are inconsistencies between the stated Gardner expansion stage and the narrative, and the implantation estimate is heavily discounted based on paternal age without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles, but recommending PGT-A largely because the male partner is 42 is not strongly guideline-based, and the morphology interpretation of expansion stage is somewhat off relative to Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, counseling on expectations, and future planning, though recommendations are somewhat generic and the PGT-A advice is not ideally nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.011583,
+  "judge_latency_ms": 4882.496334001189,
+  "judge_prompt_tokens": 2306,
+  "judge_completion_tokens": 311
+}

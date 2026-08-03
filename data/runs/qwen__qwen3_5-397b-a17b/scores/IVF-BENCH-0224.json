@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0224",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates image-specific certainty, calling stage 3 'fully expanded' with thinning zona/pre-hatching features more typical of stage 4 and adds details like clear cytoplasm/no vacuolization that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including age, BMI, miscarriage history, endometrium, ovarian response, and sperm parameters, and relates them to prognosis; however, some links are somewhat speculative and diagnosis is not meaningfully incorporated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability adjustment from embryo quality to overall prognosis. Minor issues include somewhat confident quantitative discounts for BMI and strong inferences from stress/paternal age without much nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age, and single good-quality blastocyst transfer, but it overstates 3AA as 'gold standard/top 10-15%' and 'strongly' recommends PGT-A based mainly on one miscarriage and paternal age, which is not clearly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, checking luteal support adequacy, considering metabolic screening, weight optimization, and possible SDF testing. Some recommendations are useful but not highly individualized or protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0114,
+  "judge_latency_ms": 6498.410583997611,
+  "judge_prompt_tokens": 2340,
+  "judge_completion_tokens": 370
+}

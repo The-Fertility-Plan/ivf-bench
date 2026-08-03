@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0375",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and reported 3AA grade, but it overstates certainty from the image ('aligns perfectly') and inaccurately describes grade 3 as having a thinned zona/ready for hatching, which is more typical of stage 4-5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometriosis, sperm parameters, and endometrial thickness with prognosis reasonably well, though some links (stress, sedentary lifestyle) are somewhat overstated and prior-cycle context is limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the probability estimate broadly follows from embryo quality and patient factors, but there are minor inconsistencies such as calling 3AA the 'highest' grade and mixing stage-3 and expanded/hatching features."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading and general prognostic factors, but some recommendations are not strongly guideline-based: advising not to freeze unless contraindicated, suggesting combined progesterone support routinely, and implying stress reduction meaningfully alters implantation odds. PGT-A framing is also somewhat simplistic for age 32."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, luteal support review, weight management, and endometriosis reassessment, though some advice lacks nuance and should be individualized rather than stated broadly."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.0110825,
+  "judge_latency_ms": 6750.458457972854,
+  "judge_prompt_tokens": 2267,
+  "judge_completion_tokens": 361
+}

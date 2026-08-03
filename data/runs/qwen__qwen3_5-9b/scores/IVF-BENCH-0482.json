@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0482",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA grade appropriately and gives a generally plausible blastocyst description, but adds uncertain image-specific claims such as vacuolization, irregular zona, and possible hatching/3BB-3BC lean that may not be clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, endometriosis, smoking, BMI, prior live birth/miscarriage, sperm parameters, and endometrial thickness with embryo quality and prognosis, though AMH/FSH and some cycle context are underused."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the probability estimate is tied to age, morphology, and lifestyle factors, but there are minor issues such as conflating implantation with live birth benchmarks and overstating paternal age effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles on morphology, age-related aneuploidy risk, and smoking cessation, but recommending PGT-A on existing frozen embryos and routine hysteroscopy for endometriosis is not well nuanced or guideline-tight."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, smoking cessation, lifestyle counseling, and future-cycle considerations, though some recommendations lack specificity and individualized nuance."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.010955,
+  "judge_latency_ms": 6224.265791999642,
+  "judge_prompt_tokens": 2432,
+  "judge_completion_tokens": 325
+}

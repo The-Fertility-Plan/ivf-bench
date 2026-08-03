@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0515",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates image-specific certainty by assigning exact ICM location, calling the embryo fully expanded while stage 3 is expanded rather than fully expanded, and describing cytoplasmic features not reliably assessable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, endometrium, BMI, lifestyle, and semen data well with embryo quality, though it somewhat overinterprets AMH/high responder status and does not fully discuss age-related aneuploidy as the dominant prognostic modifier."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and understandable, but the implantation estimate is internally inconsistent: the stated euploidy/implantation math suggests a lower rate than the final 45-55%, and the positive adjustments are not quantitatively well justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on single embryo transfer and age-related counseling, but recommending fresh transfer as 'highly indicated' without fuller consideration of stimulation context is somewhat overconfident, and suggesting PGT-A only after failure is not fully nuanced relative to current evidence and individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps including SET, consideration of PGT-A, and possible sperm DNA fragmentation testing, though some recommendations are broader than necessary and could be more individualized to actual embryo availability and transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011785,
+  "judge_latency_ms": 6715.585083002225,
+  "judge_prompt_tokens": 2380,
+  "judge_completion_tokens": 389
+}

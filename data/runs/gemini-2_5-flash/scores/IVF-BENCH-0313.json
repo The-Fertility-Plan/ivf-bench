@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0313",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided 1DD label but makes likely inaccurate/fabricated image-specific claims, notably stating the blastocoel occupies less than half the embryo despite stage 1 being at least half, and asserting collapse/disorganization not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve markers, sperm quality, endometrium, and cycle context well, though some links are overstated and the DOR discussion is somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the grading, but there are inconsistencies such as misdescribing stage 1 expansion and overinterpreting day-4 blastulation and embryo non-viability from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis for a very low-grade embryo, but recommending against transfer as ethically preferable and calling the embryo essentially non-viable goes beyond standard morphology-based guidance; some statements are stronger than evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points, discusses transfer decision-making, and suggests reviewing the full embryology report and diagnosis, though future-cycle planning is incomplete/truncated and lacks some concrete protocol options."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.011915,
+  "judge_latency_ms": 6017.937749973498,
+  "judge_prompt_tokens": 2846,
+  "judge_completion_tokens": 320
+}

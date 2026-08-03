@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it infers specific image details such as exact ICM location, distinct TE cell boundaries, and a thinning zona/expanded appearance that may not be reliably verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, endometrial thickness, sperm parameters, BMI, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: it calls BMI 27.2 'normal,' treats a Day 4 expanded blastocyst as unusually fast without sufficient caution, and gives a fairly confident implantation estimate despite uncertainty around transfer timing and genetics."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and consideration of PGT-A are broadly guideline-concordant, but the discussion of Day 4 expanded blastocyst timing and freeze-all strategy is somewhat speculative and not clearly grounded in standard guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, alcohol avoidance, and future consideration of PGT-A/FET planning, though some suggestions are somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0111175,
+  "judge_latency_ms": 6345.575042010751,
+  "judge_prompt_tokens": 2389,
+  "judge_completion_tokens": 343
+}

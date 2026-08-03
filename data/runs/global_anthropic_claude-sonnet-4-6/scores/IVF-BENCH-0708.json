@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0708",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 0DD, but it overstates certainty and adds likely fabricated image-specific details such as vacuolization, coarse granularity, fragmented TE, and 'classic developmental arrest' that may not be directly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior cycle, sperm motility, endometrium, BMI, and tubal factor well with embryo quality and prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the poor prognosis follows from the embryo grade plus clinical context, but a few claims are overstated and some causal inferences (e.g., sedentary lifestyle or stress materially affecting this embryo) are weak."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core interpretation of 0DD as very poor prognosis is aligned with IVF practice, but several recommendations are not strongly guideline-based or are controversial (growth hormone, melatonin, routine DHEA, broad use of PGT-A in DOR/poor embryos, specific progesterone dosing assertions)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for transfer counseling, luteal support considerations, protocol changes, and male-factor workup, though some suggestions are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014304,
+  "judge_latency_ms": 7302.247249986976,
+  "judge_prompt_tokens": 3038,
+  "judge_completion_tokens": 346
+}

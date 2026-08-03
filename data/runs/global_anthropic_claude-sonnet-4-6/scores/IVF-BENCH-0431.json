@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0431",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It generally follows the provided 2AB label, but it misstates Gardner stage 2 as a full blastocyst, labels TE as B despite the prompt describing few loose cells more consistent with C, and adds likely fabricated image details such as vacuolization, coarse cytoplasm, and irregular blastocoel architecture."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, AMH, prior outcomes, endometrial thickness, sperm parameters, and lifestyle factors with prognosis reasonably well, though some links are overstated and embryo-specific interactions are not always evidence-based."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but the prognosis is pushed down by speculative penalties, there is inconsistency between the stated Gardner score and morphology interpretation, and some causal claims are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some advice is standard (smoking/alcohol cessation, protocol review), several recommendations are not guideline-based or are overreaching for this case, including ERA for prior failures despite a live birth, routine aspirin, broad thrombophilia workup after a single miscarriage, MTHFR testing, and strong endorsement of PGT-A."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for transfer counseling, lifestyle modification, endometrial evaluation, and future protocol planning, though some actions are too aggressive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.28,
+  "judge_cost_usd": 0.020855,
+  "judge_latency_ms": 6646.235875086859,
+  "judge_prompt_tokens": 3031,
+  "judge_completion_tokens": 380
+}

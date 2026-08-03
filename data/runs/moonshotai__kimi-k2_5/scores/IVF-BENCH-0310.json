@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0310",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 2AA data appropriately and gives a plausible blastocyst description, but it adds image-specific details like exact ICM position, distinct cell boundaries, and zona observations that may not be reliably verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, endometriosis, prior biochemical pregnancy, endometrial thickness, and sperm parameters with embryo quality in a clinically meaningful way, though AMH is unavailable and some claims are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it treats a Day 4 '2AA blastocyst' as accelerated and clearly favorable without sufficient caution, and some quantitative penalties and causal inferences are asserted more strongly than supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Morphology framework is broadly aligned with Gardner grading, but recommendations such as routine prednisolone, low-dose aspirin, and enhanced luteal support specifically for endometriosis are not well supported by major IVF guidelines for standard use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next-step recommendations and practical management suggestions for transfer, but some are not sufficiently evidence-based and future cycle planning is less developed than immediate transfer advice."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.01113,
+  "judge_latency_ms": 5487.436208000872,
+  "judge_prompt_tokens": 2382,
+  "judge_completion_tokens": 345
+}

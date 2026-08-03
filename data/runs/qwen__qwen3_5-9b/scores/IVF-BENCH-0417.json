@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0417",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a likely image-data mismatch and avoids fabricating blastocyst features from the image, but it then misstates Gardner stage 3 as 'expanded/fully expanded' with thinning zona, which corresponds more to stage 4, so the morphology discussion is not accurate to the provided grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, sperm parameters, diagnosis, and endometrial thickness with embryo quality reasonably well, though some points are overstated and BMI/prior cycle context are not meaningfully discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable inconsistencies and overstatements: calling FSH 6.4 'elevated,' describing 5 MII as unusually robust for this AMH without context, and labeling this potentially a 'last chance' cycle are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from standard evidence-based framing: stage 3 grading is mischaracterized, PGT-A rationale is weak for a 25-year-old but the stated 'minimum number of blastocysts' claim is not guideline-based, and calling 6 mm clearly acceptable while also implying aggressive luteal compensation is not well aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical suggestions such as proceeding with transfer, monitoring lining, and considering endometrial optimization and counseling, but recommendations are somewhat generic and include questionable specifics rather than a nuanced transfer-vs-freeze discussion for a 6 mm lining."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01377,
+  "judge_latency_ms": 5085.715000001073,
+  "judge_prompt_tokens": 2555,
+  "judge_completion_tokens": 407
+}

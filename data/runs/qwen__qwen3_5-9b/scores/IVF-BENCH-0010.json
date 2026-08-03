@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It largely restates the provided Gardner score rather than carefully analyzing the image, and it incorrectly equates 2BA with a fully expanded blastocyst; grade 2 is early/full cavity formation but not fully expanded. Zona and day-4 context are not addressed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, sperm parameters, endometrial thickness, and oocyte yield with prognosis reasonably well, though it overinterprets 5 MII as clear poor response without AMH/AFC and does not discuss the unusual day-4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: misclassification of expansion stage, unsupported claim that age alone implies 60%+ per transfer, and somewhat overstated deductions from low oocyte yield."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but the Gardner grading interpretation is inaccurate, miscarriage risk from endometriosis is overstated, and labeling this as a poor responder profile is not guideline-based from one cycle with limited reserve data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response gives little concrete management advice for the current transfer or future cycles; it mentions possible more aggressive stimulation but lacks specific, practical next steps or nuanced planning."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01049,
+  "judge_latency_ms": 5946.885875018779,
+  "judge_prompt_tokens": 2030,
+  "judge_completion_tokens": 361
+}

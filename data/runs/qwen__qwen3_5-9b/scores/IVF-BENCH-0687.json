@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses the provided 3AB label but includes questionable image-based claims, notably calling it a morula-to-blastocyst transition while also describing an expanded blastocyst; this is internally inconsistent and suggests overinterpretation of visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve markers, prior IVF outcomes, sperm parameters, and endometrial thickness with embryo quality reasonably well, though some links (especially paternal age impact) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: contradictory morphology description, strong emphasis on paternal age and DOR as lowering embryo quality despite young maternal age, and a probability reduction that may be more pessimistic than supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with transferring a day-5 3AB embryo and SET principles, but the strong recommendation for PGT-A after failure and the framing of paternal age/DOR effects are not fully guideline-grounded for a 30-year-old with unexplained infertility."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps (proceed with transfer, SET, consider future PGT-A), but future planning is incomplete/truncated and lacks more nuanced alternatives such as recurrent implantation failure workup or protocol review."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.00629625,
+  "judge_latency_ms": 6067.893999977969,
+  "judge_prompt_tokens": 2365,
+  "judge_completion_tokens": 334
+}

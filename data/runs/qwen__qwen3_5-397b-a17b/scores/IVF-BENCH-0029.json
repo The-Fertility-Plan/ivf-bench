@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology consistent with 1DD, but it overstates image-based findings by claiming specific features such as significant vacuolization, granular cytoplasm, and blastocoel less than 50%, which are not reliably established from the provided grading/image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, ovarian response, sperm parameters, and endometrial thickness well, and appropriately contrasts favorable patient factors with poor embryo quality, though it overinterprets 6/6 MII as confirming egg quality and speculates beyond available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: poor embryo morphology drives prognosis despite favorable patient factors. Minor issues include strong conclusions of non-viability and attributing causes such as lab conditions or sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concepts is broadly correct, but recommending not to transfer solely on this basis and labeling the embryo effectively non-viable is too absolute. Suggestions like routine sperm DNA fragmentation testing, ICSI to address DNA fragmentation, and implying transfer day 4 should be judged as a blastocyst are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for counseling, transfer decision-making, and future workup/planning. However, some actions are overly definitive or insufficiently nuanced for a poor-quality embryo that may still occasionally be transferred if no alternatives exist."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0117725,
+  "judge_latency_ms": 6960.405874997377,
+  "judge_prompt_tokens": 2327,
+  "judge_completion_tokens": 397
+}

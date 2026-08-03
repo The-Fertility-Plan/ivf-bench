@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0318",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AA and appropriately cautious about image quality, but it leans heavily on the provided grade and infers specific left/right ICM-TE localization and thinning zona details that may not be clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, sperm parameters, endometrial thickness, and cycle history with embryo quality well, though it underuses diagnosis/protocol context and somewhat overstates links between reserve markers and oocyte quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to morphology, age, and lining; minor issues include overconfident euploidy assumptions and somewhat overstated paternal-age impact."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice in valuing a day-5 3AA embryo and proceeding with transfer, but recommending PGT-A primarily because the partner is 40 is not strongly guideline-based, and stress/alcohol effects are presented somewhat more definitively than evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as proceeding with transfer, continuing luteal support per protocol, and lifestyle optimization, but recommendations remain somewhat generic and lack more nuanced contingency planning."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0108,
+  "judge_latency_ms": 5614.733208029065,
+  "judge_prompt_tokens": 2214,
+  "judge_completion_tokens": 351
+}

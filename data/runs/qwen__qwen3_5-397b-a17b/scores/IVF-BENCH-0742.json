@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0742",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 4AA label and describes hatching/thinning zona, dense ICM, and cohesive TE, but it overstates certainty from a single image and includes specific localization/details not reliably verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometriosis, smoking, BMI, endometrial thickness, and sperm parameters well with embryo quality and prognosis, though it could better distinguish embryo competence from uterine receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with a plausible probability range tied to morphology, age, smoking, and endometriosis; minor issue is somewhat imprecise handling of aneuploidy risk and effect-size estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice: SET for a good-quality day-5 blastocyst in a young patient, smoking cessation, luteal support, and consideration of endometriosis suppression after failure. Slight overreach in implying PGT-A should be considered routinely at age 34."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for this transfer and future planning, including SET, smoking cessation, luteal support, cryopreservation, and contingency planning after failure; could be more specific about transfer type and protocol-dependent details."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012447,
+  "judge_latency_ms": 5981.633167015389,
+  "judge_prompt_tokens": 2424,
+  "judge_completion_tokens": 345
+}

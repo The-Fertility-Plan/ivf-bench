@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0471",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it leans heavily on the reported grade and includes specific image-localization details (e.g., ICM bottom right, clearly thin zona) that may be overconfident from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, prior failed cycle, sperm parameters, and endometrial thickness well, with appropriate emphasis on obesity as a modifier of prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly consistent, with a plausible probability range tied to embryo quality and BMI, though the statement that a 3AA embryo would typically implant at >70% is somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with IVF practice regarding morphology, age, and transfer planning, but recommending metformin based mainly on BMI is not guideline-standard without insulin resistance/PCOS, and PGT-A after a single failed cycle at age 34 is more optional than clearly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, weight optimization, counseling, and future-cycle discussion, though some recommendations would benefit from more conditional framing and less emphasis on nonstandard interventions."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.010425,
+  "judge_latency_ms": 6870.502542005852,
+  "judge_prompt_tokens": 2214,
+  "judge_completion_tokens": 326
+}

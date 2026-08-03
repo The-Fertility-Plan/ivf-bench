@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a full/early blastocyst with weaker TE, but it inconsistently labels ICM/TE grades, speculates about collapse/hatching/zona thinning without firm visual support, and overemphasizes a grading discrepancy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, prior IVF outcomes, male factor, ovarian response, and lifestyle reasonably well, though AMH is unavailable and some links to embryo competence remain somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but probability estimates shift from 40-60% to 35-50% to 30-45%, and morphology interpretation is somewhat inconsistent with the stated 2AB/AB discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: single embryo transfer at age 31, cautious use of adjuncts, consideration of uterine and sperm evaluation after recurrent failures, and optional discussion of PGT-A. Minor deviations include confusion around Gardner stage labeling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, sperm DNA fragmentation consideration, and uterine evaluation if failure recurs, though some suggestions remain broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012942,
+  "judge_latency_ms": 5828.557000029832,
+  "judge_prompt_tokens": 2669,
+  "judge_completion_tokens": 329
+}

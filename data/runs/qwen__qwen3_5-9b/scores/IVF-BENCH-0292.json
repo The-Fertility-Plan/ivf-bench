@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0292",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the reported 3AA grade, but it overstates certainty from the image, incorrectly suggests 'fully hatched,' and calls 3AA the highest grade despite grade 4-6 blastocysts existing."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, BMI, ovarian reserve, oocyte yield, endometrial thickness, and sperm data with embryo quality reasonably well, though it overemphasizes paternal age relative to established predictors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it describes the embryo as 'morphologically perfect,' misstates the expansion stage, and attributes substantial aneuploidy risk primarily to paternal age more strongly than evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on using morphology, age, BMI, and endometrial factors in counseling, but it overstates the role of paternal age in embryo aneuploidy/implantation and presents PGT-A as more strongly indicated than guidelines typically support for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, counseling on PGT-A, considering sperm DNA fragmentation testing, and weight/lifestyle optimization, though some recommendations are somewhat generic and not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012366,
+  "judge_latency_ms": 4650.536791996274,
+  "judge_prompt_tokens": 2317,
+  "judge_completion_tokens": 361
+}

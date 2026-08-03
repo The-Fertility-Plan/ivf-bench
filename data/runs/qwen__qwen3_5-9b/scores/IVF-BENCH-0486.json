@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0486",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the reported 3AA grade, but it overstates image-visible detail, incorrectly links grade 3 with hatching, and infers ICM/TE features more from the lab grade than clearly visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, sperm, and lifestyle with embryo quality reasonably well, though it overcalls low reserve/low response and does not fully nuance unexplained infertility or fresh-transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling 10 MII oocytes a low responder, citing >70% implantation for 3AA in younger patients, and recommending fresh transfer over freezing based on unsupported 'risk of losing the embryo' reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice: grade 3 is expanded but not hatching, 10 oocytes is not inherently low response, strong recommendation to avoid freezing is not guideline-based, and routine strong endorsement of PGT-A after one failure in a low-yield 37-year-old is oversimplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps on transfer, lifestyle modification, and future planning, but some recommendations are too categorical and insufficiently individualized, especially regarding fresh transfer, PGT-A, and donor egg counseling after a first cycle."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012474,
+  "judge_latency_ms": 4573.75558300555,
+  "judge_prompt_tokens": 2353,
+  "judge_completion_tokens": 361
+}

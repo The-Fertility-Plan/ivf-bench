@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0418",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It reasonably matches the provided 3AB features for expansion, ICM, TE, and zona thinning, but it fabricates image-specific concerns such as multiple vacuoles, inclusions, and granular cytoplasm that are not established by the prompt and may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and cycle history well, linking these to prognosis, though some inferences from the MII rate are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis generally follows from the data, but the probability estimate is materially driven downward by unverified morphological abnormalities and includes some speculative effects such as stress and light alcohol use."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly consistent with IVF practice, but several recommendations are not strongly guideline-based for this case, including emphasis on ERA, routine PGT-A discussion at age 29, and specific protocol changes without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer and contingency planning, though some suggestions are more speculative than necessary for a first-cycle, favorable-prognosis patient."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.018115,
+  "judge_latency_ms": 5580.802583019249,
+  "judge_prompt_tokens": 2660,
+  "judge_completion_tokens": 321
+}

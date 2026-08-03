@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0310",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed morphology read, but it strongly asserts a discrepancy with the reported 2AA and labels the embryo as morula/early cavitating blastocyst, which is likely overconfident from a single image and includes features such as mild fragmentation/irregularity that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrial thickness, endometriosis, prior biochemical pregnancy, and sperm parameters into prognosis reasonably well, though some links are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but several deductions are overextended from limited data, and some adjustments (e.g., sedentary lifestyle, strong penalty for Day 4 transfer) are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned with standard IVF practice, but several recommendations are not guideline-based or are controversial for routine use, including ERA, immune profiling/NK testing, intralipids, EMMA/ALICE, aspirin for endometriosis, and broad endorsement of PGT-A after a biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next-step suggestions for transfer verification, luteal support, and future planning, but some proposed interventions are not appropriately evidence-based for routine clinical action."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.020315,
+  "judge_latency_ms": 5669.163375045173,
+  "judge_prompt_tokens": 3016,
+  "judge_completion_tokens": 349
+}

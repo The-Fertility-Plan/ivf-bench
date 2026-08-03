@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0546",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2BB label, correctly describing B-grade ICM and TE, but it introduces uncertainty by calling it possibly 3BB/transitioning to stage 4 and adds limited image-specific detail such as zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, especially maternal age, prior reproductive history, endometrial thickness, oocyte maturity, and male factor context, though it could more explicitly address BMI and the absence of AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is generally clear and internally consistent, with the implantation estimate reasonably tied to age, morphology, and uterine factors; minor overreach appears in speculative comments about sperm DNA fragmentation and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF principles and Gardner grading, but the strong recommendation for PGT-A and suggestions like growth hormone/antioxidants are more debatable and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, early beta-hCG and ultrasound monitoring due to ectopic history, and future-cycle considerations, though some recommendations are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.0109575,
+  "judge_latency_ms": 5067.764625011478,
+  "judge_prompt_tokens": 2391,
+  "judge_completion_tokens": 332
+}

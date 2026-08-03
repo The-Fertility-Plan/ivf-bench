@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a compacting morula/early blastocyst (Stage 1-2) despite the provided lab grade of 2CA indicating a full blastocyst, and it does not accurately address the poor ICM and cohesive TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response does not integrate patient age, PCOS, prior live birth, sperm parameters, ovarian response, or endometrial thickness with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally limited and based on an incorrect morphological premise, so downstream conclusions would be weakly supported even if not overtly contradictory."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The morphology assessment conflicts with Gardner grading provided in the case, indicating poor alignment with standard blastocyst grading criteria; no clear evidence-based transfer planning is shown."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is truncated and provides no concrete transfer recommendations, prognosis counseling, or future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0074,
+  "judge_latency_ms": 4350.432167004328,
+  "judge_prompt_tokens": 1226,
+  "judge_completion_tokens": 289
+}

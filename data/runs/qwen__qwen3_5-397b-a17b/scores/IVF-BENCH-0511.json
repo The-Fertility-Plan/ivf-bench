@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0511",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates certainty from the image, labels stage 3 as 'fully expanded' with thinning zona more typical of stage 4, and gives specific positional/cytoplasmic details that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most relevant factors well, including age, AMH, BMI, male factor, endometrium, and smoking, and connects them to prognosis; however, some inferences such as possible PCOS phenotype and DNA fragmentation are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate tied to embryo quality and patient risks; minor issues include some overconfident assumptions and a somewhat imprecise discussion of age-related aneuploidy and smoking effect size."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, endometrial assessment, and smoking cessation, but recommending PGT-A broadly at age 35 and suggesting testicular sperm for high DNA fragmentation are more controversial and not universally guideline-supported; fresh transfer recommendation is also made without discussing OHSS risk despite high AMH."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, smoking cessation, possible sperm DNA fragmentation testing, and future embryo cryopreservation/PGT-A discussion, though recommendations could be more nuanced regarding fresh vs freeze-all and individualized testing."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0114025,
+  "judge_latency_ms": 8267.983917030506,
+  "judge_prompt_tokens": 2353,
+  "judge_completion_tokens": 368
+}

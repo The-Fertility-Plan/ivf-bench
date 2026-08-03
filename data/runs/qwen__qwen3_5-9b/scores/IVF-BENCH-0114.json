@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0114",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 2BB blastocyst, but it overstates expansion by calling it fully expanded and comments on a thin/taut zona that is not supported by the provided Gardner description for stage 2."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior biochemical pregnancy/miscarriage, endometrial thickness, diagnosis, and sperm data with embryo quality, though it underuses BMI and overemphasizes paternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: paternal age 40 is treated as a major determinant of aneuploidy, and the embryo is called both 2BB and 'high-quality,' which somewhat overstates prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF guidance, including overstating paternal-age impact on embryo aneuploidy, strongly recommending PGT-A on that basis, and suggesting thrombophilia/immune profiling without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as proceeding with transfer, ensuring luteal support, and considering further evaluation in future cycles, though some recommendations are not well prioritized or guideline-concordant."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.010835,
+  "judge_latency_ms": 5335.1163329789415,
+  "judge_prompt_tokens": 2294,
+  "judge_completion_tokens": 340
+}

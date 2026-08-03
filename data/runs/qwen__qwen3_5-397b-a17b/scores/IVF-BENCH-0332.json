@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0332",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates image-based certainty and includes a mild inconsistency by calling stage 3 'fully expanded' while also describing thinning zona more typical of later expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior cycle history, sperm motility, ovarian response, diagnosis, BMI, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH is unavailable and some inferences are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability adjustment from embryo quality based on prior outcomes and lining; minor issues include labeling two prior cycles as RIF and inferring sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on morphology, age-related prognosis, and considering uterine evaluation after repeated failure, but recommendations such as aspirin/heparin and ERA are not routine evidence-based first-line measures, and PGT-A is presented too strongly for a 31-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including luteal support review, monitoring, sperm DNA fragmentation testing, hysteroscopy, and endometrial optimization, though some suggestions need stronger qualification."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0109425,
+  "judge_latency_ms": 7302.939084009267,
+  "judge_prompt_tokens": 2385,
+  "judge_completion_tokens": 332
+}

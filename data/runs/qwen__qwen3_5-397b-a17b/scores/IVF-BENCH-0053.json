@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately identifies a very poor-quality blastocyst with absent/degenerative ICM and TE consistent with 1DD, but it overinterprets image details such as vacuolization, necrosis, and collapse/re-expansion, and notes a stage inconsistency without resolving it cleanly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, especially maternal age, endometriosis, prior miscarriage, ovarian response, and endometrial thickness, though it cannot address AMH because it is unavailable and slightly overstates some links such as sedentary lifestyle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from the poor morphology, but there is some inconsistency around the expansion stage and a few conclusions are stronger than the available evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on poor prognosis for a 1DD embryo and counseling is broadly aligned with IVF practice, but recommending PGT-A as strongly indicated and suggesting TESE for possible DNA fragmentation are more aggressive than guideline-based standard care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for current transfer counseling and future cycle planning, including alternatives and practical considerations, though some suggestions are not fully individualized or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0110825,
+  "judge_latency_ms": 6430.125082959421,
+  "judge_prompt_tokens": 2303,
+  "judge_completion_tokens": 355
+}

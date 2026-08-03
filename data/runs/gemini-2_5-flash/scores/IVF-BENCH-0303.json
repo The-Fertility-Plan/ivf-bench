@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0303",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Accurately identifies strong ICM and poor TE from the provided grade, but over-interprets the expansion stage by favoring a possible grade 4/5 despite the stated 2AC and without clear image-based support; limited comment on zona/overall structure."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior biochemical pregnancies, tubal factor, endometrium, sperm, ovarian response, BMI, FSH, and lifestyle well, with appropriate emphasis on age-related aneuploidy and TE quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is sound, but there is a notable inconsistency in relying on the descriptive text over the formal Gardner score for expansion, and the probability estimate is only partially justified before the response truncates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with Gardner grading principles and standard IVF prognostic considerations, especially regarding age-related aneuploidy and the importance of TE, though the reinterpretation of expansion grade is somewhat nonstandard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides prognostic discussion but few concrete management recommendations for the current transfer or future cycle planning; practical next steps are limited and the response appears incomplete."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01064,
+  "judge_latency_ms": 6671.245791949332,
+  "judge_prompt_tokens": 2366,
+  "judge_completion_tokens": 315
+}

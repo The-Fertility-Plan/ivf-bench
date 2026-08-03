@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0086",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AB label, but it appears to conflate Gardner expansion staging by calling grade 3 'expanded' with thinning zona and adds image-specific details like ICM position, cytoplasmic granularity, and absence of fragmentation that are not clearly verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, prior outcomes, endometrial thickness, and smoking with embryo quality and prognosis well, though some inferences such as lean PCOS or hidden sperm DNA fragmentation are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality and patient modifiers; minor issues include overconfident assumptions about euploidy and the male-factor explanation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including SET in a young patient and counseling on smoking cessation; however, suggesting PGT-A mainly for a single prior miscarriage in a 28-year-old is somewhat more debatable than standard guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future planning, including SET, smoking cessation, weight optimization, and possible further male-factor workup, though some advice remains somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0110925,
+  "judge_latency_ms": 6018.354125029873,
+  "judge_prompt_tokens": 2385,
+  "judge_completion_tokens": 342
+}

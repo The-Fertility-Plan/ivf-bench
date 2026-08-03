@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0435",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided Gardner data by reinterpreting the embryo as an early blastocyst/morula-like structure with blastocoel <50%, despite the case stating expansion 1 as blastocoel at least half the embryo. It also adds specific image claims such as a central pyknotic nucleus and large collapsed mass that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diminished ovarian reserve, uterine factor, prior outcomes, endometrial thickness, BMI/lifestyle, and sperm parameters with embryo quality and prognosis. It misses some nuance, such as AMH affecting yield more than direct aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis estimate follows from poor morphology plus age and uterine factor, but there are notable overstatements and internal issues, especially calling the embryo essentially non-viable while still discussing transfer options and basing conclusions on a morphology interpretation inconsistent with the stated grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent, such as counseling, considering uterine cavity evaluation, and discussing age-related aneuploidy. However, stating most clinics do not transfer 1DD embryos, calling it non-viable categorically, and recommending PGE1 to rescue a 1DD embryo are not standard evidence-based guideline recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps like prognosis counseling, hysteroscopy consideration, and future PGT-A discussion, but recommendations are incomplete and partly nonstandard. It lacks nuanced transfer-specific planning and clearer future-cycle strategies tailored to low reserve and age."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013392,
+  "judge_latency_ms": 4885.932582998066,
+  "judge_prompt_tokens": 2294,
+  "judge_completion_tokens": 434
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0662",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 0DD, but it overstates certainty with terms like 'catastrophic failure' and adds image-specific details such as poor compaction and clear non-viability that may not be directly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometriosis, semen parameters, endometrium, and cycle history well, linking favorable patient factors against very poor embryo quality, though some causal attributions are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the low implantation estimate follows from the reported 0DD morphology, but it occasionally overreaches by treating morphology as proving absolute biological impossibility."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned with IVF practice, but recommendations such as categorically not transferring/discarding the embryo, mandatory stress therapy, routine embryo banking, and broad PGT-A endorsement in a 24-year-old are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for this transfer and future workup, including counseling, sperm DNA fragmentation testing, endometriosis review, and lab review, though some recommendations are overly prescriptive rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.007085,
+  "judge_latency_ms": 8839.441709103994,
+  "judge_prompt_tokens": 2836,
+  "judge_completion_tokens": 354
+}

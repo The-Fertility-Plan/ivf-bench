@@ -1,0 +1,623 @@
+{
+  "test": {
+    "split": "test",
+    "n_cases_in_split": 550,
+    "models": {
+      "gemini-2.5-flash": {
+        "n_scored": 550,
+        "overall": 3.3978,
+        "ci95": [
+          3.3433,
+          3.4505
+        ]
+      },
+      "global.anthropic.claude-opus-4-6-v1": {
+        "n_scored": 550,
+        "overall": 4.0055,
+        "ci95": [
+          3.984,
+          4.0269
+        ]
+      },
+      "global.anthropic.claude-sonnet-4-6": {
+        "n_scored": 550,
+        "overall": 3.5767,
+        "ci95": [
+          3.5476,
+          3.6055
+        ]
+      },
+      "gpt-5.4-2026-03-05": {
+        "n_scored": 550,
+        "overall": 4.5356,
+        "ci95": [
+          4.524,
+          4.5473
+        ]
+      },
+      "ivf-bench-qwen9b-vlm-orpo": {
+        "n_scored": 550,
+        "overall": 4.1662,
+        "ci95": [
+          4.1418,
+          4.1902
+        ]
+      },
+      "moonshotai/kimi-k2.5": {
+        "n_scored": 550,
+        "overall": 3.6291,
+        "ci95": [
+          3.5898,
+          3.6673
+        ]
+      },
+      "qwen/qwen3.5-397b-a17b": {
+        "n_scored": 550,
+        "overall": 3.7462,
+        "ci95": [
+          3.716,
+          3.7753
+        ]
+      },
+      "qwen/qwen3.5-9b": {
+        "n_scored": 520,
+        "overall": 3.3527,
+        "ci95": [
+          3.315,
+          3.3896
+        ]
+      }
+    },
+    "adjacent_rank_tests": [
+      {
+        "higher": "gpt-5.4-2026-03-05",
+        "lower": "ivf-bench-qwen9b-vlm-orpo",
+        "n_shared": 550,
+        "diff": 0.3695,
+        "ci95": [
+          0.344,
+          0.3949
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "ivf-bench-qwen9b-vlm-orpo",
+        "lower": "global.anthropic.claude-opus-4-6-v1",
+        "n_shared": 550,
+        "diff": 0.1607,
+        "ci95": [
+          0.128,
+          0.1924
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "global.anthropic.claude-opus-4-6-v1",
+        "lower": "qwen/qwen3.5-397b-a17b",
+        "n_shared": 550,
+        "diff": 0.2593,
+        "ci95": [
+          0.2287,
+          0.2902
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "qwen/qwen3.5-397b-a17b",
+        "lower": "moonshotai/kimi-k2.5",
+        "n_shared": 550,
+        "diff": 0.1171,
+        "ci95": [
+          0.0767,
+          0.1582
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "moonshotai/kimi-k2.5",
+        "lower": "global.anthropic.claude-sonnet-4-6",
+        "n_shared": 550,
+        "diff": 0.0524,
+        "ci95": [
+          0.0055,
+          0.0982
+        ],
+        "p": 0.031,
+        "separable": true
+      },
+      {
+        "higher": "global.anthropic.claude-sonnet-4-6",
+        "lower": "gemini-2.5-flash",
+        "n_shared": 550,
+        "diff": 0.1789,
+        "ci95": [
+          0.1236,
+          0.2367
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "gemini-2.5-flash",
+        "lower": "qwen/qwen3.5-9b",
+        "n_shared": 520,
+        "diff": 0.0673,
+        "ci95": [
+          0.0081,
+          0.1262
+        ],
+        "p": 0.0252,
+        "separable": true
+      }
+    ],
+    "rubric_correlation": {
+      "matrix": [
+        [
+          1.0,
+          0.449,
+          0.548,
+          0.501,
+          0.309
+        ],
+        [
+          0.449,
+          1.0,
+          0.633,
+          0.373,
+          0.689
+        ],
+        [
+          0.548,
+          0.633,
+          1.0,
+          0.559,
+          0.551
+        ],
+        [
+          0.501,
+          0.373,
+          0.559,
+          1.0,
+          0.282
+        ],
+        [
+          0.309,
+          0.689,
+          0.551,
+          0.282,
+          1.0
+        ]
+      ],
+      "labels": [
+        "morphological_accuracy",
+        "clinical_integration",
+        "reasoning_coherence",
+        "guideline_alignment",
+        "actionability"
+      ],
+      "mean_offdiag_r": 0.489,
+      "pc1_variance_explained": 0.602,
+      "n_observations": 4370
+    },
+    "verbosity_bias": {
+      "per_model": {
+        "gemini-2.5-flash": {
+          "spearman_rho": 0.764,
+          "p": 0.0,
+          "median_chars": 6308
+        },
+        "global.anthropic.claude-opus-4-6-v1": {
+          "spearman_rho": -0.007,
+          "p": 0.87088,
+          "median_chars": 13702
+        },
+        "global.anthropic.claude-sonnet-4-6": {
+          "spearman_rho": 0.032,
+          "p": 0.46004,
+          "median_chars": 8104
+        },
+        "gpt-5.4-2026-03-05": {
+          "spearman_rho": 0.045,
+          "p": 0.29449,
+          "median_chars": 9919
+        },
+        "ivf-bench-qwen9b-vlm-orpo": {
+          "spearman_rho": 0.231,
+          "p": 0.0,
+          "median_chars": 9670
+        },
+        "moonshotai/kimi-k2.5": {
+          "spearman_rho": 0.479,
+          "p": 0.0,
+          "median_chars": 6949
+        },
+        "qwen/qwen3.5-397b-a17b": {
+          "spearman_rho": 0.079,
+          "p": 0.06346,
+          "median_chars": 5878
+        },
+        "qwen/qwen3.5-9b": {
+          "spearman_rho": 0.207,
+          "p": 0.0,
+          "median_chars": 5581
+        }
+      },
+      "pooled": {
+        "spearman_rho": 0.613,
+        "p": 0.0
+      }
+    },
+    "patient_dedup_robustness": {
+      "n_dropped_cases": 16,
+      "dropped_case_ids": [
+        "IVF-BENCH-0035",
+        "IVF-BENCH-0037",
+        "IVF-BENCH-0042",
+        "IVF-BENCH-0054",
+        "IVF-BENCH-0065",
+        "IVF-BENCH-0070",
+        "IVF-BENCH-0116",
+        "IVF-BENCH-0120",
+        "IVF-BENCH-0152",
+        "IVF-BENCH-0179",
+        "IVF-BENCH-0218",
+        "IVF-BENCH-0265",
+        "IVF-BENCH-0327",
+        "IVF-BENCH-0353",
+        "IVF-BENCH-0394",
+        "IVF-BENCH-0516"
+      ],
+      "scores": {
+        "gemini-2.5-flash": {
+          "n": 534,
+          "overall": 3.4004
+        },
+        "global.anthropic.claude-opus-4-6-v1": {
+          "n": 534,
+          "overall": 4.0075
+        },
+        "global.anthropic.claude-sonnet-4-6": {
+          "n": 534,
+          "overall": 3.5783
+        },
+        "gpt-5.4-2026-03-05": {
+          "n": 534,
+          "overall": 4.5375
+        },
+        "ivf-bench-qwen9b-vlm-orpo": {
+          "n": 534,
+          "overall": 4.1682
+        },
+        "moonshotai/kimi-k2.5": {
+          "n": 534,
+          "overall": 3.6315
+        },
+        "qwen/qwen3.5-397b-a17b": {
+          "n": 534,
+          "overall": 3.7502
+        },
+        "qwen/qwen3.5-9b": {
+          "n": 505,
+          "overall": 3.3537
+        }
+      },
+      "rank_order": [
+        "gpt-5.4-2026-03-05",
+        "ivf-bench-qwen9b-vlm-orpo",
+        "global.anthropic.claude-opus-4-6-v1",
+        "qwen/qwen3.5-397b-a17b",
+        "moonshotai/kimi-k2.5",
+        "global.anthropic.claude-sonnet-4-6",
+        "gemini-2.5-flash",
+        "qwen/qwen3.5-9b"
+      ],
+      "rank_changes": []
+    }
+  },
+  "held_out": {
+    "split": "held_out",
+    "n_cases_in_split": 103,
+    "models": {
+      "gemini-2.5-flash": {
+        "n_scored": 103,
+        "overall": 3.833,
+        "ci95": [
+          3.7864,
+          3.8777
+        ]
+      },
+      "global.anthropic.claude-opus-4-6-v1": {
+        "n_scored": 103,
+        "overall": 4.0078,
+        "ci95": [
+          3.965,
+          4.0524
+        ]
+      },
+      "global.anthropic.claude-sonnet-4-6": {
+        "n_scored": 103,
+        "overall": 3.6524,
+        "ci95": [
+          3.5864,
+          3.7165
+        ]
+      },
+      "gpt-5.4-2026-03-05": {
+        "n_scored": 103,
+        "overall": 4.5495,
+        "ci95": [
+          4.5243,
+          4.5748
+        ]
+      },
+      "ivf-bench-qwen9b-vlm-orpo": {
+        "n_scored": 103,
+        "overall": 4.1107,
+        "ci95": [
+          4.0427,
+          4.1748
+        ]
+      },
+      "moonshotai/kimi-k2.5": {
+        "n_scored": 103,
+        "overall": 3.7282,
+        "ci95": [
+          3.6447,
+          3.8058
+        ]
+      },
+      "qwen/qwen3.5-397b-a17b": {
+        "n_scored": 103,
+        "overall": 3.8175,
+        "ci95": [
+          3.7495,
+          3.8816
+        ]
+      },
+      "qwen/qwen3.5-9b": {
+        "n_scored": 103,
+        "overall": 3.3146,
+        "ci95": [
+          3.2058,
+          3.4117
+        ]
+      }
+    },
+    "adjacent_rank_tests": [
+      {
+        "higher": "gpt-5.4-2026-03-05",
+        "lower": "ivf-bench-qwen9b-vlm-orpo",
+        "n_shared": 103,
+        "diff": 0.4388,
+        "ci95": [
+          0.3767,
+          0.5068
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "ivf-bench-qwen9b-vlm-orpo",
+        "lower": "global.anthropic.claude-opus-4-6-v1",
+        "n_shared": 103,
+        "diff": 0.1029,
+        "ci95": [
+          0.0291,
+          0.1729
+        ],
+        "p": 0.0074,
+        "separable": true
+      },
+      {
+        "higher": "global.anthropic.claude-opus-4-6-v1",
+        "lower": "gemini-2.5-flash",
+        "n_shared": 103,
+        "diff": 0.1748,
+        "ci95": [
+          0.1184,
+          0.233
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "gemini-2.5-flash",
+        "lower": "qwen/qwen3.5-397b-a17b",
+        "n_shared": 103,
+        "diff": 0.0155,
+        "ci95": [
+          -0.0486,
+          0.0816
+        ],
+        "p": 0.662,
+        "separable": false
+      },
+      {
+        "higher": "qwen/qwen3.5-397b-a17b",
+        "lower": "moonshotai/kimi-k2.5",
+        "n_shared": 103,
+        "diff": 0.0893,
+        "ci95": [
+          0.0135,
+          0.167
+        ],
+        "p": 0.0212,
+        "separable": true
+      },
+      {
+        "higher": "moonshotai/kimi-k2.5",
+        "lower": "global.anthropic.claude-sonnet-4-6",
+        "n_shared": 103,
+        "diff": 0.0757,
+        "ci95": [
+          -0.0233,
+          0.1689
+        ],
+        "p": 0.1232,
+        "separable": false
+      },
+      {
+        "higher": "global.anthropic.claude-sonnet-4-6",
+        "lower": "qwen/qwen3.5-9b",
+        "n_shared": 103,
+        "diff": 0.3379,
+        "ci95": [
+          0.2194,
+          0.466
+        ],
+        "p": 0.0,
+        "separable": true
+      }
+    ],
+    "rubric_correlation": {
+      "matrix": [
+        [
+          1.0,
+          0.539,
+          0.532,
+          0.424,
+          0.399
+        ],
+        [
+          0.539,
+          1.0,
+          0.573,
+          0.407,
+          0.588
+        ],
+        [
+          0.532,
+          0.573,
+          1.0,
+          0.524,
+          0.572
+        ],
+        [
+          0.424,
+          0.407,
+          0.524,
+          1.0,
+          0.454
+        ],
+        [
+          0.399,
+          0.588,
+          0.572,
+          0.454,
+          1.0
+        ]
+      ],
+      "labels": [
+        "morphological_accuracy",
+        "clinical_integration",
+        "reasoning_coherence",
+        "guideline_alignment",
+        "actionability"
+      ],
+      "mean_offdiag_r": 0.501,
+      "pc1_variance_explained": 0.598,
+      "n_observations": 824
+    },
+    "verbosity_bias": {
+      "per_model": {
+        "gemini-2.5-flash": {
+          "spearman_rho": -0.152,
+          "p": 0.12661,
+          "median_chars": 9280
+        },
+        "global.anthropic.claude-opus-4-6-v1": {
+          "spearman_rho": 0.157,
+          "p": 0.113,
+          "median_chars": 12845
+        },
+        "global.anthropic.claude-sonnet-4-6": {
+          "spearman_rho": 0.051,
+          "p": 0.61129,
+          "median_chars": 7941
+        },
+        "gpt-5.4-2026-03-05": {
+          "spearman_rho": 0.152,
+          "p": 0.12632,
+          "median_chars": 9894
+        },
+        "ivf-bench-qwen9b-vlm-orpo": {
+          "spearman_rho": 0.206,
+          "p": 0.03727,
+          "median_chars": 9916
+        },
+        "moonshotai/kimi-k2.5": {
+          "spearman_rho": 0.381,
+          "p": 7e-05,
+          "median_chars": 6877
+        },
+        "qwen/qwen3.5-397b-a17b": {
+          "spearman_rho": 0.047,
+          "p": 0.6404,
+          "median_chars": 5883
+        },
+        "qwen/qwen3.5-9b": {
+          "spearman_rho": -0.141,
+          "p": 0.15458,
+          "median_chars": 5641
+        }
+      },
+      "pooled": {
+        "spearman_rho": 0.458,
+        "p": 6.890201586087261e-44
+      }
+    },
+    "patient_dedup_robustness": {
+      "n_dropped_cases": 0,
+      "dropped_case_ids": [],
+      "scores": {
+        "gemini-2.5-flash": {
+          "n": 103,
+          "overall": 3.833
+        },
+        "global.anthropic.claude-opus-4-6-v1": {
+          "n": 103,
+          "overall": 4.0078
+        },
+        "global.anthropic.claude-sonnet-4-6": {
+          "n": 103,
+          "overall": 3.6524
+        },
+        "gpt-5.4-2026-03-05": {
+          "n": 103,
+          "overall": 4.5495
+        },
+        "ivf-bench-qwen9b-vlm-orpo": {
+          "n": 103,
+          "overall": 4.1107
+        },
+        "moonshotai/kimi-k2.5": {
+          "n": 103,
+          "overall": 3.7282
+        },
+        "qwen/qwen3.5-397b-a17b": {
+          "n": 103,
+          "overall": 3.8175
+        },
+        "qwen/qwen3.5-9b": {
+          "n": 103,
+          "overall": 3.3146
+        }
+      },
+      "rank_order": [
+        "gpt-5.4-2026-03-05",
+        "ivf-bench-qwen9b-vlm-orpo",
+        "global.anthropic.claude-opus-4-6-v1",
+        "gemini-2.5-flash",
+        "qwen/qwen3.5-397b-a17b",
+        "moonshotai/kimi-k2.5",
+        "global.anthropic.claude-sonnet-4-6",
+        "qwen/qwen3.5-9b"
+      ],
+      "rank_changes": []
+    }
+  }
+}

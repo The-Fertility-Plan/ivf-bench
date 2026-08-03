@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response recognizes poor/absent ICM and TE consistent with 0DD, but it overcalls expansion as stage 2 to early 3 and states no overt degeneration despite the provided Gardner grade indicating degenerative/absent ICM and TE. It also adds features like granularity and viability that are not reliably supported from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, endometrium, smoking, semen parameters, BMI, and first-cycle status with embryo quality and prognosis. However, it somewhat overinterprets the DOR label versus the actual reserve data and could better reconcile transfer day 4 with blastocyst grading context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable inconsistencies: calling the embryo transferable/viable while the formal grade is 0DD, describing no overt degeneration despite degenerative grading, and giving a relatively optimistic implantation estimate for such poor morphology. These weaken internal consistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, luteal support, cavity review if indicated), but there are deviations from standard morphology interpretation and some speculative cycle-planning suggestions without clear indication. The prognosis appears more favorable than typical for a 0DD-quality embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle optimization, cavity/luteal review, and future stimulation reassessment. Recommendations are useful, though some are generic and a few future-cycle suggestions are not tightly tailored to the specific evidence presented."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.017139,
+  "judge_latency_ms": 5046.119000006001,
+  "judge_prompt_tokens": 3753,
+  "judge_completion_tokens": 392
+}

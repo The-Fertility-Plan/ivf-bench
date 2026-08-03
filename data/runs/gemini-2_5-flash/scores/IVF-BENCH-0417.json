@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0417",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA grade appropriately and gives a broadly plausible blastocyst description, but relies heavily on the label and adds image-specific details like a central dense ICM and absence of fragmentation that are not clearly verifiable from the prompt/image context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, sperm parameters, first cycle status, and especially endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with the thin endometrium identified as the main limiting factor; however, the magnitude of implantation reduction and certainty around delaying transfer are somewhat stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading and general IVF principles, but recommendations such as strong insistence on freeze-all for a 6 mm lining and adjuncts like sildenafil/G-CSF/acupuncture go beyond firm guideline-supported practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current transfer versus freezing and future FET planning, with practical monitoring and counseling points, though some suggested interventions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.011965,
+  "judge_latency_ms": 6607.661707967054,
+  "judge_prompt_tokens": 2884,
+  "judge_completion_tokens": 317
+}

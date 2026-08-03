@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0466",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a poor-quality blastocyst consistent with DD grading and comments on weak ICM/TE, but it introduces uncertainty by describing a large cavity and thinning zona that may not be clearly supported, while also noting a discrepancy with the lab score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrium, sperm, tubal factor, and prior biochemical pregnancies with embryo quality reasonably well, though AMH is unavailable and some inferences are stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but there is some inconsistency between the visual description and the assigned expansion grade, and the response is truncated before completing risk assessment and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It broadly follows Gardner grading concepts and standard IVF prognostic reasoning, but statements such as 13 mm being 'ideal' and implying D-grade cells are definitively nonviable are somewhat overstated relative to guideline-based nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides limited practical next steps and is incomplete; it lacks specific transfer counseling, probability range, and detailed future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010275,
+  "judge_latency_ms": 4092.4884580017533,
+  "judge_prompt_tokens": 1810,
+  "judge_completion_tokens": 323
+}

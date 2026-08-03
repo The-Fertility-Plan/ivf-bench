@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0194",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label and describes full blastocyst, ICM, and TE appropriately, but it adds image-specific claims like zona thinning/hatching and precise visual features that may not be clearly supported; also the wording around expansion/day is somewhat imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, low AMH, BMI, male factor, paternal age, endometrial thickness, and cycle history with embryo quality and prognosis. It connects DOR to cohort size and notes morphology does not exclude aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the probability estimate is tied to age, morphology, and aneuploidy risk. Minor issues include overstating 2AA as the highest possible score and some uncertainty around the significance of a day-4 full blastocyst transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age-related aneuploidy risk, and endometrial assessment, but it overstates morphology as top-tier/highest possible and makes somewhat speculative claims about day-4 blastocyst timing and implied ICSI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated and only clearly states 'Proceed with transfer' without providing the requested detailed transfer management or future cycle planning recommendations."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.010515,
+  "judge_latency_ms": 7326.692041999195,
+  "judge_prompt_tokens": 2124,
+  "judge_completion_tokens": 347
+}

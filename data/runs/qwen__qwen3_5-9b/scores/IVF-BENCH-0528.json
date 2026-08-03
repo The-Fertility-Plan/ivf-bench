@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0528",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the reported 3BA, including B-grade ICM and A-grade TE, but it overstates expansion by calling it 'expanded' and 'hatched or about to hatch' despite Gardner 3 indicating a full blastocyst rather than hatching; some image-specific details appear inferred."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, uterine factor, sperm parameters, endometrium, and first-cycle status with embryo quality in a clinically meaningful way, though BMI/lifestyle are only lightly addressed and AMH is somewhat overinterpreted as DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with a plausible adjustment of implantation odds based on embryo quality and uterine factor; minor issues include inconsistent terminology around expansion stage and some overreach from limited uterine-factor detail."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with Gardner grading concepts and standard IVF practice, but mislabels grade 3 as expanded/hatching, suggests 'extra vigilance' progesterone because of age/uterine factor without clear guideline basis, and mentions donor egg planning prematurely for a 35-year-old first-cycle patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding if the cavity is optimized, considering freeze-all if uterine pathology remains, and counseling on future response; however, recommendations are somewhat generic and truncated, limiting specificity."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01284,
+  "judge_latency_ms": 5187.585040999693,
+  "judge_prompt_tokens": 2455,
+  "judge_completion_tokens": 365
+}

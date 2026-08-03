@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0324",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided BA grades, but it overstates image certainty and incorrectly challenges the supplied expansion score by calling it more like grade 3/4 despite the lab description already defining a full blastocyst; some features such as thinning zona and exact ICM location are somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, diagnosis, sperm parameters, and endometrial thickness well with embryo quality, though it somewhat overinterprets AMH as implying egg quality and does not fully nuance age-related euploidy versus morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible link from morphology and patient factors to prognosis; minor issues include tension between the stated 2BA score and the model's reinterpretation of expansion stage, and a somewhat simplified implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET is appropriate, fresh transfer can be reasonable, and PGT-A is presented as a consideration rather than a mandate. Small deviations include imprecise Gardner stage interpretation and slightly overconfident statements about AMH and surplus embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for this transfer and future planning, including SET, fresh transfer considerations, cryopreservation, and PGT-A discussion. It is useful clinically, though not highly nuanced about conditions that would alter fresh transfer decisions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0115175,
+  "judge_latency_ms": 8114.961875020526,
+  "judge_prompt_tokens": 2381,
+  "judge_completion_tokens": 371
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches the provided 2CA grading with weak ICM and strong TE, but it inaccurately calls grade 2 'fully expanded,' infers a thin zona from the image, and overstates visual certainty of some features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, PCOS diagnosis, low oocyte yield, sperm parameters, and endometrial thickness with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable issues: equating grade 2 with full blastocyst, treating day-4 blastocyst transfer as potentially asynchronous, and inferring protocol oversuppression/DOR without enough evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles, but there are deviations from Gardner staging interpretation and some recommendations/speculations (e.g., long agonist chosen to prevent OHSS, day-4 blastocyst asynchrony concern) are not well grounded in guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, and future cycle considerations such as protocol review, ovarian reserve workup, and possible PGT-A, though some suggestions are broader than case-specific."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.0110575,
+  "judge_latency_ms": 6520.24458401138,
+  "judge_prompt_tokens": 2419,
+  "judge_completion_tokens": 334
+}

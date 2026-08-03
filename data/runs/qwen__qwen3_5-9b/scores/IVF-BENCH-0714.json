@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a major image-data mismatch and avoids inventing blastocyst features, but it likely overcalls the image as a degenerating oocyte/zygote rather than providing a careful morphology description of what is actually visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, BMI, tubal factor, endometrium, prior cycle history, and sperm parameters with embryo prognosis in a clinically meaningful way, though some points are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are inconsistencies: it treats 3AA as 'highest grade,' mixes implantation with ploidy-dependent scenarios, and gives a broad estimate partly driven by an uncertain image interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements align with IVF practice, but there are notable deviations: 3AA is mischaracterized as the highest grade, PGT-A is framed too strongly for a fresh Day-5 transfer context, and donor egg discussion is premature after a first cycle with 7 MII oocytes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps including verifying the image-score discrepancy, proceeding with transfer if this is the only embryo, and discussing future planning, though some recommendations are too categorical."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012459,
+  "judge_latency_ms": 4524.595416994998,
+  "judge_prompt_tokens": 2493,
+  "judge_completion_tokens": 332
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA grading appropriately and gives a plausible high-quality blastocyst description, but includes image-specific details not verifiable from the prompt/image context (exact clock-face ICM position, nuclear:cytoplasmic ratio, absence of multinucleation/fragmentation, readiness for hatching)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strongly integrates age, ovarian reserve, diagnosis, sperm parameters, endometrium, BMI, and cycle history with embryo quality to frame prognosis and transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with prognosis and recommendations flowing from embryo quality and patient factors, though some quantitative claims are overstated or insufficiently supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice: recognizes excellent prognosis, supports eSET, and appropriately does not recommend routine PGT-A at age 27. Minor deviations include speculative aspirin use, ERA mention, and overconfident euploidy/live birth estimates."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical recommendations for this transfer and contingency planning, including eSET, luteal support considerations, follow-up timing, and future-cycle decision points."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01177,
+  "judge_latency_ms": 5312.844832951669,
+  "judge_prompt_tokens": 2824,
+  "judge_completion_tokens": 314
+}

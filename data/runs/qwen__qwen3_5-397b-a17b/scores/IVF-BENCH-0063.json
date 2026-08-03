@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies strong ICM and fair TE, but it overstates image-specific certainty (e.g., exact ICM position, 'fully expanded'/'thinning zona') beyond what can be safely inferred from the provided grading and single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age-related aneuploidy risk, ovarian reserve, prior failed cycles, uterine factor, endometrial thickness, and semen parameters well, though some links such as stress effects and sperm DNA fragmentation are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate that broadly follows from morphology, age, and uterine history; minor issues include calling 3AB 'top-tier'/'looks perfect' while also noting meaningful limitations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age-related aneuploidy, uterine evaluation, and considering PGT-A after failures, but ERA and routine stress/acupuncture emphasis are not strongly guideline-supported, and recommending dual-route progesterone without context is somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future workup, including hysteroscopy and endometritis assessment, but some recommendations are broader than necessary and not fully prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.0113275,
+  "judge_latency_ms": 5981.735833978746,
+  "judge_prompt_tokens": 2449,
+  "judge_completion_tokens": 347
+}

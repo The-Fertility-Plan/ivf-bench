@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with an expanded blastocyst and thinning zona, but relies heavily on the provided Gardner grade and gives limited image-specific detail on ICM and TE; also calls 3AA 'top-tier/highest' somewhat imprecisely."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, male factor, endometrium, and prior miscarriage with prognosis reasonably well, though it overinterprets the oocyte yield as suggesting poor response and assumes only one blastocyst."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: it labels 7 MII oocytes as low/poor response without enough context, infers a single embryo from the prompt, and the response is incomplete/truncated before finishing risk assessment and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles and Gardner grading, but overstates 3AA as the highest grade and makes somewhat unsupported clinical inferences; no clear contradiction to major guidelines, but not deeply guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides limited practical next steps and the response is truncated before transfer recommendations, future cycle planning, or a concrete implantation estimate, reducing clinical usefulness."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010389,
+  "judge_latency_ms": 4133.234458000516,
+  "judge_prompt_tokens": 1868,
+  "judge_completion_tokens": 319
+}

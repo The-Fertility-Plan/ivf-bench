@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0401",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA grade, but it adds image-specific details not verifiable from the prompt alone (e.g., ICM clock position, minimal vacuolization, zona thinning comments) and labels it 'early expanded' despite grade 2 being full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, male factor, prior IVF history, endometrium, and paternal age with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to embryo grade and patient factors; minor issues include overconfident quantitative adjustments and assumptions such as presumed ICSI and trilaminar endometrium."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on eSET and general prognosis, but includes recommendations with weaker guideline support or overstatement (e.g., ERA after failed transfers, embryo glue, PGT-A framed too strongly, 'mandatory' BMI target, prolonged luteal support specifics)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including sperm DNA fragmentation testing and metabolic optimization, though some suggestions are more opinion-based than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.011905,
+  "judge_latency_ms": 5720.914000004996,
+  "judge_prompt_tokens": 2776,
+  "judge_completion_tokens": 331
+}

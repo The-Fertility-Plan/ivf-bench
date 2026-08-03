@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA label, but it overstates image-specific certainty by assigning exact ICM position, claiming zona thinning, symmetry, and low fragmentation that may not be clearly verifiable from a single blastocyst image; also repeats the prompt's incorrect mapping of grade 2 as 'full blastocyst.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometriosis, sperm parameters, endometrial thickness, oocyte yield, and prior cycle history reasonably well with embryo prognosis, though AMH is unavailable and some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent, with a clear explanation for the probability estimate; minor issues include the day-4/day-5 discussion and somewhat speculative quantitative impact assigned to BMI and endometriosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are notable deviations: Gardner expansion grading is misstated, robust luteal support specifically because of endometriosis is not guideline-based, and routine stress-reduction advice and empiric protocol changes/downregulation are more speculative than evidence-driven for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for proceeding with transfer, luteal support review, weight optimization, and future-cycle considerations; however, some suggestions are broad and not tightly tailored to the limited data."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011895,
+  "judge_latency_ms": 6213.102875044569,
+  "judge_prompt_tokens": 2490,
+  "judge_completion_tokens": 378
+}

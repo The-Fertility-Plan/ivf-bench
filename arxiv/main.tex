@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
+\setlist{nosep,leftmargin=*}
+\setlength{\parskip}{0.4em plus 0.1em minus 0.1em}
+
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!5},
+  rulecolor=\color{gray!40},
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+\definecolor{realgreen}{HTML}{2E7D32}
+\definecolor{synthblue}{HTML}{1565C0}
+
+\title{\textbf{IVF-Bench: A Rubric-Based Standard for Evaluating\\Vision-Language Models on IVF Clinical Reasoning}}
+\author{
+  Andrew G. A. Correa\\Monostate\\\texttt{andrew@monostate.ai}
+  \and
+  Brittany Yoon\\The Fertility Plan\\\texttt{b@thefertilityplan.com}
+}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+ABSTRACT_PLACEHOLDER
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+
+Choosing which embryo to transfer is one of the decisions in IVF that most
+affects whether a patient goes home with a baby. In most clinics that choice
+still rests on how the embryo looks under a microscope on day 5, summarised by
+the Gardner grade: how far the blastocyst has expanded, how well formed the inner
+cell mass is, and how cohesive the trophectoderm is \citep{gardner1999}. The
+grade is useful and it is also subjective. When embryologists at different
+centres are shown the same day-5 embryos and asked to pick one, they agree less
+often than the confidence of the decision suggests \citep{storr2017}.
+
+That gap has attracted a decade of machine learning work, almost all of it
+framed as a scoring problem: feed in an image or a time-lapse video, return a
+number, rank the embryos by that number. The largest randomised trial of this
+approach put a deep learning ranker against trained embryologists across 14
+clinics and 1,066 patients, and it did not demonstrate noninferiority
+\citep{illingworth2024}. A ranker that cannot beat a human ranker is not obviously
+the thing to build next.
+
+We think the framing is the problem, not the architecture. An embryo image is a
+fraction of what determines whether a transfer works. The rest is the patient:
+her ovarian reserve, her endometrium, her BMI and lifestyle, what happened in her
+previous cycles, what the andrology report says. In a real clinic most of that
+lives with the physician and never reaches the embryologist at the microscope,
+let alone the imaging model. A system that sees only pixels is not failing at
+prediction so much as being asked to predict without the inputs that matter.
+
+Vision-language models can in principle take both. Nobody can show it, because
+the data to show it does not exist in public. Embryo images are sensitive
+clinical records, outcome-linked patient context is more sensitive still, and the
+regulatory and privacy path to assembling the two together is long enough that
+every serious dataset in this field is private. That is the actual bottleneck.
+
+So the first thing needed is a way to measure whether a model can use patient
+context at all. That is what we built.
+
+\textbf{IVF-Bench} is an open benchmark of 753 day-5 blastocyst cases. Each case
+pairs a real embryo image and its expert Gardner annotation with real cycle and
+outcome data from the same patient, plus the patient-history fields that no
+public dataset carries. Those we generate from published population
+distributions, deterministically, and label every one of them as generated. A
+model is asked to describe the embryo, integrate the patient factors, estimate an
+implantation probability, and recommend next steps. Five rubrics score the answer
+from 1 to 5, and the stated probability is checked against the real outcome.
+
+Generating that context is a deliberate methodological choice and we defend it in
+Section~\ref{sec:synthetic}. It is what makes a case-level reasoning task
+constructible from public data at all. It also has a consequence we state up
+front: our generated fields are sampled independently of the recorded outcomes,
+so they carry no information about who conceived. Any outcome-prediction result
+in this paper is bounded by that before a model is involved.
+
+We evaluate seven frontier and open-weight models, then post-train a 9B open
+model on preference pairs drawn from the benchmark. What we found:
+
+\begin{enumerate}
+\item Post-training beats scale on this task. 550 preference pairs move a 9B open
+      model past Claude Opus 4.6 into second place of eight, at a twentieth of
+      the inference cost. The reasoning half of embryo assessment does not
+      require a frontier model, and the recipe is reproducible by anyone.
+\item That gain shows up on all five rubrics at once, not on one, which is what
+      distinguishes a recipe that improves the whole assessment from a tuning
+      trick that moves a single number.
+\item Outcome prediction stays weak for everyone, and we quantify how weak
+      against a baseline that ignores its inputs entirely. We read that as a
+      ceiling set by the available data, not by the models, for the reason given
+      above.
+\item Morphology is the weakest rubric everywhere, and our judge cannot see the
+      image, so we treat that as a bound rather than a measurement.
+\end{enumerate}
+
+The practical conclusion is that the field's next unlock is a public dataset that
+links embryo images to real patient context and real outcomes. IVF-Bench is the
+instrument for measuring what such a dataset would buy.
+
+% ============================================================
+\section{Related work}
+
+\textbf{Embryo selection models.} Most published systems predict a label from
+pixels. They grade blastocysts automatically, rank embryos within a cohort, or
+estimate implantation from time-lapse video. Commercial products in clinics today
+follow the same pattern and are positioned as adjunctive scoring tools rather
+than autonomous decision makers. The randomised evidence for the strongest of
+them is the trial discussed above \citep{illingworth2024}. None of this work
+evaluates open-ended clinical reasoning, because none of it produces language.
+
+\textbf{Language about embryos.} The group that released the dataset we build on
+has recently moved in this direction, publishing an expert-annotated set of
+embryo images paired with natural-language morphological descriptions
+\citep{neu2026dataset} and a fine-tuned PaliGemma-2 model that generates such
+descriptions \citep{neu2026invitrovision}. That work and ours are complementary
+and different in an important way. They evaluate whether a model can describe an
+embryo. We evaluate whether a model can reason about a patient who has that
+embryo, which requires the cycle data, the history, a probability, and a
+recommendation. Their descriptions are the ground truth we most wish we had for
+scoring morphology, and we say so in Section~\ref{sec:limitations}.
+
+\textbf{Rubric-graded evaluation of medical language models.} Scoring open-ended
+clinical answers against written criteria, with a language model doing the
+scoring, was put on a solid footing by HealthBench, which had 262 physicians
+write 48,562 rubric criteria over 5,000 conversations
+\citep{arora2025healthbench}. Our five rubrics are far smaller and narrower, and
+are written for one decision rather than for medicine in general. The
+methodological debt is direct and we follow the same basic recipe: grade against
+criteria, not against a gold answer.
+
+\textbf{Preference optimisation.} We post-train with ORPO
+\citep{hong2024orpo}, which folds the preference objective into the supervised
+loss and removes the need for a separate reference model, in the family of
+methods opened up by DPO \citep{rafailov2023dpo}.
+
+% ============================================================
+\section{The benchmark}
+
+\subsection{Where the data comes from}
+
+Open embryo data is rare, because embryo images are sensitive clinical records
+and most published systems are trained on private single-clinic collections. We
+build on the Kromp blastocyst dataset \citep{kromp2023}, which is public under CC
+BY 4.0 and links day-5 embryo images to expert Gardner grades, selected cycle
+variables, and pregnancy outcomes. Of the 837 patients in the release, 754 have
+complete clinical records, and one of those references an image that is missing
+from the distributed archive, which leaves 753 usable cases.
+
+Preparing the source data took more work than we expected, and we document it
+because anyone reusing this dataset will hit the same problems. The clinical
+annotation file is semicolon-separated, Latin-1 encoded, and was clearly opened in
+a German-locale spreadsheet at some point: 500 AMH values and 144 endometrial
+thickness values had been silently converted into dates, so that a value of 1.26
+appears in the file as \texttt{J\"an.26}. We map the month abbreviations back to
+numbers to recover them. Oocyte counts sometimes appear in additive form such as
+\texttt{7+1}, which we sum. Missing values stay missing and are shown to models as
+"not available" rather than being imputed. One record has a live birth recorded
+without the clinical pregnancy that must precede it; we keep it as it is, because
+silently fixing a source dataset is worse than reporting the inconsistency.
+
+\subsection{What a case contains}
+
+Each case combines real fields from Kromp with generated patient context. The
+real fields are the embryo image, the Gardner grades, patient age, AMH,
+endometrial thickness, oocytes retrieved, mature oocytes, transfer day, and the
+three pregnancy outcomes. The generated fields are BMI, basal FSH, diagnosis,
+stimulation protocol, previous cycles and their outcomes, partner age, semen
+parameters, and a lifestyle summary.
+
+\subsection{Why the patient context is generated, and what that costs}
+\label{sec:synthetic}
+
+An embryo image plus an age is not a case. A clinician reasoning about a transfer
+uses a history, and a benchmark that omits the history cannot tell whether a
+model uses one. But no public dataset carries BMI, lifestyle, stimulation
+protocol, or cycle history alongside embryo images and outcomes. That data exists
+in clinics, mostly in physicians' notes and often in physicians' heads, and it
+does not travel: it rarely reaches the embryologist at the microscope, and it has
+never reached a public research corpus, because assembling images plus
+outcome-linked patient records is exactly the combination that regulatory and
+privacy review is built to slow down.
+
+So we generated it. Each field is sampled from published population
+distributions, with the parameters and their sources documented in the
+repository. Generation is deterministic per case, seeded from a hash of the case
+identifier, so cases regenerate exactly and adding new cases does not perturb
+existing ones. Every case file carries a \texttt{synthetic\_fields} list naming
+exactly which fields were generated, so no reader has to guess and no result can
+quietly depend on generated data being mistaken for measured data.
+
+This buys a case-level reasoning task that can be built and reproduced entirely
+from public sources. It costs two things, and both matter for reading the
+results.
+
+First, the generated fields are sampled independently of the recorded outcomes.
+They are realistic in their marginal distributions and they carry no information
+about which patient conceived. A model cannot extract predictive signal from them
+because there is none to extract. The outcome-prediction numbers in
+Section~\ref{sec:results} are therefore bounded by the data before any model is
+involved, and should be read as a floor that measures what is missing, not as a
+verdict on what vision-language models can do with real context.
+
+Second, the fields are sampled independently of each other, so genuine clinical
+correlations such as the one between PCOS and BMI are absent. A model that knows
+those correlations is not rewarded for it here.
+
+Neither cost is fixable with a better generator. Both are fixed by a real
+dataset, which is the point.
+
+\subsection{Splits}
+
+The 753 cases are split deterministically into 550 test, 100 validation, and 103
+held out. The test split carries the main leaderboard. The validation split is
+reserved for judge and threshold work. The held-out split was untouched through
+all training, hyperparameter search, and judge calibration, and exists to answer
+one question: do the test-split rankings survive on cases nobody optimised
+against?
+
+One property of the splits is worth stating plainly, because it is a defect. They
+were drawn per image rather than per patient. Twenty-two patients contributed two
+embryos each, and for six of those patients the two embryos landed in different
+splits. Four of the 103 held-out cases therefore share a patient with a test-split
+case. We measure the effect in Section~\ref{sec:robustness} and it changes no
+ranking, but a future version should split on patient.
+
+\subsection{The prompt}
+
+Every model sees the embryo image and a structured case description containing
+the Gardner grade with plain-language descriptors, the laboratory fields, and the
+patient profile. It is asked for five things: a morphology description, an
+integration of the patient factors, the risks and favourable features, a numeric
+implantation probability, and recommendations for this transfer and for future
+cycles. The full template is in Appendix~\ref{app:prompt}.
+
+\subsection{The five rubrics}
+
+A judge model reads the case and the response and returns a 1 to 5 score with a
+short justification for each of five rubrics.
+
+\begin{itemize}
+\item \textbf{Morphology grounding.} Does the description of the embryo match the
+      image and the Gardner annotation?
+\item \textbf{Clinical integration.} Does the response connect the patient factors
+      to this embryo and this prognosis, rather than listing them?
+\item \textbf{Reasoning coherence.} Is the argument internally consistent, with
+      uncertainty where uncertainty belongs?
+\item \textbf{Guideline alignment.} Is the advice consistent with evidence-based
+      reproductive medicine?
+\item \textbf{Recommendation usefulness.} Could a clinician act on this, or is it
+      generic?
+\end{itemize}
+
+Full rubric text and the 1 to 5 anchors for each are in
+Appendix~\ref{app:rubrics}. The judge also extracts the numeric probability from
+the response, which we compare against the recorded outcome.
+
+% ============================================================
+\section{Evaluation setup}
+\label{sec:setup}
+
+RESULTS_SETUP_PLACEHOLDER
+
+% ============================================================
+\section{Results}
+\label{sec:results}
+
+RESULTS_PLACEHOLDER
+
+% ============================================================
+\section{Post-training a small model}
+\label{sec:orpo}
+
+ORPO_PLACEHOLDER
+
+% ============================================================
+\section{What the benchmark itself gets wrong}
+\label{sec:robustness}
+
+ROBUSTNESS_PLACEHOLDER
+
+% ============================================================
+\section{Limitations}
+\label{sec:limitations}
+
+LIMITATIONS_PLACEHOLDER
+
+% ============================================================
+\section{What we release}
+\label{sec:release}
+
+RELEASE_PLACEHOLDER
+
+\bibliography{references}
+
+\appendix
+\section{Case prompt template}
+\label{app:prompt}
+PROMPT_APPENDIX_PLACEHOLDER
+
+\section{Rubric definitions}
+\label{app:rubrics}
+RUBRIC_APPENDIX_PLACEHOLDER
+
+\section{Artifact index}
+\label{app:artifacts}
+ARTIFACT_APPENDIX_PLACEHOLDER
+
+\end{document}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates visible certainty, incorrectly equates grade 3 with hatching/on the verge of hatching, and infers detailed TE/zona features beyond what can be confidently confirmed from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, oocyte yield, sperm quality, endometrial thickness, and prior cycle history well, though some claims about DOR effects and embryo quality are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but there are notable issues: calling the embryo a 'top-tier' 3AA while also saying it has the highest implantation potential of any grade, and using overly confident euploidy/implantation assumptions from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general transfer considerations, but there are deviations: recommending fresh transfer vs freeze/PGT-A without cycle-context nuance, overstating morphology as predictor of euploidy, and suggesting donor eggs too early for a 34-year-old first-cycle DOR patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, SET, and future protocol considerations, though some recommendations are too broad or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013179,
+  "judge_latency_ms": 4094.223583000712,
+  "judge_prompt_tokens": 2543,
+  "judge_completion_tokens": 370
+}

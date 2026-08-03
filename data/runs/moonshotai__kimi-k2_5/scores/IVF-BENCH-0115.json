@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a fair-quality blastocyst and the provided 2BB grade, but it incorrectly labels expansion as grade 2 while also calling it a full blastocyst, and adds features like lack of fragmentation/necrosis and zona thinning that may not be reliably confirmed from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometrium, prior cycle history, smoking, diagnosis, and sperm parameters well with embryo quality and prognosis, though some inferences about cohort quality and sperm DNA damage are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: mismatch between Gardner expansion terminology, strong quantitative penalties for smoking without clear support, and some conclusions extend beyond the available data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several non-guideline-supported recommendations for this scenario, including routine aspirin, estrogen add-on, thrombophilia/autoimmune testing, ERA, GH, and strong PGT-A endorsement in a 31-year-old unexplained infertility case with only two prior cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET and smoking cessation, but some suggested interventions are overly aggressive or insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.013317,
+  "judge_latency_ms": 4204.074207998929,
+  "judge_prompt_tokens": 2694,
+  "judge_completion_tokens": 349
+}

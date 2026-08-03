@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0203",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst consistent with 1DD, but it inaccurately calls grade 1 'clearly expanded' and adds features like zona thinning that are not supported; grade 1 is an early blastocyst with blastocoel at least half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates age, ovarian reserve, BMI, endometrium, diagnosis, and semen data, but overstates maternal age as favorable and overattributes poor embryo quality to paternal age despite normal semen parameters and limited evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is structured, but there are notable logical issues: it labels age 38 as a good/favorable age bracket, infers 'only Day 5 embryo available' without full embryo cohort data, and links poor morphology strongly to male age without adequate support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic grading interpretation is acceptable, but several recommendations are not well aligned with evidence-based IVF practice: routine ICSI to address presumed DNA fragmentation is unsupported here, donor sperm suggestion is premature, and claiming PGT-A can definitively rule out aneuploidy is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as counseling about low success and considering future PGT-A, but recommendations are only moderately useful because some are too strong or insufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.01167,
+  "judge_latency_ms": 6843.857542029582,
+  "judge_prompt_tokens": 2418,
+  "judge_completion_tokens": 375
+}

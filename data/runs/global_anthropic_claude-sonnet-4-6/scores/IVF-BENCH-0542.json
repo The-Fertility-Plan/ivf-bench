@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0542",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It reasonably matches the reported 3AB for expansion and TE, but it overinterprets the image by asserting multiple large vacuoles and using that as a major finding; this is not reliably supported from a single blastocyst image and makes the morphology assessment partly fabricated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, infertility diagnosis, prior cycle history, and sperm parameters with prognosis in a generally thoughtful way, though some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and internally mostly consistent, but the probability estimate is heavily driven by an uncertain vacuolization finding and by additive penalty logic that is not well validated, creating some overreach."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but several recommendations are not strongly guideline-based for this scenario, including suggesting freeze-all for an 8 mm lining, low-dose aspirin for perfusion, ERA after a single failure, and PGT-A in a young patient after one cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps, including counseling on alcohol cessation, transfer considerations, luteal support, and future workup options; however, some actions are more aggressive than standard practice for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.02058,
+  "judge_latency_ms": 6484.383292030543,
+  "judge_prompt_tokens": 3036,
+  "judge_completion_tokens": 360
+}

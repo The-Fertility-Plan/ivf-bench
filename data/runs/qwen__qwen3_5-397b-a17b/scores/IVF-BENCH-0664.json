@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Description is broadly consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates certainty from a single image (e.g., exact ICM location, 'no obvious gaps') and labels stage 3 as 'fully expanded' with thinning zona, which is closer to stage 4 terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, miscarriage history, male factor, ovarian response, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH/FSH and some nuances are not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible probability estimate tied to morphology and patient factors; minor issues include some overconfident statements about morphology and prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially single embryo transfer in a 33-year-old with a good-quality day-5 blastocyst. Minor deviations include somewhat strong endorsement of PGT-A after a single miscarriage/failed transfer and routine progesterone monitoring without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, luteal support, consideration of PGT-A if adverse outcome recurs, sperm DNA fragmentation testing, and lifestyle optimization; could be more specific about thresholds and alternative pathways."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012699,
+  "judge_latency_ms": 7307.991083012894,
+  "judge_prompt_tokens": 2363,
+  "judge_completion_tokens": 374
+}

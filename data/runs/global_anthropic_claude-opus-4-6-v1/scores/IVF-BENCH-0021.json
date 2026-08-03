@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response likely overcalls image-specific features and misclassifies the embryo as a morula despite the provided lab grade indicating an early blastocyst. It also discusses ICM/TE non-visibility in a way that conflicts with the stated Gardner 0DD notation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve markers, oocyte maturity, smoking, semen parameters, BMI, endometrium, and cycle context with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear link from poor embryo quality and smoking to low implantation odds, though some logic is weakened by the morphology-stage mismatch and strong inferences from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including smoking cessation, counseling, luteal support, and future protocol review, though some suggestions are somewhat speculative and the Gardner grading discussion is imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "It provides specific, practical next steps for the current transfer and future cycles, including counseling, smoking cessation timing, trigger optimization, culture strategy, and adjunct evaluations."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.024275,
+  "judge_latency_ms": 7396.380249992944,
+  "judge_prompt_tokens": 3874,
+  "judge_completion_tokens": 327
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0701",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image, calls the embryo 'expanded' while describing thinning zona more like stage 4, and localizes ICM/TE features somewhat specifically without clear visual support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, sperm parameters, endometrium, and oocyte yield with embryo quality reasonably well, though it overinterprets low oocyte yield and does not address missing AMH or BMI relevance in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: calling 3AA 'perfect,' implying 6 MII is very low for age without context, and linking FSH 7.2 to diminished reserve too strongly. The implantation estimate is plausible but somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with general IVF principles and Gardner grading, but it overstates prognostic certainty, treats 3AA as highest possible quality, and suggests reserve concerns from limited data more strongly than guidelines would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated and does not provide clear, specific recommendations for transfer management or future cycle planning beyond general comments about prognosis and risk."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0060575,
+  "judge_latency_ms": 6198.032082989812,
+  "judge_prompt_tokens": 2022,
+  "judge_completion_tokens": 353
+}

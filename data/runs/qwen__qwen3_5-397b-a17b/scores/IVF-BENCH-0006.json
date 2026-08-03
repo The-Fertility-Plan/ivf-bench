@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2BA grade, correctly describing a B ICM and A TE, but it overstates certainty from the image, uses imprecise wording for expansion ('Grade 2 - Full Blastocyst'), and adds features like smooth TE/no degenerating cells and turgidity that may not be directly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor diagnosis, sperm quality, endometrial thickness, and prior miscarriages with embryo quality and prognosis. It connects these factors reasonably well, though it could better distinguish implantation from miscarriage risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a plausible probability estimate tied to embryo quality and patient age. Minor issues include conflating Day 4 transfer with blastocyst timing and some overinterpretation of embryo 'vigor' from early blastulation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF practice in discussing morphology, luteal support, and RPL evaluation, but recommending PGT-A as strongly warranted in a 28-year-old solely due to miscarriage history is more aggressive than guideline-based routine practice, and inherited thrombophilia screening is not universally recommended in standard RPL workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer, luteal support, early monitoring, and future RPL workup. Recommendations are practical, though some are broad rather than highly tailored and could better specify when additional testing or PGT-A would be appropriate."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0120325,
+  "judge_latency_ms": 6554.825500003062,
+  "judge_prompt_tokens": 2479,
+  "judge_completion_tokens": 389
+}

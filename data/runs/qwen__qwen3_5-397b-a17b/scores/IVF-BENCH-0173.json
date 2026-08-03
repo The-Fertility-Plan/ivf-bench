@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0173",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 0DD/early blastocyst label in describing absent-poor ICM and TE, but it introduces uncertainty by calling it morula-to-early blastocyst and mentions specific features like upper-left extrusion/granularity that may overinterpret the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, AMH, prior miscarriage, partner age, semen parameters, and endometrium with embryo prognosis well, though some links (e.g., attributing poor morphology directly to obesity or paternal age) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent: very poor morphology plus age-related aneuploidy risk leads to very low implantation odds. Minor issues include conflating Day 4 timing with blastocyst grading and some overconfident causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned in recognizing 0DD as very poor prognosis and discussing counseling, but recommending PGT-A as strongly indicated and suggesting many clinics would not transfer may overstate consensus; some statements go beyond guideline-level certainty."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, freezing considerations, weight optimization, sperm DNA fragmentation testing, and future cycle planning, though some recommendations could be more nuanced and individualized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013137,
+  "judge_latency_ms": 4148.4118750013295,
+  "judge_prompt_tokens": 2549,
+  "judge_completion_tokens": 366
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0545",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with 1DD, but it misstates expansion as less than half the embryo despite the provided grade 1 definition being at least half, and it adds specific features like clear lysis/debris not reliably supportable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, prior cycle history, and overall prognosis well, but it overstates sperm quality as excellent despite low concentration and does not fully explore that male factor could contribute to poor embryo development."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent in concluding that embryo quality is the dominant prognostic factor despite favorable maternal factors, though there is some overinterpretation of morphology and incomplete handling of the sperm data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly consistent with Gardner-based assessment and standard IVF principles, but the expansion-stage interpretation is inaccurate and the male factor interpretation is not well aligned with evidence-based semen assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides assessment more than management; it does not clearly offer specific transfer counseling, whether to proceed, or concrete future-cycle planning steps."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.00964,
+  "judge_latency_ms": 5832.159832993057,
+  "judge_prompt_tokens": 1852,
+  "judge_completion_tokens": 334
+}

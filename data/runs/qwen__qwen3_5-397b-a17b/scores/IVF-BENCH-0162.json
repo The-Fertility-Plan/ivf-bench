@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0162",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes poor-quality development, but it misstates key morphology by saying there is no distinct blastocoel despite the provided Gardner score indicating an early blastocyst, and it adds speculative features like thickened zona and granular cytoplasm that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, male factor, and cycle context reasonably well, though it over-attributes the poor embryo to sperm DNA fragmentation without sufficient case-specific evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: it conflates Day 4 transfer with poor viability, treats 0DD as stronger evidence of degeneration than is justified from a single image, and the implantation estimate is only loosely supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard, but some statements are not well aligned with guideline-based caution, especially implying Day 4 transfer usually means nonviability and strongly prioritizing SDF/TESE based on limited evidence; PGT-A framing is also somewhat simplistic for a 32-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for the current transfer and future workup, including counseling, luteal support, and male-factor evaluation, though some suggestions are more speculative than tailored."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0116575,
+  "judge_latency_ms": 7005.540500045754,
+  "judge_prompt_tokens": 2503,
+  "judge_completion_tokens": 360
+}

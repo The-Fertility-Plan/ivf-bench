@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0141",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB grade, but it overstates image-specific certainty (e.g., exact ICM location and 'clearly' thinned zona at one pole) and relies heavily on the supplied grade rather than strictly visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, PCOS diagnosis, sperm quality, BMI, and endometrium with embryo prognosis reasonably well, though the DOR/non-classic PCOS inference is somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable issues: calling age 35 'prime' and saying aneuploidy risk is 'low,' plus the implantation estimate is justified partly by euploid rates rather than untested embryo outcomes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general morphology interpretation are aligned, but recommendations around PGT-A, luteal support assumptions, mild stimulation despite low response, and donor egg counseling after one cycle are not fully guideline-concordant or are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, but some suggestions are too prescriptive or insufficiently individualized given the limited data from a first cycle."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0111625,
+  "judge_latency_ms": 5680.613125034142,
+  "judge_prompt_tokens": 2515,
+  "judge_completion_tokens": 325
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates Gardner expansion grade 1 as having a blastocoel occupying less than 50% of the embryo, whereas the provided lab data defines it as at least half the embryo; it also adds image-specific detail that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, sperm quality, BMI, and endometrial thickness with embryo quality and prognosis well, though it somewhat overlabels the patient as a classic poor responder from a single first cycle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the low implantation estimate follows from advanced maternal age plus a 1DD embryo, but there are minor issues such as the incorrect expansion-stage explanation and some overinterpretation of ovarian response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most counseling points are broadly consistent with IVF practice, but there are deviations: incorrect Gardner grade description, calling this a poor responder without Bologna/POSEIDON framing, and suggesting aspirin/heparin or growth hormone/DHEA with limited routine guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer if this is the only embryo, luteal support, and future cycle considerations, though some recommendations are not strongly evidence-based and could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.013101,
+  "judge_latency_ms": 5586.218916003418,
+  "judge_prompt_tokens": 2467,
+  "judge_completion_tokens": 380
+}

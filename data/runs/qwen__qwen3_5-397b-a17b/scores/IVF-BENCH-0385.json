@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality/degenerating blastocyst, but it misstates Gardner stage 1 as blastocoel less than half the embryo, overinterprets necrosis/non-viability from the image, and includes features not securely inferable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, and male-factor context reasonably well, though it leans too heavily into speculative sperm DNA fragmentation without sufficient case-specific evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains important inconsistencies: it notes the stage-description mismatch yet still builds on it, and it equates 1DD with effectively zero chance and absolute non-viability more strongly than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is appropriate, but recommending categorically not to transfer a 1DD embryo and calling the cycle 'cancelled (coasted)' are not well aligned with standard IVF terminology or nuanced guideline-based practice; several recommendations are more speculative than evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers concrete next steps such as sperm DNA fragmentation testing, possible ICSI, and lifestyle optimization, but the transfer recommendation is overly absolute and some suggestions lack nuance or prioritization."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.011115,
+  "judge_latency_ms": 6726.485040970147,
+  "judge_prompt_tokens": 2298,
+  "judge_completion_tokens": 358
+}

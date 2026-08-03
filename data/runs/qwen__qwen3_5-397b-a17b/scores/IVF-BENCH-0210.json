@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0210",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates certainty from the image alone, calls stage 3 an 'expanded blastocyst' rather than full expansion/hatching progression nuance, and likely relies more on the supplied grade than strictly visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, AMH, BMI, prior failed cycle, sperm parameters, and endometrial thickness with prognosis reasonably well, though some links (e.g., AMH to mosaicism) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical and structured, but contains notable issues such as calling 3AA the highest possible score and making unsupported claims about high AMH and mosaicism; the implantation estimate is somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Appropriately supports single embryo transfer and recognizes favorable prognosis, but deviates from guideline-consistent nuance by overstating embryo grading, suggesting PGT-A based on high AMH/one failed cycle, and implying stress materially affects implantation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations including proceeding with SET, lifestyle advice, and future cryopreservation planning, though some suggestions lack nuance and evidence strength."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0107125,
+  "judge_latency_ms": 5367.979708011262,
+  "judge_prompt_tokens": 2365,
+  "judge_completion_tokens": 320
+}

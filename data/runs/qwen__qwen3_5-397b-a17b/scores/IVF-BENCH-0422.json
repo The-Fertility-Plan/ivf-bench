@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0422",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It broadly matches the poor-quality 1DD label, but it misstates expansion by saying the blastocoel is less than half the embryo despite the provided Gardner definition indicating at least half, and it adds specific features like large dark vacuoles and a mushy cytoplasm that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, prior biochemical pregnancy, endometrium, and lifestyle well, though it overinterprets missing data such as presumed poor blast yield and does not acknowledge AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the low implantation estimate follows from a 1DD Day 5 embryo, but there are some unsupported inferences such as assuming only one embryo reached Day 5 and attributing hidden male factor or lab issues without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, especially counseling about very poor prognosis, but routine PGT-A in a 30-year-old and immunologic/NK-cell testing are not strongly guideline-supported, and calling such embryos usually discardable is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step counseling and future workup options, including transfer counseling, sperm DNA fragmentation testing, review of fertilization method, and lab review, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0118175,
+  "judge_latency_ms": 9266.107375035062,
+  "judge_prompt_tokens": 2471,
+  "judge_completion_tokens": 376
+}

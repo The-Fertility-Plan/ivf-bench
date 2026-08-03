@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0427",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3BA grade and general blastocyst features, but it overstates certainty from a single image and contains confusion about ICM grading ('Grade A' described as loosely grouped, then possibly B)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, paternal age, uterine factor, prior failed cycles, endometrial thickness, AMH, BMI, and sperm parameters with embryo prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but there are notable issues: it labels 3 prior failed cycles as recurrent implantation failure without transfer details, overattributes failures to uterine factor, and the response is incomplete/truncated before finishing risk assessment and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned with standard IVF principles regarding morphology, age-related aneuploidy risk, and uterine evaluation, but it overinterprets paternal age effects and misstates/blurred Gardner ICM descriptors."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides only limited practical guidance; it identifies concerns but does not clearly deliver specific transfer recommendations, implantation probability range, or detailed future cycle planning, and the response is cut off."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010707,
+  "judge_latency_ms": 4349.41925000021,
+  "judge_prompt_tokens": 1894,
+  "judge_completion_tokens": 335
+}

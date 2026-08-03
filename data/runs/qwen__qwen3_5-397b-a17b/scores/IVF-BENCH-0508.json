@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0508",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality Day 5 blastocyst and the provided 3AA grade, but it overstates certainty from the image alone and adds specific positional/detail claims (e.g., ICM at 12 o'clock, perfect visual confirmation) that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior reproductive history, endometrial thickness, oocyte maturity yield, and sperm data with embryo quality well, though AMH is unavailable and some inferences about male factor are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a plausible probability estimate tied to embryo grade and patient factors; minor issues include overconfident statements and speculative links such as stress or DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice, especially recommending single embryo transfer, but it overcalls 3AA as the highest possible score, suggests aspirin/heparin without clear indication, and leans toward PGT-A in a 33-year-old in a way that is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and future planning, including SET, luteal support review, trigger review, and possible sperm DNA fragmentation testing; however, some recommendations are not sufficiently qualified by evidence or indication."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.011515,
+  "judge_latency_ms": 8794.771374959964,
+  "judge_prompt_tokens": 2536,
+  "judge_completion_tokens": 345
+}

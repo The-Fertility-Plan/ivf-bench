@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response generally matches the provided poor-quality early blastocyst/0DD label, with reasonable comments on limited expansion, sparse ICM, and poor TE. However, it overstates certainty from the image, uses nonstandard wording around 'Grade 0' expansion, and omits other visible structural qualifiers such as overall collapse/degeneration context and zona-related observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key patient factors well: young age, high AMH/PCOS, BMI, prior failed cycle, sperm quality, and endometrial thickness, and relates them to prognosis. It appropriately highlights the discordance between favorable patient factors and poor embryo morphology, though some links (e.g., direct inference from low MII to this embryo's quality) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent: very poor morphology drives a very low implantation estimate despite favorable age and endometrium. Minor issues include overconfident claims about nonviability and attributing poor morphology to chromosomal abnormality or maturation problems without sufficient evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the low prognosis for a 0DD embryo is directionally appropriate, several recommendations are not well aligned with evidence-based IVF practice: calling such embryos 'duds,' broadly recommending PGT-A in a 28-year-old with PCOS/one failed cycle, stating chromosomal abnormalities are common in PCOS, and suggesting ICSI despite no male factor. These are notable deviations from guideline-based individualized care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for counseling, transfer decision-making if this is the only embryo, protocol review, metabolic optimization, and luteal support. It is useful clinically, though some recommendations (PGT-A, routine ICSI) are too broad and reduce overall appropriateness."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0130625,
+  "judge_latency_ms": 8708.3699159557,
+  "judge_prompt_tokens": 2411,
+  "judge_completion_tokens": 469
+}

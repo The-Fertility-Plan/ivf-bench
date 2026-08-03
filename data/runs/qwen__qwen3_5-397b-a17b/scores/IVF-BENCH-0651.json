@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates certainty from the image, calling the embryo non-viable and describing fragmentation/degeneration not clearly established visually. It also misstates Gardner expansion 1 as less than half volume, whereas the provided lab data defines it as blastocoel at least half the embryo, and it inconsistently labels the embryo as morula/very early blastocyst despite the given 1DD score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, male factor, prior reproductive history, sperm parameters, and endometrial thickness with embryo prognosis reasonably well. However, it makes speculative links such as implying a PCO phenotype and attributing embryo degeneration to sperm DNA issues without sufficient support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: contradiction between Day 4 image interpretation and Gardner blastocyst grading, overconfident declaration of non-viability, and a probability estimate that may be too absolute for the available information."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: strong recommendation for PGT-A in a 26-year-old based mainly on prior biochemical losses is not clearly guideline-driven, and the statement that transfer is clinically discouraged because the embryo is effectively non-viable is stronger than standard morphology-based guidance supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps, including counseling about poor prognosis, considering transfer only if no alternatives exist, sperm DNA fragmentation testing, protocol review, and extended culture. It is useful, though some recommendations are somewhat overconfident or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013119,
+  "judge_latency_ms": 7312.71004199516,
+  "judge_prompt_tokens": 2328,
+  "judge_completion_tokens": 409
+}

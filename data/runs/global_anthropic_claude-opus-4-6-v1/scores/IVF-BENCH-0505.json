@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0505",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "ICM and TE descriptions are broadly consistent with a good-quality blastocyst, but the response likely overinterprets the image and introduces a questionable concern about expansion stage by calling the lab-reported 2AA potentially a true grade 3 discrepancy; some finer features like debris/granularity are not reliably image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, ovarian reserve, smoking, endometrial thickness, male factor context, partner age, BMI, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear stepwise probability estimate, though it may over-penalize outcomes by stacking multiple adjustments and gives somewhat inconsistent emphasis to the expansion-grade issue."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on embryo grading, age-related aneuploidy, and smoking counseling, but some recommendations are more speculative or not guideline-standard for routine use (e.g., ERA after one failure, aspirin, PRP/G-CSF, strong PGT-A recommendation in this exact context)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, specific next steps for the current transfer and future planning, including smoking cessation, luteal support considerations, endometrial optimization, sperm DNA fragmentation testing, and contingency planning if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.28,
+  "judge_cost_usd": 0.027515,
+  "judge_latency_ms": 7199.723958037794,
+  "judge_prompt_tokens": 4405,
+  "judge_completion_tokens": 366
+}

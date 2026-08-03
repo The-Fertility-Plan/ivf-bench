@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0494",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BA label and typical blastocyst features, but it overstates quality by calling the ICM and TE grade A despite the reported score being 3BA, and adds image-specific details that may not be clearly supportable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior cycle, sperm data, endometrium, and ovarian response with embryo quality reasonably well, though it overinterprets FSH as DOR and does not acknowledge missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it calls 3BA 'top tier' and 'gold standard,' treats FSH 8.5 as evidence of DOR despite strong oocyte yield, and recommends fresh transfer categorically with questionable rationale about cryo-injury."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from evidence-based IVF practice, especially the recommendation to avoid freezing because cryo-injury outweighs benefit, overstatement of 3BA as top-tier, and strong endorsement of PGT-A based mainly on age 36/FSH without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps including transfer, lifestyle optimization, metabolic workup, and possible sperm DNA fragmentation testing, though some recommendations are too categorical and not sufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.011395,
+  "judge_latency_ms": 6823.350999969989,
+  "judge_prompt_tokens": 2470,
+  "judge_completion_tokens": 348
+}

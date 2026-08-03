@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Morphology is broadly consistent with the provided 3AB label, but the response leans heavily on the lab grade rather than image-grounded observations and adds specifics like exact ICM position and zona thinning/stretching that may not be clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, prior outcomes, sperm factors, endometrium, and embryo grade into prognosis reasonably well, though it may overstate the impact of AMH on embryo quality/aneuploidy at this age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: low AMH is used to infer reduced oocyte quality/aneuploidy risk more strongly than evidence supports, and some recommendations/prognostic adjustments are not tightly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core points like eSET and general blastocyst assessment are aligned, but several recommendations are weakly guideline-based or controversial (ERA, thrombophilia screening, routine aspirin, growth hormone/DHEA, PGT-A rationale based on low AMH)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including eSET, luteal support, lifestyle optimization, and further workup, though some suggested tests/interventions are not strongly evidence-based for this scenario."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015015,
+  "judge_latency_ms": 6316.761374997441,
+  "judge_prompt_tokens": 3918,
+  "judge_completion_tokens": 348
+}

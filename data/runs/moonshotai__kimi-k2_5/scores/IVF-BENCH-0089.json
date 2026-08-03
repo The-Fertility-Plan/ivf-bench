@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-specific certainty, references features like exact ICM position and possible two blastocysts/twin transfer that are not reliably supported from the prompt/image context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, BMI, ovarian reserve, male factor, prior biochemical pregnancies, endometrium, and embryo morphology into prognosis and planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with probability estimates tied to age, morphology, and prior history, though some claims are stronger than the evidence and a few assumptions are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but recommendations such as routine hCG luteal boost, ERA/ReceptivaDx after biochemical losses, and strong PGT-A indication are more controversial and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management and future cycle planning, including monitoring and protocol considerations, though some suggested interventions are not standard for all cases."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.0117575,
+  "judge_latency_ms": 6720.4274159739725,
+  "judge_prompt_tokens": 2951,
+  "judge_completion_tokens": 292
+}

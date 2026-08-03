@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA label, but it overstates expansion by calling it a full blastocyst while also using Gardner 2, and includes image-specific details that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, endometrium, diagnosis, oocyte yield, and sperm data with embryo quality reasonably well, though it overinterprets low MII yield and does not address missing AMH or tubal factor implications in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Mostly logical, but there are notable inconsistencies: it equates Gardner 2 with full blastocyst, labels sperm motility as normal despite being borderline/low depending on reference, and the implantation estimate may be somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly follows IVF principles, but misstates Gardner expansion terminology, overcalls poor response from a single cycle yield, and suggests PGT-A in a 32-year-old with limited embryos without strong evidence-based justification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, clarifying day/stage discrepancy, stress reduction, and considering protocol adjustment in future cycles, though some recommendations are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0109575,
+  "judge_latency_ms": 5708.041541976854,
+  "judge_prompt_tokens": 2433,
+  "judge_completion_tokens": 325
+}

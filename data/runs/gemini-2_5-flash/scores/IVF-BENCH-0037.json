@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD, but it misstates the expansion criterion by saying the blastocoel is less than half the embryo despite the provided Gardner definition stating at least half, and it adds speculative visual details not clearly supportable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF failures/biochemical pregnancies, sperm parameters, endometrial thickness, BMI, and ovarian reserve context with embryo quality reasonably well, though some links are overstated and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the very low prognosis follows from the poor embryo grade plus age and prior failures, but there are minor issues such as overcalling recurrent implantation failure and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The poor prognosis for a 1DD embryo is aligned with standard morphology-based assessment, but several recommendations (ERA, EMMA/ALICE, broad immunologic testing, thrombophilia screening) go beyond or are not routinely supported by major guidelines for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer if desired, and future-cycle evaluation, but some suggested investigations are broad and not sufficiently prioritized or evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0125375,
+  "judge_latency_ms": 6271.993917005602,
+  "judge_prompt_tokens": 2873,
+  "judge_completion_tokens": 357
+}

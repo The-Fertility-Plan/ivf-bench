@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0391",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It broadly recognizes very poor embryo quality consistent with 0DD, but it inaccurately interprets Gardner 0 as no blastocoel/morula and overstates image-specific details such as absent cavity and non-viability/arrest without clear support from the provided grading description of early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, recurrent failed cycles/miscarriages, smoking, paternal age, sperm motility, ovarian reserve, and endometrial thickness with prognosis, though BMI and tubal factor are underused and some causal links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the poor embryo grade, but there is a notable inconsistency between the supplied lab definition of 0DD as early blastocyst and the response's repeated characterization as morula/non-blastocyst with effectively zero viability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (smoking cessation, counseling, considering genetic evaluation), but advising unequivocally not to transfer and calling PGT-A 'critical' overstates evidence; suggestions like routine PICSI/TESA based on paternal age alone are not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer decision-making and future planning, including counseling and additional testing, but several recommendations lack nuance and should be framed more conditionally."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012609,
+  "judge_latency_ms": 5341.745375000755,
+  "judge_prompt_tokens": 2308,
+  "judge_completion_tokens": 379
+}

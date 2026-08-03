@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label, but it inaccurately equates grade 2 with a full blastocyst and adds image-specific details like slight zona thinning and precise ICM location that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, sperm quality, endometrium, BMI, and AMH with prognosis reasonably well, though it overinterprets the AMH/oocyte yield relationship."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling 2AB top-tier/high-quality despite suboptimal expansion, labeling 11 oocytes as low yield/poor response for AMH 9.3, and deriving recommendations from that questionable premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from standard IVF guidance: misstates Gardner expansion terminology, suggests more aggressive stimulation based on an unsupported 'low yield,' and implies high AMH is linked to higher aneuploidy/PGT-A consideration without strong evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for transfer and future planning, but some are based on questionable assumptions and would benefit from more nuanced, evidence-based framing."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.011715,
+  "judge_latency_ms": 4801.293582997459,
+  "judge_prompt_tokens": 2300,
+  "judge_completion_tokens": 321
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0359",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality day-5 blastocyst and the provided 2AA grade, but it contains likely overinterpretation/fabrication such as precise ICM clock-face location, zona thinning despite stage 2/full blastocyst wording, and mention of vacuoles/granularity not clearly supportable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, FSH, diagnosis, BMI, endometrium, and sperm parameters with embryo quality well; however, it overstates DOR without AMH and makes some broad claims about tubal factor and stress effects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, especially around morphology versus age-related aneuploidy, but the probability estimate is somewhat optimistic relative to its own euploidy calculation and includes a few unsupported modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age-related aneuploidy, and considering PGT-A in older patients, but there are deviations: Gardner stage terminology is imprecise, stress/acupuncture claims are not guideline-based, and PGT-A is presented too strongly rather than as individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including proceeding with transfer, luteal support, and discussing future protocol/PGT-A options; however, some recommendations are generic and not highly nuanced."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011635,
+  "judge_latency_ms": 7657.46954100905,
+  "judge_prompt_tokens": 2434,
+  "judge_completion_tokens": 370
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0168",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response appears to misclassify the embryo as a Day 4 compacting morula and dismisses the provided 0DD blastocyst grade as inapplicable. It fabricates detailed features such as 12–16 cells, partial compaction, fragmentation percentage, vacuolation, and debris that are not reliably supported, and does not accurately analyze the embryo as an early blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, endometriosis, prior failed cycle, sperm parameters, endometrial thickness, and ovarian response, and connects them to prognosis, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the core reasoning is undermined by the incorrect premise that the embryo is a normal Day 4 morula rather than a poor-quality early blastocyst. Several downstream conclusions and the probability estimate depend on that misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard, several are not well aligned with current evidence/guidelines, including strong endorsement of ERA, routine aspirin, growth hormone, DHEA, acupuncture, and broad PGT-A recommendation in this context. It also incorrectly rejects the supplied Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer management and future planning, including protocol review, endometriosis management, and further workup, though some suggested interventions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.17,
+  "judge_cost_usd": 0.02533,
+  "judge_latency_ms": 6753.734958008863,
+  "judge_prompt_tokens": 3851,
+  "judge_completion_tokens": 405
+}

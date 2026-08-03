@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a BB blastocyst, but it introduces uncertainty/contradiction about expansion stage (calls it fully expanded and possibly 3BB despite reported 2BB) and labels it 'high-quality,' which overstates a 2BB embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometrium, ovarian response, BMI, prior IVF outcomes, ectopic history, and sperm data with prognosis, though it overstates sperm quality and does not address missing AMH or diagnosis limitations in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable inconsistencies: 2BB is described as both grade 2 and full blastocyst/grade 3, sperm is called excellent despite only moderate motility, and the claim of >90% live birth with a euploid embryo is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable, but several are not well aligned with evidence-based IVF guidance: ERA and immunologic testing are not routinely recommended, inherited thrombophilia testing after a single miscarriage is not standard, and PGT-A is overemphasized for a 29-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, counseling about ectopic risk, and possible future workup, though some suggested tests are controversial or insufficiently prioritized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0113475,
+  "judge_latency_ms": 5990.437459025998,
+  "judge_prompt_tokens": 2403,
+  "judge_completion_tokens": 356
+}

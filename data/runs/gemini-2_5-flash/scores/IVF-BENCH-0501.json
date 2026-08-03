@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0501",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphology description is generally consistent with the provided 2AA label, but it appears to rely heavily on the given Gardner score rather than image-specific detail. It includes plausible observations on ICM, TE, and zona without obvious major errors, but lacks enough image-grounded precision for a higher score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates key factors well: young age, strong ovarian reserve, good response to stimulation, male factor diagnosis, and prior live birth versus recurrent losses. It connects these to prognosis, though the discussion is incomplete because the response is truncated and does not fully address BMI/endometrium or all interactions."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning presented is logical and internally consistent in the visible portion, especially around favorable age/reserve and mixed prior history. However, the answer is incomplete and does not reach the requested probability estimate or full recommendations, limiting the coherence of the overall clinical argument."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "What is present is broadly aligned with standard Gardner grading interpretation and evidence-based IVF prognostic thinking. There are no obvious guideline violations, but the incomplete response prevents confirmation of full alignment on transfer recommendations and future planning."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response offers interpretation rather than concrete next steps. It does not provide clear transfer recommendations, future cycle planning, or a numeric implantation estimate, so practical clinical usefulness is limited."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.009695,
+  "judge_latency_ms": 6077.05675001489,
+  "judge_prompt_tokens": 1640,
+  "judge_completion_tokens": 373
+}

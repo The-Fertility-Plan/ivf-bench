@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0171",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response generally describes a blastocyst, but it incorrectly interprets Gardner stage 2 as a full blastocyst; in standard Gardner grading, stage 2 is an early blastocyst, while full blastocyst is stage 3. It also infers detailed ICM/TE features largely from the provided grade rather than clearly image-grounded observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, sperm count/motility, BMI, and endometrial thickness, and connects them to prognosis. It misses some nuance around unexplained infertility and overstates implications of male factor for genetic risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but key reasoning is weakened by the grading error and by treating a Day 4 '2AA' as an advanced full blastocyst. The implantation estimate is plausible but partly based on this incorrect premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is a significant deviation from Gardner grading criteria, and some recommendations are not well aligned with routine evidence-based practice, such as suggesting testicular sperm/TESA based on low count alone and implying strong concern about embryo-endometrium asynchrony from this grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, lifestyle advice, cryopreservation, and possible future male-factor workup. However, some suggestions are somewhat generic or insufficiently tailored, and a few are based on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.0121375,
+  "judge_latency_ms": 6750.822665984742,
+  "judge_prompt_tokens": 2449,
+  "judge_completion_tokens": 401
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0094",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label, but it overstates some visible details (e.g., 'particularly at the bottom' thinning and being 'ready for hatching') and relies heavily on the supplied grade rather than strictly image-grounded observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior IVF history, ovarian reserve, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way, though it somewhat overcalls DOR and paternal-age impact."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is generally clear and internally consistent, especially around age-related aneuploidy driving prognosis, though there are minor issues such as conflating implantation and live birth probabilities and overstating the importance of ICM over TE."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned with IVF practice in supporting transfer of a 3AB embryo and discussing age-related aneuploidy, but it overstates certainty around PGT-A benefit, suggests >60% success for euploid transfer somewhat strongly, and makes less guideline-grounded claims about DOR and sperm DNA fragmentation testing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling, luteal support, and future-cycle considerations such as PGT-A and sperm DNA fragmentation testing, though recommendations could be more nuanced about fresh vs frozen strategy and individualized decision-making."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.0120175,
+  "judge_latency_ms": 5842.124917020556,
+  "judge_prompt_tokens": 2545,
+  "judge_completion_tokens": 377
+}

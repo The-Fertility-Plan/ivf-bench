@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0535",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it infers specific image details such as left-sided ICM location, superior/inferior zona thinning, and internal vacuolization that may not be reliably visible, making the description somewhat overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior miscarriage, sperm parameters, oocyte maturity, and endometrial thickness with embryo quality well, though it overstates some factors and does not address missing AMH or the nonspecific diagnosis in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is clear, but there are notable overstatements and unsupported leaps, such as calling this a 'perfect storm,' implying 14 mm is unequivocally ideal, and suggesting a 3AA embryo has the highest potential for euploidy without sufficient nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Much is broadly conventional, but several statements are not guideline-consistent: recommending intensified progesterone solely for prior miscarriage, implying PGT-A is indicated because of one miscarriage at age 31, and claiming a euploid embryo would virtually guarantee implantation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future evaluation, including proceeding with transfer and considering uterine review, but some recommendations are too assertive and insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.012051,
+  "judge_latency_ms": 4028.5798339973553,
+  "judge_prompt_tokens": 2287,
+  "judge_completion_tokens": 346
+}

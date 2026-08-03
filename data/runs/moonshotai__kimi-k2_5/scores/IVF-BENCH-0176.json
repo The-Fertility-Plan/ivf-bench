@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0176",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 1DD, but it adds image-specific details like irregular cavity, zona stress, granular cytoplasm, and apoptotic/ghost-blastocyst features that may not be directly verifiable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, endometriosis, oocyte yield/maturity, sperm quality, endometrium, and lifestyle well, though it somewhat over-attributes embryo quality to DOR/endometriosis and does not discuss the day-4 transfer context in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is generally clear and consistent: severely compromised morphology drives a very low implantation estimate despite favorable age and uterine factors. Minor overstatements about developmental arrest/aneuploidy reduce certainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The interpretation of 1DD as extremely poor prognosis is broadly aligned with Gardner grading and common IVF practice, and counseling about very low success is appropriate. However, some language is stronger than guideline-based certainty, and the transfer-day context is not fully handled."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins to recommend counseling and possible transfer if this is the only embryo, but the recommendations are truncated and do not provide complete, practical next steps for this transfer or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.01134,
+  "judge_latency_ms": 6864.547083969228,
+  "judge_prompt_tokens": 2286,
+  "judge_completion_tokens": 375
+}

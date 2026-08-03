@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0315",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it overstates image-specific certainty and introduces details like exact ICM position, minimal granularity, and grade 2-3 expansion that may not be clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, tubal factor, sperm quality, endometrial thickness, and first-cycle status with embryo quality in a clinically meaningful way, though some assumptions are made about euploidy and fertilization/blast yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with probability estimates tied to embryo quality and patient factors; minor issues include overinterpreting a Day 4 blastocyst as accelerated kinetics and some unsupported quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF prognostic considerations, including hydrosalpinx relevance and endometrial thickness context, though the implication that Day 4 blastocyst formation is favorable is not a standard guideline-based conclusion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical points such as clarifying transfer timing and checking hydrosalpinx status, but the visible recommendations for transfer and future planning are only moderately specific and not fully developed."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.010455,
+  "judge_latency_ms": 5521.87125000637,
+  "judge_prompt_tokens": 2130,
+  "judge_completion_tokens": 342
+}

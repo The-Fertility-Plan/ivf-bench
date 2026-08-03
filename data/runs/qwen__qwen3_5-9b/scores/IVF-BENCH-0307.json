@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0307",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed visual interpretation, but it likely misclassifies the embryo as a morula and dismisses the provided Gardner 2AA grading; it also states no blastocoel is visible, which is a major potential morphology error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, sperm quality, endometrium, diagnosis context, and smoking, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured, but it rests heavily on a disputed morphology call and includes a grading inconsistency claim that weakens the logic behind the probability estimate and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Smoking cessation and general prognosis factors are appropriate, but the statement that a Day 4 morula could be graded as '4AA, 4BB' is incorrect under Gardner criteria, and the handling of the Day 4/2AA discrepancy is not well aligned with standard embryo grading conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically useful, especially confirming embryo stage with the lab, proceeding with transfer if appropriate, counseling smoking cessation, and considering extended culture in future cycles."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.011592,
+  "judge_latency_ms": 4754.984541999875,
+  "judge_prompt_tokens": 2179,
+  "judge_completion_tokens": 337
+}

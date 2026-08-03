@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0407",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates image-specific certainty by inferring precise ICM locations and calling the embryo 'fully expanded' while grade 3 is expanded rather than fully expanded/hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior miscarriage, tubal factor, sperm quality, BMI, endometrial thickness, and low oocyte yield with embryo quality well, though it labels DOR without AMH and may overinterpret reserve from a single cycle yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the prognosis appropriately balances strong morphology against age-related aneuploidy risk; minor issues include somewhat simplified euploidy-to-implantation logic and unsupported assumptions about no frozen embryos."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and age-related counseling are guideline-concordant, but 'strongly recommended' PGT-A, aggressive luteal support, aspirin/thrombophilia suggestions, and protocol changes are more assertive than evidence/guidelines clearly support for this specific case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including SET, counseling, and possible protocol review/embryo banking, though some recommendations are broad and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01148,
+  "judge_latency_ms": 6183.483582979534,
+  "judge_prompt_tokens": 2462,
+  "judge_completion_tokens": 355
+}

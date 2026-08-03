@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0431",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label and gives plausible ICM/TE descriptions, but it overstates certainty from the image, mislabels expansion as 'full blastocyst' for grade 2, and adds specific positional/zona details that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, prior cycle history, endometrial thickness, smoking, alcohol, and oocyte maturity with embryo quality in a clinically meaningful way, though sperm factors and BMI are only lightly addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a clear link from embryo quality and patient factors to prognosis; minor issues include somewhat speculative deductions about endometrial thickness and exact impact sizes on implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF practice on morphology, lifestyle counseling, and considering uterine evaluation, but there are notable deviations: grade 2 terminology is imprecise, PGT-A is presented too strongly for age 34/history alone, and the endometrial thickness concern is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycles, including protocol review, uterine cavity assessment, and lifestyle modification; however, some recommendations are broad and not fully individualized or prioritized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0111925,
+  "judge_latency_ms": 5807.0629999856465,
+  "judge_prompt_tokens": 2395,
+  "judge_completion_tokens": 347
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it overstates certainty from the image, incorrectly equates 2 with full blastocyst, and adds specific visual details like ICM clock position and zona thinning that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, male-factor context, sperm parameters, BMI, lifestyle, and especially thin endometrium with embryo quality and prognosis. AMH is unavailable and prior cycle history is noted appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with the thin endometrium appropriately identified as the main limiting factor. Minor issue: calling 2AA 'top-tier'/'perfect' is somewhat overstated for a stage-2 blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are deviations: Gardner stage interpretation is inaccurate, implantation estimates may be somewhat optimistic for an untested 2AA with 6 mm lining, and suggestions like PICSI/IMSI are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support, ultrasound-guided transfer, evaluation of thin lining, hysteroscopy consideration, and possible freeze-all/FET strategy. Some recommendations remain somewhat generic rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012696,
+  "judge_latency_ms": 7588.989165960811,
+  "judge_prompt_tokens": 2437,
+  "judge_completion_tokens": 359
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0511",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image-specific certainty, likely mislocalizes ICM/TE, and calls 3AA the highest grade despite 4-6 stage blastocysts existing."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, male factor, smoking, endometrium, and embryo grade reasonably well, though it overinterprets high AMH as a 'super responder' and makes some weak links to aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling age 35 'optimal/prime,' claiming high responders often have higher aneuploidy, and using somewhat unsupported adjustments for smoking and paternal age in the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, smoking cessation, and proceeding with transfer, but deviates by calling 3AA 'perfect/highest,' suggesting high AMH itself raises aneuploidy risk, and implying PGT-A for this reason without strong guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, smoking cessation, luteal support, cryopreservation, and possible future sperm DNA fragmentation testing, though some recommendations are broader than strictly case-specific."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.011285,
+  "judge_latency_ms": 6071.64808298694,
+  "judge_prompt_tokens": 2480,
+  "judge_completion_tokens": 339
+}

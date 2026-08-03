@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0369",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and appropriately comments on expansion, ICM, TE, and zona thinning, but it overstates image-specific certainty (e.g., exact left-sided ICM location and sparse TE details) and adds interpretation not fully verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, prior IVF outcomes, ovarian response, diagnosis, and sperm parameters with embryo quality in a clinically meaningful way, though AMH is unavailable and some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate broadly matching the favorable age and embryo grade while adjusting for prior failures; minor issues include equating low MII yield with poor response and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on use of Gardner grading, SET, and cautious interpretation of morphology, but it overstates euploidy likelihood (>90%), calls 3AB 'top-tier,' and recommends thrombophilia/immune workup and broad PGT-A use in ways not strongly supported by routine guideline-based practice for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, luteal support, and future cycle review, with practical considerations about protocol adjustment and further evaluation, though some suggestions are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013047,
+  "judge_latency_ms": 4315.605249998043,
+  "judge_prompt_tokens": 2469,
+  "judge_completion_tokens": 376
+}

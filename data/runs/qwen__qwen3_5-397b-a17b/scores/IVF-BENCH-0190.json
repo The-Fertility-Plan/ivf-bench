@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0190",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses the provided poor-grade assessment appropriately but misinterprets Gardner 0 as no blastocoel/pre-blastocyst and calls the embryo a morula; this is inconsistent with the stated lab designation of early blastocyst/very poor blastocyst and includes features not clearly supportable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, ovarian reserve, endometriosis, prior failed cycles, endometrial thickness, and semen parameters with embryo prognosis, though some links (e.g. endometriosis causing higher aneuploidy) are stated too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: very poor embryo morphology plus repeated failed cycles and endometriosis imply low implantation potential. Minor issues include overcalling RIF and some overinterpretation of causality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several non-guideline-supported or controversial recommendations presented too strongly (ERA, NK cell testing, intralipids, routine immunologic workup, TESE/PICSI based only on possible SDF). PGT-A and endometriosis suppression may be considered but are not universally indicated as framed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling and future-cycle suggestions, including expectation setting and additional workup options. However, some recommendations are overly aggressive or insufficiently evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0115675,
+  "judge_latency_ms": 5983.224291994702,
+  "judge_prompt_tokens": 2527,
+  "judge_completion_tokens": 350
+}

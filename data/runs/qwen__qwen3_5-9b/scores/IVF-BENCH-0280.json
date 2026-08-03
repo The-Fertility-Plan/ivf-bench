@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0280",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates visibility-based certainty and likely mislabels a grade 3 blastocyst as fully expanded/maximum volume rather than expanded; some image-specific details appear inferred from the lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, sperm parameters, endometrium, diagnosis, and cycle history with embryo quality reasonably well, though it overinterprets FSH and makes assumptions about ovarian reserve and sperm DNA integrity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: FSH 7.8 is treated as mildly concerning without strong basis, aneuploidy risk is overstated from that value, and claiming >90% euploidy for a 34-year-old 3AA embryo is not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognosis, transfer appropriateness, and luteal support, but deviates by overstating euploidy likelihood, implying PGT-A is unnecessary based on morphology alone, and making stronger-than-guideline claims from FSH and BMI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, nutrition, alcohol reduction, and future reserve testing, though recommendations are somewhat generic and not deeply individualized beyond this cycle."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.011,
+  "judge_latency_ms": 5930.721584009007,
+  "judge_prompt_tokens": 2282,
+  "judge_completion_tokens": 353
+}

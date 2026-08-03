@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0294",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates certainty from the image ('aligns perfectly', 'highest quality') and likely overcalls the blastocyst as fully expanded/optimal for hatching rather than simply expanded; some image-specific detail appears inferred from the lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including maternal age, ovarian reserve, prior cycle history, smoking, sperm parameters, and endometrium, though it somewhat overemphasizes paternal age and does not fully contextualize tubal factor as a favorable indication for IVF success once embryos are available."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and understandable, but there are notable issues: paternal age is treated as a major driver of embryo aneuploidy/implantation failure more strongly than evidence supports, and the probability estimate is reduced on that basis without sufficient justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on single high-quality blastocyst transfer, smoking cessation, and considering PGT-A in selected contexts, but it overstates paternal-age-related aneuploidy risk, labels 3AA as 'highest quality' rather than high quality, and mentions ERA somewhat loosely for recurrent failure workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, smoking cessation, luteal support, and future discussion of PGT-A/genetic counseling; however, recommendations could be more nuanced and specific regarding transfer strategy and when additional testing is truly indicated."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011635,
+  "judge_latency_ms": 7305.679958022665,
+  "judge_prompt_tokens": 2338,
+  "judge_completion_tokens": 386
+}

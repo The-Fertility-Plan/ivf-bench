@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0223",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/compact structure and absent-poor ICM/TE, but it adds image-specific details like a 'large irregular cell mass' and 'vacuolated interior' that may overinterpret the image and does not discuss zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, PCOS, endometrium, and sperm data with prognosis reasonably well, though it overstates some links between PCOS/former smoking and this specific embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the low implantation estimate follows from 0DD morphology, but there are notable inconsistencies such as calling 23.2% motility normal, suggesting freeze-all despite transfer context, and implying fresh transfer was likely the only option."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic interpretation of poor morphology is aligned, but several recommendations are not guideline-consistent or are weakly supported, including routine PGT-A recommendation, ICSI to prevent polyspermy in PCOS, and the statement that former smoking still impacts oocyte quality in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling and future-cycle considerations, but some advice is generic and some proposed steps are not well tailored or evidence-based for this exact case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012531,
+  "judge_latency_ms": 4815.684917004546,
+  "judge_prompt_tokens": 2382,
+  "judge_completion_tokens": 359
+}

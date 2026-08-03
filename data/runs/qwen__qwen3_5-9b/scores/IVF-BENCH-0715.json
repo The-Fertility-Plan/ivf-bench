@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0715",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label and standard blastocyst features, but it overstates image-specific certainty and contains a grading inconsistency by calling grade 3 'expanded' rather than full blastocyst/early expansion terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS/AMH, prior biochemical pregnancy, sperm parameters, and endometrium with embryo quality reasonably well, though some links (especially paternal age effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: it labels the embryo 'high-quality' somewhat strongly for 3AB, gives a 30-40% estimate while its own euploidy-based calculation suggests closer to 25-30%, and overinterprets prior biochemical pregnancy and paternal age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on using morphology and proceeding with transfer, but recommending PGT-A largely because of paternal age/biochemical pregnancy and suggesting a more aggressive stimulation or long agonist protocol in PCOS are not strongly guideline-based and may increase OHSS risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for transfer and future planning, including luteal support review and consideration of sperm DNA fragmentation testing, though some suggestions are not sufficiently nuanced for PCOS management."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.012915,
+  "judge_latency_ms": 6258.299167006044,
+  "judge_prompt_tokens": 2480,
+  "judge_completion_tokens": 365
+}

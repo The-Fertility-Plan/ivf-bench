@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE, but it notes a grading discordance and adds image-specific features like granularity/reduced optical clarity that may not be reliably supported from the provided information alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, DOR, AMH/FSH, prior miscarriage, endometrial thickness, BMI, and paternal age/semen parameters with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the poor prognosis estimate follows from the embryo grade and patient factors, though there are minor issues such as calling prior miscarriage evidence of uterine receptivity and stating a 100% blastulation rate from 3 MII without full fertilization context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core points are broadly consistent with IVF practice, but some recommendations are more speculative or not strongly guideline-based (e.g., growth hormone, IMSI, extending progesterone to 10-12 weeks, strong protocol claims from limited data)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear counseling, transfer, luteal support, male-factor workup, and future-cycle planning steps, though some suggestions are not strongly evidence-based and should be framed more cautiously."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.01218,
+  "judge_latency_ms": 6332.791875000112,
+  "judge_prompt_tokens": 2736,
+  "judge_completion_tokens": 356
+}

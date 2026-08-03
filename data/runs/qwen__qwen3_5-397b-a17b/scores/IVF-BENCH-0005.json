@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable morphology errors: it misstates Gardner expansion staging by calling 2 a full blastocyst and 3 hatching, and infers specific ICM location/TE detail that may not be reliably visible. Overall description is plausible but not precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior failed cycles, endometrial thickness, sperm parameters, and protocol reasonably well, though some links (e.g., PCOS phenotype from AMH alone) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are important reasoning issues: incorrect blastocyst stage interpretation, questionable concern about Day 4 blastocyst transfer timing, and a probability estimate that is reduced using assumptions not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines, including ERA as 'vital,' broad immune/NK testing, and empiric aspirin/heparin without indication. PGT-A in a 32-year-old with prior failures is debatable rather than clearly highest-priority."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for current transfer and future workup, including luteal support review, sperm DNA fragmentation testing, and endometriosis management, though some actions are not evidence-based."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011945,
+  "judge_latency_ms": 7340.296541049611,
+  "judge_prompt_tokens": 2570,
+  "judge_completion_tokens": 368
+}

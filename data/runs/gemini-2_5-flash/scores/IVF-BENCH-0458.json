@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0458",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is largely consistent with a 3AB blastocyst: expanded blastocoel, thinning zona, strong ICM, and looser TE. Minor issue: it calls the TE a 'moderate number of cells' whereas the provided grading description says 'few cells forming a loose epithelium,' and some image-specific details may be slightly overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior failed cycles, ovarian reserve markers, endometrial thickness, sperm parameters, and lifestyle with embryo morphology and prognosis. Strong emphasis on age-related aneuploidy is appropriate, though diagnosis/protocol are not deeply discussed and uterine factors are somewhat dismissed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: morphology is acceptable but prognosis is dominated by age-related aneuploidy risk. Probability estimate follows from the stated evidence. Minor limitation is that the response is truncated and conflates implantation and live birth probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading principles and evidence-based IVF counseling, especially regarding the limited predictive value of morphology for euploidy at age 43. Slight overstatement that endometrial thickness alone makes the uterus 'highly receptive' and no nuanced discussion of PGT-A limitations in low embryo numbers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides risk stratification and prognosis but offers few concrete next-step recommendations for the current transfer or future cycle planning. Practical management options, counseling points, and alternative strategies are not clearly developed, likely in part because the response is incomplete."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.01258,
+  "judge_latency_ms": 6906.764083018061,
+  "judge_prompt_tokens": 2656,
+  "judge_completion_tokens": 396
+}

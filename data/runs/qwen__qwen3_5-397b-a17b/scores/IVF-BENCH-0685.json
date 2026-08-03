@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a Day 5 blastocyst and the provided 3AB label, but it appears to rely heavily on the supplied Gardner score and includes specific positional/detail claims (e.g., ICM at 1-2 o'clock, TE characterization) that may not be fully verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, PCOS, BMI, prior IVF outcomes, endometrial thickness, and paternal age with embryo quality in a clinically meaningful way, though it somewhat overemphasizes paternal age relative to the available semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to embryo grade, age, lining, and prior history; minor weakness is the strong causal weight assigned to paternal age and biochemical pregnancy without broader differential discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general embryo assessment are guideline-concordant, but recommending PGT-A as 'highly recommended' mainly for paternal age 44/history of biochemical pregnancy and suggesting ERA after a single failed good-quality transfer are more aggressive than standard evidence-based guidance; aspirin/thrombophilia comments are also not routine."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning, including SET, luteal support review, metabolic optimization, and possible sperm DNA fragmentation testing, though some suggestions would benefit from clearer thresholds/indications."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012771,
+  "judge_latency_ms": 7038.9688750728965,
+  "judge_prompt_tokens": 2427,
+  "judge_completion_tokens": 366
+}

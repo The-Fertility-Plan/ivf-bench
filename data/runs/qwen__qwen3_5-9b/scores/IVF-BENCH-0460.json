@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0460",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphology description is broadly consistent with a 3AA blastocyst, including expanded cavity, thinned zona, compact ICM, and cohesive TE. However, it adds location-specific detail (e.g., upper-left ICM, right-sided TE prominence) that may be more interpretive than clearly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian reserve markers, BMI, sperm parameters, endometrial thickness, and embryo grade into prognosis reasonably well. It misses some nuance, such as unexplained infertility and the limited predictive value of reserve for implantation once a good blastocyst exists."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable reasoning issues: calling 3AA the 'highest' or 'perfect' grade is overstated, linking low ovarian reserve to a less robust uterine environment is weak, and the BMI penalty and implantation estimate are asserted more strongly than supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly aligned with standard IVF practice, especially proceeding with transfer and not routinely recommending PGT-A at age 31. However, recommendations such as GH and DHEA for DOR are not strongly guideline-supported, and the statements about underweight BMI and luteal insufficiency are somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, nutritional optimization, and luteal support considerations. It is useful clinically, though some recommendations lack nuance or strong evidence basis."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013137,
+  "judge_latency_ms": 4144.025542002055,
+  "judge_prompt_tokens": 2324,
+  "judge_completion_tokens": 411
+}

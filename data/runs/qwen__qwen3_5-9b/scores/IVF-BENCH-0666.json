@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label, but it overstates expansion by calling it 'expanded' while grade 2 is a full blastocyst, and adds limited image-specific detail such as zona pellucida or more precise ICM/TE visual features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, ovarian response, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though it overinterprets AMH as diminished reserve and does not discuss diagnosis or first-cycle context in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a clear link from embryo quality and patient factors to prognosis; minor issues include somewhat overstated effects of AMH on implantation and broad assumptions about obesity-related reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are notable deviations: 2AA is good quality but not necessarily 'top-tier,' PGT-A is not routinely indicated solely for obesity/lower AMH at age 34, and metformin recommendation is not guideline-based without a specific indication such as insulin resistance/PCOS."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle optimization, and future metabolic evaluation, though some recommendations are somewhat generic and could be more individualized regarding transfer strategy and luteal/endocrine assessment."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.00669875,
+  "judge_latency_ms": 6556.274332921021,
+  "judge_prompt_tokens": 2359,
+  "judge_completion_tokens": 375
+}

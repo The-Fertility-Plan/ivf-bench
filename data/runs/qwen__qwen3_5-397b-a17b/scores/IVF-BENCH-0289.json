@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0289",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label, but it overstates certainty from a single 2D image, calls the embryo 'top-tier' despite 2AA being a good but not top expansion stage, and adds specific visual details like ICM position and zona thinning that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, endometrium, sperm, and cycle response well with embryo quality, though it somewhat overemphasizes low AMH for current implantation prognosis and underuses the nonspecific diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a plausible prognosis adjustment for obesity and untested ploidy, though some claims are stronger than the evidence supports and the 'perfect embryo' framing is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially single embryo transfer and attention to obesity-related risks, but routine endorsement of PGT-A in a 32-year-old with no prior cycles is more debatable and not universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, luteal support considerations, weight management, and protocol review, though some suggestions like acupuncture are less evidence-based and details could be more individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0114925,
+  "judge_latency_ms": 6739.744791993871,
+  "judge_prompt_tokens": 2413,
+  "judge_completion_tokens": 364
+}

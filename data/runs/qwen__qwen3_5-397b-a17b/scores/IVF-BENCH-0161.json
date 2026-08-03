@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0161",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/compacting embryo and absent ICM/TE, but it overstates day-4 expectations by referencing ideal expanding blastocyst morphology and adds limited speculative detail not clearly verifiable from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior IVF outcomes, sperm quality, ovarian response, maturation rate, and especially the very thin endometrium with embryo prognosis; misses some nuance around DOR interpretation and transfer-day context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis estimate follows from embryo grade plus thin lining, but there are notable overreaches and inconsistencies, such as calling fresh transfer near-contraindicated/virtually impossible and inferring trigger timing or maturation defect without enough evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing poor embryo quality and adverse impact of a 4.5 mm lining, but recommendations to cancel transfer and statements like near-zero success or <6 mm being a contraindication are stronger than standard guideline-based language; PGT-A suggestion at age 31 is also not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps including freeze-all consideration, lining workup, hysteroscopy/endometritis evaluation, protocol review, and trigger optimization; however, some recommendations are somewhat overconfident given the limited data."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0116625,
+  "judge_latency_ms": 6078.0836250050925,
+  "judge_prompt_tokens": 2511,
+  "judge_completion_tokens": 359
+}

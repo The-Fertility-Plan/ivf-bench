@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0416",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB grade, correctly identifies a blastocyst with strong ICM and looser TE, but it overstates certainty from the image and contains a grading inconsistency by calling grade 3 'expanded' and 'optimal' for Day 5 when classic Gardner expansion 3 is full blastocyst and expanded is 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, endometrial thickness, sperm parameters, PCOS diagnosis, and ovarian reserve with embryo quality in a clinically meaningful way, though some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: the PCOS 'poor responder' framing is speculative, stress effects on implantation are overstated, and the implantation estimate may be somewhat optimistic for age 37 without PGT-A."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with IVF practice: uses Gardner framework appropriately overall and recommends single embryo transfer, which is evidence-based. Minor deviations include imprecise expansion-stage terminology and some overinterpretation of paternal age/stress effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides a clear immediate recommendation to proceed with SET, but future-cycle planning is truncated and lacks specific practical steps on luteal support, consideration of PGT-A, metabolic optimization in PCOS, or contingency planning."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.011922,
+  "judge_latency_ms": 4738.060499999847,
+  "judge_prompt_tokens": 2214,
+  "judge_completion_tokens": 352
+}

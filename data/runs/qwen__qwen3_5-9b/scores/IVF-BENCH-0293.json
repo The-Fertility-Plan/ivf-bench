@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0293",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates Gardner stage 3 as 'expanded' and says the embryo may be hatched/about to hatch; stage 3 is a full blastocyst, not expanded/hatching. It also describes the image as possibly morula/early blastocyst and relies heavily on the provided grade rather than visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, BMI, ovarian response, sperm parameters, endometrial thickness, and lifestyle with embryo quality reasonably well, though AMH/FSH interpretation and the male-factor diagnosis are not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable inconsistencies: calling 3AA 'perfect/highest' and equating stage 3 with expanded/hatching, plus labeling the ovarian response as poor/suboptimal despite AMH and retrieval numbers being not clearly poor for age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of age-related aneuploidy risk are broadly aligned, but the grading interpretation is incorrect and some statements are overstated (e.g., 3AA as 'perfect' or highest grade)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides general prognostic commentary but few concrete transfer or future-cycle recommendations; practical next steps, contingencies, and management options are not clearly specified."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011661,
+  "judge_latency_ms": 4656.399499996041,
+  "judge_prompt_tokens": 2022,
+  "judge_completion_tokens": 373
+}

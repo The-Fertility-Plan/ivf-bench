@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0353",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner grade consistently and gives a plausible blastocyst description, but it overstates image-specific certainty (e.g., exact clock-face ICM location, metabolic inference, normal zona thickness) and contains a mismatch by calling it a 'full blastocyst' while describing grade 2 features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, oocyte yield, endometrium, male factor, and paternal age with embryo quality in a clinically meaningful way, though some interactions are simplified and the day-4 timing interpretation is somewhat questionable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it labels the embryo 2AA yet also references full blastocyst language from the lab data, and it interprets day-4 blastulation as favorable while also treating expansion grade 2 as a negative without fully reconciling these points."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows Gardner-based morphology and standard prognostic factors, but there are deviations such as questionable aneuploidy estimates for age 37, overinterpretation of paternal age effects, and a somewhat nonstandard recommendation to consider PGT-A after a single failed cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides some practical points (e.g., consider PGT-A, note sperm DNA fragmentation risk), but the visible response is incomplete and lacks clear transfer-specific management steps, probability-based counseling, or detailed future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0101075,
+  "judge_latency_ms": 6547.628083033487,
+  "judge_prompt_tokens": 1709,
+  "judge_completion_tokens": 389
+}

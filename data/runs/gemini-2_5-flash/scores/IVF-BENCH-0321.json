@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0321",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphology description is generally plausible and consistent with a good-quality blastocyst, but it relies heavily on the provided Gardner score, includes some stage-label imprecision, and lacks image-specific detail such as zona pellucida or more cautious limits of what is actually visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, especially maternal age, smoking, tubal factor, endometrium, ovarian reserve, and sperm data, and connects them to prognosis, though it does not fully explore all interactions or prior-cycle context beyond noting none."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly logical, but the response is incomplete, does not reach the requested implantation probability estimate, and overstates some points such as sperm being fully normal and smoking reducing IVF success by 30-50% without nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The discussion is broadly consistent with standard IVF principles and Gardner grading interpretation, especially regarding age-related aneuploidy and the favorable nature of tubal factor and endometrial thickness, though the morphology staging language is not perfectly precise and recommendations are unfinished."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides limited practical next steps and is truncated before completing risk/favorable indicators, probability range, and transfer/future-cycle planning, so it offers only modest clinical utility."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01047,
+  "judge_latency_ms": 6679.436874983367,
+  "judge_prompt_tokens": 2034,
+  "judge_completion_tokens": 359
+}

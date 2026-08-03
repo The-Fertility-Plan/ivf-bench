@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2AB grade, correctly identifying strong ICM and looser TE, but it overinterprets image details not reliably visible (e.g., nuclear-cytoplasmic features, minimal fragmentation) and is somewhat inconsistent about calling grade 2 'full.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, BMI, diagnosis, and cycle history well with embryo quality and prognosis, though a few links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with a plausible prognosis derived from embryo grade and patient factors, though there are minor inconsistencies around expansion-stage terminology and some unsupported quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned on eSET and general prognosis, but includes weaker or non-guideline-supported suggestions such as ERA after a first failed transfer, bed rest after transfer, and possible Day 6 culture of an already selected Day 5 transfer embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer strategy, lifestyle, and contingency planning, but some advice is not optimally evidence-based and the future-cycle section is incomplete."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012205,
+  "judge_latency_ms": 5672.554792021401,
+  "judge_prompt_tokens": 2872,
+  "judge_completion_tokens": 335
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable grading inaccuracies: it calls Gardner 2 a 'full blastocyst' and says zona thinning is visible, whereas standard Gardner grading defines 2 as blastocoel filling most of the embryo and full blastocyst as grade 3. It also overstates image-derived detail such as exact ICM position and cellular/nuclear features not reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, AMH, prior IVF failure, sperm parameters, BMI, and endometrial thickness, and relates them to prognosis. Some links are overstated, especially the impact of low AMH on embryo quality in a young patient."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are inconsistencies: misclassification of blastocyst stage, unsupported weighting of ICM as 'most critical determinant,' and somewhat arbitrary probability adjustments. The final prognosis is plausible but not tightly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While eSET in a 28-year-old with a good blastocyst is guideline-concordant, several recommendations are not strongly evidence-based or guideline-supported for this scenario, including routine aspirin, ERA after limited failure history, GH/DHEA use, and suggesting PGT-A primarily because of low AMH in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and contingency planning, including eSET, luteal support options, and future workup. However, some actions are overly prescriptive or not well justified by evidence."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0076,
+  "judge_latency_ms": 7159.3013749225065,
+  "judge_prompt_tokens": 2760,
+  "judge_completion_tokens": 415
+}

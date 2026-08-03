@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0176",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes absent/degenerative ICM and TE, but it misstates Gardner stage 1 as <50% blastocoel despite the prompt defining it as at least half the embryo, and it speculates about a vacuole/degenerating oocyte beyond what can be confidently concluded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH/ovarian reserve, endometriosis, sperm quality, BMI/lifestyle, and endometrial thickness with embryo prognosis reasonably well, though it overstates the link between low AMH and oocyte quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable inconsistencies: it contradicts the provided stage definition, treats the embryo as essentially non-viable with excessive certainty, and infers a labeling discrepancy without sufficient caution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is appropriate, but recommendations such as categorically 'do not transfer,' calling 1DD a 'do not use' embryo, and moving quickly to donor eggs in a 31-year-old first-cycle patient are more absolute than guideline-based practice supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives concrete next steps and future planning ideas, but several are overly rigid or insufficiently nuanced for this case, limiting practical clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0110325,
+  "judge_latency_ms": 7062.792707991321,
+  "judge_prompt_tokens": 2361,
+  "judge_completion_tokens": 342
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0403",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It misstates Gardner stage 1 as blastocoel less than half the embryo (the prompt defines it as at least half) and infers compaction/morula and granularity from the image rather than sticking closely to the provided 1DD blastocyst assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low oocyte yield, DOR, prior failed cycle, sperm concentration/motility, partner age, and endometrial thickness with embryo prognosis, though some links (e.g., paternal age directly increasing aneuploidy risk) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor embryo grade, but there are notable issues: incorrect interpretation of stage 1, tension between calling it Day-4 morula/early blastocyst while relying on a blastocyst grade, and some overconfident causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly consistent in recognizing 1DD as very poor prognosis and in emphasizing counseling and luteal support, but recommendations such as routine PGT-A based mainly on paternal age/one failed cycle and adjuncts like DHEA/PICSI/IMSI are not strongly guideline-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, luteal support, protocol reconsideration, male-factor workup, and future planning, though some suggestions are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.011845,
+  "judge_latency_ms": 7428.7107499549165,
+  "judge_prompt_tokens": 2356,
+  "judge_completion_tokens": 397
+}

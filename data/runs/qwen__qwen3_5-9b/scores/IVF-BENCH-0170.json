@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0170",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality/degenerate embryo and acknowledges absent ICM/TE, but it overstates certainty about features like no visible blastocoel and adds details such as vacuolation and 'perfect' alignment that may not be reliably supported from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, male factor, and BMI with embryo quality well, though it somewhat overemphasizes low BMI as a critical determinant and speculates about sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical: very poor morphology drives a very low implantation estimate despite favorable maternal factors. Minor issues include possible overinterpretation of day-4 versus blastocyst timing and some unsupported certainty around nonviability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concepts is broadly appropriate, but recommendations to freeze or discard a 0DD embryo and the suggestion of PGT-A in a young patient with limited embryo numbers are not well aligned with standard evidence-based practice; BMI counseling is reasonable but overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and future workup ideas, but some recommendations are not appropriately nuanced for this exact case and the transfer advice is partly impractical or inconsistent with routine IVF decision-making."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.0110525,
+  "judge_latency_ms": 6164.437250001356,
+  "judge_prompt_tokens": 2243,
+  "judge_completion_tokens": 363
+}

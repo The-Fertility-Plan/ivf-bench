@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0497",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with absent/degenerate ICM and TE, but it misstates the Gardner expansion definition: grade 1 is blastocoel at least half the embryo volume, not <50%. It also adds specific image details like left/right localization, granular TE, and dark inclusions that may be over-interpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, AMH, prior failed cycle, male factor, sperm parameters, endometrium, and ovarian response with embryo quality reasonably well. It appropriately notes DOR and the possibility of sperm DNA damage, though some inferences about oocyte competence are somewhat stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and consistent: very poor morphology is the dominant negative factor, moderated slightly by acceptable age and endometrium. Minor issues include overconfident attribution of poor development to oocyte competence and some speculative links, but the probability estimate broadly follows the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly consistent with IVF practice, but there are notable deviations: recommending 'intensive luteal support' based on embryo quality is not guideline-based, GH/DHEA/testosterone and DuoStim are not standard evidence-based recommendations for this exact scenario, and routine karyotype/PGT-A suggestions are more debatable than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for transfer counseling and future planning, including additional workup and alternative strategies. However, some recommendations are not strongly evidence-based or are too assertive for a single poor-quality embryo, which limits maximal actionability."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.0121525,
+  "judge_latency_ms": 6933.8176670135,
+  "judge_prompt_tokens": 2251,
+  "judge_completion_tokens": 435
+}

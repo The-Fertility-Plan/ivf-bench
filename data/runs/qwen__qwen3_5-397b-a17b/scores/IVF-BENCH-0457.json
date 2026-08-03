@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0457",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality day-5 embryo and absent/degenerate ICM/TE, but it overstates certainty by calling it morula/non-viable and adds features like no blastocoel visible that may not be fully supportable from the provided grading alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, sperm parameters, endometrium, BMI, and cycle context reasonably well, though it speculates about PCOS and sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent: very poor embryo morphology drives a very low implantation estimate despite favorable uterine and some patient factors. Minor overreach appears in declaring absolute non-viability and attributing cause to unproven sperm DNA damage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but recommending automatic transfer cancellation, calling transfer medically futile, and strongly endorsing PGT-A/TESA based on limited data goes beyond standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current and future cycles, including sperm DNA fragmentation testing, protocol review, and lifestyle measures, though some recommendations are somewhat aggressive and insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0113525,
+  "judge_latency_ms": 5941.304208012298,
+  "judge_prompt_tokens": 2429,
+  "judge_completion_tokens": 352
+}

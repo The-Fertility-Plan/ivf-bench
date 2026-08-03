@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0312",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a blastocyst with good ICM/TE, but it misstates Gardner expansion staging by calling 2AA a full/fully expanded blastocyst and adds specific positional and developmental details not reliably supported. It also omits careful zona assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, prior biochemical pregnancy, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some interpretations are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has notable inconsistencies: it conflates Gardner stage 2 with full expansion, treats Day 4 blastocyst development as strongly favorable without sufficient caution, and the implantation estimate appears overly optimistic relative to the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF guidance, including incorrect Gardner stage interpretation, overcalling Day 4 blastulation as a strong positive, suggesting aspirin/thrombophilia workup after only a biochemical pregnancy, and broad PGT-A endorsement in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next-step recommendations for transfer, luteal support, testing timing, lifestyle optimization, and future cycle considerations, though some suggestions are not ideally evidence-based."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.0111725,
+  "judge_latency_ms": 5731.528791016899,
+  "judge_prompt_tokens": 2381,
+  "judge_completion_tokens": 348
+}

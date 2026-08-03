@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0219",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA grade, but it overstates image-derived certainty, mislabels grade 3 as 'expanded blastocyst' rather than full blastocyst, and describes peripheral 'bubbles' as TE cells, which is not a precise visual interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, oocyte yield, sperm parameters, diagnosis, and endometrial thickness with embryo quality reasonably well, though it somewhat overinterprets AMH 1.5 and does not fully contextualize male factor despite largely normal semen values."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling 3AA 'perfect,' linking morphology too strongly to euploidy, and using low oocyte yield to qualify implantation odds for this specific embryo in a way that is only indirectly relevant."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based practice: incorrect Gardner stage wording, overstatement of euploidy prediction from morphology, unsupported recommendation for donor eggs in a 29-year-old with AMH 1.5, and speculative endorsement of supplements/protocol changes without strong case-specific justification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and considering sperm DNA fragmentation testing if failure occurs, but some recommendations are too generic or weakly justified, and future-cycle planning is not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01121,
+  "judge_latency_ms": 8659.492375038099,
+  "judge_prompt_tokens": 2300,
+  "judge_completion_tokens": 364
+}

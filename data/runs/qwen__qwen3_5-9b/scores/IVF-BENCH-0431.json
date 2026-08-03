@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0431",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage by calling grade 2 a fully expanded blastocyst and says it is ready to hatch; grade 2 is an early blastocyst with the blastocoel occupying more than half the embryo, not full expansion. It also overinterprets image details such as a clearly localized ICM and robust overall quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/AMH, oocyte maturity, prior IVF outcomes, sperm parameters, BMI, smoking, and endometrial thickness with prognosis reasonably well, though some links are overstated and not all factors are nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but key reasoning is weakened by the incorrect interpretation of 2AB as top-tier/fully expanded and by overstating the prognostic impact of prior live birth and endometrial thickness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as proceeding with transfer, smoking cessation, and luteal support are broadly aligned, but the embryo grading interpretation is inaccurate and suggestions like thrombophilia workup after a single additional miscarriage are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, lifestyle modification, luteal support, and contingency planning, though some recommendations are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.012153,
+  "judge_latency_ms": 5018.787667002471,
+  "judge_prompt_tokens": 2226,
+  "judge_completion_tokens": 365
+}

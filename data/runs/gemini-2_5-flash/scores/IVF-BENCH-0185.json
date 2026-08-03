@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0185",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with absent/degenerate ICM and TE, but it misstates Gardner expansion 1 as less than half the embryo volume rather than at least half, and adds image-specific detail not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, PCOS, sperm, endometrium, and first-cycle status well, and appropriately contrasts favorable patient factors with poor embryo quality, though it could better nuance PCOS and day-4 context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is internally consistent: severe embryo morphology dominates prognosis despite favorable maternal factors. Minor overstatement of 'virtually no developmental potential' and the expansion-stage error prevent a top score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The overall interpretation of 1DD as very poor prognosis is aligned with standard embryo assessment, but calling it essentially non-viable and suggesting it would often not be transferred is somewhat stronger than guideline-based morphology alone supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives useful counseling and transfer-consideration advice, but the recommendations are incomplete/truncated and lack fuller future-cycle planning, lab review, and alternative management details."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0106775,
+  "judge_latency_ms": 6341.615499986801,
+  "judge_prompt_tokens": 2231,
+  "judge_completion_tokens": 340
+}

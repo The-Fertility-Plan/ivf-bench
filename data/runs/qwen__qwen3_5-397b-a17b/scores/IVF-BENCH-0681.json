@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0681",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label, correctly identifies strong ICM and looser TE, but contains grading inconsistency by calling grade 2 a 'full blastocyst' and adds image-specific details (right-sided ICM, zona thinning) that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, response, endometriosis, smoking, sperm parameters, and endometrial thickness well with embryo quality, though it could better address BMI and the implications of no prior IVF cycles."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible prognosis adjustment for endometriosis and smoking, but the baseline and decrement estimates are somewhat heuristic and the morphology description has a minor internal inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, smoking cessation, luteal support, and considering freeze-all if OHSS risk exists, but suggestions such as low-dose aspirin/steroids for endometriosis are not routinely guideline-supported and the grading terminology is imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle modification, luteal support, and future planning including freeze-all and further evaluation after failure, though recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.011835,
+  "judge_latency_ms": 6510.070291929878,
+  "judge_prompt_tokens": 2260,
+  "judge_completion_tokens": 337
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0129",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is consistent with a Day 5 3AA blastocyst: expanded cavity, thinned zona, compact ICM, and cohesive TE. It is solid but somewhat generic and relies heavily on the provided Gardner grade rather than image-specific nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrial thickness, BMI, smoking history, and male factor reasonably well with embryo quality. However, it overstates some points and incorrectly infers fertilization/blastulation details not actually provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear, but there are notable issues: it equates MII count with fertilization, overestimates euploidy at age 35, and labels this a 'best-case scenario' too strongly. Probability reasoning is plausible but somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles regarding morphology and transfer support, but includes questionable claims such as very high euploidy estimates, strong emphasis on sedentary lifestyle effects, and speculative recommendation about likely surplus embryos. PGT-A framing is acceptable but somewhat simplistic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, and general optimization. Recommendations are useful, though some are generic and not highly tailored to this specific cycle."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.011949,
+  "judge_latency_ms": 4254.073124997376,
+  "judge_prompt_tokens": 2263,
+  "judge_completion_tokens": 344
+}

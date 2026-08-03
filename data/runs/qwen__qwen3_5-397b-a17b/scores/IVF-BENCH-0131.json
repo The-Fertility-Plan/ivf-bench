@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality/degenerative morphology with absent ICM and TE, but it misstates the Gardner expansion definition: score 1 is blastocoel at least half the embryo, not less than 50%, and it adds certainty about collapse/non-viability beyond what morphology alone can prove."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior outcomes, ovarian reserve, sperm parameters, and endometrial thickness reasonably well, though some links are somewhat overstated and the diagnosis/BMI are not deeply discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: contradiction with the provided expansion definition, overcalling the embryo as definitively non-viable, and recommending transfer cancellation based on morphology alone without acknowledging clinic-specific context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (consider PGT-A discussion, sperm DNA fragmentation in selected cases, protocol review), but declaring transfer medically futile and advising automatic cancellation of a 1DD embryo is stronger than guideline-based practice, and the PGT-A recommendation is presented too categorically."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for this transfer and future planning, including protocol clarification, possible PGT-A discussion, sperm testing, and lifestyle measures, though the transfer recommendation is overly absolute."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.011235,
+  "judge_latency_ms": 5963.7567910249345,
+  "judge_prompt_tokens": 2304,
+  "judge_completion_tokens": 365
+}

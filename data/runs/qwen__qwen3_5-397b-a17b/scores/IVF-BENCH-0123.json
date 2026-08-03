@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates certainty from a single image, calls stage 3 an expanded blastocyst, and localizes ICM/TE features that may not be confidently verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, sperm data, diagnosis, endometrium, and cycle history with embryo quality well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with a plausible prognosis estimate, but there are minor inconsistencies such as equating 3AA with the highest possible score and some overconfident inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on single embryo transfer and general counseling, but contains deviations such as mislabeling Gardner stage 3 as expanded, overstating 3AA as top-tier/highest possible, and recommending PGT-A after a single failure more strongly than guidelines support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer strategy, luteal support considerations, lifestyle modification, and possible future testing, though some suggestions are broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01142,
+  "judge_latency_ms": 6085.702291049529,
+  "judge_prompt_tokens": 2564,
+  "judge_completion_tokens": 334
+}

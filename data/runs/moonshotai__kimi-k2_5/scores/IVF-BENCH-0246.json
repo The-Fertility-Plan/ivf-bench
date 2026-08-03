@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0246",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality day-5 blastocyst and the provided 2AA label, but it over-interprets image details such as precise ICM position, TE uniformity, symmetry, and absence of fragmentation/vacuolization that may not be reliably visible; it also blurs grade 2 vs 3 expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH/response, BMI, tubal factor, prior cycle history, endometrium, and sperm data with embryo quality in a clinically meaningful way, though it somewhat overstates DOR-related aneuploidy risk at age 33 and underuses the reassuring male factor data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling this recurrent implantation failure after only two prior cycles is debatable, suggesting 'empty follicle syndrome' is unsupported by the data, and some probability adjustments appear ad hoc."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-concordant (single embryo transfer, acknowledging morphology limits), but several recommendations are weakly supported or not guideline-based, including routine luteal hCG supplementation, strong recommendation for ERA, and strong endorsement of PGT-A in a low-yield DOR patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, monitoring, and future planning, but some actions are too prescriptive despite limited evidence and would need clinician-specific tailoring."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012605,
+  "judge_latency_ms": 7010.518666997086,
+  "judge_prompt_tokens": 2816,
+  "judge_completion_tokens": 371
+}

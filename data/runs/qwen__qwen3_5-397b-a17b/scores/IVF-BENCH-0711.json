@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label, but it incorrectly calls stage 2 'full blastocyst' and describes image-specific details such as exact ICM position, zona thinning, and absence of fragmentation/vacuolization that may not be reliably supported from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, tubal factor, prior IVF failure, BMI, sperm parameters, paternal age, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH is unavailable and some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality and patient factors; minor issues include overemphasis on paternal age/DNA fragmentation and some imprecision around grading terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and considering embryo quality and uterine factors, but it misstates Gardner staging, overstates that 2AA is the 'highest possible' grade, and recommends PGT-A somewhat too strongly after only one failed cycle without clearer indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support consideration, and possible sperm DNA fragmentation testing, though some recommendations are broader than guideline-driven and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012738,
+  "judge_latency_ms": 6286.021083011292,
+  "judge_prompt_tokens": 2441,
+  "judge_completion_tokens": 361
+}

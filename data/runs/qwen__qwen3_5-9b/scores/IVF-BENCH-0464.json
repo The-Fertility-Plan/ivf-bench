@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0464",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It generally follows the provided 2BA label, but it incorrectly describes expansion as fully expanded/near hatching with a thin taut zona, whereas Gardner 2 indicates an early blastocyst rather than a full/hatched blastocyst; this is a meaningful morphology error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response incorporates age, ovarian reserve, PCOS, BMI, sperm parameters, and endometrium, but overstates several relationships, especially paternal age effects and ovarian reserve interpretation, and misses nuance around age-related euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has notable inconsistencies: age 37 is called highly favorable/prime, euploidy is overstated at 80-85%, and paternal age is treated as the dominant determinant of aneuploidy; probability reasoning is therefore only partially supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF evidence/guidelines, including misinterpretation of Gardner stage 2, overstating paternal-age impact on aneuploidy, implying low BMI necessitates stronger luteal support, and claiming euploid embryos implant >90% with PGT-A."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps—proceed with transfer, maintain luteal support, discuss PGT-A/future planning, and consider nutritional counseling—though some recommendations are based on overstated premises."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013014,
+  "judge_latency_ms": 4655.417166999541,
+  "judge_prompt_tokens": 2418,
+  "judge_completion_tokens": 384
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0171",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage: lab data define 2AA here as full blastocyst with blastocoel filling the embryo, but the model describes a partially expanded blastocyst and does not provide reliable image-grounded detail on ICM, TE, or zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response only addresses morphology and does not integrate age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, or cycle context with embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is limited and already shows a key inconsistency between the provided grading definition and the model's interpretation of expansion stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response conflicts with the provided Gardner grading interpretation for expansion and does not demonstrate broader evidence-based transfer planning or guideline-consistent recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No practical recommendations for transfer management, counseling, or future cycle planning are present in the visible response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0072425,
+  "judge_latency_ms": 4703.311999968719,
+  "judge_prompt_tokens": 1193,
+  "judge_completion_tokens": 284
+}

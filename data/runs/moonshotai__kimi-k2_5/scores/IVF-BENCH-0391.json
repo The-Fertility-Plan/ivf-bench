@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0391",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 0DD, but it adds image-specific details such as slightly thickened zona, minimal fragmentation, visible compaction, and preserved cellular structure that may not be reliably supported from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, smoking, BMI, ovarian response, prior IVF history, sperm parameters, diagnosis, and endometrial thickness with the embryo’s poor morphology to explain prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are internal inconsistencies: it alternates between calling the embryo essentially non-viable and assigning up to 5-10% implantation potential, and it overstates certainty about aneuploidy and viability from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but several recommendations are not strongly guideline-based or are overstated, including routine ERA, thrombophilia testing, aggressive luteal support, growth hormone/DHEA use, and suggesting clinics typically discard 0DD embryos as definitively non-viable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for counseling, transfer management, lifestyle modification, and future-cycle planning, though some suggestions are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 6037.81537496252,
+  "judge_prompt_tokens": 3288,
+  "judge_completion_tokens": 360
+}

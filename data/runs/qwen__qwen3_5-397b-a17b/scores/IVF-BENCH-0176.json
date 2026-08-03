@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0176",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly recognizes a very poor-quality early blastocyst/degenerating embryo, but it misstates the provided Gardner expansion definition by saying the blastocoel is less than 50% rather than at least half the embryo, and it adds image-specific features (e.g., lower-left cavity, fuzzy cytoplasm) that may be overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH/DOR, endometriosis, sperm quality, endometrial thickness, and lifestyle with embryo prognosis well, though some links (e.g., direct attribution of embryo degeneration to endometriosis) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor morphology is treated as the dominant prognostic factor despite favorable age and sperm parameters. Minor issues include overinterpreting the meaning of Day 4 transfer and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most comments are broadly consistent with IVF practice, especially the poor prognosis of a 1DD embryo, but there are deviations: calling AMH 0.45 'bordering on POI' is inaccurate, routine donor egg counseling this early is premature, and recommendations like prolonged GnRH suppression or PGT-A are not clearly justified from this single cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including counseling, luteal support, and possible protocol changes. However, some recommendations are not sufficiently individualized or evidence-balanced."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01162,
+  "judge_latency_ms": 6548.294541018549,
+  "judge_prompt_tokens": 2242,
+  "judge_completion_tokens": 401
+}

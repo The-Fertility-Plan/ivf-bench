@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0390",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response explicitly states the image does not show a blastocyst and instead resembles a single oocyte/degenerating cell. If the provided case is intended to be a blastocyst assessment, this is a major mismatch with the supplied Gardner 3AA context, though the model at least avoids inventing blastocyst features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, low oocyte yield, endometriosis, sperm quality, and endometrial thickness with embryo prognosis reasonably well, though it overstates AMH as diminished reserve and does not discuss prior biochemical pregnancy in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally explained, but there are notable issues: it calls 3AA 'the highest grade,' overinterprets euploidy likelihood, and gives a high implantation estimate despite acknowledging major image-data discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but there are deviations from guideline-level nuance: 3AA is not the highest possible blastocyst grade, PGT-A is not routinely indicated in a 34-year-old with low embryo numbers, and recommending aborting transfer based on this discrepancy is too strong without verification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including verifying the discrepancy, proceeding if lab grading is correct, and considering protocol review. However, some recommendations are overly assertive and not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.012801,
+  "judge_latency_ms": 5804.636959001073,
+  "judge_prompt_tokens": 2372,
+  "judge_completion_tokens": 379
+}

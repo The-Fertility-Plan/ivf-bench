@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BB grading and gives a plausible blastocyst description, but it overstates image-specific certainty (e.g., exact ICM location, zona thinning, absence of degeneration) and contains stage terminology confusion by calling full blastocyst 'Stage 2' and contrasting it with hatching as 'Stage 3'."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, smoking, endometrium, and first-cycle status with embryo quality and prognosis. It connects these factors reasonably well, though some links are somewhat speculative, especially around sperm DNA fragmentation and endometrial synchrony."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it treats a Day 4 transfer of a blastocyst as a likely synchrony problem without enough context, implies a triple-line pattern from thickness alone, and the implantation estimate may be somewhat inflated given the embryo grade and transfer timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles (importance of age, smoking cessation, considering sperm factors), but there are deviations: Gardner staging terminology is imprecise, PGT-A is suggested somewhat loosely for a young patient after failure, and the Day 4 blastocyst asynchrony concern is presented more strongly than guidelines would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including luteal support, smoking cessation, sperm DNA fragmentation testing, and future culture strategy. Recommendations are useful, though some are broad and a few are not tightly tailored to this exact case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0126925,
+  "judge_latency_ms": 6790.148041036446,
+  "judge_prompt_tokens": 2569,
+  "judge_completion_tokens": 418
+}

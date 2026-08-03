@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label and gives appropriate comments on ICM, TE, blastocoel, and zona, but it likely overstates image-specific certainty and adds fine-grained features (exact quadrant, intercellular gaps, excluded cells, no collapse artifact) that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, diagnosis, sperm factors, endometrium, cycle history, and oocyte yield with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly internally consistent, with a plausible probability estimate tied to morphology and patient factors; minor issue is somewhat speculative emphasis on Day-4 expanded blastocyst timing/asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with standard IVF practice: SET in a young favorable-prognosis patient, luteal support, no routine bed rest, cautious use of PGT-A/ERA. Slight deviation is overinterpreting Day-4 blastocyst timing and suggesting optimization to Day 5 without full context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear practical recommendations for current transfer management, monitoring, SET strategy, cryopreservation, and contingency planning for future cycles."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.016794,
+  "judge_latency_ms": 6019.710374996066,
+  "judge_prompt_tokens": 3953,
+  "judge_completion_tokens": 329
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0422",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes poor ICM/TE consistent with 1DD, but it inaccurately calls the embryo clearly expanded with thinning zona and assigns specific left/right structures that may not be reliably visible; this conflicts with the provided grade 1 rather than expanded blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrium, sperm, prior biochemical pregnancy, and lifestyle with embryo quality well, though it overinterprets the significance of a single poor embryo without full cycle context and does not note AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor morphology is the dominant negative factor despite favorable patient characteristics. Minor issues include tension between describing the embryo as expanded and the stated Gardner 1 grade, and some speculative comments about expected embryo yield."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are notable deviations: recommending cryopreservation of a 1DD if better embryos exist is questionable, and the morphology interpretation does not align well with Gardner stage 1. PGT-A suggestions are somewhat cautious but still a bit loosely indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical counseling points for current transfer versus future cycles, including expectations, luteal support, and possible further sperm testing. However, some recommendations are not fully nuanced or lab-policy dependent, especially around freezing/discarding a 1DD embryo."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013065,
+  "judge_latency_ms": 6105.114208003215,
+  "judge_prompt_tokens": 2425,
+  "judge_completion_tokens": 386
+}

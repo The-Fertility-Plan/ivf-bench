@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with weak/degenerative ICM and TE consistent with 1DD, but it incorrectly calls grade 1 'expanded' and overstates visual certainty; Gardner 1 is an early blastocyst, not expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior IVF failures, ectopic history, endometrial thickness, and sperm factors into prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and the low implantation estimate follows from poor morphology and adverse history, but there are minor issues such as labeling FSH 5.9 as elevated and inferring embryo availability from the prompt."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling and recognition of poor prognosis are aligned with IVF practice, but recommending PGT-A as highly recommended in a low-reserve patient with few embryos and suggesting surgery for endometriosis to improve outcomes are stronger than guideline-supported evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for this transfer and future planning, including counseling, monitoring, and discussing alternatives, though recommendations could be more nuanced and individualized."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.00628625,
+  "judge_latency_ms": 6193.491082987748,
+  "judge_prompt_tokens": 2333,
+  "judge_completion_tokens": 337
+}

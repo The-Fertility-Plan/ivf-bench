@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0161",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality/degenerative embryo and notes absent or degenerative ICM/TE consistent with 0DD, but it also speculates about collapse and image features not clearly verifiable and does not describe key visible structures such as zona details with precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, BMI, prior ectopic/biochemical outcomes, sperm quality, and thin endometrium into prognosis, though it overstates the link between DOR and the observed embryo quality and comments on smoking despite the patient being a former smoker."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from the poor embryo grade, but there are notable issues: calling 4.5 mm 'not strictly thin' is inconsistent, and recommending no transfer/possible cryopreservation reflects some internal inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concerns and recognition of poor prognosis are appropriate, but several recommendations are not well aligned: advising donor eggs this early, suggesting cryopreservation of a 0DD embryo, and recommending genetic counseling because of ectopic history are weakly supported; the smoking advice is also inaccurate for a former smoker."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives clear next-step suggestions such as avoiding transfer, optimizing endometrium, and considering PGT-A, but some advice is overly absolute or insufficiently nuanced for a clinician and includes questionable options like cryopreservation for research."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0119625,
+  "judge_latency_ms": 6041.33129195543,
+  "judge_prompt_tokens": 2397,
+  "judge_completion_tokens": 398
+}

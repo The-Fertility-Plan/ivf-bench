@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0181",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphology description is broadly consistent with the provided Gardner 3BA label, including expanded blastocyst, B-grade ICM, and A-grade TE, but it relies heavily on the supplied grade rather than clearly image-grounded observations and adds details like distinct cell boundaries and significant zona thinning that may not be confidently verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, BMI, sperm parameters, endometrium, and first-cycle status with embryo quality in a clinically meaningful way, though some links are somewhat overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable issues: calling Day 4 blastulation 'accelerated' and generally favorable is debatable, suggesting B-grade ICM may reflect mosaicism is speculative, and the probability section is incomplete/truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the content is broadly consistent with standard IVF practice, but there are deviations from evidence-based caution, especially around interpreting Day 4 blastulation as clearly advantageous and inferring mosaicism from morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides risk/favorable factor framing and probability estimates, but the recommendations section requested in the prompt is not actually delivered in the visible response, limiting practical next-step usefulness."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.010425,
+  "judge_latency_ms": 5375.822291010991,
+  "judge_prompt_tokens": 2010,
+  "judge_completion_tokens": 360
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0475",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and mislabels expansion: it says the zona is taut and the embryo is fully expanded/aligns perfectly with 2BB, but a Gardner 2 blastocyst is an early blastocyst rather than a full expanded one. It also places the ICM 'in the center,' which is not a standard description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm, endometrium, diagnosis, and prior cycle history with embryo quality and prognosis reasonably well, though some inferences about embryo yield and competence are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it conflates Gardner stage 2 with full blastocyst, cites an implausibly high euploidy rate for age 31, and labels the history as RIF somewhat loosely."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and consideration of uterine evaluation are guideline-consistent, but the strong recommendation for PGT-A in a 31-year-old based mainly on prior failed cycles is more aggressive than standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for proceeding with transfer and outlines reasonable future evaluations and planning, though recommendations could be more nuanced regarding when to pursue PGT-A and additional workup."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012564,
+  "judge_latency_ms": 4480.785207997542,
+  "judge_prompt_tokens": 2353,
+  "judge_completion_tokens": 367
+}

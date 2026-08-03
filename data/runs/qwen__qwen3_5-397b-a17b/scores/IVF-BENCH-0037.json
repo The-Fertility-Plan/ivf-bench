@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the provided Gardner 1DD definition, stating expansion 1 means blastocoel less than half the embryo, whereas the case prompt defines it as at least half. It also overstates non-viability from morphology alone and adds features like amorphous dark degeneration that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior biochemical pregnancies, male factor, partner age, BMI, endometrium, and oocyte yield with prognosis reasonably well, though some links are speculative and AMH is unavailable but not acknowledged."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: it calls the embryo non-viable with near-certainty, recommends not transferring despite transfer day being listed, and equates two biochemical pregnancies with RPL too strongly. Probability reasoning is therefore somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF guidance: routine PGT-A is presented too strongly, NK-cell/immunologic testing is not guideline-supported in standard RPL workup, and GH/PICSI/IMSI are suggested without appropriate caution. Declaring D-grade embryos typically discarded is also too absolute."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decision-making and future workup, including sperm DNA fragmentation and cycle planning, but some recommendations are overly definitive or insufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0115575,
+  "judge_latency_ms": 8170.449791999999,
+  "judge_prompt_tokens": 2283,
+  "judge_completion_tokens": 390
+}

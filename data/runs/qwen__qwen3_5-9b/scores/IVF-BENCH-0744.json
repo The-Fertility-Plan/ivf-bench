@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst and correctly identifies good ICM and looser TE, but it overstates that the embryo has hatched or is about to hatch and adds side-specific detail that may not be reliably supported from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior cycle outcome, BMI, sperm parameters, paternal age, and endometrial thickness with embryo quality reasonably well, though AMH is unavailable and some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear, but there are notable issues: FSH 7.7 is framed too negatively, TE grade is linked to needing more progesterone without evidence, and the implantation estimate may be somewhat optimistic for age 39 without PGT-A."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows standard IVF concepts and Gardner grading, but recommending extra luteal support because of TE grade and suggesting PGT-A on already frozen embryos without nuance are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, considering future testing, and planning subsequent cycles, though some recommendations are broad and a few are insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.011772,
+  "judge_latency_ms": 3923.5392500049784,
+  "judge_prompt_tokens": 2234,
+  "judge_completion_tokens": 338
+}

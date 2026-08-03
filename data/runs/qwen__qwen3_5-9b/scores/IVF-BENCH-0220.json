@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0220",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies expanded blastocyst, strong ICM, and looser TE, but it adds uncertain image-specific details such as exact pole location and visible vacuoles that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH/low oocyte yield, endometriosis, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly well linked from morphology and patient factors to prognosis; minor overreach includes attributing prior failures mainly toward aneuploidy and calling vacuolization likely normal without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading and standard IVF principles, including caution about age-related aneuploidy and morphology limits; however, some statements are a bit simplified and the euploid implantation estimate may be somewhat optimistic depending on context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides only a limited immediate recommendation to proceed with transfer and does not fully address future cycle planning, adjunct evaluation, or specific next-step management in a practical way."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.01019,
+  "judge_latency_ms": 5135.56654099375,
+  "judge_prompt_tokens": 2132,
+  "judge_completion_tokens": 324
+}

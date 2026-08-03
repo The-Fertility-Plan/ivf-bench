@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0136",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality blastocyst and correctly identifies absent/degenerative ICM and TE, but it introduces uncertainty and likely overinterprets image details (e.g., exact blastocoel proportion, zona/thinness, cytoplasmic granularity) and notes a possible 1-2 expansion mismatch."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, prior failed cycle, uterine factor, sperm quality, and endometrial thickness well with embryo prognosis, though the uterine factor discussion is somewhat generic because the pathology is unspecified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the poor prognosis estimate follows from the embryo grade and maternal age, but there is some tension between calling the prognosis essentially near-zero and still recommending transfer with language like 'no harm' and 'test transfer.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing 1DD as very poor prognosis and avoiding PGT-A on such an embryo, but recommendations such as ERA after one failed cycle and growth hormone/assisted hatching are not strongly guideline-based, and 'no harm in transfer' is too broad."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, transfer management, uterine evaluation, and future cycle planning including donor oocyte discussion, though some suggestions are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.0124,
+  "judge_latency_ms": 5592.414667014964,
+  "judge_prompt_tokens": 2842,
+  "judge_completion_tokens": 353
+}

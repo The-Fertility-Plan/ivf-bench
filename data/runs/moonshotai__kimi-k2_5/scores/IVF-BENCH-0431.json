@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0431",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 2AB grading appropriately and gives a plausible blastocyst description, but it overstates image-specific details such as zona thinning, symmetry, granularity, and absence of degeneration that may not be directly verifiable from the image/lab data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, ovarian reserve, prior cycle history, smoking, BMI, endometrium, and sperm data into prognosis reasonably well, though some links (e.g., low blastulation implying high aneuploidy) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical and the probability estimate is explained, but there are notable issues: it misinterprets Gardner expansion 2 as 'full blastocyst,' treats prior miscarriage as evidence of a specific failure mechanism, and makes some unsupported causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice, including discouraging freezing based on TE B/smoking, suggesting ERA routinely, and recommending adjuvants like growth hormone/DHEA without strong guideline support; smoking cessation and endometrial evaluation are appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, luteal support consideration, lifestyle modification, and future-cycle planning, but some recommendations are too prescriptive or insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01235,
+  "judge_latency_ms": 5525.1103329937905,
+  "judge_prompt_tokens": 2732,
+  "judge_completion_tokens": 368
+}

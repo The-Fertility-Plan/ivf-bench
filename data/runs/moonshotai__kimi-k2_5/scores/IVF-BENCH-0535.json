@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0535",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Description is broadly consistent with the provided 3AA label, but it leans heavily on the lab grade and includes image-specific claims like a uniform syncytium and >90% cavity occupancy that may not be directly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, FSH, prior miscarriage, sperm parameters, endometrium, and cycle context well, though it overinterprets some missing data such as fertilization/blastulation performance and AMH-related reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable link between embryo quality, age, miscarriage history, and prognosis; minor issues include somewhat inflated confidence from morphology and speculative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general monitoring, but recommendations such as routine low-dose aspirin, broad thrombophilia/MTHFR screening after a single miscarriage, modified bed rest, and ERA/PGT-A suggestions are not strongly guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps for transfer, monitoring, and contingency planning, but some actions are not sufficiently evidence-based or are too broad for a patient with only one prior miscarriage."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.0122975,
+  "judge_latency_ms": 5951.677082979586,
+  "judge_prompt_tokens": 2981,
+  "judge_completion_tokens": 323
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality day-4 morula/early blastocyst with minimal cavitation, consistent with 0DD, but adds limited image-specific detail and does not address features like zona pellucida or clearly distinguish what is visible versus inferred from the lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, BMI, ovarian response, endometrium, and sperm data with embryo quality reasonably well, though it overstates sperm quality and does not fully explore the male-factor diagnosis or uncertainty from missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: it calls the sperm parameters excellent despite the male-factor diagnosis, refers to a day-4 embryo as a cleavage-stage transfer, and claims prior live birth 'overrides' averages, which is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly consistent in recognizing poor prognosis for a 0DD embryo and discussing age-related aneuploidy, but recommending transfer without nuance and suggesting PGT-A could 'bypass the need to wait for blastocyst formation' is not guideline-consistent, since PGT-A requires blastocyst-stage biopsy in standard practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps and counseling points, but recommendations are fairly generic and miss more specific transfer-cycle considerations, alternatives, and nuanced future planning based on embryo development pattern and male-factor context."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0113875,
+  "judge_latency_ms": 6675.917333981488,
+  "judge_prompt_tokens": 2221,
+  "judge_completion_tokens": 389
+}

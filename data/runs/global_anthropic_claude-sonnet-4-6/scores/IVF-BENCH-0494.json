@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0494",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response generally matches the provided 3BA grading with expanded blastocyst, B-grade ICM, A-grade TE, and zona thinning, but it adds image-specific claims such as granular inclusions and suboptimal compaction that may not be clearly verifiable from the image and frames the embryo as below-average for 3BA somewhat harshly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior failed cycle, sperm parameters, ovarian response, endometrial thickness, and embryo grade into prognosis reasonably well, though some factors like alcohol and lifestyle are weighted more strongly than is typically justified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability modeling is internally inconsistent: it lists a base implantation rate of 35-45% yet concludes 18-28%, while also separately giving implantation as 25-32%. Some deductions appear overly aggressive relative to the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but several recommendations are not strongly guideline-based for this scenario, including ERA after a single failed cycle, NK/immune workup, thrombophilia testing, routine aspirin consideration, and strong PGT-A recommendation at age 36 without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for transfer, luteal support review, lifestyle counseling, and future planning, but some suggested investigations and add-ons are more speculative than standard and reduce overall appropriateness."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.021805,
+  "judge_latency_ms": 7018.005334073678,
+  "judge_prompt_tokens": 3185,
+  "judge_completion_tokens": 392
+}

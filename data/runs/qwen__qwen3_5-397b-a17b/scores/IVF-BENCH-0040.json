@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it overstates visible certainty: it mislabels stage 2 as if clearly fully expanded/distending the zona, calls 2AA the highest possible score, and infers features like clear cytoplasm/no vacuoles that are not reliably assessable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, PCOS, oocyte yield, sperm parameters, endometrial thickness, and first-cycle status with embryo quality in a clinically meaningful way, though it misses AMH being unavailable and slightly overinterprets PCOS effects on aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate broadly following from age, morphology, and uterine factors; minor issues include overstating embryo grade and making some unsupported claims about PCOS and chromosomal risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice (single good-quality day-5 transfer, antagonist protocol suitability in PCOS, luteal support), but there are notable deviations: 2AA is not the highest possible grade, and suggesting higher aneuploidy in PCOS/PGT-A on that basis is not strongly guideline-supported for a 31-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, luteal support, metabolic optimization, and protocol considerations; however, recommendations remain somewhat general and lack more specific contingency planning."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.011985,
+  "judge_latency_ms": 6876.600208051968,
+  "judge_prompt_tokens": 2322,
+  "judge_completion_tokens": 412
+}

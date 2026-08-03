@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Description is broadly plausible for a fair-quality blastocyst with loose ICM and less cohesive TE, but it overinterprets the image by calling it fair/low-grade and suggesting mismatch with the reported 2BA; zona and stage-specific details are limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, FSH, tubal factor, prior live birth, endometrium, and sperm motility well with embryo quality, though AMH is unavailable and some interactions are discussed somewhat generally."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, linking favorable maternal factors with modest embryo morphology; minor issue is tension between reported grading/day and the model's image-based downgrade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice on SET, luteal support, uterine evaluation, and selective PGT-A, but it treats a day-4 embryo as a blastocyst/uses Gardner-style interpretation somewhat loosely and gives probability estimates with limited calibration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, uterine review, hydrosalpinx assessment, and male-factor follow-up; recommendations are useful though not highly tailored beyond standard IVF management."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013512,
+  "judge_latency_ms": 5192.412374999549,
+  "judge_prompt_tokens": 2869,
+  "judge_completion_tokens": 327
+}

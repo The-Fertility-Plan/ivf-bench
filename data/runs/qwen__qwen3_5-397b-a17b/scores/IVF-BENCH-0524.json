@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0524",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided Gardner grade, but it incorrectly labels 2AA as a 'top-tier/highest possible' embryo and adds image-specific details (e.g., exact ICM location, likely thinning zona) that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve/response, BMI, prior failed cycle, sperm data, diagnosis, and endometrial thickness well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with a plausible probability estimate, but it overstates embryo grade significance and makes a few speculative inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general counseling align with IVF practice, but calling 2AA the highest possible grade is inaccurate, and suggesting routine PGT-A/ERA after a single failed cycle is more aggressive than guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and contingency planning, though some recommendations (ERA, PGT-A, acupuncture) are not strongly individualized or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.011973,
+  "judge_latency_ms": 5345.099666999886,
+  "judge_prompt_tokens": 2401,
+  "judge_completion_tokens": 318
+}

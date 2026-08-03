@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality DD blastocyst, but it misstates the provided Gardner expansion stage as early/<50% rather than stage 1 blastocyst with blastocoel at least half the embryo, and it adds image-specific details like vacuolization, thickened zona, and irregular borders that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior cycle outcomes, sperm parameters, diagnosis, and endometrial thickness well, linking favorable maternal age and uterine factors against the dominant negative effect of embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and internally consistent: poor DD morphology drives prognosis despite favorable age and endometrium. Minor issues include somewhat arbitrary probability adjustments and overinterpretation of recurrent poor embryo quality from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly consistent with IVF practice, but some recommendations are not strongly guideline-based or are overstated, including ERA as high priority, low-dose aspirin, routine DHEA/GH use, and immunologic/thrombophilia workup for this history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for counseling, transfer, luteal support, and future-cycle planning, though some suggested interventions are more speculative than standard and should be framed with more caution."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.021905,
+  "judge_latency_ms": 6355.507042026147,
+  "judge_prompt_tokens": 3331,
+  "judge_completion_tokens": 350
+}

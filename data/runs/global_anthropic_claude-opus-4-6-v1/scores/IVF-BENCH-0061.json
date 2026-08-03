@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphology description is detailed and largely consistent with a 2AA day-5 blastocyst, including appropriate comments on full blastocyst expansion, compact ICM, and cohesive TE. However, it likely overstates certainty from a single image and adds some fine-grained features (e.g., exact external fragment/polar body significance, smooth cytoplasmic texture, absence of vacuolation/necrosis) that may not be confidently assessable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, BMI, FSH, tubal factor diagnosis, prior biochemical pregnancy, sperm parameters, endometrial thickness, stimulation protocol, and oocyte maturity with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is well organized, but the probability adjustment logic is somewhat overstated and not fully internally calibrated. It heavily penalizes smoking/alcohol and then recommends deferring transfer primarily on that basis, which is more aggressive than the evidence clearly supports for this specific case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many points are guideline-concordant (SET, no routine PGT-A at age 27, no ERA after one biochemical, no thrombophilia workup after a single biochemical). However, recommending freeze-all/deferral mainly for lifestyle optimization, augmented luteal support without clear indication, uterine Doppler, EmbryoGlue benefit claims, and immunologic/NK testing after recurrent biochemical losses are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, with clear options for proceeding versus deferring, lifestyle counseling, and future-cycle planning. It loses a point because some suggested interventions are more speculative or not routinely indicated."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.03122,
+  "judge_latency_ms": 7877.673082984984,
+  "judge_prompt_tokens": 4933,
+  "judge_completion_tokens": 437
+}

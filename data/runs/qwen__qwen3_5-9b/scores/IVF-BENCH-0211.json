@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0211",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable grading inconsistencies: it calls a Gardner 2 blastocyst 'fully expanded' and says the embryo has 'successfully hatched or is ready to hatch,' which does not match stage 2. It also describes a thin, taut zona pellucida, which is more typical of later expansion stages. ICM/TE comments are broadly directionally consistent but partly rely on the provided grade rather than image-grounded description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, endometrial thickness, prior IVF outcomes, and embryo grade into prognosis reasonably well. It appropriately highlights prior miscarriage/failed transfers as an important modifier, though some claims about sperm DNA integrity and embryo being 'top-tier' are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are internal issues: the embryo is mischaracterized morphologically, 2AB is overstated as 'high-quality/top-tier,' and the probability estimate is based on that inflated assessment. The adjustment downward for prior failures is sensible, but some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines: ERA is not routinely recommended after a single failed transfer pattern like this, thrombophilia/immunology workup is overextended without specific indications, and 'do not freeze it' is too absolute. The morphology interpretation also departs from Gardner criteria for stage 2."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps (proceed with transfer, luteal support, consider PGT-A and further workup if failure), but recommendations are somewhat generic and insufficiently nuanced for this case. Some suggested tests are controversial or not clearly indicated, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012785,
+  "judge_latency_ms": 7651.826500019524,
+  "judge_prompt_tokens": 2354,
+  "judge_completion_tokens": 460
+}

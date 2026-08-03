@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0108",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it leans heavily on the provided Gardner grade and includes specific image details (e.g., upper-left zona thinning, left-sided ICM) that may be overinterpreted rather than clearly image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, BMI, ovarian reserve, prior outcomes, endometrium, lifestyle, and sperm factors well, though sperm motility is somewhat generously characterized and some interactions could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly consistent, with a plausible probability adjustment from embryo quality to patient-specific prognosis; minor overstatements about euploidy and sperm quality prevent a top score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but statements such as 'do not freeze it unless...' and suggesting PCOS patients may need higher progesterone are too broad, and PGT-A at age 30 after limited failures is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including proceeding with transfer, alcohol cessation, stress reduction, metabolic screening, and future weight optimization; however, some recommendations are somewhat generic and lack protocol-level specificity."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.0107125,
+  "judge_latency_ms": 5872.970374999568,
+  "judge_prompt_tokens": 2335,
+  "judge_completion_tokens": 325
+}

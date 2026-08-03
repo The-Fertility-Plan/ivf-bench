@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerative ICM and TE, but it misstates the Gardner expansion stage by saying the blastocoel is less than half the embryo volume, whereas score 1 corresponds to at least half. It also adds speculative features like necrosis, lysis, and vacuolation not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including young age, prior live birth, tubal factor, endometrium, sperm, BMI, and ovarian response, and appropriately contrasts these with the poor embryo morphology. It misses some nuance around day-4 timing and does not fully develop how this affects prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly sound, but there is a notable inconsistency in the expansion-stage interpretation and the response is truncated before completing the assessment, leaving the reasoning chain incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response generally follows Gardner grading concepts and standard IVF prognostic reasoning, but the incorrect definition of expansion stage 1 and speculative suggestion of lab issues without supporting evidence reduce alignment with established criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response does not provide clear recommendations for the current transfer or future cycle planning because it is cut off before actionable next steps are given."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0097725,
+  "judge_latency_ms": 6097.412416012958,
+  "judge_prompt_tokens": 1767,
+  "judge_completion_tokens": 357
+}

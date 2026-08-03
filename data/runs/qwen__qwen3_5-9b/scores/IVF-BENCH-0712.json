@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches an expanded blastocyst with thinning zona and reasonable ICM/TE localization, but introduces speculative features like vacuolization/complexity that may not be clearly supported by the image and slightly overstates certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, endometriosis, prior failed cycle, sperm parameters, and endometrial thickness with embryo quality well, though some statements are overstated, such as calling 36 'prime reproductive age' and implying strong correlation of morphology alone with euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but there are notable issues: 3AA is not the highest possible grade, paternal age impact is somewhat overstated, and the implantation estimate is presented with more precision than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from guideline-consistent IVF counseling: 3AA is mislabeled as the highest morphology grade, PGT-A is presented too strongly and inaccurately as eliminating miscarriage risk, and FET preference for endometriosis is stated too broadly without individualized indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, considering fresh vs FET context, lifestyle advice, and follow-up monitoring, but some recommendations are too generalized and not sufficiently tailored to key cycle details such as progesterone status or endometriosis severity."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012417,
+  "judge_latency_ms": 5501.450499999919,
+  "judge_prompt_tokens": 2244,
+  "judge_completion_tokens": 379
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0545",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a poor-quality 1DD blastocyst, correctly noting poorly defined/degenerative ICM and TE, but it overstates expansion as 'expanded' and adds detail such as blastocoel occupying >50% and specific structural features that may not be confidently determined from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, diagnosis, prior cycle history, and semen parameters with embryo quality well, though it makes assumptions about blastulation yield and hidden sperm DNA fragmentation without direct supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: it describes a grade 1 embryo as 'expanded,' infers low blastocyst conversion without confirmed total embryo outcomes, and some conclusions are stronger than the available evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis of a 1DD embryo is appropriately recognized, recommendations such as routine ICSI for unexplained infertility, broad metabolic workup, and suggesting clinics may choose not to transfer based on morphology alone are not well aligned with standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points and future-cycle considerations, including prognosis discussion and possible additional testing, though some recommendations are not sufficiently evidence-based or individualized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012279,
+  "judge_latency_ms": 4820.596999998088,
+  "judge_prompt_tokens": 2303,
+  "judge_completion_tokens": 358
+}

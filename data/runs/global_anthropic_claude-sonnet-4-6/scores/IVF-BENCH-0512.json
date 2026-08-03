@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0512",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a structured morphology review, but it overcalls several image-based abnormalities (vacuolation, apoptosis/debris, significant TE heterogeneity) and proposes rescoring to 3BB/3AB without clear visual support. This introduces likely fabricated or exaggerated features relative to the provided 3AA lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometriosis, prior cycle outcome, semen parameters, and endometrial thickness well, and connects these to prognosis. Some links are somewhat overstated, but overall the patient-factor synthesis is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally organized, but the probability estimate is driven down substantially by speculative morphology concerns and several additive deductions that are not clearly evidence-based. There is some internal tension between calling the embryo high quality and heavily discounting it."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are reasonable, several are not well aligned with mainstream evidence-based IVF guidance for this scenario: routine ERA after a single failed cycle, aspirin/prednisolone suggestions, NK-cell testing, thrombophilia screening, EMMA/ALICE, and broad PGT-A discussion in a young patient with a small cohort. These go beyond standard guideline-supported care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next-step suggestions for transfer support and future planning, including protocol review and endometriosis-focused considerations. However, some recommendations are overly aggressive or insufficiently evidence-based, which limits top-tier actionability."
+    }
+  ],
+  "extracted_probability": 0.385,
+  "judge_cost_usd": 0.02224,
+  "judge_latency_ms": 7135.6066659791395,
+  "judge_prompt_tokens": 3299,
+  "judge_completion_tokens": 383
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is largely consistent with a 3AB blastocyst: expanded cavity, identifiable compact ICM, and looser/sparser TE. Minor overstatement of specific image details and reliance on the provided grade prevent a perfect score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior miscarriage, sperm quality, diagnosis, and endometrium with embryo quality well. However, it overinterprets high AMH as likely PCOS despite no such diagnosis being provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the implantation estimate is plausible, but there are notable issues: calling grade 3 'expanded' rather than full blastocyst/partial expansion, inferring PCOS, and linking TE grade B to need for stronger luteal support without clear evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice in supporting transfer of a usable day-5 3AB embryo, but several recommendations are weakly aligned: speculative PCOS framing, thrombophilia/APS workup after a single miscarriage, and protocol suggestions without enough cycle detail."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer and reviewing future stimulation strategy, with discussion of PGT-A and metabolic assessment. Some recommendations are somewhat generic or based on speculative assumptions."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012738,
+  "judge_latency_ms": 4863.273833994754,
+  "judge_prompt_tokens": 2546,
+  "judge_completion_tokens": 340
+}

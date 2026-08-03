@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage by calling grade 2 'fully expanded' and 'stretched to its maximum size,' which corresponds more to stage 3/4. It otherwise gives a broadly plausible ICM/TE description, but includes image-specific certainty not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrial thickness, lifestyle, and sperm data with prognosis reasonably well, though it overinterprets male factor and incorrectly refers to a fertilization rate that was not provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: incorrect interpretation of expansion grade, calling 2AB 'top-tier,' unsupported claims about male factor increasing aneuploidy, and a probability estimate that may be somewhat optimistic for an untested 2AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from guideline-consistent practice: routine PGT-A is not generally recommended solely for male factor in a 33-year-old, the statement that PGT-A is 'highly recommended' is too strong, and saying biopsy is not feasible with only one embryo is inaccurate. Gardner grading interpretation is also incorrect for stage 2."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It provides practical next steps such as proceeding with transfer and maintaining lifestyle measures, but future-planning advice is not sufficiently nuanced and includes questionable recommendations about PGT-A and freeze-all."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.011285,
+  "judge_latency_ms": 6334.519625001121,
+  "judge_prompt_tokens": 2192,
+  "judge_completion_tokens": 387
+}

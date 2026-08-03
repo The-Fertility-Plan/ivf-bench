@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0186",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/morula and correctly notes absent/degenerative ICM and TE, but it overinterprets some image details and is imprecise about stage by calling it both compact morula and early blastocyst while the provided grade is 0DD."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, uterine factor, prior IVF outcomes, endometrium, and sperm parameters with embryo quality well, though some links are somewhat speculative (e.g., implying PCOS or oocyte competence issues from limited data)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the very low implantation estimate follows from the poor morphology, but there are minor inconsistencies such as stage interpretation and some unsupported assumptions about expected Day 4 development and stimulation adequacy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in emphasizing poor prognosis, counseling, uterine evaluation, and weight optimization, but includes less guideline-grounded suggestions such as routine PGT-A in a young patient, DuoStim, and supplements without strong case-specific evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for counseling, transfer expectations, uterine workup, and future cycle planning, though some recommendations are broader or more speculative than strictly necessary."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.0118475,
+  "judge_latency_ms": 5980.664957955014,
+  "judge_prompt_tokens": 2567,
+  "judge_completion_tokens": 362
+}

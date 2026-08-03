@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0505",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it incorrectly equates stage 2 with a full blastocyst and adds image-specific details (e.g., left-sided ICM, zona distention) that are not fully reliable from the prompt/image context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of embryo morphology with maternal age, ovarian reserve, smoking, endometrial thickness, male factor context, BMI, and first-cycle status, with appropriate discussion of aneuploidy risk and cumulative prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is clear and mostly well supported, and the implantation estimate follows the stated factors. Minor issues include overstatement of 2AA as 'top-tier/highest' and some imprecision around Gardner expansion staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with IVF practice: SET is appropriate, age-related aneuploidy risk is appropriately considered, and smoking cessation is evidence-based. Some recommendations (low-dose aspirin, sildenafil, strong PGT-A endorsement, DuoStim/microdose flare) are more individualized or evidence-mixed rather than standard guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, smoking cessation, luteal support, beta-hCG timing, and consideration of sperm DNA fragmentation testing. Could be more nuanced about optional adjuncts and PGT-A counseling."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.0116725,
+  "judge_latency_ms": 7417.909041978419,
+  "judge_prompt_tokens": 2479,
+  "judge_completion_tokens": 365
+}

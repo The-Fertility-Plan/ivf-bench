@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response down-grades the embryo relative to the provided Gardner 2AA and describes it as early/mid or partially expanded and not top-tier, which conflicts with the stated lab grade of full blastocyst with strong ICM and TE. Some generic observations are reasonable, but it introduces uncertainty and likely undercalls morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, tubal factor, BMI, prior IVF failure, sperm parameters, paternal age, and endometrial thickness, and relates them to prognosis. AMH is unavailable and appropriately not overinterpreted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is tension between calling age 35 a strong positive while also emphasizing paternal age and hydrosalpinx without evidence they are active issues. The implantation estimate is plausible, though partly based on a morphology assessment that conflicts with the given grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: proceed with single embryo transfer, avoid bed rest, ensure luteal support, and consider hydrosalpinx evaluation. Minor deviations include overemphasis on paternal age effects and some speculative comments, but overall it aligns well with IVF practice guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, uterine/tubal evaluation, luteal support, and contingency planning after failure. Recommendations are clear and clinically useful, though some are somewhat generic rather than tightly tailored to the exact case."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015594,
+  "judge_latency_ms": 5281.020207999973,
+  "judge_prompt_tokens": 3313,
+  "judge_completion_tokens": 377
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 2AA label and gives a plausible blastocyst description, but it contains grading inconsistency by calling expansion grade 2 a 'full blastocyst' and adds specific image details (exact clock-face ICM position, trilaminar implication) that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, uterine factor, ovarian response, sperm parameters, endometrium, and first-cycle status with embryo quality in a generally coherent way, though some factors are overstated and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: inconsistent interpretation of Gardner expansion, questionable penalty assigned to BMI 18.2, and probability adjustments that appear somewhat ad hoc."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Includes appropriate eSET and ultrasound-guided transfer recommendations, but several suggestions are not guideline-supported for routine use (ERA after one failure, endometrial scratch, IVIG/intralipids, thrombophilia workup, aspirin without clear indication), lowering alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer strategy, luteal support considerations, uterine evaluation, and contingency planning, though some proposed interventions are not evidence-based."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.00716375,
+  "judge_latency_ms": 5759.96729102917,
+  "judge_prompt_tokens": 2915,
+  "judge_completion_tokens": 352
+}

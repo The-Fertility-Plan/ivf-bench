@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0300",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misinterprets expansion grade 1 as blastocoel less than half the embryo despite the provided definition stating at least half, and adds image details that may be overcalled."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, endometrium, endometriosis, paternal age, and semen data with embryo prognosis well, though it somewhat overstates the link between paternal age and DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: extremely poor morphology drives a very low implantation estimate, with patient factors unable to overcome embryo quality. Minor issues include overconfident statements about non-viability and paternal-factor causation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is consistent with Gardner grading and general IVF practice, but recommending discard rather than transfer is too strong, the statement of virtually zero chance is overstated, and routine use of PGT-A/TESE based on this single embryo is not fully guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, transfer decision-making, and future workup, including sperm DNA fragmentation testing and endometriosis management, though some recommendations are more speculative than standard for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0112475,
+  "judge_latency_ms": 7769.881999993231,
+  "judge_prompt_tokens": 2297,
+  "judge_completion_tokens": 367
+}

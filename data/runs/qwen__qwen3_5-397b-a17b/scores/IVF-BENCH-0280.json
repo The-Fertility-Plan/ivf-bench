@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0280",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates certainty from the image by calling it 'top-tier' and describing specific ICM location and hatching/pre-hatching features that may not be clearly verifiable from the image alone; also slightly blurs stage 3 vs thinning zona language more typical of stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometrium, male factor, BMI, first cycle status, and oocyte maturity with embryo quality reasonably well, though it overinterprets some factors such as 100% MII implying high oocyte competence and does not address missing AMH or limits of morphology in predicting euploidy in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, and the implantation estimate is tied to embryo grade and patient age. Minor issues include overconfidence in morphology, unsupported assumptions such as likely ICSI and sperm DNA integrity, and some weak links between low BMI/vegetarian diet and implantation prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice: SET for a good-quality day-5 blastocyst in a 34-year-old, luteal support, and counseling on alcohol. However, routine PGT-A after a single failed transfer in a 34-year-old with male factor is not strongly guideline-based, and nutritional/BMI advice is somewhat speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, alcohol cessation, prenatal supplementation, and possible future sperm DNA fragmentation testing. It is useful clinically, though some recommendations are generic and future planning could be more nuanced regarding when PGT-A is actually indicated."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.0120025,
+  "judge_latency_ms": 9756.785249977838,
+  "judge_prompt_tokens": 2287,
+  "judge_completion_tokens": 419
+}

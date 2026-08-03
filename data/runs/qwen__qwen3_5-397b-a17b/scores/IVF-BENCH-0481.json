@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0481",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology consistent with 1DD, but overstates certainty by calling the embryo non-viable and describes features like a large vacuole/retracted blastocoel and dark fragmented degeneration that may not be reliably inferable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, BMI, smoking, sperm parameters, and endometrium reasonably well, though it somewhat over-attributes the poor embryo outcome to smoking/BMI without sufficient caution."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and internally mostly consistent, but it makes overly definitive claims from limited evidence, especially equating 1DD with absolute non-viability and recommending cancellation categorically."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While much of the counseling is standard, the statement that such embryos are 'never transferred' and the blanket recommendation to cancel transfer are too absolute and not fully aligned with real-world IVF practice, where very poor embryos may still be considered in select no-alternative situations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps on counseling, smoking cessation, weight optimization, protocol review, and future-cycle planning, though some suggestions (ICSI, antioxidants, PGT-A) are presented more strongly than the evidence supports for this exact case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0112875,
+  "judge_latency_ms": 6678.292750031687,
+  "judge_prompt_tokens": 2337,
+  "judge_completion_tokens": 363
+}

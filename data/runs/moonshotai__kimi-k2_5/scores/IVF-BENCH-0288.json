@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0288",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately reflects the provided Gardner 3AC features: expanded blastocyst, strong ICM, poor/sparse TE, and thinning zona. Some image-specific details may be inferred rather than strictly visible, so not fully precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, oocyte yield/maturity, BMI, endometrium, sperm quality, and first-cycle context with embryo quality. However, it overinterprets low oocyte yield as possible DOR despite missing AMH and limited context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and consistent: age-related aneuploidy plus poor TE lowers prognosis despite good ICM and endometrium. Minor issue: the euploid/implantation math is somewhat simplified and the DOR inference is not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely consistent with Gardner grading and standard IVF principles, especially emphasizing TE importance and maternal age effects. Slight deviations include overstatement of what morphology implies biologically and somewhat assertive quantitative claims without qualification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response gives prognosis and interpretation but the visible excerpt provides few concrete management recommendations for this transfer or future cycle planning, limiting practical usefulness."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.0099525,
+  "judge_latency_ms": 5383.821249997709,
+  "judge_prompt_tokens": 2037,
+  "judge_completion_tokens": 324
+}

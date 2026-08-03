@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly interprets the provided Gardner 2BA components and gives a plausible blastocyst description, but it adds image-specific details not reliably verifiable from the prompt/image context (e.g., granularity, zona thickness/normality, cytoplasmic heterogeneity) and overstates certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, BMI, AMH/FSH, oocyte yield, sperm parameters, endometrium, prior cycle history, and transfer timing with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it treats a Day 4 blastocyst transfer as both concerning and potentially favorable, assumes effects from questionable data, and uses a somewhat speculative adjustment-based implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but several recommendations are not tightly guideline-aligned or are overreaching for this case, including suggesting PGT-A routinely at age 29, ERA after only 2 failures, assisted hatching based on limited information, and strong conclusions from inconsistent source data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for transfer support, record verification, metabolic evaluation, and future cycle planning, though some suggestions are more speculative than necessary."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.017319,
+  "judge_latency_ms": 6147.996208048426,
+  "judge_prompt_tokens": 3973,
+  "judge_completion_tokens": 360
+}

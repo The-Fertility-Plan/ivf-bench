@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 2AA label, but it incorrectly equates full blastocyst with Gardner expansion 2 and infers details like intact zona/thickness and lack of degeneration that are not confidently assessable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm quality, endometrium, BMI, first-cycle status, and especially uterine factor well with embryo quality, though some points (e.g., BMI impact) are somewhat overstated and AMH absence is appropriately noted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with the uterine factor appropriately highlighted as the main uncertainty; minor issue is the optimistic implantation estimate despite unspecified uterine pathology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice, including SET and attention to uterine cavity, but contains some deviations such as misstatement of Gardner expansion stage, somewhat broad endorsement of PGT-A/ERA, and overreliance on hysteroscopy without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including uterine evaluation, SET, luteal support, and counseling; however, some recommendations are more generic than case-specific and a few are not strongly evidence-based for this scenario."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014619,
+  "judge_latency_ms": 5624.734124983661,
+  "judge_prompt_tokens": 3148,
+  "judge_completion_tokens": 345
+}

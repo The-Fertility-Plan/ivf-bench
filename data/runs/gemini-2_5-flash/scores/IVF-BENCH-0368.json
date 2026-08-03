@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0368",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphology description is generally plausible and consistent with the provided 3AA label, but it appears to rely heavily on the given Gardner score and includes specific image-based claims (e.g., ICM in the upper right, no dysmorphic features) that cannot be fully verified from the truncated response alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "The response begins to integrate age as a major modifier of prognosis despite strong morphology, but the visible portion is incomplete and does not address most other key factors such as BMI, PCOS, prior ectopic, sperm parameters, endometrium, or cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "What is shown is logically consistent: strong morphology is balanced against maternal age-related aneuploidy risk. However, the response is cut off before completing the reasoning chain, so support for final conclusions and probability estimation is missing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The visible content is consistent with standard Gardner grading interpretation and the evidence-based principle that morphology does not overcome age-related aneuploidy risk. No guideline-inconsistent statements are present in the excerpt."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No concrete transfer recommendations, counseling points, or future cycle planning steps are visible in the provided response excerpt."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0088725,
+  "judge_latency_ms": 7830.13287500944,
+  "judge_prompt_tokens": 1485,
+  "judge_completion_tokens": 344
+}

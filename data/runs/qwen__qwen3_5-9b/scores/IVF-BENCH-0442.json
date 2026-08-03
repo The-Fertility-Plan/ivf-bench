@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0442",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is consistent with a good-quality expanded blastocyst and matches the provided 3AA grading, including ICM, TE, and thinning zona; however, it relies somewhat on the supplied grade and includes image-specific localization/details that may be slightly overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH/low oocyte yield, sperm parameters, endometrial thickness, and diagnosis with embryo quality well, though it could better distinguish ovarian reserve from embryo competence and avoid overstating sperm effects on aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a plausible probability range tied to embryo grade and patient factors; minor issues include some overstatement of morphology as the strongest predictor and broad assumptions from sperm quality and DOR."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on Gardner grading and cautious use of PGT-A in low-yield cycles, but statements such as immediate transfer of a Day-5 embryo as the obvious best choice, donor eggs 'guaranteeing' high-quality embryos, and recommending mini-IVF/natural cycle without nuance are not fully guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling and future planning, including discussion of low reserve and PGT-A considerations; however, recommendations could be more nuanced regarding fresh vs frozen transfer strategy and alternative stimulation approaches."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012258,
+  "judge_latency_ms": 4981.701333999808,
+  "judge_prompt_tokens": 2291,
+  "judge_completion_tokens": 359
+}

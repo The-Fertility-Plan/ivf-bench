@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed morphology critique, but it strongly asserts the image is not a blastocyst and may be a degenerating oocyte, which is a substantial interpretation risk without clear confirmation. It does address blastocoel, ICM, and TE visibility, but the confidence and possible overcalling reduce accuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, endometrial thickness, BMI, uterine factor, and cycle history with prognosis reasonably well. It misses nuance around absent AMH and may overstate the impact of some lifestyle factors, but overall linkage to embryo prognosis is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there is tension between relying on the reported 3AA grade and simultaneously suggesting the image may represent a nonviable structure. The implantation estimate is plausible if assuming 3AA, though some conclusions about diet, smoking history, and uterine factor impact are not tightly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading concepts and recognition of uterine evaluation are aligned with IVF practice, but recommending hysteroscopy 'prior to transfer' and suggesting PGT-A in a 31-year-old first-cycle patient without stronger indication are not fully guideline-concordant. Some lifestyle claims are also overstated relative to evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps such as verifying embryo identity/grade, evaluating the uterine cavity, considering FET if unsuccessful, and discussing future PGT-A selectively. Recommendations are useful, though a few are somewhat generic or not ideally timed."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013227,
+  "judge_latency_ms": 5069.598791000317,
+  "judge_prompt_tokens": 2409,
+  "judge_completion_tokens": 400
+}

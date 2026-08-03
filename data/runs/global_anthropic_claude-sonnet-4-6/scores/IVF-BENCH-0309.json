@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0309",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology consistent with 1DD, but it over-interprets the image by calling it a compacted morula/early blastocyst, stating blastocoel is absent/minimal despite the provided Gardner score 1, and describing fragmentation/debris and irregular zona features that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, sperm quality, tubal factor, and first-cycle status well, and appropriately frames embryo quality as the dominant prognostic factor, though some factors like alcohol and stress are likely overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: it treats Day 4 transfer as a major synchrony problem for a day-4 embryo, assumes possible hydrosalpinx without evidence, and applies unsupported penalties for stress and moderate alcohol in the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned with standard IVF principles and Gardner grading, but several recommendations are not strongly guideline-based for this case, including thrombophilia testing, karyotype for a first cycle with one poor embryo, and overstated concern about Day 4 transfer timing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for transfer counseling, luteal support, hydrosalpinx evaluation, and future cycle planning, though some suggested workup is more extensive than necessary for an initial cycle."
+    }
+  ],
+  "extracted_probability": 0.07,
+  "judge_cost_usd": 0.020595,
+  "judge_latency_ms": 6543.523957952857,
+  "judge_prompt_tokens": 2937,
+  "judge_completion_tokens": 394
+}

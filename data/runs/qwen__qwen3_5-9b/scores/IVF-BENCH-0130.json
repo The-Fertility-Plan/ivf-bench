@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0130",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates image certainty and likely mislabels a grade 3 blastocyst as showing clear thinning zona/expanded features more typical of stage 4; morphology is acceptable but not precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, prior ectopic, sperm quality, FSH, oocyte yield, and endometrial thickness with embryo quality well, though it overinterprets low yield as poor response/DOR without AMH or protocol context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: calling 28 the 'gold standard' age, inferring high euploidy too strongly from morphology, and giving a relatively high implantation estimate despite limited caution about repeated prior failures and uncertain reserve."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and ectopic follow-up are guideline-concordant, but suggestions such as changing to agonist/mini-IVF, mentioning OHSS prevention in an apparent low responder, and implying day 6/7 transfer to improve lining are not well supported or appropriately tailored."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, monitoring, reserve testing, and future planning, though some future-cycle recommendations are somewhat generic or weakly justified."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01119,
+  "judge_latency_ms": 6354.1261670179665,
+  "judge_prompt_tokens": 2418,
+  "judge_completion_tokens": 343
+}

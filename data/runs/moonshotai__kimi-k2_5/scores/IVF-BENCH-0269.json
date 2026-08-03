@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0269",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2AB label, but it introduces uncertainty/contradiction about expansion stage and describes image features like TE cohesion and zona status with more confidence than warranted from the prompt alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH/ovarian response, tubal factor, endometrium, semen, BMI/lifestyle, and first-cycle status with embryo quality in a clinically meaningful way, though not exhaustively nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally logical, but there is an internal inconsistency between calling the embryo 2AB and describing features closer to a more expanded blastocyst; some quantitative claims are asserted without clear support, and the response is truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF prognostic principles, including age-related aneuploidy and the limited role of AMH in predicting competence of an individual embryo once formed; minor overstatement of specific percentage effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides prognosis and general interpretation but offers few concrete transfer-management or future-cycle planning recommendations, and the response appears incomplete before actionable next steps are fully developed."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.010085,
+  "judge_latency_ms": 5853.626833995804,
+  "judge_prompt_tokens": 2150,
+  "judge_completion_tokens": 314
+}

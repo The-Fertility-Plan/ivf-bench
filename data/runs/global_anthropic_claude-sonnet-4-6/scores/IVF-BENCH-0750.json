@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Includes plausible blastocyst descriptors, but it over-interprets a static image and likely fabricates specific abnormalities such as a large apoptotic/vacuolated cell, vesicles, and downgrade to 3BA/3BB without clear visual support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, stimulation response, sperm parameters, endometrium, diagnosis, and first-cycle context with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is structured and internally consistent, with probability estimates tied to age and embryo quality; minor issue is that unsupported image concerns are used to adjust prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on eSET, age-related aneuploidy counseling, and general transfer planning, but some recommendations are weakly supported or not guideline-standard for this scenario (routine PGT-A push, ERA, DHEA, immunology workup)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer management and contingency planning, though some suggested tests/interventions are more speculative than necessary for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.41,
+  "judge_cost_usd": 0.015315,
+  "judge_latency_ms": 4847.1494590630755,
+  "judge_prompt_tokens": 3610,
+  "judge_completion_tokens": 299
+}

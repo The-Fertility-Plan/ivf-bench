@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0136",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the embryo as very poor quality and consistent with a 1DD blastocyst, with absent/degenerative ICM and TE. However, it overstates some image-specific features, calling it 'expanded' and describing flattened cells and a significant blastocoel in a way that may not strictly match Gardner stage 1, and it omits other visible structural details such as zona-related observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH, low oocyte yield, uterine factor, prior failed cycle, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way. It could be more nuanced about BMI and avoid overstating paternal age effects relative to maternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor morphology plus age-related aneuploidy risk and uterine factor support a low implantation estimate. Minor issues include some overstatement ('perfect storm,' 'last hope') and a few conclusions that are stronger than the available data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including counseling on poor prognosis and considering uterine cavity evaluation. However, recommending PGT-A as 'essential' and suggesting donor eggs in a somewhat deterministic way are stronger than guideline-based evidence supports, especially in a very low-yield patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer counseling, single embryo transfer, uterine evaluation, and future planning. It is useful, though some recommendations are not sufficiently individualized and could better address whether transfer should proceed now versus after uterine workup."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0121925,
+  "judge_latency_ms": 7117.688708996866,
+  "judge_prompt_tokens": 2309,
+  "judge_completion_tokens": 428
+}

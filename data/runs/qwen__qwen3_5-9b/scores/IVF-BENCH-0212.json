@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0212",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided Gardner 3AA label rather than image-specific morphology, and it inaccurately equates grade 3 with an expanded blastocyst; this is a notable grading error even though the overall high-quality interpretation is directionally reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, sperm parameters, endometrium, and lifestyle factors with embryo prognosis reasonably well, though it overinterprets the oocyte yield as a poor-responder phenotype without AMH or stimulation details."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are important inconsistencies: calling grade 3 'expanded,' inferring poor ovarian response too strongly, and suggesting fresh transfer preference and PGT-A in a way that does not fully follow from the case details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF guidance: Gardner stage 3 is not 'expanded,' PGT-A is not typically recommended to confirm a single embryo in a 20-year-old, and recommending fresh transfer over freeze-all without broader clinical context is not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps on transfer, lifestyle modification, luteal support, and future stimulation review, but some recommendations are not sufficiently nuanced or evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.0117025,
+  "judge_latency_ms": 6101.957416976802,
+  "judge_prompt_tokens": 2491,
+  "judge_completion_tokens": 365
+}

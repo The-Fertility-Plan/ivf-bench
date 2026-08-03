@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image alone and incorrectly calls stage 3 an expanded blastocyst; in Gardner, stage 3 is full blastocyst and stage 4 is expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm parameters, BMI, diagnosis, endometrium, and embryo quality well, though some links are somewhat generalized and the Day 4 developmental interpretation is not fully nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are notable issues: it labels 3AA as the highest possible grade, treats a Day 4 blastocyst as unusually advanced without sufficient caution, and the implantation estimate is somewhat optimistic for the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation in a 27-year-old with a high-quality embryo is guideline-concordant, but there are deviations: inaccurate Gardner staging terminology, overcalling 3AA as the highest possible grade, and suggesting PGT-A after a single failed transfer in a young patient is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, cryopreservation, and lifestyle optimization; useful clinically, though recommendations could be more tailored and cautious regarding PGT-A and transfer timing interpretation."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.00637125,
+  "judge_latency_ms": 6041.699207969941,
+  "judge_prompt_tokens": 2289,
+  "judge_completion_tokens": 351
+}

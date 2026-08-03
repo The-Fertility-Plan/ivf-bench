@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB grade, with reasonable ICM and TE descriptions, but it overstates that the embryo has hatched or is about to hatch and infers image-specific details that may not be clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior miscarriage, prior failed cycle, sperm parameters, endometrium, and embryo morphology well, but overcalls FSH 8.7 as confirming diminished ovarian reserve and cannot address AMH because it is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is generally clear and the implantation estimate is tied to morphology and age-related aneuploidy risk, though there are minor overstatements such as equating FSH 8.7 with DOR and some imprecision around expansion/hatching."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with standard IVF principles and Gardner grading, but the strong endorsement of PGT-A as highly indicated and wording that transfer without it is a 'waste' is more definitive than current evidence-based guidance supports, especially in unexplained infertility."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, hCG follow-up, and future considerations such as PGT-A discussion and sperm DNA fragmentation testing, though some recommendations are somewhat generic and not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01133,
+  "judge_latency_ms": 5698.586666956544,
+  "judge_prompt_tokens": 2456,
+  "judge_completion_tokens": 346
+}

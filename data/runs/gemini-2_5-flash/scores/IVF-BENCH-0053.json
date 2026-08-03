@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the expansion definition for Gardner 1 and adds specific visual claims like fragmentation, dark debris, and collapse that may not be reliably supported by the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF history, sperm parameters, endometrial thickness, BMI, and lifestyle reasonably well with embryo prognosis, though it over-attributes the embryo appearance to non-viability and aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the low implantation estimate follows from the poor grade, but the absolute statement that the embryo is definitively non-viable is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but stating a 1DD embryo is universally non-viable and strongly recommending against transfer is more categorical than standard guideline-based counseling; PGT-A and endometriosis management are presented somewhat strongly without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, documentation, future PGT-A consideration, protocol review, endometriosis reassessment, and psychosocial support, though some recommendations would benefit from more individualized nuance."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0125,
+  "judge_latency_ms": 6532.702166005038,
+  "judge_prompt_tokens": 2828,
+  "judge_completion_tokens": 362
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst description consistent with a 2AA label, but it likely over-interprets image details such as specific degenerating cells/excluded blastomeres and may be too confident in downgrading to 2AB/2BA from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, endometriosis, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats a Day 4 transfer of a reported 2AA blastocyst as highly atypical/possibly concerning without enough caution, and some probability deductions appear subjective and cumulative beyond strong evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but several are not strongly guideline-supported for routine RIF care (ERA, NK testing, microbiome testing, broad thrombophilia workup, aspirin/prednisolone suggestions, strong endorsement of PGT-A in a 32-year-old), so alignment is mixed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next-step recommendations for luteal support, further evaluation, and future cycle planning, though some suggested tests/interventions are more controversial than standard practice."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.02645,
+  "judge_latency_ms": 9261.171707999893,
+  "judge_prompt_tokens": 4195,
+  "judge_completion_tokens": 365
+}

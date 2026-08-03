@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0448",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 0DD, with absent/degenerate ICM and TE, but it overstates certainty and adds likely fabricated image details such as focal zona thinning, vacuolation, and specific debris/collapse features not clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response integrates age, BMI, endometriosis, ovarian response, sperm motility, endometrial thickness, first-cycle status, and missing AMH well, and links these factors to embryo competence and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the poor prognosis follows from the embryo grade and clinical context, though some quantitative claims are more assertive than the available evidence supports and the exact probability adjustments appear somewhat heuristic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but there are notable deviations: calling 0DD 'arrested/non-expanding' is imprecise, recommending low-dose aspirin for endometriosis-associated implantation concerns is not standard guideline-based, and the PGT-A benefit claims are somewhat overstated for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, transfer decision-making, BMI optimization, endometriosis review, semen/DFI reassessment, AMH testing, and future protocol considerations, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.020725,
+  "judge_latency_ms": 6424.825125024654,
+  "judge_prompt_tokens": 3008,
+  "judge_completion_tokens": 379
+}

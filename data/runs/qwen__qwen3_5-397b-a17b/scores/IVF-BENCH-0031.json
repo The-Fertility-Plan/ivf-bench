@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response strongly reclassifies the embryo as a Day 3/4 compacting morula and states no clear blastocoel is visible, which conflicts with the provided Gardner 2BB designation and likely overstates image-text discrepancy. It gives some morphology detail but likely misidentifies stage and does not reliably assess ICM/TE from the stated blastocyst grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrial thickness, smoking, prior cycle history, and sperm parameters with prognosis reasonably well. However, it overinterprets prior outcomes as recurrent implantation failure and overemphasizes a diagnostic contradiction without sufficient nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it questions the embryo stage based on the image, then bases prognosis on that reinterpretation; it labels two prior cycles as RIF too readily; and the probability estimate may be overly reduced relative to the favorable age and reported embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, luteal support, considering blastocyst culture), but some are less well aligned or insufficiently nuanced, especially routine suggestion of PGT-A and ERA in a 29-year-old after only two prior cycles, and the handling of Gardner grading/day relationship is imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for the current transfer and future planning, including smoking cessation, luteal support, and culture strategy. It is useful clinically, though some recommendations would benefit from more individualized thresholds and caution."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012145,
+  "judge_latency_ms": 7149.462000001222,
+  "judge_prompt_tokens": 2458,
+  "judge_completion_tokens": 400
+}

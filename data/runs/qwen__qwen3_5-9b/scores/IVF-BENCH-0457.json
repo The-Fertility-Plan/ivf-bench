@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0457",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response appropriately identifies a very poor-quality early blastocyst/compacting embryo with minimal blastocoel and absent/degenerative ICM and TE, consistent with 0DD. It gives useful visual detail, though some specifics such as a distinct cavity location and 'aligns perfectly' may overstate certainty from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, endometrium, oocyte maturity, and sperm data with prognosis, but overreaches by inferring likely PCOS from AMH alone and attributing embryo quality issues to high AMH without sufficient case support. Male factor discussion is relevant but somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic that 0DD morphology drives a very low implantation chance is coherent, but there are notable unsupported leaps: calling sperm parameters 'excellent' while emphasizing unexplained male factor, suggesting AMH-related embryo toxicity, and making strong causal claims without evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic Gardner interpretation is aligned, but several recommendations are not well grounded in guidelines: routine PGT-A framed as highest priority after a first cycle, PCOS diagnosis/management from AMH alone, and suggesting letrozole-based stimulation changes for IVF without clear indication. These are meaningful deviations from evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, luteal support, and future evaluation, including sperm DNA fragmentation testing and discussion of transfer expectations. However, some actions are overly prescriptive or speculative for this specific case."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012927,
+  "judge_latency_ms": 5851.275207998697,
+  "judge_prompt_tokens": 2279,
+  "judge_completion_tokens": 406
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0217",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality/degenerative morphology and loss of clear ICM/TE, but it misinterprets Gardner expansion 1 as blastocoel less than half the embryo despite the prompt defining it as at least half, and it adds specific image features like apoptosis/necrosis and collapse that are not securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte maturity, male-factor context, and lifestyle with embryo quality reasonably well, though some links are speculative and it overinterprets high AMH as likely PCOS/PCOM without supporting diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the very poor embryo grade, but there are notable overstatements such as declaring the embryo definitively non-viable and transfer categorically inappropriate, plus some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading, concern about poor prognosis, and discussion of antagonist protocols in high responders are broadly aligned, but stating a 1DD embryo is absolutely non-viable and recommending mandatory cancellation is stronger than guideline-based practice; PGT-A and testicular sperm suggestions are also somewhat overextended for the data provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for counseling, protocol reconsideration, sperm testing, and future cycle planning, though some recommendations are more assertive than warranted and not sufficiently individualized to available missing details."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0112475,
+  "judge_latency_ms": 7362.77099995641,
+  "judge_prompt_tokens": 2273,
+  "judge_completion_tokens": 371
+}

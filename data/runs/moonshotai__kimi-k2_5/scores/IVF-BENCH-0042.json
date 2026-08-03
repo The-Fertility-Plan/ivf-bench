@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst consistent with 0DD and notes absent/degenerative ICM and TE, but it adds image-specific details like exact ICM position, granular cytoplasm, and poor cellular cohesion that may be overinterpreted from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, oocyte maturity yield, prior failed cycle, sperm parameters, and endometrium with embryo quality reasonably well, though some conclusions about recurrent oocyte quality issues and protocol mismatch are somewhat stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent: severe embryo morphology is treated as the main limiting factor despite favorable patient age and endometrium. However, some causal inferences about aneuploidy and stimulation mismatch are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The interpretation of 0DD as a very poor-prognosis blastocyst is aligned with Gardner grading and general IVF practice, and the emphasis on embryo-driven prognosis is appropriate. Still, calling it essentially non-viable may be somewhat stronger than guideline-based morphology alone can prove."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides interpretation but does not include clear, specific management recommendations for the current transfer or future cycle planning, likely because the response is truncated before those sections."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0095475,
+  "judge_latency_ms": 7773.174375004601,
+  "judge_prompt_tokens": 1611,
+  "judge_completion_tokens": 368
+}

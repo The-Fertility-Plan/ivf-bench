@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0148",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a high-quality blastocyst and the provided 4AA label, but it overstates certainty from the image by calling stage 4 'hatching' and describing a specific herniation site; Gardner 4 is expanded blastocyst, while hatching is stage 5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, endometrium, prior cycle, BMI, and male-factor context well, though some inferences (e.g., likely ICSI, significance of activity level) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, linking embryo quality and patient age to prognosis; minor issues include inflated confidence from morphology and some overinterpretation of prior failure and hatching status."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general transfer planning, but there are deviations: misclassification of Gardner stage, overemphasis on hatching as superior, and recommending PGT-A after a single failed cycle in a 32-year-old is not standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including SET, luteal support, and uterine/sperm workup if failure recurs; however, some recommendations are broader than necessary for this specific case."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0113275,
+  "judge_latency_ms": 5475.495999970008,
+  "judge_prompt_tokens": 2485,
+  "judge_completion_tokens": 341
+}

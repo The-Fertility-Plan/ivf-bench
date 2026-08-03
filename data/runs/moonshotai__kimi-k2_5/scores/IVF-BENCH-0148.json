@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0148",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a high-quality hatching blastocyst, but it overcalls the stage as 5AA despite the provided 4AA label and infers features like clean zona, syncytial TE, and robust metabolic activity that are not directly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF history, endometrium, sperm factors, and embryo quality reasonably well, though some links are overstated, especially the significance of AMH and prior single failed cycle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and probabilities are internally organized, but several claims are weakly supported or overstated, such as specific percentage modifiers for hatching, AMH-related egg quality concerns, and prior failure implying occult implantation issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "eSET recommendation is guideline-concordant, but several suggestions are not well aligned with current evidence/guidelines, including routine ERA after one failed cycle, endometrial scratch, aspirin for former smoking/prior failure, DHEA/CoQ10 as if standard, and broad PGT-A recommendation in a 32-year-old with male factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, but some actions are overly prescriptive or not evidence-based enough for routine use in this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01238,
+  "judge_latency_ms": 5777.968125010375,
+  "judge_prompt_tokens": 2828,
+  "judge_completion_tokens": 354
+}

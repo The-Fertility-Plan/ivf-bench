@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0310",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and appropriately cautious about single-image limits, but it hedges between 2AA and 3AA, adds features not clearly verifiable from the prompt alone, and does not address zona pellucida or Day-4/full-blastocyst inconsistency in depth."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, BMI, endometriosis, prior biochemical pregnancy, semen parameters, endometrial thickness, and lifestyle with embryo quality and prognosis; AMH absence is noted, though some interactions could be more tightly linked to transfer-day context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and structured, with probability estimates broadly matching the favorable age and morphology while acknowledging endometriosis and untested status; minor issue is some ambiguity around Day 4 blastocyst staging and fresh-vs-frozen assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including SET preference and caution against unsupported add-ons; slight deviation comes from discussing optional PGT-A/ICSI scenarios somewhat broadly without strict indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and contingency planning, including SET, luteal support, review of cycle factors, uterine assessment, and endometriosis reassessment; useful though not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01395,
+  "judge_latency_ms": 4383.60916700185,
+  "judge_prompt_tokens": 2890,
+  "judge_completion_tokens": 352
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates Gardner expansion 1 as less than half the embryo rather than at least half, and it overinterprets the image as morula/early blastocyst transition with granular 'mushy' degeneration not clearly verifiable from the provided grading alone. It is directionally consistent with poor-quality morphology but contains notable inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, prior IVF outcomes, oocyte yield, endometrial thickness, semen parameters, and lifestyle factors with embryo prognosis reasonably well. Some inferences are speculative, but overall the patient factors are meaningfully connected to embryo quality and expected outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the poor prognosis estimate follows from the very poor embryo grade, but there are important issues: incorrect interpretation of expansion stage, overstatement that 1DD is 'essentially non-viable,' and the claim that Day 4 transfer means the lab is 'giving up' is too strong and not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard (counseling, consider protocol review, sperm DNA fragmentation testing in selected cases), several points are not well aligned with evidence-based guidance: suggesting cancellation of transfer to 'preserve the endometrium,' strong endorsement of PGT-A at age 35 after limited embryos, and recommending GH as if established benefit. Gardner grading interpretation is also partly incorrect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for counseling, transfer decision-making, protocol reconsideration, sperm DNA fragmentation testing, and lifestyle/nutrition review. Some recommendations are debatable, but they are specific and practically usable."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01268,
+  "judge_latency_ms": 7102.637625008356,
+  "judge_prompt_tokens": 2450,
+  "judge_completion_tokens": 437
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It matches the provided 3AA grade in broad terms, but it adds image-specific findings like cytoplasmic granularity, vacuolization, and borderline 3-4 expansion that are not reliably supported from the prompt and may be fabricated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, BMI, sperm parameters, smoking, stress, and endometrial thickness with embryo quality and prognosis, though some factors are overinterpreted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the sequential probability discounts are somewhat arbitrary and may double-count age/aneuploidy and lack of PGT-A; some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some advice is reasonable, but several recommendations are not guideline-based for this scenario, including ERA in this context, uterine NK cell testing, thrombophilia screening, and strong emphasis on PGT-A as routine after one cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer planning and future cycles, especially around smoking cessation and uterine evaluation, though some suggested tests are not appropriately targeted."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.013953,
+  "judge_latency_ms": 5555.6859580101445,
+  "judge_prompt_tokens": 3001,
+  "judge_completion_tokens": 330
+}

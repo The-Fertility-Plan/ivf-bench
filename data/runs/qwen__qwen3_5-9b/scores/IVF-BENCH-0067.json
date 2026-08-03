@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AA blastocyst, but it overstates image certainty by saying the embryo aligns perfectly with 3AA and appears to infer specific pole thinning and imminent hatching that may not be clearly visible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, endometrium, sperm, BMI, lifestyle, and prior miscarriage with embryo quality and prognosis well, though it could better contextualize unexplained infertility and limits of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: calling grade 3 'clearly expanded' while also implying hatching, overstating euploidy likelihood (>90%) for a morphology-based estimate, and linking low AMH to miscarriage/genetic risk without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are standard (single high-quality blastocyst transfer, luteal support), but recommending PGT-A as highly recommended in a 27-year-old with one miscarriage and suggesting mild/natural IVF because of low AMH are not well aligned with current evidence/guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, luteal support, and follow-up, with future planning suggestions, though some recommendations are too assertive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.011125,
+  "judge_latency_ms": 5542.418041964993,
+  "judge_prompt_tokens": 2392,
+  "judge_completion_tokens": 343
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0171",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable morphology description, but it labels the embryo an early blastocyst while the provided lab data says 2AA with 'full blastocyst' wording, and it infers ICM/TE quality somewhat confidently despite limited visible detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "It mentions female age and generally favorable profile, but the visible response is truncated and does not clearly integrate key factors such as AMH, BMI, unexplained infertility, sperm parameters, endometrium, or Day 4 transfer with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, especially noting the grading inconsistency, but there is some internal tension between calling it an early blastocyst and discussing it as a strong 2AA/full blastocyst case; no implantation estimate is actually provided in the shown text."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response appropriately references Gardner grading conventions and correctly notes the discrepancy in the supplied expansion description; nothing shown clearly conflicts with standard IVF guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The displayed response does not provide concrete transfer recommendations, future cycle planning, or specific next steps for clinicians."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.008635,
+  "judge_latency_ms": 5537.957291991916,
+  "judge_prompt_tokens": 1516,
+  "judge_completion_tokens": 323
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies strong ICM and fair TE, but it overstates visible certainty from a single image and inaccurately describes stage 3 as having thinning zona/pre-hatching features, which are more typical of stage 4-5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, endometrium, prior miscarriage, AMH, BMI, and sperm parameters well with embryo prognosis, though some links (e.g., AMH implying likely normal gamete quality) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to age and morphology; minor issues include overinterpreting the AMH-retrieval discrepancy and slightly conflating implantation with euploid transfer benchmarks."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice, especially support for elective single embryo transfer in a young patient with a good-quality blastocyst; minor deviations include suggesting 'aggressive' progesterone support and aspirin without a clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycle review, including protocol reassessment and uterine evaluation, though some suggestions remain somewhat generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.012615,
+  "judge_latency_ms": 5559.446290950291,
+  "judge_prompt_tokens": 2540,
+  "judge_completion_tokens": 333
+}

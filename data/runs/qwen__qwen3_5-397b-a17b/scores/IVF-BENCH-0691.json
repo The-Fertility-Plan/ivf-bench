@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AB label, but it appears to misstate expansion by calling grade 2 a full blastocyst and adds image-specific details like quadrant location and zona thinning that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian reserve markers, prior cycle history, sperm parameters, BMI, lifestyle, and endometrium with embryo quality in a clinically meaningful way, though some interpretations are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to embryo grade and patient factors; minor issues include overcalling ovarian response and some speculative explanations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognosis, but there are deviations such as recommending PGT-A after a single failed cycle in a 28-year-old and suggesting aspirin/ERA without strong indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, luteal support review, and future evaluation, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01248,
+  "judge_latency_ms": 5238.819999969564,
+  "judge_prompt_tokens": 2540,
+  "judge_completion_tokens": 324
+}

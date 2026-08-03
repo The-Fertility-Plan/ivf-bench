@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0527",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image and includes a likely grading inconsistency by calling stage 3 'expanded' with thinning zona, which is more typical of stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor context, sperm parameters, and endometrial thickness well with embryo quality, though it could better acknowledge limits of morphology alone and prior-cycle absence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible prognosis and recommendations; minor issue is the morphology-stage terminology mismatch and somewhat confident attribution of euploidy likelihood."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice, especially single embryo transfer in a young patient with a high-grade day-5 blastocyst; small deviations include imprecise Gardner stage description and somewhat assertive use of implantation percentages."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, SET, lifestyle optimization, and possible male-factor follow-up, though future planning could be more specific about contingency pathways and adjuncts."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.0103475,
+  "judge_latency_ms": 5883.744582999498,
+  "judge_prompt_tokens": 2255,
+  "judge_completion_tokens": 314
+}

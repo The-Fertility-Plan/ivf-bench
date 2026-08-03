@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2AB data (good ICM, looser TE), but it over-interprets the image by calling it stage 2-3/functional 3AB, comments on zona thickness and cytoplasmic texture that may not be reliably visible, and labels it 'high-quality' despite only moderate expansion and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, BMI, diagnosis, sperm parameters, endometrium, and first-cycle status into prognosis reasonably well, though some links to embryo competence are stated too confidently."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it treats a documented day-4 transfer as if a blastocyst transfer is already occurring, reframes 2AB as 3AB, and makes unsupported claims such as this embryo likely being top-tier of the cohort."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET in a young good-prognosis patient are guideline-concordant, but there are deviations: confusion around Gardner staging, overstatement of day-4 blastocyst implications, and speculative protocol advice about delaying transfer/progesterone timing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including eSET, cryopreservation, and luteal support considerations, but some advice is less actionable because it is based on uncertain assumptions about transfer timing and embryo stage."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0123525,
+  "judge_latency_ms": 9063.257125031669,
+  "judge_prompt_tokens": 2613,
+  "judge_completion_tokens": 388
+}

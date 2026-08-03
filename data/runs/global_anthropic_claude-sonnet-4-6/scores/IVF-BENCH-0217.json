@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0217",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD, but it misstates expansion as blastocoel <50% despite the provided definition saying at least half the embryo, and it adds image-specific details like vacuolation, fragmentation, and irregular margins that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, first cycle status, and sperm parameters with embryo quality reasonably well, though some links are speculative and it overemphasizes unmeasured sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable issues: the expansion-stage interpretation conflicts with the supplied Gardner definition, and several conclusions rely on speculative modifiers and unsupported assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling around poor prognosis and considering transfer only if no better embryos exist is reasonable, but recommendations such as ERA for uncertain receptivity, routine PGT-A implication from a single poor embryo, and some adjuncts are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for transfer counseling, endometrial assessment, luteal support, and future workup, though some suggested tests and interventions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.02301,
+  "judge_latency_ms": 7083.818707964383,
+  "judge_prompt_tokens": 3516,
+  "judge_completion_tokens": 362
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0286",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response states the image looks like an MII oocyte rather than a blastocyst, which is a major mismatch with the provided embryo context and undermines accurate morphology assessment from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, endometrium, sperm parameters, male-factor diagnosis, and cycle history reasonably well with embryo quality, though it overemphasizes paternal age and does not fully contextualize BMI or day-5 transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable inconsistency between rejecting the image as non-blastocyst and then proceeding with a strong prognosis based on the lab grade; the probability estimate is only partially supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of favorable maternal age/endometrium are aligned with standard IVF practice, but calling 3AA the highest grade and strongly weighting paternal age/aneuploidy risk goes beyond typical evidence-based emphasis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response gives limited concrete next-step recommendations for this transfer or future cycle planning; it is more descriptive than practically directive."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.010542,
+  "judge_latency_ms": 3748.9957500001765,
+  "judge_prompt_tokens": 1969,
+  "judge_completion_tokens": 309
+}

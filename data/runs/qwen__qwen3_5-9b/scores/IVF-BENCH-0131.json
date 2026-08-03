@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with deficient ICM and TE consistent with 1DD, but it inaccurately calls grade 1 an expanded blastocyst and adds image-specific detail not well supported; grade 1 is an early blastocyst with blastocoel at least half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior outcomes, endometrium, BMI, ovarian reserve, and sperm factors with embryo quality reasonably well, though some links are overstated and diagnosis/protocol context is not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate follows from poor morphology, but there are notable inconsistencies such as describing a 1DD as expanded, calling sperm motility excellent despite only moderate motility, and overinterpreting AMH/FSH and 'biological memory.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on poor prognosis for a 1DD embryo is broadly aligned, but there are deviations: misstatement of Gardner expansion stage, overstrong endorsement of PGT-A as the strongest recommendation, and suggesting FET is often better than fresh in a generalized way without case-specific justification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including counseling, consideration of transfer expectations, uterine evaluation, sperm DNA fragmentation testing, and lifestyle optimization, though some recommendations are somewhat generic and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0118825,
+  "judge_latency_ms": 8324.606082984246,
+  "judge_prompt_tokens": 2461,
+  "judge_completion_tokens": 382
+}

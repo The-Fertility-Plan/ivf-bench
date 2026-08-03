@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0166",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label, but it incorrectly equates stage 3 with an expanded blastocyst and thinning zona; in Gardner grading, stage 3 is a full blastocyst, while expansion/thinning are more typical of stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, oocyte maturity, sperm parameters, endometrial thickness, diagnosis, and lifestyle with embryo quality in a clinically meaningful way, though AMH is unavailable and prior cycle context is limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there is a notable inconsistency around calling a 3AB embryo 'expanded' and overinterpreting the day-4 blastocyst timing as a potential concern without enough context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based on age-related aneuploidy and embryo selection, but recommendations such as ERA after one failed transfer and strong emphasis on PGT-A as highest priority are more controversial and not universally guideline-supported for this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, luteal support, and future planning, though some suggestions are somewhat broad and a few are not tightly tailored to a first-cycle unexplained infertility case."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.011665,
+  "judge_latency_ms": 6866.4258340140805,
+  "judge_prompt_tokens": 2548,
+  "judge_completion_tokens": 353
+}

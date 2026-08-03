@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2AB grading, correctly identifies strong ICM and looser TE, but it overstates visual certainty from the image, gives a somewhat imprecise explanation of expansion grade 2, and adds limited image-specific detail such as zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte yield, endometrial thickness, male factor context, and first-cycle status reasonably well with embryo quality, though it could better address the implications of day-4 transfer timing and the limits of sperm data interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible probability estimate tied to age, embryo grade, and endometrium; minor issues include some overinterpretation of day-4 blastocyst timing and male-factor implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF principles and Gardner grading, but there are some deviations: day-4 blastocyst transfer is not standardly framed as a fast-developing blastocyst in the way described, and recommendations like routine sperm DNA fragmentation testing or PGT-A are not clearly guideline-driven for this low-risk first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, and future-cycle considerations, but some suggestions are somewhat generic and not fully tailored to this favorable first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011045,
+  "judge_latency_ms": 6088.7599579873495,
+  "judge_prompt_tokens": 2252,
+  "judge_completion_tokens": 361
+}

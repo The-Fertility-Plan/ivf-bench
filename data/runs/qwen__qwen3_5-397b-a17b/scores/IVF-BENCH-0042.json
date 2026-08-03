@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/degenerating embryo and the provided 0DD grade, but it overstates certainty by calling it morula/non-viable and adds features like necrosis/collapse that are not definitively assessable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, BMI, prior failed cycle, sperm quality, endometrium, and low MII yield with embryo quality in a clinically meaningful way, though some causal inferences are stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the poor morphology appropriately driving the very low implantation estimate; however, absolute statements such as 'would not result in a pregnancy' are somewhat overconfident."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with Gardner grading concepts and general IVF practice, but recommending outright cancellation/'do not transfer' based solely on this description is stronger than standard guideline-based counseling, and routine PGT-A in a 28-year-old is not clearly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer decision-making and future cycle optimization, including metabolic management and protocol review, though some recommendations would benefit from more nuance and prioritization."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01064,
+  "judge_latency_ms": 5005.212415999267,
+  "judge_prompt_tokens": 2234,
+  "judge_completion_tokens": 337
+}

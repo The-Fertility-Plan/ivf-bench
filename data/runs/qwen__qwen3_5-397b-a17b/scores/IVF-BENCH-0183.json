@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0183",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response captures very poor embryo quality and absent/degenerate ICM/TE, but it misstates the Gardner expansion stage: 1 means an early blastocyst with blastocoel less than half the embryo, whereas the provided lab data explicitly says blastocoel at least half the embryo. It also overcalls the image as non-viable/arrested and adds features like 'mushy' appearance not clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior miscarriage, tubal factor, sperm concentration/motility, BMI, and endometrium with embryo prognosis in a clinically meaningful way. Some links, especially sperm DNA fragmentation and the strength of the ovarian response interpretation, are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis estimate follows from the very poor grade, but there are notable inconsistencies: it describes the embryo as late morula/very early blastocyst while also tying it to a 1DD score, misinterprets the expansion criterion, and makes a strong claim of non-viability/arrest beyond what morphology alone can prove."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concepts and discussion of age-related aneuploidy are broadly aligned, but recommending outright cancellation of transfer because of a poor-quality embryo is too absolute and not universally guideline-based, especially if it is the only embryo. PGT-A is presented too strongly as a recommendation rather than a case-dependent option."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps including counseling on prognosis, consideration of PGT-A, sperm DNA fragmentation testing, ICSI, and future culture strategy. However, the immediate recommendation to cancel transfer is overly rigid and lacks nuance about patient preference and clinic-specific practice."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012705,
+  "judge_latency_ms": 7311.377500009257,
+  "judge_prompt_tokens": 2310,
+  "judge_completion_tokens": 462
+}

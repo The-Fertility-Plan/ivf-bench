@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies blastocyst structures and reflects the provided 3AA grade, but it incorrectly interprets expansion 3 as 'expanded' with thinning zona and hatching readiness; true Gardner 3 is full blastocyst, while expanded/thinning zona is stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometriosis, sperm parameters, endometrial thickness, and cycle history with embryo quality reasonably well, though AMH is unavailable and some claims about expected oocyte yield are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it calls the embryo both an advanced blastocyst and a Day 4 early blastocyst, and bases prognosis partly on a likely misread of the grading/transfer timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from standard IVF guidance, including incorrect Gardner stage interpretation, overstatement that 3AA has the 'highest' implantation potential, routine suggestion of laparoscopy after one failed cycle, and implying endometriosis specifically requires 'robust' luteal support beyond standard practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and early pregnancy monitoring, but recommendations are somewhat generic and include questionable suggestions like laparoscopy and PGT-A in a 26-year-old without stronger indication."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.01135,
+  "judge_latency_ms": 5980.26637500152,
+  "judge_prompt_tokens": 2314,
+  "judge_completion_tokens": 371
+}

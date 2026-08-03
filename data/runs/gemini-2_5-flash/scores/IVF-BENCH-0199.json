@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0199",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the Gardner expansion definition, introduces unsupported visual details, and overclaims certainty from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, prior IVF outcomes, sperm parameters, and endometrial thickness well, though some links to embryo morphology are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are inconsistencies such as calling the embryo non-viable/universally non-transferable while also discussing implantation probability, and some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and future planning is broadly evidence-based, but stating that 1DD embryos are universally non-transferable and recommending broad RIF/RPL testing from this single embryo assessment goes beyond standard guideline nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, reconsidering transfer, and future workup/planning, though some recommendations are overly broad rather than tightly prioritized for this case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014115,
+  "judge_latency_ms": 4215.894042004948,
+  "judge_prompt_tokens": 3210,
+  "judge_completion_tokens": 299
+}

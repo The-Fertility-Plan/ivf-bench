@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0479",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses the provided 1DD grade but overstates non-viability and adds image features like a compacted granular cluster and dark uneven cytoplasm that may not be reliably supported. It also notes the score/text inconsistency correctly, but the morphology interpretation is somewhat inaccurate and overly definitive."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, endometrium, prior IVF outcomes, male factor, sperm parameters, and oocyte maturity with embryo quality reasonably well. Some inferences, such as emphasizing sperm DNA fragmentation and poor response, are plausible but not fully supported by the available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it interprets 1DD as essentially non-viable, recommends no transfer categorically, and infers arrest/degeneration more strongly than the evidence supports. The probability estimate is directionally consistent with the poor grade but the certainty is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading concepts and standard IVF considerations, but it misstates stage 1 as definitively non-transferable/non-viable and gives overly absolute recommendations. Suggestions like PGT-A and TESE for this history are not universally guideline-mandated and should be more individualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including sperm DNA fragmentation testing, protocol review, fertilization method review, and lifestyle optimization. However, the recommendation to categorically avoid transfer is too absolute for a poor-quality embryo without broader clinical context."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0118,
+  "judge_latency_ms": 7242.465917021036,
+  "judge_prompt_tokens": 2374,
+  "judge_completion_tokens": 391
+}

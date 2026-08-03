@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0308",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner components appropriately and notes the inconsistency between '2AA' and the text description of a full blastocyst, but it also adds image-specific details (ICM at 2-3 o'clock, uniform TE, complete zona encirclement, no vacuolization/necrosis) that may be fabricated or not clearly verifiable from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, AMH/response, tubal factor diagnosis, sperm parameters, endometrial thickness, and first-cycle status with embryo quality in a clinically meaningful way, though some points are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable inconsistencies: it discusses a Day 4 transfer while calling the embryo a blastocyst/full blastocyst, and the probability section is partially truncated and mixes implantation, clinical pregnancy, and live birth estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading concepts and common IVF prognostic thinking, but there is confusion around expansion grading (2 vs full blastocyst/grade 3) and the Day 4 blastocyst framing is not cleanly aligned with standard staging conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides prognostic commentary but offers few concrete management steps for the current transfer or future cycle planning; recommendations are limited and not very specific."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01109,
+  "judge_latency_ms": 5698.419499967713,
+  "judge_prompt_tokens": 2162,
+  "judge_completion_tokens": 379
+}

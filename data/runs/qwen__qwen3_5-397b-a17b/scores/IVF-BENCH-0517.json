@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0517",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage: it calls grade 2 a full blastocyst with zona distension, whereas full blastocyst is grade 3. It otherwise reasonably reflects the provided ICM B and TE A descriptors, but some image-based details appear inferred rather than clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, BMI, prior IVF outcomes, sperm parameters, and endometrial thickness with embryo quality and prognosis. It could be stronger by more carefully distinguishing embryo-related versus uterine/receptivity factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable issues: the grading interpretation is incorrect, the prior cycle count/outcome summary is slightly inconsistent, and the probability adjustment is plausible but not tightly justified from the presented data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable (proceed with transfer, consider uterine evaluation after repeated failures), but prioritizing PGT-A in a 24-year-old as the highest priority is not strongly guideline-aligned, and routine metformin/luteal support intensification is not clearly evidence-based without more context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including proceeding with transfer, luteal support review, hysteroscopy, chronic endometritis testing, and sperm DNA fragmentation assessment. It is useful, though some recommendations would benefit from clearer prioritization and indication thresholds."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01203,
+  "judge_latency_ms": 6044.152792019304,
+  "judge_prompt_tokens": 2472,
+  "judge_completion_tokens": 390
+}

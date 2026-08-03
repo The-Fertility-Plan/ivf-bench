@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 0DD label and recognizes poor ICM/TE quality, but it overinterprets image details and inaccurately treats expansion as 'Grade 0'; Gardner expansion for an early blastocyst is typically 1, so morphology discussion is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian response, prior miscarriage, male factor, sperm parameters, and endometrial thickness with embryo prognosis reasonably well, though some inferences (e.g., only one embryo reached day 5, FSH significance) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the very low implantation estimate follows from the poor embryo grade, but there are minor issues such as unsupported assumptions and overstating paternal age/FSH effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned in recognizing very poor prognosis for a DD-quality blastocyst and suggesting counseling, but there are deviations: incorrect Gardner expansion terminology, overstatement that most clinics would discard such embryos, and recommending PGT-A as highest priority despite mixed guideline support for routine use at age 35."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, expectation management, consideration of transfer if no alternatives, and future evaluation such as sperm DNA fragmentation testing and possible ICSI, though some recommendations are somewhat generic or not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.00669875,
+  "judge_latency_ms": 6754.132291069254,
+  "judge_prompt_tokens": 2375,
+  "judge_completion_tokens": 373
+}

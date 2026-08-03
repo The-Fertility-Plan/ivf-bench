@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains notable grading inaccuracies: it interprets Gardner 2 as essentially full/fully expanded and states the embryo is a high-quality top-tier blastocyst, whereas 2AB is an early/full blastocyst with good ICM but only fair TE and not typically described as top-tier. It also assigns specific positional/image details that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometrium, prior IVF outcomes, male-factor context, and embryo grade reasonably well, though it overstates recurrent implantation failure and speculates beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are important issues: misclassification of embryo quality, questionable labeling of 3 prior cycles as RIF, and probability reasoning built partly on unsupported assumptions about prior embryos and uterine hostility."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF guidance: ERA, NK-cell testing, MTHFR testing, and empiric aspirin/heparin are not routinely recommended; calling 2AB top-tier and suggesting broad immunologic workup also departs from standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for transfer and contingency planning, including luteal support review and further male/endometrial evaluation, but some proposed tests/interventions are not appropriately selective or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012801,
+  "judge_latency_ms": 5483.469790997333,
+  "judge_prompt_tokens": 2357,
+  "judge_completion_tokens": 382
+}

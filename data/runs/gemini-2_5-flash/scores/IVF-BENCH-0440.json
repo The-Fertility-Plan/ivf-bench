@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0440",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 2BA blastocyst, correctly noting B-grade ICM and A-grade TE, but it over-interprets image details and introduces uncertainty/contradiction around the expansion stage rather than cleanly accepting the provided Gardner score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, especially young age, BMI, male factor, ovarian reserve, endometrium, and repeated prior IVF failures, and relates them to prognosis and embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there is some inconsistency in how the expansion grade is handled and the response is truncated, limiting full support for the final probability and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with standard Gardner grading concepts and evidence-based IVF prognostic factors, though it leans heavily on morphology and repeated failure without clearly distinguishing implantation from live birth or acknowledging limits of morphology alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides broad prognostic commentary but the visible response offers few concrete, specific next-step recommendations for this transfer or future cycle planning, and appears incomplete."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011205,
+  "judge_latency_ms": 4957.305958960205,
+  "judge_prompt_tokens": 2682,
+  "judge_completion_tokens": 300
+}

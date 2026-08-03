@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0199",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a poor-quality blastocyst and the provided 1DD grade, but it inaccurately labels grade 1 as 'expanded' and adds limited image-specific detail beyond the lab score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian response, prior outcomes, sperm parameters, and endometrium well with embryo prognosis, though it overstates DOR and causally links poor morphology too directly to reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and the low implantation estimate is broadly consistent with the poor morphology and patient factors, with only minor overinterpretation of prior losses and ovarian reserve."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on poor prognosis counseling and consideration of PGT-A, but includes less-supported recommendations such as routine thrombophilia testing and overstates PGT-A certainty in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, proceeding with transfer, future PGT-A discussion, weight management, and further evaluation, though some recommendations could be more nuanced and guideline-specific."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.010075,
+  "judge_latency_ms": 4596.246333967429,
+  "judge_prompt_tokens": 2278,
+  "judge_completion_tokens": 292
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It generally recognizes a poor-quality embryo, but it misstates Gardner stage 1 as blastocoel less than half the embryo (the prompt defines it as at least half), overinterprets the image as showing a compact ICM, and makes strong claims about absent viable lineages that are not directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, cycle history, and sperm data with the poor embryo grade reasonably well, though it overemphasizes speculative sperm DNA fragmentation and does not discuss the day-4 transfer context in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable inconsistencies: it says the ICM appears compacted while also calling it absent/degenerative, misinterprets the expansion grade, and gives conflicting advice by suggesting both not to transfer and possible cryopreservation/discard."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF practice, especially the categorical statement that the embryo should not be transferred and the suggestion to discard based solely on morphology; morphology alone does not prove non-viability, and PGT-A at age 34 is optional rather than clearly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps such as considering another cycle and sperm DNA fragmentation testing, but the transfer recommendation is overly absolute and insufficiently nuanced for a poor-quality embryo in a real clinical decision context."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.01165,
+  "judge_latency_ms": 8990.380458009895,
+  "judge_prompt_tokens": 2332,
+  "judge_completion_tokens": 388
+}

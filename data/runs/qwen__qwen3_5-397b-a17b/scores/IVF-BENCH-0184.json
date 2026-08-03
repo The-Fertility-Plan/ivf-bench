@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0184",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AB label, but it overstates certainty from the image, introduces a specific ICM location, and is somewhat imprecise/confused on expansion staging by calling it full blastocyst yet 'Stage 2/3'."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior cycle history, endometrial thickness, ovarian reserve, BMI, tubal factor, partner age, sperm parameters, and lifestyle with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: confusion around Day 4 versus blastocyst timing, unsupported concern about transfer asynchrony, and a probability estimate that is not tightly anchored to the specific case details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET preference, concern for hydrosalpinx, and counseling on lifestyle, but recommendations such as ERA and TESA/PICSI based mainly on paternal age are not strongly guideline-based, and the discussion of PGT-A is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current transfer and future planning, including SET discussion, hydrosalpinx evaluation, alcohol cessation, and possible further testing, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01189,
+  "judge_latency_ms": 6683.017125003971,
+  "judge_prompt_tokens": 2656,
+  "judge_completion_tokens": 350
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided Gardner 2CA label, correctly identifying full blastocyst expansion, poor ICM, and strong TE, but it adds image-specific details not reliably verifiable from the prompt/image alone such as zona thickness, multinucleation, and tight junction appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior live birth, low oocyte yield, BMI, sperm quality, endometrial thickness, and PCOS context into prognosis well, though some inferences about ovarian reserve and protocol under-response are somewhat speculative without AMH/AFC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and mostly consistent, but there are notable issues: it treats a Day 4 blastocyst transfer as unusual without resolving the discrepancy, mixes implantation and live birth probabilities, and gives somewhat inconsistent probability framing (<10% if aneuploid vs 20-30% overall)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET, importance of age and morphology, and considering ovarian reserve assessment, but some recommendations are weakly evidence-based or speculative (routine DHEA, assuming need to increase gonadotropins, donor-oocyte counseling after a single failure, comments about freezing not recommended)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support considerations, and future cycle planning, though some suggestions are broader than necessary and a few are not tightly tailored to the available data."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.0124275,
+  "judge_latency_ms": 5899.266166961752,
+  "judge_prompt_tokens": 2625,
+  "judge_completion_tokens": 391
+}

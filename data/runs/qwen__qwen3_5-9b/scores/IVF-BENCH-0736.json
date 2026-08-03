@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0736",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely mirrors the provided Gardner label rather than the stated criteria and contains a notable staging error: it calls grade 2 a fully expanded blastocyst with thinning zona, which corresponds more to stage 3-4, not 2. ICM/TE comments are broadly plausible but not image-grounded enough."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, endometrium, male factor, and lifestyle with embryo quality reasonably well. However, it overinterprets male factor by speculating about DNA fragmentation and somewhat overstates reserve concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are inconsistencies: misinterpretation of Gardner stage 2, calling the embryo 'good quality' without nuance, and recommending PGT-A strongly in a 29-year-old first cycle based on speculative sperm DNA issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some advice is appropriate (proceed with transfer, optimize lifestyle), but strong endorsement of PGT-A in a young patient with no prior failures is not well aligned with routine guideline-based practice, and the morphology interpretation does not match Gardner staging accurately."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer, lifestyle modification, and possible further male-factor workup. It is useful clinically, though some recommendations are too assertive given the limited evidence."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013065,
+  "judge_latency_ms": 4772.261457997956,
+  "judge_prompt_tokens": 2500,
+  "judge_completion_tokens": 371
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0378",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA grade, but it overstates stage 3 as having a thinning zona and adds image-specific details like exact ICM position and cytoplasmic vacuoles/granularity that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior cycle, sperm parameters, diagnosis, oocyte maturity, and endometrial thickness well with embryo quality, though it overinterprets some factors such as unexplained infertility implying a normal cavity and morphology as a strong proxy for euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability range tied to embryo quality and patient age; minor issues include calling 3AA the highest possible score and inferring subtle implantation issues from a single failed cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially support for elective single embryo transfer in a young patient with a good blastocyst. Small deviations include premature labeling of recurrent implantation failure and somewhat strong endorsement of PGT-A in a 30-year-old after limited failure history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including eSET, luteal support, and further uterine evaluation if unsuccessful. Some suggestions are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.011505,
+  "judge_latency_ms": 6818.983792036306,
+  "judge_prompt_tokens": 2478,
+  "judge_completion_tokens": 354
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Morphology description is largely consistent with a 3AB blastocyst: expanded cavity, thinned zona, compact ICM, and moderately organized TE. It is detailed, though somewhat overstates quality as 'excellent/high-quality' and relies heavily on the provided grade rather than image-specific nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, sperm factors, and low oocyte yield with embryo prognosis reasonably well. However, it overemphasizes paternal age and labels ovarian reserve as definitively poor/DOR without nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical and it appropriately flags the day-4 versus blastocyst inconsistency. But there are notable issues: it says age 37 is not AMA despite later treating it as such, gives an arguably inflated euploid estimate, and makes some conclusions stronger than the data support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements align with standard IVF practice, but several recommendations are not well aligned: strong blanket recommendation for PGT-A in a low-yield first cycle, suggesting donor eggs prematurely at age 37 after no prior cycles, and overstating morphology as 'top-tier/excellent' for 3AB."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps for transfer and future planning, including addressing the transfer-day discrepancy. However, recommendations are somewhat generic and not sufficiently nuanced for this specific first-cycle, low-yield case."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011865,
+  "judge_latency_ms": 6533.868208003696,
+  "judge_prompt_tokens": 2520,
+  "judge_completion_tokens": 371
+}

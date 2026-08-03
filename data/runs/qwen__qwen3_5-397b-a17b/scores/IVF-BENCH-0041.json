@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately recognizes a very poor-quality/degenerating embryo consistent with 0DD, but it overstates certainty by calling it definitively non-viable and adds features like a solid degenerating morula/collapsed structure that may not be fully supportable from the image alone. It also gives limited direct description of zona pellucida and exact blastocoel extent."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, prior failed cycle, endometrium, and sperm data with embryo quality reasonably well, highlighting discordance between favorable patient factors and poor embryo development. However, some inferences (possible PCOS, hidden sperm DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the low implantation estimate follows from the poor morphology, but there are notable overreaches: declaring the embryo non-viable and unsuitable for transfer with near certainty, inferring protocol failure from a single low MII yield, and suggesting male DNA fragmentation as a likely cause without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are broadly aligned with IVF practice, but recommending outright cancellation of transfer and stating the embryo is not suitable for transfer goes beyond standard guideline-based caution, since even poor-quality embryos may sometimes be transferred depending on context. PGT-A recommendation in a 28-year-old is also not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions including protocol review, trigger timing, sperm DNA fragmentation testing, lifestyle optimization, and consideration of ICSI. These are practical, though some are somewhat prescriptive/speculative rather than fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0124175,
+  "judge_latency_ms": 8391.10199996503,
+  "judge_prompt_tokens": 2345,
+  "judge_completion_tokens": 437
+}

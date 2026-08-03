@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It reasonably identifies a very poor-quality, developmentally delayed embryo with absent/indistinct ICM and TE, but it overstates image-specific findings by calling it a compacted morula, questioning the labeled early blastocyst, and describing vacuolization/fragmentation not clearly established from the provided case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, DOR, prior live birth, sperm parameters, endometrial thickness, and transfer timing with embryo quality and prognosis, though some links are somewhat speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor morphology plus age-related aneuploidy risk supports a very low implantation estimate. Minor issues include overreliance on morphology as the strongest predictor and speculative interpretation of why Day 4 transfer occurred."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly IVF-consistent, including counseling and consideration of PGT-A in future cycles, but there are deviations: '0DD' is not standard Gardner notation, DHEA/antioxidants are not strongly guideline-based, and donor sperm discussion based mainly on paternal age is not well supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer counseling, luteal support, and future-cycle considerations such as protocol review and possible sperm DNA fragmentation testing, though some suggestions are generic or not tightly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01278,
+  "judge_latency_ms": 4553.323582993471,
+  "judge_prompt_tokens": 2440,
+  "judge_completion_tokens": 364
+}

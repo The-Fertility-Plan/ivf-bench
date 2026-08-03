@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0182",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AB and gives plausible ICM/TE comments, but it overstates image-specific certainty, calls grade 3 'optimal/ready to hatch,' and infers localized zona thinning not clearly verifiable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian response, sperm parameters, endometrium, diagnosis, and first-cycle status with embryo quality reasonably well, though AMH is unavailable and some factors such as paternal age are weighted a bit strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The assessment is structured and mostly logical, with a probability estimate that broadly follows the stated factors. Minor issues include overemphasis on paternal age/former smoking and some inconsistency around the day-4 blastocyst interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles and Gardner grading, but it overstates that grade 3 is 'optimal,' suggests PGT-A is 'strongly recommended' rather than individualized, and implies a day-4 blastocyst transfer is rare/possibly lower success without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as proceeding with transfer, confirming transfer day, luteal support, and considering future PGT-A, though recommendations remain somewhat generic and not highly tailored beyond standard care."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.011635,
+  "judge_latency_ms": 6596.514875011053,
+  "judge_prompt_tokens": 2482,
+  "judge_completion_tokens": 362
+}

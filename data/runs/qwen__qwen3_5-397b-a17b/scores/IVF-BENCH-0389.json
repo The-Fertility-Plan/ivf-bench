@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0389",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies an early blastocyst with poor/indistinct ICM and TE consistent with 0DD, but adds speculative image findings such as a large vacuole/degenerative cyst and overinterprets degeneration beyond what can be reliably concluded from the provided grading/image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, elevated FSH, low MII yield, male factor, BMI, endometrium, and lifestyle with embryo prognosis reasonably well, though it overstates DOR confirmation without AMH and makes speculative links to sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the low implantation estimate follows from very poor morphology and delayed development, but some conclusions rely on unsupported assumptions such as chromosomal abnormality from vacuolization and definitive DOR."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis counseling and review of stimulation/maturation issues, but includes recommendations with weaker guideline support (routine DHEA/CoQ10, PGT-A framed as highly recommended, sperm selection add-ons) and treats FSH alone as confirming DOR."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, trigger review, sperm testing, and future cycle planning, though some suggestions are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012984,
+  "judge_latency_ms": 4186.618500003533,
+  "judge_prompt_tokens": 2523,
+  "judge_completion_tokens": 361
+}

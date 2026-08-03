@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0200",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It misstates the stage by calling 0DD an early blastocyst/Stage 3 and says the blastocoel is in the upper right quadrant and <50%, which conflicts with Gardner notation and likely overinterprets image details. ICM/TE poor quality description is directionally consistent, but several specific visual claims appear fabricated or inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior cycle, sperm parameters, and endometrium with embryo quality reasonably well, though it overstates sperm quality and makes unsupported assumptions about fertilization/embryo yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable inconsistencies: incorrect stage interpretation, calling sperm parameters excellent despite low concentration, and inferring 100% fertilization/8 embryos without data. Probability reasoning is plausible but only partly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling and caution about poor morphology are broadly aligned, but there are deviations: incorrect Gardner interpretation, overenthusiastic endorsement of PGT-A in a 29-year-old after limited failure, and FET/estrogen-priming suggestions that are not clearly indicated from the case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including counseling, expectation setting, weight optimization, reconsideration of male factor/SDF testing, and future cycle planning. However, some recommendations are somewhat generic or not tightly tailored to this specific scenario."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.0120425,
+  "judge_latency_ms": 6948.083124996629,
+  "judge_prompt_tokens": 2489,
+  "judge_completion_tokens": 388
+}

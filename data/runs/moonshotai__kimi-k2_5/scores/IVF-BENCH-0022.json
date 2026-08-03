@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD and notes absent/degenerative ICM and TE, but it misstates expansion grade 1 as <50% rather than at least half the embryo volume and adds image-specific details that may not be clearly verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, tubal factor, endometrium, AMH, oocyte yield, BMI, and sperm parameters well, though some inferences about oocyte quality and DOR impact are somewhat stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are inconsistencies such as calling Day 4 blastulation favorable/accelerated while also using Day 4 transfer as a concern, and the probability discussion mixes several ranges (<5%, 5-10%, 5-15%) without a single clearly justified estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The poor prognosis assigned to a 1DD embryo is broadly aligned with Gardner-based assessment, but some recommendations are not strongly guideline-based or are overly prescriptive (e.g., estradiol threshold addition, DHEA recommendation, specific transfer technique claims, avoiding assisted hatching rationale)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, transfer timing, luteal support, beta-hCG follow-up, and future workup, though some suggestions are incomplete or not sufficiently evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0117275,
+  "judge_latency_ms": 5904.127290996257,
+  "judge_prompt_tokens": 2327,
+  "judge_completion_tokens": 394
+}

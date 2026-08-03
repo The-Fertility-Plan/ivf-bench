@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0674",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response is highly unreliable morphologically, repeatedly misidentifying the image as a single cell or degenerating cell, then fabricating ICM/TE/zona features not clearly supported by the image while defaulting to the provided 4AA text."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates several relevant factors well: age, BMI, FSH, uterine factor, endometrial thickness, smoking, prior cycle history, and sperm issues, and links them to prognosis, though AMH is unavailable and sperm motility interpretation is somewhat simplistic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The reasoning is markedly contradictory and repetitive, oscillating between calling the image degenerating and consistent with 4AA, with an unstable logic chain and poorly supported final conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points are broadly guideline-consistent (good prognosis with young age and 4AA, smoking cessation, uterine cavity evaluation), but the recommendation for PGT-A is not well contextualized for a 33-year-old first cycle and morphology-based implantation estimates are oversimplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical next steps—proceed with transfer, smoking cessation, uterine workup, consider PGT-A—but lacks nuanced transfer-specific planning and detailed future-cycle strategy."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01433875,
+  "judge_latency_ms": 6569.515833980404,
+  "judge_prompt_tokens": 8783,
+  "judge_completion_tokens": 336
+}

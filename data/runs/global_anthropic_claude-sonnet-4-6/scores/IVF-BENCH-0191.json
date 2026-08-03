@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0191",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies the embryo as very poor quality and broadly consistent with 1DD, but it misstates expansion grade 1 as blastocoel <50% despite the provided definition saying at least half the embryo, and it adds image-specific details like left-sided cavity, coarse granularity, and zona assessment that may not be reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, sperm parameters, endometrium, lifestyle, and cycle context well with embryo quality and prognosis, though some links are overstated and it does not fully reconcile the unusual natural-cycle yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable issues: confusion around expansion grading, speculative interpretation of day-4 timing, and somewhat arbitrary probability modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but several recommendations are weakly supported or not guideline-driven for this case, including routine assisted hatching, ERA after a single failure, reproductive immunology/NK-cell workup, and strong endorsement of PGT-A despite low reserve."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, transfer considerations, luteal support, and future-cycle planning, though some suggested interventions are overly prescriptive or speculative."
+    }
+  ],
+  "extracted_probability": 0.045,
+  "judge_cost_usd": 0.0211,
+  "judge_latency_ms": 5788.311125012115,
+  "judge_prompt_tokens": 3122,
+  "judge_completion_tokens": 366
+}

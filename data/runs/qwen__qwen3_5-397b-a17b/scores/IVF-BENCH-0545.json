@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0545",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality blastocyst with absent/degenerate ICM and TE consistent with 1DD, but adds uncertain image-specific details such as flattening/collapse, granular dark cytoplasm, and inconsistency about blastocoel size."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometrium, diagnosis, and sperm parameters with embryo prognosis well, though it somewhat over-attributes the poor embryo quality to male factor and overinterprets the oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the low implantation estimate follows from a 1DD embryo, but there are internal inconsistencies around expansion grading and some speculative causal claims (e.g., severe male factor/DNA fragmentation, suboptimal stimulation) not fully supported by the data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly consistent with poor prognosis for a 1DD blastocyst and reasonable counseling, but some recommendations are not strongly guideline-based or are overstated, including immediate ICSI as mandatory, TESE/PICSI/MACS suggestions, DuoStim, and calling the embryo morphologically distinct from viable embryos in absolute terms."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, and future workup, but several suggestions are more speculative than case-specific and would benefit from clearer prioritization."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01108,
+  "judge_latency_ms": 6359.5527919824235,
+  "judge_prompt_tokens": 2308,
+  "judge_completion_tokens": 354
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses the provided grade but misstates expansion: Gardner 2 is an early blastocyst, not a fully expanded blastocyst, and claims a thin zona/readiness for hatching that is not supported. ICM/TE descriptions are broadly plausible but somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, BMI, prior failed cycle, tubal factor, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overemphasizes paternal age and infers diminished reserve without AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: contradiction between calling 2AA 'top tier/perfect' and the stated expansion stage, overstating paternal-age impact on aneuploidy, and unsupported assumptions about ovarian reserve and implantation reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from standard IVF guidance: incorrect interpretation of Gardner stage 2, overstates paternal-age effect, and 'strongly recommends' PGT-A mainly for paternal age/one failed cycle, which is not guideline-based. Proceeding with transfer is reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including proceeding with transfer, considering SDF testing, nutritional counseling, and monitoring. Some recommendations are useful but not always appropriately nuanced or evidence-weighted."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012321,
+  "judge_latency_ms": 5169.474458998593,
+  "judge_prompt_tokens": 2347,
+  "judge_completion_tokens": 352
+}

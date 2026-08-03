@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0505",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates Gardner expansion: a 2AA blastocyst is an early blastocyst with blastocoel >50% of embryo volume, not a full/fully expanded blastocyst. It also calls 2AA the highest/top-tier grade and infers image details beyond what is securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm factors, BMI, endometrium, smoking, and diagnosis with embryo quality reasonably well, though it overstates DOR and makes unsupported assumptions about sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: contradictory use of '2' as full blastocyst, overconfident euploidy/implantation arithmetic, and unsupported claims that male age materially lowers embryo euploidy enough to justify the stated calculation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF guidance: incorrect Gardner stage interpretation, overstatement that 2AA is the best possible grade, overly strong endorsement of PGT-A for a single available embryo, and premature suggestion that donor eggs should be a primary option after one failed cycle at age 37."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, smoking cessation, discussing PGT-A limitations, and considering ICSI/SDF testing, but some recommendations are too aggressive or insufficiently nuanced for this specific first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0124475,
+  "judge_latency_ms": 7172.631000052206,
+  "judge_prompt_tokens": 2639,
+  "judge_completion_tokens": 390
+}

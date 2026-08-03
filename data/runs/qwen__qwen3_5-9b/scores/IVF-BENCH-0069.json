@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains a key grading error by calling expansion grade 2 'full' and even stating it indicates grade 3/highest expansion. It otherwise gives a plausible B-grade ICM/TE description, but the expansion interpretation is inaccurate and overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, endometrial thickness, and infertility diagnosis with embryo quality reasonably well, though it overstates embryo quality and gives disproportionate weight to BMI."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There is an internal contradiction in the morphology section (grade 2 called full and then grade 3/highest), and the conclusion that a 2BB is 'high-quality' with 50-60% implantation is not well supported for an untested day-5 2BB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response departs from Gardner criteria on expansion grading, overstates prognosis for a 2BB embryo, and recommends weight gain despite BMI 19 being within the normal range without clear guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical suggestions such as proceeding with transfer and maintaining luteal support, but recommendations are fairly generic and include questionable emphasis on BMI rather than more standard transfer counseling and contingency planning."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0103975,
+  "judge_latency_ms": 5606.245917035267,
+  "judge_prompt_tokens": 2047,
+  "judge_completion_tokens": 352
+}

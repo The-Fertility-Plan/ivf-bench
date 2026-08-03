@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains a key grading error: it interprets Gardner 2 as a full/fully expanded blastocyst with thinning zona and possible hatching, whereas stage 2 is an early blastocyst and full blastocyst is stage 3. It gives plausible ICM/TE comments but includes image-specific details that may be overcalled."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm quality, BMI, uterine factor, endometrial thickness, and lifestyle with embryo quality in a clinically meaningful way, though AMH is unavailable and the uterine diagnosis remains nonspecific."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there is internal inconsistency between calling the embryo 2AA and describing it as fully expanded/top-tier highest possible morphology. The implantation estimate is reasonable but partly rests on the grading misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET and considering uterine reevaluation are broadly guideline-consistent, but the Gardner grading interpretation is incorrect and suggesting PGT-A to 'bypass' uterine-factor uncertainty is not well aligned with evidence-based use of PGT-A."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including eSET, luteal support, use of frozen embryos, and uterine reassessment after failure. Some suggestions are somewhat generic and would benefit from more specificity about the uterine factor and transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012645,
+  "judge_latency_ms": 6122.036417014897,
+  "judge_prompt_tokens": 2390,
+  "judge_completion_tokens": 365
+}

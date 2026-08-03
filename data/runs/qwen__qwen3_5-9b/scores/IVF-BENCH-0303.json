@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0303",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner score and includes inaccuracies: it calls grade 2 'fully expanded' and says the embryo is hatching/has hatched, which is inconsistent with Gardner stage 2. Descriptions of ICM and TE are broadly compatible with 2AC but not image-grounded enough."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior biochemical pregnancies, endometrial thickness, sperm parameters, and lifestyle with embryo quality reasonably well. However, it overstates diminished ovarian reserve from limited data and does not acknowledge AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable inconsistencies: misinterpretation of blastocyst expansion stage, calling the embryo 'morphologically good' despite poor TE, and probability estimates that are somewhat optimistic for age 42 with an untested 2AC embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles, but there are deviations: incorrect Gardner stage interpretation, overly strong recommendation to discuss PGT-A after a fresh day-5 transfer context, and donor-oocyte counseling is reasonable but presented somewhat prematurely. Luteal support advice is generic rather than guideline-specific."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, and future planning, including consideration of PGT-A, donor eggs, and sperm DNA fragmentation. Some recommendations are broad and not fully tailored to whether this is a fresh transfer or whether additional embryos exist."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013029,
+  "judge_latency_ms": 5083.874791998824,
+  "judge_prompt_tokens": 2458,
+  "judge_completion_tokens": 377
+}

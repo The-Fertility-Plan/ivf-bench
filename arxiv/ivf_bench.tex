@@ -1,0 +1,839 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
+\setlist{nosep,leftmargin=*}
+\setlength{\parskip}{0.4em plus 0.1em minus 0.1em}
+
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!5},
+  rulecolor=\color{gray!40},
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+\definecolor{realgreen}{HTML}{2E7D32}
+\definecolor{synthblue}{HTML}{1565C0}
+
+\title{\textbf{IVF-Bench: A Rubric-Based Standard for Evaluating\\Vision-Language Models on IVF Clinical Reasoning}}
+\author{
+  Andrew G. A. Correa\\Monostate\\\texttt{andrew@monostate.ai}
+  \and
+  Brittany Yoon\\The Fertility Plan\\\texttt{b@thefertilityplan.com}
+}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Embryo selection still rests on a subjective morphology grade, and the machine
+learning built to improve it scores images alone. The largest randomised trial of
+that approach did not beat trained embryologists. The information that drives the
+decision, the patient's history and lifestyle, sits with the physician and
+reaches neither the embryologist nor the model, and no public dataset carries it
+alongside embryo images and outcomes. We propose IVF-Bench, a standard for
+measuring how well vision-language models reason about a transfer decision: 753
+real day-5 cases, with open-ended answers graded against five clinical rubrics
+and against the recorded outcome. Across eight systems, post-training a 9B open
+model on 550 preference pairs lifts every rubric and takes it past Claude Opus
+4.6 at a twentieth of the cost, while outcome prediction stays at a floor we
+argue is set by the missing data rather than by the models. Benchmark, model, and
+all 5,194 responses are released.
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+
+Choosing which embryo to transfer is one of the decisions in IVF that most
+affects whether a patient goes home with a baby. In most clinics that choice
+still rests on how the embryo looks under a microscope on day 5, summarised by
+the Gardner grade: how far the blastocyst has expanded, how well formed the inner
+cell mass is, and how cohesive the trophectoderm is \citep{gardner1999}. The
+grade is useful and it is also subjective. When embryologists at different
+centres are shown the same day-5 embryos and asked to pick one, they agree less
+often than the confidence of the decision suggests \citep{storr2017}.
+
+That gap has attracted a decade of machine learning work, almost all of it
+framed as a scoring problem: feed in an image or a time-lapse video, return a
+number, rank the embryos by that number. The largest randomised trial of this
+approach put a deep learning ranker against trained embryologists across 14
+clinics and 1,066 patients, and it did not demonstrate noninferiority
+\citep{illingworth2024}. A ranker that cannot beat a human ranker is not obviously
+the thing to build next.
+
+We think the framing is the problem, not the architecture. An embryo image is a
+fraction of what determines whether a transfer works. The rest is the patient:
+her ovarian reserve, her endometrium, her BMI and lifestyle, what happened in her
+previous cycles, what the andrology report says. In a real clinic most of that
+lives with the physician and never reaches the embryologist at the microscope,
+let alone the imaging model. A system that sees only pixels is not failing at
+prediction so much as being asked to predict without the inputs that matter.
+
+Vision-language models can in principle take both. Nobody can show it, because
+the data to show it does not exist in public. Embryo images are sensitive
+clinical records, outcome-linked patient context is more sensitive still, and the
+regulatory and privacy path to assembling the two together is long enough that
+every serious dataset in this field is private. That is the actual bottleneck.
+
+So the first thing needed is a way to measure whether a model can use patient
+context at all. That is what we built.
+
+\textbf{IVF-Bench} is an open benchmark of 753 day-5 blastocyst cases. Each case
+pairs a real embryo image and its expert Gardner annotation with real cycle and
+outcome data from the same patient, plus the patient-history fields that no
+public dataset carries. Those we generate from published population
+distributions, deterministically, and label every one of them as generated. A
+model is asked to describe the embryo, integrate the patient factors, estimate an
+implantation probability, and recommend next steps. Five rubrics score the answer
+from 1 to 5, and the stated probability is checked against the real outcome.
+
+Generating that context is a deliberate methodological choice and we defend it in
+Section~\ref{sec:synthetic}. It is what makes a case-level reasoning task
+constructible from public data at all. It also has a consequence we state up
+front: our generated fields are sampled independently of the recorded outcomes,
+so they carry no information about who conceived. Any outcome-prediction result
+in this paper is bounded by that before a model is involved.
+
+We evaluate seven frontier and open-weight models, then post-train a 9B open
+model on preference pairs drawn from the benchmark. What we found:
+
+\begin{enumerate}
+\item Post-training beats scale on this task. 550 preference pairs move a 9B open
+      model past Claude Opus 4.6 into second place of eight, at a twentieth of
+      the inference cost. The reasoning half of embryo assessment does not
+      require a frontier model, and the recipe is reproducible by anyone.
+\item That gain shows up on all five rubrics at once, not on one, which is what
+      distinguishes a recipe that improves the whole assessment from a tuning
+      trick that moves a single number.
+\item Outcome prediction stays weak for everyone, and we quantify how weak
+      against a baseline that ignores its inputs entirely. We read that as a
+      ceiling set by the available data, not by the models, for the reason given
+      above.
+\item Morphology is the weakest rubric everywhere, and our judge cannot see the
+      image, so we treat that as a bound rather than a measurement.
+\end{enumerate}
+
+The practical conclusion is that the field's next unlock is a public dataset that
+links embryo images to real patient context and real outcomes. IVF-Bench is the
+instrument for measuring what such a dataset would buy.
+
+% ============================================================
+\section{Related work}
+
+\textbf{Embryo selection models.} Most published systems predict a label from
+pixels. They grade blastocysts automatically, rank embryos within a cohort, or
+estimate implantation from time-lapse video. Commercial products in clinics today
+follow the same pattern and are positioned as adjunctive scoring tools rather
+than autonomous decision makers. The randomised evidence for the strongest of
+them is the trial discussed above \citep{illingworth2024}. None of this work
+evaluates open-ended clinical reasoning, because none of it produces language.
+
+\textbf{Language about embryos.} The group that released the dataset we build on
+has recently moved in this direction, publishing an expert-annotated set of
+embryo images paired with natural-language morphological descriptions
+\citep{neu2026dataset} and a fine-tuned PaliGemma-2 model that generates such
+descriptions \citep{neu2026invitrovision}. That work and ours are complementary
+and different in an important way. They evaluate whether a model can describe an
+embryo. We evaluate whether a model can reason about a patient who has that
+embryo, which requires the cycle data, the history, a probability, and a
+recommendation. Their descriptions are the ground truth we most wish we had for
+scoring morphology, and we say so in Section~\ref{sec:limitations}.
+
+\textbf{Rubric-graded evaluation of medical language models.} Scoring open-ended
+clinical answers against written criteria, with a language model doing the
+scoring, was put on a solid footing by HealthBench, which had 262 physicians
+write 48,562 rubric criteria over 5,000 conversations
+\citep{arora2025healthbench}. Our five rubrics are far smaller and narrower, and
+are written for one decision rather than for medicine in general. The
+methodological debt is direct and we follow the same basic recipe: grade against
+criteria, not against a gold answer.
+
+\textbf{Preference optimisation.} We post-train with ORPO
+\citep{hong2024orpo}, which folds the preference objective into the supervised
+loss and removes the need for a separate reference model, in the family of
+methods opened up by DPO \citep{rafailov2023dpo}.
+
+% ============================================================
+\section{The benchmark}
+
+\subsection{Where the data comes from}
+
+Open embryo data is rare, because embryo images are sensitive clinical records
+and most published systems are trained on private single-clinic collections. We
+build on the Kromp blastocyst dataset \citep{kromp2023}, which is public under CC
+BY 4.0 and links day-5 embryo images to expert Gardner grades, selected cycle
+variables, and pregnancy outcomes. Of the 837 patients in the release, 754 have
+complete clinical records, and one of those references an image that is missing
+from the distributed archive, which leaves 753 usable cases.
+
+Preparing the source data took more work than we expected, and we document it
+because anyone reusing this dataset will hit the same problems. The clinical
+annotation file is semicolon-separated, Latin-1 encoded, and was clearly opened in
+a German-locale spreadsheet at some point: 500 AMH values and 144 endometrial
+thickness values had been silently converted into dates, so that a value of 1.26
+appears in the file as \texttt{J\"an.26}. We map the month abbreviations back to
+numbers to recover them. Oocyte counts sometimes appear in additive form such as
+\texttt{7+1}, which we sum. Missing values stay missing and are shown to models as
+"not available" rather than being imputed. One record has a live birth recorded
+without the clinical pregnancy that must precede it; we keep it as it is, because
+silently fixing a source dataset is worse than reporting the inconsistency.
+
+\subsection{What a case contains}
+
+Each case combines real fields from Kromp with generated patient context. The
+real fields are the embryo image, the Gardner grades, patient age, AMH,
+endometrial thickness, oocytes retrieved, mature oocytes, transfer day, and the
+three pregnancy outcomes. The generated fields are BMI, basal FSH, diagnosis,
+stimulation protocol, previous cycles and their outcomes, partner age, semen
+parameters, and a lifestyle summary.
+
+\subsection{Why the patient context is generated, and what that costs}
+\label{sec:synthetic}
+
+An embryo image plus an age is not a case. A clinician reasoning about a transfer
+uses a history, and a benchmark that omits the history cannot tell whether a
+model uses one. But no public dataset carries BMI, lifestyle, stimulation
+protocol, or cycle history alongside embryo images and outcomes. That data exists
+in clinics, mostly in physicians' notes and often in physicians' heads, and it
+does not travel: it rarely reaches the embryologist at the microscope, and it has
+never reached a public research corpus, because assembling images plus
+outcome-linked patient records is exactly the combination that regulatory and
+privacy review is built to slow down.
+
+So we generated it. Each field is sampled from published population
+distributions, with the parameters and their sources documented in the
+repository. Generation is deterministic per case, seeded from a hash of the case
+identifier, so cases regenerate exactly and adding new cases does not perturb
+existing ones. Every case file carries a \texttt{synthetic\_fields} list naming
+exactly which fields were generated, so no reader has to guess and no result can
+quietly depend on generated data being mistaken for measured data.
+
+This buys a case-level reasoning task that can be built and reproduced entirely
+from public sources. It costs two things, and both matter for reading the
+results.
+
+First, the generated fields are sampled independently of the recorded outcomes.
+They are realistic in their marginal distributions and they carry no information
+about which patient conceived. A model cannot extract predictive signal from them
+because there is none to extract. The outcome-prediction numbers in
+Section~\ref{sec:results} are therefore bounded by the data before any model is
+involved, and should be read as a floor that measures what is missing, not as a
+verdict on what vision-language models can do with real context.
+
+Second, the fields are sampled independently of each other, so genuine clinical
+correlations such as the one between PCOS and BMI are absent. A model that knows
+those correlations is not rewarded for it here.
+
+Neither cost is fixable with a better generator. Both are fixed by a real
+dataset, which is the point.
+
+\subsection{Splits}
+
+The 753 cases are split deterministically into 550 test, 100 validation, and 103
+held out. The test split carries the main leaderboard. The validation split is
+reserved for judge and threshold work. The held-out split was untouched through
+all training, hyperparameter search, and judge calibration, and exists to answer
+one question: do the test-split rankings survive on cases nobody optimised
+against?
+
+One property of the splits is worth stating plainly, because it is a defect. They
+were drawn per image rather than per patient. Twenty-two patients contributed two
+embryos each, and for six of those patients the two embryos landed in different
+splits. Four of the 103 held-out cases therefore share a patient with a test-split
+case. We measure the effect in Section~\ref{sec:robustness} and it changes no
+ranking, but a future version should split on patient.
+
+\subsection{The prompt}
+
+Every model sees the embryo image and a structured case description containing
+the Gardner grade with plain-language descriptors, the laboratory fields, and the
+patient profile. It is asked for five things: a morphology description, an
+integration of the patient factors, the risks and favourable features, a numeric
+implantation probability, and recommendations for this transfer and for future
+cycles. The full template is in Appendix~\ref{app:prompt}.
+
+\subsection{The five rubrics}
+
+A judge model reads the case and the response and returns a 1 to 5 score with a
+short justification for each of five rubrics.
+
+\begin{itemize}
+\item \textbf{Morphology grounding.} Does the description of the embryo match the
+      image and the Gardner annotation?
+\item \textbf{Clinical integration.} Does the response connect the patient factors
+      to this embryo and this prognosis, rather than listing them?
+\item \textbf{Reasoning coherence.} Is the argument internally consistent, with
+      uncertainty where uncertainty belongs?
+\item \textbf{Guideline alignment.} Is the advice consistent with evidence-based
+      reproductive medicine?
+\item \textbf{Recommendation usefulness.} Could a clinician act on this, or is it
+      generic?
+\end{itemize}
+
+Full rubric text and the 1 to 5 anchors for each are in
+Appendix~\ref{app:rubrics}. The judge also extracts the numeric probability from
+the response, which we compare against the recorded outcome.
+
+% ============================================================
+\section{Evaluation setup}
+\label{sec:setup}
+
+
+We evaluate seven models through their public APIs plus our own post-trained
+model served locally, and we grade every response with the same judge.
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{llll}
+\toprule
+\textbf{Model} & \textbf{Served by} & \textbf{Size} & \textbf{Reasoning} \\
+\midrule
+GPT-5.4 (2026-03-05) & OpenAI & not disclosed & effort: high \\
+Claude Opus 4.6 & Bedrock & not disclosed & 8K thinking budget \\
+Claude Sonnet 4.6 & Bedrock & not disclosed & 8K thinking budget \\
+Qwen 3.5-397B-A17B & OpenRouter & 397B, 17B active & native \\
+Kimi K2.5 & OpenRouter & 1T, 32B active & native \\
+Gemini 2.5 Flash & OpenRouter & not disclosed & native \\
+Qwen 3.5-9B & OpenRouter & 9B & native \\
+\midrule
+\textbf{IVF-Bench-Qwen9B-ORPO} (ours) & local vLLM, 2$\times$H100 & 9B & native \\
+\bottomrule
+\end{tabular}
+\caption{The eight systems evaluated. Baselines run at temperature 0 with
+reasoning enabled. Our model uses the sampling settings recommended on the Qwen
+3.5 card (temperature 1.0, top-p 0.95, top-k 20, repetition penalty 1.05),
+because greedy decoding traps it in a repetition loop.}
+\label{tab:models}
+\end{table}
+
+\textbf{The judge.} GPT-5.4 grades every response against the five rubrics in a
+single call and also extracts the numeric probability. It sees the case text and
+the response, but not the embryo image. This is a deliberate limitation and we
+are explicit about what it costs us: the morphology rubric measures whether a
+description is consistent with the Gardner annotation the model was handed, not
+whether the model read the image correctly. A judge that cannot see the image
+cannot catch a fluent description of an embryo that is not there.
+
+\textbf{Two things we got wrong the first time.} Both are worth reporting because
+they are easy to repeat and neither is visible in the output.
+
+First, when a judge call failed, the pipeline wrote a score file containing five
+zeros and moved on. Because later runs skip cases that already have a score file,
+those failures became permanent. In our first pass this hollowed out 231 of the
+test-split scores, 211 of them belonging to a single model, so that model's row
+was computed from 309 of 550 cases while the table said 520. The judge now
+refuses to write a failed score, so the case simply stays pending.
+
+Second, our own model was served on vLLM without a reasoning parser. Qwen chat
+templates pre-fill \texttt{<think>} in the prompt, so the model emits its
+reasoning, a closing \texttt{</think>}, and then the answer, all in one field.
+Every hosted API returns reasoning separately. The result was that our model was
+graded on roughly 4,000 characters of raw thinking prepended to its answer while
+every other model was graded on the answer alone. Correcting this moved our model
+from 3.80 to 4.17 on the test split, from third place to second. The lesson
+generalises: if you compare a locally served reasoning model against hosted APIs,
+check what is actually inside the string you are grading.
+
+All numbers below come after both fixes. Every score in the study is produced by
+GPT-5.4, and no score file contains a judge failure.
+
+
+% ============================================================
+\section{Results}
+\label{sec:results}
+
+
+\subsection{Reading the two outcome metrics}
+
+\textbf{Brier score} (lower is better) is the mean squared error between the
+stated probability and what happened. It rewards being honest about the odds.
+Always saying 50\% scores 0.25, which is the comparison most papers use and the
+wrong one: the sharper test is a constant set to the cohort's own pregnancy rate,
+and we report against that in Table~\ref{tab:baserate}. \textbf{AUROC} (higher is
+better, 0.5 is chance) is the probability that a randomly chosen success is
+ranked above a randomly chosen failure. It rewards telling embryos apart.
+Counselling a patient needs the first. Choosing which embryo to transfer needs
+the second, and a model can be respectable on one while useless on the other.
+
+\subsection{The leaderboard}
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{clcccccccc}
+\toprule
+\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
+\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
+\textbf{AUROC}$\uparrow$ \\
+\midrule
+1 & GPT-5.4 & \textbf{4.54} & \textbf{3.96} & \textbf{5.00} & \textbf{4.66} & \textbf{4.15} & \textbf{4.92} & 0.245 & 0.553 \\
+2 & \textbf{Qwen9B-ORPO (ours)} & 4.17 & 3.60 & 4.83 & 4.00 & 3.96 & 4.44 & 0.249 & 0.531 \\
+3 & Opus 4.6 & 4.01 & 3.52 & 4.97 & 3.96 & 3.20 & 4.38 & 0.245 & 0.541 \\
+4 & Qwen 397B & 3.75 & 3.33 & 4.27 & 3.84 & 3.31 & 3.98 & 0.260 & 0.538 \\
+5 & Kimi K2.5 & 3.63 & 3.39 & 4.38 & 3.66 & 3.00 & 3.72 & \textbf{0.242} & 0.552 \\
+6 & Sonnet 4.6 & 3.58 & 2.92 & 4.48 & 3.64 & 2.79 & 4.06 & \textbf{0.241} & 0.544 \\
+7 & Gemini 2.5 Flash & 3.40 & 3.34 & 3.88 & 3.58 & 3.53 & 2.66 & 0.269 & 0.537 \\
+8 & Qwen 9B (base) & 3.35 & 3.08 & 3.93 & 3.38 & 2.81 & 3.56 & 0.255 & \textbf{0.554} \\
+\bottomrule
+\end{tabular}
+\caption{Test split, 550 cases, GPT-5.4 judge, every model with reasoning
+enabled. Qwen 9B base completed 520 of 550 cases; the other 30 ran out of tokens
+inside a reasoning loop. Rubrics are morphology grounding, clinical integration,
+reasoning coherence, guideline alignment, and recommendation usefulness.}
+\label{tab:leaderboard}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{clcccccccc}
+\toprule
+\textbf{\#} & \textbf{Model} & \textbf{Overall} & \textbf{Morph} & \textbf{Clin} &
+\textbf{Reas} & \textbf{Guide} & \textbf{Rec} & \textbf{Brier}$\downarrow$ &
+\textbf{AUROC}$\uparrow$ \\
+\midrule
+1 & GPT-5.4 & \textbf{4.55} & \textbf{3.98} & \textbf{5.00} & \textbf{4.65} & \textbf{4.23} & \textbf{4.88} & 0.246 & \textbf{0.562} \\
+2 & \textbf{Qwen9B-ORPO (ours)} & 4.11 & 3.56 & 4.76 & 3.93 & 3.93 & 4.37 & 0.245 & 0.547 \\
+3 & Opus 4.6 & 4.01 & 3.60 & 4.92 & 3.98 & 3.22 & 4.31 & 0.247 & 0.551 \\
+4 & Gemini 2.5 Flash & 3.83 & 3.34 & 4.40 & 3.90 & 3.54 & 3.98 & 0.289 & 0.504 \\
+5 & Qwen 397B & 3.82 & 3.48 & 4.31 & 3.88 & 3.44 & 3.98 & 0.265 & 0.551 \\
+6 & Kimi K2.5 & 3.73 & 3.48 & 4.42 & 3.80 & 3.04 & 3.90 & 0.254 & 0.518 \\
+7 & Sonnet 4.6 & 3.65 & 3.07 & 4.51 & 3.73 & 2.89 & 4.06 & \textbf{0.242} & 0.534 \\
+8 & Qwen 9B (base) & 3.31 & 2.99 & 3.91 & 3.18 & 2.85 & 3.64 & 0.285 & 0.450 \\
+\bottomrule
+\end{tabular}
+\caption{Held-out split, 103 cases that were never used for training,
+hyperparameter search, or judge calibration. All eight models answered all 103.}
+\label{tab:heldout}
+\end{table}
+
+\subsection{Which gaps are real}
+
+A leaderboard without error bars invites readers to take a 0.02 difference
+seriously. We resample cases with replacement 10,000 times and, for each adjacent
+pair of models, bootstrap the paired per-case difference on the cases both models
+answered.
+
+On the test split every adjacent gap is separable at the 95\% level, the
+narrowest being Kimi K2.5 over Sonnet 4.6 at $+0.052$ (95\% CI $[+0.005,
++0.098]$, $p{=}0.031$). On the held-out split, with 103 cases instead of 550, two
+gaps disappear: Gemini Flash over Qwen 397B ($+0.015$, CI $[-0.049, +0.082]$,
+$p{=}0.66$) and Kimi K2.5 over Sonnet 4.6 ($+0.076$, CI $[-0.023, +0.169]$,
+$p{=}0.12$). Those pairs should be read as ties. The two results we care about
+most survive on both splits: GPT-5.4 over our model ($+0.44$ held out, CI
+$[+0.38, +0.51]$) and our model over Opus 4.6 ($+0.10$ held out, CI $[+0.03,
++0.17]$, $p{=}0.007$).
+
+\subsection{What the numbers say}
+
+\textbf{1. Models explain cases well.} Clinical integration is the strongest
+rubric for every model in the study. GPT-5.4 scores a perfect 5.00 on both
+splits. The models pick up age, AMH, endometrial thickness, and prior cycle
+history and weave them into a coherent account of this patient's prognosis. If
+the task were writing the counselling note, this would be close to solved.
+
+\textbf{2. Outcome prediction sits at the floor, and we can say exactly how far
+below useful that is.} AUROC spans 0.450 to 0.562 across the field, where 0.5 is
+chance. The best number in the study, 0.562, means that given one embryo that led
+to a clinical pregnancy and one that did not, the best model ranks them correctly
+56\% of the time.
+
+Brier scores look better than they are. They cluster between 0.241 and 0.289,
+which beats the 0.25 you get by always saying 50\%, and it is tempting to read
+that as decent calibration. It is not the right comparison. The clinical
+pregnancy rate in this cohort is 0.350, so a constant predictor that says
+"35\%" for every case, ignoring the embryo, the image, and the patient entirely,
+scores 0.2274. Every model in the study loses to it.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+\textbf{Predictor} & \textbf{Brier (test)} & \textbf{Brier (held out)} \\
+\midrule
+Constant, the cohort base rate of 0.35 & \textbf{0.2278} & \textbf{0.2274} \\
+Constant, 0.50 & 0.2500 & 0.2500 \\
+\midrule
+GPT-5.4 & 0.2447 & 0.2465 \\
+Qwen9B-ORPO (ours) & 0.2491 & 0.2447 \\
+Qwen 9B (base) & 0.2552 & 0.2851 \\
+\bottomrule
+\end{tabular}
+\caption{Brier score against a predictor that ignores its inputs. No model in
+this study beats the cohort base rate on either split. Model rows are computed on
+the cases where a probability could be extracted.}
+\label{tab:baserate}
+\end{table}
+
+This is the number we most want a reader to take away, and it is not a verdict on
+the models. Section~\ref{sec:synthetic} explains why. The patient-context fields
+we added are sampled independently of outcome, so they contain no signal any
+model could use, and what remains of the real data is age, AMH, endometrial
+thickness, oocyte counts, and one morphology grade from a single day-5 frame.
+Predicting a live birth from that is close to the limit of what the public data
+supports, and no architecture fixes it. The inputs that would move this number
+are embryo genetics, longitudinal development rather than one frame, uterine and
+endometrial context, and the lifestyle and history data that today never leaves
+the physician's notes. IVF-Bench is built so those fields can be swapped from
+generated to measured as they become available, which is exactly the experiment
+the field cannot currently run.
+
+The same reasoning reframes the calibration result for our post-trained model in
+Section~\ref{sec:orpo}. Its held-out Brier of 0.245 is second of the eight,
+behind Sonnet 4.6 at 0.242, and all eight sit below a constant. What
+post-training bought is a model whose stated probabilities moved back toward the
+population rate, correcting the base model's overconfidence. On this data that is
+the right behaviour, and it is not predictive skill.
+
+\textbf{3. Morphology is the weakest rubric everywhere.} No model exceeds 3.98 on
+morphology grounding on either split, while on the test split five of eight
+exceed 4.30 on clinical integration. Models are better at reasoning about the
+structured data they are given in text than at reading the picture. Our judge
+cannot see the image either, so a model can score well here by restating the
+Gardner grade it was handed. These numbers are therefore an upper bound on true
+image reading, not a measurement of it.
+
+\textbf{4. Price and quality are only loosely related.} On the test split, Opus
+4.6 costs \$184.81 to run the 550 cases and scores 4.01, while our 9B model costs
+\$7.98 and scores 4.17. Gemini 2.5 Flash is the cheapest commercial system in the
+study and finishes seventh there, though it rises to fourth on held out, which is
+the largest split-to-split move of any model.
+
+
+% ============================================================
+\section{Post-training a small model}
+\label{sec:orpo}
+
+
+The obvious question about the gap between a 9B open model and a frontier system
+is whether it is a capability ceiling or a data problem. We tested it directly.
+
+\subsection{Building preference pairs from the benchmark}
+
+For each of the 550 test-split cases we already had seven scored responses. We
+took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
+\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, split
+500 for training and 50 for evaluation. We then fine-tuned Qwen 3.5-9B with ORPO
+\citep{hong2024orpo}, LoRA rank 16 and alpha 32 applied to all linear layers
+including the vision tower, three epochs on two H100s, with the learning rate and
+the preference weight chosen by an eight-trial search.
+
+Two properties of this dataset matter for interpreting the result. The pairs come
+from the test split, so the trained model is in-domain on the 550-case
+leaderboard and the held-out split is the honest measurement. And the chosen
+responses are close to a monoculture: GPT-5.4 wrote 460 of the 500 training
+pairs' chosen side, 92\%, which means the student is largely distilling one
+teacher, and that teacher is also the judge.
+
+\subsection{What it bought}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Rubric} & \textbf{Base 9B} & \textbf{After ORPO} & \textbf{Change} \\
+\midrule
+Overall & 3.31 & \textbf{4.11} & $+24.0\%$ \\
+Morphology grounding & 2.99 & 3.56 & $+19.2\%$ \\
+Clinical integration & 3.91 & 4.76 & $+21.6\%$ \\
+Reasoning coherence & 3.18 & 3.93 & $+23.5\%$ \\
+Guideline alignment & 2.85 & 3.93 & $+38.2\%$ \\
+Recommendation usefulness & 3.64 & 4.37 & $+20.0\%$ \\
+\midrule
+Brier score $\downarrow$ & 0.285 & \textbf{0.245} & $-14.2\%$ \\
+AUROC $\uparrow$ & 0.450 & 0.547 & $+21.7\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Base Qwen 3.5-9B against the same model after ORPO on 550 preference
+pairs, measured on the 103-case held-out split. Every rubric improves, guideline
+alignment most of all.}
+\label{tab:orpo}
+\end{table}
+
+Five hundred and fifty preference pairs moved a 9B model from last place to
+second, past Claude Opus 4.6. Every rubric improved, and that is the result worth
+holding onto: this is a recipe that lifts the whole assessment, not a trick that
+moves one number. It is also reproducible by anyone with the released dataset and
+two GPUs, which is the point of releasing it.
+
+Its held-out Brier of 0.245 is second of the eight, behind Sonnet 4.6 at 0.242,
+and should be read alongside Table~\ref{tab:baserate}. What the fine-tune fixed
+is overconfidence: the base model's mean stated probability was 0.452 against a
+true rate of 0.350, and the trained model's is 0.396. Whether the same recipe yields real predictive skill
+when the context fields are measured rather than generated is the open question
+this benchmark exists to make answerable.
+
+The base model's AUROC is instructive in the other direction. On the test split
+it posts 0.554, the highest of the eight, and on held out it collapses to 0.450,
+below chance. That is what an overfitted ranking looks like when the distribution
+shifts. The post-trained model goes the other way, 0.531 to 0.547, which suggests
+the fine-tune regularised its probability estimates rather than sharpening them.
+
+The economics are the part a clinic would care about. Running the 550 test cases
+costs \$184.81 with Opus 4.6 and \$7.98 with our model, which scores higher. At
+roughly 19 seconds and \$0.017 per case on hardware you already own, the
+post-trained small model is the sensible form factor for this workload, provided
+you want the explanation and not the prediction.
+
+
+% ============================================================
+\section{What the benchmark itself gets wrong}
+\label{sec:robustness}
+
+
+A benchmark paper should try to break its own benchmark. Four checks, all of
+which cost nothing to run because they reuse the collected responses.
+
+\textbf{Do the five rubrics measure five things?} Partly. The mean correlation
+between distinct rubrics is 0.49 and the first principal component explains 60\%
+of the variance across 4,370 judgements, so there is a strong general "good
+answer" factor. But the structure is not degenerate: recommendation usefulness
+and clinical integration correlate at 0.69, while recommendation usefulness and
+guideline alignment correlate at only 0.28. Reporting the five separately is
+justified. Reporting the unweighted mean as though it were five independent
+measurements is not.
+
+\textbf{Does the judge reward length?} Yes, and unevenly. Pooling all models, the
+Spearman correlation between response length and overall score is 0.61. Broken
+down per model it ranges from $-0.01$ for Opus 4.6 to $+0.76$ for Gemini 2.5
+Flash. Gemini is also the lowest-scoring commercial model and the one whose score
+depends most on how much it wrote. Any future version of this benchmark should
+control for length, and any reader comparing two close scores should ask whether
+one model simply wrote more.
+
+\textbf{Does patient-level leakage change anything?} No. Twenty-two patients
+contributed two embryos, and keeping only one embryo per patient removes 16 cases
+from the test split. No ranking changes and no score moves by more than 0.01. The
+defect is real and should be fixed by splitting on patient, but it did not
+contaminate these results.
+
+\textbf{Does the judge's own preference inflate our model?} We cannot rule it
+out, and this is the largest open question in the paper. GPT-5.4 is the judge, it
+wrote 92\% of the chosen responses our model learned from, and it sits at the top
+of the leaderboard. A model trained to sound like the judge should be expected to
+please the judge. Confirming the ranking with a second judge from a different
+family is the first thing we would do with more budget, and until that is done
+the sensible reading of our model's second place is "second according to
+GPT-5.4."
+
+
+% ============================================================
+\section{Limitations}
+\label{sec:limitations}
+
+
+\begin{itemize}
+\item \textbf{The judge cannot see the embryo.} Morphology grounding therefore
+      measures consistency with the Gardner grade in the prompt, not fidelity to
+      the image. The natural fix is the expert-written morphological descriptions
+      released by \citet{neu2026dataset}, which would let a future version score
+      image reading against something real.
+\item \textbf{One judge, and it is also a contestant.} GPT-5.4 grades a
+      leaderboard it appears on, and it wrote 92\% of the responses our model was
+      trained to imitate. Scoring a subset with a judge from a different family
+      would settle how much that inflates our second place. It is unfinished
+      work, not a design choice.
+\item \textbf{The prompt asks for implantation probability and we score against
+      clinical pregnancy.} Both endpoints are computed in the code; the
+      leaderboard reports clinical pregnancy. Treat the outcome metrics as a
+      stress test rather than a matched forecast.
+\item \textbf{Part of the patient context is generated}, for the reasons and with
+      the consequences set out in Section~\ref{sec:synthetic}. The two that bind
+      hardest: those fields are independent of outcome, so they cap what any
+      outcome metric here can show, and they are independent of each other, so
+      real clinical correlations such as PCOS with BMI are absent.
+\item \textbf{One clinic, one scanner, one population.} Everything here comes from
+      the Kromp release. Transfer to other labs is untested.
+\item \textbf{Splits are per image rather than per patient.} Quantified above;
+      fix in the next version.
+\item \textbf{Small absolute sample.} 550 test cases and 103 held out is enough to
+      separate most models and not enough to separate close ones, which is why
+      every comparison in this paper carries an interval.
+\end{itemize}
+
+
+% ============================================================
+\section{What we release}
+\label{sec:release}
+
+
+Everything needed to reproduce this paper is public.
+
+\begin{itemize}
+\item \textbf{Benchmark and code}, including case construction, the inference
+      runner, the judge, the metrics, and the analysis that produced every
+      interval in this paper: \url{https://github.com/The-Fertility-Plan/ivf-bench}
+\item \textbf{Model outputs}: 5,194 responses and every judge transcript for both
+      splits, in the repository under \texttt{data/runs/}.
+\item \textbf{Trained model}:
+      \url{https://huggingface.co/thefertilityplan/ivf-bench-qwen9b-vlm-orpo}
+\item \textbf{Preference dataset}:
+      \url{https://huggingface.co/datasets/thefertilityplan/ivf-bench-orpo-qwen9b-clipped}
+\item \textbf{Source data}: the Kromp blastocyst dataset \citep{kromp2023}, CC BY
+      4.0, at \url{https://doi.org/10.6084/m9.figshare.20123153.v3}. We do not
+      redistribute the images; \texttt{ivf-bench download} fetches them and
+      rebuilds our cases deterministically.
+\end{itemize}
+
+Code is Apache 2.0. Benchmark cases inherit CC BY 4.0 from the source dataset.
+Appendix~\ref{app:artifacts} lists every artifact with its identifier.
+
+The study cost \$813 as recorded in the released artifacts: \$432 for 51.5 hours
+of a two-H100 instance covering preference-data preparation, the hyperparameter
+search, training, and local inference, plus \$328 of API spend on the test split
+and \$53 on the held-out split. A further \$15 was spent re-running judge calls
+that the two defects in Section~\ref{sec:setup} had invalidated; those superseded
+calls are not counted in the per-model figures, which reflect the final scores
+only.
+
+
+\bibliography{references}
+
+\appendix
+\section{Case prompt template}
+\label{app:prompt}
+Every model receives this prompt together with the embryo image. The example is case IVF-BENCH-0001; laboratory and patient values change per case, the structure does not.
+
+\begin{lstlisting}
+You are an expert reproductive medicine specialist reviewing an IVF case.
+
+## Embryo Image
+[IMAGE ATTACHED]
+
+## Laboratory Data
+- Gardner Score: 1DD (Expansion: blastocyst, blastocoel at least half the embryo, ICM: degenerative or absent, TE: degenerative or absent)
+- COCs retrieved: 8
+- MII oocytes: 6
+- Transfer day: Day 4
+
+## Patient Profile
+- Female age: 39 | BMI: 28.1
+- AMH: 2.0 ng/mL | FSH: 5.8 IU/L
+- Diagnosis: Tubal Factor
+- Stimulation protocol: Long Agonist
+- Previous IVF cycles: 3 (no_pregnancy, clinical_miscarriage, biochemical_pregnancy)
+- Partner age: 37
+- Sperm: 88.2 M/mL, 78.2% motile
+- Endometrial thickness: 7.0 mm
+- Lifestyle: never smoker; moderate drinker (4-6/wk); very active (daily exercise); standard diet; moderate stress
+
+## Task
+Provide a comprehensive clinical assessment including:
+1. Morphological analysis of the blastocyst image
+2. Integration of patient factors with embryo quality
+3. Risk factors and favorable indicators for this case
+4. Estimated implantation probability range with reasoning
+5. Recommendations for this transfer and future cycle planning
+\end{lstlisting}
+
+
+\section{Rubric definitions}
+\label{app:rubrics}
+The judge returns a score and a one-line justification for each rubric, plus the numeric probability it extracted from the response. Rubric text is reproduced verbatim from \texttt{src/ivf\_bench/eval/judge.py}.
+
+\paragraph{Morphological Accuracy}
+How accurately does the response describe the embryo's morphological features as visible in the image? Consider: expansion stage assessment, ICM description, TE description, zona pellucida observations, overall blastocyst appearance.
+\begin{itemize}
+\item \textbf{1}: Major errors or fabricated features not visible in the image
+\item \textbf{2}: Several inaccuracies in morphological description
+\item \textbf{3}: Mostly accurate with some minor errors or omissions
+\item \textbf{4}: Accurate description with good detail
+\item \textbf{5}: Precise, thorough morphological analysis matching the image
+\end{itemize}
+
+\paragraph{Clinical Integration}
+How well does the response integrate patient clinical factors (age, AMH, BMI, diagnosis, previous outcomes, sperm parameters) with the embryo assessment? Does it consider how these factors interact with embryo quality?
+\begin{itemize}
+\item \textbf{1}: No integration of clinical factors with embryo assessment
+\item \textbf{2}: Mentions clinical factors but doesn't connect them to embryo quality
+\item \textbf{3}: Some integration but misses key interactions
+\item \textbf{4}: Good integration of most relevant clinical factors
+\item \textbf{5}: Comprehensive integration showing how clinical factors affect prognosis
+\end{itemize}
+
+\paragraph{Reasoning Coherence}
+Is the clinical reasoning logical, consistent, and free of contradictions? Does the probability estimate follow from the evidence presented? Are conclusions supported by the observations?
+\begin{itemize}
+\item \textbf{1}: Contradictory or illogical reasoning
+\item \textbf{2}: Significant logical gaps or inconsistencies
+\item \textbf{3}: Generally coherent with minor logical issues
+\item \textbf{4}: Well-structured reasoning with clear logic
+\item \textbf{5}: Exemplary reasoning chain with all conclusions well-supported
+\end{itemize}
+
+\paragraph{Guideline Alignment}
+Does the response align with established IVF clinical guidelines (ESHRE, ASRM, Gardner grading criteria)? Are the recommendations consistent with evidence-based reproductive medicine?
+\begin{itemize}
+\item \textbf{1}: Recommendations contradict established guidelines
+\item \textbf{2}: Several recommendations not aligned with guidelines
+\item \textbf{3}: Mostly aligned with some deviations
+\item \textbf{4}: Well-aligned with current clinical guidelines
+\item \textbf{5}: Fully aligned, demonstrates deep knowledge of current guidelines
+\end{itemize}
+
+\paragraph{Actionability}
+Are the recommendations specific, practical, and useful for a clinician? Does the response provide clear next steps for this transfer and future cycle planning? Are recommendations appropriately nuanced?
+\begin{itemize}
+\item \textbf{1}: No actionable recommendations or only generic advice
+\item \textbf{2}: Vague recommendations with little practical value
+\item \textbf{3}: Some useful recommendations but lacking specificity
+\item \textbf{4}: Clear, specific recommendations for this case
+\item \textbf{5}: Highly specific, nuanced recommendations with alternatives considered
+\end{itemize}
+
+
+\section{Artifact index}
+\label{app:artifacts}
+\begin{table}[H]
+\centering\small
+\begin{tabular}{ll}
+\toprule
+\textbf{Artifact} & \textbf{Location} \\
+\midrule
+Code and benchmark & \url{https://github.com/The-Fertility-Plan/ivf-bench} \\
+Trained model & \url{https://huggingface.co/thefertilityplan/ivf-bench-qwen9b-vlm-orpo} \\
+Preference dataset & \url{https://huggingface.co/datasets/thefertilityplan/ivf-bench-orpo-qwen9b-clipped} \\
+Source embryo data (CC BY 4.0) & \url{https://doi.org/10.6084/m9.figshare.20123153.v3} \\
+Model responses and judge transcripts & \texttt{data/runs/} in the repository \\
+Statistics in this paper & \texttt{scripts/paper\_analysis.py} \\
+\bottomrule
+\end{tabular}
+\caption{Everything released with this paper.}
+\end{table}
+
+To cite this work:
+
+\begin{lstlisting}
+@article{correa2026ivfbench,
+  author  = {Correa, Andrew G. A. and Yoon, Brittany},
+  title   = {{IVF-Bench}: Vision-Language Models Explain Embryo Cases Well and
+             Predict Outcomes Poorly},
+  journal = {arXiv preprint},
+  year    = {2026}
+}
+\end{lstlisting}
+
+
+\end{document}

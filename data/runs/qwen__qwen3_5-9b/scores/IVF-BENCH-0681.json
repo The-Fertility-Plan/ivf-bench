@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0681",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner expansion stage: it calls grade 2 'fully expanded' and suggests hatching/on the verge of hatching, which is incorrect. It also describes TE as grade B despite the provided lab definition stating TE has few cells forming a loose epithelium, more consistent with C than B. ICM description is reasonable, but key morphology grading details are inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, smoking, endometrial thickness, sperm parameters, and ovarian response with prognosis in a clinically meaningful way. It misses some nuance around BMI and overstates the link between high AMH and egg quality, but overall integration is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the reasoning is weakened by internal inconsistencies: it labels the embryo 'top-tier' despite the reported 2AB details being less favorable than stated, and bases prognosis partly on incorrect morphology interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (proceed with transfer, smoking cessation, luteal support, consider embryo cryopreservation). However, the Gardner grading interpretation is inaccurate, and the suggestion that high AMH correlates with better egg quality and that 2AB is 'top-tier' is not well aligned with standard grading interpretation. PGT-A discussion is acceptable but somewhat loosely framed for a 33-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, smoking cessation, luteal support, cryopreservation, possible PGT-A discussion, and endometriosis management considerations. Recommendations are useful, though not highly individualized or protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.00750625,
+  "judge_latency_ms": 7871.396375005133,
+  "judge_prompt_tokens": 2381,
+  "judge_completion_tokens": 453
+}

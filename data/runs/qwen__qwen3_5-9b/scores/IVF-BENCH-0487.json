@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0487",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 0DD/early blastocyst assessment and poor ICM/TE, but it adds uncertain image-specific details such as '8–12 cells visible' and a 'distinct fluid cavity' that may not be reliably discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm motility, diagnosis, endometrium, and lifestyle factors with embryo quality, though it overstates some links such as assuming PCOS from AMH alone and attributing embryo quality primarily to lifestyle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from 0DD morphology, but there are notable issues: sperm is called normal despite low motility, PCOS/high AMH is linked to higher aneuploidy without strong support, and some causal claims are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic interpretation of poor-quality blastocyst is aligned, but several recommendations are not well guideline-based: suggesting freeze-all/cancel transfer for a single poor embryo, recommending PGT-A largely because of high AMH/possible PCOS in a 28-year-old, and implying high AMH predicts aneuploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points, lifestyle modification advice, and future-cycle considerations, though some recommendations lack nuance and may not be appropriate for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01341,
+  "judge_latency_ms": 4592.607291000604,
+  "judge_prompt_tokens": 2575,
+  "judge_completion_tokens": 379
+}

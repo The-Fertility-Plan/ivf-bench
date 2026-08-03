@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0542",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst, correctly identifies good ICM and looser TE, but overstates visible details such as a specific thinning/hatching area and calls grade 3 'clearly expanded' despite the provided lab label being more reliable than image-only certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, alcohol use, sperm parameters, endometrium, and unexplained infertility with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with probability estimate tied to embryo grade and patient modifiers, though some claims are slightly overstated (e.g., ICM as strong predictor of euploidy, alcohol effect framing)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo assessment and general counseling, but includes weaker recommendations such as ERA after one failed transfer and overstates certainty around immediate alcohol effects and PGT-A utility at age 32."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, lifestyle counseling, and possible future evaluation, though some suggested tests are not ideally prioritized or sufficiently conditional."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.011613,
+  "judge_latency_ms": 4602.923250000458,
+  "judge_prompt_tokens": 2331,
+  "judge_completion_tokens": 308
+}

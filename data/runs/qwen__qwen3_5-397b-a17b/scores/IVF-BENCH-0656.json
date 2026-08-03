@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response reasonably identifies a very poor-quality embryo with absent/degenerative ICM and TE, but it introduces uncertainty by calling it morula-to-early blastocyst and emphasizing lack of blastocoel despite the provided Gardner score. It does not address zona pellucida or give a tightly image-grounded blastocyst description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, sperm data, endometrium, and protocol with embryo quality and prognosis. However, some links are speculative, especially inferred hyporesponse/oversuppression and sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the poor prognosis follows from the embryo grade, but there are notable inconsistencies: it highlights a contradiction in the stage description, then leans heavily on visual reinterpretation, and states the embryo lacks structural integrity required for viability while still giving up to 5% implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The interpretation of a DD embryo as very poor prognosis is broadly aligned with Gardner-based assessment, and counseling/review of protocol are reasonable. But some recommendations are more speculative than guideline-driven, such as asserting uterine factors are ruled out by 11 mm lining, routine DFI testing implication, and blanket ICSI recommendation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, transfer expectations, weight optimization, protocol reconsideration, and further male-factor workup. Recommendations are useful, though some are not sufficiently nuanced or conditional on full clinical context."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013113,
+  "judge_latency_ms": 7791.926666046493,
+  "judge_prompt_tokens": 2326,
+  "judge_completion_tokens": 409
+}

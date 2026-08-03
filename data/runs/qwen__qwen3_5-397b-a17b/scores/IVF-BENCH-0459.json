@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0459",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality/degenerating blastocyst and DD-grade implications, but it misstates Gardner stage 1 as having a blastocoel less than half the embryo, adds features like vacuolation/fragmentation not clearly verifiable, and overstates certainty of non-viability from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, smoking, ovarian reserve, sperm parameters, BMI, and endometrial thickness with embryo prognosis well, though some links (e.g., smoking as a major cause of this specific embryo degeneration) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable issues: it highlights the prompt's stage-description contradiction yet then uses an incorrect stage-1 definition, and it jumps from poor morphology to absolute non-viability/cancel transfer with excessive certainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While many points are broadly evidence-based, recommending to categorically cancel transfer because the embryo is 'non-viable' is not well aligned with standard practice from morphology alone, and some recommendations (routine PGT-A, DHEA) are presented too strongly for guideline-level support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions on lifestyle modification, protocol review, trigger timing, possible dual trigger, and future-cycle planning, though the transfer recommendation is too absolute and insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0114675,
+  "judge_latency_ms": 5528.248290996999,
+  "judge_prompt_tokens": 2253,
+  "judge_completion_tokens": 389
+}

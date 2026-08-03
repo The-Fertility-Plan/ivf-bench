@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AA blastocyst, but it overstates image-specific certainty and includes features like thinning/ready for hatching that are not fully supported given the provided grade 3 rather than hatching stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors including female age, prior live birth, BMI, sperm parameters, endometrium, and ovarian response, though it overinterprets FSH and does not address missing AMH or diagnosis uncertainty in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling age 36 both 'good' and not advanced maternal age, overstating paternal-age aneuploidy impact, and using a somewhat simplistic implantation calculation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally supports reasonable practices such as SET and considering PGT-A in future cycles, but contains guideline-level inaccuracies, especially the claim that natural cycle is associated with higher embryo quality and the framing of paternal age/FSH effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, SET, lifestyle optimization, and future consideration of PGT-A, though recommendations are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.0106725,
+  "judge_latency_ms": 5434.016249957494,
+  "judge_prompt_tokens": 2361,
+  "judge_completion_tokens": 318
+}

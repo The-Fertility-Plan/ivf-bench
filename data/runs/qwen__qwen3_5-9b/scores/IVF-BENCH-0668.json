@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AC label, especially strong ICM and sparse TE, but it overstates some image-specific details such as being 'fully expanded,' asymmetric zona thinning, and readiness for hatching that are not clearly verifiable from the prompt/image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior IVF failures, smoking, ovarian reserve markers, BMI, endometrium, and sperm parameters with embryo quality in a clinically meaningful way, though the DOR framing is somewhat overstated for AMH 1.5/FSH 7.5."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical: poor TE plus advanced age and repeated failures lowers prognosis. Minor issues include conflating implantation and live birth probabilities and making some stronger causal claims than the data support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on the importance of age, morphology limits, smoking cessation, and considering PGT-A after repeated failures, but recommendations for routine sperm DNA fragmentation testing, preference for FET over fresh, and ICSI to reduce DNA damage are not universally guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including counseling on prognosis and lifestyle modification. However, some suggestions are not sufficiently nuanced or evidence-based for routine use."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.00666875,
+  "judge_latency_ms": 6414.8170000407845,
+  "judge_prompt_tokens": 2559,
+  "judge_completion_tokens": 347
+}

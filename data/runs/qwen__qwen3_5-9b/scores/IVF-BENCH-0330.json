@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0330",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst, but it overstates hatching/near-hatching for grade 3 and infers some image details beyond what is securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, sperm quality, endometrial thickness, and embryo grade well, though it somewhat overinterprets prior live birth and low oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are notable issues: calling 3 oocytes a clear poor response at age 32, overstating uterine/immune implications of prior live birth, and recommendations that do not fully follow from the presented cycle context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice, including advising not to freeze because of cryosurvival concerns, suggesting pre-transfer estrogen/progesterone priming in a fresh transfer context, and raising donor eggs too aggressively for a 32-year-old with a usable blastocyst."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete suggestions for transfer and future planning, but some are not appropriately nuanced or clinically sound for this case, limiting practical usefulness."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.0106875,
+  "judge_latency_ms": 5160.168790956959,
+  "judge_prompt_tokens": 2391,
+  "judge_completion_tokens": 314
+}

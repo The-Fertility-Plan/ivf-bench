@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor ICM/TE quality, but it introduces a likely grading error by calling the embryo visually more expanded and even referencing an expanded blastocyst/grade 3 despite the provided Gardner score being 1DD and transfer day 4. It also mentions features like granular cytoplasm/vacuole that are not clearly established from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian response, endometrium, sperm, and infertility diagnosis with embryo quality reasonably well. However, it overstates the significance of FSH 9.2 and does not fully contextualize tubal factor and the absence of AMH/AFC data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor morphology, but there are notable inconsistencies: confusion over blastocyst expansion stage, calling FSH 9.2 a major red flag, and linking poor morphology too strongly to presumed diminished reserve without sufficient evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are aligned, such as emphasizing poor prognosis for a DD embryo and recommending counseling, but several recommendations are weakly aligned: suggesting PGT-A as highly recommended in a 28-year-old based mainly on morphology/FSH, proposing more aggressive stimulation without reserve data, and even mentioning donor eggs after a first cycle in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as counseling, proceeding with transfer, and obtaining AMH/AFC, but future-cycle advice is somewhat generic and not sufficiently nuanced for this specific young first-cycle tubal-factor patient."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012045,
+  "judge_latency_ms": 7006.132250011433,
+  "judge_prompt_tokens": 2280,
+  "judge_completion_tokens": 423
+}

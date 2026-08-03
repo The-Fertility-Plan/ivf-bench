@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner notation, incorrectly assigning expansion/ICM/TE components (calling expansion 'D' and ICM/TE '1'). It also states the blastocyst is fully expanded and ready to hatch, which conflicts with the provided 1DD grade indicating early blastocyst expansion with very poor ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrial thickness, oocyte yield, and sperm parameters with embryo quality reasonably well, though some inferences about sperm DNA fragmentation and expected embryo grade are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis estimate follows from poor morphology, but there are notable inconsistencies stemming from the incorrect grading interpretation and some overstatements about aneuploidy and TE function."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling about poor prognosis and considering transfer if this is the only embryo is reasonable, but strong endorsement of PGT-A and ICSI based on a single poor-quality embryo and presumed sperm DNA damage is more assertive than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for counseling, transfer decision-making, and future evaluation, including sperm DNA fragmentation testing and lifestyle optimization, though some recommendations are not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.012453,
+  "judge_latency_ms": 5028.529041002912,
+  "judge_prompt_tokens": 2341,
+  "judge_completion_tokens": 362
+}

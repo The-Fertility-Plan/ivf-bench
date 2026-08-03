@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0477",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response contains a key grading inconsistency: it calls the embryo 'fully expanded' while also labeling it Gardner 2, whereas full blastocyst corresponds to stage 3. It gives plausible ICM/TE comments but adds image-specific detail with limited support and omits zona-related assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, oocyte yield, BMI, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it overstates poor responder/DOR conclusions without AMH and misses some nuance around tubal factor and first-cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable issues: the morphology-stage contradiction, implying a single blastocyst from limited data, and labeling FSH 7.7 as suggesting DOR. The implantation estimate is directionally reasonable but only partially justified in the truncated response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly consistent with IVF principles on age-related aneuploidy risk and morphology, but misstates Gardner expansion criteria and makes somewhat non-guideline-supported claims about stress effects and DOR based on FSH alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response provides risk/benefit framing and a probability estimate but does not include clear, specific transfer recommendations or future cycle planning steps in the excerpt shown."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.011448,
+  "judge_latency_ms": 4897.019124997314,
+  "judge_prompt_tokens": 1966,
+  "judge_completion_tokens": 370
+}

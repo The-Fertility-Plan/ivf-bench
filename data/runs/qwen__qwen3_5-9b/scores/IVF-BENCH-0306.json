@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0306",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response explicitly notes the image does not resemble a blastocyst, then proceeds to assign ICM, TE, and blastocoel features that are not reliably visible, fabricating morphology from the provided 3AA label rather than the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, ovarian reserve markers, sperm quality, endometrium, and prior cycle history with prognosis reasonably well, though it overstates the significance of oocyte yield for this transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There are notable inconsistencies: it calls 3AA the highest possible grade, labels 6 MII as poor response and a 'miracle' outcome, and subtracts implantation probability for oocyte yield despite discussing a single embryo transfer prognosis. The day-4 versus blastocyst discrepancy is correctly identified, but overall logic is uneven."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned (recognizing the day-4/blastocyst inconsistency, favorable age/endometrium), but several recommendations are not evidence-based or are overstated, including rescheduling transfer solely based on the discrepancy, routine GH/add-ons, and strong claims about poor response and likely euploidy from morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as clarifying embryo stage and considering weight optimization, but several recommendations are either too generic or not well supported, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0116175,
+  "judge_latency_ms": 8255.658250011038,
+  "judge_prompt_tokens": 2445,
+  "judge_completion_tokens": 367
+}

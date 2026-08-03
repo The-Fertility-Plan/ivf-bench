@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0309",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It broadly recognizes a poor-quality early blastocyst/morula-like embryo and notes absent/degenerative ICM and TE consistent with 1DD, but it misstates Gardner 1 as 'less than half' rather than at least half the embryo and adds limited image-specific detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, BMI, sperm quality, and infertility diagnosis with embryo quality, but overinterprets missing AMH and incorrectly frames 9 MII/10 COCs as clearly low response for age without sufficient context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic that 1DD predicts poor implantation is coherent, but there are notable issues: confusion between day-4 transfer and cleavage-stage terminology, and unsupported conclusions about diminished reserve/poor responder status and donor eggs."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis of a 1DD embryo is appropriately recognized, several recommendations are not well aligned with evidence-based IVF practice, including overstating stress effects, suggesting growth hormone routinely, and early donor-oocyte counseling after a first cycle in a 28-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as counseling if this is the only embryo and reviewing stimulation if unsuccessful, but recommendations are somewhat generic and include questionable suggestions rather than a nuanced evidence-based plan."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012186,
+  "judge_latency_ms": 5130.306209000992,
+  "judge_prompt_tokens": 2342,
+  "judge_completion_tokens": 344
+}

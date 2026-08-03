@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0202",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality blastocyst and correctly identifies absent/degenerative ICM and TE, but it introduces uncertainty/contradiction about expansion grade (saying grade 1 yet suggesting grade 2) and mentions granular disorganization that may not be firmly image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, endometriosis, sperm parameters, endometrial thickness, and cycle context with embryo quality reasonably well, though some links (e.g., stress effects, inferred sperm DNA fragmentation) are somewhat speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear: severely poor morphology drives a very low implantation estimate despite some favorable patient factors. Minor issues include the expansion-grade inconsistency and a few speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading principles and standard IVF counseling for a very poor-quality day-5 blastocyst. However, some statements are stronger than evidence supports (e.g., implying near non-viability, broad assumptions about aneuploidy/DNA fragmentation) and the recommendation section is incomplete."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides a practical recommendation to proceed with transfer with counseling and frames prognosis clearly, but the response is truncated and lacks fuller concrete next-step planning for luteal support, follow-up, and future cycle optimization."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.010805,
+  "judge_latency_ms": 6950.364707969129,
+  "judge_prompt_tokens": 2174,
+  "judge_completion_tokens": 358
+}

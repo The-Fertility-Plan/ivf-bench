@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0470",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality expanded blastocyst and the provided 3AA grade, but it likely over-interprets image details such as a specific hatching 'bleb' and gives more certainty about ICM/TE visibility than a single image reliably supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, AMH, endometriosis, prior miscarriage, BMI, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though it somewhat overstates AMH as a marker of egg quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate that broadly follows from morphology plus age-related aneuploidy risk; minor issues include overstating paternal age impact and calling 3AA 'the highest' grade without nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on morphology, transfer suitability, and counseling, but recommendations such as NSAIDs/low-dose aspirin or immunomodulatory approaches for endometriosis are not standard evidence-based routine practice, and PGT-A is presented somewhat too strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling, considering uterine cavity evaluation, and discussing future PGT-A/freeze options, though some suggestions are not sufficiently guideline-nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012513,
+  "judge_latency_ms": 4275.579666995327,
+  "judge_prompt_tokens": 2356,
+  "judge_completion_tokens": 363
+}

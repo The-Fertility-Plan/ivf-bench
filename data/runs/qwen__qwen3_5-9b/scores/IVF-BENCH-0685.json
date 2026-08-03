@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB grading, correctly identifying strong ICM and somewhat less robust TE, but it overstates the expansion stage by calling it clearly expanded/near hatching and says it may have successfully hatched, which is not supported by a Gardner 3 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, PCOS, ovarian reserve, prior IVF outcomes, sperm parameters, partner age, and endometrial thickness with embryo quality reasonably well, though it somewhat overemphasizes paternal age as the dominant explanation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structured and logical, but there are notable issues: it treats paternal age 44 as a major driver of aneuploidy/biochemical loss with stronger certainty than evidence supports, and the implantation estimate is somewhat inconsistently justified from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recommending transfer of a usable day-5 3AB blastocyst and considering further evaluation after repeated failures, but it overstates support for routine PGT-A and sperm DNA fragmentation testing based mainly on paternal age and biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, hCG monitoring, and future-cycle considerations such as PGT-A discussion, sperm DNA fragmentation testing, and metabolic assessment, though some recommendations are not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.00684875,
+  "judge_latency_ms": 6304.652624996379,
+  "judge_prompt_tokens": 2463,
+  "judge_completion_tokens": 377
+}

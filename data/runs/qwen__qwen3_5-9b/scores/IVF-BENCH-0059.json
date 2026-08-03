@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It relies heavily on the provided Gardner score rather than the image and introduces questionable image-based claims, including calling it a compacted morula transitioning to blastocyst while also labeling it 3AA expanded blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS/AMH, ovarian response, BMI, sperm parameters, paternal age, and lifestyle factors with prognosis, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: contradictory morphology interpretation, overstating paternal-age effects on aneuploidy, and a probability adjustment that is only partly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly consistent with IVF practice, but recommending PGT-A largely because of paternal age/PCOS is not strongly guideline-based, and some statements about risk factors are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, alcohol cessation, OHSS vigilance, luteal support, and future-cycle counseling, though recommendations could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0105975,
+  "judge_latency_ms": 4179.248082975391,
+  "judge_prompt_tokens": 2361,
+  "judge_completion_tokens": 313
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0217",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It broadly recognizes a poor-quality early blastocyst consistent with 1DD, but it fabricates specific spatial details such as the ICM being on the right and TE on the left, and overstates visual certainty from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates age, AMH, male factor, prior cycle history, and lifestyle, but makes unsupported links such as inferring likely PCOS, suboptimal retrieval, and attributing poor embryo quality to smoking history and sperm DNA fragmentation without sufficient evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The overall conclusion of very poor prognosis is coherent, but there are notable logical problems: it invents a fertilization rate from missing data, calls the patient both high reserve and a poor responder, and recommends freezing this embryo despite describing it as often non-viable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Recognizing 1DD as very poor prognosis is aligned with practice, but several recommendations are not guideline-consistent or are overstated, including freezing a 1DD embryo, labeling it negligible/non-viable categorically, and making strong protocol changes based on limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers concrete next steps such as counseling, considering sperm DNA fragmentation testing, and reviewing insemination strategy, but some actions are poorly tailored or questionable for this case, especially the freezing recommendation and smoking cessation advice to a former smoker."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01131,
+  "judge_latency_ms": 6648.470583022572,
+  "judge_prompt_tokens": 2238,
+  "judge_completion_tokens": 381
+}

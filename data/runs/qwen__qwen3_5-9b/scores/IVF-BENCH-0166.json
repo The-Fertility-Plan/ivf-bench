@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0166",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a 3AB blastocyst with good ICM and looser TE, but it overstates visible features such as a 'significant opening' in the zona and adds image-specific detail not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm quality, endometrium, and embryo grade reasonably well, though it overcalls diminished ovarian reserve without AMH and infers a single blastocyst without explicit data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling FSH 6.6 suggestive of DOR, labeling this a poor responder profile too strongly, and misinterpreting 'Day 4 blastocyst' as arrested development."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are standard (SET, age-related aneuploidy counseling), but recommending PGT-A as 'highly recommended' with only one embryo and suggesting freeze-all/FET for endometrial optimization are not well supported here; the Day 4 discussion is also not guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as clarifying transfer timing, counseling on prognosis, and discussing transfer strategy, though some recommendations are based on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.0110825,
+  "judge_latency_ms": 5543.303916987497,
+  "judge_prompt_tokens": 2447,
+  "judge_completion_tokens": 331
+}

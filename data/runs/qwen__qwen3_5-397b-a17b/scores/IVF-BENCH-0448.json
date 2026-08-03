@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0448",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes a very poor-quality/arrested embryo and absent ICM/TE, but it misinterprets Gardner 0 as no blastocoel rather than early blastocyst, and adds unsupported claims such as definite non-viability/collapsed-degenerate state without careful image-based nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, FSH, BMI, endometriosis, sperm parameters, and endometrial thickness with embryo quality reasonably well, though some links are somewhat speculative and AMH is unavailable but not discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and internally consistent, but it overstates certainty by calling the embryo definitively non-viable and recommending cancellation based on a 0DD early blastocyst, which is a logical overreach from the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is broadly appropriate, but key recommendations are not well aligned with standard IVF practice: 0DD does not automatically mandate transfer cancellation, and routine ICSI, antioxidant prescribing, and prolonged suppression are not universally guideline-supported in this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for current and future management, including checking for other embryos and considering sperm DNA testing and protocol changes, though some recommendations are too definitive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.0113575,
+  "judge_latency_ms": 7286.443083023187,
+  "judge_prompt_tokens": 2353,
+  "judge_completion_tokens": 365
+}
