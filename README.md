@@ -21,17 +21,19 @@ job a clinician actually does before a transfer, and nobody was measuring it.
 
 Held-out split, 103 cases never used for training, tuning, or judge calibration.
 Scores are 1 to 5 from a five-rubric GPT-5.4 judge; Brier and AUROC compare the
-model's stated probability against the real clinical pregnancy outcome.
+model's stated probability against the real clinical pregnancy outcome. Bold
+marks our row for identification only and does not indicate a best value: the
+best overall score is GPT-5.4's and the best Brier is Sonnet 4.6's.
 
 | # | Model | Overall | Morph | Clinical | Reasoning | Guideline | Recommend | Brier | AUROC | Cost / 550 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | GPT-5.4 | 4.55 | 3.98 | 5.00 | 4.65 | 4.23 | 4.88 | 0.246 | 0.562 | $61.10 |
-| 2 | **IVF-Bench-Qwen9B-ORPO (ours)** | **4.11** | 3.56 | 4.76 | 3.93 | 3.93 | 4.37 | 0.245 | 0.547 | $7.98* |
+| 2 | **IVF-Bench-Qwen9B-ORPO (ours)** | 4.11 | 3.56 | 4.76 | 3.93 | 3.93 | 4.37 | 0.245 | 0.547 | $7.98* |
 | 3 | Claude Opus 4.6 | 4.01 | 3.60 | 4.92 | 3.98 | 3.22 | 4.31 | 0.247 | 0.551 | $184.81 |
 | 4 | Gemini 2.5 Flash | 3.83 | 3.34 | 4.40 | 3.90 | 3.54 | 3.98 | 0.289 | 0.504 | $7.77 |
 | 5 | Qwen 3.5-397B | 3.82 | 3.48 | 4.31 | 3.88 | 3.44 | 3.98 | 0.265 | 0.551 | $10.94 |
 | 6 | Kimi K2.5 | 3.73 | 3.48 | 4.42 | 3.80 | 3.04 | 3.90 | 0.254 | 0.518 | $10.99 |
-| 7 | Claude Sonnet 4.6 | 3.65 | 3.07 | 4.51 | 3.73 | 2.89 | 4.06 | **0.242** | 0.534 | $38.39 |
+| 7 | Claude Sonnet 4.6 | 3.65 | 3.07 | 4.51 | 3.73 | 2.89 | 4.06 | 0.242 | 0.534 | $38.39 |
 | 8 | Qwen 3.5-9B (base) | 3.31 | 2.99 | 3.91 | 3.18 | 2.85 | 3.64 | 0.285 | 0.450 | $6.37 |
 
 \* Our model's cost is not comparable with the rest of the column. Its inference
