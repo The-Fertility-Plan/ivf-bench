@@ -360,29 +360,15 @@ GPT-5.4."
 \end{itemize}
 
 % ===== RELEASE =====
-Everything needed to reproduce this paper is public.
+Everything needed to reproduce this paper is public: the benchmark, the
+evaluation code, all 5,194 model responses, every judge transcript, the
+preference dataset, and the post-trained model. Appendix~\ref{app:artifacts}
+gives the locations and the licences. We do not redistribute the embryo images,
+which remain with the source dataset \citep{kromp2023} under CC BY 4.0; our
+release rebuilds every case from that source deterministically.
 
-\begin{itemize}
-\item \textbf{Benchmark and code}, including case construction, the inference
-      runner, the judge, the metrics, and the analysis that produced every
-      interval in this paper: \url{https://github.com/The-Fertility-Plan/ivf-bench}
-\item \textbf{Model outputs}: 5,194 responses and every judge transcript for both
-      splits, in the repository under \texttt{data/runs/}.
-\item \textbf{Trained model}:
-      \url{https://huggingface.co/thefertilityplan/ivf-bench-qwen9b-vlm-orpo}
-\item \textbf{Preference dataset}:
-      \url{https://huggingface.co/datasets/thefertilityplan/ivf-bench-orpo-qwen9b-clipped}
-\item \textbf{Source data}: the Kromp blastocyst dataset \citep{kromp2023}, CC BY
-      4.0, at \url{https://doi.org/10.6084/m9.figshare.20123153.v3}. We do not
-      redistribute the images; \texttt{ivf-bench download} fetches them and
-      rebuilds our cases deterministically.
-\end{itemize}
-
-Code is Apache 2.0. Benchmark cases inherit CC BY 4.0 from the source dataset.
-Appendix~\ref{app:artifacts} lists every artifact with its identifier.
-
-The study cost \$813 as recorded in the released artifacts: \$432 for 51.5 hours
-of a two-H100 instance covering preference-data preparation, the hyperparameter
+The study cost \$813 as recorded in those artifacts: \$432 for 51.5 hours of a
+two-H100 instance covering preference-data preparation, the hyperparameter
 search, training, and local inference, plus \$328 of API spend on the test split
 and \$53 on the held-out split. A further \$15 was spent re-running judge calls
 that the two defects in Section~\ref{sec:setup} had invalidated; those superseded
