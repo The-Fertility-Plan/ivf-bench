@@ -6,58 +6,54 @@
 \centering
 \begin{tikzpicture}[
   font=\small,
+  every node/.append style={execute at begin node=\setlength{\emergencystretch}{2em}},
   box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
-              minimum height=8mm, text width=#1},
-  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
+              minimum height=9mm, text width=#1},
+  dec/.style={draw, diamond, aspect=3.2, align=center, inner sep=1pt,
+              font=\scriptsize, minimum width=30mm, minimum height=13mm},
   ar/.style={-{Latex[length=2mm]}, thick},
-  node distance=6mm,
 ]
 
-% ---------------- left column: the conventional framing
-\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
-\node[box=26mm, below=5mm of lh] (li) {Embryo image};
-\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
-\node[box=26mm, below=of lm] (ls) {Scalar score};
-\node[box=26mm, below=of ls] (lr) {Ranked embryos};
-\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
-\draw[ar] (li) -- (lm);
-\draw[ar] (lm) -- (ls);
-\draw[ar] (ls) -- (lr);
-\draw[ar] (lr) -- (lo);
+% ---- left column: the conventional framing. Explicit y coordinates, so
+% nothing can collide as node heights change.
+\node[font=\bfseries] at (0,0.9) {Conventional evaluation};
+\node[box=28mm] (li) at (0,0)    {Embryo image};
+\node[box=28mm] (lm) at (0,-1.6) {Scoring model\\[-1pt]\footnotesize CNN or time-lapse};
+\node[box=28mm] (ls) at (0,-3.2) {Scalar score};
+\node[box=28mm] (lr) at (0,-4.8) {Ranked embryos};
+\node[box=28mm, fill=black!5] (lo) at (0,-6.6) {Scored by outcome\\[-1pt]\footnotesize AUROC only};
+\foreach \a/\b in {li/lm, lm/ls, ls/lr, lr/lo} \draw[ar] (\a) -- (\b);
 
-% ---------------- right column: this work
-\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
-\node[box=52mm, below=5mm of rh] (ri)
-  {Embryo image \textbf{+} patient context\\
+% ---- right column
+\node[font=\bfseries] at (7.4,0.9) {IVF-Bench (this work)};
+\node[box=54mm] (ri) at (7.4,0)
+  {Embryo image \textbf{+} patient context\\[-1pt]
    \footnotesize Gardner grade, cycle data, history};
-\node[box=52mm, below=of ri] (rm) {Vision-language model};
-\node[box=52mm, below=of rm] (ra)
-  {Open-ended assessment\\
-   \footnotesize morphology, integration, probability, plan};
-\node[dec, below=6mm of ra] (rd) {which\\part?};
+\node[box=54mm] (rm) at (7.4,-1.7) {Vision-language model};
+\node[box=56mm] (ra) at (7.4,-3.2)
+  {Open-ended assessment\\[-1pt]
+   \footnotesize morphology, integration,\\[-1pt]probability, plan};
+\node[dec] (rd) at (7.4,-4.7) {which part?};
+\node[box=25mm, minimum height=12mm] (rj) at (5.3,-6.5)
+  {Five rubrics\\[-1pt]\footnotesize LLM judge, 1--5};
+\node[box=25mm, minimum height=12mm] (rp) at (9.5,-6.5)
+  {Stated probability\\[-1pt]\footnotesize Brier, AUROC};
+\node[box=54mm, fill=black!5] (ro) at (7.4,-8.3)
+  {Scored by rubrics \textbf{and} outcome};
 
-\node[box=30mm, below left=9mm and -4mm of rd] (rj)
-  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
-\node[box=30mm, below right=9mm and -4mm of rd] (rp)
-  {Stated probability\\\footnotesize Brier, AUROC};
-\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
-  {Measured by rubric scores \textbf{and} outcome};
-
-\draw[ar] (ri) -- (rm);
-\draw[ar] (rm) -- (ra);
-\draw[ar] (ra) -- (rd);
-\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
-\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
-\draw[ar] (rj) |- (ro);
-\draw[ar] (rp) |- (ro);
+\foreach \a/\b in {ri/rm, rm/ra, ra/rd} \draw[ar] (\a) -- (\b);
+\draw[ar] (rd.west) -- ++(-2.1,0) node[midway, above, font=\scriptsize] {reasoning} |- (rj.north);
+\draw[ar] (rd.east) -- ++(2.1,0)  node[midway, above, font=\scriptsize] {prognosis} |- (rp.north);
+\draw[ar] (rj.south) -- ($(ro.north west)!0.5!(ro.north)$);
+\draw[ar] (rp.south) -- ($(ro.north east)!0.5!(ro.north)$);
 \end{tikzpicture}
 \caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
 maps an image to a scalar and is scored only by how well that scalar ranks
-outcomes, so a model that reasons well about a patient and a model that does not
-are indistinguishable. IVF-Bench supplies the patient context alongside the
-image, elicits an open-ended assessment, and scores the reasoning against five
-clinical rubrics while separately scoring the stated probability against the
-recorded outcome.}
+outcomes, so a system that reasons well about a patient and one that does not are
+indistinguishable. IVF-Bench supplies the patient context alongside the image,
+elicits an open-ended assessment, and scores the reasoning against five clinical
+rubrics while separately scoring the stated probability against the recorded
+outcome.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -103,9 +99,9 @@ morphology grounding, where all systems are compressed into a narrow band.}
 \begin{axis}[
   width=0.92\textwidth, height=5.6cm,
   ybar, bar width=13pt,
-  ymin=0, ymax=4.6,
+  ymin=0, ymax=4.8,
   ylabel={Morphology grounding (1--5)}, ylabel style={font=\small},
-  symbolic x coords={GPT-5.4,Qwen 397B,Gemini Flash,Opus 4.6},
+  symbolic x coords={GPT-5.4,Opus 4.6,Qwen 397B,Gemini Flash},
   xtick=data, x tick label style={font=\small},
   y tick label style={font=\small},
   legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=2,
@@ -116,17 +112,18 @@ morphology grounding, where all systems are compressed into a narrow band.}
   nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
                                               /pgf/number format/precision=2},
 ]
-\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Qwen 397B,3.29)(Gemini Flash,3.24)(Opus 4.6,3.29)};
-\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,1.98)(Qwen 397B,1.98)(Gemini Flash,2.34)(Opus 4.6,3.15)};
+\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Opus 4.6,3.29)(Qwen 397B,3.29)(Gemini Flash,3.24)};
+\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,3.87)(Opus 4.6,3.06)(Qwen 397B,3.10)(Gemini Flash,3.16)};
 \legend{image supplied, image withheld}
 \end{axis}
 \end{tikzpicture}
 \caption{Morphology grounding with the embryo image supplied and withheld, on
-identical cases. Removing the image halves GPT-5.4's score and cuts Qwen 397B's
-by 40\%, which establishes that the rubric responds to the visual input rather
-than to the Gardner grade supplied in text. Opus 4.6 is the exception, losing
-only 0.14 points, indicating that its morphology descriptions derive almost
-entirely from the annotation rather than the image.}
+identical cases, with the judge shown the same prompt the model received.
+Withholding the image costs between 0.07 and 0.23 points on a five-point scale,
+and the difference is distinguishable from zero for only two of the four systems.
+A model given the Gardner grade in text scores nearly as well without the image
+as with it, which bounds how far this rubric can be read as a measure of image
+comprehension.}
 \label{fig:ablation}
 \end{figure}
 

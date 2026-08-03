@@ -111,58 +111,54 @@ proposes.
 \centering
 \begin{tikzpicture}[
   font=\small,
+  every node/.append style={execute at begin node=\setlength{\emergencystretch}{2em}},
   box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
-              minimum height=8mm, text width=#1},
-  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
+              minimum height=9mm, text width=#1},
+  dec/.style={draw, diamond, aspect=3.2, align=center, inner sep=1pt,
+              font=\scriptsize, minimum width=30mm, minimum height=13mm},
   ar/.style={-{Latex[length=2mm]}, thick},
-  node distance=6mm,
 ]
 
-% ---------------- left column: the conventional framing
-\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
-\node[box=26mm, below=5mm of lh] (li) {Embryo image};
-\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
-\node[box=26mm, below=of lm] (ls) {Scalar score};
-\node[box=26mm, below=of ls] (lr) {Ranked embryos};
-\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
-\draw[ar] (li) -- (lm);
-\draw[ar] (lm) -- (ls);
-\draw[ar] (ls) -- (lr);
-\draw[ar] (lr) -- (lo);
+% ---- left column: the conventional framing. Explicit y coordinates, so
+% nothing can collide as node heights change.
+\node[font=\bfseries] at (0,0.9) {Conventional evaluation};
+\node[box=28mm] (li) at (0,0)    {Embryo image};
+\node[box=28mm] (lm) at (0,-1.6) {Scoring model\\[-1pt]\footnotesize CNN or time-lapse};
+\node[box=28mm] (ls) at (0,-3.2) {Scalar score};
+\node[box=28mm] (lr) at (0,-4.8) {Ranked embryos};
+\node[box=28mm, fill=black!5] (lo) at (0,-6.6) {Scored by outcome\\[-1pt]\footnotesize AUROC only};
+\foreach \a/\b in {li/lm, lm/ls, ls/lr, lr/lo} \draw[ar] (\a) -- (\b);
 
-% ---------------- right column: this work
-\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
-\node[box=52mm, below=5mm of rh] (ri)
-  {Embryo image \textbf{+} patient context\\
+% ---- right column
+\node[font=\bfseries] at (7.4,0.9) {IVF-Bench (this work)};
+\node[box=54mm] (ri) at (7.4,0)
+  {Embryo image \textbf{+} patient context\\[-1pt]
    \footnotesize Gardner grade, cycle data, history};
-\node[box=52mm, below=of ri] (rm) {Vision-language model};
-\node[box=52mm, below=of rm] (ra)
-  {Open-ended assessment\\
-   \footnotesize morphology, integration, probability, plan};
-\node[dec, below=6mm of ra] (rd) {which\\part?};
+\node[box=54mm] (rm) at (7.4,-1.7) {Vision-language model};
+\node[box=56mm] (ra) at (7.4,-3.2)
+  {Open-ended assessment\\[-1pt]
+   \footnotesize morphology, integration,\\[-1pt]probability, plan};
+\node[dec] (rd) at (7.4,-4.7) {which part?};
+\node[box=25mm, minimum height=12mm] (rj) at (5.3,-6.5)
+  {Five rubrics\\[-1pt]\footnotesize LLM judge, 1--5};
+\node[box=25mm, minimum height=12mm] (rp) at (9.5,-6.5)
+  {Stated probability\\[-1pt]\footnotesize Brier, AUROC};
+\node[box=54mm, fill=black!5] (ro) at (7.4,-8.3)
+  {Scored by rubrics \textbf{and} outcome};
 
-\node[box=30mm, below left=9mm and -4mm of rd] (rj)
-  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
-\node[box=30mm, below right=9mm and -4mm of rd] (rp)
-  {Stated probability\\\footnotesize Brier, AUROC};
-\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
-  {Measured by rubric scores \textbf{and} outcome};
-
-\draw[ar] (ri) -- (rm);
-\draw[ar] (rm) -- (ra);
-\draw[ar] (ra) -- (rd);
-\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
-\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
-\draw[ar] (rj) |- (ro);
-\draw[ar] (rp) |- (ro);
+\foreach \a/\b in {ri/rm, rm/ra, ra/rd} \draw[ar] (\a) -- (\b);
+\draw[ar] (rd.west) -- ++(-2.1,0) node[midway, above, font=\scriptsize] {reasoning} |- (rj.north);
+\draw[ar] (rd.east) -- ++(2.1,0)  node[midway, above, font=\scriptsize] {prognosis} |- (rp.north);
+\draw[ar] (rj.south) -- ($(ro.north west)!0.5!(ro.north)$);
+\draw[ar] (rp.south) -- ($(ro.north east)!0.5!(ro.north)$);
 \end{tikzpicture}
 \caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
 maps an image to a scalar and is scored only by how well that scalar ranks
-outcomes, so a model that reasons well about a patient and a model that does not
-are indistinguishable. IVF-Bench supplies the patient context alongside the
-image, elicits an open-ended assessment, and scores the reasoning against five
-clinical rubrics while separately scoring the stated probability against the
-recorded outcome.}
+outcomes, so a system that reasons well about a patient and one that does not are
+indistinguishable. IVF-Bench supplies the patient context alongside the image,
+elicits an open-ended assessment, and scores the reasoning against five clinical
+rubrics while separately scoring the stated probability against the recorded
+outcome.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -221,10 +217,11 @@ model on preference pairs derived from the benchmark, obtaining the following re
       capacity, for the reason given above.
 \item Morphology grounding is the weakest rubric throughout, and because our
       judge does not observe the image we treat those scores as an upper bound on
-      image comprehension; an ablation that removes the image recovers its
-      contribution directly, halving GPT-5.4's morphology score while leaving
-      Opus 4.6 almost unchanged, which shows that systems differ sharply in how
-      much they use the visual input.
+      image comprehension. An ablation that removes the image bounds that
+      contribution directly and finds it small, between 0.07 and 0.23 points on a
+      five-point scale and indistinguishable from zero for half the systems
+      tested, which is a negative result about our own instrument and the clearest
+      target for the next version of it.
 \end{enumerate}
 
 The practical implication is that progress in this area depends less on model
@@ -703,8 +700,7 @@ in text than about the image itself. Because our judge does not observe the imag
 rubric by restating the Gardner grade it was given, so these values constitute an
 upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
-shows that it is large for most systems and negligible for one, subject to the
-confound noted there.
+finds it small, which bounds what this rubric can be taken to show.
 
 \textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
 of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
@@ -722,11 +718,57 @@ the terms that are.
 Because each prompt supplies the Gardner grade in text alongside the image, a
 system could in principle score well on morphology grounding without consulting
 the image at all, which would make the vision component of this benchmark
-decorative. We tested this directly by re-running four systems on the same cases
-with the image removed and the attachment marker replaced, holding everything
-else constant, and grading both arms with the same judge; differences are
-evaluated by paired bootstrap over the cases each system answered in both
-conditions.
+decorative. We tested this by re-running four systems on the same cases with the
+image removed and the attachment marker replaced, holding everything else
+constant, and grading both arms with the same judge; differences are evaluated by
+paired bootstrap over the cases each system answered in both conditions.
+
+The design of this experiment matters more than we first appreciated, and we
+report the correction because the uncorrected version produced a dramatic and
+entirely spurious result. In our first attempt the judge received the stored case
+prompt, which still declared an image attached, while the model in the withheld
+arm had been told none was provided. The judge then penalized models for
+correctly reporting that they had no image to describe: GPT-5.4's morphology
+grounding appeared to fall from 3.94 to 1.98, and we briefly believed we had
+demonstrated that the vision channel carries substantial information. Once the
+judge is shown the same prompt the model received, that effect very largely
+disappears.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.92\textwidth, height=5.6cm,
+  ybar, bar width=13pt,
+  ymin=0, ymax=4.8,
+  ylabel={Morphology grounding (1--5)}, ylabel style={font=\small},
+  symbolic x coords={GPT-5.4,Opus 4.6,Qwen 397B,Gemini Flash},
+  xtick=data, x tick label style={font=\small},
+  y tick label style={font=\small},
+  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=2,
+                draw=none, column sep=1ex},
+  enlarge x limits=0.2,
+  ymajorgrids, grid style={black!12},
+  axis lines*=left,
+  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
+                                              /pgf/number format/precision=2},
+]
+\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Opus 4.6,3.29)(Qwen 397B,3.29)(Gemini Flash,3.24)};
+\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,3.87)(Opus 4.6,3.06)(Qwen 397B,3.10)(Gemini Flash,3.16)};
+\legend{image supplied, image withheld}
+\end{axis}
+\end{tikzpicture}
+\caption{Morphology grounding with the embryo image supplied and withheld, on
+identical cases, with the judge shown the same prompt the model received.
+Withholding the image costs between 0.07 and 0.23 points on a five-point scale,
+and the difference is distinguishable from zero for only two of the four systems.
+A model given the Gardner grade in text scores nearly as well without the image
+as with it, which bounds how far this rubric can be read as a measure of image
+comprehension.}
+\label{fig:ablation}
+\end{figure}
+
 
 \begin{table}[H]
 \centering
@@ -738,94 +780,48 @@ conditions.
 \textbf{Model} & \textbf{n} & \textbf{image} & \textbf{none} & \textbf{$\Delta$} &
 \textbf{image} & \textbf{none} & \textbf{$\Delta$} \\
 \midrule
-GPT-5.4          & 100 & 4.50 & 3.99 & $+0.51$ & 3.94 & 1.98 & $+1.96$ \\
-Qwen 397B        & 126 & 3.71 & 3.40 & $+0.31$ & 3.29 & 1.98 & $+1.31$ \\
-Gemini 2.5 Flash & 100 & 3.33 & 3.47 & $-0.14$ & 3.24 & 2.34 & $+0.90$ \\
-Opus 4.6         & 100 & 3.93 & 3.80 & $+0.13$ & 3.29 & 3.15 & $+0.14$ \\
+GPT-5.4          & 100 & 4.50 & 4.50 & $+0.00$ & 3.94 & 3.87 & $+0.07$ \\
+Opus 4.6         & 100 & 3.93 & 3.72 & $+0.21$ & 3.29 & 3.06 & $+0.23$ \\
+Qwen 397B        & 126 & 3.71 & 3.77 & $-0.06$ & 3.29 & 3.10 & $+0.18$ \\
+Gemini 2.5 Flash & 100 & 3.33 & 3.72 & $-0.39$ & 3.24 & 3.16 & $+0.08$ \\
 \bottomrule
 \end{tabular}
-\caption{Scores with the embryo image present and removed, on identical cases.
-Every difference shown is significant at the 95\% level by paired bootstrap: the
-largest, GPT-5.4's morphology drop, has a confidence interval of
-$[+1.90, +2.02]$, while the smallest, Opus 4.6's morphology drop of
-$+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
+\caption{Scores with the embryo image supplied and withheld, on identical cases
+per system, with the judge shown the same prompt the model received. Only two of
+the eight differences are significant at the 95\% level after accounting for the
+eight comparisons: Opus 4.6's morphology drop of $+0.23$
+($p{=}0.003$) and Qwen 397B's of $+0.18$ ($p{=}0.005$). GPT-5.4's morphology
+difference of $+0.07$ ($p{=}0.13$) and Gemini's of $+0.08$ ($p{=}0.32$) are not
+distinguishable from zero, while Gemini's overall score is substantially
+\emph{higher} without the image ($-0.39$, $p<0.001$).}
 \label{tab:ablation}
 \end{table}
 
+The corrected result is a negative one about our own instrument, and it is the
+most important limitation in this paper. Removing the embryo image changes
+morphology grounding by between 0.07 and 0.23 points on a five-point scale, and
+for two of the four systems the change is not distinguishable from zero. A model
+handed the Gardner grade in text can therefore produce a morphology description
+that this benchmark scores almost as highly as one produced with the image in
+front of it. The rubric is measuring consistency with the supplied annotation far
+more than fidelity to the image, exactly as the blind judge described in
+Section~\ref{sec:setup} would predict, and the quantity we can attribute to the
+visual channel is small.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-  width=0.92\textwidth, height=5.6cm,
-  ybar, bar width=13pt,
-  ymin=0, ymax=4.6,
-  ylabel={Morphology grounding (1--5)}, ylabel style={font=\small},
-  symbolic x coords={GPT-5.4,Qwen 397B,Gemini Flash,Opus 4.6},
-  xtick=data, x tick label style={font=\small},
-  y tick label style={font=\small},
-  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=2,
-                draw=none, column sep=1ex},
-  enlarge x limits=0.2,
-  ymajorgrids, grid style={black!12},
-  axis lines*=left,
-  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
-                                              /pgf/number format/precision=2},
-]
-\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Qwen 397B,3.29)(Gemini Flash,3.24)(Opus 4.6,3.29)};
-\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,1.98)(Qwen 397B,1.98)(Gemini Flash,2.34)(Opus 4.6,3.15)};
-\legend{image supplied, image withheld}
-\end{axis}
-\end{tikzpicture}
-\caption{Morphology grounding with the embryo image supplied and withheld, on
-identical cases. Removing the image halves GPT-5.4's score and cuts Qwen 397B's
-by 40\%, which establishes that the rubric responds to the visual input rather
-than to the Gardner grade supplied in text. Opus 4.6 is the exception, losing
-only 0.14 points, indicating that its morphology descriptions derive almost
-entirely from the annotation rather than the image.}
-\label{fig:ablation}
-\end{figure}
+Two secondary observations survive. Opus 4.6 shows the clearest dependence on the
+image, on both overall score and morphology, which inverts the conclusion we drew
+from the confounded run and is a reminder that an experimental artifact can
+manufacture a confident story in either direction. Gemini 2.5 Flash scores
+markedly better without the image on every rubric other than morphology, so for
+that system the visual input degrades the assessment rather than informing it.
 
-
-One confound must be stated before the findings, because it bounds them. The
-judge is shown the stored case prompt, which contains the marker indicating an
-attached image, while in the withheld condition the model received a prompt
-stating that no image was provided. In a sample of forty judge records from the
-withheld arm, thirty-five justifications refer explicitly to the absence of an
-image, so part of the measured drop reflects the judge penalizing a model for
-correctly reporting that it had no image to describe, rather than the model's
-inability to describe one. The direction of the effect is not in doubt, since a
-system with no image cannot grounds its description in one, but the magnitudes
-below are upper bounds on the image's contribution, and a corrected design would
-present the judge with the same prompt the model received.
-
-Three findings follow. The image carries substantial information for most
-systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
-1.98, and reduces Qwen 397B's by 40\%, which establishes that the vision channel
-is doing real work and that the benchmark is measuring it rather than rewarding
-restatement of the supplied grade.
-
-The exception is instructive. Opus 4.6 loses only 0.14 points of morphology
-grounding when the image is withheld, an order of magnitude less than GPT-5.4,
-which indicates that its morphology descriptions are derived almost entirely from
-the Gardner annotation in the prompt rather than from the image itself. Opus
-places third overall on both splits while making the least use of the visual
-input of any system tested, a dissociation that a leaderboard alone would not
-reveal and that we would not have detected without this ablation.
-
-Gemini 2.5 Flash presents the opposite pathology: its overall score is
-\emph{higher} without the image ($-0.14$, $p{=}0.040$) even though its morphology
-grounding falls by 0.90, so the image degrades its performance on the remaining
-four rubrics by more than it contributes to the one rubric that depends on it.
-For this system the visual input is, on balance, a distraction.
-
-Taken together these results support the construction of the benchmark, in that
-the morphology rubric responds to the presence of the image as it should, while
-also confirming the caution attached to it in Section~\ref{sec:results}: the
-absolute morphology scores remain an upper bound, since the judge cannot verify a
-description against the image, but the differences between conditions are
-measured directly and are large.
-
+The consequence for the benchmark is direct. Morphology grounding as currently
+measured should be read as a weak proxy for image use, and a version of this
+benchmark that genuinely measures whether a model reads an embryo will need a
+judge that can see the image, or reference descriptions written by embryologists
+against which a description can be checked. The expert-annotated morphological
+descriptions of \citet{neu2026dataset} are the obvious substrate for that, and
+building it is the single change that would most improve this work.
 
 \subsection{Two controls on the headline claims}
 \label{sec:controls}

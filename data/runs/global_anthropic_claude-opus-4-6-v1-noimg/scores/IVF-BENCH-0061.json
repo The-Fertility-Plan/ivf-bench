@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets ICM and TE as AA, but it misstates the provided expansion descriptor: the case data says full blastocyst with blastocoel filling the embryo, whereas the response treats it as expansion grade 2 (>50% volume) and builds concerns from that. It also adds image-based observations despite no image being provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, tubal factor, prior biochemical pregnancy, sperm parameters, endometrium, and lifestyle factors into prognosis reasonably well, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the central reasoning is weakened by the incorrect premise that this is a delayed day-5 grade-2 blastocyst. Several downstream conclusions and probability deductions depend on that misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some advice is evidence-based (proceed with transfer, smoking/alcohol cessation), but several recommendations are not guideline-driven for this scenario, including routine assisted hatching, thrombophilia screening/baby aspirin after a single biochemical pregnancy, ERA, and broad immunologic-style workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, including lifestyle modification and possible male-factor evaluation, though some suggested interventions are overly aggressive or insufficiently indicated."
+    }
+  ],
+  "extracted_probability": 0.415,
+  "judge_cost_usd": 0.014448,
+  "judge_latency_ms": 3943.45295799576,
+  "judge_prompt_tokens": 3076,
+  "judge_completion_tokens": 348
+}

@@ -204,8 +204,7 @@ in text than about the image itself. Because our judge does not observe the imag
 rubric by restating the Gardner grade it was given, so these values constitute an
 upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
-shows that it is large for most systems and negligible for one, subject to the
-confound noted there.
+finds it small, which bounds what this rubric can be taken to show.
 
 \textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
 of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
@@ -223,11 +222,23 @@ the terms that are.
 Because each prompt supplies the Gardner grade in text alongside the image, a
 system could in principle score well on morphology grounding without consulting
 the image at all, which would make the vision component of this benchmark
-decorative. We tested this directly by re-running four systems on the same cases
-with the image removed and the attachment marker replaced, holding everything
-else constant, and grading both arms with the same judge; differences are
-evaluated by paired bootstrap over the cases each system answered in both
-conditions.
+decorative. We tested this by re-running four systems on the same cases with the
+image removed and the attachment marker replaced, holding everything else
+constant, and grading both arms with the same judge; differences are evaluated by
+paired bootstrap over the cases each system answered in both conditions.
+
+The design of this experiment matters more than we first appreciated, and we
+report the correction because the uncorrected version produced a dramatic and
+entirely spurious result. In our first attempt the judge received the stored case
+prompt, which still declared an image attached, while the model in the withheld
+arm had been told none was provided. The judge then penalized models for
+correctly reporting that they had no image to describe: GPT-5.4's morphology
+grounding appeared to fall from 3.94 to 1.98, and we briefly believed we had
+demonstrated that the vision channel carries substantial information. Once the
+judge is shown the same prompt the model received, that effect very largely
+disappears.
+
+FIG_ABLATION_PLACEHOLDER
 
 \begin{table}[H]
 \centering
@@ -239,61 +250,48 @@ conditions.
 \textbf{Model} & \textbf{n} & \textbf{image} & \textbf{none} & \textbf{$\Delta$} &
 \textbf{image} & \textbf{none} & \textbf{$\Delta$} \\
 \midrule
-GPT-5.4          & 100 & 4.50 & 3.99 & $+0.51$ & 3.94 & 1.98 & $+1.96$ \\
-Qwen 397B        & 126 & 3.71 & 3.40 & $+0.31$ & 3.29 & 1.98 & $+1.31$ \\
-Gemini 2.5 Flash & 100 & 3.33 & 3.47 & $-0.14$ & 3.24 & 2.34 & $+0.90$ \\
-Opus 4.6         & 100 & 3.93 & 3.80 & $+0.13$ & 3.29 & 3.15 & $+0.14$ \\
+GPT-5.4          & 100 & 4.50 & 4.50 & $+0.00$ & 3.94 & 3.87 & $+0.07$ \\
+Opus 4.6         & 100 & 3.93 & 3.72 & $+0.21$ & 3.29 & 3.06 & $+0.23$ \\
+Qwen 397B        & 126 & 3.71 & 3.77 & $-0.06$ & 3.29 & 3.10 & $+0.18$ \\
+Gemini 2.5 Flash & 100 & 3.33 & 3.72 & $-0.39$ & 3.24 & 3.16 & $+0.08$ \\
 \bottomrule
 \end{tabular}
-\caption{Scores with the embryo image present and removed, on identical cases.
-Every difference shown is significant at the 95\% level by paired bootstrap: the
-largest, GPT-5.4's morphology drop, has a confidence interval of
-$[+1.90, +2.02]$, while the smallest, Opus 4.6's morphology drop of
-$+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
+\caption{Scores with the embryo image supplied and withheld, on identical cases
+per system, with the judge shown the same prompt the model received. Only two of
+the eight differences are significant at the 95\% level after accounting for the
+eight comparisons: Opus 4.6's morphology drop of $+0.23$
+($p{=}0.003$) and Qwen 397B's of $+0.18$ ($p{=}0.005$). GPT-5.4's morphology
+difference of $+0.07$ ($p{=}0.13$) and Gemini's of $+0.08$ ($p{=}0.32$) are not
+distinguishable from zero, while Gemini's overall score is substantially
+\emph{higher} without the image ($-0.39$, $p<0.001$).}
 \label{tab:ablation}
 \end{table}
 
-FIG_ABLATION_PLACEHOLDER
+The corrected result is a negative one about our own instrument, and it is the
+most important limitation in this paper. Removing the embryo image changes
+morphology grounding by between 0.07 and 0.23 points on a five-point scale, and
+for two of the four systems the change is not distinguishable from zero. A model
+handed the Gardner grade in text can therefore produce a morphology description
+that this benchmark scores almost as highly as one produced with the image in
+front of it. The rubric is measuring consistency with the supplied annotation far
+more than fidelity to the image, exactly as the blind judge described in
+Section~\ref{sec:setup} would predict, and the quantity we can attribute to the
+visual channel is small.
 
-One confound must be stated before the findings, because it bounds them. The
-judge is shown the stored case prompt, which contains the marker indicating an
-attached image, while in the withheld condition the model received a prompt
-stating that no image was provided. In a sample of forty judge records from the
-withheld arm, thirty-five justifications refer explicitly to the absence of an
-image, so part of the measured drop reflects the judge penalizing a model for
-correctly reporting that it had no image to describe, rather than the model's
-inability to describe one. The direction of the effect is not in doubt, since a
-system with no image cannot grounds its description in one, but the magnitudes
-below are upper bounds on the image's contribution, and a corrected design would
-present the judge with the same prompt the model received.
+Two secondary observations survive. Opus 4.6 shows the clearest dependence on the
+image, on both overall score and morphology, which inverts the conclusion we drew
+from the confounded run and is a reminder that an experimental artifact can
+manufacture a confident story in either direction. Gemini 2.5 Flash scores
+markedly better without the image on every rubric other than morphology, so for
+that system the visual input degrades the assessment rather than informing it.
 
-Three findings follow. The image carries substantial information for most
-systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
-1.98, and reduces Qwen 397B's by 40\%, which establishes that the vision channel
-is doing real work and that the benchmark is measuring it rather than rewarding
-restatement of the supplied grade.
-
-The exception is instructive. Opus 4.6 loses only 0.14 points of morphology
-grounding when the image is withheld, an order of magnitude less than GPT-5.4,
-which indicates that its morphology descriptions are derived almost entirely from
-the Gardner annotation in the prompt rather than from the image itself. Opus
-places third overall on both splits while making the least use of the visual
-input of any system tested, a dissociation that a leaderboard alone would not
-reveal and that we would not have detected without this ablation.
-
-Gemini 2.5 Flash presents the opposite pathology: its overall score is
-\emph{higher} without the image ($-0.14$, $p{=}0.040$) even though its morphology
-grounding falls by 0.90, so the image degrades its performance on the remaining
-four rubrics by more than it contributes to the one rubric that depends on it.
-For this system the visual input is, on balance, a distraction.
-
-Taken together these results support the construction of the benchmark, in that
-the morphology rubric responds to the presence of the image as it should, while
-also confirming the caution attached to it in Section~\ref{sec:results}: the
-absolute morphology scores remain an upper bound, since the judge cannot verify a
-description against the image, but the differences between conditions are
-measured directly and are large.
-
+The consequence for the benchmark is direct. Morphology grounding as currently
+measured should be read as a weak proxy for image use, and a version of this
+benchmark that genuinely measures whether a model reads an embryo will need a
+judge that can see the image, or reference descriptions written by embryologists
+against which a description can be checked. The expert-annotated morphological
+descriptions of \citet{neu2026dataset} are the obvious substrate for that, and
+building it is the single change that would most improve this work.
 
 \subsection{Two controls on the headline claims}
 \label{sec:controls}

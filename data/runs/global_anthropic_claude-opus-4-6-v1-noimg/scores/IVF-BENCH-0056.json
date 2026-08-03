@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly interprets the provided Gardner components (2AC: expansion 2, ICM A, TE C) and appropriately highlights poor TE and good ICM, but it incorrectly labels expansion 2 as 'full blastocyst' rather than early blastocyst by standard Gardner criteria and adds image-based implications despite no image being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, diagnosis, BMI, smoking, sperm parameters, endometrium, and cycle history with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the probability estimate logically tied to embryo morphology and patient factors, though some quantitative adjustments are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: misstatement of Gardner stage 2, routine assisted hatching is not clearly guideline-supported here, and adding estradiol for BMI-related metabolism is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer counseling and future optimization, though some suggestions are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013815,
+  "judge_latency_ms": 3738.8611669957754,
+  "judge_prompt_tokens": 2980,
+  "judge_completion_tokens": 325
+}

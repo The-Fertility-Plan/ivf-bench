@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the provided Gardner score: 2BB was defined in the case as a full blastocyst with blastocoel filling the embryo, but the model describes expansion 2 as only >=50% volume and repeatedly frames it as delayed for Day 5. ICM and TE descriptions are broadly consistent with B grades, but no image was available and the expansion-stage interpretation is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, endometrium, sperm parameters, prior cycle history, and lifestyle well, and appropriately notes that favorable patient factors partly offset fair embryo morphology. A few points are overstated or speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it relies on an incorrect premise about the expansion stage and developmental delay, which affects downstream conclusions and probability adjustments. Some estimates are plausible but not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer in a 31-year-old first cycle are guideline-concordant, but there are deviations: the Gardner expansion interpretation is off, ERA is suggested despite limited evidence, and PGT-A is presented somewhat favorably for a young good-prognosis patient where routine use is not generally recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including SET, luteal support, prioritizing better embryos if available, and reviewing time-lapse/protocol details. Some suggestions are more speculative than necessary, but overall it is useful."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.014205,
+  "judge_latency_ms": 4786.198417001287,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 417
+}
