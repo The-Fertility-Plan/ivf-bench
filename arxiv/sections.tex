@@ -268,17 +268,36 @@ distinguishable from zero, while Gemini's overall score is substantially
 \end{table}
 
 The corrected result is a finding about the models and about the Gardner grade,
-not a defect in the instrument. Withholding the embryo image moves morphology
-grounding by between 0.07 and 0.23 points on a five-point scale, and for two of
-four systems by an amount indistinguishable from zero, which means that once a
-model has been given the expansion, inner cell mass and trophectoderm grades in
-text, the pixels add very little that these systems can use. That is worth
-stating plainly, because a decade of work in this area has concentrated on the
-image: an expert has already compressed the salient morphology into three
-ordinal values, and for current vision-language models that compression carries
-nearly all of the accessible signal. The negative randomized result for image-only
-ranking \citep{illingworth2024} and the small increment measured here are two
-views of the same fact.
+and it needs to be stated precisely, because the natural paraphrase is wrong. The
+grade is itself a human reading of the image: an embryologist looked at the
+blastocyst and compressed it into three ordinal values, so the image is upstream
+of the text rather than redundant with it, and nothing here shows that the image
+is unnecessary. What the experiment measures is narrower, namely the residual
+information a model can currently extract from the pixels \emph{beyond} an expert
+summary it has already been handed, and on this sample that residual is small:
+between 0.07 and 0.23 points on a five-point scale, and for two of four systems
+not distinguishable from zero at n{=}100, where the paired design can resolve
+differences of roughly 0.12.
+
+Three considerations bound how far that should be generalized. The compression is
+lossy, since two independent expert readings of these same embryos agree on all
+three components in only 60\% of the cases where both recorded a determination
+(Section~\ref{sec:synthetic}), so information the grade discards demonstrably
+exists in the image. The cases in which that information should matter most, where
+morphology is ambiguous or where the grade and the appearance diverge, are by
+construction rare, and a hundred-case sample contains few of them. And the
+quantity measured is what today's systems extract from this corpus, not what is
+extractable in principle: a model that attends jointly over the image and the
+patient context can learn precisely the regularities that a three-ordinal summary
+throws away, given enough data to learn them from, whereas a fixed image
+classifier and a three-value summary are both capped by construction. The
+increment we report bounds the present, not the asymptote.
+
+What the result does establish is that on the public data available today, a
+decade of effort directed at the image has been working against a strong
+baseline that a human grader already provides for free, which is the same
+conclusion the negative randomized trial of image-only ranking reached by a
+different route \citep{illingworth2024}.
 
 Two per-system observations follow. Opus 4.6 shows the clearest dependence on the
 image, on both overall score and morphology grounding, which inverts the
