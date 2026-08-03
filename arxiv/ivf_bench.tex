@@ -103,6 +103,70 @@ not demonstrate noninferiority \citep{illingworth2024}, which suggests that
 further refinement of image-only ranking is unlikely to be the most productive
 direction.
 
+Figure~\ref{fig:pipeline} contrasts that regime with the one this paper
+proposes.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
+              minimum height=8mm, text width=#1},
+  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
+  ar/.style={-{Latex[length=2mm]}, thick},
+  node distance=6mm,
+]
+
+% ---------------- left column: the conventional framing
+\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
+\node[box=26mm, below=5mm of lh] (li) {Embryo image};
+\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
+\node[box=26mm, below=of lm] (ls) {Scalar score};
+\node[box=26mm, below=of ls] (lr) {Ranked embryos};
+\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
+\draw[ar] (li) -- (lm);
+\draw[ar] (lm) -- (ls);
+\draw[ar] (ls) -- (lr);
+\draw[ar] (lr) -- (lo);
+
+% ---------------- right column: this work
+\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
+\node[box=52mm, below=5mm of rh] (ri)
+  {Embryo image \textbf{+} patient context\\
+   \footnotesize Gardner grade, cycle data, history};
+\node[box=52mm, below=of ri] (rm) {Vision-language model};
+\node[box=52mm, below=of rm] (ra)
+  {Open-ended assessment\\
+   \footnotesize morphology, integration, probability, plan};
+\node[dec, below=6mm of ra] (rd) {which\\part?};
+
+\node[box=30mm, below left=9mm and -4mm of rd] (rj)
+  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
+\node[box=30mm, below right=9mm and -4mm of rd] (rp)
+  {Stated probability\\\footnotesize Brier, AUROC};
+\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
+  {Measured by rubric scores \textbf{and} outcome};
+
+\draw[ar] (ri) -- (rm);
+\draw[ar] (rm) -- (ra);
+\draw[ar] (ra) -- (rd);
+\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
+\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
+\draw[ar] (rj) |- (ro);
+\draw[ar] (rp) |- (ro);
+\end{tikzpicture}
+\caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
+maps an image to a scalar and is scored only by how well that scalar ranks
+outcomes, so a model that reasons well about a patient and a model that does not
+are indistinguishable. IVF-Bench supplies the patient context alongside the
+image, elicits an open-ended assessment, and scores the reasoning against five
+clinical rubrics while separately scoring the stated probability against the
+recorded outcome.}
+\label{fig:pipeline}
+\end{figure}
+
+
 We argue that the limitation lies in the framing rather than in the
 architecture. The embryo image captures only part of what determines whether a
 transfer succeeds; the remainder is patient-level, comprising ovarian reserve,
@@ -167,68 +231,6 @@ The practical implication is that progress in this area depends less on model
 development than on the construction of a public dataset linking embryo images to
 measured patient context and recorded outcomes, and IVF-Bench provides the
 instrument with which the value of such a dataset can be quantified.
-Figure~\ref{fig:pipeline} contrasts the two evaluation regimes.
-
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[
-  font=\small,
-  box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
-              minimum height=8mm, text width=#1},
-  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
-  ar/.style={-{Latex[length=2mm]}, thick},
-  node distance=6mm,
-]
-
-% ---------------- left column: the conventional framing
-\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
-\node[box=26mm, below=5mm of lh] (li) {Embryo image};
-\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
-\node[box=26mm, below=of lm] (ls) {Scalar score};
-\node[box=26mm, below=of ls] (lr) {Ranked embryos};
-\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
-\draw[ar] (li) -- (lm);
-\draw[ar] (lm) -- (ls);
-\draw[ar] (ls) -- (lr);
-\draw[ar] (lr) -- (lo);
-
-% ---------------- right column: this work
-\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
-\node[box=52mm, below=5mm of rh] (ri)
-  {Embryo image \textbf{+} patient context\\
-   \footnotesize Gardner grade, cycle data, history};
-\node[box=52mm, below=of ri] (rm) {Vision-language model};
-\node[box=52mm, below=of rm] (ra)
-  {Open-ended assessment\\
-   \footnotesize morphology, integration, probability, plan};
-\node[dec, below=6mm of ra] (rd) {which\\part?};
-
-\node[box=30mm, below left=9mm and -4mm of rd] (rj)
-  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
-\node[box=30mm, below right=9mm and -4mm of rd] (rp)
-  {Stated probability\\\footnotesize Brier, AUROC};
-\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
-  {Measured by rubric scores \textbf{and} outcome};
-
-\draw[ar] (ri) -- (rm);
-\draw[ar] (rm) -- (ra);
-\draw[ar] (ra) -- (rd);
-\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
-\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
-\draw[ar] (rj) |- (ro);
-\draw[ar] (rp) |- (ro);
-\end{tikzpicture}
-\caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
-maps an image to a scalar and is scored only by how well that scalar ranks
-outcomes, so a model that reasons well about a patient and a model that does not
-are indistinguishable. IVF-Bench supplies the patient context alongside the
-image, elicits an open-ended assessment, and scores the reasoning against five
-clinical rubrics while separately scoring the stated probability against the
-recorded outcome.}
-\label{fig:pipeline}
-\end{figure}
-
 
 % ============================================================
 \section{Related work}

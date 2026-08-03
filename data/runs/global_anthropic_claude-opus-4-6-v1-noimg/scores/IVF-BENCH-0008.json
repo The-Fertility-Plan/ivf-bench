@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets 0DD as very poor quality with absent/degenerative ICM and TE, but it overstates morphology by calling the embryo non-viable and discusses image-specific features despite no image being provided; it also inconsistently labels expansion 0 as early blastocyst and comments on Day 4 morphology beyond the supplied data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, oocyte yield, BMI, endometrium, sperm parameters, prior outcomes, and transfer timing with the embryo assessment and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the low implantation estimate following from the poor grade, though there are some overconfident conclusions and minor inconsistencies around Day 4 versus blastocyst grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but several recommendations are not strongly guideline-based or are overstated, including declaring the embryo non-viable from morphology alone, suggesting cancellation on that basis, routine PGT-A/immunologic workup in a 24-year-old, and protocol changes without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for counseling, luteal support, follow-up, and future investigations/planning, though some suggestions are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.013887,
+  "judge_latency_ms": 4419.0783749945695,
+  "judge_prompt_tokens": 2889,
+  "judge_completion_tokens": 348
+}

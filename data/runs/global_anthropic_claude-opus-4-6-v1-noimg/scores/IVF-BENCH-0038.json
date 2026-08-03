@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided Gardner 2BA data correctly for ICM and TE, but incorrectly interprets expansion 2 as 'full blastocyst' and adds image-based implications despite no image being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior failures, male factor, sperm parameters, endometrium, and lifestyle reasonably well with embryo quality, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but the probability adjustment scheme is somewhat ad hoc and the strong emphasis on prior failures and delayed expansion may overstate their impact in this young patient."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several recommendations not well supported by major IVF guidelines, including ERA as high priority after only two failed cycles, immunologic testing/intralipids/prednisolone, routine aspirin, thrombophilia workup, and assisted hatching based mainly on delayed expansion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for transfer and future evaluation, but some actions are not appropriately evidence-based or prioritized."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.01266,
+  "judge_latency_ms": 3709.9713749994407,
+  "judge_prompt_tokens": 2670,
+  "judge_completion_tokens": 310
+}

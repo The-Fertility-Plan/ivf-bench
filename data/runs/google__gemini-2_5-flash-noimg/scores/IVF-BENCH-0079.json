@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reflects the provided Gardner 3AB data, but it incorrectly interprets stage 3 as an expanded blastocyst with thinning zona; in standard Gardner grading, 3 is a full blastocyst, while expanded/thinning zona is stage 4. Also repeats the supplied TE wording without noting that 'few cells forming a loose epithelium' is closer to a C-like description than classic B."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior failed cycle, male factor, endometrium, and lifestyle factors with embryo quality in a clinically meaningful way, though BMI is underemphasized and some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with a clear link from morphology and patient factors to prognosis. Minor issues include overconfidence in ovarian reserve interpretation and the morphology-stage inconsistency affecting the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are mostly evidence-aligned (SET, counseling, luteal support, cautious future evaluation), but the Gardner stage interpretation is inaccurate and the suggestion to strongly consider PGT-A after only one prior failed cycle is somewhat stronger than guideline-based individualized counseling would warrant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, lifestyle advice, luteal support, and future protocol review. Useful overall, though some recommendations remain broad rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015105,
+  "judge_latency_ms": 4860.055541001202,
+  "judge_prompt_tokens": 3105,
+  "judge_completion_tokens": 386
+}

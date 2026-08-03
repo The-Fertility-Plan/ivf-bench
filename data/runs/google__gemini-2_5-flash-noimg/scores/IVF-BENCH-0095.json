@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately notes that no image was provided and relies on the stated 2BB grade, with generally accurate ICM/TE interpretation. However, it repeats an incorrect expansion description from the prompt ('full blastocyst') for stage 2 and cannot assess image-specific features like zona pellucida or overall appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, BMI, ovarian response, prior IVF outcomes, sperm parameters, endometrium, and lifestyle factors with embryo quality and prognosis. It misses some nuance around absent AMH and overstates some associations, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the lower probability estimate logically tied to prior failed outcomes despite young age. Minor issues include overcalling severe stress and sperm motility effects and some speculative explanations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-concordant, such as SET, uterine cavity assessment when indicated, and luteal support. However, it over-recommends PGT-A for a 29-year-old and includes controversial or weakly supported tests/interventions (ERA, NK/immunologic workup, MTHFR, empiric adjuncts), reducing alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including SET, cavity evaluation, progesterone support, and targeted future workup. Some recommendations are less evidence-based, but the plan is still practical and specific."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.0168,
+  "judge_latency_ms": 5052.171250004903,
+  "judge_prompt_tokens": 3630,
+  "judge_completion_tokens": 394
+}

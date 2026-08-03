@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets 1DD as very poor quality with absent/degenerative ICM and TE, but it overstates image-based morphology despite no image being provided and incorrectly calls expansion stage 1 'severely delayed' for a Day 4 transfer."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior outcomes, endometrial thickness, sperm quality, and diagnosis reasonably well, though some links are speculative and it assumes only one embryo was available."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis conclusion is consistent with 1DD grading, but there are notable issues: Day 4 timing is treated inconsistently, some deductions are unsupported, and the quantitative probability adjustments are not well grounded."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core interpretation of poor embryo quality is aligned with Gardner grading and general IVF practice, but several recommendations are weakly evidence-based or not guideline-supported (ERA, scratch, GH, DHEA, routine assisted hatching/time-lapse implications)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step counseling and future-cycle considerations, including luteal support, expectation setting, protocol review, and endometrial evaluation, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014157,
+  "judge_latency_ms": 4381.163790996652,
+  "judge_prompt_tokens": 2964,
+  "judge_completion_tokens": 351
+}

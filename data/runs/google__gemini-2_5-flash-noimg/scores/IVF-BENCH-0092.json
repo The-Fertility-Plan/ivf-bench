@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0092",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "No image was available, so the morphology discussion appropriately relied on the provided Gardner 3AA data. However, it repeated a likely inconsistency in the prompt by calling stage 3 'expanded blastocyst' with thinning zona, which is closer to stage 4 terminology, so accuracy is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, prior live birth, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way, though some interactions are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally logical and structured, but it overstates prognosis and includes questionable claims such as morphology being 'highly predictive of euploidy' and prior live birth increasing implantation by 10-15%, making the 65-75% estimate somewhat inflated for age 38 without PGT-A."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and considering PGT-A at age 38 are broadly guideline-consistent, but there are deviations: morphology should not be treated as strongly predictive of euploidy, and protocol continuation/ICSI assumptions are more speculative than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including SET, luteal support, counseling, cryopreservation, and consideration of PGT-A, though some advice remains generic and not tightly tailored to missing details."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.01395,
+  "judge_latency_ms": 4319.51124999614,
+  "judge_prompt_tokens": 2730,
+  "judge_completion_tokens": 384
+}

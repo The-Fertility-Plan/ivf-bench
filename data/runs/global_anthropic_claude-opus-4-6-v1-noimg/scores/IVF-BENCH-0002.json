@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly interprets 2AB as expansion 2, ICM A, TE B, but overstates details not available from an image-free prompt and inaccurately calls TE 'few cells, loose epithelium' while labeling it B despite the provided descriptor matching more a C-like description; also adds kinetic interpretation beyond morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, prior miscarriage, sperm parameters, and endometrial thickness with embryo quality and prognosis in a generally thoughtful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it treats a Day 4 blastocyst as both favorable accelerated development and a transfer-timing asynchrony concern, and some probability adjustments (especially alcohol and miscarriage effects) are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with mainstream IVF guidance, including routine PGT-A suggestion for a 30-year-old after one miscarriage, ERA use, NK-cell/immunologic profiling, and thrombophilia testing after only one loss; alcohol counseling is reasonable but some claims are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical steps for luteal support, lifestyle counseling, transfer strategy, and future planning, though some suggested tests/interventions are not evidence-based for this scenario."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.015306,
+  "judge_latency_ms": 4814.205041002424,
+  "judge_prompt_tokens": 3237,
+  "judge_completion_tokens": 373
+}

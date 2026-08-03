@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "global.anthropic.claude-opus-4-6-v1-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly interprets ICM A and TE A, but it misstates the expansion stage: the provided data explicitly defines 2AA here as a full blastocyst with blastocoel filling the embryo, while the response describes stage 2 as only >50% volume and not fully expanded. It also discusses image-based features despite no image being provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrium, male factor, BMI, lifestyle, and first-cycle status with embryo quality in a clinically meaningful way, though some points are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: the expansion-stage interpretation conflicts with the supplied grading description, and the emphasis on Day 4 blastocyst asynchrony/accelerated development is somewhat speculative and may over-influence the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but several recommendations are not strongly guideline-based for this scenario, including routine progesterone monitoring thresholds, ERA after a single failure, and broad supplement suggestions. The grading interpretation also departs from the provided case definition."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for transfer support, testing timing, and future-cycle options such as PGT-A consideration and sperm DNA fragmentation testing, though some recommendations are more optional/speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.013506,
+  "judge_latency_ms": 4387.936332997924,
+  "judge_prompt_tokens": 2597,
+  "judge_completion_tokens": 381
+}

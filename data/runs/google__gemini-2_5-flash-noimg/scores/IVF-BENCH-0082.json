@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 4BB grade appropriately, but incorrectly states expansion 4 is a hatching blastocyst/herniating through zona; in standard Gardner grading that description fits stage 5, while stage 4 is fully expanded. No image was available, so morphology is inferred rather than directly assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor, prior IVF failure, sperm parameters, endometrial thickness, and lifestyle with embryo quality in a clinically meaningful way, though some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with prognosis tied to young age, good reserve, endometrium, and a decent-quality blastocyst; minor issue is the overstated benefit of 'hatching' based on a likely grading misinterpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general IVF principles, but includes weaker-evidence suggestions such as ERA after only one failed cycle and somewhat liberal consideration of PGT-A/immunologic workup in a young patient without recurrent failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning, including SET, luteal support, uterine cavity evaluation, and sperm workup; however, some recommendations are broader than necessary for this specific case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014955,
+  "judge_latency_ms": 4290.180875002989,
+  "judge_prompt_tokens": 3255,
+  "judge_completion_tokens": 346
+}

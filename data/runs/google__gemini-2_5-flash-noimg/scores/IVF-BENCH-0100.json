@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies on the provided Gardner score but misstates blastocyst expansion: grade 2 is an early blastocyst, not a full blastocyst. It also repeats an inconsistent TE description ('few cells forming a loose epithelium') as grade B rather than recognizing standard Gardner B TE is several cells forming a loose epithelium. No image-specific features can be assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, endometrium, diagnosis, sperm parameters, first cycle status, and lifestyle, and connects them to prognosis. Some links are somewhat generic and it overinterprets male factor despite relatively normal semen values."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is structured and mostly logical, but the implantation estimate is somewhat inflated for an untested day-5 2AB embryo and is partly justified using euploid embryo benchmarks, which is not fully appropriate here. The expansion-stage interpretation error also weakens the logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but the morphology interpretation deviates from Gardner criteria, and suggesting ERA after recurrent implantation failure is more controversial and not strongly guideline-supported as routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, beta-hCG timing, and future review options. Some recommendations are generic and include less evidence-based options, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014787,
+  "judge_latency_ms": 4562.15779199556,
+  "judge_prompt_tokens": 2909,
+  "judge_completion_tokens": 404
+}
