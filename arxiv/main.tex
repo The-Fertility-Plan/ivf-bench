@@ -17,6 +17,10 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{natbib}
 \bibliographystyle{unsrtnat}
 
@@ -110,11 +114,13 @@ We evaluate seven frontier and open-weight systems and then post-train a 9B open
 model on preference pairs derived from the benchmark, obtaining the following results:
 
 \begin{enumerate}
-\item Targeted post-training substitutes for scale on this task: 550 preference
+\item Targeted post-training substitutes for scale on this task: 500 training
       pairs are sufficient to move a 9B open model past Claude Opus 4.6 into
-      second position of eight at roughly one twentieth of the inference cost,
-      indicating that the reasoning component of embryo assessment is accessible
-      to models far below frontier scale.
+      second position of eight at roughly one seventh of the marginal inference
+      cost, indicating that the reasoning component of embryo assessment is
+      accessible to models well below frontier scale, though the comparison is
+      made by a single judge and Section~\ref{sec:robustness} bounds what that
+      permits us to conclude.
 \item The improvement is distributed across all five rubrics rather than
       concentrated in one, which distinguishes a procedure that improves the
       assessment as a whole from one that optimizes a single reported quantity.
@@ -134,6 +140,9 @@ The practical implication is that progress in this area depends less on model
 development than on the construction of a public dataset linking embryo images to
 measured patient context and recorded outcomes, and IVF-Bench provides the
 instrument with which the value of such a dataset can be quantified.
+Figure~\ref{fig:pipeline} contrasts the two evaluation regimes.
+
+FIG_PIPELINE_PLACEHOLDER
 
 % ============================================================
 \section{Related work}
@@ -246,6 +255,30 @@ that has internalized those correlations receives no credit for them here.
 Neither limitation can be remedied by a more sophisticated generator; both are
 remedied by a real dataset, which is precisely the argument of this paper.
 
+\subsection{Ethics and data use}
+\label{sec:ethics}
+
+This work is a secondary analysis of a publicly released, de-identified dataset
+and required no additional review. The underlying embryo images and clinical
+records were collected under approval from the Ethics Committee of the Faculty of
+Medicine at Johannes Kepler University Linz (Nr.\ 1238/2021) with informed
+consent obtained from participants, and were released by the original
+investigators under CC BY 4.0 \citep{kromp2023}; we redistribute no images and
+our release regenerates every case from that source. The patient-history fields
+we add are sampled from published population distributions and correspond to no
+real individual.
+
+The model released with this benchmark is a research artifact and is not a
+medical device. It has no regulatory clearance, has not been evaluated in a
+clinical trial, and must not be used to inform the care of any patient. We regard
+the risk of misuse as material rather than hypothetical, because the model
+produces fluent, confident, guideline-shaped counseling text whose surface
+quality substantially exceeds its demonstrated prognostic validity, which is the
+combination most likely to induce unwarranted confidence in a reader. The
+strongest randomized evidence in this area found that a deep learning system did
+not outperform trained embryologists \citep{illingworth2024}, and nothing in this
+paper meets a lower bar than that.
+
 \subsection{Splits}
 
 The 753 cases are partitioned deterministically into 550 test, 100 validation,
@@ -278,7 +311,7 @@ A judge model reads the case and the response and returns a 1 to 5 score with a
 short justification for each of five rubrics.
 
 \begin{itemize}
-\item \textbf{Morphology grounding.} Does the description of the embryo match the
+\item \textbf{Morphological accuracy.} Does the description of the embryo match the
       image and the Gardner annotation?
 \item \textbf{Clinical integration.} Does the response connect the patient factors
       to this embryo and this prognosis, rather than listing them?
@@ -286,7 +319,7 @@ short justification for each of five rubrics.
       uncertainty where uncertainty belongs?
 \item \textbf{Guideline alignment.} Is the advice consistent with evidence-based
       reproductive medicine?
-\item \textbf{Recommendation usefulness.} Could a clinician act on this, or is it
+\item \textbf{Actionability.} Could a clinician act on this, or is it
       generic?
 \end{itemize}
 

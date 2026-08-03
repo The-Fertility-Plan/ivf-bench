@@ -17,6 +17,10 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{natbib}
 \bibliographystyle{unsrtnat}
 
@@ -66,7 +70,8 @@ with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
 constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
 on 550 benchmark-derived preference pairs improves all five rubrics and places it
 second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
-$p{=}0.007$) at roughly one twentieth of the inference cost, indicating that the
+$p{=}0.007$, as scored by a single judge that also authored most of the training
+targets) at roughly one twentieth of the inference cost, indicating that the
 reasoning component of embryo assessment does not require frontier-scale models,
 while the prediction ceiling reflects the absence of context-linked outcome data
 rather than a limitation of the models themselves. We release the benchmark, the
@@ -132,11 +137,13 @@ We evaluate seven frontier and open-weight systems and then post-train a 9B open
 model on preference pairs derived from the benchmark, obtaining the following results:
 
 \begin{enumerate}
-\item Targeted post-training substitutes for scale on this task: 550 preference
+\item Targeted post-training substitutes for scale on this task: 500 training
       pairs are sufficient to move a 9B open model past Claude Opus 4.6 into
-      second position of eight at roughly one twentieth of the inference cost,
-      indicating that the reasoning component of embryo assessment is accessible
-      to models far below frontier scale.
+      second position of eight at roughly one seventh of the marginal inference
+      cost, indicating that the reasoning component of embryo assessment is
+      accessible to models well below frontier scale, though the comparison is
+      made by a single judge and Section~\ref{sec:robustness} bounds what that
+      permits us to conclude.
 \item The improvement is distributed across all five rubrics rather than
       concentrated in one, which distinguishes a procedure that improves the
       assessment as a whole from one that optimizes a single reported quantity.
@@ -156,6 +163,68 @@ The practical implication is that progress in this area depends less on model
 development than on the construction of a public dataset linking embryo images to
 measured patient context and recorded outcomes, and IVF-Bench provides the
 instrument with which the value of such a dataset can be quantified.
+Figure~\ref{fig:pipeline} contrasts the two evaluation regimes.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
+              minimum height=8mm, text width=#1},
+  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
+  ar/.style={-{Latex[length=2mm]}, thick},
+  node distance=6mm,
+]
+
+% ---------------- left column: the conventional framing
+\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
+\node[box=26mm, below=5mm of lh] (li) {Embryo image};
+\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
+\node[box=26mm, below=of lm] (ls) {Scalar score};
+\node[box=26mm, below=of ls] (lr) {Ranked embryos};
+\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
+\draw[ar] (li) -- (lm);
+\draw[ar] (lm) -- (ls);
+\draw[ar] (ls) -- (lr);
+\draw[ar] (lr) -- (lo);
+
+% ---------------- right column: this work
+\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
+\node[box=52mm, below=5mm of rh] (ri)
+  {Embryo image \textbf{+} patient context\\
+   \footnotesize Gardner grade, cycle data, history};
+\node[box=52mm, below=of ri] (rm) {Vision-language model};
+\node[box=52mm, below=of rm] (ra)
+  {Open-ended assessment\\
+   \footnotesize morphology, integration, probability, plan};
+\node[dec, below=6mm of ra] (rd) {which\\part?};
+
+\node[box=30mm, below left=9mm and -4mm of rd] (rj)
+  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
+\node[box=30mm, below right=9mm and -4mm of rd] (rp)
+  {Stated probability\\\footnotesize Brier, AUROC};
+\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
+  {Measured by rubric scores \textbf{and} outcome};
+
+\draw[ar] (ri) -- (rm);
+\draw[ar] (rm) -- (ra);
+\draw[ar] (ra) -- (rd);
+\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
+\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
+\draw[ar] (rj) |- (ro);
+\draw[ar] (rp) |- (ro);
+\end{tikzpicture}
+\caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
+maps an image to a scalar and is scored only by how well that scalar ranks
+outcomes, so a model that reasons well about a patient and a model that does not
+are indistinguishable. IVF-Bench supplies the patient context alongside the
+image, elicits an open-ended assessment, and scores the reasoning against five
+clinical rubrics while separately scoring the stated probability against the
+recorded outcome.}
+\label{fig:pipeline}
+\end{figure}
+
 
 % ============================================================
 \section{Related work}
@@ -268,6 +337,30 @@ that has internalized those correlations receives no credit for them here.
 Neither limitation can be remedied by a more sophisticated generator; both are
 remedied by a real dataset, which is precisely the argument of this paper.
 
+\subsection{Ethics and data use}
+\label{sec:ethics}
+
+This work is a secondary analysis of a publicly released, de-identified dataset
+and required no additional review. The underlying embryo images and clinical
+records were collected under approval from the Ethics Committee of the Faculty of
+Medicine at Johannes Kepler University Linz (Nr.\ 1238/2021) with informed
+consent obtained from participants, and were released by the original
+investigators under CC BY 4.0 \citep{kromp2023}; we redistribute no images and
+our release regenerates every case from that source. The patient-history fields
+we add are sampled from published population distributions and correspond to no
+real individual.
+
+The model released with this benchmark is a research artifact and is not a
+medical device. It has no regulatory clearance, has not been evaluated in a
+clinical trial, and must not be used to inform the care of any patient. We regard
+the risk of misuse as material rather than hypothetical, because the model
+produces fluent, confident, guideline-shaped counseling text whose surface
+quality substantially exceeds its demonstrated prognostic validity, which is the
+combination most likely to induce unwarranted confidence in a reader. The
+strongest randomized evidence in this area found that a deep learning system did
+not outperform trained embryologists \citep{illingworth2024}, and nothing in this
+paper meets a lower bar than that.
+
 \subsection{Splits}
 
 The 753 cases are partitioned deterministically into 550 test, 100 validation,
@@ -300,7 +393,7 @@ A judge model reads the case and the response and returns a 1 to 5 score with a
 short justification for each of five rubrics.
 
 \begin{itemize}
-\item \textbf{Morphology grounding.} Does the description of the embryo match the
+\item \textbf{Morphological accuracy.} Does the description of the embryo match the
       image and the Gardner annotation?
 \item \textbf{Clinical integration.} Does the response connect the patient factors
       to this embryo and this prognosis, rather than listing them?
@@ -308,7 +401,7 @@ short justification for each of five rubrics.
       uncertainty where uncertainty belongs?
 \item \textbf{Guideline alignment.} Is the advice consistent with evidence-based
       reproductive medicine?
-\item \textbf{Recommendation usefulness.} Could a clinician act on this, or is it
+\item \textbf{Actionability.} Could a clinician act on this, or is it
       generic?
 \end{itemize}
 
@@ -430,6 +523,42 @@ reasoning loop; every system answered all 103 held-out cases.}
 \label{tab:leaderboard}
 \end{table}
 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\textwidth, height=6.4cm,
+  ybar, bar width=4.4pt,
+  ymin=2.5, ymax=5.3,
+  ylabel={Score (1--5)}, ylabel style={font=\small},
+  symbolic x coords={Morphology,Clinical,Reasoning,Guideline,Recommendation},
+  xtick=data, x tick label style={font=\small},
+  y tick label style={font=\small},
+  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=4,
+                draw=none, column sep=0.6ex},
+  enlarge x limits=0.13,
+  ymajorgrids, grid style={black!12},
+  axis lines*=left,
+]
+\addplot[fill=black!78, draw=none] coordinates {(Morphology,3.98)(Clinical,5.00)(Reasoning,4.65)(Guideline,4.23)(Recommendation,4.88)};
+\addplot[fill=red!68,   draw=none] coordinates {(Morphology,3.56)(Clinical,4.76)(Reasoning,3.93)(Guideline,3.93)(Recommendation,4.37)};
+\addplot[fill=black!45, draw=none] coordinates {(Morphology,3.60)(Clinical,4.92)(Reasoning,3.98)(Guideline,3.22)(Recommendation,4.31)};
+\addplot[fill=black!28, draw=none] coordinates {(Morphology,3.48)(Clinical,4.31)(Reasoning,3.88)(Guideline,3.44)(Recommendation,3.98)};
+\addplot[fill=black!16, draw=none] coordinates {(Morphology,3.07)(Clinical,4.51)(Reasoning,3.73)(Guideline,2.89)(Recommendation,4.06)};
+\addplot[fill=black!8,  draw=none] coordinates {(Morphology,2.99)(Clinical,3.91)(Reasoning,3.18)(Guideline,2.85)(Recommendation,3.64)};
+\legend{GPT-5.4, Ours (9B-ORPO), Opus 4.6, Qwen 397B, Sonnet 4.6, Qwen 9B base}
+\end{axis}
+\end{tikzpicture}
+\caption{Per-rubric scores on the held-out split. Clinical integration is the
+strongest rubric for every system and morphology grounding the weakest, a
+pattern that holds across three orders of magnitude in model size. Our
+post-trained 9B model tracks the frontier systems on every rubric except
+morphology grounding, where all systems are compressed into a narrow band.}
+\label{fig:rubrics}
+\end{figure}
+
+
 \subsection{Which gaps are real}
 
 A leaderboard reported without intervals invites readers to treat a difference
@@ -490,6 +619,39 @@ the cases where a probability could be extracted.}
 \label{tab:baserate}
 \end{table}
 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.86\textwidth, height=5.2cm,
+  xbar, bar width=8pt,
+  xmin=0.20, xmax=0.30,
+  xlabel={Brier score on the held-out split (lower is better)}, xlabel style={font=\small},
+  symbolic y coords={Gemini Flash,Qwen 9B base,Qwen 397B,Kimi K2.5,Opus 4.6,GPT-5.4,Ours 9B-ORPO,Sonnet 4.6,Constant at base rate},
+  ytick=data, y tick label style={font=\small},
+  x tick label style={font=\small},
+  xmajorgrids, grid style={black!12},
+  axis lines*=left,
+  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
+                                              /pgf/number format/precision=3},
+]
+\addplot[fill=black!25, draw=none] coordinates {
+  (0.2888,Gemini Flash) (0.2851,Qwen 9B base) (0.2648,Qwen 397B) (0.2541,Kimi K2.5)
+  (0.2469,Opus 4.6) (0.2465,GPT-5.4) (0.2447,Ours 9B-ORPO) (0.2423,Sonnet 4.6)};
+\addplot[fill=red!65, draw=none] coordinates {(0.2274,Constant at base rate)};
+\end{axis}
+\end{tikzpicture}
+\caption{Brier score of every evaluated system against a constant predictor that
+returns the cohort's clinical pregnancy rate of 0.350 for every case, ignoring
+the embryo, the image, and the patient. No system reaches the constant. We
+attribute this to the absence of outcome-linked patient context in the available
+data rather than to model capacity, for the reason given in
+Section~\ref{sec:synthetic}.}
+\label{fig:baserate}
+\end{figure}
+
+
 This is the result we most want a reader to retain, and it is not a verdict on
 the models, for the reason given in Section~\ref{sec:synthetic}: the
 patient-context fields we supply are sampled independently of outcome and
@@ -521,11 +683,14 @@ upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
 shows that it is large for most systems and negligible for one.
 
-\textbf{4. Cost and quality are only loosely coupled.} On the test split Opus
-4.6 requires \$184.81 to process the 550 cases and scores 4.01, while our 9B
-model requires \$7.98 and scores 4.17; Gemini 2.5 Flash, the least expensive
-commercial system evaluated, finishes seventh on that split while rising to
-fourth on held out, the largest between-split movement of any system.
+\textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
+of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
+Flash, the least expensive commercial system evaluated, finishes seventh on that
+split and rises to fourth on held out, the largest between-split movement of any
+system. Our post-trained model is excluded from this comparison because it was
+served on hardware we already owned, so its marginal inference cost is not
+commensurable with an API price; Section~\ref{sec:orpo} states the comparison in
+the terms that are.
 
 
 \subsection{What the embryo image contributes}
@@ -564,6 +729,41 @@ $+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
 \label{tab:ablation}
 \end{table}
 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.92\textwidth, height=5.6cm,
+  ybar, bar width=13pt,
+  ymin=0, ymax=4.6,
+  ylabel={Morphology grounding (1--5)}, ylabel style={font=\small},
+  symbolic x coords={GPT-5.4,Qwen 397B,Gemini Flash,Opus 4.6},
+  xtick=data, x tick label style={font=\small},
+  y tick label style={font=\small},
+  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=2,
+                draw=none, column sep=1ex},
+  enlarge x limits=0.2,
+  ymajorgrids, grid style={black!12},
+  axis lines*=left,
+  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
+                                              /pgf/number format/precision=2},
+]
+\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Qwen 397B,3.29)(Gemini Flash,3.24)(Opus 4.6,3.29)};
+\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,1.98)(Qwen 397B,1.98)(Gemini Flash,2.34)(Opus 4.6,3.15)};
+\legend{image supplied, image withheld}
+\end{axis}
+\end{tikzpicture}
+\caption{Morphology grounding with the embryo image supplied and withheld, on
+identical cases. Removing the image halves GPT-5.4's score and cuts Qwen 397B's
+by 40\%, which establishes that the rubric responds to the visual input rather
+than to the Gardner grade supplied in text. Opus 4.6 is the exception, losing
+only 0.14 points, indicating that its morphology descriptions derive almost
+entirely from the annotation rather than the image.}
+\label{fig:ablation}
+\end{figure}
+
+
 Three findings follow. The image carries substantial information for most
 systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
 1.98, and reduces Qwen 397B's by 40\%, which establishes that the vision channel
@@ -592,6 +792,47 @@ description against the image, but the differences between conditions are
 measured directly and are large.
 
 
+\subsection{Two controls on the headline claims}
+\label{sec:controls}
+
+Two objections bear directly on the results above and we address both with
+additional analysis rather than argument.
+
+\textbf{Is the ceiling really the data?} Our claim that the outcome ceiling
+reflects the available data rather than model capacity rests, so far, on the
+observation that the generated fields are uninformative by construction, which
+says nothing about the measured ones. We therefore fit logistic regression to the
+measured fields alone, namely age, AMH, endometrial thickness, oocytes retrieved,
+mature oocytes, transfer day, and the three Gardner components, with missing
+values imputed at the column median. Cross-validated within the 550-case split it
+reaches AUROC 0.538 (95\% CI $[0.487, 0.586]$), and fit on those 550 cases and
+evaluated on the 103 held out it reaches 0.608 (95\% CI $[0.484, 0.725]$), an
+interval wide enough to include chance. The better-powered estimate, 0.538, sits
+squarely inside the 0.450 to 0.562 range spanned by the vision-language systems,
+which is the result that matters: a linear model given the same measured
+covariates extracts about as much prognostic signal as the frontier systems do,
+so those systems are operating near the limit of what these covariates support
+rather than failing to use them.
+
+One qualification follows from the same experiment and cuts against us. On the
+held-out split the tabular model attains a Brier score of 0.2197, which does beat
+the constant predictor at 0.2274, so the claim that nothing in this study beats
+the base rate holds for the language models and not for a fitted tabular model.
+The margin is small, the sample is 103 cases, and the cross-validated Brier on
+the larger split is 0.2297, which does not beat the constant; we report the
+result as it stands rather than choose the split that suits us.
+
+\textbf{Is the post-training margin an artifact of verbosity?} The judge rewards
+length, as Section~\ref{sec:robustness} quantifies, and our model was trained
+toward a teacher whose responses are long, so the comparison against Opus 4.6
+could plausibly be measuring output length. It is not. On the held-out split our
+model's responses average 9,485 characters against Opus 4.6's 11,933, so our
+model is the shorter of the two, and regressing score on length within each
+system and comparing at a common length widens the margin rather than narrowing
+it, from $+0.103$ raw to $+0.205$ adjusted. The verbosity confound runs against
+our result, not for it.
+
+
 % ============================================================
 \section{Post-training a small model}
 \label{sec:orpo}
@@ -603,10 +844,10 @@ domain-specific training data, and we tested this directly.
 
 \subsection{Building preference pairs from the benchmark}
 
-For each of the 550 test-split cases we already had seven scored responses. We
-took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
-\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, split
-500 for training and 50 for evaluation. We then fine-tuned Qwen 3.5-9B with ORPO
+For each of the 550 test-split cases we already had seven scored responses, and
+we took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
+\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, of
+which 500 were used for training and 50 held for evaluation during the run. We then fine-tuned Qwen 3.5-9B with ORPO
 \citep{hong2024orpo}, LoRA rank 16 and alpha 32 applied to all linear layers
 including the vision tower, three epochs on two H100s, with the learning rate and
 the preference weight chosen by an eight-trial search.
@@ -644,8 +885,7 @@ alignment most of all.}
 \label{tab:orpo}
 \end{table}
 
-Five hundred and fifty preference pairs moved a 9B model from last position to
-second, ahead of Claude Opus 4.6, and every rubric improved, which is the result
+Five hundred training pairs moved a 9B model from last position to second, ahead of Claude Opus 4.6, and every rubric improved, which is the result
 worth emphasizing: the procedure raises the assessment as a whole rather than
 optimizing a single reported quantity, and it is reproducible by anyone with the
 released dataset and two GPUs.
@@ -657,19 +897,21 @@ true rate of 0.350, and the trained model's is 0.396. Whether the same recipe yi
 when the context fields are measured rather than generated is the open question
 this benchmark exists to make answerable.
 
-The base model's AUROC is instructive in the opposite direction: it attains
-0.554 on the test split, the highest of the eight, and collapses to 0.450 on held
-out, below chance, which is the signature of a ranking that has overfitted to one
-distribution and fails to survive a shift, whereas the post-trained model moves
-from 0.531 to 0.547, suggesting that the fine-tune regularized its probability
-estimates rather than sharpening them.
+The base model's AUROC differs sharply between splits, 0.554 on test against
+0.450 on held out, but with roughly 36 positive cases in the held-out split the
+standard error on that statistic is near 0.06, so the difference is not
+distinguishable from sampling noise and we draw no inference from it.
 
-The cost structure is the consideration most relevant to deployment: processing
-the 550 test cases requires \$184.81 with Opus 4.6 against \$7.98 with our model,
-which scores higher, and at approximately 19 seconds and \$0.017 per case on
-hardware already provisioned, a post-trained small model is the appropriate form
-factor for this workload, provided that the requirement is explanation rather
-than prediction.
+The cost structure is the consideration most relevant to deployment, and it
+requires care, because the two systems are not billed on the same basis. Opus 4.6
+incurred \$170.43 of API inference over the 550 test cases, or \$0.310 per case,
+whereas our model was served on a two-GPU instance we already operated, so its
+marginal cost is GPU time rather than a per-token price: at 19 seconds per case
+on the \$8.38 per hour instance used throughout this study, that is \$0.044 per
+case, or roughly one seventh of the Opus figure, and it falls further under
+batching. We report both bases rather than the single ratio, since the
+seven-fold figure is the defensible one and a comparison against our recorded
+\$7.98, which is almost entirely judge cost, would not be.
 
 
 % ============================================================
@@ -711,7 +953,7 @@ and occupies the top of the leaderboard, so a model optimized to resemble the
 judge should be expected to satisfy it. Confirming the ordering with a judge from
 a different model family is the most immediate extension of this work, and until
 that is done our model's second position should be read as second according to
-GPT-5.4."
+GPT-5.4 rather than as an unconditional ranking.
 
 
 % ============================================================
@@ -814,7 +1056,7 @@ Provide a comprehensive clinical assessment including:
 
 \section{Rubric definitions}
 \label{app:rubrics}
-The judge returns a score and a one-line justification for each rubric, plus the numeric probability it extracted from the response. Rubric text The rubric text below is what the judge sees, verbatim.
+The judge returns a score and a one-line justification for each rubric, plus the numeric probability it extracted from the response. Rubric text The text below is what the judge sees, verbatim.
 
 \paragraph{Morphological Accuracy}
 How accurately does the response describe the embryo's morphological features as visible in the image? Consider: expansion stage assessment, ICM description, TE description, zona pellucida observations, overall blastocyst appearance.

@@ -36,7 +36,8 @@ with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
 constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
 on 550 benchmark-derived preference pairs improves all five rubrics and places it
 second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
-$p{=}0.007$) at roughly one twentieth of the inference cost, indicating that the
+$p{=}0.007$, as scored by a single judge that also authored most of the training
+targets) at roughly one twentieth of the inference cost, indicating that the
 reasoning component of embryo assessment does not require frontier-scale models,
 while the prediction ceiling reflects the absence of context-linked outcome data
 rather than a limitation of the models themselves. We release the benchmark, the
@@ -50,6 +51,12 @@ CITATION = r"""@article{correa2026ivfbench,
   journal = {arXiv preprint},
   year    = {2026}
 }"""
+
+
+def figure(name: str) -> str:
+    """Pull one '% ===== NAME =====' block out of figures.tex."""
+    text = (ARXIV / "figures.tex").read_text()
+    return text.split(f"% ===== {name} =====")[1].split("% =====")[0].rstrip() + "\n"
 
 
 def section(name: str, text: str) -> str:
@@ -74,7 +81,7 @@ def rubric_appendix() -> str:
     out = [
         "The judge returns a score and a one-line justification for each rubric, "
         "plus the numeric probability it extracted from the response. Rubric text "
-        "The rubric text below is what the judge sees, verbatim.\n"
+        "The text below is what the judge sees, verbatim.\n"
     ]
     for key, r in RUBRIC_DEFINITIONS.items():
         out.append("\\paragraph{%s}" % r["name"].replace("&", "\\&"))
@@ -176,6 +183,10 @@ def main() -> None:
         ("DEFECTS_APPENDIX_PLACEHOLDER", (ARXIV / "defects.tex").read_text()),
         ("DISTRIBUTION_APPENDIX_PLACEHOLDER", distribution_appendix()),
         ("ARTIFACT_APPENDIX_PLACEHOLDER", artifact_appendix()),
+        ("FIG_PIPELINE_PLACEHOLDER", figure("FIG_PIPELINE")),
+        ("FIG_RUBRICS_PLACEHOLDER", figure("FIG_RUBRICS")),
+        ("FIG_ABLATION_PLACEHOLDER", figure("FIG_ABLATION")),
+        ("FIG_BASERATE_PLACEHOLDER", figure("FIG_BASERATE")),
     ]:
         if placeholder not in tpl:
             raise SystemExit(f"placeholder {placeholder} missing from main.tex")

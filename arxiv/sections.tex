@@ -106,6 +106,8 @@ reasoning loop; every system answered all 103 held-out cases.}
 \label{tab:leaderboard}
 \end{table}
 
+FIG_RUBRICS_PLACEHOLDER
+
 \subsection{Which gaps are real}
 
 A leaderboard reported without intervals invites readers to treat a difference
@@ -166,6 +168,8 @@ the cases where a probability could be extracted.}
 \label{tab:baserate}
 \end{table}
 
+FIG_BASERATE_PLACEHOLDER
+
 This is the result we most want a reader to retain, and it is not a verdict on
 the models, for the reason given in Section~\ref{sec:synthetic}: the
 patient-context fields we supply are sampled independently of outcome and
@@ -197,11 +201,14 @@ upper bound on image comprehension rather than a measurement of it; the ablation
 in Section~\ref{sec:ablation} measures the image's contribution directly and
 shows that it is large for most systems and negligible for one.
 
-\textbf{4. Cost and quality are only loosely coupled.} On the test split Opus
-4.6 requires \$184.81 to process the 550 cases and scores 4.01, while our 9B
-model requires \$7.98 and scores 4.17; Gemini 2.5 Flash, the least expensive
-commercial system evaluated, finishes seventh on that split while rising to
-fourth on held out, the largest between-split movement of any system.
+\textbf{4. Cost and quality are only loosely coupled.} Opus 4.6 incurs \$170.43
+of inference to process the 550 test cases and scores 4.01, while Gemini 2.5
+Flash, the least expensive commercial system evaluated, finishes seventh on that
+split and rises to fourth on held out, the largest between-split movement of any
+system. Our post-trained model is excluded from this comparison because it was
+served on hardware we already owned, so its marginal inference cost is not
+commensurable with an API price; Section~\ref{sec:orpo} states the comparison in
+the terms that are.
 
 
 \subsection{What the embryo image contributes}
@@ -240,6 +247,8 @@ $+0.14$, has a confidence interval of $[+0.01, +0.27]$ and $p{=}0.041$.}
 \label{tab:ablation}
 \end{table}
 
+FIG_ABLATION_PLACEHOLDER
+
 Three findings follow. The image carries substantial information for most
 systems, since removing it halves GPT-5.4's morphology grounding, from 3.94 to
 1.98, and reduces Qwen 397B's by 40\%, which establishes that the vision channel
@@ -267,6 +276,47 @@ absolute morphology scores remain an upper bound, since the judge cannot verify 
 description against the image, but the differences between conditions are
 measured directly and are large.
 
+
+\subsection{Two controls on the headline claims}
+\label{sec:controls}
+
+Two objections bear directly on the results above and we address both with
+additional analysis rather than argument.
+
+\textbf{Is the ceiling really the data?} Our claim that the outcome ceiling
+reflects the available data rather than model capacity rests, so far, on the
+observation that the generated fields are uninformative by construction, which
+says nothing about the measured ones. We therefore fit logistic regression to the
+measured fields alone, namely age, AMH, endometrial thickness, oocytes retrieved,
+mature oocytes, transfer day, and the three Gardner components, with missing
+values imputed at the column median. Cross-validated within the 550-case split it
+reaches AUROC 0.538 (95\% CI $[0.487, 0.586]$), and fit on those 550 cases and
+evaluated on the 103 held out it reaches 0.608 (95\% CI $[0.484, 0.725]$), an
+interval wide enough to include chance. The better-powered estimate, 0.538, sits
+squarely inside the 0.450 to 0.562 range spanned by the vision-language systems,
+which is the result that matters: a linear model given the same measured
+covariates extracts about as much prognostic signal as the frontier systems do,
+so those systems are operating near the limit of what these covariates support
+rather than failing to use them.
+
+One qualification follows from the same experiment and cuts against us. On the
+held-out split the tabular model attains a Brier score of 0.2197, which does beat
+the constant predictor at 0.2274, so the claim that nothing in this study beats
+the base rate holds for the language models and not for a fitted tabular model.
+The margin is small, the sample is 103 cases, and the cross-validated Brier on
+the larger split is 0.2297, which does not beat the constant; we report the
+result as it stands rather than choose the split that suits us.
+
+\textbf{Is the post-training margin an artifact of verbosity?} The judge rewards
+length, as Section~\ref{sec:robustness} quantifies, and our model was trained
+toward a teacher whose responses are long, so the comparison against Opus 4.6
+could plausibly be measuring output length. It is not. On the held-out split our
+model's responses average 9,485 characters against Opus 4.6's 11,933, so our
+model is the shorter of the two, and regressing score on length within each
+system and comparing at a common length widens the margin rather than narrowing
+it, from $+0.103$ raw to $+0.205$ adjusted. The verbosity confound runs against
+our result, not for it.
+
 % ===== ORPO =====
 The natural question raised by the gap between a 9B open model and a frontier
 system is whether that gap reflects a capability ceiling or a deficit of
@@ -274,10 +324,10 @@ domain-specific training data, and we tested this directly.
 
 \subsection{Building preference pairs from the benchmark}
 
-For each of the 550 test-split cases we already had seven scored responses. We
-took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
-\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, split
-500 for training and 50 for evaluation. We then fine-tuned Qwen 3.5-9B with ORPO
+For each of the 550 test-split cases we already had seven scored responses, and
+we took the highest-scoring one as \texttt{chosen} and the lowest-scoring one as
+\texttt{rejected}, giving 550 pairs with a mean score gap of 1.49 points, of
+which 500 were used for training and 50 held for evaluation during the run. We then fine-tuned Qwen 3.5-9B with ORPO
 \citep{hong2024orpo}, LoRA rank 16 and alpha 32 applied to all linear layers
 including the vision tower, three epochs on two H100s, with the learning rate and
 the preference weight chosen by an eight-trial search.
@@ -315,8 +365,7 @@ alignment most of all.}
 \label{tab:orpo}
 \end{table}
 
-Five hundred and fifty preference pairs moved a 9B model from last position to
-second, ahead of Claude Opus 4.6, and every rubric improved, which is the result
+Five hundred training pairs moved a 9B model from last position to second, ahead of Claude Opus 4.6, and every rubric improved, which is the result
 worth emphasizing: the procedure raises the assessment as a whole rather than
 optimizing a single reported quantity, and it is reproducible by anyone with the
 released dataset and two GPUs.
@@ -328,19 +377,21 @@ true rate of 0.350, and the trained model's is 0.396. Whether the same recipe yi
 when the context fields are measured rather than generated is the open question
 this benchmark exists to make answerable.
 
-The base model's AUROC is instructive in the opposite direction: it attains
-0.554 on the test split, the highest of the eight, and collapses to 0.450 on held
-out, below chance, which is the signature of a ranking that has overfitted to one
-distribution and fails to survive a shift, whereas the post-trained model moves
-from 0.531 to 0.547, suggesting that the fine-tune regularized its probability
-estimates rather than sharpening them.
+The base model's AUROC differs sharply between splits, 0.554 on test against
+0.450 on held out, but with roughly 36 positive cases in the held-out split the
+standard error on that statistic is near 0.06, so the difference is not
+distinguishable from sampling noise and we draw no inference from it.
 
-The cost structure is the consideration most relevant to deployment: processing
-the 550 test cases requires \$184.81 with Opus 4.6 against \$7.98 with our model,
-which scores higher, and at approximately 19 seconds and \$0.017 per case on
-hardware already provisioned, a post-trained small model is the appropriate form
-factor for this workload, provided that the requirement is explanation rather
-than prediction.
+The cost structure is the consideration most relevant to deployment, and it
+requires care, because the two systems are not billed on the same basis. Opus 4.6
+incurred \$170.43 of API inference over the 550 test cases, or \$0.310 per case,
+whereas our model was served on a two-GPU instance we already operated, so its
+marginal cost is GPU time rather than a per-token price: at 19 seconds per case
+on the \$8.38 per hour instance used throughout this study, that is \$0.044 per
+case, or roughly one seventh of the Opus figure, and it falls further under
+batching. We report both bases rather than the single ratio, since the
+seven-fold figure is the defensible one and a comparison against our recorded
+\$7.98, which is almost entirely judge cost, would not be.
 
 % ===== ROBUSTNESS =====
 A benchmark paper should attempt to falsify its own instrument, and we report
@@ -377,7 +428,7 @@ and occupies the top of the leaderboard, so a model optimized to resemble the
 judge should be expected to satisfy it. Confirming the ordering with a judge from
 a different model family is the most immediate extension of this work, and until
 that is done our model's second position should be read as second according to
-GPT-5.4."
+GPT-5.4 rather than as an unconditional ranking.
 
 % ===== LIMITATIONS =====
 \begin{itemize}

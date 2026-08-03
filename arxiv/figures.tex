@@ -1,0 +1,163 @@
+% Figures for IVF-Bench. Drawn in TikZ/pgfplots so they scale cleanly and carry
+% no external image dependency into the arXiv bundle.
+
+% ===== FIG_PIPELINE =====
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=3pt, align=center, inner sep=5pt,
+              minimum height=8mm, text width=#1},
+  dec/.style={draw, diamond, aspect=2.2, align=center, inner sep=1pt, font=\small},
+  ar/.style={-{Latex[length=2mm]}, thick},
+  node distance=6mm,
+]
+
+% ---------------- left column: the conventional framing
+\node[font=\bfseries] (lh) at (0,0) {Conventional evaluation};
+\node[box=26mm, below=5mm of lh] (li) {Embryo image};
+\node[box=26mm, below=of li] (lm) {Scoring model\\\footnotesize(CNN, time-lapse)};
+\node[box=26mm, below=of lm] (ls) {Scalar score};
+\node[box=26mm, below=of ls] (lr) {Ranked embryos};
+\node[box=26mm, below=of lr, fill=black!4] (lo) {Measured by\\outcome AUROC};
+\draw[ar] (li) -- (lm);
+\draw[ar] (lm) -- (ls);
+\draw[ar] (ls) -- (lr);
+\draw[ar] (lr) -- (lo);
+
+% ---------------- right column: this work
+\node[font=\bfseries] (rh) at (6.6,0) {IVF-Bench (this work)};
+\node[box=52mm, below=5mm of rh] (ri)
+  {Embryo image \textbf{+} patient context\\
+   \footnotesize Gardner grade, cycle data, history};
+\node[box=52mm, below=of ri] (rm) {Vision-language model};
+\node[box=52mm, below=of rm] (ra)
+  {Open-ended assessment\\
+   \footnotesize morphology, integration, probability, plan};
+\node[dec, below=6mm of ra] (rd) {which\\part?};
+
+\node[box=30mm, below left=9mm and -4mm of rd] (rj)
+  {Five clinical rubrics\\\footnotesize LLM judge, 1--5};
+\node[box=30mm, below right=9mm and -4mm of rd] (rp)
+  {Stated probability\\\footnotesize Brier, AUROC};
+\node[box=52mm, below=16mm of rd, fill=black!4] (ro)
+  {Measured by rubric scores \textbf{and} outcome};
+
+\draw[ar] (ri) -- (rm);
+\draw[ar] (rm) -- (ra);
+\draw[ar] (ra) -- (rd);
+\draw[ar] (rd) -| node[above left, font=\scriptsize, pos=0.25] {reasoning} (rj);
+\draw[ar] (rd) -| node[above right, font=\scriptsize, pos=0.25] {prognosis} (rp);
+\draw[ar] (rj) |- (ro);
+\draw[ar] (rp) |- (ro);
+\end{tikzpicture}
+\caption{Conventional embryo-selection evaluation against IVF-Bench. Prior work
+maps an image to a scalar and is scored only by how well that scalar ranks
+outcomes, so a model that reasons well about a patient and a model that does not
+are indistinguishable. IVF-Bench supplies the patient context alongside the
+image, elicits an open-ended assessment, and scores the reasoning against five
+clinical rubrics while separately scoring the stated probability against the
+recorded outcome.}
+\label{fig:pipeline}
+\end{figure}
+
+% ===== FIG_RUBRICS =====
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\textwidth, height=6.4cm,
+  ybar, bar width=4.4pt,
+  ymin=2.5, ymax=5.3,
+  ylabel={Score (1--5)}, ylabel style={font=\small},
+  symbolic x coords={Morphology,Clinical,Reasoning,Guideline,Recommendation},
+  xtick=data, x tick label style={font=\small},
+  y tick label style={font=\small},
+  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=4,
+                draw=none, column sep=0.6ex},
+  enlarge x limits=0.13,
+  ymajorgrids, grid style={black!12},
+  axis lines*=left,
+]
+\addplot[fill=black!78, draw=none] coordinates {(Morphology,3.98)(Clinical,5.00)(Reasoning,4.65)(Guideline,4.23)(Recommendation,4.88)};
+\addplot[fill=red!68,   draw=none] coordinates {(Morphology,3.56)(Clinical,4.76)(Reasoning,3.93)(Guideline,3.93)(Recommendation,4.37)};
+\addplot[fill=black!45, draw=none] coordinates {(Morphology,3.60)(Clinical,4.92)(Reasoning,3.98)(Guideline,3.22)(Recommendation,4.31)};
+\addplot[fill=black!28, draw=none] coordinates {(Morphology,3.48)(Clinical,4.31)(Reasoning,3.88)(Guideline,3.44)(Recommendation,3.98)};
+\addplot[fill=black!16, draw=none] coordinates {(Morphology,3.07)(Clinical,4.51)(Reasoning,3.73)(Guideline,2.89)(Recommendation,4.06)};
+\addplot[fill=black!8,  draw=none] coordinates {(Morphology,2.99)(Clinical,3.91)(Reasoning,3.18)(Guideline,2.85)(Recommendation,3.64)};
+\legend{GPT-5.4, Ours (9B-ORPO), Opus 4.6, Qwen 397B, Sonnet 4.6, Qwen 9B base}
+\end{axis}
+\end{tikzpicture}
+\caption{Per-rubric scores on the held-out split. Clinical integration is the
+strongest rubric for every system and morphology grounding the weakest, a
+pattern that holds across three orders of magnitude in model size. Our
+post-trained 9B model tracks the frontier systems on every rubric except
+morphology grounding, where all systems are compressed into a narrow band.}
+\label{fig:rubrics}
+\end{figure}
+
+% ===== FIG_ABLATION =====
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.92\textwidth, height=5.6cm,
+  ybar, bar width=13pt,
+  ymin=0, ymax=4.6,
+  ylabel={Morphology grounding (1--5)}, ylabel style={font=\small},
+  symbolic x coords={GPT-5.4,Qwen 397B,Gemini Flash,Opus 4.6},
+  xtick=data, x tick label style={font=\small},
+  y tick label style={font=\small},
+  legend style={font=\scriptsize, at={(0.5,1.03)}, anchor=south, legend columns=2,
+                draw=none, column sep=1ex},
+  enlarge x limits=0.2,
+  ymajorgrids, grid style={black!12},
+  axis lines*=left,
+  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
+                                              /pgf/number format/precision=2},
+]
+\addplot[fill=black!70, draw=none] coordinates {(GPT-5.4,3.94)(Qwen 397B,3.29)(Gemini Flash,3.24)(Opus 4.6,3.29)};
+\addplot[fill=black!18, draw=none] coordinates {(GPT-5.4,1.98)(Qwen 397B,1.98)(Gemini Flash,2.34)(Opus 4.6,3.15)};
+\legend{image supplied, image withheld}
+\end{axis}
+\end{tikzpicture}
+\caption{Morphology grounding with the embryo image supplied and withheld, on
+identical cases. Removing the image halves GPT-5.4's score and cuts Qwen 397B's
+by 40\%, which establishes that the rubric responds to the visual input rather
+than to the Gardner grade supplied in text. Opus 4.6 is the exception, losing
+only 0.14 points, indicating that its morphology descriptions derive almost
+entirely from the annotation rather than the image.}
+\label{fig:ablation}
+\end{figure}
+
+% ===== FIG_BASERATE =====
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.86\textwidth, height=5.2cm,
+  xbar, bar width=8pt,
+  xmin=0.20, xmax=0.30,
+  xlabel={Brier score on the held-out split (lower is better)}, xlabel style={font=\small},
+  symbolic y coords={Gemini Flash,Qwen 9B base,Qwen 397B,Kimi K2.5,Opus 4.6,GPT-5.4,Ours 9B-ORPO,Sonnet 4.6,Constant at base rate},
+  ytick=data, y tick label style={font=\small},
+  x tick label style={font=\small},
+  xmajorgrids, grid style={black!12},
+  axis lines*=left,
+  nodes near coords, nodes near coords style={font=\tiny, /pgf/number format/fixed,
+                                              /pgf/number format/precision=3},
+]
+\addplot[fill=black!25, draw=none] coordinates {
+  (0.2888,Gemini Flash) (0.2851,Qwen 9B base) (0.2648,Qwen 397B) (0.2541,Kimi K2.5)
+  (0.2469,Opus 4.6) (0.2465,GPT-5.4) (0.2447,Ours 9B-ORPO) (0.2423,Sonnet 4.6)};
+\addplot[fill=red!65, draw=none] coordinates {(0.2274,Constant at base rate)};
+\end{axis}
+\end{tikzpicture}
+\caption{Brier score of every evaluated system against a constant predictor that
+returns the cohort's clinical pregnancy rate of 0.350 for every case, ignoring
+the embryo, the image, and the patient. No system reaches the constant. We
+attribute this to the absence of outcome-linked patient context in the available
+data rather than to model capacity, for the reason given in
+Section~\ref{sec:synthetic}.}
+\label{fig:baserate}
+\end{figure}
