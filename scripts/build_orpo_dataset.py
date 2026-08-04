@@ -46,6 +46,10 @@ RUBRICS = [
 
 def _load_scores(run_dir: Path) -> dict[str, dict]:
     """Load all score files for a model run. Returns {case_id: score_data}."""
+    # Deliberately the blind judge, not scores_sighted: the released preference
+    # pairs were selected before the judge was shown the embryo, and rebuilding
+    # them from a different judge would not reproduce the dataset we trained on.
+    # The paper states this in the post-training section.
     scores_dir = run_dir / "scores"
     if not scores_dir.exists():
         return {}

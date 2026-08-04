@@ -29,6 +29,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy import stats
 
 ROOT = Path(__file__).resolve().parent.parent
+SCORES = "scores_sighted"   # the judge configuration every reported score uses
 RUBRICS = ["morphological_accuracy", "clinical_integration", "reasoning_coherence",
            "guideline_alignment", "actionability"]
 RNG = np.random.default_rng(42)
@@ -104,7 +105,7 @@ def check_tabular() -> None:
 
 def load_scores(run: str, ids: set[str]) -> dict[str, dict]:
     out = {}
-    for f in (ROOT / "data/runs" / run / "scores").glob("*.json"):
+    for f in (ROOT / "data/runs" / run / SCORES).glob("*.json"):
         if f.stem not in ids:
             continue
         d = json.loads(f.read_text())

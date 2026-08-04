@@ -21,6 +21,7 @@ from scipy import stats
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "data" / "runs"
+SCORES = "scores_sighted"   # judge eyesight held constant across both arms
 RUBRICS = [
     "morphological_accuracy",
     "clinical_integration",
@@ -34,7 +35,7 @@ N_BOOT = 10_000
 
 def load(run_name: str, case_ids: set[str]) -> dict[str, dict[str, float]]:
     out: dict[str, dict[str, float]] = {}
-    for sf in (RUNS / run_name / "scores").glob("*.json"):
+    for sf in (RUNS / run_name / SCORES).glob("*.json"):
         if sf.stem not in case_ids:
             continue
         data = json.loads(sf.read_text())
@@ -68,7 +69,7 @@ def main() -> None:
     print(f"{'model':18s} {'n':>4s}  {'with image':>11s} {'no image':>9s} "
           f"{'delta':>7s}  {'95% CI':>18s} {'p':>7s}")
     for with_run, without_run, label in pairs:
-        if not (RUNS / without_run / "scores").exists():
+        if not (RUNS / without_run / SCORES).exists():
             print(f"{label:18s}  (ablation arm not scored yet)")
             continue
         w, wo = load(with_run, case_ids), load(without_run, case_ids)

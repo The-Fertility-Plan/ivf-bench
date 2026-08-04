@@ -37,6 +37,9 @@ def load_split_cases(split: str) -> dict[str, dict]:
     return {f.stem: json.loads(f.read_text()) for f in sorted(d.glob("*.json"))}
 
 
+SCORES_DIR = "scores_sighted"   # the reported scores: judge sees what the model saw
+
+
 def load_records(split: str, cases: dict[str, dict]) -> dict[str, dict[str, dict]]:
     """model -> case_id -> {rubric scores, overall, response length}.
 
@@ -50,9 +53,13 @@ def load_records(split: str, cases: dict[str, dict]) -> dict[str, dict[str, dict
         meta = run_dir / "run_meta.json"
         if not meta.exists():
             continue
-        model = json.loads(meta.read_text())["model"]
+        m = json.loads(meta.read_text())
+        # ablation arms are separate experiments, not leaderboard entries
+        if not m.get("include_image", True) or not m.get("include_grade", True):
+            continue
+        model = m["model"]
         per_case: dict[str, dict] = {}
-        for sf in (run_dir / "scores").glob("*.json"):
+        for sf in (run_dir / SCORES_DIR).glob("*.json"):
             cid = sf.stem
             if cid not in cases:
                 continue
