@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0497",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a very poor-quality, minimally expanded/partially collapsed blastocyst with absent/degenerate ICM and poor TE, consistent with 1DD. Minor issue: it notes some ambiguity between stage 1 and stage 2 and adds features like necrosis/fragmentation that are inferred rather than directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, prior failed cycle, sperm data, endometrium, and lifestyle with embryo prognosis well. Slight overreach in attributing poor blastulation to sperm DNA fragmentation without supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and consistent: severely poor morphology drives a very low implantation estimate despite favorable endometrium and reasonable general health. Minor inconsistency in discussing expansion stage and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing 1DD as extremely poor prognosis and counseling accordingly, but recommending cancellation outright and suggesting TESE/DuoStim based on limited evidence is more aggressive than standard guideline-based individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer counseling and future workup/planning, including sperm testing, possible ICSI, protocol review, and embryo banking. Some recommendations are somewhat speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013011,
+  "judge_latency_ms": 4779.453374998411,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 335
+}

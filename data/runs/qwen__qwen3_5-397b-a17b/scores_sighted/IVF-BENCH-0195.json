@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0195",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonably identifies a poorly developed compacted morula/very early blastocyst and notes absent clear ICM/TE, but overstates degeneration from the image alone and adds unsupported details like fragmentation/arrest; also correctly flags inconsistency between image and stated Gardner 1DD description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, BMI, prior IVF history, sperm parameters, and endometrium with embryo prognosis well, though it somewhat overemphasizes paternal age/DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from the low-grade embryo, but there are notable issues: it treats Day 4 transfer as inherently rescue, infers trilaminar lining from thickness alone, and makes strong claims about non-viability and sperm DNA fragmentation beyond the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent in recognizing very poor embryo quality and low implantation potential, but recommendations such as calling PGT-A 'essential,' suggesting testicular sperm based mainly on age, and implying many clinics would consider 1DD non-transferable are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling for the current transfer and concrete future steps including further testing, culture strategy, and lifestyle optimization, though some recommendations are somewhat overprescriptive rather than individualized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013305,
+  "judge_latency_ms": 5435.393332998501,
+  "judge_prompt_tokens": 2575,
+  "judge_completion_tokens": 372
+}

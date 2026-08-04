@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0521",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the Gardner 3AA grading, including expansion, thinning zona, tightly packed ICM, and cohesive TE. The localization of ICM to 'upper-left quadrant' and TE to 'right and bottom periphery' appears to be a reasonable attempt at image interpretation, though without being able to verify exact positions. The description aligns well with the laboratory data provided. Minor concern: a Grade 3 blastocyst is described as 'fully expanded' but Grade 3 is technically 'full blastocyst' with the blastocoel filling the embryo, while Grade 4 is the expanded stage with thinning zona. The response conflates these slightly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response thoughtfully connects BMI 34.5 with implantation and obstetric risks, addresses the paradox of low AMH with good retrieval yield on a natural cycle (though correctly notes this is unusual), considers endometriosis impact on the uterine environment, leverages the previous live birth as a proven fertility indicator, and integrates sperm parameters and endometrial thickness. The interplay between favorable and unfavorable factors is well articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 60-75% follows from the evidence presented with clear boosters and dampeners identified. One notable inconsistency: the response notes 9 COCs retrieved in a 'Natural Cycle' and calls it 'excellent yield,' but doesn't adequately address that retrieving 9 oocytes in a true natural cycle is essentially impossible (natural cycles typically yield 0-1 oocyte). This is a significant logical gap that should have been flagged more critically, though the model does note the discrepancy briefly. The overall conclusion is reasonable despite this issue."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied. Luteal phase support recommendation is appropriate. Weight management counseling aligns with ASRM committee opinions on obesity and reproduction. The suggestion of mild stimulation for future cycles is reasonable. Minor deviation: the suggestion of GnRH agonist suppression before the next cycle for endometriosis is somewhat outdated and evidence is mixed. The implantation probability range is reasonable for a 3AA in a 31-year-old, though some might argue it's slightly optimistic given the BMI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure robust luteal support, counsel on BMI-related risks, refer to dietitian, consider mild stimulation protocol for future cycles, and discuss endometriosis management. The 5-10% weight loss target is specific and evidence-based. Could be improved with more specific progesterone dosing recommendations, PGT-A consideration given low AMH, or specific lifestyle modification recommendations regarding the moderate alcohol consumption and sedentary lifestyle which were not addressed."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.032205,
+  "judge_latency_ms": 23365.976250031963,
+  "judge_prompt_tokens": 2636,
+  "judge_completion_tokens": 761
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0229",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality early/degenerating blastocyst with absent discernible ICM and TE, broadly consistent with 0DD. However, it overstates some image-specific details such as precise cytoplasmic blebs/extrusions and 'no clear fluid-filled space,' when a small early cavity may be present."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior IVF failures, BMI, endometrial thickness, and male-factor context reasonably well. However, it makes a strong speculative leap to sperm DNA fragmentation as the likely explanation despite limited direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor embryo morphology plus repeated failed cycles implies very low implantation potential. Minor issues include overconfident statements that the embryo is definitively non-viable and some causal inferences that are stronger than the available data support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis of a 0DD embryo is appropriately recognized, recommendations such as categorically canceling transfer as medically futile, calling PGT-A 'essential,' and suggesting GH/TESE/MACS/PICSI with high certainty are not fully guideline-based and are more aggressive than standard evidence-supported practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decision-making and future workup, including sperm DNA fragmentation testing, parental karyotyping, and lifestyle review. It is practical, though some recommendations are insufficiently nuanced and somewhat overprescriptive."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014157,
+  "judge_latency_ms": 5562.551458002417,
+  "judge_prompt_tokens": 2709,
+  "judge_completion_tokens": 402
+}

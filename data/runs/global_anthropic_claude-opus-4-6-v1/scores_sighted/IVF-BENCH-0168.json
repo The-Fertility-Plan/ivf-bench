@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0168",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a compacting morula and dismisses the provided early blastocyst 0DD context. It fabricates details such as exact cell number, fragmentation percentage, vacuolation, and perivitelline debris that are not reliably discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior failed cycle, ovarian response, sperm parameters, and endometrial thickness into prognosis reasonably well, though some links are overstated and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the core reasoning is weakened by the incorrect reinterpretation of the embryo stage and by several speculative adjustments used to derive implantation probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some points are evidence-based, the response departs from standard practice by rejecting the supplied Gardner score outright and recommending interventions such as ERA, aspirin, growth hormone, and DHEA too strongly for this scenario without clear guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical for transfer planning and future cycles, but several are overly prescriptive or insufficiently evidence-based for routine use."
+    }
+  ],
+  "extracted_probability": 0.17,
+  "judge_cost_usd": 0.016941,
+  "judge_latency_ms": 4429.166208006791,
+  "judge_prompt_tokens": 4082,
+  "judge_completion_tokens": 313
+}

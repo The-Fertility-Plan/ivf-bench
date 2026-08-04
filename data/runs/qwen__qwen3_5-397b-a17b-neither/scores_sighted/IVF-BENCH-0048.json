@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided assigning a specific Gardner grade or describing visible morphology. It made only cautious generic inferences from a Day 5 transfer, without fabricating image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, endometrium, sperm parameters, prior outcomes, BMI/lifestyle, and ovarian response into prognosis reasonably well. It misses some nuance around interpreting prior miscarriage and low oocyte yield, but overall connects patient factors to embryo potential effectively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age, Day 5 status, and uterine factors. Minor issues include somewhat speculative links between low oocyte yield and quality and broad assumptions from transfer timing alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but some recommendations are weaker or more controversial relative to guidelines, such as suggesting aspirin/thrombophilia workup after a single miscarriage, routine PGT-A discussion at age 33 on limited history, and protocol changes without fuller reserve data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, counseling, reserve testing, and future protocol review. Recommendations are useful, though some are somewhat generic and a few are more speculative than case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014478,
+  "judge_latency_ms": 5049.794582999311,
+  "judge_prompt_tokens": 3001,
+  "judge_completion_tokens": 365
+}

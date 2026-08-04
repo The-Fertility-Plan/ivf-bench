@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0670",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocoel with thinning zona, Grade A ICM described as tightly packed and dense in the lower right quadrant, and Grade B TE described as loose epithelium. The description of zona thinning 'particularly at the upper left quadrant' adds spatial detail that may or may not be precisely accurate without image verification, but overall the description is coherent and well-aligned with the reported grade. Minor deduction for potentially fabricated spatial specifics."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating maternal age, AMH, oocyte yield, FSH, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality assessment. It correctly identifies the contradiction between the DOR diagnosis and the laboratory values, and connects paternal age to sperm DNA fragmentation risk. The integration of stress and sedentary lifestyle as implantation risk factors is appropriate. Slight deduction because the endometrial thickness of 7.0 mm, while noted as acceptable, is on the lower end and this nuance could have been explored more deeply."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The identification of the DOR vs. high reserve discrepancy is a coherent and important clinical observation. The probability estimate of 30-50% follows reasonably from the embryo grade and patient age. However, the reasoning around euploidy boosting rates to 60%+ for top-tier embryos slightly overstates typical published implantation rates, and the response does not fully reconcile how the DOR diagnosis uncertainty affects the final probability estimate. Overall the logic chain is sound with minor inconsistencies."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines and Gardner grading criteria. However, stating that AMH >4.0 'often indicates PCOS' is an oversimplification not fully supported by guidelines — high AMH alone is not diagnostic of PCOS. The claim that 4AA/5AA embryos achieve 60%+ implantation rates is somewhat inflated compared to published literature. The endometrial thickness threshold discussion is reasonable. The recommendation to review the DOR diagnosis is clinically appropriate. Overall mostly guideline-aligned but with some inaccuracies in specific thresholds and diagnostic criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations including proceeding with transfer, reviewing the DOR diagnosis, and noting lifestyle factors. However, the recommendations section appears to be cut off (ending abruptly after point 3), which significantly limits actionability. There are no specific recommendations about luteal phase support protocols, whether to consider PGT-A given the good reserve, OHSS monitoring given the high AMH, stress management referral specifics, or future cycle adjustments. The truncated response prevents a higher score."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01875,
+  "judge_latency_ms": 14243.836666995776,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 720
+}

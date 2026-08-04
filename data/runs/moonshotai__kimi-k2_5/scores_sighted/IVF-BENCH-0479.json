@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0479",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a poor-quality blastocyst with indistinct ICM/TE, but overstates certainty of non-viability and introduces questionable details such as blastocoel occupying most of the embryo and possible grade 3-4 appearance despite the provided 1DD score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, prior outcomes, male factor, BMI/endometrium, and cycle history with embryo prognosis reasonably well, though some inferences (e.g., diminished reserve, accelerated aging) are speculative without AMH or fuller cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate follows from very poor morphology, but there are inconsistencies between image interpretation and assigned grade, and the claim that the embryo is non-transferable/non-viable is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Uses Gardner grading concepts appropriately and recognizes DD as very poor prognosis, but stating many labs would classify it as non-viable/arrested and recommending against assisted hatching categorically are not clearly guideline-based; some recommendations are more opinion than standard guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical counseling and transfer considerations, but the recommendations are incomplete/truncated and future cycle planning is only partially developed."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.012465,
+  "judge_latency_ms": 5224.028416996589,
+  "judge_prompt_tokens": 2475,
+  "judge_completion_tokens": 336
+}

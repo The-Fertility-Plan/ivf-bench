@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided laboratory grade of 3AA by reclassifying the embryo as 4BB/4BC and adds uncertain image-specific details (e.g., sparse TE, debris) that may not be reliably supported. Some generic blastocyst features are reasonable, but the core morphology assessment appears inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, prior live birth, endometrial thickness, sperm quality, oocyte maturity, and transfer timing, and connects them to prognosis. AMH is appropriately not overinterpreted since unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis estimate is explained, but there are notable issues: the embryo is downgraded despite supplied 3AA data, there is some inconsistency between implantation and clinical pregnancy ranges, and the discussion of a 'natural cycle' with 13 oocytes is speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice (SET, considering luteal support, acknowledging age-related aneuploidy), but some suggestions are weakly guideline-supported or overreaching for this scenario, such as strong PGT-A endorsement, ERA after a single failure, and assisted hatching consideration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer and future planning, including SET, luteal support, lifestyle optimization, and possible further evaluation if unsuccessful. Some items are more speculative than necessary, but overall it is practical."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014589,
+  "judge_latency_ms": 4798.995791999914,
+  "judge_prompt_tokens": 2843,
+  "judge_completion_tokens": 404
+}

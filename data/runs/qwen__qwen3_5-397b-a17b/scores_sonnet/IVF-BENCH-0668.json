@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AC Gardner score: expanded blastocoel with thinning zona (Grade 3), prominent dense ICM cluster (Grade A), and sparse large TE cells (Grade C). The spatial description of ICM location adds some detail. Minor limitation is that the description largely echoes the provided Gardner score text rather than independently analyzing novel image features, but the correlation is accurate and well-explained."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: maternal age (39) linked to aneuploidy risk and TE grade interpretation, AMH/COC yield assessed relative to reserve, tubal factor diagnosis contextualized appropriately, biochemical pregnancy history used to infer endometrial receptivity, paternal age connected to sperm DNA fragmentation, smoking quantified as a modifiable risk, and BMI/endometrial thickness noted as favorable. The interactions between factors (e.g., age + TE grade C + RIF history) are explicitly connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 10-20% logically follows from the compounding negative factors (age, TE grade C, smoking, RIF history) offset by positive factors (ICM A, endometrial thickness, biochemical pregnancy history). The baseline of 15-20% for a 39-year-old is reasonable, and downward adjustments are justified. Minor issue: the smoking 'up to 50% reduction' claim is applied somewhat loosely without clearly showing how it arithmetically contributes to the final range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: PGT-A recommendation for age 39 with RIF is evidence-based, luteal support emphasis is appropriate, smoking cessation aligns with all major guidelines, sperm DNA fragmentation testing for age 42 with RIF is consistent with current practice, and RPL workup mention is appropriately caveated as 'often debated.' Donor egg counseling is appropriate per ASRM age-related guidance. Gardner grading interpretation is consistent with standard criteria. No major deviations from established guidelines detected."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer (justified), robust progesterone support, smoking cessation as priority, PGT-A for future cycles, sperm DNA fragmentation testing with specific techniques mentioned (PICSI/MACS), RPL/thrombophilia workup, and donor egg counseling as contingency. The response provides clear decision trees for both immediate and future planning. Slight limitation: no mention of ERA (Endometrial Receptivity Array) which could be relevant given RIF history, and no specific progesterone protocol details or timing recommendations."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.018801,
+  "judge_latency_ms": 13973.419375004596,
+  "judge_prompt_tokens": 2712,
+  "judge_completion_tokens": 711
+}

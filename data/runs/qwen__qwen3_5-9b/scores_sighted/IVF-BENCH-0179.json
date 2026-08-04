@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0179",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor overall quality and absent/degenerative ICM/TE consistent with 1DD, but it misstates the expansion criterion for grade 1 as blastocoel less than 50% rather than at least half the embryo, and the image description is somewhat inconsistent with the provided Gardner score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, prior IVF history, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overstates some links such as labeling this as poor responder/RIF without sufficient nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and the low implantation estimate follows from the poor embryo grade, but there are notable logical issues: it says 5 cycles with 0 pregnancies despite one prior live birth, and it infers non-viability too strongly from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned, such as recognizing very poor prognosis for a 1DD embryo, but recommending not to transfer outright, suggesting ERA and immunologic/thrombophilia workup routinely, and moving toward donor eggs in a 30-year-old are not well aligned with mainstream evidence-based IVF guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions on transfer decision-making, weight optimization, uterine evaluation, and future cycle planning, though several recommendations lack appropriate nuance and prioritization."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013929,
+  "judge_latency_ms": 5967.27895901131,
+  "judge_prompt_tokens": 2733,
+  "judge_completion_tokens": 382
+}

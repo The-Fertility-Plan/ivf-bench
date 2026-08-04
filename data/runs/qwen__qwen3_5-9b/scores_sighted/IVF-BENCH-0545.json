@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0545",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality blastocyst with poorly defined ICM and TE consistent with 1DD, but overstates expansion as 'expanded' and 'clearly visible >50%' without noting the embryo appears only early/partially expanded and image detail is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, diagnosis, and semen data with embryo quality reasonably well, though it overinterprets the significance of oocyte/blastocyst yield from limited cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable issues: calling sperm parameters normal despite low concentration, inferring low blast conversion without fertilization/blast count context, and making some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic Gardner interpretation is acceptable, but recommendations such as routine ICSI for unexplained infertility, suggesting some clinics may not transfer a poor blastocyst, and broad endorsement of PGT-A/sperm DNA fragmentation testing are not strongly guideline-based for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling and future-cycle considerations, including transfer counseling and additional evaluation, though some suggestions are insufficiently evidence-based or too speculative."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012417,
+  "judge_latency_ms": 5546.202417011955,
+  "judge_prompt_tokens": 2534,
+  "judge_completion_tokens": 321
+}

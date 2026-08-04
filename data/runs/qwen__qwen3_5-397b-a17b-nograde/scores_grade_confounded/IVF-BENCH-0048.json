@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grading by calling the embryo Stage 4 and estimating 4AB/4BB, whereas the known Gardner score is 3AA. It gives plausible generic blastocyst features but overstates what can be concluded from the image and misgrades key morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor diagnosis, prior miscarriage, ovarian yield, sperm parameters, endometrial thickness, and lifestyle reasonably well with embryo prognosis. AMH is unavailable and not overinterpreted, though some points are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking favorable age, embryo quality, tubal factor, and endometrium to prognosis while acknowledging miscarriage history and modest oocyte yield. The main weakness is that the probability estimate is partly based on an incorrect morphology upgrade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a 33-year-old with a good-quality day-5 blastocyst and standard luteal support are broadly guideline-concordant. Suggesting discussion of PGT-A is acceptable but somewhat overstated after only one miscarriage and without stronger indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for this transfer and future planning, including eSET, luteal support, possible protocol adjustment, and consideration of PGT-A. Some advice is generic (e.g., stress reduction), but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01251,
+  "judge_latency_ms": 4298.165542000788,
+  "judge_prompt_tokens": 2320,
+  "judge_completion_tokens": 370
+}

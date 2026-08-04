@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states the Gardner score is unavailable and fails to use the provided 1DD grade, missing the key morphology that indicates a very poor-quality blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates many patient factors well, but does not connect them appropriately to the actually provided poor embryo grade and therefore overweights favorable maternal factors relative to embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is internally structured but based on a major false premise that morphology is missing; implantation estimates are therefore inconsistent with the provided 1DD embryo and Day 4 context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response departs from Gardner-based assessment by ignoring the supplied 1DD grade and gives overly optimistic implantation estimates for a very poor-quality embryo; other general IVF recommendations are mostly standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Recommendations are practical in a general sense, but they are insufficiently tailored to the actual poor-grade embryo and do not address the implications of transferring a 1DD embryo."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012903,
+  "judge_latency_ms": 4053.394041999127,
+  "judge_prompt_tokens": 2761,
+  "judge_completion_tokens": 308
+}

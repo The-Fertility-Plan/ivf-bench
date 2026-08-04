@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0276",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality/degenerative blastocyst with absent-poor ICM and TE consistent with 0DD, but overstates some image-specific features such as dark granular cytoplasm and vacuole-like structures, and is somewhat inconsistent about expansion stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, PCOS, AMH, prior failed cycles, sperm motility, partner age, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the very low implantation estimate follows from the severe embryo grade, but there are minor issues such as calling it non-viable with certainty and some overinterpretation of causes like insulin resistance and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis for a 0DD embryo, but recommending categorical non-transfer/medical futility and suggesting ERA/immunologic workup are stronger than guideline-based evidence supports; some recommendations are not standard first-line."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps including reconsidering transfer, sperm DNA fragmentation testing, metabolic optimization, and uterine evaluation, though some suggestions would benefit from more nuance and prioritization."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012555,
+  "judge_latency_ms": 4781.981833992177,
+  "judge_prompt_tokens": 2520,
+  "judge_completion_tokens": 333
+}

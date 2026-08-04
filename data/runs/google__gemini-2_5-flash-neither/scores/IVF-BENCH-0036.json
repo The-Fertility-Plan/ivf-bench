@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "No image was provided, and the model appropriately avoided fabricating morphology. It correctly stated morphology/Gardner score could not be assessed, but therefore did not provide actual morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, prior live birth, sperm parameters, endometrial thickness, and lifestyle factors into prognosis reasonably well, though some links to embryo competence and transfer-day implications are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with the probability estimate tied to age, DOR, prior live birth, and unknown embryo quality. Minor issues include somewhat broad assumptions around Day 4 transfer and adjunctive measures."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age-related aneuploidy risk, DOR context, and cautious counseling, but recommendations such as ERA, intralipids, G-CSF, hCG wash, and adding estrogen for a 7.6 mm lining are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including counseling, luteal support review, and consideration of PGT-A if unsuccessful. Some suggestions are useful but not highly specific and include less evidence-based adjuncts."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013524,
+  "judge_latency_ms": 3839.994583002408,
+  "judge_prompt_tokens": 2848,
+  "judge_completion_tokens": 332
+}

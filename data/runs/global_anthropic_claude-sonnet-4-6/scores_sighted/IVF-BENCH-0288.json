@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0288",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies an expanded day-5 blastocyst with strong ICM and poor/sparse TE consistent with 3AC, but it overcalls image-specific details such as cytoplasmic granularity, vacuolation, and ICM margin irregularity that are not clearly reliable from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, missing AMH, endometrial thickness, oocyte maturity, prior cycle history, and sperm parameters with embryo quality and prognosis well, though some links (stress, vegan diet) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis driven mainly by age-related aneuploidy risk and TE grade C; however, some quantitative adjustments are not strongly evidence-based and a few inferred image findings weaken the chain slightly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most discussion is broadly aligned with IVF practice and Gardner grading, but recommendations such as routine low-dose aspirin, progesterone threshold monitoring in this context, and strong PGT-A endorsement at age 38 go beyond what major guidelines uniformly support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for proceeding with transfer, luteal support review, and future-cycle workup/planning, though some suggestions are more center-specific than universally indicated."
+    }
+  ],
+  "extracted_probability": 0.215,
+  "judge_cost_usd": 0.015333,
+  "judge_latency_ms": 5059.442957994179,
+  "judge_prompt_tokens": 3301,
+  "judge_completion_tokens": 362
+}

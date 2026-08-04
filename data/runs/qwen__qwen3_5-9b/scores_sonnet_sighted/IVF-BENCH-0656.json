@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The model response is entirely composed of repetitive internal deliberation loops and never actually provides a morphological description of the embryo. It repeatedly cycles through the same contradictions without reaching any conclusion about the image's features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "No clinical integration is achieved. The response never synthesizes patient factors (age, BMI, AMH, male factor diagnosis, sperm parameters) with embryo quality. The entire response is an unresolved internal monologue about data inconsistencies."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is deeply incoherent, consisting of hundreds of repetitive loops of the same contradictory statements without resolution. While it correctly identifies a real inconsistency (Gardner blastocyst score vs. Day 4 transfer), it never resolves or moves past this, making the reasoning completely non-functional."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 1,
+      "justification": "No clinical guidelines are referenced or applied. The response never reaches the stage of making any recommendations or assessments that could be evaluated against ESHRE/ASRM guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "Zero actionable recommendations are provided. The response contains no clinical next steps, no transfer recommendations, and no future cycle planning. It is entirely an unresolved internal deliberation with no output useful to a clinician."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.034863,
+  "judge_latency_ms": 8535.981166001875,
+  "judge_prompt_tokens": 9841,
+  "judge_completion_tokens": 356
+}

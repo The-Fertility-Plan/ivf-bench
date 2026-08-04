@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0230",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes ICM as compact and TE as looser/fair, which broadly fits the image and reported AB pattern, but it misstates the stage by calling it stage 2/borderline 3 and labels 2 as early/full blastocyst despite the provided lab note indicating full blastocyst; also adds speculative features like localized zona thinning/collapse artifact."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian reserve, BMI, semen quality, first cycle status, and endometrial thickness well, and appropriately distinguishes embryo competence from cohort size. Could be stronger on the specific implications of fresh day-5 transfer and borderline lining."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and mostly consistent, but there is a notable contradiction around blastocyst stage/grading (2 vs full blastocyst) and some probability reasoning rests on that staging uncertainty. Conclusions are generally supported but not fully tight."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with standard IVF practice: proceed with transfer, optimize luteal support, avoid unproven add-ons, consider hydrosalpinx/cavity review, and avoid routine PGT-A in a young patient with limited embryo numbers. Minor grading interpretation issues prevent a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support, cavity/hydrosalpinx review, and when to consider further workup. Useful but somewhat generic in places and not highly tailored to specific protocol decisions."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01617,
+  "judge_latency_ms": 13103.57337500318,
+  "judge_prompt_tokens": 3430,
+  "judge_completion_tokens": 392
+}

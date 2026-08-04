@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a Day 4 morula/early blastocyst and states Gardner grading is not applicable, despite the provided laboratory grade being 1DD. It fails to address the key poor-quality features of absent/degenerative ICM and TE and introduces unsupported details such as minimal fragmentation and a Grade 2 morula label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates several relevant factors well, including maternal age, PCOS response, sperm parameters, endometrial thickness, and prior cycle history, and links them to prognosis. However, it overinterprets some associations, such as attributing image granularity to age and developmental delay to male factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by a major internal inconsistency: it bases prognosis and recommendations on an incorrect morphological classification that conflicts with the provided Gardner score. Some conclusions therefore do not logically follow from the actual embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are notable deviations from standard IVF assessment principles, especially dismissing the applicability of Gardner grading when a blastocyst grade was explicitly provided. Recommendations such as PGT-A and sperm DNA fragmentation testing are plausible but presented too strongly for a first cycle without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, future cycle planning, male factor workup, and lifestyle modification. However, actionability is limited by the incorrect embryo-stage interpretation and somewhat overconfident recommendations."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013005,
+  "judge_latency_ms": 4744.505415997992,
+  "judge_prompt_tokens": 2320,
+  "judge_completion_tokens": 403
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good-quality Day 4 compacted morula and states Gardner grading is not applicable, despite the provided laboratory grade being 1DD blastocyst with degenerative/absent ICM and TE. It fabricates favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including age, AMH, tubal factor, prior live birth, endometrium, and sperm parameters, and relates them to prognosis, though this is undermined by the incorrect embryo-quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good quality rather than a poor-quality 1DD blastocyst, leading to an inflated prognosis and inconsistent conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It departs from Gardner grading and standard embryo assessment by rejecting the provided blastocyst grade and treating the embryo as a high-quality morula. General comments on age, tubal factor, and luteal support are reasonable, but overall alignment is weakened by the core grading error."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations are practical at a general level (proceed, luteal support, counseling, future planning), but they are not well tailored to the actual poor-quality 1DD embryo and therefore have limited case-specific usefulness."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012585,
+  "judge_latency_ms": 4176.820874999976,
+  "judge_prompt_tokens": 2325,
+  "judge_completion_tokens": 374
+}

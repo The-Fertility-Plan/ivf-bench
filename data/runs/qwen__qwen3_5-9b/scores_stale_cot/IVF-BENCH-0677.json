@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response is internally inconsistent about the image, initially calling it morula/early blastocyst and then relying heavily on the provided 2AA label. It overstates visibility of a clear large blastocoel, Grade A ICM, and Grade A TE from a limited image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: age, BMI, ovarian reserve, sperm quality, endometrium, unexplained diagnosis, prior live birth, prior failures, and recurrent ectopic history, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall reasoning is structured and mostly logical, but there are notable issues: confusion over embryo stage, treating 2AA as 'top-tier' despite day-4 transfer context, and an overconfident claim of >90% euploidy at age 32."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable (single transfer, ectopic surveillance, luteal support), but there are deviations: inaccurate interpretation of Gardner expansion, overstatement of euploidy likelihood, and somewhat liberal endorsement of PGT-A in a 32-year-old without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, serial beta-hCGs, early ultrasound, luteal support, weight counseling, and review of ectopic history. Useful, though some recommendations could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.00921625,
+  "judge_latency_ms": 6921.336167026311,
+  "judge_prompt_tokens": 4341,
+  "judge_completion_tokens": 379
+}

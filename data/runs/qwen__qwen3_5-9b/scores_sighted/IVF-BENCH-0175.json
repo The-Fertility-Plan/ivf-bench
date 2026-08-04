@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0175",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality early blastocyst with indistinct ICM and poor TE, but it misstates expansion relative to the provided Gardner 1DD by saying the cavity is less than half the embryo; grade 1 is at least half. It also adds limited image-specific detail such as zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live births, sperm quality, endometrium, and lifestyle reasonably well with embryo quality, though it over-attributes poor morphology to oocyte age and does not discuss the day-4 timing nuance in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable issues: the morphology description conflicts with the stated Gardner score, 'high responder' is not well supported by retrieval of only 4 oocytes, and calling this a 'last chance' transfer is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling to consider transfer of a poor embryo if available is reasonable, but recommending PGT-A as highly recommended and suggesting protocol change for presumed high response/OHSS risk are not strongly supported by the presented data and are somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, counseling expectations, and future-cycle considerations, but some recommendations lack nuance or case-specific justification."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013326,
+  "judge_latency_ms": 6203.053042001557,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 370
+}

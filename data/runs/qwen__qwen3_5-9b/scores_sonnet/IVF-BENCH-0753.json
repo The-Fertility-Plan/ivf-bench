@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0753",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinning zona pellucida, dense tightly-packed ICM, and cohesive multi-cellular trophectoderm. The description of ICM location ('at the bottom') and zona thinning at the 'bottom pole' adds image-specific detail. Minor issue: the description is somewhat formulaic and closely mirrors the Gardner criteria provided in the lab data rather than offering independent morphological observations that go beyond the given score, making it difficult to fully assess independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age (32), PCOS diagnosis, sperm parameters, endometrial thickness, and previous cycle failures. It connects PCOS to luteal phase risk and notes the good stimulation response. However, it underanalyzes BMI (30.9, overweight) which is relevant in PCOS patients for endometrial receptivity and implantation outcomes, and AMH (2.7 ng/mL) is not discussed in context of ovarian reserve adequacy. The two prior failed cycles are acknowledged but the analysis of potential causes could be deeper given the otherwise favorable profile."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-70% is reasonably derived from embryo quality and age, with appropriate conservative adjustment for prior failures. However, there is a slight tension: the response simultaneously claims 60-70% live birth rate for 3AA blastocysts under 35 (which is somewhat optimistic compared to published literature showing ~50-60% live birth rates) while also noting prior failures should lower expectations, yet the final range remains at the higher end. The reasoning is coherent but the probability calibration could be more precisely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for a high-quality blastocyst in a young patient is appropriate, luteal phase support for PCOS is evidence-based, ERA consideration after repeated implantation failure is guideline-consistent, and thrombophilia/immune workup after failures aligns with RIF investigation protocols. PGT-A discussion is balanced. Minor gap: the response does not mention the ESHRE definition of recurrent implantation failure (typically 3+ failures) which would contextualize whether full RIF workup is yet indicated after only 2 failures."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: eSET, progesterone supplementation, beta-hCG timing (12-14 days), and a structured future workup plan including ERA, thrombophilia panel, and PGT-A consideration. These are clinically useful. However, the response lacks specificity on progesterone dosing/route, does not address whether a frozen vs. fresh transfer protocol is being used (relevant for PCOS OHSS risk), and does not mention endometrial preparation protocol details that would be actionable for the treating clinician."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.019209,
+  "judge_latency_ms": 17235.333624994382,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 762
+}

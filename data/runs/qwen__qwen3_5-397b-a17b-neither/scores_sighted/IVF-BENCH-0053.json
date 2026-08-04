@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided assigning specific morphology or Gardner grade. It made only cautious generic statements about expected Day 5 blastocyst features, without fabricating visible details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated maternal age, ovarian response, endometriosis, prior miscarriage, endometrial thickness, sperm parameters, BMI, and lifestyle into prognosis and embryo competence in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to age-related aneuploidy and clinical history. Minor overreach exists where transfer selection is inferred from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including SET, luteal support, and consideration of PGT-A in AMA with miscarriage history. Slight downgrade for presenting low-dose aspirin and GnRH suppression somewhat strongly despite mixed or context-dependent evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including monitoring and contingency options. It is useful, though some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013389,
+  "judge_latency_ms": 5390.469500009203,
+  "judge_prompt_tokens": 2828,
+  "judge_completion_tokens": 327
+}

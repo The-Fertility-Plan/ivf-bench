@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 2BA by re-grading the embryo as 4BB/4BC and adds image-specific details (granularity, sparse TE, left-sided bleb) that may not be reliably supported. Some general blastocyst descriptors are plausible, but the grading mismatch is a major accuracy issue."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF history, sperm data, endometrial thickness, and protocol with embryo quality reasonably well. However, it overinterprets the prior two failed cycles as high-level RIF and speculates beyond the available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but there are notable issues: the embryo is reclassified inconsistently with the given Gardner score, prior failures are weighted heavily without knowing transfer details, and some deductions about male factor are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with mainstream evidence-based IVF guidance, including routine ERA, immunologic testing/intralipids, endometrial scratch, thrombophilia workup, and broad adjunctive therapies without clear indication. Some core points are appropriate, but the overall plan includes multiple non-routine interventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and contingency planning, including investigations and protocol considerations. However, some actions are overly aggressive or insufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013515,
+  "judge_latency_ms": 4724.124166998081,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 371
+}

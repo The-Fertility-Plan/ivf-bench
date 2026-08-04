@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided grade only. It correctly noted the inconsistency between a numeric 2 and the textual description of a full blastocyst, but it still characterized the embryo as top-tier from the lab label rather than the actual image, which appears more like an early/poorly expanded blastocyst with indistinct ICM/TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, endometrial thickness, male factor, paternal age, BMI, and first-cycle status with embryo prognosis in a clinically meaningful way. It misses some nuance around absent AMH and overinterprets semen findings, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from embryo grade and patient age to prognosis. Minor issues include speculative concern about Day 4 blastocyst-endometrium asynchrony and some overstatement of paternal age/male-factor effects without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET is appropriate, age-related aneuploidy risk is correctly emphasized, and PGT-A is framed as a consideration rather than a mandate. Small deviations include somewhat strong endorsement of PGT-A and speculative timing concerns for Day 4 transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support review, SET, possible sperm DNA fragmentation testing, and future-cycle planning. Some suggestions are more general than case-specific, but overall it is useful and actionable."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015315,
+  "judge_latency_ms": 6037.267374995281,
+  "judge_prompt_tokens": 3005,
+  "judge_completion_tokens": 420
+}

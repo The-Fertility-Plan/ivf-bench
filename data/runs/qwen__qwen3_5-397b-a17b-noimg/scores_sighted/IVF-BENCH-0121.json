@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0121",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided 3BB grade rather than inventing image-specific findings. Its summary of grade B ICM/TE is broadly consistent with the lab data, though it inaccurately labels stage 3 as 'expanded blastocyst' and adds confidence about optimal transfer stage/zona thinning that is not image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI/lifestyle, endometrial thickness, male factor context, and first-cycle status with embryo quality and prognosis. A few links are somewhat overstated, but overall the interaction between patient factors and embryo grade is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with the implantation estimate logically tied to age and embryo grade. Minor issues include overinterpreting AMH/oocyte yield as supporting oocyte quality and assuming details such as trilaminar lining or ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceeding with transfer, luteal support, OHSS vigilance, vitrification). However, there are notable deviations: stage 3 was mischaracterized, PGT-A is framed too favorably for a 31-year-old after a single failure, and paternal-contributed aneuploidy language is imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including luteal support, OHSS monitoring, vitrification, and possible further male-factor workup. It is useful clinically, though some recommendations could be more conditional and protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015201,
+  "judge_latency_ms": 5822.068291992764,
+  "judge_prompt_tokens": 2937,
+  "judge_completion_tokens": 426
+}

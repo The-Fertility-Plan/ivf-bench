@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0273",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes features consistent with the Gardner 2AA grading but there are issues. A Stage 2 blastocyst means the blastocoel is greater than half the volume but not fully expanded - the model's description of 'completely fills the embryo, expanding it against the zona pellucida' is more consistent with Stage 3-4, not Stage 2. The ICM and TE descriptions are reasonable but somewhat generic, with hedging ('slightly obscured by the focal plane', 'likely in the lower-left quadrant') suggesting limited confidence in actual image interpretation. Calling it 'premium quality' is appropriate for AA grading but the expansion stage description contains a notable error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response connects maternal age with aneuploidy risk, links AMH/FSH to ovarian response quality, addresses the endometrial thickness as favorable, considers paternal age impact on DNA fragmentation, and critically identifies smoking as a major modifiable risk factor. The interplay between good morphology and age-related aneuploidy risk is well articulated. The discussion of how sperm parameters relate to achieving the blastocyst quality is thoughtful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 35-45% is well-reasoned, starting from a baseline and adjusting for morphology, age-related aneuploidy, and smoking. The claim that smoking can reduce IVF success by 'up to 50%' is somewhat extreme but not entirely unsupported. One minor issue: the model states the embryo is 'premium quality' and 'top tier' but then gives a relatively modest probability range, which is actually appropriate given the risk factors - so the reasoning is internally consistent. The distinction between euploid vs. untested probability is a strong analytical point."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation is appropriate, PGT-A discussion for age 37 is guideline-concordant, smoking cessation counseling is evidence-based. The Gardner grading interpretation is mostly correct though the expansion stage description is slightly off. The recommendation for sperm DNA fragmentation testing as a contingency is reasonable. The aneuploidy rate estimate of 40-50% at age 37 is slightly high but within a reasonable range."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with SET, urgent smoking cessation counseling, PGT-A for future cycles, dietary review for restricted diet, sperm DNA fragmentation testing if transfer fails. These are well-prioritized and clinically relevant. Could be improved with more specific recommendations about luteal phase support, progesterone supplementation details, or specific smoking cessation interventions. The conditional nature of some recommendations (e.g., sperm DNA fragmentation testing if transfer fails) shows appropriate clinical nuance."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.031665,
+  "judge_latency_ms": 18195.44645800488,
+  "judge_prompt_tokens": 2693,
+  "judge_completion_tokens": 728
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a cleavage-stage/early morula embryo rather than assessing blastocyst morphology, and it fabricates cleavage-stage features like blastomere count and fragmentation instead of describing expansion, ICM, and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian reserve, endometriosis, prior IVF failure, sperm parameters, and endometrium, and connects them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is built on a likely incorrect morphological premise, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are notable deviations such as overemphasis on PGT-A at age 35, speculative supplements, and recommending laparoscopy/acupuncture without strong case-specific evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, luteal support, future embryo selection, endometriosis management, and lifestyle optimization, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.014238,
+  "judge_latency_ms": 3189.262207997672,
+  "judge_prompt_tokens": 3216,
+  "judge_completion_tokens": 306
+}

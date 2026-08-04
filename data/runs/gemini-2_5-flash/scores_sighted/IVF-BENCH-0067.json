@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates image certainty: the ICM is not crisply distinct, TE does not appear uniformly cohesive throughout, and calling it 'exquisitely' top-quality is stronger than what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, ovarian response, prior miscarriage, sperm parameters, endometrium, diagnosis, and lifestyle with embryo quality in a clinically meaningful way, though it does not fully explore miscarriage workup implications or transfer-day context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but there are some unsupported inferences such as implying the embryo is 'presumably euploid' from age/morphology and drawing strong conclusions from morphology alone without a probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Broadly aligned with Gardner grading concepts and standard IVF prognostic factors; however, morphology is somewhat overinterpreted and euploidy cannot be assumed from morphology, which prevents a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is incomplete and provides limited concrete next-step recommendations for the current transfer or future cycle planning beyond general favorable/risk discussion."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011457,
+  "judge_latency_ms": 5016.36433400563,
+  "judge_prompt_tokens": 2129,
+  "judge_completion_tokens": 338
+}

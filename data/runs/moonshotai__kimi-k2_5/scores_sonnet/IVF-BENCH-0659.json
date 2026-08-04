@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a Gardner 3AA blastocyst: expanded blastocoel with thinned zona pellucida, compact ICM with high cellularity, and cohesive TE with numerous uniform cells. The description aligns well with the provided Gardner score data. Minor limitation is that the description largely mirrors the laboratory data provided rather than independently identifying additional image-specific features, making it difficult to fully assess independent visual analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects maternal age 24 to euploidy rates and oocyte quality, links AMH 6.15 to ovarian reserve and oocyte competence, addresses the male factor diagnosis appropriately (preserving female factor prognosis), integrates endometrial thickness with receptivity, and meaningfully connects smoking and BMI to implantation mechanisms (HOXA10 downregulation, uterine perfusion, oxidative stress). The synthesis section effectively weighs competing factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability derivation is transparent with explicit adjustments for each factor. The final estimate of 40-55% implantation and 40-45% take-home baby rate follows logically from the evidence. Minor inconsistency: the response states 'implantation probability 40-55%' but then gives 'clinical pregnancy rate 45-55%' which is slightly higher than implantation rate, which is atypical. The smoking penalty of 30-50% reduction cited in risk factors but only -15-20% applied in probability calculation creates a minor discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for young patient with good quality blastocyst is appropriate, no PGT-A recommendation for age 24 is guideline-consistent, luteal support protocol is standard, ERA recommendation only for repeated implantation failure is appropriate. The smoking cessation counseling aligns with ASRM committee opinions. Low-dose aspirin recommendation is somewhat controversial without clear indication beyond smoking history and not universally guideline-supported. The 48-72 hour smoking cessation benefit claim is overstated in the literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific, practical recommendations across multiple domains: immediate transfer strategy (eSET with specific progesterone dosing), pre-transfer counseling with concrete smoking cessation framing, post-transfer monitoring plan, and detailed future cycle planning with specific thresholds (3 months cessation, BMI target <27, 5-7% weight loss). The conditional structure (if successful/if unsuccessful) is clinically useful. Specific drug dosages mentioned (aspirin 81mg, progesterone 90-100mg BID) add practical value for the clinician."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.019707,
+  "judge_latency_ms": 15396.336291996704,
+  "judge_prompt_tokens": 2929,
+  "judge_completion_tokens": 728
+}

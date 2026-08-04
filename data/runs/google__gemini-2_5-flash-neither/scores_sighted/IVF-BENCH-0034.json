@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate specific embryo morphology. However, it did not analyze the visible day-4 embryo image, so morphology assessment was omitted rather than matched to the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age-related aneuploidy risk, PCOS response, sperm limitations, BMI, endometrium, and lifestyle. Some links are somewhat generic and it assumes a good-quality blastocyst despite the actual day-4 context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with clear acknowledgment of uncertainty from missing morphology. Minor issues include discussing blastocyst/Gardner grading despite transfer day 4 and basing probability on an assumed good-quality blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (single embryo transfer consideration, luteal support, lifestyle optimization, antagonist use in PCOS). However, ERA and adjunctive therapies are weakly supported, and routine strong endorsement of PGT-A at age 37 is more debatable than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including embryo selection, luteal support, counseling, lifestyle changes, and male-factor workup. Some suggestions are somewhat generic and not fully tailored to the day-4 embryo scenario."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.015105,
+  "judge_latency_ms": 5507.578749995446,
+  "judge_prompt_tokens": 3265,
+  "judge_completion_tokens": 354
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0448",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality, minimally expanded/early blastocyst with absent or degenerative ICM and TE, broadly consistent with 0DD. However, it overstates this as having no blastocoel and calls it non-viable/arrested with more certainty than the image and score support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, FSH, BMI, endometriosis, oocyte maturity, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH is unavailable and some links (e.g., sperm motility as a major issue) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and internally consistent, but it makes overly definitive claims such as 'non-viable' and 'transfer would not result in pregnancy' from morphology alone, which weakens the logic behind the near-zero implantation estimate and transfer cancellation recommendation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned, but recommending automatic cancellation of transfer and asserting zero chance are not well aligned with standard IVF practice, where even poor embryos may occasionally be considered if no alternatives exist. Several adjunctive suggestions are also more opinion-based than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for the current cycle and future planning, including checking for other embryos, considering endometriosis suppression, reviewing insemination method, and evaluating sperm DNA fragmentation. However, some recommendations are too absolute and insufficiently nuanced for real-world decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013932,
+  "judge_latency_ms": 5547.492207988398,
+  "judge_prompt_tokens": 2584,
+  "judge_completion_tokens": 412
+}

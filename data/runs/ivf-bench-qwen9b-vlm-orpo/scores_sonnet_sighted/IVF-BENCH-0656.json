@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the large blastocyst size, absent/degenerative ICM, sparse and irregular trophectoderm, and correlates well with the 1DD Gardner grade. The description of poor TE cohesion and lack of organized architecture is consistent with the image. Minor limitation is that it doesn't comment on zona pellucida status or provide more granular detail about blastocoel cavity quality, but overall the morphological read is accurate and well-supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 28, AMH 8.33, FSH 8.4, BMI 34.7, endometrial thickness 11mm, sperm parameters, male factor diagnosis, lifestyle factors, and first-cycle status. It correctly identifies embryo quality as the dominant limiting factor while contextualizing the otherwise favorable patient profile. The interaction between sperm DNA fragmentation and poor embryo development is appropriately raised given the male factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and internally consistent. The 1-5% implantation estimate follows coherently from the poor morphology despite favorable patient factors. The model correctly avoids assigning zero probability while explaining why. One minor inconsistency: the response notes the embryo reaching full blastocyst by day 4 as 'concerning' but doesn't fully reconcile whether early expansion with poor grades is better or worse than late expansion - this nuance is slightly underdeveloped but doesn't undermine the overall logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with Gardner grading criteria, ESHRE blastocyst assessment standards, and evidence-based recommendations regarding poor-quality embryo transfer counseling. Recommendations for sperm DNA fragmentation testing, freeze-all considerations, and weight optimization are consistent with current ASRM/ESHRE guidance. The response correctly frames transfer as permissible but low-probability rather than contraindicated. Minor gap: doesn't explicitly reference preimplantation genetic testing considerations for future cycles, which ESHRE guidelines might suggest in recurrent poor-quality embryo scenarios."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically useful: clear counseling language is provided, sperm DNA fragmentation testing is specifically named, ICSI vs conventional IVF is raised, freeze-all strategy is mentioned, weight optimization with a specific target (5-10% reduction) is given, and the response offers to provide patient-friendly counseling summaries. The tiered approach (this transfer vs. future cycle planning) with concrete decision points makes this immediately usable by a clinician."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.02088,
+  "judge_latency_ms": 14368.400999999722,
+  "judge_prompt_tokens": 3650,
+  "judge_completion_tokens": 662
+}

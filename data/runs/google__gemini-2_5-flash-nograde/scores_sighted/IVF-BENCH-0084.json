@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a blastocyst and notes difficulty assessing from a single image, but it overcalls fragmentation/debris and gives an unduly poor-quality impression. The image more likely shows an expanded/hatching blastocyst with a visible ICM and limited clearly assessable TE detail rather than obvious severe fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm quality, endometrium, and prior cycle reasonably well, and relates these to prognosis. It could better distinguish embryo-level morphology from patient-level implantation factors and avoid overstating prior failure significance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the probability estimate is driven by a questionable assumption of markedly suboptimal morphology. Some conclusions, especially linking visible 'fragmentation' to likely aneuploidy and low implantation, are stronger than the image supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as SET and luteal support are guideline-consistent, but suggesting PGT-A largely because of morphology in a 33-year-old with only one prior failed cycle is not strongly evidence-based. The morphology discussion also does not closely follow standard Gardner grading conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, embryo selection, transfer approach, and future cycle review. However, some recommendations are generic and the PGT-A suggestion is not ideally tailored to this prognosis group."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015846,
+  "judge_latency_ms": 5627.992333000293,
+  "judge_prompt_tokens": 3367,
+  "judge_completion_tokens": 383
+}

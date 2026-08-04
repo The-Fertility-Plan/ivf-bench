@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA grading criteria (expanded blastocyst, thinned zona, compact ICM, cohesive TE) consistent with the provided lab data. However, the actual image shows a somewhat irregular, possibly degenerating or hatching blastocyst with an ICM that appears fragmented or disorganized rather than the 'tightly packed, well-defined cluster' described. The TE also appears irregular in the image. The description seems to rely heavily on the provided Gardner score rather than independent image analysis, missing visible morphological concerns."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects maternal age 24 to euploidy rates, links AMH 6.15 to oocyte quality, addresses male factor diagnosis implications for uterine environment, quantifies smoking impact on implantation, discusses BMI effects on endometrial receptivity including HOXA10 downregulation, and integrates sperm parameters with embryo development outcomes. The synthesis section effectively weighs competing factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability calculation is transparent with explicit adjustments for each factor. Minor inconsistency: the response states 40-55% implantation range in section 4 but concludes 40-45% take-home baby rate, which is reasonable but the clinical pregnancy estimate of 45-55% seems slightly high given the stated penalties. The logic chain from baseline to adjusted probability is clear and defensible."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: eSET recommendation for young patient with good quality blastocyst is appropriate, luteal support protocol is standard, low-dose aspirin suggestion is evidence-informed though not universally guideline-mandated, ERA recommendation appropriately reserved for repeated implantation failure. The smoking cessation urgency aligns with ASRM committee opinions. Minor issue: PGT-A dismissal is appropriate but could acknowledge it as an option given the limited cohort of 5 oocytes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific drug dosages (progesterone 90-100mg BID, aspirin 81mg), clear timing recommendations (48-72hr smoking cessation benefit), quantified future cycle targets (BMI <27, 5-7% weight loss, 3-month smoking cessation minimum), specific follow-up milestones (6-7 week viability scan), and conditional recommendations based on cycle outcome. The structured tables and decision trees make this immediately clinically useful."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.019497,
+  "judge_latency_ms": 15372.003957993002,
+  "judge_prompt_tokens": 3199,
+  "judge_completion_tokens": 660
+}

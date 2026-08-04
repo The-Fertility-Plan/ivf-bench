@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0674",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes ICM and TE features consistent with the reported 4AA grade, but hedges significantly by describing the blastocyst as 'early-to-full blastocyst range' rather than confidently identifying the hatching/herniation stage 4 as stated in the Gardner score. The description of 'minor collapse/re-expansion artifacts' may not be visible in the image and could be fabricated. The response appropriately caveats limitations of static image analysis but lacks precise morphological detail about the hatching process specifically."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age 33, FSH, ovarian response, sperm parameters, endometrial thickness, uterine factor diagnosis, smoking, and alcohol use are all connected to prognosis. The interaction between uterine factor and embryo quality is well-articulated. Minor gap: AMH is N/A but not addressed, and the specific nature of the uterine factor diagnosis is appropriately flagged as unknown but could have been explored more systematically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 45-65% implantation range is reasonably derived from the stated favorable and unfavorable factors. The distinction between implantation rate and live birth rate is a valuable and coherent addition. Minor inconsistency: the response describes the blastocyst somewhat cautiously morphologically but then uses the full 4AA designation confidently in the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for day-5 4AA blastocyst, appropriate caution about PGT-A at age 33 in first cycle, recommendation against empiric add-on treatments, hydrosalpinx management before transfer, luteal phase support mention, and smoking cessation. The response correctly notes bed rest is not beneficial. Minor gap: could have referenced specific ESHRE guidance on uterine factor workup more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET, uterine cavity confirmation before transfer, smoking/alcohol cessation, luteal support confirmation, hysteroscopy/saline sonogram if needed, hydrosalpinx surgical management if present, PGT-A discussion criteria. The future cycle planning section is well-structured. Could be slightly more specific about timing of smoking cessation relative to transfer and what specific uterine factor investigations to prioritize given the diagnosis."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.01974,
+  "judge_latency_ms": 13310.847542001284,
+  "judge_prompt_tokens": 3360,
+  "judge_completion_tokens": 644
+}

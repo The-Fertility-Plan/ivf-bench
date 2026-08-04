@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies very poor overall quality and absent/degenerate ICM/TE consistent with 1DD, but inaccurately states the blastocoel is less than half the embryo and describes dark/fragmented TE features not clearly visible; expansion assessment conflicts with the provided Gardner stage 1 definition."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age-related aneuploidy risk, ovarian reserve/response, endometrial thickness, sperm parameters, and lifestyle factors with embryo prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and consistent: poor morphology plus age leads to very low implantation potential. Minor overstatements about non-viability and morphology implying chromosomal issues reduce precision."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing poor prognosis and discussing counseling and possible transfer if no alternatives exist, but recommendations such as strongly endorsing PGT-A, protocol changes, and discouraging transfer of a 1DD embryo are somewhat more assertive than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points, transfer considerations, and future-cycle options including PGT-A discussion, protocol review, and sperm DNA fragmentation testing, though some recommendations are not fully individualized or evidence-graded."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.012978,
+  "judge_latency_ms": 4808.831125003053,
+  "judge_prompt_tokens": 2636,
+  "judge_completion_tokens": 338
+}

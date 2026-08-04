@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0260",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label, but it overstates visible expansion by calling it fully expanded/near hatching and says the embryo has successfully hatched or is on the verge of hatching, which is not supported by a Gardner 3 blastocyst image. TE/ICM descriptions are generally acceptable but somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, smoking, prior miscarriage, male factor, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links are somewhat broad and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it labels 3AB as 'high-quality/top-tier,' treats prior miscarriage as implying uterine/immune factors without evidence, and uses additive probability deductions that are somewhat arbitrary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on smoking cessation, age-related aneuploidy counseling, and proceeding with transfer, but there are deviations: overstating embryo quality, implying progesterone may need to be increased because of age/miscarriage, and suggesting donor eggs too early after a single cycle at age 37 with AMH 1.1."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, smoking cessation, luteal support, and future planning. However, recommendations could be more nuanced regarding miscarriage workup thresholds, male-factor evaluation, and when to consider donor oocytes."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013845,
+  "judge_latency_ms": 5839.450624989695,
+  "judge_prompt_tokens": 2630,
+  "judge_completion_tokens": 397
+}

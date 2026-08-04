@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0387",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and assigns precise 3AA features not clearly supported by the image; ICM and TE are poorly delineated visually, and calling it 'top-tier'/'best possible' is not image-grounded despite matching the provided lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, BMI, AMH, prior cycle history, endometrial thickness, and sperm data with embryo quality well, though it somewhat overinterprets prior failures as RIF and speculates beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is generally clear and internally consistent, especially around morphology versus age-related ploidy risk, though there is some overreach in labeling recurrent implantation failure and in the certainty of some causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling on age/aneuploidy, consideration of PGT-A), but ERA, empiric aspirin/heparin, and TESE based on speculative SDF are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future evaluation, including luteal support review and further workup options, but some suggestions are not sufficiently prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013182,
+  "judge_latency_ms": 5238.098083005752,
+  "judge_prompt_tokens": 2714,
+  "judge_completion_tokens": 336
+}

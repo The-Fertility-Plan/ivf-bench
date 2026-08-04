@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it could not see the image, but then made strong morphology claims from the score alone, including calling the embryo non-viable and implying arrest. It correctly noted poor ICM/TE from 1DD, but overinterpreted expansion/day and did not match visible image-based features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, sperm parameters, endometrium, and lifestyle with embryo prognosis reasonably well, though some links (e.g., AMH-PCOS discrepancy and paternal age effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains notable overreach and some inconsistencies, such as treating 1DD as definitively non-viable, inferring Day-4 blastocyst transfer as inherently asynchronous, and recommending cancellation based on limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from standard evidence-based practice: declaring DD embryos medically futile/non-transferable, asserting they are generally discarded, and strongly recommending PGT-A and TESE/SDF based mainly on one poor embryo and age. Some points are aligned, but overall there is substantial overstatement."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decisions, diagnostic reassessment, sperm testing, protocol review, and lifestyle modification. However, the advice is somewhat too definitive and insufficiently nuanced for a poor-quality embryo on Day 4."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014793,
+  "judge_latency_ms": 5284.4230420014355,
+  "judge_prompt_tokens": 2966,
+  "judge_completion_tokens": 393
+}

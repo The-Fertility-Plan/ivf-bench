@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model did not fabricate image features and appropriately stated morphology could not be assessed without image access. However, it provided no actual morphological analysis despite the embryo image existing for evaluation, so accuracy is limited by omission."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior cycle, sperm parameters, endometrium, and lifestyle well with expected prognosis, though some interactions remain somewhat generic and not tightly linked to the actual embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis appropriately conditioned on unknown embryo quality. Minor issues include broad probability ranges and some speculative emphasis on missing morphology as a 'risk factor.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a young good-prognosis patient and standard luteal support are guideline-concordant. However, suggesting ERA and PGT-A relatively early is more debatable and not strongly supported for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, review of prior cycle, and possible uterine/sperm workup if failures recur. Some suggestions are somewhat generic rather than highly case-tailored."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015921,
+  "judge_latency_ms": 5107.870416992228,
+  "judge_prompt_tokens": 3622,
+  "judge_completion_tokens": 337
+}

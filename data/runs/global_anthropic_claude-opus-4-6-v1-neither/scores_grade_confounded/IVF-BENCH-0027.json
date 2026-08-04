@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner 2AA blastocyst grade, incorrectly states no Gardner score is available, and discusses a Day 4 morula/early cavitating morula instead of the documented full blastocyst with strong ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, BMI, prior outcomes, sperm parameters, and endometrium, though some conclusions are distorted by the incorrect embryo-stage assumption."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but undermined by a major internal error: it bases prognosis on an assumed Day 4 non-blastocyst/lagging embryo despite explicit 2AA blastocyst data, leading to questionable probability reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable, but several are weakly supported or not guideline-based for routine use in RIF (e.g., ERA as high priority, NK/cytokine testing, endometrial scratching, empiric aspirin/LMWH without indication), and the embryo grading interpretation is inconsistent with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for monitoring and future workup, including hysteroscopy, chronic endometritis assessment, tubal evaluation, and sperm DNA fragmentation, though some recommendations are overly broad or not evidence-based."
+    }
+  ],
+  "extracted_probability": 0.17,
+  "judge_cost_usd": 0.013365,
+  "judge_latency_ms": 4224.877708002168,
+  "judge_prompt_tokens": 2605,
+  "judge_completion_tokens": 370
+}

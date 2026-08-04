@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0702",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a reasonably detailed morphological analysis identifying blastocoel expansion, ICM compactness, TE continuity, and zona thinning consistent with the reported 3AA grade. It appropriately notes image quality limitations and avoids overclaiming. Minor hedging about expansion stage (3/4 region) and the unexplained 'focal irregularity/exclusion zone' comment slightly reduce precision, but overall the description aligns well with expected 3AA features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 33 with aneuploidy risk context, high AMH with the paradoxically low oocyte yield, tubal factor diagnosis with hydrosalpinx caveat, normal sperm parameters, acceptable endometrial thickness, prior failed cycle with analytical questions, and lifestyle factors. Crucially, it identifies the disconnect between high AMH and low COC yield as a notable concern and connects tubal factor to the hydrosalpinx risk specifically affecting implantation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 45-55% follows logically from the enumerated positive and negative factors. The response correctly identifies chromosomal status as the primary unknown and connects prior cycle failure as a soft negative without overweighting it. Minor issue: the response slightly hedges on Gardner staging (3 vs 4) when the lab data clearly states 3AA, creating minor inconsistency, but overall the logic chain is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for a 33-year-old with good-quality blastocyst, hydrosalpinx salpingectomy before transfer, standard luteal support, ultrasound-guided transfer, and nuanced PGT-A discussion acknowledging limited embryo numbers. The PGT-A discussion appropriately reflects current evidence that it may not benefit patients with few embryos. Minor gap: no mention of endometrial receptivity assessment (ERA) given prior failed cycle, which some guidelines would consider."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: confirming hydrosalpinx status before transfer, SET rationale, luteal support optimization, detailed prior cycle review questions, protocol adjustment considerations, and conditional PGT-A guidance. The structured review questions for the prior cycle are particularly actionable. Slight deduction for not specifying luteal support protocol details and not addressing ERA testing or hysteroscopy evaluation given the prior failed cycle, which would add practical value."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021333,
+  "judge_latency_ms": 14037.492750001547,
+  "judge_prompt_tokens": 3811,
+  "judge_completion_tokens": 660
+}

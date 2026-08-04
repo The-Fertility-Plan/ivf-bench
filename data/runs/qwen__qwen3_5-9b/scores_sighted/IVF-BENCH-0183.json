@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0183",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor overall quality and poor/indistinct ICM and TE, but it misstates the expansion by saying the blastocoel is less than half the embryo despite the provided Gardner 1 indicating at least half, and adds somewhat inconsistent wording ('compacted morula transitioning into an early blastocyst')."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior miscarriage, sperm parameters, BMI, and endometrial thickness with embryo prognosis reasonably well, though some links (e.g., attributing poor morphology primarily to age/aneuploidy) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate is directionally consistent with a 1DD embryo at age 38, but there are notable inconsistencies around the expansion stage and transfer timing, plus unsupported assumptions such as recommending PGT-A for this specific embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Parts are aligned (poor prognosis for 1DD, age-related aneuploidy counseling), but recommending PGT-A on this embryo and a freeze-all strategy in this context is not well supported, and donor egg discussion is premature based on the presented data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical counseling points and future-cycle considerations, but several recommendations are too generic or not well tailored to this exact scenario, and some are not directly actionable for the current transfer."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 5588.709124989691,
+  "judge_prompt_tokens": 2624,
+  "judge_completion_tokens": 386
+}

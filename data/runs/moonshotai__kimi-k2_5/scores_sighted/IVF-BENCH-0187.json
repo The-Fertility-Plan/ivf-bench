@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0187",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early cavitating/early blastocyst with absent-poor ICM and TE, but overstates certainty from the image, uses 'expansion 0-1' inconsistently, and infers degeneration/cell lineage failure beyond what can be confidently seen."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, BMI, smoking, and lining thickness with prognosis reasonably well, though it over-attributes embryo quality to presumed severe sperm DNA fragmentation and makes some unsupported causal claims."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable gaps: Day 4 'timing discordance' is overstated, the claim that only one 0DD embryo exists is not established, and conclusions such as 'negative control' and severe sperm DNA damage are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are evidence-based (poor prognosis with DD morphology, smoking cessation, considering sperm evaluation), but recommending cancellation/freeze-all for a Day 4 poor embryo is not standard, calling 6 mm definitively inadequate is too absolute, and suggestions like acupuncture/vaginal sildenafil are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for counseling, sperm workup, endometrial optimization, and future lab strategy, though some advice is overly directive or insufficiently nuanced for a poor Day 4 embryo scenario."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.014427,
+  "judge_latency_ms": 6403.7129579955945,
+  "judge_prompt_tokens": 2869,
+  "judge_completion_tokens": 388
+}

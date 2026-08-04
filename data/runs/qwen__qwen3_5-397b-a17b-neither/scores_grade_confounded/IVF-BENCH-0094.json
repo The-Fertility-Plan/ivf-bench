@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0094",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AB and instead stated no morphological score could be assigned, omitting the known expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, endometrium, sperm factors, and lifestyle with prognosis reasonably well, though it misses linking the actual 3AB morphology to these factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis tied to age-related aneuploidy and prior history, though weakened by ignoring the provided embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but some are more speculative or clinic-specific (e.g., dual progesterone support, strong PGT-A recommendation, adjunct sperm selection/CoQ10) rather than clearly guideline-mandated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer monitoring and future cycle planning, including luteal support review, early beta-hCG follow-up, and consideration of PGT-A and sperm DNA fragmentation testing."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012921,
+  "judge_latency_ms": 3595.543249997718,
+  "judge_prompt_tokens": 2702,
+  "judge_completion_tokens": 321
+}

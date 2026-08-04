@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls morphology versus the provided 3BA lab grade, suggesting possible 4AA/5AA and hatching despite limited visual certainty. It gives generally plausible blastocyst features but includes likely fabricated or inflated details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, uterine factor, sperm parameters, endometrium, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent, especially around favorable prognosis tempered by uterine factor and smoking. Minor issue: morphology is upgraded beyond the stated grade, which affects downstream probability framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET for a good-prognosis patient, smoking cessation, uterine cavity evaluation, and luteal support. Slight deviations include somewhat broad endorsement of ERA/PGT-A considerations in a first-cycle good-prognosis 33-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as smoking cessation, clarifying/optimizing uterine pathology, proceeding with SET if cavity is acceptable, and future-cycle considerations. Useful and practical, though some suggestions are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01461,
+  "judge_latency_ms": 4496.4904579974245,
+  "judge_prompt_tokens": 3275,
+  "judge_completion_tokens": 319
+}

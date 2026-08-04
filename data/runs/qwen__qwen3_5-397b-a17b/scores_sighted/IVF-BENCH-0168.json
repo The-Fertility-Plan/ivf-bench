@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0168",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality pre/early blastocyst consistent with 0DD, but inaccurately equates Gardner 0 with morula and states no blastocoel is visible despite the lab calling it an early blastocyst; limited discussion of ICM/TE visibility and zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, prior failed cycle, sperm quality, endometrial thickness, and ovarian response with embryo prognosis reasonably well, though it overinterprets absent AMH and labels 6/10 MII as suggesting diminished reserve without enough support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the low implantation estimate follows from the very poor morphology, but there are minor inconsistencies around calling the embryo both morula and early blastocyst and inferring developmental delay from Day 4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broad counseling and prognosis are aligned with poor-grade embryo assessment, but some recommendations are weakly evidence-based or not guideline-driven (routine GH, assuming ICSI, discarding embryo, protocol changes based on limited data)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling, expectation setting, and future-cycle considerations, but several suggestions are somewhat generic or speculative rather than tightly tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013065,
+  "judge_latency_ms": 5562.47366599564,
+  "judge_prompt_tokens": 2565,
+  "judge_completion_tokens": 358
+}

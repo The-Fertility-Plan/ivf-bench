@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the blastocyst stage and attempts to correlate with the 2AB Gardner score. It describes the blastocoel, zona pellucida thinning, ICM cluster, and TE heterogeneity. However, the image actually shows a somewhat collapsed or irregularly shaped blastocyst with visible fragmentation or irregular cell boundaries that the model does not adequately address. The ICM localization ('upper-right quadrant') is speculative and the image shows a more complex, less clearly organized structure than described. The model's description is somewhat generic rather than precisely matched to this specific image's visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating most clinical factors: age-euploidy relationship, tubal factor implications for uterine receptivity, AMH discordance with actual oocyte yield, mild male factor context, and endometrial thickness assessment. It correctly identifies the AMH/response discordance as notable. Minor gap: it doesn't deeply explore the implications of the previous failed cycle in context of tubal factor (e.g., hydrosalpinx risk affecting implantation), and the light alcohol consumption is not addressed despite being a modifiable factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 45-55% probability range is reasonably derived from stated factors with clear upward and downward adjustments explained. The model appropriately acknowledges uncertainty around the previous failure. Minor inconsistency: it describes the ovarian response as 'excellent' and 'far exceeding expectations' for the AMH level, which slightly overstates the discordance, but this doesn't undermine the overall logical structure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation for young patient with good quality embryo, standard luteal support, Day 5 transfer appropriateness, PGT-A discussion framed with appropriate nuance acknowledging controversy in young patients. The ERA/endometritis workup suggestion for recurrent failure aligns with current guidance. The low-dose aspirin mention is appropriately flagged as clinic-dependent rather than standard. Gardner grading criteria are correctly applied. Minor issue: AMH reference ranges cited could be more precisely age-stratified per current ESHRE guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: proceed with eSET, optimize luteal support with progesterone monitoring consideration, PGT-A for remaining embryos, urology referral for partner, lifestyle modification specifics, and a clear decision tree for next steps if this transfer fails (ERA, CD138). The response provides tiered recommendations for both immediate and future planning. Could be slightly more actionable by specifying progesterone threshold values or specific exercise recommendations, but overall provides a practical clinical roadmap."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020199,
+  "judge_latency_ms": 17564.248249997036,
+  "judge_prompt_tokens": 3138,
+  "judge_completion_tokens": 719
+}

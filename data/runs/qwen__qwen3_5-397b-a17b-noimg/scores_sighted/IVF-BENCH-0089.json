@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 3AA grade. Its description matches the lab grade, but it overstates 3AA as the 'best possible' and says stage 3 is 'fully expanded,' whereas Gardner 3 is expanded but not the most advanced stage; no image-specific morphology was assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, BMI, ovarian reserve, prior biochemical pregnancies, endometrial thickness, sperm data, and oocyte maturity with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to embryo quality, age-related aneuploidy risk, BMI, and prior losses. Minor issues include overemphasis on biochemical pregnancies as 'strongly' suggesting aneuploidy and some speculative links."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is evidence-based, but there are notable deviations: PGT-A is presented too strongly as the single most effective intervention, thrombophilia testing after only two biochemical losses is broader than typical guideline-based workup, and some adjunctive luteal support suggestions are more practice-based than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, counseling, luteal support considerations, and future workup/planning. It is practical, though some recommendations are somewhat aggressive or not universally indicated."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015033,
+  "judge_latency_ms": 5226.047874995857,
+  "judge_prompt_tokens": 3086,
+  "judge_completion_tokens": 385
+}

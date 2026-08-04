@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific ICM/TE/expansion features. However, it did not analyze the visible embryo morphology, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, endometrial thickness, sperm parameters, prior IVF history, and oocyte maturity into prognosis reasonably well, though some links to actual embryo morphology are necessarily absent."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis chain from age and cycle factors to implantation estimate. Minor issues include somewhat speculative interpretation of the Day 4 transfer rationale and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including caution about PGT-A at age 26 and consideration of extended culture/FET strategies. However, suggesting combined vaginal plus IM progesterone and implying endometriosis-specific luteal defects or Day 4 transfer for endometriosis are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer support, counseling, future cycle planning, weight optimization, and possible endometriosis suppression. Some suggestions are practical, though a few are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014037,
+  "judge_latency_ms": 4857.124541988014,
+  "judge_prompt_tokens": 2919,
+  "judge_completion_tokens": 352
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0090",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score and instead stated morphology was unable to be assessed, omitting the known 3AA features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, diagnosis discrepancy, prior cycle, BMI, sperm parameters, and transfer timing with prognosis, though some links to the actual known embryo grade were missed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it overemphasizes data contradictions, assumes facts not provided, and bases prognosis on uncertain morphology despite a supplied 3AA grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent, including favoring single embryo transfer, but recommending PGT-A after one failed cycle at age 28 and suggesting protocol changes/PCOS relabeling are not strongly guideline-based from the given data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for endometrial review, luteal support, SET, and future cycle reassessment, though some recommendations are based on speculative discrepancies rather than the confirmed embryo grade."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013071,
+  "judge_latency_ms": 4483.323209002265,
+  "judge_prompt_tokens": 2792,
+  "judge_completion_tokens": 313
+}

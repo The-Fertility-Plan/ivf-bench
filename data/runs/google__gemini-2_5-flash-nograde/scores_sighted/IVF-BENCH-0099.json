@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality. The image shows a blastocyst with visible cavity but not clearly excellent morphology; the ICM is not distinctly compact and the TE appears relatively sparse/uneven rather than robust. Assigning likely 4AA/5AA is not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior live births, miscarriage history, sperm parameters, endometrium, and lifestyle risks, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a probability estimate tied to embryo morphology and patient factors. Minor weakness is that the estimate is based on an overly optimistic morphology assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A mainly because of one miscarriage in a 31-year-old is not strongly guideline-driven, and the morphology grading appears inconsistent with Gardner criteria from the image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including lifestyle modification, luteal support, and possible further male-factor workup. Some recommendations are somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013941,
+  "judge_latency_ms": 4838.574166991748,
+  "judge_prompt_tokens": 2957,
+  "judge_completion_tokens": 338
+}

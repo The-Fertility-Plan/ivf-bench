@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst as expanded with thinning zona pellucida and describes ICM and TE consistent with the Gardner 3AA score. However, the image is quite blurry and low-resolution, making precise morphological assessment difficult. The model acknowledges image resolution limitations but still provides descriptions that largely mirror the provided Gardner score data rather than independently verifiable image features. Some descriptions (e.g., 'prominent blastocoel on the right side') appear to be reasonable interpretations but cannot be fully verified from the image quality provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age (34), AMH/FSH indicating diminished reserve, paternal age and sperm parameters, smoking status, endometrial thickness, and previous failed cycle. It connects these factors meaningfully to embryo quality and prognosis. Minor gap: BMI of 28.2 (overweight range) is not discussed as a potential factor, and tubal factor diagnosis implications for implantation are not explored beyond the initial mention."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 30-45% follows reasonably from the stated adjustments to the base rate. The recommendation to consider FET to allow smoking cessation is coherent with the identified risk. Minor inconsistency: the response suggests a 10-15% reduction for smoking but the final range (30-45%) represents a larger reduction from the stated 50-60% base rate than the individual factors alone would suggest, without fully accounting for all deductions transparently."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: Gardner grading criteria are correctly applied, PGT-A nuance for low-reserve patients is appropriately cautious and aligns with current guidance against routine PGT-A in poor responders, smoking cessation counseling is evidence-based, and endometrial thickness assessment aligns with standard thresholds. The suggestion of antagonist protocol for future cycles is reasonable. The recommendation for donor oocytes after multiple failures is guideline-consistent. Minor issue: recommending FET primarily for smoking cessation is not a standard guideline-based indication, though it is clinically reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer (with FET preference), strong smoking cessation counseling with a suggested timeline (4-6 weeks), nuanced PGT-A guidance based on embryo availability, protocol adjustment suggestions for future cycles, and donor oocyte discussion if multiple failures occur. The response provides clear decision trees. Could be improved by specifying luteal phase support protocols, addressing the tubal factor more directly (e.g., salpingectomy consideration), or providing specific smoking cessation resources/referrals."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.019611,
+  "judge_latency_ms": 16270.960792011465,
+  "judge_prompt_tokens": 3007,
+  "judge_completion_tokens": 706
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner score rather than inventing image-specific details. Its interpretation of 2AC is broadly correct, though it repeats the prompt's nonstandard wording of stage 2 as 'full blastocyst' and overstates overall quality as 'good quality' despite poor TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, BMI, smoking, and endometrial thickness with embryo quality in a clinically meaningful way. Some interactions are simplified and it may overstate the benefit of endometrial thickness alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with TE grade identified as the main embryologic limitation and age as a major favorable factor. Minor issues include an arguably optimistic implantation estimate for a 2AC embryo and some overinterpretation of lining thickness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET at age 32, counseling on smoking cessation, luteal support, and standard follow-up. Small deviations include somewhat liberal endorsement of PGT-A in a young good-prognosis patient and imprecise wording around Gardner stage 2."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for the current transfer and future planning, including SET, smoking cessation, weight/lifestyle optimization, counseling, and follow-up. Useful overall, though some recommendations could be more nuanced regarding when PGT-A is truly indicated."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.015858,
+  "judge_latency_ms": 5023.641291001695,
+  "judge_prompt_tokens": 3286,
+  "judge_completion_tokens": 400
+}

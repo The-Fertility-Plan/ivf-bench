@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/early blastocyst and states Gardner scoring is not applicable, despite the provided laboratory grade being 2AB full blastocyst. It also fabricates features such as no visible fragmentation and high-quality morula classification rather than describing ICM/TE consistent with 2AB."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including young age, ovarian reserve/response, endometrial thickness, lifestyle, and sperm parameters, and relates them to prognosis. However, it does not fully reconcile the mismatch between the stated transfer day and the blastocyst grading context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weakened by a major contradiction: it bases prognosis on a morula/Day 4 interpretation while the case provides a 2AB blastocyst grade. The implantation estimate is therefore built on an incorrect morphological premise, though the overall structure is otherwise logical."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points are broadly standard, but key deviations reduce alignment: rejecting applicability of Gardner grading despite a provided blastocyst score, discussing PGT-A somewhat casually in a 29-year-old first cycle, and anchoring recommendations to an incorrect developmental stage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, ensuring luteal support, considering blastocyst culture for remaining embryos, and clarifying male-factor workup. Specificity is good, though some recommendations are based on the wrong embryo-stage interpretation."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012825,
+  "judge_latency_ms": 4327.796749996196,
+  "judge_prompt_tokens": 2230,
+  "judge_completion_tokens": 409
+}

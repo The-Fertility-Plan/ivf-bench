@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0104",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed it could not see the image and based morphology on the provided 3AA label. However, it inaccurately stated grade 3 means fully expanded with thinning zona and initiated hatching; true Gardner 3 is a full blastocyst, while expansion/thinning is more consistent with stage 4. It did not fabricate image-specific details beyond the supplied grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior live birth, semen data, male-factor context, and endometrial thickness with embryo quality and prognosis. Some points are somewhat speculative, but overall the interaction between age-related aneuploidy risk and strong morphology is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: strong morphology is tempered by age-related euploidy limits, with a plausible prognosis range. Minor issues include overcalling stage-3 expansion and some speculative emphasis on thick endometrium and paternal age effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: misinterpretation of Gardner stage 3, strong endorsement of PGT-A as reducing miscarriage/time-to-pregnancy without sufficient nuance, and suggesting low-dose aspirin despite mixed evidence and no clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, counseling, luteal support review, possible cavity evaluation if failure occurs, and future-cycle considerations such as PGT-A discussion and sperm DNA fragmentation testing. Recommendations are useful, though some are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015141,
+  "judge_latency_ms": 5299.161083006766,
+  "judge_prompt_tokens": 2972,
+  "judge_completion_tokens": 415
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates key morphology: it calls the embryo a good-quality/full blastocyst and describes TE as B-grade, whereas the image/lab label 2AB indicates an early blastocyst with strong ICM and looser/scant TE. It also speculates about hatching/collapse and zona thinning without clear visual support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age 31, BMI, FSH, male factor context, prior biochemical/failed cycles, endometrial thickness, and lifestyle, and relates these to prognosis. It misses some nuance around absent AMH and overstates semen reassurance despite male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are inconsistencies: probability estimates shift from 40-60% to 35-50% to 30-45%, and morphology interpretation conflicts with the provided Gardner score. Conclusions are generally supported but somewhat internally unstable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: single embryo transfer at age 31, standard luteal support, avoidance of unproven add-ons, and consideration of uterine and sperm-factor workup after repeated failures. Minor deviation comes from confusion around Gardner staging and somewhat speculative PGT-A discussion in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, review of embryo cohort quality, sperm DNA fragmentation/strict morphology, and uterine evaluation if failures continue. Useful, though some suggestions remain broad rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01467,
+  "judge_latency_ms": 6339.8100839986,
+  "judge_prompt_tokens": 2900,
+  "judge_completion_tokens": 398
+}

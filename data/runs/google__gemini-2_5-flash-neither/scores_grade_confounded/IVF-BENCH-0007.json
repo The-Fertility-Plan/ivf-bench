@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states the Gardner score is unavailable and fails to use the provided 0DD grade; it then assumes good-quality blastocyst grades (4AA/5AA), which contradicts the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, prior live birth, male factor, sperm parameters, endometrium, and oocyte yield reasonably well, though this integration is undermined by using an incorrect assumption of good embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally inconsistent because it ignores the provided 0DD morphology and bases prognosis on a hypothetical high-grade blastocyst, leading to an implausibly optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard, the interpretation departs from Gardner grading and evidence-based prognosis by disregarding the known 0DD grade and overstating success likelihood."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps such as luteal support, beta-hCG follow-up, and future discussion of blastocyst culture/PGT-A, but recommendations are only moderately useful because they are built on an incorrect embryo-quality premise."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014286,
+  "judge_latency_ms": 3492.33295799786,
+  "judge_prompt_tokens": 3102,
+  "judge_completion_tokens": 332
+}

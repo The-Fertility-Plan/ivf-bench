@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0715",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies blastocoel formation, zona thinning, and correlates with the 3AB Gardner score. However, the image is notably blurry/soft-focus making precise morphological assessment difficult, and the model acknowledges this limitation. The description of ICM and TE is largely derived from the provided Gardner score rather than independent image analysis. The model appropriately notes the image quality limitation but doesn't add much beyond what the lab data already provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically addresses maternal age 36 and aneuploidy risk, PCOS implications, AMH/FSH values, sperm parameters, endometrial thickness, BMI, lifestyle factors, and prior biochemical pregnancy. It correctly identifies how these factors interact - e.g., PCOS explaining high AMH, prior biochemical pregnancy suggesting possible embryo genetics issue, partner age 41 combined with modest motility as a mild compounding factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The 30-40% implantation estimate logically follows from the combination of good morphology tempered by age-related aneuploidy risk. The comparison to euploid embryo rates (~55-65%) provides useful context. Minor issue: the response occasionally hedges extensively which slightly dilutes the clarity of conclusions, but there are no contradictions and the probability estimate is well-justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: recommends single embryo transfer appropriately for age 36, discusses PGT-A with appropriate nuance (not mandating it, noting limitations with low embryo numbers), recommends luteal phase support, advises against bed rest post-transfer, suggests metabolic optimization for PCOS. The alcohol recommendation (complete cessation during transfer attempt) aligns with current guidance. PGT-A discussion reflects current evidence-based nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific recommendations organized into immediate transfer advice and future cycle planning. Includes concrete guidance on alcohol cessation, activity levels, supplementation, caffeine limits, luteal support monitoring, metabolic workup for PCOS, sperm DNA fragmentation testing triggers, hysteroscopy indications, and family-building strategy considerations. Each recommendation is contextualized to this specific patient rather than being generic, and alternatives/thresholds for escalation are clearly defined."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.021462,
+  "judge_latency_ms": 13347.00008299842,
+  "judge_prompt_tokens": 4054,
+  "judge_completion_tokens": 620
+}

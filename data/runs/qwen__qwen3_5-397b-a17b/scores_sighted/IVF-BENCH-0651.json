@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/compacting embryo with absent clear ICM/TE, but misstates the Gardner expansion definition for stage 1, overcalls non-viability from image alone, and describes fragmentation/vacuole features that are not clearly established from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, prior reproductive history, sperm parameters, and endometrium reasonably well with embryo quality, though it over-speculates about PCO phenotype and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent: poor morphology drives poor prognosis despite favorable maternal factors. Minor issues include equating 1DD with near-certain non-viability and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent in recognizing 1DD as very poor prognosis and noting caution with transfer, but contains Gardner staging inaccuracies and overstates the strength of recommendation for PGT-A in a 26-year-old without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer decision and future workup/planning, including counseling, sperm DNA fragmentation testing, culture strategy, and protocol review, though some recommendations are stronger than evidence would support."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012672,
+  "judge_latency_ms": 5033.857999995234,
+  "judge_prompt_tokens": 2559,
+  "judge_completion_tokens": 333
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0696",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst stage, zona thinning, well-expanded blastocoel, identifiable ICM as compact cluster supporting A-grade, and cohesive TE layer. However, there is a minor inconsistency: the lab data states ICM is 'B' grade (loosely grouped, several cells) yet the model describes it as 'relatively compact' supporting 'A-grade ICM designation,' which contradicts the Gardner score provided. The model also appropriately notes limitations of static image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 36 with aneuploidy risk, FSH 10.4 as mild reserve concern, BMI 34.5 with implantation/obstetric implications, tubal factor with hydrosalpinx caveat, prior failed cycle, good endometrial thickness, and adequate sperm parameters. The interaction between these factors and embryo quality is clearly articulated. Minor gap: AMH is N/A and this is not addressed as a missing data point that could further inform reserve assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 25-35% follows reasonably from the identified risk factors. The live birth estimate of 20-28% appropriately discounts from clinical pregnancy rate. The hydrosalpinx caveat is consistently raised throughout. Minor issue: the model initially describes the Gardner score as '3BA/AB range' then later confirms 3BA, and misidentifies the ICM as A-grade when the provided score indicates B-grade ICM, creating a small internal inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, appropriate caution about add-ons without clear indication, PGT-A discussion framed as optional rather than mandatory, hydrosalpinx management before transfer, luteal support emphasis, and cavity assessment recommendations. The freeze-all consideration for high progesterone scenarios is evidence-based. The response correctly avoids recommending unproven immunological interventions routinely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: confirm hydrosalpinx status before transfer, verify uterine cavity normality, ensure appropriate progesterone support, single embryo transfer, post-failure steps including cavity reassessment and PGT-A discussion, and modifiable lifestyle factors. The tiered approach (this transfer vs. if transfer fails vs. multiple future cycles) adds useful clinical structure. Could be slightly more specific about progesterone monitoring thresholds or timing protocols, but overall highly actionable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.020532,
+  "judge_latency_ms": 14187.827499998093,
+  "judge_prompt_tokens": 3509,
+  "judge_completion_tokens": 667
+}

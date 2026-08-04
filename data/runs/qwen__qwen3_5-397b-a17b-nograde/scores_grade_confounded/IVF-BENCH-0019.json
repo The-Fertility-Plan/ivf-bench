@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 morula/compacting embryo and states Gardner scoring is not applicable, despite the provided laboratory grade being 1DD blastocyst. It does not assess ICM/TE degeneration or blastocyst morphology as requested."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates several relevant factors such as age, prior live birth, ectopic history, smoking, endometrial thickness, and sperm data, but key interpretations are weakened by the incorrect embryo-stage assessment and some speculative assumptions (e.g., sperm DNA fragmentation, diminished reserve)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise about embryo stage. It also contains questionable logic, such as suggesting Day 4 transfer because the embryo had not reached blastocyst by Day 5, and deriving prognosis from a misidentified morula rather than the stated 1DD blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable (smoking cessation, tubal evaluation after ectopics), but there are notable deviations: misapplication of Gardner criteria, unsupported emphasis on bed rest, and recommending ERA/PGT-A in a young patient with limited embryo yield without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer technique, smoking cessation, sperm DNA fragmentation testing, and tubal evaluation. Although some suggestions are not ideally evidence-based, the recommendations are still fairly specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01338,
+  "judge_latency_ms": 4537.3812499965425,
+  "judge_prompt_tokens": 2470,
+  "judge_completion_tokens": 398
+}

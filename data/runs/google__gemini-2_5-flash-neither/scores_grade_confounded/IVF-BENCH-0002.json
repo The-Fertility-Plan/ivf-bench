@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and gives no morphology analysis despite available data (2AB with full blastocyst, strong ICM, loose/few-cell TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm, endometrium, and prior miscarriage, though it fails to connect these to the actual provided embryo grade and transfer timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured and logical, but it is undermined by the false premise that embryo morphology/Gardner score are missing, leading to avoidable uncertainty and less case-specific conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are broadly guideline-consistent, but the emphasis on urgent need for missing morphology is inappropriate here, and suggestions like PGT-A/thrombophilia screening after a single miscarriage are somewhat overextended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps like SET, counseling, luteal support, and future review, but actionability is reduced because key recommendations are based on the mistaken claim that embryo grading data are absent."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013284,
+  "judge_latency_ms": 3929.6098340055323,
+  "judge_prompt_tokens": 2868,
+  "judge_completion_tokens": 312
+}

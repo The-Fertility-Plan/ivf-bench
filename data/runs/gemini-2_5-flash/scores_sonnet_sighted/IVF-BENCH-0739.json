@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 4AA hatching blastocyst - expanded blastocoel, dense ICM cluster, cohesive TE layer, and hatching through zona. It correctly identifies the smaller spherical structure on the right as potentially the herniated portion. However, the description relies heavily on the Gardner score data rather than independent image analysis, and some descriptions are generic rather than image-specific. The model notes the dark cluster for ICM and uniform outer layer for TE, which are visible, but doesn't comment on specific image artifacts, granularity, or the somewhat irregular surface texture visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age-related aneuploidy risk, BMI impact on endometrial receptivity, previous miscarriage history, male factor diagnosis, AMH/FSH values, endometrial thickness, and lifestyle factors. It connects these to embryo quality and prognosis meaningfully. Minor gap: doesn't deeply explore the interaction between BMI and progesterone metabolism affecting luteal support dosing, or the specific implications of the partner's 32% motility (below WHO 2021 reference of 42%) beyond calling it 'slightly below average.'"
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 55-65% logically follows from the positive embryo quality factors tempered by age, BMI, and miscarriage history. The response correctly identifies that morphological grading doesn't guarantee euploidy. Minor inconsistency: the response states 55-70% range for 36-year-olds with top-quality blastocysts, then narrows to 55-65% for this patient, which is coherent, but the initial range cited may be slightly optimistic for untested embryos at 36."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, PGT-A consideration for age 36 with miscarriage history, recurrent pregnancy loss workup (karyotyping, thrombophilia, uterine evaluation, endocrine), luteal phase support, and BMI management. The response correctly applies Gardner grading criteria. Minor gap: doesn't mention ERA (Endometrial Receptivity Analysis) which some guidelines now consider for recurrent implantation failure, and doesn't address the potential role of progesterone level monitoring on transfer day per recent ESHRE guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET, progesterone support, aspirin/heparin if thrombophilia indicated, PGT-A for future cycles, comprehensive miscarriage workup with specific tests listed, BMI management, embryo banking strategy, and protocol review. The response provides clear next steps for both current transfer and future planning. Could be more specific about progesterone dosing adjustments for BMI >30, timing of beta-hCG testing, or specific monitoring protocols post-transfer. The conditional recommendation for aspirin/heparin is appropriately nuanced."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.02328,
+  "judge_latency_ms": 17869.20524999732,
+  "judge_prompt_tokens": 3885,
+  "judge_completion_tokens": 775
+}

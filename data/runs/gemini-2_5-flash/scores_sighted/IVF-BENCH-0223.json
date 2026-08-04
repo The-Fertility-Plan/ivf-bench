@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0223",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 0DD, but overstates certainty with features like necrosis/cellular debris and 'non-viable' details not clearly discernible from the single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, sperm motility, BMI, endometrium, and first-cycle status well, linking favorable maternal factors with discordantly poor embryo quality; could be more nuanced about limits of inference from one embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and internally consistent, and the low implantation estimate follows from the severe morphology; however, it makes overly definitive claims about non-viability and transfer futility from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and the poor prognosis of a 0DD embryo, but recommending strongly against transfer and calling it non-viable is more absolute than typical guideline-based counseling; PGT-A suggestion at age 33 after one cycle is somewhat aggressive."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including counseling, review of fertilization/development data, sperm DNA fragmentation consideration, and future protocol/lifestyle review; some recommendations are broad and not fully prioritized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015021,
+  "judge_latency_ms": 7791.21458400914,
+  "judge_prompt_tokens": 3317,
+  "judge_completion_tokens": 338
+}

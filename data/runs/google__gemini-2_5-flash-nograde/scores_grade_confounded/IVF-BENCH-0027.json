@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and states ICM/TE are not clearly differentiated, which conflicts with the provided Gardner 2AA full blastocyst grading. It gives some generic morphology comments but does not accurately reflect the stated blastocyst stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, BMI, male factor, prior IVF failures, sperm parameters, and endometrial thickness, and relates them to prognosis. It could better reconcile the discrepancy between the stated embryo grade and its own morphology interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the prognosis reasoning is understandable, but there is a notable inconsistency between calling the embryo an early blastocyst/morula and discussing the case alongside a provided 2AA blastocyst grade. This weakens the internal coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable (uterine assessment, chronic endometritis evaluation, partner karyotype in recurrent failure), but several suggestions are not strongly guideline-supported or are controversial for routine use, including ERA as a strong recommendation, NK-cell/immunologic testing, intralipids/steroids, endometrial scratch, and assisted hatching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next steps for transfer and future workup, including uterine cavity evaluation, hydrosalpinx assessment, chronic endometritis testing, and counseling. It is practical overall, though some suggested interventions are controversial and reduce precision."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.01707,
+  "judge_latency_ms": 5198.488249996444,
+  "judge_prompt_tokens": 3610,
+  "judge_completion_tokens": 416
+}

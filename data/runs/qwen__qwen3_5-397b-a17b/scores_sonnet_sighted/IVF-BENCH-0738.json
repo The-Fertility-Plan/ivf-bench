@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocoel cavity, ICM location, and TE cohesiveness consistent with the 2AA grade. However, the image actually shows a blastocyst that appears more irregular and fragmented than a typical pristine 2AA — there are visible cellular irregularities and what appears to be fragmentation or debris within the ICM region. The model describes it as 'high-quality' without acknowledging these visible imperfections. The zona pellucida thinning observation is reasonable but the overall description is overly idealized relative to what the image actually shows."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age at 35 and aneuploidy risk, excellent ovarian response (17 COCs/14 MII), sperm parameters above WHO thresholds, endometrial thickness of 9.5mm, and the uterine factor diagnosis. It appropriately flags the fresh transfer risk in a high responder and addresses BMI concerns. Minor gap: AMH is N/A and this limitation is not discussed in terms of what FSH alone tells us about reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 55-65% range is reasonably justified with positive and negative adjustments clearly articulated. The fresh transfer hormonal asynchrony concern is coherently raised. Minor inconsistency: the model describes the image as aligning 'well' with 2AA but the image shows some morphological irregularities that could warrant a lower grade, creating slight tension between image description and grade acceptance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation is appropriate and evidence-based, luteal support mention is standard, PGT-A discussion at age 35 is guideline-consistent, and the suggestion for hysteroscopy/saline sonogram for uterine evaluation aligns with standard workup protocols. The endometrial thickness range cited (7-14mm) is consistent with published literature. No major deviations from established guidelines detected."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: eSET with rationale, robust luteal support, cryopreservation of remaining embryos, PGT-A consideration, lifestyle modification, and uterine re-evaluation pathway if transfer fails. The response provides clear next steps for both this cycle and future planning. Could be slightly more specific about the uterine factor workup (e.g., specifying what type of uterine factor was diagnosed and tailoring recommendations accordingly) and could mention ERA testing given the uterine factor diagnosis."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019152,
+  "judge_latency_ms": 15989.393500000006,
+  "judge_prompt_tokens": 2984,
+  "judge_completion_tokens": 680
+}

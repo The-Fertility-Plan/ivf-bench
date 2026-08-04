@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0389",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies an early blastocyst with poor/indistinct ICM and TE consistent with 0DD, but over-interprets the image by labeling a prominent area as a vacuole/degenerative cyst and adding granular 'mushy' texture claims not clearly verifiable from the single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, elevated FSH, low MII yield, male factor, BMI, lifestyle, and endometrial thickness with embryo prognosis reasonably well, though it overstates DOR without AMH and infers sperm DNA fragmentation without supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: very poor morphology plus age-related aneuploidy risk implies low implantation potential. Minor issues include speculative links between morphology and chromosomal status/sperm DNA fragmentation and treating delayed day-5 development somewhat too definitively."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading interpretation and cautious counseling for poor-quality embryos, but some recommendations are more speculative than guideline-based (routine DHEA/CoQ10, strong PGT-A recommendation, morphology-to-aneuploidy assertions)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making, trigger review, possible sperm testing, and future cycle planning. Slightly limited by speculative interventions and lack of nuance around individualized use of adjuncts and PGT-A."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013677,
+  "judge_latency_ms": 5448.539167002309,
+  "judge_prompt_tokens": 2754,
+  "judge_completion_tokens": 361
+}

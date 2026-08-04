@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0237",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and describes clearly visible 3AA features that are not well supported by the image; the ICM is not distinctly compact/tightly packed, TE does not appear uniformly cohesive throughout, and calling it 'top-tier' from the image alone is too confident, though noting an expanded blastocyst with thinning zona is broadly reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, uterine factor, prior cycle history, endometrial thickness, and sperm parameters with embryo quality in a clinically meaningful way, though it overinterprets ovarian reserve/egg quality without AMH and assumes some details not provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: strong embryo morphology tempered by uterine factor and prior failures. Probability adjustment is coherent, though the baseline implantation estimate is somewhat optimistic and some claims (e.g., stress/pelvic blood flow effects) are weaker than others."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly aligned with IVF practice, but several recommendations are too strong or not guideline-based as stated, such as calling hysteroscopy/SIS 'mandatory,' recommending 'aggressive' dual-route progesterone without context, and suggesting adjuncts like acupuncture for implantation benefit."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for uterine cavity evaluation, chronic endometritis workup, luteal support review, and future consideration of PGT-A or sperm DNA fragmentation. However, some recommendations are overly prescriptive and would benefit from more nuance based on the exact uterine diagnosis."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013782,
+  "judge_latency_ms": 5712.332582988893,
+  "judge_prompt_tokens": 2624,
+  "judge_completion_tokens": 394
+}

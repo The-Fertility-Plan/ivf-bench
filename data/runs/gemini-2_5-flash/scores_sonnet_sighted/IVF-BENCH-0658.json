@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the expansion stage and ICM based on the Gardner score, and makes reasonable observations about the TE. However, the morphological analysis relies heavily on the provided Gardner score rather than independent image analysis. The response notes the grayscale/low-resolution limitations but doesn't comment on notable visible features like the zona pellucida thinning, the somewhat irregular blastocoel shape visible in the image, or the compaction pattern. The description is mostly consistent with what's visible but lacks depth of independent observation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including age, AMH, FSH, BMI, previous live birth, endometrial thickness, sperm parameters, diagnosis, lifestyle factors, and stimulation protocol. It clearly connects each factor to the embryo quality assessment and explains how they interact to influence prognosis. The tubal factor diagnosis is correctly identified as favorable for IVF outcomes, and the previous live birth is appropriately weighted as a strong positive predictor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with the probability estimate of 60-75% following coherently from the evidence presented. The response correctly identifies the TE grade B and BMI as minor risk factors while appropriately weighting the stronger positive indicators. Minor issue: the response could better acknowledge that the expansion grade of 2 (full but not expanded/hatching) is slightly lower than optimal, which could marginally affect implantation probability. The conclusions are consistently supported throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines, correctly recommending single embryo transfer for a good-prognosis patient, appropriate luteal phase support, and beta-hCG timing. Gardner grading criteria are correctly applied. The conditional recommendation for PGT-A only after multiple failures is appropriate for a 32-year-old. The response correctly identifies 11mm endometrial thickness as optimal per established thresholds. Minor gap: doesn't specifically address freeze-all considerations or ERA testing options."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and specific, including SET recommendation with rationale, luteal phase support, beta-hCG timing (9-11 days), and future cycle planning considerations. The response provides nuanced guidance on PGT-A, cryopreservation, and lifestyle optimization. Could be more specific about luteal phase support protocols, transfer timing considerations, or progesterone monitoring. The future planning section is practical and well-organized, though it could include more specific thresholds for when to escalate interventions."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020082,
+  "judge_latency_ms": 13785.631457998534,
+  "judge_prompt_tokens": 3419,
+  "judge_completion_tokens": 655
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0688",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (early blastocyst with blastocoel <50%), degenerative ICM, and irregular TE consistent with the 0DD Gardner score. The description of the visual appearance aligns well with the image showing a compact, irregular embryo with indistinct cellular organization. Minor omission: no mention of zona pellucida integrity or specific cellular fragmentation patterns visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age (37), paternal age (42), AMH, FSH, sperm parameters, and endometrial thickness with embryo quality assessment. It correctly identifies the interaction between parental ages and aneuploidy risk, and connects sperm quality to fertilization potential. Minor gap: the 'Other' diagnosis is not addressed, and the first IVF cycle context could have been more deeply integrated into counseling recommendations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to probability estimate. The <5-10% implantation probability is well-supported by the convergence of poor morphology, maternal age, and paternal age factors. Minor inconsistency: the response simultaneously recommends proceeding with transfer AND considers freezing, without clearly resolving which is preferred given the embryo's fragility. The probability range is appropriately conservative and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines, including PGT-A recommendation for age 37+ patients, sperm DNA fragmentation testing for older male partners, and appropriate counseling about poor prognosis. The Gardner grading interpretation is accurate. Minor deviation: recommending donor eggs as a future option is somewhat premature for a first cycle patient with good AMH, though it is mentioned appropriately as a contingency rather than immediate recommendation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including transfer decision rationale, patient counseling points, PGT-A for future cycles, and sperm DNA fragmentation testing. The distinction between current cycle management and future planning is well-structured. Could be more specific about monitoring protocols post-transfer, luteal phase support considerations, or specific timing recommendations for the next stimulation cycle if this transfer fails."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.01743,
+  "judge_latency_ms": 12712.37095799006,
+  "judge_prompt_tokens": 2940,
+  "judge_completion_tokens": 574
+}

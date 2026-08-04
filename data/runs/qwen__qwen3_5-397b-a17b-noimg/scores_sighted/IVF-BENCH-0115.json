@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and based morphology on the provided 2BB grade. Its description of full blastocyst, B-grade ICM, and B-grade TE is broadly consistent with the reported grading, though it incorrectly says stage 3+ is hatching and adds interpretive detail not verified from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, endometrial thickness, prior biochemical pregnancy, unexplained infertility, smoking, and semen parameters with embryo quality and prognosis. It misses some nuance and overinterprets the blastulation rate from incomplete cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to embryo grade, age, lining, smoking, and prior outcomes. Minor issues include unsupported assumptions about blastocyst yield and some overstatement of smoking effect magnitude."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (proceed with transfer, smoking cessation, consider sperm DNA fragmentation in recurrent issues), but recommending PGT-A strongly for a 31-year-old with unexplained infertility and only prior biochemical pregnancy is more aggressive than guideline-based routine practice, and ERA is of limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for the current transfer and future planning, including luteal support review, smoking cessation, and possible further testing. Some recommendations are somewhat generic or not fully individualized, but overall they are practical."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014868,
+  "judge_latency_ms": 5033.773333008867,
+  "judge_prompt_tokens": 2971,
+  "judge_completion_tokens": 397
+}

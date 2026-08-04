@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a hatching/hatched blastocyst-like appearance and notes limited visibility of ICM/TE, but the confident 5BB assignment is somewhat overcalled because the image is distorted and ICM/TE are not clearly assessable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, prior biochemical pregnancies, male factor, semen data, and endometrial thickness with embryo prognosis reasonably well, though some links (e.g., sperm DNA fragmentation, low MII implying oocyte competence issues) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with probability estimates tied to embryo morphology and patient history; minor overinterpretation of morphology and causation for prior biochemical losses prevents a top score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with IVF practice in discussing blastocyst grading, luteal support, and considering PGT-A, but calling PGT-A the highest-priority recommendation and implying hatching itself is distinctly favorable goes beyond what guidelines firmly support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, progesterone monitoring, considering PGT-A, sperm DNA fragmentation testing, weight optimization, and protocol review; recommendations are useful though not highly nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012726,
+  "judge_latency_ms": 4651.947917009238,
+  "judge_prompt_tokens": 2547,
+  "judge_completion_tokens": 339
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst stage, thinning zona, and attempts to locate the ICM on the left periphery. However, the image is quite blurry and partially cropped, making precise morphological assessment difficult. The model somewhat over-confidently describes TE as a 'distinct cellular layer' when image resolution is poor, and the ICM/TE grade assignments appear to rely heavily on the provided Gardner score rather than independent image analysis. The description of the blastocoel cavity and zona thinning is reasonable but not highly precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age (31), BMI (31.8), previous live birth, sperm parameters, endometrial thickness, and ovarian reserve markers. It correctly identifies the previous live birth as a strong positive predictor and BMI as a risk factor. However, it slightly mischaracterizes the male factor diagnosis given the excellent sperm parameters without exploring possible underlying causes (e.g., sperm DNA fragmentation not captured by basic parameters), and doesn't address the relatively low oocyte yield (4 MII from 8 COCs, 50% maturation rate) which could be relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-45% follows reasonably from the evidence presented, with appropriate upward and downward adjustments. The conclusion leaning toward 40% is coherent given the favorable factors. One minor inconsistency: the model labels TE as Grade A (a favorable indicator) but the base rate cited (25-35%) seems low for a 3BA in a 31-year-old with a proven uterus; the final estimate could have been pushed slightly higher. Overall the reasoning chain is clear and well-structured."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines: single embryo transfer is implied, luteal support is mentioned, PGT-A is presented as optional rather than mandatory for a 31-year-old, and BMI management advice aligns with evidence-based recommendations. The Gardner grading interpretation is accurate. Minor gap: the response doesn't explicitly address eSET (elective single embryo transfer) policy or discuss freeze-all strategy considerations, which are increasingly standard in guidelines, particularly with BMI concerns."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are reasonably specific and practical: proceed with transfer, ensure luteal support, monitor beta-hCG, address BMI for future cycles, consider PGT-A, and address sedentary lifestyle. These are clinically useful. However, the response lacks specificity on luteal support protocols, doesn't address whether a freeze-all approach might be preferable given BMI, and the PGT-A recommendation could be more nuanced regarding cost-benefit at age 31. Overall provides good clinical guidance with room for more specificity."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.019548,
+  "judge_latency_ms": 17217.187000002014,
+  "judge_prompt_tokens": 2881,
+  "judge_completion_tokens": 727
+}

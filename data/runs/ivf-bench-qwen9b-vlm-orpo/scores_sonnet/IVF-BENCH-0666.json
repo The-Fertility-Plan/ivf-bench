@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes general blastocyst features (expanded blastocoel, compact ICM, cohesive TE) consistent with the Gardner 2AA score provided, but notably flags a contradiction: Gardner stage 2 typically means 'full blastocyst' but the response correctly notes that 'full blastocyst' is usually stage 4 in strict Gardner terminology. The morphological description is somewhat generic and hedged ('appears,' 'looks reasonably'), lacking precise detail about zona pellucida status, exact ICM cell count appearance, or specific TE cell arrangement visible in the image. The response acknowledges image limitations appropriately."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: age 34 (aneuploidy risk reduction), BMI 35.1 (identified as primary modifiable concern affecting endometrial receptivity and implantation), AMH/FSH (adequate reserve), endometrial thickness 11mm (favorable), sperm parameters (reassuring), and alcohol use (flagged as concern). The interaction between BMI and implantation efficiency is well-articulated. Minor gap: the 'Other' diagnosis is acknowledged but not explored further, and the interaction between BMI and stimulation response in antagonist protocol could have been mentioned."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 50-60% implantation / 35-45% live birth distinction is clinically appropriate and well-explained. The caveat about PGT-A status appropriately broadens the estimate range. The Gardner staging inconsistency is identified and handled transparently rather than ignored. Minor issue: the response gives both implantation probability (50-60%) and live birth rate (35-45%) without fully explaining the gap between them, which could confuse some readers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: appropriate counseling on BMI impact, alcohol cessation, luteal support mention, endometrial assessment, and conditional PGT-A recommendation at age 34. The Gardner grading critique shows knowledge of standardized grading systems. The PGT-A discussion appropriately reflects current guidelines that it's not mandatory at 34 but beneficial in specific circumstances. The response correctly identifies that 5-10% weight reduction can improve outcomes, consistent with published evidence. Minor gap: no mention of specific luteal support protocols or progesterone monitoring."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer with listed conditions, immediate alcohol cessation, specific future workup items (saline sonogram/hysteroscopy, embryology review, weight management targets), and conditional PGT-A guidance. The 5-10% weight reduction target is a specific, evidence-based recommendation. The future cycle planning section is well-structured. Slight deduction for not specifying timing of cavity evaluation or whether it should precede this transfer, and for not addressing whether a freeze-all strategy might be considered given BMI concerns."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.020502,
+  "judge_latency_ms": 15203.945540997665,
+  "judge_prompt_tokens": 3079,
+  "judge_completion_tokens": 751
+}

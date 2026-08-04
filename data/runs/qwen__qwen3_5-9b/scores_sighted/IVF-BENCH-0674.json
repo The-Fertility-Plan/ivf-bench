@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0674",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response repeatedly misidentifies the image as a single cell or degenerating cell, fabricates nucleus/ICM/TE details not clearly visible, and does not provide a reliable morphology assessment consistent with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, uterine factor, endometrial thickness, sperm data, prior cycle history, and smoking with embryo quality reasonably well, though some points are oversimplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The reasoning is highly repetitive and internally contradictory, oscillating between calling the image degenerating and consistent with 4AA, which undermines the logic of the conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as proceeding with transfer, smoking cessation, and uterine cavity evaluation are broadly guideline-consistent, but the morphology interpretation and implantation-rate framing are not well grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers some practical next steps (transfer, smoking cessation, uterine workup, consider PGT-A), but recommendations are generic and lack case-specific nuance or transfer-planning detail."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.031782,
+  "judge_latency_ms": 4169.453708993387,
+  "judge_prompt_tokens": 9014,
+  "judge_completion_tokens": 316
+}

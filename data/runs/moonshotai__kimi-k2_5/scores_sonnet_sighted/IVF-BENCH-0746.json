@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner 3AA score and describes expected features (expanded blastocoel, thinning zona, cohesive TE, packed ICM). However, the actual image is quite blurry and low-resolution, making definitive morphological assessment difficult. The model describes features consistent with the provided Gardner score rather than clearly visible image features, and mentions 'upper right quadrant' zona pellucida which appears to be a dark mass rather than a clear zona. The description is largely score-derived rather than image-derived, though it doesn't fabricate grossly incorrect features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects age-30 euploidy rates with embryo quality, addresses BMI impact on endometrial receptivity, links partner age-40 to sperm DNA fragmentation risk, interprets the ectopic history as evidence of implantation capacity, considers AMH and stimulation response together, and addresses stress via HPA axis mechanisms. The interaction between male factor diagnosis and blastocyst formation quality is also thoughtfully addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate (50-65%) follows logically from the adjustments applied to the baseline. The table format clearly contrasts risk vs. favorable factors. Minor issue: the model states euploidy rates 'approach 60-70%' at age 30 which is slightly optimistic (typically ~55-65%), and the baseline blastocyst implantation rate of 60-70% cited for donor/ideal models is reasonable. The ectopic reinterpretation as 'proof of receptivity' is a valid but somewhat optimistic spin. Overall logic is sound with no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation given age and ectopic history, ultrasound-guided transfer, ERA testing after repeated implantation failure, hysteroscopy recommendation, thrombophilia screening after ectopic, early viability scan given ectopic history. The suggestion of benzodiazepines pre/post transfer is unusual and not guideline-supported. Metformin recommendation without confirmed insulin resistance/PCOS is a minor deviation. PGT-A recommendation framing is appropriate. Luteal support dose adjustment for BMI is evidence-informed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific next steps clearly delineated for both immediate transfer and future planning. Includes specific adjunctive measures (stress management, luteal support dosing for BMI, metabolic screening), clear contingency planning for both positive and negative outcomes, specific diagnostic workup (ERA, EMMA/ALICE, hysteroscopy, thrombophilia panel, SDF testing), early scan timing (5.5-6 weeks), and long-term lifestyle targets (BMI <27). The response provides clinically useful nuance throughout and considers alternatives."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.020832,
+  "judge_latency_ms": 17748.10825000168,
+  "judge_prompt_tokens": 3264,
+  "judge_completion_tokens": 736
+}

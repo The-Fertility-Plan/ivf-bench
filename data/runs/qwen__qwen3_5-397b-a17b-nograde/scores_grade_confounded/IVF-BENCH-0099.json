@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible general blastocyst description, but it materially conflicts with the provided laboratory grade of 3AA by downgrading the embryo to 3BB/4BB and describing only A/B ICM and B TE. It also adds image-specific detail with limited support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live births, miscarriage history, endometrial thickness, lifestyle factors, and semen data with prognosis reasonably well, though some inferences about hidden male factor and oocyte maturation defects are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: the embryo is described as not top-tier despite the given 3AA grade, and the implantation estimate is based partly on an inferred lower morphology grade and speculative deductions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based (single embryo transfer candidate, smoking cessation, review of stimulation details), but recommending PGT-A largely on prior cycles/miscarriage at age 31 and implying robust luteal support because of male factor are not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including proceeding with transfer, smoking cessation, review of trigger timing, and possible sperm DNA fragmentation testing, though some suggestions are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012597,
+  "judge_latency_ms": 4373.299874998338,
+  "judge_prompt_tokens": 2354,
+  "judge_completion_tokens": 369
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality, poorly organized embryo with absent/degenerate ICM and TE consistent with 1DD, but inaccurately states the blastocoel is absent or less than 50% despite the provided expansion grade 1 meaning at least half the embryo volume; limited comment on zona pellucida."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, BMI, endometrium, and DOR with embryo quality reasonably well, though it overstates certainty about DOR-related embryo compromise and lacks nuance about missing AMH and first-cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate follows from poor morphology, but there are notable inconsistencies: confusion about Day 4 vs blastocyst timing, incorrect statement that Day 4 embryos are scored like '4AA/6BB,' and calling 9 MII an 'exceptional' DOR response without qualification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner concepts appropriately in part, but includes guideline-inconsistent points: misdescribes expansion grade 1, suggests routine cryopreservation of a very poor-quality embryo without caveat, and overrecommends PGT-A for a 28-year-old with DOR despite limited evidence for benefit in this setting."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as clarifying staging/transfer day, considering transfer if this is the only embryo, and discussing future cycle planning, though some recommendations are not sufficiently nuanced for poor-quality embryo disposition and PGT-A counseling."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013998,
+  "judge_latency_ms": 5741.134666997823,
+  "judge_prompt_tokens": 2696,
+  "judge_completion_tokens": 394
+}

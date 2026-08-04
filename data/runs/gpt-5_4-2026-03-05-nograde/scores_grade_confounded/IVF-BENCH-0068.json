@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "gpt-5.4-2026-03-05-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response materially departs from the provided laboratory grade of 3BA by downgrading the embryo to 3BC/4BC and calling the TE grade C. While some descriptive elements are plausible for a static image, the overall morphology assessment is inconsistent with the known case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, sperm parameters, endometrial thickness, uterine factor, smoking, and first-cycle status, and connects them to prognosis. It could be stronger by more explicitly weighting the known lab morphology rather than the image-only reinterpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent: poorer TE lowers prognosis, while age and endometrium improve it, and uterine factor/smoking temper success. The main weakness is that the probability estimate is built on a likely incorrect morphology downgrade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and aligned with common IVF practice: single embryo transfer at age 33, uterine cavity evaluation, smoking cessation, cautious use of PGT-A, and avoidance of unproven add-ons. Minor limitation is overreliance on image reinterpretation versus accepted Gardner lab grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, uterine assessment, smoking cessation, and review of trigger/timing if immaturity recurs. Useful and specific, though not highly tailored beyond standard IVF management."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013743,
+  "judge_latency_ms": 4612.008542004332,
+  "judge_prompt_tokens": 2586,
+  "judge_completion_tokens": 399
+}

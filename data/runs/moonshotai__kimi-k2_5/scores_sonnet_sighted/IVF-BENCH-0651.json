@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expansion grade 1 and DD classification from the Gardner score, and notes the zona pellucida appearance. However, the image actually shows what appears to be a more advanced blastocyst with significant cellular mass visible, and the description of blastocoel occupying 50-60% may underestimate what's visible. The response relies heavily on the provided Gardner score rather than independent image analysis, and some described features (like 'degenerative or absent' ICM/TE) are stated from the lab data rather than clearly derived from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response identifies the paradox between the favorable female profile (age 26, AMH 10.9, 15 MII oocytes) and poor embryo quality, connects the male factor diagnosis to potential sperm DNA fragmentation, contextualizes the 5-cycle history pattern meaningfully, and considers endometrial thickness in the prognosis. The analysis of why 15 MII oocytes yielded only a 1DD blastocyst is particularly insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability range of 5-12% is derived from morphology-adjusted baselines with age and endometrial corrections. The outcome distribution (88-90% no implantation, 5-7% biochemical, 2-3% miscarriage, 3-5% ongoing) is internally consistent. Minor issue: the summary states '<15%' success probability while the detailed estimate gives 3-5% ongoing pregnancy rate, creating slight inconsistency in how 'success' is framed."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation, luteal phase support, PGT-A suggestion for recurrent failure, sperm DNA fragmentation testing for male factor. The suggestion to proceed with transfer of a 1DD embryo is reasonable given no alternatives. The recommendation for ERA/EMMA/ALICE testing is appropriately caveated given prior live birth. Minor deviation: Day 4 transfer is unusual and the response could more explicitly address whether extended culture to Day 5/6 should have been attempted."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations. Immediate transfer recommendations include specific luteal support protocols and patient counseling points. Future cycle planning includes prioritized investigations (DFI, karyotype), specific protocol modifications (PGT-A, IMSI/PICSI, freeze-all strategy), and alternative pathways with clear thresholds (donor sperm if DFI >30%). The inclusion of psychological support and the structured table format enhance clinical utility."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.020019,
+  "judge_latency_ms": 15021.675875002984,
+  "judge_prompt_tokens": 3198,
+  "judge_completion_tokens": 695
+}

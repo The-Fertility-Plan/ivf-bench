@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0481",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with weak/absent ICM and poor TE consistent with 1DD, but it inaccurately calls it expanded and says the zona is thinning/ready to hatch; the provided Gardner data indicates stage 1 (early blastocyst, blastocoel at least half the embryo), not an expanded or hatching blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, smoking, sperm parameters, endometrium, and infertility diagnosis reasonably well with embryo quality, though it could better contextualize tubal factor and avoid overattributing morphology to culture/timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor morphology lowers prognosis, younger age and good reserve are favorable, smoking/BMI are negative. Minor issues include overstatement about zona thinning/hatching and some speculative comments about culture conditions and fresh-vs-freeze stress."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most counseling points are reasonable and evidence-based, but recommending routine PGT-A in a 33-year-old with no prior cycles is not standard, and suggesting freezing other poor embryos rather than proceeding with fresh transfer is not clearly guideline-based. Donor egg discussion is also premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as counseling, smoking cessation, expectation management, proceeding if this is the only embryo, and lifestyle optimization for future cycles. However, some recommendations are not sufficiently individualized or evidence-grounded."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013881,
+  "judge_latency_ms": 5808.920540992403,
+  "judge_prompt_tokens": 2637,
+  "judge_completion_tokens": 398
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided 3AA label. However, it repeated some grading-description inaccuracies, notably calling stage 3 'fully expanded with thinning zona' and suggesting hatching initiation, which is closer to stage 4/5 than a true Gardner 3 blastocyst. No image-based fabrication beyond the supplied grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, low MII yield, prior biochemical pregnancy, smoking, semen data, BMI, and endometrial thickness with embryo quality and prognosis. It misses some nuance and slightly overinterprets some factors, but overall connects patient factors to expected outcome well."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is logically structured and the prognosis estimate generally follows from embryo quality plus patient modifiers. Minor issues include overstatement that 3AA is 'highest quality' despite stage/grade nuance and some speculative links (e.g., endometrial asynchrony, DFI) without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, smoking cessation, luteal support review, investigate low maturation). However, stating SET is 'mandatory' is too absolute, and recommending PGT-A to provide 'certainty' is not guideline-consistent; PGT-A does not guarantee outcome and is not routinely indicated solely for age 35 with one biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including SET, progesterone review, smoking cessation, trigger review, possible DFI testing, and uterine cavity evaluation if failure recurs. Some suggestions are somewhat speculative, but overall clinically useful."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.015684,
+  "judge_latency_ms": 6862.22650000127,
+  "judge_prompt_tokens": 3033,
+  "judge_completion_tokens": 439
+}

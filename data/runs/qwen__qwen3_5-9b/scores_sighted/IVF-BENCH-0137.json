@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0137",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, calling it fully expanded with a large central cavity and robust cohesive TE; the blastocoel is not clearly prominent and the image does not convincingly show classic 3AA features. It also interprets small peripheral structures as TE budding, which is speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, smoking, endometrial thickness, sperm parameters, and cycle history with embryo quality reasonably well, though it misses AMH being unavailable and somewhat overinterprets FSH and PCOS effects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it labels 3AA as the highest grade, gives a somewhat inflated base implantation rate, and makes unsupported claims such as meaningful benefit from smoking cessation 24–48 hours before transfer and PCOS increasing aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF practice: ERA after one failed transfer is not routinely recommended, PCOS is not a standard indication for PGT-A due to higher aneuploidy, and immediate short-term smoking cessation claims are overstated. Some elements, like counseling on smoking and acknowledging age-related aneuploidy risk, are appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for proceeding with transfer, smoking cessation counseling, OHSS awareness, and future-cycle considerations. However, some suggested actions are not sufficiently evidence-based or appropriately nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013821,
+  "judge_latency_ms": 5363.7972500000615,
+  "judge_prompt_tokens": 2582,
+  "judge_completion_tokens": 405
+}

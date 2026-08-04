@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states that no image was provided and bases morphology on the supplied Gardner 3AB grade rather than inventing image-specific findings. However, it repeats the prompt's incorrect interpretation of stage 3 as 'expanded blastocyst with thinning zona' (more consistent with stage 4), so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, diagnosis, endometrial thickness, sperm quality, prior cycle history, and lifestyle factors well, and connects these appropriately to prognosis and embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with conclusions generally supported by the data. The main weakness is a somewhat optimistic implantation estimate and reliance on the misdescribed expansion stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially support for single embryo transfer in a young good-prognosis patient and cautious use of PGT-A only after repeated failures. Minor issues include the stage-3 grading misstatement and mentioning ERA, which is not routinely recommended by current evidence-based guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, luteal support, and evaluation after failure. Some suggestions are somewhat generic and could be more protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015054,
+  "judge_latency_ms": 4710.123291995842,
+  "judge_prompt_tokens": 3223,
+  "judge_completion_tokens": 359
+}

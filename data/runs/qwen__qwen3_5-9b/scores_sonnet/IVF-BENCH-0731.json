@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst features reasonably well but contains a notable inconsistency: it states the Gardner Score is 2AA yet describes the expansion as 'Grade 1' (fully expanded), when a Grade 2 in Gardner scoring means the blastocoel fills the embryo but is not yet fully expanded/hatching. The ICM and TE descriptions are generally accurate and consistent with AA grading, but the expansion stage description conflates Grade 1 and Grade 2 terminology. No mention of zona pellucida status or other observable features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, oocyte yield, sperm parameters, endometrial thickness, and lifestyle factors are all connected to prognosis. The male factor diagnosis is thoughtfully interrogated given the good sperm parameters. AMH being N/A is not addressed. The endometrial thickness concern is appropriately flagged and linked to implantation potential. Minor gap in not discussing BMI relevance or the 'Other' stimulation protocol."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 50-60% follows reasonably from the evidence presented, with appropriate caveats for the thin endometrium. The response correctly identifies the 2AA as high quality while noting it is not the highest possible grade. Minor inconsistency in describing expansion stage (calling it 'Grade 1' when the score is 2AA). The euploid probability estimate of 80-90% for a 33-year-old is reasonable and supports the PGT-A discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: appropriate discussion of PGT-A indications, endometrial thickness thresholds (>7mm optimal), estrogen support in frozen cycles, and beta-hCG timing. The 6.0mm endometrial thickness concern aligns with published literature. The suggestion to proceed with transfer rather than freeze for PGT-A at age 33 with a first cycle is consistent with current guidelines. Minor issue: the 5mm threshold mentioned for cancellation is slightly below what most guidelines recommend (typically 6-7mm minimum)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, address endometrial support, consider PGT-A with clear rationale, lifestyle maintenance, and follow-up timing. The response distinguishes between fresh and frozen cycle management. Could be more specific about estrogen dosing protocols or alternative interventions for thin endometrium (e.g., sildenafil, aspirin, G-CSF). Future cycle planning is somewhat limited, focusing mainly on the current transfer rather than contingency planning."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.018216,
+  "judge_latency_ms": 13849.939125000674,
+  "judge_prompt_tokens": 2637,
+  "judge_completion_tokens": 687
+}

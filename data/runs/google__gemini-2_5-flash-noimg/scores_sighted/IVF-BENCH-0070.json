@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states that no image was provided and bases morphology on the supplied Gardner 3AA grade rather than inventing image-specific findings. However, it repeats the prompt's inaccurate interpretation that stage 3 is 'expanded blastocyst with thinning zona'; true expansion 3 is full blastocyst, while expanded/thinning zona is stage 4. No direct image-based morphology was assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, ovarian reserve, endometriosis, prior biochemical pregnancy, endometrial thickness, sperm motility, and lifestyle, and relates them to prognosis. Some links are somewhat speculative, but overall the interaction between embryo quality and patient factors is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the implantation estimate tied to embryo quality, age, lining, and endometriosis. Minor issues include overconfidence in morphology-based prognosis and some speculative inferences (e.g., likely ICSI, ERA emphasis after only one biochemical pregnancy)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core recommendations such as single embryo transfer and luteal support are guideline-concordant, but several suggestions are not strongly evidence-based for this scenario: ERA before/after a single biochemical loss, immune-marker testing/NK cells, routine surgical re-evaluation for endometriosis, and broad PGT-A consideration at age 31 after one failed cycle. Also, the Gardner stage interpretation is off."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and contingency planning, including SET, luteal support, monitoring, and lifestyle advice. It is useful clinically, though some proposed investigations/interventions may be premature for this case."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.016731,
+  "judge_latency_ms": 6336.926083997241,
+  "judge_prompt_tokens": 3357,
+  "judge_completion_tokens": 444
+}

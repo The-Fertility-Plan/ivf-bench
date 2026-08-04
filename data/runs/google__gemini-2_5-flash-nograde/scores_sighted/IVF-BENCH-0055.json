@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0055",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The image does not clearly show a well-expanded blastocoel or convincing cohesive TE; the response likely overcalls this as a 3BB/4BB and describes features not well supported by the single focal plane image. It does appropriately note uncertainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm quality, endometrial thickness, endometriosis, and cycle history well with prognosis, though it could better distinguish embryo-intrinsic quality from uterine factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the implantation estimate is somewhat optimistic given the uncertain morphology and the morphology assessment itself is internally weak relative to the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognostic framing are guideline-consistent, but suggesting ERA/receptivity testing and laparoscopy relatively early is not strongly aligned with routine first-transfer evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, and future evaluation, though some recommendations are broader than necessary for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013704,
+  "judge_latency_ms": 4219.1298749967245,
+  "judge_prompt_tokens": 3078,
+  "judge_completion_tokens": 298
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided 3AA label rather than the image, and describes features such as a large blastocoel, thinning zona, and cohesive high-grade TE/ICM that are not clearly appreciable in this image. It also mentions surrounding cumulus/somatic cells, which is questionable for a blastocyst assessment image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, sperm parameters, endometrium, and cycle history with embryo quality reasonably well, though some links are overstated and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable overstatements and inconsistencies, such as calling 3AA the highest possible grade/top tier without nuance and inferring very high euploidy likelihood directly from morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The overall framework is broadly consistent with IVF practice, but it overstates morphology as a predictor of euploidy/implantation, inaccurately labels 3AA as the highest possible grade, and includes a questionable statement implying PGT-A would make euploid probability near 100%."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The recommendations are incomplete because the response is truncated after advising to proceed with transfer, and it lacks specific practical next steps for luteal support, single embryo transfer strategy, or future cycle contingencies."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012768,
+  "judge_latency_ms": 4823.332833999302,
+  "judge_prompt_tokens": 2366,
+  "judge_completion_tokens": 378
+}

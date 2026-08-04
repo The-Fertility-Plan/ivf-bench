@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality. The image shows a blastocyst with moderate expansion and a large blastocoel, but the ICM is not clearly compact and the TE is sparse/irregular rather than a clearly cohesive numerous layer. Calling it likely 4AA/4AB/4BA is not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age-related aneuploidy risk, low AMH with acceptable response, tubal factor as favorable, good BMI, sperm parameters, endometrium, and first-cycle status. Some statements about oocyte quality from response are a bit overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is built on an inflated morphology assessment. There is also some overinterpretation of ovarian response and embryo quality, which weakens the logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET, luteal support per protocol, counseling about age-related aneuploidy, and considering PGT-A in future planning are broadly guideline-consistent. However, the morphology grading and optimism about prognosis are somewhat stronger than the image supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, counseling, luteal support, and consideration of PGT-A or protocol adjustment. It is useful clinically, though somewhat generic and based on an overly favorable embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015162,
+  "judge_latency_ms": 5303.131584005314,
+  "judge_prompt_tokens": 3094,
+  "judge_completion_tokens": 392
+}

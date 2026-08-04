@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor-quality morphology and absent/degenerate ICM/TE consistent with 1DD, but it misstates the Gardner expansion definition (1 = blastocoel at least half the embryo, not less than half) and overcalls some image details such as definite non-viability from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior biochemical pregnancies, male-factor context, BMI, endometrium, and ovarian response with embryo prognosis reasonably well, though some links (e.g., sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis estimate follows from the very poor grade, but there are notable issues: incorrect expansion-stage interpretation, labeling the embryo definitively non-viable, and calling two biochemical pregnancies 'RPL' without nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (consider PGT-A, assess male factor further), but several points are not well aligned with evidence-based guidance: definitive 'do not transfer' language from morphology alone, routine thrombophilia/immunologic/NK-cell workup, and broad endorsement of GH/PICSI/IMSI without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for this transfer and future cycles, including embryo selection, possible testing, and protocol review, though some suggestions are overly categorical or insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013332,
+  "judge_latency_ms": 5744.381334006903,
+  "judge_prompt_tokens": 2514,
+  "judge_completion_tokens": 386
+}

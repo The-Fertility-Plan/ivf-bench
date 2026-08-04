@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0161",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality embryo with absent/degenerate blastocyst features and notes the mismatch between image/day and Gardner score, but it overstates some visible details (e.g., vacuolation/collapse) and does not precisely describe zona or cavity morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, BMI, prior ectopic/biochemical history, sperm quality, and thin endometrium with prognosis reasonably well, though it overinterprets DOR from the provided numbers and lacks nuance about uncertain AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate follows from the poor embryo grade, but there are notable inconsistencies and overstatements, including calling 4.5 mm 'not strictly thin' then suboptimal, and treating the embryo as definitively non-viable despite acknowledged data ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis assessment is broadly reasonable, several recommendations are not guideline-aligned: advising 'DO NOT TRANSFER' too categorically from limited data, suggesting cryopreservation of a 0DD embryo for future use/research, recommending donor eggs prematurely, and advising smoking cessation despite the patient already being a former smoker."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives concrete next steps such as counseling on prognosis, endometrial optimization, and considering PGT-A in future cycles, but some advice is impractical or insufficiently nuanced for this exact case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013824,
+  "judge_latency_ms": 5537.377000000561,
+  "judge_prompt_tokens": 2628,
+  "judge_completion_tokens": 396
+}

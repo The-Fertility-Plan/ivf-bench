@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was available, but it fails to use the provided Gardner score 4BB for morphology and instead infers likely grades (e.g., 3AA to 4BB), omitting the actual known features of a 4BB blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, prior cycle, semen parameters, and endometrial thickness with prognosis reasonably well, though some links to the actual embryo grade are weakened by not using the provided 4BB data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis estimate based on age, blastocyst stage, BMI, and male factor considerations; the main weakness is treating embryo morphology as unknown despite the supplied grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-aligned, but suggesting ERA after two failed transfers is more aggressive than many current guideline-based approaches, and the omission of the provided Gardner grade reduces adherence to standard embryo assessment practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, beta-hCG timing, and future evaluation, though some recommendations are somewhat generic and not fully tailored to the known 4BB embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01299,
+  "judge_latency_ms": 4140.198083005089,
+  "judge_prompt_tokens": 2545,
+  "judge_completion_tokens": 357
+}

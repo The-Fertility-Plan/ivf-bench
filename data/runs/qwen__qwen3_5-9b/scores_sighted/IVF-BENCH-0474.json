@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0474",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely restates the provided Gardner score rather than the image itself and overcalls visible features: the blastocoel does not appear clearly expanded with a large cavity, the ICM is not distinctly identifiable as tightly packed, and TE cohesion is not convincingly visible in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, endometriosis, sperm parameters, endometrial thickness, and cycle history with embryo quality reasonably well, though some links are somewhat generalized and it overinterprets the low oocyte yield as poor response."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it labels sperm parameters as normal despite low concentration, treats morphology as implying a high likelihood of euploidy, and gives a probability range that is somewhat optimistic relative to the stated modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general emphasis on embryo quality are guideline-consistent, but statements such as 'do not freeze it unless contraindication,' calling 3AA 'top-tier' from this image alone, and suggesting specific protocol changes without fuller context are somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future planning, including SET, lifestyle optimization, and consideration of endometriosis management, though recommendations are not highly individualized and some are speculative."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013482,
+  "judge_latency_ms": 4708.985834004125,
+  "judge_prompt_tokens": 2624,
+  "judge_completion_tokens": 374
+}

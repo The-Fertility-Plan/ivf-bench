@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies general blastocyst features (ICM, TE, expansion) consistent with the Gardner grade provided, but the image actually appears to show a somewhat degenerating or poor-quality blastocyst with fragmented/dark cellular debris, multiple vacuoles, and disorganized structure - not clearly a high-grade 3AA/4AA embryo. The model largely defers to the lab-reported grade rather than critically analyzing what is visible in the image, which shows concerning features the model does not address. The soft-focus caveat is noted but insufficient."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors: maternal age 37 correctly identified as primary limiting factor, AMH/FSH interpreted in context of ovarian reserve, sperm parameters assessed for male factor contribution, endometrial thickness evaluated, BMI and lifestyle factors all addressed. The model clearly connects how each factor interacts with embryo quality and overall prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate (35-50% implantation) logically follows from the balance of favorable embryo morphology against age-related aneuploidy risk. The Gardner grading nomenclature correction (3AA vs 4AA) is accurate and appropriately contextualized. Minor issue: the model accepts the lab grade uncritically despite image features that may not support 3AA, creating slight tension in the reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommended for high-grade blastocyst, no bed rest advised (consistent with evidence), appropriate luteal support mentioned, PGT-A discussion framed correctly with both benefits and limitations per current guidelines, conservative approach to add-on testing after first failure aligns with ESHRE add-ons guidelines, and recurrent failure threshold for investigation is appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific recommendations for current transfer (SET, luteal support, lifestyle), clear guidance on what NOT to do (bed rest, premature add-on testing), structured approach for failed transfer scenario, nuanced PGT-A discussion with individualized framing, and specific triggers for further investigation. The tiered approach (this cycle vs. future planning vs. repeated failure) provides practical clinical utility."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021813,
+  "judge_latency_ms": 15397.968624994974,
+  "judge_prompt_tokens": 4286,
+  "judge_completion_tokens": 597
+}

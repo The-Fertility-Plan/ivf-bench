@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate embryo morphology. However, it provided no actual morphological assessment despite the embryo image showing a blastocyst, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior live birth and failed cycles, sperm quality, endometrial thickness, ovarian response, and lifestyle factors into prognosis reasonably well, though interaction with actual embryo morphology is necessarily limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with appropriate acknowledgment of uncertainty from missing morphology. Minor issues include somewhat overstating the significance of former smoking/stress and the natural-cycle discrepancy without resolving it."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceed with transfer, luteal support, consider uterine evaluation, discuss PGT-A), but thrombophilia and immunologic testing are not routinely guideline-supported for implantation failure, and the framing of PGT-A is somewhat stronger than standard guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning, including counseling, luteal support, protocol clarification, BMI optimization, and further workup. Some suggestions are generic and a few are not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014751,
+  "judge_latency_ms": 4844.951375009259,
+  "judge_prompt_tokens": 3167,
+  "judge_completion_tokens": 350
+}

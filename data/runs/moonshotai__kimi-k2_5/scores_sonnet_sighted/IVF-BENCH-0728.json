@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the DD grading for ICM and TE and notes disorganized trophectoderm and absent ICM. However, there is a notable contradiction: the model states 'Expansion Grade 1' means blastocoel <50% while the Gardner score parenthetical says ≥50%, and the image actually appears to show a more expanded blastocyst (possibly grade 3-4 expansion) with a well-filled blastocoel cavity. The zona pellucida observation is reasonable. The ICM/TE degeneration description aligns with the DD scoring but the expansion stage assessment contains internal contradiction and possible misreading of the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "The response begins integrating clinical factors (AMH, age, oocyte yield, maturation rate) but is cut off mid-sentence at 'At age 38,' leaving the age-quality interaction incomplete. The sperm parameters, BMI, endometrial thickness, lifestyle factors, and diagnosis of unexplained infertility are not addressed. The integration that does exist is superficial and incomplete due to the truncated response."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is truncated and incomplete, cutting off before providing implantation probability estimates, risk/favorable factor analysis, and recommendations. The internal contradiction about expansion grade 1 definition undermines coherence. What reasoning exists is partially logical but the incomplete nature of the response makes it impossible to evaluate full coherence of conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation for ICM-D and TE-D is consistent with established criteria. The explanation that DD grades represent non-viable or severely compromised lineages aligns with ESHRE/Gardner framework. However, the expansion grade contradiction and the incomplete response prevent full assessment of guideline alignment, particularly regarding transfer recommendations for poor-quality blastocysts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is cut off before providing any recommendations for this transfer or future cycle planning. No implantation probability estimate is given. No actionable next steps are provided. The truncated response fails entirely on this dimension despite the task explicitly requesting transfer recommendations and future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01398,
+  "judge_latency_ms": 12736.586416998762,
+  "judge_prompt_tokens": 1900,
+  "judge_completion_tokens": 552
+}

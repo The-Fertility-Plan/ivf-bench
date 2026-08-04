@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3), thinning zona pellucida, prominent ICM cluster, and sparse TE with large cells consistent with Grade C. The ICM localization to 'upper-left quadrant' is a reasonable attempt at spatial description. Minor issue: the image shows a somewhat irregular, fragmented-appearing blastocyst with what looks like cytoplasmic debris or fragmentation that the model does not explicitly mention, and the blastocoel appears partially collapsed or irregular rather than fully expanded as described. Overall description is solid but misses some nuanced morphological irregularities visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates maternal age (39), AMH, stimulation response, tubal factor diagnosis, 4-cycle failure history including biochemical pregnancy, paternal age (42), sperm parameters, endometrial thickness, BMI, and smoking status. It correctly connects Grade C TE to advanced maternal age, links biochemical pregnancy history to aneuploidy risk, and contextualizes the AMH/COC yield relationship. The interaction between multiple factors and their combined effect on prognosis is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and consistent: Grade A ICM raises probability, Grade C TE lowers it, RIF history and smoking further reduce it, biochemical pregnancy prevents near-zero estimate. The 10-20% range follows reasonably from the evidence. Minor issue: the model states baseline for 39-year-old is 15-20% then adjusts downward for TE grade, RIF, and smoking to arrive at 10-20%, which slightly overlaps the baseline rather than clearly showing net downward adjustment. The reasoning is generally sound but the probability derivation could be more precisely articulated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for recurrent implantation failure at advanced maternal age, luteal phase support, sperm DNA fragmentation testing for older male partners, RPL workup consideration, and donor egg counseling are all consistent with current evidence-based practice. Gardner grading interpretation is accurate. The smoking cessation recommendation aligns with ASRM guidelines on lifestyle factors. Minor gap: no mention of ERA (Endometrial Receptivity Analysis) which ESHRE guidelines discuss for RIF cases, and the RPL workup recommendation appropriately notes it is 'debated.'"
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, robust progesterone support, smoking cessation as priority, PGT-A for future cycles, sperm DNA fragmentation testing, RPL/thrombophilia workup, and donor egg counseling pathway. These provide clear next steps for both immediate and future management. Could be slightly more specific regarding luteal support protocols (e.g., progesterone dosing considerations) or ERA timing, and could specify which thrombophilia panel to consider, but overall the actionability is high for a clinical setting."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.020286,
+  "judge_latency_ms": 16736.548792003305,
+  "judge_prompt_tokens": 2982,
+  "judge_completion_tokens": 756
+}

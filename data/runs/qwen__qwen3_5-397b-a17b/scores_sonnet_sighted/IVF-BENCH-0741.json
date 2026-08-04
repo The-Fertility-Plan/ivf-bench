@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes features consistent with the Gardner 3AA score provided in the lab data, but the image itself is quite low-resolution and grainy, making definitive morphological assessment difficult. The model describes ICM, TE, zona pellucida, and cytoplasm in reasonable detail, but some descriptions (e.g., 'distinct boundaries between cells,' 'no obvious signs of degeneration') appear to be inferred from the Gardner score rather than clearly visible in the blurry microscopy image. The description is largely accurate but partially relies on the provided score rather than independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age 37 with aneuploidy risk, excellent AMH/oocyte yield, ideal endometrial thickness, prior miscarriage history, and male factor diagnosis. It correctly notes that sperm parameters appear robust and raises the possibility of DNA fragmentation or morphology issues. The interaction between age-related aneuploidy risk and top-tier morphology is well-articulated. Minor gap: BMI of 25.4 is borderline overweight but described as 'healthy range' without nuance, and lifestyle factors could be more deeply integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 45-55% is reasonably derived from the interplay of excellent morphology and age-related aneuploidy risk. The model correctly notes that PGT-A euploid embryos would yield >65% and discounts appropriately for untested status. The connection between prior miscarriage and likely aneuploidy is sound. Minor issue: the 45-55% implantation range is slightly optimistic compared to published literature for untested embryos at age 37, but the reasoning chain is internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate and evidence-based, luteal phase support recommendation is standard, PGT-A suggestion for recurrent loss/advanced maternal age aligns with current guidelines, and sperm DNA fragmentation testing is consistent with male factor workup recommendations. Early monitoring protocol is appropriate. The response correctly applies Gardner grading criteria. Minor deviation: does not mention ERA (Endometrial Receptivity Array) testing which some guidelines suggest for recurrent implantation failure cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly justified, luteal support protocol is mentioned with specific routes (vaginal/IM), beta-hCG timing is specified (9-10 days), early ultrasound timing is given (6-7 weeks), PGT-A is recommended with clear rationale, lifestyle modification includes specific activities, and sperm DNA fragmentation testing is suggested. Could be improved by specifying progesterone dosing, mentioning aspirin or other adjuncts given miscarriage history, or discussing freeze-all strategy considerations."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019929,
+  "judge_latency_ms": 17076.518667003256,
+  "judge_prompt_tokens": 2963,
+  "judge_completion_tokens": 736
+}

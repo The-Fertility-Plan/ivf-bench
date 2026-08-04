@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting intact zona, blastocoel occupying most of the embryo, and peripheral cell layer continuity. However, it hedges significantly on ICM and TE visibility, noting the image is 'not perfectly crisp.' The image actually shows a well-expanded blastocyst with clearly visible internal cell mass and trophectoderm cells, which the model somewhat undersells. The model correctly notes expansion stage 2 per Gardner but doesn't fully commit to describing what is visible. Some observations are accurate but the overall description lacks precision and confidence given what is visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 34, BMI 17.1, AMH, FSH, prior IVF history including live birth, sperm parameters (correctly flagging low motility as a potential male factor despite 'unexplained' diagnosis), endometrial thickness, smoking status, and lifestyle factors. It connects each factor to its specific impact on implantation and live birth probability, and explains interactions between factors rather than listing them in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% implantation follows logically from the identified positive and negative factors. The distinction between implantation probability and live birth probability is appropriately made. Minor issue: the model slightly underestimates the embryo quality impact given the 2AA grade, and the range provided is somewhat conservative for a 34-year-old with 2AA morphology. Overall the logic chain is clear and conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommends single embryo transfer, appropriately discusses PGT-A as optional rather than mandatory at age 34 with limited embryo numbers, advises against unproven add-ons, correctly identifies smoking cessation as highest-yield intervention, and appropriately defers uterine investigation given prior live birth. The Gardner grading interpretation is correct. Minor gap: doesn't explicitly reference endometrial pattern assessment alongside thickness, which guidelines recommend."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: immediate smoking cessation, alcohol abstinence from transfer, nutritional guidance for BMI improvement, luteal support monitoring, sperm DNA fragmentation testing if needed, stimulation protocol review for future cycles, conditional uterine evaluation criteria, and nuanced PGT-A discussion with specific indications. The response also clearly delineates what to do now versus if transfer fails, and explicitly advises against unproven add-ons with reasoning. This level of specificity and nuance is clinically actionable."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021369,
+  "judge_latency_ms": 15746.90191699483,
+  "judge_prompt_tokens": 3723,
+  "judge_completion_tokens": 680
+}

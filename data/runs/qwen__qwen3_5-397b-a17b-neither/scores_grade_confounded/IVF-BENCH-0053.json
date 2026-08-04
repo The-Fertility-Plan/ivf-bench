@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner grade 1DD and instead infers a likely moderate-quality Day 5 blastocyst with discernible ICM/TE, which directly contradicts the actual morphology of a very poor-quality blastocyst with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometriosis, prior miscarriage, sperm parameters, BMI, and endometrial thickness reasonably well, though it fails to connect these factors to the actual very poor embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but key conclusions are undermined by the major premise error of not using the known 1DD grade; prognosis is therefore overly optimistic relative to the embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points on SET, age-related aneuploidy risk, and consideration of PGT-A are broadly aligned, but recommending transfer based on an assumed higher-quality blastocyst and suggesting aspirin for endometriosis are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer monitoring, luteal support discussion, and future planning including PGT-A and endometriosis suppression, though recommendations are less appropriate because they are not tailored to the actual 1DD embryo."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012795,
+  "judge_latency_ms": 3659.5372919982765,
+  "judge_prompt_tokens": 2575,
+  "judge_completion_tokens": 338
+}

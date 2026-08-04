@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0086",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was available and did not fabricate embryo morphology. It appropriately declined to assign Gardner stage or describe ICM/TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well, including age, ovarian reserve, prior live birth/miscarriage, BMI, smoking, endometrium, and sperm data, though some links to embryo-specific prognosis remained generic because morphology was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with uncertainty acknowledged due to missing morphology. Minor issues include somewhat speculative quantification of smoking impact and broad assumptions about embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, luteal support, embryo selection, male-factor review), but suggestions such as routine PGT-A for a young patient with one miscarriage, ERA/EMMA/ALICE, thrombophilia screening, and calling smoking cessation 'non-negotiable' are more debatable and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including lifestyle optimization and further male-factor workup. Some recommendations are less nuanced or overly broad, but overall clinically useful."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014709,
+  "judge_latency_ms": 5021.448458996019,
+  "judge_prompt_tokens": 3288,
+  "judge_completion_tokens": 323
+}

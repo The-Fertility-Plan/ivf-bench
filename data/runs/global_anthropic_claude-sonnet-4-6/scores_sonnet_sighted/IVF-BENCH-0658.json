@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly confirms the 2AB Gardner score and describes expansion, ICM, and TE in reasonable detail. However, the image actually shows a blastocyst with visible internal membrane-like structures and irregular cavitation that the model flags as a concern but doesn't fully characterize. The description of TE as 'somewhat sparse at periphery' is reasonable but the notable internal structural complexity visible in the image (which may represent collapsed or re-expanding blastocyst morphology) is not thoroughly analyzed. The zona pellucida description as 'intact, uniform thickness' appears consistent with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects prior live birth as the strongest prognostic indicator, links AMH/FSH/oocyte yield to reserve quality, addresses BMI impact on implantation, considers tubal factor diagnosis implications for uterine receptivity, integrates endometrial thickness optimally, and accounts for sperm parameters. The interaction between embryo grade and patient factors is well-articulated throughout the probability modeling section."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate flows logically from the evidence. The base rate adjustments are transparent and directionally appropriate. Minor inconsistency: the model suggests PGT-A 'if not done' post-hoc for a Day 5 transfer that is presumably imminent, which is logistically contradictory. The live birth estimate range (42-52%) is coherently derived from the implantation estimate with appropriate attrition factored in. The risk stratification is internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines. eSET recommendation for a 32-year-old with prior live birth is appropriate per guidelines. However, recommending PGT-A for a 2AB embryo in a 32-year-old without recurrent failure or specific indication is not strongly supported by current ESHRE guidelines which reserve PGT-A for specific indications. The assisted hatching recommendation for an intact zona without specific indications (e.g., thick zona, frozen embryo) is not well-supported by current evidence. Progesterone monitoring thresholds cited are reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: clear proceed/transfer decision, specific progesterone monitoring thresholds (P4 >10-12 ng/mL), defined βhCG timing (day 10-12), early ultrasound timing (6-7 weeks), and a structured future cycle planning tree. The BMI intervention includes a specific target (5-7% reduction, BMI <27) with quantified expected benefit. The conditional future planning framework is clinically useful. Slight deduction for the logistically impractical PGT-A suggestion at time of imminent transfer and the weakly-supported assisted hatching recommendation."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020718,
+  "judge_latency_ms": 16250.44550000166,
+  "judge_prompt_tokens": 3251,
+  "judge_completion_tokens": 731
+}

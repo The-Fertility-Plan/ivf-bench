@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately acknowledges that no image was provided and avoids assigning a false Gardner grade, but it still infers a Day 4 morula/early blastocyst and describes ideal features not actually observable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/AMH, BMI, prior outcomes, sperm parameters, and endometrial thickness into prognosis reasonably well, though some links to embryo-specific quality remain somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent, with a plausible probability estimate tied to age, transfer day, BMI, and history; minor issues include speculative assumptions about protocol and embryo stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are some deviations or overreaches, such as suggesting PGT-A in a 29-year-old mainly for one miscarriage and mentioning aspirin/heparin without a defined indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for luteal support discussion, beta-hCG timing, protocol clarification, Day 5 culture, metabolic optimization, and RPL workup if needed, though some advice is still somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012537,
+  "judge_latency_ms": 3918.039707998105,
+  "judge_prompt_tokens": 2529,
+  "judge_completion_tokens": 330
+}

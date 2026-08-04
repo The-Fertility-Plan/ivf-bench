@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality, minimally expanded embryo with absent/degenerate ICM and TE consistent with 0DD, but it inaccurately states there is no distinct blastocoel and calls it morula/collapsed/arrested; the image and provided grade indicate an early blastocyst rather than no blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, PCOS, AMH, BMI, prior failed cycle, sperm quality, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some inferences about intrinsic oocyte defects are somewhat stronger than the available data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent: very poor embryo morphology drives a very low implantation estimate despite favorable age and endometrium. Minor overstatements include labeling the embryo definitively non-viable and asserting transfer would not result in pregnancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned with IVF practice, but recommending absolute cancellation/'do not transfer' and suggesting PGT-A in a 28-year-old primarily because of one poor cycle are more aggressive than standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer decision-making and future cycle planning, including metabolic optimization and protocol review. However, some recommendations are not sufficiently nuanced and could better distinguish optional from standard interventions."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013155,
+  "judge_latency_ms": 5468.829457997344,
+  "judge_prompt_tokens": 2465,
+  "judge_completion_tokens": 384
+}

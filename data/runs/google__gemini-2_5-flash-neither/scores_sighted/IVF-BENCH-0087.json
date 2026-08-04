@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated it could not assess morphology without an image/Gardner score and did not fabricate embryo features, which is appropriate given the prompt context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, oocyte maturity, endometrium, diagnosis, sperm parameters, BMI, and lifestyle factors into prognosis well, though some links to embryo-specific quality were necessarily limited by absent morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis appropriately conditioned on unknown embryo quality; minor issues include somewhat broad assumptions and use of conditional ranges rather than a case-specific estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a young good-prognosis patient, standard luteal support, and cautious consideration of PGT-A are broadly guideline-consistent; minor deviations include overemphasis on morphology/endometrial pattern and speculative advice about deferring transfer for suboptimal morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, lifestyle optimization, protocol continuation, cryopreservation, and possible male-factor review, though some advice remains generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014697,
+  "judge_latency_ms": 4543.8475830014795,
+  "judge_prompt_tokens": 3244,
+  "judge_completion_tokens": 331
+}

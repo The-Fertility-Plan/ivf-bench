@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 2BA for morphology and instead stated morphology was unavailable, so it did not assess expansion, ICM, or TE despite data being present."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well, including age, BMI, endometriosis, ovarian response, sperm parameters, and endometrium, though it missed linking these to the known 2BA embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured, but it is undermined by the incorrect premise that embryo morphology was missing and by overemphasis on Day 4 atypicality despite a blastocyst grade being provided."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with routine evidence-based IVF practice, including suggesting ERA in this first transfer and adjuncts like intralipids/corticosteroids; it also mishandled standard Gardner grading information."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps on lifestyle, luteal support, and future planning, but recommendations are weakened by asking for morphology already provided and by including low-value adjunctive suggestions."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015192,
+  "judge_latency_ms": 4821.119749998616,
+  "judge_prompt_tokens": 3434,
+  "judge_completion_tokens": 326
+}

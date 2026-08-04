@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score or morphology data were available, despite explicit lab morphology showing a 3AA expanded blastocyst with strong ICM and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm, BMI, endometrium, and endometriosis reasonably well with prognosis, though it fails to incorporate the known 3AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is undermined by the major false premise that embryo morphology was unavailable, which affects the probability estimate and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A after a single failed transfer in a 26-year-old and overlooking the provided 3AA grading/day context are notable deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, counseling, cryopreservation, and future evaluation, though some advice is generic and not tailored to the known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013377,
+  "judge_latency_ms": 3903.918000003614,
+  "judge_prompt_tokens": 2939,
+  "judge_completion_tokens": 304
+}

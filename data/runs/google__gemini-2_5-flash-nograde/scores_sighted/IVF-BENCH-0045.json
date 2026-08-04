@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality from a suboptimal image, asserting a well-expanded blastocyst with visible cohesive TE and a likely 4BB/4AB/4BA grade. In the image, ICM is poorly defined, TE is not clearly assessable as numerous/uniform, and the embryo appears more difficult to confidently grade than described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, ovarian reserve, tubal factor, BMI, sperm parameters, endometrium, and first-cycle status, and relates them to prognosis. It could be stronger in acknowledging that embryo morphology uncertainty limits prognostic confidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the implantation estimate is somewhat inflated because it relies on an optimistic morphology assessment and references euploid-transfer success despite no PGT-A data. Conclusions are generally coherent but not fully supported by the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general counseling are guideline-concordant, but suggesting assisted hatching for this case is not strongly evidence-based for a first transfer in a young patient, and the probability framing is more optimistic than typical morphology-only prognostication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, counseling, and future planning. Recommendations are clinically usable, though some are generic and the assisted hatching suggestion is not especially well tailored."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015114,
+  "judge_latency_ms": 6371.057500000461,
+  "judge_prompt_tokens": 3128,
+  "judge_completion_tokens": 382
+}

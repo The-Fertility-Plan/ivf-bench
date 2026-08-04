@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as fair-poor quality (e.g., 3BC/4BC) despite the provided laboratory grade of 3AA, and it introduces questionable features such as vacuolation, debris, and irregular TE not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, PCOS/ovarian reserve, sperm, endometrium, smoking, and ectopic history, though some links to embryo quality are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but major conclusions rest on an incorrect morphology assessment, leading to a probability estimate and counseling that are not well supported by the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Some recommendations are guideline-consistent (SET, luteal support, early scan after ectopic history, smoking cessation), but strong emphasis on PGT-A and claims about PCOS/suboptimal morphology are not fully evidence-based for a 32-year-old with a 3AA embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer and future planning, including SET, luteal support, early ultrasound, and lifestyle counseling, though some actions are driven by the incorrect downgrade of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.014574,
+  "judge_latency_ms": 4178.890792005404,
+  "judge_prompt_tokens": 3213,
+  "judge_completion_tokens": 329
+}

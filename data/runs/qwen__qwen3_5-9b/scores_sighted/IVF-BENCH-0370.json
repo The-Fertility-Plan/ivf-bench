@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0370",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone, calls the embryo 'ready for hatching' despite grade 3 rather than hatching/hatched, and gives limited image-grounded detail on TE/ICM beyond the supplied grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, prior cycle, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overcalls diminished ovarian reserve and makes assumptions about this being the only viable embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling the patient a former smoker yet advising immediate smoking cessation, labeling FSH 7.3 as elevated, and giving a relatively optimistic implantation estimate despite emphasizing age-related aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several departures from evidence-based IVF guidance: overemphasis on PGT-A recommendation for a single fresh-transfer embryo, suggesting immunology/thrombophilia workup after only one failed cycle, and proposing coasting despite low yield. Some general points are aligned, but multiple recommendations are not."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete next steps such as proceeding with transfer and considering future protocol review, but several suggestions are too generic or poorly targeted to this case, and some are not well supported."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013287,
+  "judge_latency_ms": 5864.145291008754,
+  "judge_prompt_tokens": 2634,
+  "judge_completion_tokens": 359
+}

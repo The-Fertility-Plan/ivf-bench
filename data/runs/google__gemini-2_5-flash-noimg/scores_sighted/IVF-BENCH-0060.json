@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was provided and based morphology on the supplied Gardner 3AA grade. Its description of expanded blastocyst, strong ICM, and cohesive TE is consistent with the label, but it did not assess the actual image and stated thinning zona as inherent to stage 3, which is somewhat imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte maturity, endometrium, BMI, prior IVF outcomes, ectopic history, diagnosis, lifestyle, and sperm data with embryo quality in a clinically meaningful way. Minor overstatement of sperm as normal despite borderline concentration prevents a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to embryo quality and patient age while tempered by prior failures and ectopic history. Small issues include speculative claims about prior embryo quality and subtle tubal factor without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a young patient with a high-quality blastocyst, luteal support, and early monitoring after prior ectopic are guideline-concordant. However, suggestions like assisted hatching, ERA, immunologic testing, and PGT-A in a 25-year-old are more controversial or weakly supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and contingency planning if unsuccessful, including SET, early beta-hCG/ultrasound, and targeted uterine/tubal review. Some future-cycle suggestions are broad or controversial rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016257,
+  "judge_latency_ms": 5914.877874995,
+  "judge_prompt_tokens": 3449,
+  "judge_completion_tokens": 394
+}

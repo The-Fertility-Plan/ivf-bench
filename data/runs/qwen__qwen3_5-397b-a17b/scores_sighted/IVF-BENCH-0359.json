@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0359",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes key morphology: it calls the embryo a full blastocyst with thinning zona and a distinct tightly packed ICM/AA TE, but the image appears more irregular/collapsed with poorly defined ICM and nonuniform TE. It also repeats the provided grade rather than critically matching the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, diagnosis, BMI, endometrium, sperm, and cycle context reasonably well, especially emphasizing maternal age/aneuploidy versus good morphology. It misses nuance around absent AMH and overinterprets low oocyte yield as DOR from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are inconsistencies: it cites a euploidy-based calculation near 18% then adjusts to 25-35% without strong support, and it conflates implantation, clinical pregnancy, and live birth benchmarks."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: calling stage 2 a 'full blastocyst' is inconsistent with Gardner nomenclature, recommending PGT-A as highly recommended is stronger than guideline-supported individualized counseling at age 40 with low embryo numbers, and stress/cortisol claims are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future cycles, including proceeding with transfer, luteal support, and discussing future protocol options. However, some recommendations are generic and not sufficiently nuanced about individualized decision-making for PGT-A or protocol changes."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01428,
+  "judge_latency_ms": 6308.043625002028,
+  "judge_prompt_tokens": 2665,
+  "judge_completion_tokens": 419
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 2AA Gardner score: expanded blastocoel, tightly packed ICM with many cells, and cohesive TE epithelium. The description of Grade 2 expansion is correct. Minor omission: no mention of zona pellucida status (thinning/intact), which would be expected at this stage and visible in the image. Overall description is detailed and clinically appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (33), embryo quality, endometrial thickness (10mm), sperm parameters, paternal age (43), and low oocyte yield. It correctly identifies the low MII maturation rate (2/7 COCs) as a concern and links paternal age to aneuploidy risk. Minor gaps: AMH is N/A and not addressed as a missing data point that would help characterize ovarian reserve; tubal factor diagnosis is mentioned implicitly but not explicitly discussed in terms of its impact on this transfer; FSH of 6.4 is described as 'higher end of normal' which is a slight overstatement as it is well within normal range."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 25-40% is derived coherently from the baseline 60-70% for 2AA blastocysts adjusted downward for aneuploidy risk from paternal age. The conditional reasoning (if euploid vs aneuploid) is sound. Minor inconsistency: the response flags FSH 6.4 as 'higher end of normal' which is not well-supported and slightly contradicts the otherwise positive patient profile. The PGT-A recommendation is somewhat contradictory since the embryo is already being transferred on Day 5, making pre-transfer PGT-A logistically moot unless freezing is considered."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading, single embryo transfer principles, and endometrial thickness thresholds. However, the recommendation to consider PGT-A for paternal age alone (43) is not strongly supported by current ASRM/ESHRE guidelines, which do not list paternal age as a primary PGT-A indication. The suggestion to switch to long agonist protocol for poor responders somewhat contradicts current ESHRE poor responder guidelines (Bologna/POSEIDON criteria), which generally favor antagonist protocols for poor responders. Dual stimulation mention is reasonable but still considered experimental in many guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer given current conditions, discuss PGT-A, adjust stimulation protocol with concrete alternatives (agonist, higher dose, dual stimulation), and mention donor eggs as a future consideration. The lifestyle reinforcement is appropriate. The PGT-A recommendation mid-cycle is somewhat impractical if transfer is imminent, but framing it as a discussion point is reasonable. Future cycle planning is well-detailed with multiple specific options. Could be improved by specifying luteal support protocol or ERA testing given the tubal factor diagnosis."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.020001,
+  "judge_latency_ms": 14563.495708003757,
+  "judge_prompt_tokens": 2722,
+  "judge_completion_tokens": 789
+}

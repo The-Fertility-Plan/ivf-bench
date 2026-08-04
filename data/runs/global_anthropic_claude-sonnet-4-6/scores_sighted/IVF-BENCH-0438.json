@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0438",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes an expanded blastocyst with thinning zona, but it overcalls several image features as vacuoles/degeneration, debris, and collapse that are not clearly supported by the image and conflicts with the provided 3AA grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, sperm parameters, endometrium, and cycle history into prognosis reasonably well, though some effects (especially low BMI and former smoking) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is driven by speculative negative adjustments and there is tension between acknowledging a 3AA embryo and heavily downgrading it based on uncertain visual concerns."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET and hydrosalpinx evaluation are guideline-consistent, but suggestions like routine PGT-A at age 35 with a limited cohort, delaying future cycles until BMI ≥18.5, and strong claims about underweight effects are more opinionated than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer planning, hydrosalpinx review, follow-up, and future cycle considerations, though some recommendations are more extensive than necessary for this straightforward first-cycle tubal factor case."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.014031,
+  "judge_latency_ms": 4426.905000000261,
+  "judge_prompt_tokens": 2997,
+  "judge_completion_tokens": 336
+}

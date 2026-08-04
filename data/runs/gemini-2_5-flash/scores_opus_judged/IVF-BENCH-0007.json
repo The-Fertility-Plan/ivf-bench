@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies that the image shows a cleavage-stage embryo rather than a blastocyst, noting individual blastomeres, relatively uniform size, and minimal fragmentation. It appropriately identifies the discrepancy between the Gardner score (0DD) and the visual appearance. However, the response is incomplete and doesn't fully reconcile the morphological features with the provided grading data (0DD indicating degenerative ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The response is truncated and does not integrate any patient clinical factors (age 37, BMI, male factor diagnosis, previous live birth, sperm parameters, endometrial thickness, lifestyle) with the embryo assessment. The response cuts off before any clinical integration could occur."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning that is present is logical - the model correctly identifies the discrepancy between the visual appearance (cleavage-stage) and the Gardner score (0DD), and begins to reason about this inconsistency. However, the response is incomplete, so the full reasoning chain cannot be evaluated. What exists is coherent but unfinished."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The model begins to address the Gardner grading system and recognizes the Day 4 transfer context, but the response is truncated before any guideline-based recommendations or assessments could be made. The incomplete nature prevents proper alignment with ESHRE/ASRM guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is cut off before providing any actionable recommendations. There are no specific next steps, no implantation probability estimate, no transfer recommendations, and no future cycle planning advice."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.017285,
+  "judge_latency_ms": 10156.806917046197,
+  "judge_prompt_tokens": 1367,
+  "judge_completion_tokens": 418
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0313",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a very poor-quality early blastocyst with absent/degenerate ICM and TE, but it overstates some image-specific details (e.g., fragmentation, 'complete absence of a viable future fetus') and incorrectly says the blastocoel is less than half despite the provided Gardner 1 definition being at least half."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve markers, sperm quality, endometrium, and cycle history well, and relates them to prognosis; however, some interpretations (e.g., DOR inconsistency and day-4 implications) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent: very poor embryo morphology drives prognosis despite favorable patient factors. Minor issues include overconfident statements about non-viability and some speculative links to aneuploidy/abnormal timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading and the poor prognosis of a 1DD embryo, but recommending against transfer as 'ethically sound' is stronger than typical guideline-based counseling, which usually emphasizes informed shared decision-making rather than categorical discouragement."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points, discusses whether to proceed with transfer, and suggests reviewing the full embryology report and diagnosis. It is useful, though future-cycle planning is truncated and lacks some specifics."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014841,
+  "judge_latency_ms": 6237.529166988679,
+  "judge_prompt_tokens": 3077,
+  "judge_completion_tokens": 374
+}

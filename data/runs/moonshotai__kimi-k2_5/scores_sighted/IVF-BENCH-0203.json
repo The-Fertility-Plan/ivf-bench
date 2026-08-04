@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0203",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a poor-quality early blastocyst and the provided 1DD grade, with reasonable comments on absent/degenerate ICM and sparse TE. However, it incorrectly labels Gardner expansion as 'Grade 1' while describing a blastocoel occupying at least half the embryo (more consistent with stage 2), and adds speculative details such as 'early collapse' and 'appropriate thickness' of the zona that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian reserve, BMI, endometrium, prior cycle history, and semen parameters well, and relates these to prognosis. Some inferences are somewhat overstated, such as implying concern from cohort performance without full fertilization/blastulation data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor embryo morphology drives prognosis down despite favorable uterine and general clinical factors. Probability estimates are internally consistent, though a few statements are speculative and the terminology around Gardner stage is slightly inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned in recognizing poor prognosis and supporting counseling and individualized planning, but includes weaker-evidence recommendations such as routine CoQ10/DHEA, suggesting protocol change without clear indication, and a somewhat strong endorsement of PGT-A/banking that may exceed guideline-supported certainty for this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer counseling, luteal support considerations, and future-cycle planning. Some recommendations are useful and specific, though a few are more opinion-based than guideline-driven."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.015126,
+  "judge_latency_ms": 6728.163125007995,
+  "judge_prompt_tokens": 2967,
+  "judge_completion_tokens": 415
+}

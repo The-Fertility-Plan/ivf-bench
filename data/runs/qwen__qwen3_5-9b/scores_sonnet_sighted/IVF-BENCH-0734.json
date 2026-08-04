@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0734",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The model repeatedly misidentified the blastocyst image as an MII oocyte and failed to provide any meaningful morphological analysis. It never described the blastocoel cavity, ICM, trophectoderm, or zona pellucida accurately. The response was entirely circular reasoning about the image being a single cell, contradicting the visible blastocyst structure."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The model provided no clinical integration whatsoever. It became stuck in a loop questioning the image identity and never addressed patient factors such as age 34, low AMH 0.53, BMI 32.9, previous failed cycle, or how these interact with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is entirely incoherent, consisting of repetitive circular reasoning loops that never reach a conclusion. The model contradicted itself dozens of times and failed to produce any structured clinical reasoning, probability estimate, or coherent analysis of any kind."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 1,
+      "justification": "No clinical guidelines were referenced or applied. The model never discussed Gardner grading criteria, ESHRE/ASRM recommendations, or any evidence-based reproductive medicine principles. The entire response was consumed by unresolved confusion about image interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "Zero actionable recommendations were provided. No transfer recommendations, no future cycle planning, no specific next steps were offered. The response failed entirely to address the clinical questions posed, providing no practical value to a clinician."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.036096,
+  "judge_latency_ms": 8774.92766699288,
+  "judge_prompt_tokens": 10047,
+  "judge_completion_tokens": 397
+}

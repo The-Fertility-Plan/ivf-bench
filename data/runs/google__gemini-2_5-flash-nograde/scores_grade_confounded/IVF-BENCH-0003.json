@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a morula/compacting embryo despite the provided Gardner score of 2AA indicating a full blastocyst, and therefore gives incorrect stage, ICM/TE applicability, and overall morphology interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, diagnosis, ovarian response, sperm parameters, endometrium, and lifestyle, and connects them to prognosis, though it is built on an incorrect embryo-stage assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but the central logic is undermined by the incorrect premise that the embryo is a Day 4 morula rather than the documented 2AA blastocyst, leading to a probability estimate and recommendations that do not follow the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some general IVF recommendations are standard, the response conflicts with Gardner grading interpretation and bases management on an erroneous non-blastocyst classification; the suggestion of PGT-A is also somewhat overgeneralized for a 33-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It provides practical next steps such as proceeding with transfer, counseling, luteal support, and future culture considerations, but these actions are only moderately useful because they are anchored to a mistaken morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01404,
+  "judge_latency_ms": 3699.723999998241,
+  "judge_prompt_tokens": 2880,
+  "judge_completion_tokens": 360
+}

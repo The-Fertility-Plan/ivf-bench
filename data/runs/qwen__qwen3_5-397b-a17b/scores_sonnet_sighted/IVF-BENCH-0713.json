@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0713",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst expansion, thinning zona pellucida, ICM location and density, and TE cohesiveness consistent with a 3AA grade. The ICM localization using clock positions adds specificity. Minor limitation: the image is somewhat grainy and low-contrast, making definitive ICM/TE distinction challenging, yet the model confidently describes features without acknowledging image quality limitations. Overall description is well-aligned with the Gardner 3AA criteria provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates maternal age, AMH, FSH, BMI, obstetric history (biochemical pregnancy and live birth), sperm parameters, endometrial thickness, and lifestyle factors with the embryo quality assessment. It correctly contextualizes the previous biochemical pregnancy as likely an isolated chromosomal event, links the live birth to uterine receptivity confirmation, and connects maternal age to aneuploidy risk reduction. The interaction between top-grade morphology and patient age in predicting euploidy is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate (60-75% implantation, 55-65% live birth) follows coherently from the evidence presented. The aneuploidy caveat is appropriately included. Minor inconsistency: the response states BMI 25.3 is 'just on the threshold of overweight' when WHO defines overweight as ≥25.0, which is technically correct but presented as borderline when it is actually classified as overweight. The reasoning chain from evidence to recommendations is clear and consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: eSET recommendation for young patients with good-quality embryos, standard luteal support mention, vitrification of surplus embryos, and conditional PGT-A recommendation. The Gardner grading criteria are correctly applied. Minor gap: the response does not mention endometrial receptivity assessment options or discuss freeze-all vs. fresh transfer considerations, which are increasingly relevant in current guidelines. PGT-A discussion is appropriately nuanced for this age group."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET is clearly justified, lifestyle modifications are concrete (alcohol cessation, activity level), cryopreservation is advised, and PGT-A guidance is conditional and well-reasoned. Male factor follow-up with antioxidant therapy suggestion adds value. Slight limitation: luteal support recommendation lacks specificity (type, dose, duration of progesterone), and there is no mention of specific timing protocols or endometrial preparation details that would be directly actionable for the clinical team."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019173,
+  "judge_latency_ms": 16071.45912499982,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 687
+}

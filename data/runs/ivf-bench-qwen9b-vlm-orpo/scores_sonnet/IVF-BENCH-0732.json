@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable general description of blastocyst features (blastocoel, ICM, TE) but acknowledges significant limitations in image-based assessment. It appropriately defers to the lab-assigned Gardner score rather than making precise independent morphological claims. However, the description lacks specificity about expansion stage details, zona pellucida status, and precise ICM/TE characterization that would be expected from direct image analysis. The hedging is appropriate but limits the depth of morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age 33, BMI, FSH, tubal factor diagnosis, endometrial thickness, semen parameters, and lifestyle factors are all connected to prognosis. The low MII yield (2/7 COCs) is correctly flagged as a concern for cumulative success. Paternal age at 43 is appropriately contextualized. The main gap is AMH being N/A, which is not addressed as a missing data point that could inform ovarian reserve assessment alongside the low MII yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 55-70% (centered ~60%) follows logically from the favorable factors (age, morphology, endometrium) balanced against uncertainties (hydrosalpinx risk, untested embryo, limited oocyte yield). The emphasis on hydrosalpinx as a key modifier is clinically sound. Minor issue: the response slightly overemphasizes image limitations while still providing a probability range, creating mild tension, but overall the logic chain is coherent and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for a 33-year-old with good-quality blastocyst, luteal phase support, hydrosalpinx management before transfer, appropriate caution about routine PGT-A in young patients with few embryos. The Gardner grading system is correctly referenced. The discussion of sperm DNA fragmentation for older male partners and protocol optimization for low MII yield reflects current evidence-based practice. No major guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: confirm hydrosalpinx status before transfer, proceed with SET, serial beta-hCG monitoring, protocol review for low MII yield, embryo banking consideration, and partner sperm DNA fragmentation testing if indicated. Future cycle planning is well-structured with concrete steps. Minor limitation: could be more specific about trigger timing assessment or specific protocol adjustments for the low MII/COC ratio, and the vitamin D recommendation feels generic. Overall, a clinician could act on most of these recommendations directly."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.020454,
+  "judge_latency_ms": 14455.948499999067,
+  "judge_prompt_tokens": 3378,
+  "judge_completion_tokens": 688
+}

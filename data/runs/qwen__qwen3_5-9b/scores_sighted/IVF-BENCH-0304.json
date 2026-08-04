@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0304",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely restates the provided 3AA label rather than the actual image. It overcalls the blastocyst as fully expanded/ready to hatch and describes a clearly cohesive TE and tightly packed ICM that are not convincingly visible in this cropped image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior reproductive history, endometrial thickness, sperm parameters, BMI, and diagnosis reasonably well with embryo quality, though it overemphasizes paternal age and makes unsupported inferences about oocyte quality from yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: calling 7 MII oocytes low for age without reserve data, inferring excellent oocyte quality from one embryo, and overstating paternal age effects on aneuploidy. The implantation estimate is plausible but only moderately supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Proceeding with transfer and noting morphology does align broadly with IVF practice, but several statements are not guideline-consistent: 3AA is not the highest possible grade in all contexts, routine stronger luteal support because age 37 may have a shorter luteal phase is unsupported, and suggesting donor sperm to increase embryo number is inappropriate here."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer and considering PGT-A in future cycles, but recommendations are somewhat generic and include questionable suggestions (higher stimulation/freeze-all, donor sperm) that reduce clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013518,
+  "judge_latency_ms": 5246.481416994357,
+  "judge_prompt_tokens": 2526,
+  "judge_completion_tokens": 396
+}

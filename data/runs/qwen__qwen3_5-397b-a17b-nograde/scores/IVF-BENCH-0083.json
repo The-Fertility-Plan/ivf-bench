@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0083",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst assessment (around stage 3 with fair ICM/TE), but it over-interprets fine details such as vacuoles/granularity that may not be reliably visible from a single image and expresses some uncertainty between 3BB and 3BC."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, prior miscarriage, ovarian reserve markers, oocyte yield, sperm factors, endometrial thickness, and lifestyle context with embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, especially linking age-related aneuploidy to implantation potential, though some assumptions (e.g., exact euploidy rate and morphology-based deductions) are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice and Gardner-style grading, including discussion of age-related aneuploidy, PGT-A consideration, and protocol review; however, suggestions like acupuncture/stress effects and specific adjuncts are less guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for proceeding with transfer, luteal support, future protocol reassessment, PGT-A consideration, sperm DNA fragmentation testing, and counseling, though some advice remains somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012816,
+  "judge_latency_ms": 4033.131875003164,
+  "judge_prompt_tokens": 2502,
+  "judge_completion_tokens": 354
+}

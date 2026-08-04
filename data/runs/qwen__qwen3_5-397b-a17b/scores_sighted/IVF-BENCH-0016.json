@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB interpretation, correctly identifying a visible ICM and relatively loose TE, but it overstates certainty about expansion/thinning zona and calls it an expanded blastocyst on a Day 4 image where morphology appears somewhat less clear."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, BMI, prior ectopic/miscarriage, sperm quality, oocyte yield, and endometrial thickness with embryo prognosis in a clinically meaningful way, though AMH is unavailable and some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with a plausible probability estimate tied to age and embryo quality; minor issues include overemphasis on Day 4/Day 5 asynchrony and miscarriage implications from a single loss."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF principles and Gardner grading, but recommending PGT-A mainly on the basis of one miscarriage at age 32 is more debatable than guideline-driven, and the Day 4 blastocyst framing is somewhat nonstandard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, hydrosalpinx assessment, luteal support, and lifestyle modification, plus future planning considerations; however, some recommendations could be more nuanced and individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013413,
+  "judge_latency_ms": 4677.419332991121,
+  "judge_prompt_tokens": 2656,
+  "judge_completion_tokens": 363
+}

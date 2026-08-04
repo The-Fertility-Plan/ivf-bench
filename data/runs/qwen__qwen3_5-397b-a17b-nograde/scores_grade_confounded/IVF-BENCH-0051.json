@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 3AB by reclassifying the embryo as 3BB/4BB, downgrading the ICM from A to B and upgrading TE from the provided loose/few-cell TE pattern. It gives some generally plausible blastocyst descriptors, but includes uncertain/fabricated details such as cytoplasmic granularity and does not reliably match the stated morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, tubal factor, endometrial thickness, ovarian reserve, sperm quality, and prior failed cycles, and relates these to prognosis. It slightly overstates the significance of two failed cycles as RIF, but overall connects clinical context to embryo potential appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and understandable, and the probability estimate is explained. However, it is weakened by the incorrect embryo grading, labeling two failed cycles as recurrent implantation failure, and some speculative causal inferences not firmly supported by the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not strongly guideline-aligned: routine assisted hatching is not broadly recommended, immune/NK testing is not standard evidence-based RIF workup, and PGT-A is not clearly indicated in a 30-year-old solely for prior failed cycles. Some elements are appropriate, such as considering hydrosalpinx and chronic endometritis evaluation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next steps for proceeding with transfer, luteal support review, and future evaluation if unsuccessful. Although some recommendations are debatable, they are specific and clinically usable rather than generic."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013302,
+  "judge_latency_ms": 5347.616999999445,
+  "judge_prompt_tokens": 2394,
+  "judge_completion_tokens": 408
+}

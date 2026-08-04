@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the image as a zygote/early cleavage embryo, whereas the image shows a blastocyst with a blastocoel and peripheral trophectoderm. It incorrectly describes a single cell and thick dark zona, so the morphology assessment is fundamentally inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior live birth, sperm quality, BMI, and endometrial thickness, and relates them to prognosis. Some interpretations are overstated or imprecise, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is weakened by the major morphological misread and by speculative correction of the case data (assuming a Day 5 typo). Probability estimates are built on contradictory premises, though the structure is otherwise organized."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading concepts and emphasis on confirming embryo stage are appropriate, but the recommendation to alter transfer timing based on assumed data error and the high implantation estimate are not fully evidence-based. Overall mostly aligned with some deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as clarifying embryo stage, reviewing logs, proceeding with transfer if confirmed, and considering future protocol adjustment. Recommendations are useful, though partly driven by an incorrect image interpretation."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013524,
+  "judge_latency_ms": 4666.874250004184,
+  "judge_prompt_tokens": 2808,
+  "judge_completion_tokens": 340
+}

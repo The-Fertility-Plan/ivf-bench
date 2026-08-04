@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and bases morphology on the supplied Gardner 3AA grade rather than inventing image-specific details. However, it repeats an inaccurate definition of stage 3 as having a thinning zona/'readiness for hatching,' which is more characteristic of later stages, and it does not assess the actual visible image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, good ovarian response, sperm parameters, endometrial thickness, first cycle, and endometriosis, and relates them to prognosis. It misses some nuance around day-4 transfer versus true blastocyst timing and overinterprets ovarian reserve from retrieval alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis linked to embryo grade and patient age while acknowledging endometriosis as a modifier. Minor issues include an arguably optimistic implantation estimate and some overstatement of morphology-derived readiness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer in a 26-year-old with a high-grade embryo is guideline-concordant, and luteal support is standard. However, recommending ERA after one failed transfer and suggesting PGT-A in a young patient after limited failure are not strongly guideline-supported; the stage-3 blastocyst description is also not strictly aligned with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, cryopreservation, and endometriosis review. Some recommendations are somewhat generic or debatable, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.015402,
+  "judge_latency_ms": 4940.857249996043,
+  "judge_prompt_tokens": 3179,
+  "judge_completion_tokens": 391
+}

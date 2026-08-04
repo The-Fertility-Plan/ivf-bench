@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good Day 4 morula and explicitly states there is no blastocoel, contradicting the provided Gardner score 0DD (early blastocyst with degenerative/absent ICM and TE). It also fabricates favorable features such as uniform blastomeres and lack of fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors including age, AMH/FSH, oocyte yield, sperm, endometrium, smoking, and first-cycle status, and links them to prognosis, though the embryo-quality integration is undermined by the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good-quality morula rather than a very poor-quality 0DD blastocyst, leading to an implausibly optimistic implantation estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Smoking cessation and general counseling are guideline-consistent, but the interpretation of Gardner grading is incorrect, prognosis is overly favorable for a 0DD embryo, and recommending SET based on presumed good quality is not well aligned with evidence-based embryo selection."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical steps such as smoking cessation counseling, luteal support, stress reduction, diagnosis review, and future cryopreservation/PGT considerations, though some recommendations are based on the incorrect embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014373,
+  "judge_latency_ms": 3920.261125000252,
+  "judge_prompt_tokens": 2886,
+  "judge_completion_tokens": 381
+}

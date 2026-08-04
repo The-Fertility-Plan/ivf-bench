@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated no image was available, but then assumed a good/excellent blastocyst (e.g., 4AA/5AA) based on patient factors rather than morphology. That is a fabricated morphological assumption not supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young age, ovarian reserve, BMI, endometrium, unexplained infertility, sperm parameters, and first cycle status, and relates them to prognosis. It slightly overstates links between patient profile and assumed embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is built on an unsupported assumption of high-grade morphology and partly conflates favorable patient factors with embryo grade/euploidy likelihood."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a young good-prognosis patient, luteal support, cryopreservation, and reserving PGT-A for selected scenarios are broadly guideline-consistent. Mention of ERA/immunologic testing is more controversial and not routinely recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, lifestyle advice, luteal support, cryopreservation, and protocol review. Some recommendations are somewhat generic and depend on the unsupported embryo-quality assumption."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015033,
+  "judge_latency_ms": 5261.1888329993235,
+  "judge_prompt_tokens": 3206,
+  "judge_completion_tokens": 361
+}

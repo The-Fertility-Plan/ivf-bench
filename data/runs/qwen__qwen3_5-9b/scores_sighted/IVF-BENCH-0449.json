@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0449",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and notes blastocoel, ICM, TE, and zona thinning, but it overstates visible hatching/herniation from the image and gives more certainty than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, AMH/poor ovarian response, tubal factor, endometrium, and paternal age with embryo quality reasonably well, though BMI and some nuances of prognosis are underdeveloped."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Mostly logical, but there are notable inconsistencies: it recommends proceeding with transfer, then strongly recommends PGT-A, and later says to vitrify immediately if PGT-A is not performed, which conflicts with the transfer plan."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF practice, especially strong endorsement of PGT-A for a single available embryo in a 34-year-old and advising vitrification instead of transfer if PGT-A is not done."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete next steps and future considerations, but the immediate management advice is conflicting and could mislead clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012876,
+  "judge_latency_ms": 4557.129875000101,
+  "judge_prompt_tokens": 2657,
+  "judge_completion_tokens": 327
+}

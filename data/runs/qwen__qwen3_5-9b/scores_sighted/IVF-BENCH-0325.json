@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0325",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes the image does not resemble a clear expanded blastocyst, but then relies heavily on the provided 3AA text and adds unsupported statements such as calling it a polar body or degenerating oocyte. The visible morphology is not precisely characterized."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior miscarriage, endometrium, sperm data, and embryo grade reasonably well, though it overstates the impact of paternal age and makes some questionable inferences from MII yield and FSH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it labels 3AA as the highest grade, treats paternal age 45 as a major aneuploidy driver, and gives a probability estimate that is not fully supported by the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent, including proceeding with transfer and considering further male-factor workup, but the strong recommendation for PGT-A based mainly on paternal age and miscarriage history is more aggressive than guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer, counseling, future testing, and cycle planning. Recommendations are usable, though some are somewhat generic and a few are based on overstated risk assumptions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013332,
+  "judge_latency_ms": 4718.631875002757,
+  "judge_prompt_tokens": 2639,
+  "judge_completion_tokens": 361
+}

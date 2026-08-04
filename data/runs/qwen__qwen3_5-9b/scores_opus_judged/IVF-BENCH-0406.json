@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0406",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the 4AA Gardner score, describing expansion, ICM tightly packed in a specific quadrant, TE forming cohesive epithelium, and zona pellucida thinning/herniating. The descriptions are well-aligned with the laboratory data. Minor issue: the specific localization claims (e.g., 'upper right quadrant' for ICM, 'left side' for herniation) may or may not precisely match the image, but the overall characterization is accurate and thorough."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response thoughtfully connects maternal age (42) to aneuploidy risk, discusses the low oocyte yield in context of DOR, addresses endometriosis impact on implantation, considers advanced paternal age as compounding genetic risk, leverages previous live birth as a proven fertility indicator, and notes the favorable endometrial thickness. The contrast between excellent embryo morphology and challenging patient profile is well articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly logical and internally consistent. The probability estimate of 25-35% is well-derived through a transparent calculation: ~35% euploidy chance × ~60-70% euploid implantation rate = ~20-25% base, adjusted upward for favorable factors (previous live birth, excellent morphology). The note about PGT-A absence making this a 'blind' transfer is an important and coherent addition. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with guidelines but contains a notable error: FSH of 6.7 IU/L is described as 'elevated (borderline high)' indicating DOR, when in fact 6.7 IU/L is within normal range (<10 IU/L is generally considered normal by ASRM standards). The low oocyte yield is better explained by the endometriosis and age rather than FSH. The recommendation for SET is appropriate. The discussion of PGT-A consideration is relevant. The response was cut off before completing the recommendations section, which limits full assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations including proceeding with transfer and SET rationale. However, the response is clearly truncated - the recommendations section is incomplete, cutting off mid-sentence. Future cycle planning, which was explicitly requested, appears to be missing entirely. Key actionable items like PGT-A for future cycles, luteal phase support specifics, endometriosis management, and alternative strategies are not addressed due to the truncation."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.028465,
+  "judge_latency_ms": 18339.111874985974,
+  "judge_prompt_tokens": 2428,
+  "judge_completion_tokens": 653
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its description of 2BA is broadly consistent with the image/lab label, though it incorrectly equates stage 2 with a full blastocyst and adds timing implications not derivable from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, diagnosis, prior live birth, endometrium, ovarian response, and sperm motility into prognosis reasonably well. Some links are somewhat overstated, but most relevant factors are connected to embryo/transfer outlook."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: confusion around Gardner expansion staging, strong emphasis on a questionable day-4/day-5 asynchrony concern, and some overinterpretation of low oocyte yield and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but there are deviations: inaccurate Gardner stage interpretation, overstatement of endometrial-embryo asynchrony from the provided data, and recommendations such as routine DFI/PGT-A discussion and dual-route progesterone are more speculative than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps such as verifying embryo day, reviewing luteal support, considering protocol adjustment, and evaluating male factor. Some recommendations are more generic or not tightly evidence-based, but overall they are practical."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014634,
+  "judge_latency_ms": 4788.0663750111125,
+  "judge_prompt_tokens": 2933,
+  "judge_completion_tokens": 389
+}

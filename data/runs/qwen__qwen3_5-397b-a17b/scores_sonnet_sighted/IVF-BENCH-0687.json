@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3), thinning zona pellucida, ICM as tightly packed (Grade A), and TE as loose epithelium (Grade B), consistent with the Gardner 3AB score. The observation about relatively homogeneous cytoplasm without vacuolization is a reasonable positive note. Minor limitation: the image is grainy and low-contrast, making definitive ICM localization difficult, and the model appropriately acknowledges the focal plane challenge. No fabricated features, but the description relies heavily on the provided Gardner score rather than purely independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all key clinical factors: maternal age (30) vs. DOR (AMH 0.94), the 100% MII maturation rate as a quality indicator, paternal age (42) and its implications for sperm DNA fragmentation, RIF history across 3 cycles, endometrial thickness adequacy, BMI, and lifestyle factors. The interaction between high embryo quality and poor implantation history is explicitly framed as the central clinical tension, demonstrating sophisticated multi-factor reasoning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The baseline probability adjustment for RIF history and paternal age is well-justified. The final estimate of 35-45% is coherent given the modifiers applied to the 50-60% baseline. Minor issue: the response could more explicitly quantify how much each risk factor reduces probability, and the assisted hatching recommendation is slightly inconsistent given the zona is already thinning naturally (Grade 3 expansion typically means the zona is already compromised)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst in young patient, ERA for RIF workup, chronic endometritis screening, sperm DNA fragmentation testing, and PGT-A consideration with appropriate counseling about biopsy risks in low-reserve patients. The protocol switch suggestion (antagonist vs. long agonist for DOR) aligns with current evidence. Slight deviation: assisted hatching for naturally thinning zona (Grade 3) has limited evidence support in current guidelines and may be unnecessary."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and clinically actionable: immediate SET with assisted hatching consideration, sperm DNA fragmentation testing with TESE as contingency, ERA for WOI assessment, CD138 staining for chronic endometritis, thrombophilia panel, hydrosalpinx exclusion, PGT-A with explicit risk counseling for low reserve, and protocol change to antagonist/microdose flare. Each recommendation is tied to a specific clinical rationale from this case, and alternatives are considered (e.g., PGT-A benefits vs. risks given low oocyte yield)."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020403,
+  "judge_latency_ms": 16543.144000010216,
+  "judge_prompt_tokens": 3161,
+  "judge_completion_tokens": 728
+}

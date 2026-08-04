@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0541",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and acknowledges uncertainty in expansion, but it drifts from the provided 3AA label by suggesting stage 4/full blastocyst features and includes image-specific claims that may not be firmly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, prior live births, AMH, BMI, endometrium, sperm parameters, and diagnosis with embryo quality, correctly distinguishing embryo-level prognosis from ovarian reserve effects on cumulative success."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Mostly logical, but there are notable inconsistencies: it first estimates implantation at 55–70% then gives confusing lower percentage statements for implantation/clinical pregnancy/live birth, reducing internal coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: single embryo transfer, caution about morphology limits, individualized PGT-A, and reserve-focused future planning. Minor deviations include speculative comments on lining thickness and adjuvants with limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including SET, luteal support, cavity review, diagnosis reassessment, and embryo banking. Useful and case-oriented, though some suggestions remain somewhat general."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015036,
+  "judge_latency_ms": 6153.1061249552295,
+  "judge_prompt_tokens": 3312,
+  "judge_completion_tokens": 340
+}

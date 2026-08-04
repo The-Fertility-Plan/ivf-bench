@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0680",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model repeatedly misidentifies the blastocyst image as a polar body (PB1), which is a significant morphological error. While the model does eventually acknowledge uncertainty, it fails to correctly identify the blastocyst structures (ICM, TE, zona pellucida thinning) visible in the image. The model's internal deliberation is exposed in the response, showing confusion rather than expert analysis. The image actually shows a Day 5 blastocyst with visible cellular structures, not a polar body."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Despite the image misidentification, the model integrates clinical factors reasonably well: age 38 and aneuploidy risk, AMH 7.5 and high responder status, BMI 31.5 as a risk factor, excellent sperm parameters, good endometrial thickness (11mm), previous failed cycle, and high stress. The model connects these factors to prognosis and mentions fresh transfer estrogen concerns. Minor gaps include not fully exploring the tubal factor diagnosis implications or the antagonist protocol's specific relevance to this patient's AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is highly incoherent - it exposes the model's internal deliberation process with repeated contradictions and self-corrections ('Wait, let me look again'). The final conclusions are reasonable but the path to get there is disorganized and contradictory. The probability estimate (40-50%) is reasonable but the reasoning chain is muddled by the persistent image misidentification debate. The response reads as unfinished internal monologue rather than a coherent clinical assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The recommendations that do emerge (PGT-A consideration for age 38, stress management, monitoring for OHSS, considering FET) are broadly aligned with ESHRE/ASRM guidelines. The Gardner grading acknowledgment is appropriate. However, the model doesn't fully articulate guideline-based thresholds or cite specific evidence-based recommendations. The euploidy rate estimate (~50% at age 38) is reasonable but not precisely cited. The response doesn't address luteal phase support or other standard transfer protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The actionable recommendations are buried within a disorganized internal monologue and are quite generic: proceed with transfer, consider PGT-A, stress management, monitor beta-hCG. There is no specific guidance on luteal support protocols, progesterone supplementation, trigger type considerations, or specific monitoring timelines. Future cycle planning is superficial. A clinician would find limited practical value in this response due to its unstructured presentation and lack of specificity."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.040155,
+  "judge_latency_ms": 14590.647250006441,
+  "judge_prompt_tokens": 10090,
+  "judge_completion_tokens": 659
+}

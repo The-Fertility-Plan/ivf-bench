@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty about ICM/TE details and calls stage 3 'expanded' with thinning zona, which is not strictly Gardner terminology and is only partly verifiable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometriosis, protocol, sperm parameters, endometrial thickness, and ovarian response with embryo quality and prognosis; AMH is unavailable but not inappropriately inferred."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: it treats a Day 4 '3AA blastocyst' as plausible/advanced without questioning data consistency, overinterprets 100% MII as evidence of oocyte quality, and the implantation estimate may be somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on general embryo grading and favorable prognostic factors, but includes less-supported claims such as long agonist being the 'gold standard' for endometriosis in this context and suggesting aspirin/heparin despite no indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical suggestions to proceed and ensure luteal support, but recommendations are somewhat generic and incomplete, with the final section truncated and limited detail on future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.012336,
+  "judge_latency_ms": 4929.63654200139,
+  "judge_prompt_tokens": 2432,
+  "judge_completion_tokens": 336
+}

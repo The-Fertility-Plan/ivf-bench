@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a poorly developed/early blastocyst or compacting embryo with no clear ICM or cohesive TE, but it overinterprets features such as cytoplasmic blebs/apoptosis and 'failed to develop a robust structure' from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, BMI, prior outcomes, sperm parameters, and lining with embryo quality reasonably well, though some links (e.g., assuming metabolic oocyte dysfunction or protocol mismatch) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly structured and internally consistent, but there are notable leaps: calling the embryo essentially non-viable, inferring protocol inappropriateness from 8 oocytes in a natural cycle context, and recommending cancellation despite transfer day being Day 4."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are evidence-based (weight optimization, antagonist/agonist trigger consideration, sperm DNA fragmentation as a possible workup), but advising to cancel transfer solely on this morphology and giving a near-zero implantation estimate are stronger than standard guideline-supported conclusions; PGT-A suggestion in a 29-year-old with limited embryos is also not routine."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for future cycles and adjunct evaluation, but the immediate recommendation to cancel transfer is overly definitive and not sufficiently nuanced for a poor-quality Day 4 embryo scenario."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012912,
+  "judge_latency_ms": 5674.642958008917,
+  "judge_prompt_tokens": 2494,
+  "judge_completion_tokens": 362
+}

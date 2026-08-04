@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the reported 3AA grade. Its comments on expanded blastocyst, thinning zona, strong ICM and TE are broadly consistent with the metadata, but it also added unsupported image-level claims such as no fragmentation/degeneration and called 3AA the highest tier, which is not strictly precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior IVF outcomes, ectopic history, sperm concentration/motility, endometrial thickness, and diagnosis with embryo quality in a clinically meaningful way. Some links are somewhat speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a clear explanation for adjusting prognosis based on favorable embryo/patient factors versus prior failures and ectopic history. Minor issues include labeling two prior failed cycles as RIF and some overinterpretation of morphology as euploid-competent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET, luteal support, and early ectopic surveillance. However, ERA and routine PGT-A in a 25-year-old with unexplained infertility are not strongly guideline-supported, and recommending TESE based on possible SDF is somewhat aggressive."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future evaluation, including monitoring, tubal review, BMI optimization, and male-factor workup. Some recommendations are more speculative than necessary, but overall they are clear and usable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015108,
+  "judge_latency_ms": 5137.673083998379,
+  "judge_prompt_tokens": 2966,
+  "judge_completion_tokens": 414
+}

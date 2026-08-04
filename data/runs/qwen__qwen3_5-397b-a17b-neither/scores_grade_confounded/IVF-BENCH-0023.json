@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes no image was available, but it fails to use the provided Gardner grade 1DD and instead reframes the embryo as a generic Day 4 morula/early blastocyst, omitting the key poor-quality morphology implied by degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, diagnosis, prior outcomes, sperm parameters, and endometrial thickness with prognosis reasonably well, though it underuses the severe adverse significance of the 1DD grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there is a notable inconsistency between the provided Gardner 1DD blastocyst grade and the discussion of a Day 4 morula/early blastocyst, and the implantation estimate seems optimistic for such poor morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are deviations: overemphasis on ERA, strong recommendation for PGT-A in this context, and some speculative statements about stress and former smoking effects; it also mishandles the Gardner grading context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for transfer support and future planning, including hydrosalpinx evaluation and sperm DNA fragmentation testing, though some recommendations are more speculative than essential."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01269,
+  "judge_latency_ms": 4207.955082994886,
+  "judge_prompt_tokens": 2495,
+  "judge_completion_tokens": 347
+}

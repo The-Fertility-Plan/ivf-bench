@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image/Gardner score was available to it and therefore did not fabricate embryo morphology. It appropriately declined morphological grading rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, maturity rate, prior failed cycle, sperm parameters, endometrium, BMI, and lifestyle into prognosis well. Some links to embryo-specific quality were necessarily limited by absent morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability ranges tied to embryo-quality tiers and case-specific modifiers. Minor issues include somewhat speculative emphasis on the low MII rate and broad probability adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (SET, luteal support, confirm grading), but recommendations such as ERA after limited failure, thrombophilia/immunologic testing, and strongly recommending PGT-A at age 35+ are more aggressive than standard guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and contingency planning for future cycles. Slightly reduced because some suggested investigations are not well-prioritized and may not be indicated after only one failed cycle."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013689,
+  "judge_latency_ms": 4643.965290990309,
+  "judge_prompt_tokens": 2978,
+  "judge_completion_tokens": 317
+}

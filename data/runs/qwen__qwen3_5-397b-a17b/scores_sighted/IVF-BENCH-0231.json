@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0231",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: the image does not clearly show a large blastocoel, obvious expansion with thinning zona, or a uniformly cohesive TE. The ICM-like cluster is visible, but the morphology description relies heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, endometrial thickness, male factor context, and embryo grade into prognosis reasonably well, though some claims are somewhat overstated and not all interactions are nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it calls grade 3 an expanded blastocyst, infers strong image-quality support for 3AA despite limited visual clarity, and gives a confident probability estimate based partly on overstated morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general counseling are guideline-consistent, but ERA after a single failed transfer is not strongly evidence-based, and PGT-A is presented somewhat too readily for a 32-year-old without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, alcohol cessation, and possible further workup, though some recommendations would benefit from stronger prioritization and evidence-based caveats."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013335,
+  "judge_latency_ms": 5594.260584010044,
+  "judge_prompt_tokens": 2660,
+  "judge_completion_tokens": 357
+}

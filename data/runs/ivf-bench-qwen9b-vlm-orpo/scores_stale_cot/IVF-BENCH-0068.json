@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies an expanded blastocyst with thinning zona and gives plausible ICM/TE comments, but it overinterprets a single static image, questions the reported 3BA without strong basis, and mentions features like granularity/unevenness that may not be reliably assessable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, semen parameters, endometrial thickness, uterine factor, smoking, and first-cycle status well, though the uterine-factor discussion is somewhat generic because the specific pathology is not defined."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is reasonable, but there are inconsistencies in probability framing and some drift between implantation, clinical pregnancy, and live birth estimates; the morphology critique also does not fully align with the confidence of later conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: single embryo transfer at age 33, no routine PGT-A in a first cycle, smoking cessation, and uterine cavity reassessment if failure occurs. Minor overreach includes broad testing suggestions after a single failed transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle optimization, and future uterine evaluation with specific modalities like SIS and hysteroscopy, though some recommendations are broad rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.018339,
+  "judge_latency_ms": 7335.832917015068,
+  "judge_prompt_tokens": 4323,
+  "judge_completion_tokens": 358
+}

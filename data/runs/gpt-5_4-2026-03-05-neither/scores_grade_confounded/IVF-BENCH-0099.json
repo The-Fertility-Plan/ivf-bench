@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided, despite the case explicitly giving a 3AA grade. It therefore fails to analyze the known morphology (expanded blastocyst with AA ICM/TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, male factor, prior outcomes, endometrium, and lifestyle risks, though it misses linking these to the known high-quality 3AA embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the false premise that embryo morphology is unknown, which affects downstream conclusions and probability framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: single embryo transfer at age 31, smoking/alcohol cessation, no bed rest, individualized PGT-A, and review of stimulation/lab factors if needed. Minor limitation is failure to apply Gardner grading already provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, lifestyle modification, luteal support, cavity review, male factor reassessment, and cycle optimization. It is useful but less tailored than it could be because it ignores the known 3AA grade."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013059,
+  "judge_latency_ms": 3968.0715830036206,
+  "judge_prompt_tokens": 2603,
+  "judge_completion_tokens": 350
+}

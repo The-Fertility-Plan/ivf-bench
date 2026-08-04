@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The case provided a Gardner score of 4AA, but the model incorrectly stated no Gardner grade was available and did not analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, cycle history, and semen parameters well, though it fails to connect these to the known 4AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, but it is weakened by overlooking the provided embryo grade, which should have narrowed the prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support adherence, and cautious use of PGT-A are broadly guideline-consistent, with only minor limitations from not using the provided morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle review, though embryo-specific recommendations are less precise because it ignored the available 4AA grade."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013506,
+  "judge_latency_ms": 2994.4622080001864,
+  "judge_prompt_tokens": 3182,
+  "judge_completion_tokens": 264
+}

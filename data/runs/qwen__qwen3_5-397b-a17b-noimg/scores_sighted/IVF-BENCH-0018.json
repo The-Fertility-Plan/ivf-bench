@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 2BB grade. Its ICM/TE descriptions match the textual Gardner data, but it incorrectly equated stage 2 with a full blastocyst and did not assess visible image features such as poor expansion/collapse or zona details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian reserve, oocyte maturity, endometrial thickness, BMI, smoking, prior cycle history, and semen parameters with embryo quality and prognosis. Some links are somewhat overstated, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it misinterprets the Gardner expansion stage, treats Day 4 blastocyst timing as unusually accelerated without sufficient nuance, and gives a fairly aggressive probability reduction for smoking/BMI that is not clearly evidence-calibrated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based (single embryo viability, smoking cessation, BMI optimization), but there are deviations: stage 2 grading is misdefined, recommendation for 'aggressive' combined-route luteal support is not standard from the data given, and routine PGT-A suggestion at age 33 after one failure is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, lifestyle modification, future-cycle optimization, and possible further testing. Some recommendations are more speculative than necessary, but overall they are clear and usable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01503,
+  "judge_latency_ms": 4978.327000004356,
+  "judge_prompt_tokens": 2980,
+  "judge_completion_tokens": 406
+}

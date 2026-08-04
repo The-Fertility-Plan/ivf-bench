@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 4BB blastocyst and correctly notes loose ICM/TE, but it overstates visible hatching details and describes thinning/stretching and a distinct herniation not clearly evident in this cropped image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, prior cycle, and sperm data with embryo quality reasonably well, though BMI and some nuances of male factor and prior cycle context are underdeveloped."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally logical, but the implantation estimate is not well calibrated: citing a low base rate for a 4BB blastocyst and then asserting very high euploidy (>90%) creates some inconsistency with the final range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Uses Gardner terminology appropriately and gives broadly acceptable transfer advice, but the statement that grade 4 equals hatching is inaccurate (grade 4 is expanded, grade 5 is hatching), and some prognostic claims are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides only a limited practical recommendation ('proceed with transfer') and does not meaningfully address future cycle planning, adjunct evaluation, or specific next-step contingencies."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.011541,
+  "judge_latency_ms": 4712.829708005302,
+  "judge_prompt_tokens": 2262,
+  "judge_completion_tokens": 317
+}

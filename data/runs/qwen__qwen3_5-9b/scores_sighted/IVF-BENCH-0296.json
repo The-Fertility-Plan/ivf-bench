@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0296",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided 3AA label and overstates visible features; the image does not clearly show a large blastocoel occupying most of the embryo, a distinctly identifiable tightly packed ICM, or clearly cohesive TE. Calling it 'morphologically perfect' is not supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, endometriosis, ovarian reserve, sperm parameters, and endometrial thickness with prognosis reasonably well, though it overemphasizes paternal age and labels AMH/yield as diminished/low somewhat strongly for this case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: paternal age is treated as the primary determinant over maternal age, morphology-based success is overstated, and some conclusions (e.g., donor gametes after one failed cycle) are not well supported by the presented data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several departures from evidence-based IVF counseling: mischaracterizes Gardner stage 3 as 'expanded,' overstates paternal-age-driven aneuploidy risk, suggests weight loss during the luteal phase for receptivity, and recommends donor eggs/sperm prematurely after a first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as proceeding with transfer and counseling about PGT-A and lifestyle optimization, but several recommendations are too strong or insufficiently nuanced for this specific first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013692,
+  "judge_latency_ms": 5587.217958003748,
+  "judge_prompt_tokens": 2634,
+  "judge_completion_tokens": 386
+}

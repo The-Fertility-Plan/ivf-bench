@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not assign a specific grade. However, it speculated about expected morphology (e.g., likely 3-5 expansion, A/B ICM/TE), which is not image-based. It avoided clear false claims, so accuracy is moderate rather than poor."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, endometrial thickness, prior failed cycles, and sperm data into prognosis reasonably well. It connects these factors to embryo competence and implantation potential, though some assumptions about male factor etiology and RIF are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from favorable age/endometrium to prognosis and prior failures to a more conservative estimate. Minor issues include speculative deductions about hidden sperm pathology and somewhat assertive framing of recurrent implantation failure after two failed cycles."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice (SET, luteal support, uterine evaluation if repeated failure). However, recommending assisted hatching and especially PGT-A as indicated in a 26-year-old after two failed cycles is more aggressive than guideline-based evidence supports; ERA/immunologic testing are also controversial."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and contingency planning, including SET, progesterone support, sperm DNA fragmentation testing, and uterine evaluation. Some recommendations are useful but a few are not sufficiently evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014892,
+  "judge_latency_ms": 5678.636791999452,
+  "judge_prompt_tokens": 2934,
+  "judge_completion_tokens": 406
+}

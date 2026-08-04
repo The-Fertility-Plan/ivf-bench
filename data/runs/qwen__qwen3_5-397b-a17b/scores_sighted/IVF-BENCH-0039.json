@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image certainty and describes features not clearly supported by the image, including a clearly defined blastocoel, thinning zona, and a distinct dense ICM at a specific clock position. Given the image quality, morphology is less confidently visualized than stated, though the TE being relatively sparse is broadly consistent with the provided 3AB label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior live birth, BMI, endometrial thickness, ovarian response, and sperm parameters well with prognosis, though some claims are somewhat overstated and it assumes likely extra embryos/frozen embryos without data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking embryo grade and favorable patient factors to a good prognosis. Minor issues include calling 3AB both good and 'top-tier' and assigning a relatively high confidence despite uncertain image morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young patient with a good-quality day-5 blastocyst, standard luteal support, and no routine need for PGT-A at age 28. Small deviations include overemphasis on endometrial thickness as 'ideal' and somewhat strong statements about euploidy probability."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps including SET, luteal support, alcohol reduction/cessation, weight counseling for future cycles, and conditional PGT-A discussion. It is useful clinically, though not highly nuanced regarding transfer protocol details or contingency planning after failure."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013902,
+  "judge_latency_ms": 5979.3480840016855,
+  "judge_prompt_tokens": 2589,
+  "judge_completion_tokens": 409
+}

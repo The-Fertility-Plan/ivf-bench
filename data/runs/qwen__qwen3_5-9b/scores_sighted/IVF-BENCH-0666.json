@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AA label, but it overstates expansion as 'fully formed/expanded' and 'large cavity' when the image appears more like a full but not expanded blastocyst with somewhat limited cavity prominence; TE and ICM descriptions are broadly reasonable but not image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, sperm parameters, endometrium, and cycle history with embryo quality in a clinically meaningful way, though it overinterprets AMH as diminished reserve and does not discuss diagnosis or uncertainty around BMI effects in detail."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a clear link from embryo quality and patient factors to prognosis; minor issues include somewhat inflated baseline implantation assumptions for a 2AA/2AA-labeled embryo and attributing lower AMH directly to transfer prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age, endometrial thickness, and obesity counseling, but includes weaker-evidence suggestions such as PGT-A based on obesity/AMH and implies stress/cortisol effects on implantation more strongly than guidelines support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, lifestyle counseling, and future metabolic evaluation, though recommendations are somewhat generic and could be more specific about transfer protocol checks and contingency planning."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013485,
+  "judge_latency_ms": 5841.988999993191,
+  "judge_prompt_tokens": 2590,
+  "judge_completion_tokens": 381
+}

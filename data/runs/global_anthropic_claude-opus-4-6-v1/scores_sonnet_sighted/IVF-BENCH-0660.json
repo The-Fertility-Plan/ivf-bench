@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0660",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinned zona pellucida, identifies the ICM as a compact cluster in the lower-left quadrant, and describes the TE as a cohesive epithelial layer. The description is consistent with the image. Minor limitation: the image actually shows some irregularity in the TE and the ICM appears somewhat granular/darker than a pristine AA grade, which the model doesn't critically interrogate despite the Gardner score being provided rather than independently derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects AMH, age, prior cycle outcomes, sperm parameters, endometrial thickness, lifestyle factors, and diagnosis to the embryo quality assessment. It correctly identifies the paradox of a high-quality embryo in a challenging clinical context, addresses the natural cycle protocol appropriateness for DOR, and links the biochemical pregnancy history to implantation capacity. The interaction between alcohol use and endometrial receptivity is specifically addressed with literature references."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimation follows a transparent, stepwise adjustment methodology starting from published benchmarks and applying multiplicative adjustments for each risk factor. The reasoning is internally consistent throughout - the final 18-28% estimate logically follows from the adjustments applied. The distinction between clinical pregnancy and biochemical pregnancy probability is appropriately made. The conditional probability estimate (35-45% if euploid and alcohol-free) is coherent and well-reasoned."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: appropriate Gardner grading criteria applied, Bologna criteria cited for DOR classification, RIF definition provided, ERA recommendation for displaced window of implantation, CD138 staining for chronic endometritis, PGT-A recommendation with appropriate caveats for low yield, thrombophilia screening panel is standard, low-dose aspirin recommendation is evidence-based for RIF. Luteal support protocol is appropriate for natural cycle. CoQ10 and DHEA supplementation recommendations are consistent with current evidence for DOR."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific drug names, doses, and timing (progesterone 200mg TID, aspirin 81mg, CoQ10 600mg/d). Recommendations are organized by immediate transfer, post-failure planning, and long-term monitoring. The table format for lifestyle interventions includes specific targets and timelines. The workup recommendations are specific (antiphospholipid panel components named, Factor V Leiden, ERA testing). Future cycle modifications are nuanced with rationale. Donor oocyte counseling is appropriately included with sensitivity."
+    }
+  ],
+  "extracted_probability": 0.22,
+  "judge_cost_usd": 0.025446,
+  "judge_latency_ms": 15500.45725000382,
+  "judge_prompt_tokens": 5147,
+  "judge_completion_tokens": 667
+}

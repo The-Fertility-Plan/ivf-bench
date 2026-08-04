@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates expansion as a fully expanded blastocyst with a large blastocoel and thinning zona, which is not well supported by the image or by Gardner 2 (early blastocyst). ICM and TE are described in broadly plausible terms, but several visible features are inferred too confidently."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, endometrium, BMI, smoking, and tubal factor reasonably well with embryo prognosis, though it overinterprets AMH/MII as implying oocyte quality and does not fully address the day-4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it equates Gardner 2 with a fully expanded blastocyst, treats the image as clearly blastocyst-stage despite the day-4 context, and gives quantitative probability deductions without clear evidentiary basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on smoking cessation, BMI, and embryo grading is aligned with IVF practice, but the grading interpretation is inaccurate, and recommending PGT-A after a single failed cycle at age 33 is more debatable than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, especially clarifying transfer timing and addressing modifiable lifestyle factors, though some suggestions are generic and not tightly tailored to this specific embryo-stage ambiguity."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013263,
+  "judge_latency_ms": 4883.728834000067,
+  "judge_prompt_tokens": 2626,
+  "judge_completion_tokens": 359
+}

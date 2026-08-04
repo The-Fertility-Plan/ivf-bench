@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoele with thinned zona (grade 3), dense compact ICM (A), and cohesive TE epithelium (A). Additional observations about cytoplasmic granularity and vacuolization add clinical depth, though these image-specific claims cannot be fully verified and may represent over-interpretation. The borderline 3-4 expansion note is reasonable. Overall description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 37 with aneuploidy risk quantification, FSH and oocyte yield for ovarian reserve assessment, endometrial thickness flagged as supraphysiologic with differential considerations, sperm parameters analyzed against WHO thresholds, BMI noted as favorable, smoking and lifestyle factors connected to implantation outcomes, and first-cycle status acknowledged. The interaction between embryo quality and patient factors is explicitly modeled in the probability estimate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The sequential probability modifier model is transparent and logically structured, with each factor reducing the base rate in a documented way. The final 22-35% estimate follows coherently from the modifiers applied. Minor issue: the 'No PGT-A' modifier is somewhat circular since PGT-A is a diagnostic tool rather than a patient risk factor per se, and applying it as a downward modifier conflates unknown ploidy status with confirmed aneuploidy. Otherwise reasoning is consistent and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: PGT-A recommendation for age 37, smoking cessation as priority intervention, luteal phase support, ERA consideration, and hysteroscopy for endometrial concerns. The endometrial thickness concern at 16.5mm is evidence-based. The euploid rate estimate of 50-55% per blastocyst at age 37 is consistent with published data. Minor deviation: the 'optimal' endometrial thickness range cited as 7-12mm is somewhat conservative; many guidelines accept up to 14mm without concern, and evidence on >14mm is mixed rather than clearly negative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practically structured: pre-transfer checklist with concrete steps, prioritized lifestyle interventions with timelines and evidence levels, a detailed diagnostic workup pathway if transfer fails, protocol adjustment suggestions, and urgent counseling about egg freezing given age. The summary dashboard provides a quick-reference clinical tool. Recommendations are appropriately nuanced with alternatives considered (ERA, SIS, DFI testing) and urgency is clearly communicated."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.02088,
+  "judge_latency_ms": 14923.831000000064,
+  "judge_prompt_tokens": 3555,
+  "judge_completion_tokens": 681
+}

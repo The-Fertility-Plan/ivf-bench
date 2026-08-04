@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response is cautious but includes speculative features not reliably inferable from a single embryo image, such as vacuolation, cellular debris/fragmentation, and a fair-poor BC grade estimate. Morphology description is generic rather than image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, sperm quality, endometrium, smoking, and prior ectopic history with embryo prognosis in a clinically meaningful way, though some links (e.g., PCOS to aneuploidy/suboptimal quality) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: poorer presumed morphology plus smoking lowers implantation despite favorable age and reserve. Minor issues include confidence in a low morphology grade despite acknowledged image limitations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly IVF-consistent (SET, luteal support, early scan after ectopic, smoking cessation), but strong endorsement of PGT-A for a 32-year-old based mainly on morphology/PCOS is not clearly guideline-based, and some statements about PCOS and aneuploidy are not well aligned with evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, early ultrasound, smoking cessation, and review of tubal factors. Recommendations are useful, though some are somewhat generic and PGT-A advice is stronger than necessary."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.01533,
+  "judge_latency_ms": 4826.5346250045695,
+  "judge_prompt_tokens": 3185,
+  "judge_completion_tokens": 385
+}

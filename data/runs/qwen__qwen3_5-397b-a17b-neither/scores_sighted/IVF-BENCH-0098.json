@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating specific embryo morphology. It only gave generic blastocyst grading criteria and inferred Day 5 blastocyst status, so there are no major inaccuracies but also no actual image-based analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, BMI, PCOS diagnosis, prior live birth/miscarriage/ectopic history, endometrial thickness, and paternal age/semen data into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to stated favorable and unfavorable factors. Minor issues include somewhat arbitrary percentage adjustments and overinterpretation of the AMH-PCOS mismatch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but some recommendations are not strongly guideline-driven or are overstated, such as routine 'aggressive' dual-route progesterone, TESE based on SDF concerns alone, and thrombophilia/immunologic screening after a single miscarriage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer monitoring and future planning, including early ultrasound for ectopic risk, lifestyle modification, and discussion of SDF/PGT-A. Some recommendations would benefit from more nuance and prioritization."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014586,
+  "judge_latency_ms": 4843.890459000249,
+  "judge_prompt_tokens": 3032,
+  "judge_completion_tokens": 366
+}

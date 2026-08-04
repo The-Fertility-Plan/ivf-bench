@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable blastocyst description, but it overstates certainty about ICM location/quality from the image and introduces a grading discrepancy by reclassifying 2AB as 3/4AB without firm visual basis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, prior miscarriage, sperm parameters, and endometrium well with embryo assessment, though some claims about tubal factor implying better egg quality/euploidy are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and probability estimate is tied to morphology and age-related aneuploidy risk, but there are minor inconsistencies such as calling TE both B and 'few cells forming a loose epithelium' and the unsupported upgrade in expansion stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with IVF practice in recommending transfer and counseling about age-related aneuploidy, but it misstates Gardner grading details and is somewhat too strong in recommending PGT-A and claiming ~60% implantation with euploid embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including counseling and consideration of PGT-A/embryo banking, though recommendations could be more nuanced and individualized."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013185,
+  "judge_latency_ms": 5094.60716600006,
+  "judge_prompt_tokens": 2740,
+  "judge_completion_tokens": 331
+}

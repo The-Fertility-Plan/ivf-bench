@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0263",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: the image does not clearly show a large blastocoel occupying most of the embryo, active hatching, or clear robust ICM/TE detail. It relies heavily on the provided 3AA label rather than the actual image and describes features not well supported visually."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, sperm parameters, endometrium, and infertility diagnosis reasonably well with embryo quality, though it somewhat overinterprets AMH as implying egg quality and does not deeply discuss tubal factor relevance beyond prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, especially around morphology versus age-related aneuploidy risk. Minor issues include overstating 3AA as the highest grade/top 10% and some unsupported morphology claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are notable deviations: calling 3AA the highest morphological grade is incorrect, suggesting morphology predicts euploidy strongly is overstated, and recommending PGT-A as 'strong' based mainly on age 37 is more assertive than guideline-based individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for proceeding with transfer, lifestyle counseling, and discussing PGT-A/FET strategy. However, recommendations remain somewhat generic and omit some transfer-specific clinical details such as single embryo transfer emphasis or luteal support considerations."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013323,
+  "judge_latency_ms": 5048.839667011634,
+  "judge_prompt_tokens": 2581,
+  "judge_completion_tokens": 372
+}

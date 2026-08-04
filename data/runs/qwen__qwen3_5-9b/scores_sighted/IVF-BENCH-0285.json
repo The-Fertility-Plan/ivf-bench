@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0285",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image certainty and mislabels expansion, calling it grade 3 while describing stage 4 features. It claims a distinct central ICM and clearly visible cohesive TE ring, which are not well visualized in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior outcomes, male factor, sperm parameters, and endometrial thickness with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable inconsistencies: 3AA is incorrectly called the highest grade, expansion staging is confused, and the image-based confidence is stronger than warranted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly standard, but there are deviations from accepted practice: morphology is overstated as predictive of euploidy, PGT-A is suggested somewhat aggressively for a 33-year-old, and immunologic workup is not routinely guideline-supported after this history alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, uterine cavity evaluation if unsuccessful, and consideration of sperm DNA fragmentation testing, though some recommendations could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012714,
+  "judge_latency_ms": 4347.703999999794,
+  "judge_prompt_tokens": 2548,
+  "judge_completion_tokens": 338
+}

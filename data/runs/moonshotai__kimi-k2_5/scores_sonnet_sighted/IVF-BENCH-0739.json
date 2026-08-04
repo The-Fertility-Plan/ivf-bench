@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst with zona pellucida breach, describes the ICM as compact and tightly packed, and notes cohesive trophectoderm. The description of the herniating portion and zona thinning aligns well with the image. Minor issue: the response conflates grade 4 and 5 descriptions ('4AA/5AA') when the lab data specifies 4AA, and some described features like 'no significant fragmentation or vacuolization' are stated with more certainty than the grayscale image allows. Overall accurate with good detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all clinical factors. The response systematically connects BMI impact on endometrial receptivity, AMH implications for embryo preciousness, paternal age and sperm motility to DNA fragmentation risk, previous miscarriage to aneuploidy probability, and endometrial thickness to implantation potential. The table format clearly maps each factor to prognostic impact, and the 'central paradox' framing effectively captures the tension between excellent embryo morphology and moderate-risk patient profile."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimate is well-derived with explicit adjustments from a base rate, each modifier justified with mechanistic reasoning. The euploidy-weighted probability calculation (45-50% aneuploidy chance × <5% implantation if aneuploid + euploid rate × 65-70%) is transparent and internally consistent. Comparisons to different patient profiles anchor the estimate. Conclusions about PGT-A, SDF testing, and weight management all follow logically from the identified risk factors. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation, PGT-A suggestion for recurrent loss with advanced age, SDF testing for male factor with miscarriage history, RPL workup after failed IVF, and ERA consideration after repeated failure. Progesterone dosing recommendation is reasonable. Minor concerns: growth hormone supplementation is noted as controversial but still suggested without stronger evidence qualification; LMWH recommendation without confirmed thrombophilia is somewhat aggressive and not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations organized by clinical scenario (this transfer, if fails, future cycles, if succeeds). Includes specific progesterone dosing, aspirin dose, TSH threshold, SDF cutoff values, weight loss targets, and specific tests to order. The tiered approach (proceed now, but prepare contingencies) is clinically useful. Recommendations for sperm selection techniques, dual trigger consideration, and ERA timing are appropriately nuanced and scenario-specific."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.02145,
+  "judge_latency_ms": 17306.49191699922,
+  "judge_prompt_tokens": 3730,
+  "judge_completion_tokens": 684
+}

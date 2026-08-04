@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a compacted Day 4 morula with no blastocoel, whereas the provided laboratory grading is 1DD, indicating an early blastocyst with very poor/degenerative ICM and TE. It also describes reassuring features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key patient factors well, including young age, tubal factor diagnosis, ovarian reserve markers, endometrial thickness, sperm parameters, and cycle history, and relates them to prognosis, though the embryo-quality integration is weakened by the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but major conclusions rest on an incorrect embryo-stage interpretation. It calls the embryo morphologically normal/on schedule despite the 1DD grade indicating very poor embryo quality, making the implantation estimate overly optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response conflicts with Gardner grading by denying blastocyst formation despite a 1DD score and underemphasizes the poor prognosis associated with DD-quality ICM/TE. Some general recommendations are reasonable, but overall alignment with embryo grading standards is weak."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical suggestions such as proceeding with transfer, luteal support, considering blastocyst culture, and reviewing stimulation, but these recommendations are only moderately useful because they are based on a mistaken assessment of embryo quality and lack nuance about the poor-grade blastocyst."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012468,
+  "judge_latency_ms": 4857.281124997826,
+  "judge_prompt_tokens": 2216,
+  "judge_completion_tokens": 388
+}

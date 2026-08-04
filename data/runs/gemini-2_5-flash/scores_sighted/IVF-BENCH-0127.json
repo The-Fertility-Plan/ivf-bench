@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0127",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the ICM is not crisply defined, TE cohesion/uniformity is harder to confirm, and calling the zona 'significantly thinned' and the embryo 'ready for hatching' is somewhat stronger than what is clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Integrates embryo grade with maternal age, prior IVF outcomes, BMI, male factor, paternal age, endometrial thickness, ovarian response, and lifestyle factors, and explains how these modify prognosis despite good morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with an implantation estimate appropriately tempered by age, prior miscarriage/failure, and BMI; minor issue is some overconfidence in morphology-based conclusions from a single image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading concepts and standard IVF practice such as SET, luteal support, uterine evaluation, and counseling on modifiable risks. Slight downgrade because recommendations like routine thrombophilia/immune testing and strong endorsement of PGT-A are more selective/controversial than universal guideline-based steps."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including counseling, monitoring, uterine assessment, endocrine checks, and sperm DNA fragmentation consideration. Some suggestions are broad or not prioritized by likelihood/yield."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016248,
+  "judge_latency_ms": 5535.692916993867,
+  "judge_prompt_tokens": 3496,
+  "judge_completion_tokens": 384
+}

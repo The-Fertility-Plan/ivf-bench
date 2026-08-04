@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with very poor/absent ICM and TE, but it misstates the expansion stage by calling grade 1 'expanded'; Gardner 1 is an early blastocyst with blastocoel at least half the embryo, not expanded. It also adds confident detail about cavity size and cell organization that is only partly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior IVF failures, ectopic history, endometrial thickness, and sperm parameters into prognosis reasonably well. Minor issues include overstating FSH as elevated and implying recurrent implantation failure without nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor morphology plus adverse history leads to low implantation potential despite a favorable lining. There are minor inconsistencies, especially the incorrect interpretation of expansion grade and some overreach linking morphology directly to aneuploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are notable deviations: incorrect Gardner stage terminology, overly strong endorsement of PGT-A in a low-reserve patient with few embryos, and somewhat simplistic suggestions about endometriosis surgery/freeze-all without sufficient case-specific nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, post-transfer monitoring, and future planning. However, recommendations could be more nuanced regarding whether to transfer versus discard, ectopic surveillance, and individualized strategy in low-yield cycles."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013737,
+  "judge_latency_ms": 5756.505249999464,
+  "judge_prompt_tokens": 2564,
+  "judge_completion_tokens": 403
+}

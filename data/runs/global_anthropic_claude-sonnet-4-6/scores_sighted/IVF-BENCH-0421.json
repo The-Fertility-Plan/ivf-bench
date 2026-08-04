@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 1DD, but it misstates expansion as <50% despite the provided Gardner score indicating blastocoel at least half the embryo, and it adds features like vacuolization/thickened zona that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, sperm parameters, diagnosis, and endometrial thickness well, and relates these to prognosis, though some links (e.g., stress effects, labeling recurrent poor embryo quality from limited data) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally consistent, with prognosis driven mainly by the poor embryo grade and moderated by favorable age/endometrium; however, the quantitative probability adjustments appear somewhat heuristic and not fully evidence-grounded."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core points such as counseling and proceeding with transfer if no better embryo exists are reasonable, but recommendations like ERA after limited failures, aspirin, thrombophilia/immunologic testing, and strong endorsement of DHEA/GH are not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for counseling, transfer management, and future cycle planning, but some suggested interventions are more speculative than standard and would need stronger qualification."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.016326,
+  "judge_latency_ms": 5619.93241700111,
+  "judge_prompt_tokens": 3562,
+  "judge_completion_tokens": 376
+}

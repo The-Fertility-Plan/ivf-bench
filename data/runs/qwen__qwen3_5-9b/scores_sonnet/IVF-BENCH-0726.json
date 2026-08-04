@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BA Gardner score: expanded blastocyst with thinned zona, loosely grouped ICM in upper-left quadrant, and cohesive TE epithelium. The description aligns well with the grading criteria. Minor limitation is that it doesn't provide more granular detail about cell count estimates or specific zona thickness observations, but overall the description is accurate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors effectively: female age (35), BMI (33.6), endometrial thickness (15mm), paternal age (44), sperm parameters, and low oocyte yield. It connects these factors to implantation probability and embryo quality. However, it somewhat overemphasizes paternal age as the dominant aneuploidy risk factor while underweighting the female age contribution at 35, and AMH being N/A is not adequately addressed as a significant data gap for ovarian reserve assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but contains some inconsistencies. The model estimates 50-60% euploidy chance due to paternal age, but paternal age contribution to aneuploidy is actually modest compared to maternal age - the primary driver of aneuploidy is maternal age, not paternal. The FSH of 6.8 IU/L is described as 'on the higher end of normal' which is a mild overstatement. The final probability estimate of 15-25% live birth is reasonable but the mathematical pathway to get there contains flawed intermediate assumptions about paternal aneuploidy contribution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines regarding blastocyst grading, PGT-A counseling, and endometrial thickness thresholds. However, it significantly overstates paternal age (44) as an aneuploidy risk factor - current evidence and guidelines indicate maternal age is the primary driver of embryo aneuploidy, with paternal age having a much smaller effect. The recommendation to consider donor sperm due to male age of 44 is not well-supported by current guidelines. The stimulation protocol suggestions lack specificity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are generally specific and practical: proceeding with transfer, PGT-A counseling, lifestyle modification with BMI target, stimulation protocol adjustment, and donor gamete discussion as future options. The response provides clear next steps for both current and future cycles. It could be improved by specifying luteal phase support protocols, discussing freeze-all strategy considerations, or providing more specific stimulation dose recommendations, but overall offers clinically useful guidance."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.018177,
+  "judge_latency_ms": 12672.39162500482,
+  "judge_prompt_tokens": 2689,
+  "judge_completion_tokens": 674
+}

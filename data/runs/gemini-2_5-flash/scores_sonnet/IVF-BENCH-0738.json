@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst features consistent with the Gardner 2AA score (expansion, ICM cohesiveness, TE uniformity) but largely echoes the provided laboratory data rather than independently analyzing the image. The description acknowledges limitations in assessing the 2D image, and notes zona pellucida integrity without thickness assessment. No fabricated features, but limited independent morphological insight beyond what was given in the lab data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most clinical factors well: age-related aneuploidy risk, BMI implications for endometrial receptivity, FSH/oocyte yield as ovarian reserve proxies, sperm parameters, endometrial thickness, and lifestyle factors. The uterine factor diagnosis is correctly identified as the dominant clinical concern. Minor gap: the interaction between underweight BMI and potential hormonal/endometrial effects could be explored more deeply, and AMH absence is noted but not fully contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and consistent. The probability range of 50-65% is appropriately justified by embryo quality, endometrial thickness, and age, with the uterine factor correctly identified as the primary uncertainty modifier. The caveat about the uterine factor potentially lowering probability below the stated range is coherent. Minor issue: the 50-65% range is somewhat optimistic for a 2AA (not top-grade 3AA/4AA/5AA) blastocyst without PGT-A confirmation, but the reasoning chain itself is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst, luteal phase support, hysteroscopy for uterine factor evaluation, consideration of PGT-A at age 35, and ERA for recurrent implantation failure. The suggestion to optimize BMI aligns with evidence-based preconception care. PGT-A recommendation at age 35 is appropriately framed as conditional rather than routine, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: hysteroscopy evaluation with conditional pathways (normal vs. treated vs. uncorrectable), SET recommendation, luteal phase support, patient counseling on realistic expectations, and future planning including PGT-A, ERA, and BMI optimization. The tiered approach to the uterine factor is clinically useful. Could be slightly more specific regarding progesterone supplementation protocols or timing considerations for the transfer window."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.020343,
+  "judge_latency_ms": 13499.11124999926,
+  "judge_prompt_tokens": 3581,
+  "judge_completion_tokens": 640
+}

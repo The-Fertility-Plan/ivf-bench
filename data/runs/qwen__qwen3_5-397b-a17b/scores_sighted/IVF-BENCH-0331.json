@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0331",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the Gardner expansion definition for stage 1 and adds certainty about non-viability beyond what morphology alone can show."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, low oocyte yield, BMI, tubal factor, endometrium, and sperm factors reasonably well, though it somewhat overemphasizes paternal age/stress as explanations for embryo degeneration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: contradiction between image appearing more expanded and calling it stage 1, and an overly absolute conclusion that the embryo is non-viable and transfer should be canceled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While much of the grading discussion is broadly consistent, recommending outright cancellation of transfer based solely on poor morphology and stating virtually no potential is stronger than standard evidence-based guidance; ancillary suggestions like acupuncture/testicular sperm are not guideline-driven for this presentation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer decision-making and future cycle planning, including protocol review and counseling, though some suggestions are too definitive or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012534,
+  "judge_latency_ms": 5344.313333000173,
+  "judge_prompt_tokens": 2463,
+  "judge_completion_tokens": 343
+}

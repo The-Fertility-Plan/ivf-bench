@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0327",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst, but it overstates certainty that the image clearly shows active hatching/herniation and a distinctly visualized ICM/robust TE; some features are inferred from the provided Gardner grade rather than directly evident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior failed cycles, unexplained infertility, sperm parameters, endometrial thickness, ovarian response, BMI/lifestyle, and embryo quality in a clinically meaningful way, though AMH absence and recurrent implantation failure workup implications could be handled more precisely."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but the implantation estimate is only partially developed because the response is truncated after introducing modifiers to the baseline range, leaving the final case-specific probability unsupported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF counseling: strong embryo morphology, age-related euploidy considerations, favorable endometrium, and lifestyle modification. Minor overreach includes strong claims about alcohol effects and morphology-based prognosis without enough caution about morphology not equaling euploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical counseling points (notably alcohol cessation and consideration of underlying implantation issues), but transfer-specific and future-cycle recommendations are incomplete and not very detailed due to the truncated ending."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013005,
+  "judge_latency_ms": 5669.7019999992335,
+  "judge_prompt_tokens": 2520,
+  "judge_completion_tokens": 363
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the provided 2BB score. Its comments on B-grade ICM/TE are broadly consistent with the label, though it introduced a grading discrepancy discussion and called 2BB 'good quality' without image-based verification. No major fabricated image features were claimed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, FSH, BMI, prior IVF outcomes, ectopic history, sperm parameters, endometrial thickness, and stress with embryo quality and prognosis. AMH/diagnosis/protocol were not meaningfully explored, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially in adjusting prognosis downward based on prior failures despite favorable age and lining. Minor issues include somewhat assertive baseline success assumptions and speculative attribution of prior failures to implantation barriers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent (proceed with transfer, luteal support, consider uterine evaluation), but some recommendations are weakly evidence-based or not guideline-supported as routine practice, especially ERA, NK-cell testing, and broad immune/thrombophilia workup after this history. PGT-A at age 29 is debatable rather than standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for the current transfer and contingency planning, including progesterone monitoring, transfer technique attention, hysteroscopy/endometritis evaluation, and lifestyle optimization. Some suggestions are more speculative than necessary, but overall it is practical."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015432,
+  "judge_latency_ms": 5444.755584001541,
+  "judge_prompt_tokens": 3074,
+  "judge_completion_tokens": 414
+}

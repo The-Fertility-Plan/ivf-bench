@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0390",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly flags a mismatch between the image and the stated 3AA label, but its visual description is inaccurate and overconfident: the image is not a single large cell/oocyte, and it does show a blastocyst-like structure with zona and cellular organization, albeit poor/suboptimal."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, sperm quality, endometrial thickness, and prior cycle reasonably well with embryo prognosis, though it overstates low reserve and does not discuss BMI or prior biochemical pregnancy in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable inconsistencies: it calls 3AA the highest grade, infers high euploidy too strongly from morphology, and gives a high implantation estimate despite acknowledging major image-data discordance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading concepts is broadly appropriate, but several statements are not well aligned with evidence-based IVF practice, including calling 3AA the highest grade, overstating morphology as a predictor of euploidy, and suggesting transfer abortion based on this image mismatch without proper verification workflow."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for current transfer and future planning, including verifying the discrepancy, proceeding if lab grading is correct, and considering protocol/endometriosis management, though some recommendations are somewhat generic and not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013524,
+  "judge_latency_ms": 5132.86058299127,
+  "judge_prompt_tokens": 2603,
+  "judge_completion_tokens": 381
+}

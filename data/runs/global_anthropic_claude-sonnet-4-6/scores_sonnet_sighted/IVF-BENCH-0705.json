@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies key morphological features including blastocoel cavity formation, ICM characteristics, TE cohesiveness, and zona thinning consistent with a 3AA grade. Notably flags cytoplasmic granularity and possible vacuolation in the ICM which is visible in the image. Minor limitation is that the expansion stage is described as '3-4' when the Gardner score provided is specifically 3, and some described features are inferred from the lab data rather than purely image-based observation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects BMI to endometrial receptivity and oocyte quality, links the low maturation rate (57.9%) to BMI and trigger timing, addresses the male factor diagnosis despite normal basic sperm parameters by flagging possible DNA fragmentation, and considers how lifestyle factors (former smoking, alcohol, diet) interact with implantation potential. The interaction between multiple factors is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and stepwise, with each factor's contribution clearly stated. The final estimate of 45-58% is coherent with the adjustments applied. Minor inconsistency: the base rate starts at 60% then adjustments bring it to ~43-50%, yet the final range is stated as 45-58%, which is slightly higher than the modeled endpoint. The SART benchmark cited (50-55% live birth) is used appropriately as context. Overall reasoning is well-structured with minor arithmetic inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines including luteal phase support protocols, ERA consideration for receptivity concerns, PGT-A for recurrent failure, sperm DNA fragmentation testing, and BMI management recommendations. The dual trigger suggestion for low maturation rate is evidence-based. Minor concern: recommending thrombophilia/NK cell panels after first failure is somewhat premature per most guidelines which typically suggest this after 2-3 failures. Otherwise well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations covering immediate pre-transfer steps, luteal support protocols with specific dosages, lifestyle modifications with priority rankings, and a detailed future cycle planning protocol. The BMI reduction target (BMI <30) with expected benefit quantification, specific investigation protocol for failed cycles, and protocol modification table (dual trigger, freeze-all consideration, ICSI with IMSI) provide clinicians with clear, implementable next steps. The summary dashboard effectively synthesizes priorities."
+    }
+  ],
+  "extracted_probability": 0.515,
+  "judge_cost_usd": 0.022596,
+  "judge_latency_ms": 15956.017167001846,
+  "judge_prompt_tokens": 4312,
+  "judge_completion_tokens": 644
+}

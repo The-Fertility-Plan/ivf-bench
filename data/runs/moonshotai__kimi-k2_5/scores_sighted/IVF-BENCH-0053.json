@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with poorly defined/degenerative ICM and TE, consistent with 1DD. However, it inaccurately states the blastocoel is <50% despite the provided Gardner score definition saying at least half the embryo, and it adds some specific degenerative features not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, ovarian response, endometrial thickness, BMI, and sperm parameters into prognosis reasonably well. AMH is unavailable and not discussed, but most relevant interactions are addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: severe embryo dysmorphology is treated as the dominant limiting factor, modified by age and endometriosis. There are minor overstatements, such as strongly linking poor morphology to aneuploidy and calling transfer essentially harmless without nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core points are broadly aligned: poor prognosis counseling, consideration of transfer if this is the only embryo, and age-related discussion are reasonable. However, recommendations such as routine ERA/EMMA/ALICE, aspirin/heparin, growth hormone/DHEA, and strong PGT-A endorsement are more controversial and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for this transfer and future planning, including guarded counseling, reassessment of protocol, and endometriosis-focused considerations. Some suggestions are actionable but not sufficiently evidence-filtered, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.015222,
+  "judge_latency_ms": 6124.594499997329,
+  "judge_prompt_tokens": 3019,
+  "judge_completion_tokens": 411
+}

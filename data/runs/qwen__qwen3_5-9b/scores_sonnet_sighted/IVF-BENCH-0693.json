@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0693",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: thinning zona pellucida, expanded blastocyst cavity, compact ICM with many cells, and cohesive trophectoderm epithelium. The description of the ICM location as 'right/center' is somewhat vague and the blastocyst in the image appears to be a grade 3 expansion (not yet hatching), which is correctly noted. Minor imprecision in spatial localization of ICM prevents a perfect score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: female age, AMH, FSH, oocyte yield, previous live birth, endometrial thickness, and partner age. It correctly identifies paternal age (44) as a risk factor for aneuploidy and connects it to embryo viability. However, it underweights the tubal factor diagnosis implications (no mention of ectopic risk given tubal factor history), and the moderate alcohol consumption (4-6 drinks/week) is not flagged as a meaningful concern despite being above recommended limits for IVF patients."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented. The response correctly identifies the previous live birth as a strong positive predictor and paternal age as a moderating risk factor. However, there is a minor inconsistency: the response states PGT-A 'would be highly advisable' for the current cycle but also recommends proceeding with transfer, without clearly resolving this tension between biopsy-then-freeze versus fresh transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines regarding blastocyst grading, PGT-A indications, and endometrial thickness thresholds. However, recommending PGT-A primarily based on paternal age alone is not a standard ASRM/ESHRE indication (PGT-A is indicated for advanced maternal age, recurrent implantation failure, recurrent pregnancy loss, or severe male factor). The response does not flag the moderate alcohol intake (4-6/week) as a concern requiring counseling, which contradicts standard pre-transfer guidelines. The BMI comment about 'slightly low' at 19.5 is within normal range and the concern is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: proceed with transfer, consider PGT-A with clear rationale, maintain progesterone support, and address lifestyle factors. The suggestion to consider PGT-A for future cycles is appropriate. However, the response misses a critical actionable point: counseling on ectopic pregnancy risk given the tubal factor diagnosis, and the alcohol consumption recommendation is absent. The PGT-A recommendation for the current cycle lacks clarity on whether to biopsy-freeze-wait or proceed fresh."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019059,
+  "judge_latency_ms": 16309.989250003127,
+  "judge_prompt_tokens": 2668,
+  "judge_completion_tokens": 737
+}

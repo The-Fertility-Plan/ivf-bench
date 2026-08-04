@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0192",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a blastocyst and notes a blastocoel, but it incorrectly interprets Gardner 4 as hatching/herniating and describes zona breach not clearly supported by the image. It also overstates visibility of ICM/TE details that are difficult to confirm from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior miscarriage, sperm quality, protocol response, and endometrial thickness with embryo quality in a clinically meaningful way, though some links (e.g., morphology to aneuploidy) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: misinterpretation of the expansion stage, questionable concern about day-4 versus hatching-stage asynchrony, and somewhat overstated causal links between TE grade and aneuploidy/miscarriage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF/Gardner conventions, especially calling a 4BC embryo hatching and strongly recommending PGT-A in a 33-year-old with only one prior miscarriage. Some recommendations are reasonable, but guideline alignment is only partial."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, luteal support, lifestyle optimization, protocol review, and future cycle planning. However, some recommendations are not sufficiently nuanced and rely on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013797,
+  "judge_latency_ms": 5120.596334003494,
+  "judge_prompt_tokens": 2694,
+  "judge_completion_tokens": 381
+}

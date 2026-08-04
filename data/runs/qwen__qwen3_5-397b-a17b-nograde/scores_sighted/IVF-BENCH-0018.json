@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a compacted morula. The image is more consistent with an early cavitating/early blastocyst on day 4, with a forming blastocoel and emerging ICM/TE differentiation. It omits meaningful ICM/TE assessment and gives only generic zona comments."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian reserve, endometrium, BMI, smoking, and sperm parameters reasonably well with prognosis, though some links are somewhat generalized and it overemphasizes AMH as implying egg quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the core morphology error weakens downstream conclusions. The implantation estimate is directionally reasoned yet somewhat speculative, especially the magnitude of reductions attributed to smoking and day-4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceeding with transfer, smoking cessation, considering blastocyst culture), but the morphology interpretation is not Gardner-consistent, and some statements such as routine sperm DNA fragmentation consideration are not standard first-line guideline-driven recommendations in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including lifestyle modification and culture strategy. However, recommendations remain somewhat generic and lack nuanced alternatives such as individualized counseling on single vs future frozen transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013122,
+  "judge_latency_ms": 5566.203000009409,
+  "judge_prompt_tokens": 2514,
+  "judge_completion_tokens": 372
+}

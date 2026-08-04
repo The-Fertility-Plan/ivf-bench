@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0422",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD and notes indistinct ICM/TE, but it inaccurately states the blastocoel is less than half the embryo despite the provided stage 1 definition being at least half, and it adds features like large dark vacuoles/cellular breakdown that are not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, semen parameters, prior biochemical pregnancy, endometrium, and lifestyle with embryo quality well, though it overinterprets missing data such as presumed poor blast yield and does not acknowledge AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis estimate follows the poor morphology, but there are notable leaps such as assuming this was the only/best embryo and calling the embryo essentially non-viable based on morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but recommendations such as routine PGT-A in a 30-year-old, immunologic/NK-cell testing, and suggesting most clinics would discard such an embryo are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step counseling and future-cycle considerations, including sperm DNA fragmentation review and lab/process review, but some suggestions are speculative or not first-line evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013731,
+  "judge_latency_ms": 5865.036957999109,
+  "judge_prompt_tokens": 2702,
+  "judge_completion_tokens": 375
+}

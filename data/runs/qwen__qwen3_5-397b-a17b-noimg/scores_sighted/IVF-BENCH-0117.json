@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0117",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the reported 2AA grade. Its descriptions are broadly consistent with the lab grade, but it repeats the prompt's incorrect mapping of expansion 2 as a full blastocyst and adds generic statements (e.g., zona thinning) not verifiable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve markers, ovarian response, sperm parameters, endometrial thickness, BMI, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age, morphology, and uterine factors. Minor issues include overcalling 2AA as 'highest' quality and some speculative points about BMI and paternal age effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer and acknowledging age-related aneuploidy risk are guideline-concordant. However, strong endorsement of routine PGT-A and some protocol suggestions are more debatable than universally guideline-mandated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, luteal support, and contingency planning. Some recommendations are somewhat generic or speculative but remain clinically usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014412,
+  "judge_latency_ms": 4836.234959002468,
+  "judge_prompt_tokens": 3039,
+  "judge_completion_tokens": 353
+}

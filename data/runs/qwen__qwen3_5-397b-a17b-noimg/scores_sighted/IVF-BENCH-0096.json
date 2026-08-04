@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and relied on the provided Gardner 3AA description. Its summary of 3AA is broadly correct, but it inaccurately called 3AA the highest quality classification and described stage 3 as fully expanded/thinning zona, which is closer to stage 4 than classic Gardner stage 3."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, prior failed cycles, sperm parameters, and endometrial thickness with embryo morphology and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates logically tied to age-related aneuploidy and prior failures. Minor issues include overstating RIF after only two failed cycles and some overconfidence around PGT-A benefit."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: calling 3AA the highest grade, suggesting low-dose aspirin for prior failures without a clear indication, and strongly recommending PGT-A as if it definitively raises live birth chances rather than mainly aiding selection and reducing futile transfers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer, luteal support review, possible uterine evaluation, sperm DNA fragmentation testing, and weight optimization. Some suggestions are useful but a few are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015264,
+  "judge_latency_ms": 5260.674124991056,
+  "judge_prompt_tokens": 3208,
+  "judge_completion_tokens": 376
+}

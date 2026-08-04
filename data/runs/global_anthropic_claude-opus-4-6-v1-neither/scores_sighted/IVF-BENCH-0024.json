@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted that no image was available to it, but it then assumed a Day 4 morula framework and stated Gardner scoring was not applicable. The actual image shows a blastocyst-like embryo with a blastocoel, so this timing-based morphology discussion is inaccurate for the visible embryo and omits actual image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: female age, ovarian reserve, response, BMI, prior outcomes, paternal age, sperm context, endometrium, and lifestyle risks, and links them to prognosis. Some inferences are speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and internally mostly logical, but a key premise is flawed: it treats the case as a Day 4 morula transfer despite the embryo image appearing blastocyst-stage. Some probability adjustments and comments about Day 4 transfer are speculative, reducing coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Lifestyle counseling and consideration of uterine/sperm evaluation are broadly guideline-consistent, but recommending routine PGT-A, ERA, thrombophilia/RPL workup, and aggressive luteal support/estradiol is stronger than standard evidence-based guidance for this profile. The statement that Day 4 transfer is less evidence-based is also overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical, including smoking/alcohol cessation, nutritional supplementation, sperm DNA fragmentation testing, and future-cycle planning. However, some suggestions are not sufficiently nuanced or may be premature for this exact case."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014955,
+  "judge_latency_ms": 5709.627999996883,
+  "judge_prompt_tokens": 2930,
+  "judge_completion_tokens": 411
+}

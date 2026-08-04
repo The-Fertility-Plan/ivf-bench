@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0501",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes features consistent with the Gardner 2AA grade but largely parrots the provided lab data rather than independently analyzing the image. A Grade 2 blastocyst is a 'full blastocyst' but not yet fully expanded — the description of cells being 'pushed to the periphery' is more consistent with higher expansion grades (4-5). No mention of zona pellucida thickness or other image-specific details. The ICM and TE descriptions are generic and aligned with the grade definition rather than demonstrating independent image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response correctly identifies the patient's young age as the strongest predictor, notes the discrepancy between the 'Male Factor' diagnosis and the seemingly normal sperm parameters, highlights the significance of the prior live birth as a proven fertility indicator, addresses BMI as a risk factor, and connects the miscarriage history to potential RPL concerns. The endometrial thickness is appropriately contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 60-75% is reasonably justified by balancing favorable factors against risk factors. One minor issue: the response describes the embryo as 'ready for transfer' based on Grade 2 expansion, but Grade 2 is actually a relatively early blastocyst stage — many clinics prefer more expanded blastocysts. The logic connecting miscarriage history to implantation probability could be more nuanced (implantation vs. ongoing pregnancy). Overall coherent with minor issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are generally well-aligned with ESHRE/ASRM guidelines. The suggestion for RPL workup after recurrent miscarriages is appropriate. Luteal phase support recommendation is standard. The mention of weight optimization is evidence-based. However, the response doesn't discuss PGT-A which could be relevant given the miscarriage history, and the Gardner grading description slightly conflates expansion stages. The suggestion to 're-evaluate Male Factor diagnosis' is clinically reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, consider RPL screening, optimize BMI, cryopreserve additional embryos, and plan early prenatal monitoring for gestational diabetes. The response provides clear next steps for both this cycle and future planning. Could be improved with more specific recommendations about PGT-A consideration for future cycles, specific progesterone protocols, or timing considerations for the weight loss recommendation."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.027435,
+  "judge_latency_ms": 16231.344915984664,
+  "judge_prompt_tokens": 2397,
+  "judge_completion_tokens": 618
+}

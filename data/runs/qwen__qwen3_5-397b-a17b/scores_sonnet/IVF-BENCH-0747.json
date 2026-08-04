@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expansion stage with thinning zona, tightly packed ICM with numerous cells, and cohesive TE epithelium. The ICM localization at '9 o'clock position' adds specificity. Minor limitation is that without confirmed image access, some descriptors may be inferred from the Gardner score rather than direct image observation, but the description is internally consistent and clinically appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors: maternal age (31) linked to euploidy rates, sperm parameters connected to fertilization quality, endometrial thickness assessed against implantation thresholds, and the uterine factor diagnosis identified as the primary risk modifier. BMI and lifestyle factors are also incorporated. Minor gap: AMH being N/A is not addressed, and the short agonist protocol's specific implications for this patient's ovarian response could be explored more deeply."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality through patient factors to probability estimate. The 55-65% range is appropriately moderated from the theoretical 60-70% ceiling due to the uterine factor, which is coherent. The conditional reasoning (if corrected vs. untreated uterine factor) is sound. Minor inconsistency: the response states BMI >25 reduces implantation rates but doesn't quantitatively adjust the probability estimate for this, leaving a small logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for a 31-year-old with a top-grade blastocyst is consistent with current single embryo transfer policies, luteal phase support recommendation is appropriate for agonist protocols, and PGT-A is correctly positioned as non-mandatory at this age. The endometrial thickness threshold (>7mm, optimal 8-10mm) aligns with published criteria. Hysteroscopy recommendation for failed transfer follows standard uterine factor workup guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: eSET is clearly justified, luteal support is specified with route options (vaginal/IM), and future planning includes concrete diagnostic steps (hysteroscopy, SIS) with conditional triggers. Lifestyle recommendations are practical. Could be more actionable by specifying progesterone dosing protocols, timing of hysteroscopy relative to next cycle, or addressing whether the uterine factor has been previously treated, which would significantly change immediate management."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.017508,
+  "judge_latency_ms": 14829.514082994137,
+  "judge_prompt_tokens": 2606,
+  "judge_completion_tokens": 646
+}

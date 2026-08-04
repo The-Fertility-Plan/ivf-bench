@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not visually assess the embryo and avoided detailed fabricated image claims. However, it inferred a generic Day 4 morula/early blastocyst framework and incorrectly implied Gardner grading was not applicable despite the image appearing blastocyst-like, so morphology assessment was limited and partly inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve markers, oocyte yield, endometrial thickness, sperm parameters, smoking, and prior cycle history into prognosis reasonably well, including noting the inconsistency of the DOR label. Some links to the actual embryo morphology were necessarily weak."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it treats two prior cycles with one live birth as suggesting recurrent implantation failure, applies strong percentage deductions without clear evidence, and bases prognosis on an assumed Day 4 morula framework rather than the visible embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, SET, luteal support, considering sperm DNA fragmentation/chronic endometritis workup after repeated failure). However, recommending PGT-A at age 29 after limited failures and suggesting broad thrombophilia/immune/NK-cell testing are not strongly guideline-supported, and the statement that Gardner scoring is not applicable is questionable for this image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future planning, including smoking cessation, review of diagnosis, possible extended culture, and selective further workup. Some recommendations are somewhat overreaching, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014958,
+  "judge_latency_ms": 5920.800042003975,
+  "judge_prompt_tokens": 2886,
+  "judge_completion_tokens": 420
+}

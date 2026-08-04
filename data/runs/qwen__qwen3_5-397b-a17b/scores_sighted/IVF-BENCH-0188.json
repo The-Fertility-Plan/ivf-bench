@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0188",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a well-expanded high-quality 3AA blastocyst with prominent ICM and cohesive TE, but the image does not clearly show a large blastocoel, distinct compact ICM, or uniformly cohesive TE; validation of 3AA from the image alone is not well supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF failures, sperm parameters, endometrial thickness, and BMI with prognosis reasonably well, though some inferences such as PCOS/hyper-responder implications are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it accepts the provided 3AA while also noting day-4 inconsistency, treats morphology as strongly predictive of euploidy, and adjusts implantation probability downward without clearly separating embryo versus uterine factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard (proceed with transfer, consider hysteroscopy and chronic endometritis evaluation after repeated failures), but ERA and broad immunologic/thrombophilia testing are not routinely guideline-supported, and aspirin/heparin is only appropriate in selected indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and contingency planning, including luteal support review and further cavity/endometrial evaluation, though some suggested tests are not sufficiently prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013572,
+  "judge_latency_ms": 5179.54041599296,
+  "judge_prompt_tokens": 2639,
+  "judge_completion_tokens": 377
+}

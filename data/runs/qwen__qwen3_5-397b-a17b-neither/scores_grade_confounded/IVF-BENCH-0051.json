@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 3AB and instead stated no specific grading could be assigned, then assumed a transferable blastocyst such as 3BB or better. This ignores available morphology data and introduces unsupported assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, endometrium, prior failures, BMI, and sperm parameters, and connects them to prognosis. Some interpretations are overstated, especially around recurrent implantation failure."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it overlooks the known 3AB grade, labels the patient as having recurrent implantation challenges based on two failed cycles, and makes assumptions about embryo quality that weaken the reasoning behind the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent, but several recommendations are not well aligned with current evidence-based practice, including ERA, NK cell testing, broad immunologic/thrombophilia workup, and reclassifying as RIF after one more failed transfer. These are not routinely recommended by ASRM/ESHRE."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for luteal support review, lifestyle modification, and future evaluation. However, some suggested investigations are of questionable utility, which limits the practical quality of the recommendations."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013269,
+  "judge_latency_ms": 4437.787290997221,
+  "judge_prompt_tokens": 2663,
+  "judge_completion_tokens": 352
+}

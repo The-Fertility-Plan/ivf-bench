@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0748",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the 3AA Gardner score components (expansion stage 3, ICM grade A, TE grade A) and correctly notes zona thinning and cohesive TE epithelium. However, the model acknowledges image blur and uncertainty, and the description largely echoes the provided Gardner score metadata rather than demonstrating independent visual analysis. Some hedging ('somewhat blurry,' 'difficult to fully ascertain') reduces confidence in true morphological assessment from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 30 with optimal prognosis, AMH/FSH indicating adequate reserve, male factor diagnosis implying better female parameters, endometrial thickness of 12mm as favorable, BMI 30.5 as a risk factor, and former smoking history. The sperm parameters are noted and ICSI is appropriately inferred. The interaction between low oocyte yield (2 MII from 5 COCs) and future cycle planning is addressed. Minor gap: the response could more explicitly discuss how the low MII conversion rate (40%) might reflect oocyte quality concerns beyond just quantity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 60-75% logically follows from the favorable factors (3AA, age 30, good endometrium) tempered by risk factors (BMI, former smoking). The upper and lower bounds are justified with specific reasoning. The recommendation for SET is coherent with the single high-quality embryo scenario. Minor issue: the response mentions 'euploid 3AA blastocyst' in the probability reasoning without PGT-A having been performed, which is a slight logical inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patients, Day 5 blastocyst transfer rationale, luteal phase support, beta-hCG timing (9-11 days), and PGT-A consideration only for recurrent failure at age 30. BMI counseling aligns with ASRM guidelines on obesity and ART. The suggestion to consider sperm DNA fragmentation testing is evidence-based. Minor deviation: the response does not explicitly address whether a freeze-all strategy was considered or ERA testing for future cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with luteal support, beta-hCG at 9-11 days, weight management targets (BMI below 30, ideally below 25), exercise incorporation, alcohol abstinence during treatment, embryo banking strategy, sperm DNA fragmentation testing if needed, and protocol review triggers. The future cycle planning section is well-structured. Could be more actionable by specifying progesterone type/dosing, providing concrete exercise recommendations, or suggesting referral pathways for weight management."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.021129,
+  "judge_latency_ms": 14890.519374996074,
+  "judge_prompt_tokens": 3443,
+  "judge_completion_tokens": 720
+}

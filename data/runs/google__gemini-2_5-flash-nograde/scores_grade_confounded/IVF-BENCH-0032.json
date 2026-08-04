@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good Day 4 morula and ignores the provided Gardner 0DD early blastocyst grading with absent/degenerative ICM and TE, leading to major fabricated positive features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm, endometrium, and prior biochemical pregnancy, though the integration is undermined by the incorrect embryo-quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good quality; the optimistic implantation estimate does not follow from a 0DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General IVF recommendations are mostly standard, but interpreting a 0DD embryo as good quality and assigning high implantation potential is not aligned with Gardner grading or evidence-based prognosis; PGT-A is also overstated after a single biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer management and future cycle planning, though some recommendations are based on an inaccurately favorable assessment of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012918,
+  "judge_latency_ms": 3638.8130000050296,
+  "judge_prompt_tokens": 2806,
+  "judge_completion_tokens": 300
+}

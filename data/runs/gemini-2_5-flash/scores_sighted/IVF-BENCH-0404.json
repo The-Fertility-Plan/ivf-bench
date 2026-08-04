@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0404",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label and image, but it mislocalizes the ICM to the left when the denser ICM-like cluster appears more right-sided/superior, and it somewhat overstates clear TE detail from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm, first cycle status, endometriosis, and endometrial thickness with embryo quality in a clinically meaningful way, though not deeply nuanced about endometriosis heterogeneity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: good embryo quality is balanced against endometriosis and borderline lining. Probability adjustment is plausible, though the exact decrement estimates are somewhat assertive."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading and mainstream IVF practice, especially regarding embryo morphology and the caution around thin/borderline endometrium, though it slightly overemphasizes a strict >7-8 mm threshold and stress effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response identifies risks and prognosis but provides limited concrete next-step management for this transfer or future cycles; recommendations are mostly generic rather than operational."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013116,
+  "judge_latency_ms": 9308.755916994414,
+  "judge_prompt_tokens": 2712,
+  "judge_completion_tokens": 332
+}

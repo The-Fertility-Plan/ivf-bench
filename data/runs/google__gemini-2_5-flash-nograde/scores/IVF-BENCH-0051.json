@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible blastocyst-style description but overstates certainty and introduces features not clearly supportable from a single image, including vacuolation/irregular TE and specific Gardner grades like 3BC/3CB without strong visual basis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm quality, endometrium, and prior failed cycles reasonably well, though it somewhat overinterprets two failed cycles as a major adverse prognostic factor without more cycle detail."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable issues: labeling two failed cycles as recurrent implantation failure, inferring likely aneuploidy from morphology in a 30-year-old, and deriving a relatively low implantation estimate from uncertain morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard (uterine assessment, luteal support, counseling), but endorsement of ERA, thrombophilia/immune testing, intralipids/IVIG, and scratch is more controversial and not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for transfer and future planning, including uterine evaluation and counseling, though some proposed adjuncts are not well prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.01497,
+  "judge_latency_ms": 4273.4765829954995,
+  "judge_prompt_tokens": 3330,
+  "judge_completion_tokens": 332
+}

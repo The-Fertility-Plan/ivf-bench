@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0113",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the provided Gardner score. Its morphology summary is mostly consistent with the lab description, but it repeats a likely inconsistency by calling stage 3 'expanded blastocyst' with thinning zona, which is more characteristic of stage 4, and therefore is not a precise image-based analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, prior live birth, endometrial thickness, sperm parameters, BMI, and ovarian response with embryo quality in a clinically meaningful way. Some inferences, such as overlap with diminished ovarian reserve, are somewhat speculative without AMH/AFC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally logical, with the implantation estimate tied to embryo grade, age, uterine factors, and prior live birth. Minor issues include overcalling the embryo as 'high-quality' and some speculative protocol/yield interpretations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, including single embryo transfer and consideration of PGT-A after failure. Small deviations include optional assisted hatching discussion and somewhat assertive endorsement of PGT-A/DuoStim despite limited case-specific evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, including eSET, luteal support, metabolic assessment, and protocol review. It is useful, though some suggestions are broader than strictly indicated by the presented data."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014907,
+  "judge_latency_ms": 5871.729416001472,
+  "judge_prompt_tokens": 3009,
+  "judge_completion_tokens": 392
+}

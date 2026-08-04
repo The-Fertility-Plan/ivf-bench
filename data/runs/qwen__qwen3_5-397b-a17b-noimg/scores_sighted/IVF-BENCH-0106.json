@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0106",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner 3AA label, which is acceptable. However, it then added image-level claims such as 'no visible signs of fragmentation, vacuolization, or degeneration' that were not directly supportable, and its wording that stage 3 is 'fully expanded' is somewhat imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates embryo grade with maternal age, PCOS, prior ectopic and biochemical pregnancy, endometrial thickness, ovarian response, sperm parameters, paternal age, and lifestyle in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis adjusted for morphology, age-related aneuploidy risk, and prior outcomes. Minor issues include slightly overstating 3AA as 'top-tier/highest percentile' and some speculative links such as thrombophilia after a single biochemical loss."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET, luteal support, early hCG/ultrasound after prior ectopic, and consideration of PGT-A in future cycles. Small deviations include calling SET 'mandatory,' endorsing ERA relatively readily, and suggesting thrombophilia testing despite limited routine guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear practical next steps for transfer technique, luteal monitoring, early pregnancy surveillance, and contingency planning for future cycles, with useful specificity."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015534,
+  "judge_latency_ms": 5267.664416998741,
+  "judge_prompt_tokens": 3208,
+  "judge_completion_tokens": 394
+}

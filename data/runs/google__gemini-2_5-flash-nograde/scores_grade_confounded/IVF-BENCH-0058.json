@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a generic blastocyst description but conflicts with the provided lab grade by estimating 4BB-5BC instead of recognizing the stated 3BA expanded blastocyst. It also adds uncertain image-based claims despite acknowledging blur and does not address zona thinning clearly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve markers, tubal factor, prior cycle, sperm parameters, endometrium, and lifestyle, and relates them to prognosis, though some links are somewhat broad."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with conclusions mostly supported by the data. Minor issues include overinterpreting stress effects on implantation and using an image-based grade that conflicts with the known Gardner score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially support for single embryo transfer in a 33-year-old with a good Day 5 blastocyst. Small deviations include somewhat liberal mention of ERA and PGT-A after limited failure history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, cryopreservation, and counseling. However, some recommendations remain generic and not tightly tailored to this exact case."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013887,
+  "judge_latency_ms": 5111.295000002428,
+  "judge_prompt_tokens": 2864,
+  "judge_completion_tokens": 353
+}

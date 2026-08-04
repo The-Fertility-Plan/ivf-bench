@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes plausible blastocyst features and correctly notes uncertainty, but questions the reported 3AA/expanded designation and infers image details (early-to-mid blast, zona not thinned, possible hatching/cohesive zones) that may not be reliably supported given the provided lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, male factor, BMI, lifestyle, and first-cycle status well with prognosis, though some links are generic and sperm morphology/ICSI details are not available."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are internal inconsistencies: it first gives low live birth estimates, then later a broader implantation range; it also overemphasizes uncertainty about grading despite the supplied embryology data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligns with IVF practice: recommends single embryo transfer in a young good-prognosis patient, standard luteal support, no bed rest, and restrained use of PGT-A/add-ons. Minor deviation comes from challenging the provided Gardner interpretation and some speculative comments."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning after failure, including SET, luteal support, routine follow-up, and when to consider sperm DNA fragmentation or uterine evaluation. Some advice remains somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.019317,
+  "judge_latency_ms": 6671.385958907194,
+  "judge_prompt_tokens": 4619,
+  "judge_completion_tokens": 364
+}

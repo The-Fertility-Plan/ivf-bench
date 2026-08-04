@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0701",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinning zona pellucida, tightly packed ICM with distinct boundaries, and cohesive multi-cellular trophectoderm. The ICM localization ('1 o'clock position') adds specificity suggesting actual image analysis. Minor limitation is that the description largely mirrors the provided Gardner score data rather than offering independent morphological observations that go beyond the label, but overall the description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, ovarian response, endometrial thickness, male factor diagnosis, sperm parameters, and lifestyle factors well. It correctly identifies the low oocyte yield as a concern for cumulative outcomes, connects the male factor diagnosis to borderline motility, and links maternal age to aneuploidy risk. The missing AMH is flagged appropriately. Minor gap: BMI of 26.7 is not discussed, and the interaction between moderate stress and outcomes is mentioned but dismissed too quickly without nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality to patient factors to probability estimates. The implantation rate (60-70%) and live birth rate (55-65%) are internally consistent and well-justified by referencing baseline rates, embryo grade adjustments, and age-related euploidy likelihood. The caveat about lacking PGT-A data is appropriately included. Minor issue: the response states motility is 'borderline low' at 39.5% but then notes blastulation was successful, which slightly undermines the risk framing without fully resolving the tension."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET is strongly recommended for young patients with top-quality blastocysts, luteal phase support is mentioned, Day 5 transfer timing is validated, and PGT-A considerations are appropriately contextualized by age. The WHO motility reference limit cited (40-42%) is slightly imprecise (WHO 2021 lower reference limit for total motility is 42%), and the 'Microdose Flare' protocol suggestion for potential DOR is reasonable but could note it's more commonly used in poor responders with specific profiles. Overall well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET with clear rationale, luteal phase support reminder, AMH/AFC investigation for reserve assessment, ICSI consideration for future cycles, and a banking strategy for low-yield cycles. These are directly applicable to the clinical scenario. The response could be slightly more actionable by specifying progesterone type/dosing, suggesting ERA testing given the first transfer context, or providing specific gonadotropin dose adjustment guidance, but overall the recommendations are clinically useful and well-tailored to this case."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.018489,
+  "judge_latency_ms": 15461.965208000038,
+  "judge_prompt_tokens": 2598,
+  "judge_completion_tokens": 713
+}

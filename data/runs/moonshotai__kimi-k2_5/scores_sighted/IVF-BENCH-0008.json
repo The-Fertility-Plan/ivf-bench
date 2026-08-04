@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality, minimally cavitating embryo with absent/poor ICM and TE, but it inaccurately calls Gardner stage 0 an early blastocyst and overstates features like a defined degenerative TE epithelium and specific cavity proportion not clearly visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates young age, strong ovarian reserve, prior reproductive history, semen parameters, and endometrial thickness with the poor embryo quality, though some links are speculative and not all factors are weighed proportionately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: severe morphology drives a very low implantation estimate despite favorable patient factors. Minor issues include overconfident statements of non-viability and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on poor prognosis for a DD-quality embryo is broadly aligned with clinical practice, but the staging terminology is off and the recommendation to not transfer is too absolute for a case-dependent decision, especially on day 4 with limited context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical direction such as considering other embryos and extending culture, but the recommendations are incomplete/truncated and lack a fully developed plan for transfer decision-making and future cycle strategy."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012201,
+  "judge_latency_ms": 5426.117458002409,
+  "judge_prompt_tokens": 2422,
+  "judge_completion_tokens": 329
+}

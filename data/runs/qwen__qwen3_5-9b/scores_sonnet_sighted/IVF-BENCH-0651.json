@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model repeatedly vacillates between calling the embryo a morula and a blastocyst, never committing to a clear morphological description. It notes a 'small cavity at the bottom right' but fails to provide a structured analysis of zona pellucida integrity, ICM characteristics, TE cell count/cohesion, or degree of compaction. The response is dominated by internal deliberation rather than actual morphological description, and the final characterization remains ambiguous and incomplete."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The model identifies key clinical factors: age 26 as favorable, AMH 10.9 as high reserve, the live birth history as a major positive, normal sperm parameters despite male factor diagnosis, and good endometrial thickness. However, it fails to meaningfully integrate these with the embryo quality in a synthesized way - e.g., it doesn't discuss how the discordance between good patient prognosis and poor embryo quality should guide decision-making, nor does it address potential DNA fragmentation as a cause of poor embryo development despite normal semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is largely an unedited stream of internal deliberation with numerous contradictions and reversals. The model repeatedly changes its interpretation of the image and the Gardner score, never resolving the contradictions cleanly. The probability estimate is inconsistently framed (< 5% vs 5-10% vs < 1%) without clear resolution. The reasoning chain is fragmented and the conclusions are not clearly supported by a coherent argument. This reads as raw thinking rather than a structured clinical assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The model correctly notes that Gardner scoring applies to blastocysts and identifies the Day 4 transfer timing as unusual for a blastocyst score, showing some guideline awareness. However, it fails to properly apply ESHRE/Gardner grading criteria systematically, doesn't reference established implantation rate data for poor-quality embryos, and the recommendation to 'extend culture to Day 5' contradicts the stated Day 4 transfer plan without proper clinical justification. PGT-A discussion is superficial and not well-grounded in current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The recommendations are vague and heavily qualified with uncertainty. Suggestions include 'proceed if it's the only option,' 'consider PGT-A,' and 'extend culture if possible' - all without specific clinical thresholds, protocols, or decision trees. There is no concrete guidance on luteal support, monitoring post-transfer, or specific future cycle modifications. The response fails to provide a clear clinical action plan that a reproductive medicine specialist could act upon."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.040605,
+  "judge_latency_ms": 15240.044499994838,
+  "judge_prompt_tokens": 10240,
+  "judge_completion_tokens": 659
+}

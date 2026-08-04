@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and therefore gives no morphology analysis, despite the case explicitly providing a 4BB blastocyst with hatching/herniation, loosely grouped ICM, and loose TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, prior cycle, sperm parameters, endometrium, and lifestyle, though it fails to connect them to the actual known 4BB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is undermined by the central factual error that morphology/Gardner score was missing, which weakens the probability framing and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are guideline-consistent, but suggesting ERA after a single failed cycle and raising PGT-A relatively early in a 28-year-old good-prognosis patient are less well aligned with routine evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for transfer and contingency planning, including SET, luteal support, and future evaluation options, though some advice is based on the mistaken assumption that embryo grading was unavailable."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015252,
+  "judge_latency_ms": 3992.746374999115,
+  "judge_prompt_tokens": 3374,
+  "judge_completion_tokens": 342
+}

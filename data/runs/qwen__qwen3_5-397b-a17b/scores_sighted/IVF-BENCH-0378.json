@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0378",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a clear high-quality 3AA/full blastocyst with thinning zona, distinct ICM, and cohesive TE, but the image appears less clearly expanded with poorly distinct ICM/TE and notable granularity/vacuolization; several described features are not confidently visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF outcome, sperm parameters, endometrium, and diagnosis with embryo prognosis reasonably well, though it overinterprets some factors such as oocyte yield and assumes uterine normality from an unexplained diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but there are notable issues: it calls 3AA the highest possible score, equates morphology too strongly with euploidy, and infers subtle implantation problems from a single prior failed cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are broadly guideline-consistent, but there are deviations: 3AA is not the highest possible blastocyst grade, morphology is not a strong proxy for euploidy, and a full RIF workup after only two failed cycles is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including eSET and possible cavity reassessment, though some suggestions are somewhat premature or nonspecific for this exact stage of treatment."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013602,
+  "judge_latency_ms": 5030.448165998678,
+  "judge_prompt_tokens": 2709,
+  "judge_completion_tokens": 365
+}

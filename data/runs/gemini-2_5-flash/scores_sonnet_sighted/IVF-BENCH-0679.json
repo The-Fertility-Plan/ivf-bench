@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0679",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocoel, thinned zona, tightly packed ICM, cohesive TE epithelium). However, the description largely echoes the provided Gardner score data rather than independently analyzing the image. The image actually shows some concerning features like vacuoles/granularity within the ICM area and what appears to be cellular debris or vacuolation that the model fails to mention. The description is mostly accurate but lacks independent critical observation of potentially suboptimal features visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, oocyte yield, maturation rate, endometrial thickness, sperm parameters, and lifestyle factors. It correctly contextualizes the male factor diagnosis against the seemingly normal sperm parameters and notes the first-cycle advantage. Minor gap: doesn't deeply explore how the antagonist protocol choice relates to the patient's AMH or discuss potential mild OHSS risk given the good response."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented. The response correctly notes that implantation probability differs from live birth rate. Minor inconsistency: it simultaneously acknowledges aneuploidy risk at age 36 while suggesting the high-quality morphology 'strongly suggests euploidy' - this is a slight overstatement. Overall the conclusions are well-supported by the observations presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation is appropriate and well-justified, luteal phase support is mentioned, PGT-A consideration is appropriately nuanced (not mandated but suggested as an option). The Gardner grading interpretation is consistent with established criteria. The response correctly avoids recommending double embryo transfer. Minor gap: doesn't mention endometrial receptivity testing options or specific progesterone monitoring protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and practical: SET recommendation with rationale, luteal phase support, beta-hCG monitoring, cryopreservation of remaining embryos, conditional PGT-A consideration, and psychological support. The future cycle planning section is well-structured. Could be more specific about progesterone dosing protocols, timing of beta-hCG testing, or specific follow-up ultrasound scheduling. The male factor review recommendation is appropriately conditional."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020184,
+  "judge_latency_ms": 14825.010208005551,
+  "judge_prompt_tokens": 3573,
+  "judge_completion_tokens": 631
+}

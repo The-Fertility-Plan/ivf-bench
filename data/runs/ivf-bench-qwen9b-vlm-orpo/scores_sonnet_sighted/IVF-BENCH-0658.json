@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description identifying blastocoel expansion, ICM location, and TE sparseness consistent with 2AB grading. However, it hedges between '2AB/3AB-type' when the grade is provided, and the image actually shows what appears to be a collapsing or irregularly shaped blastocyst with notable membrane irregularities that the model does not specifically address. The description is generally consistent with the provided Gardner score but lacks precision about visible structural details like the irregular blastocoel shape and zona pellucida thinning."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most key clinical factors: maternal age, AMH, FSH, oocyte yield, endometrial thickness, prior live birth, BMI, tubal factor diagnosis, and male parameters. It correctly identifies the hydrosalpinx concern as a critical interaction point with implantation. Minor gap: it doesn't deeply explore how the long agonist protocol specifically interacts with AMH 9.3 in terms of OHSS risk or endometrial receptivity in a fresh transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "There is a notable internal inconsistency: the response estimates implantation probability at 45-60% in one section, then states 'live birth per transfer: ~35-50%' and separately mentions 'mid-teens to low twenties percent range' for live birth, which contradicts the 35-50% figure given just after. This creates confusion about what the actual probability estimates represent. The overall reasoning framework is sound but these numerical contradictions undermine coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation for good-prognosis patient, hydrosalpinx management before transfer, selective use of PGT-A at age 32, standard luteal support, and lifestyle modifications. The discussion of PGT-A indications is appropriately nuanced per current evidence. Minor issue: the response doesn't explicitly reference that bed rest is not recommended per guidelines, though it does mention this correctly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including SET rationale, hydrosalpinx assessment, lifestyle modifications, luteal support considerations, and future cycle planning with PGT-A discussion. The tiered approach (if transfer fails, if more embryos available) adds practical value. Slightly reduced from top score because some recommendations remain somewhat generic (e.g., 'follow clinic protocol carefully' for luteal support) and the contradictory probability estimates may confuse clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020232,
+  "judge_latency_ms": 15095.823916999507,
+  "judge_prompt_tokens": 3429,
+  "judge_completion_tokens": 663
+}

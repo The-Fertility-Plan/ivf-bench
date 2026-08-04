@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly identifies a blastocyst and notes a visible blastocoel and zona, but it overstates image quality by calling the ICM clearly visible and tightly packed and by accepting 3AA at face value despite the image appearing more like an early/partially expanded blastocyst with indistinct ICM and uneven TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, sperm parameters, endometrial thickness, first cycle status, and endometriosis with embryo prognosis reasonably well, though AMH is unavailable and the discussion of oocyte yield and endometriosis effects is somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it labels expansion 3 as 'expanded' rather than full blastocyst, treats Day 4 blastocyst transfer as a standard interpretable scenario without enough caution, and gives somewhat confident probability adjustments that are not strongly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points are not well aligned with standard IVF guidance: Gardner stage interpretation is inaccurate, recommending laparoscopy after one failed cycle is too strong, and routine PGT-A at age 26 to maximize success is not generally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps such as proceeding with transfer, luteal support, and early follow-up, but recommendations are fairly generic and include questionable suggestions like laparoscopic evaluation after a single failed cycle."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.01344,
+  "judge_latency_ms": 5050.514584014309,
+  "judge_prompt_tokens": 2545,
+  "judge_completion_tokens": 387
+}

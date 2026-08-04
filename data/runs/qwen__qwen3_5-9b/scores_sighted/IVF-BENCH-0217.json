@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0217",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality early blastocyst consistent with 1DD, but overstates visibility of specific structures, mislocalizes/overinterprets the ICM, and describes the blastocoel as large/well-defined when the image shows a poorly expanded, low-quality blastocyst with indistinct cell populations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates age, AMH, sperm parameters, diagnosis, and cycle history, but makes unsupported inferences (possible PCOS, smoking contribution, sperm DNA fragmentation) and incorrectly introduces a fertilization rate not provided in the case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The overall conclusion of poor prognosis is reasonable, but the reasoning contains notable flaws: it invents fertilization data, calls the patient a poor responder despite high reserve and limited available cycle data, and recommends freezing this embryo rather than addressing transfer viability appropriately."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While recognizing 1DD as very poor prognosis is aligned with practice, several recommendations are not guideline-consistent or are weakly supported, including freezing a 1DD embryo, strong causal claims from former smoking, and protocol changes based on insufficient evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers concrete next steps such as counseling and possible male-factor workup, but some advice is impractical or inappropriate for this embryo (freezing recommendation) and lacks key transfer-specific considerations such as confirming whether transfer is justified if no better embryos exist."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013227,
+  "judge_latency_ms": 5900.28399998846,
+  "judge_prompt_tokens": 2469,
+  "judge_completion_tokens": 388
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0670",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage (grade 3), thinning zona pellucida, large blastocoel cavity, compact ICM (bottom right), and loose TE organization consistent with 3AB grading. The description of the ICM as 'darkly granular' and bottom-right positioned matches the image. Minor issue: the image actually shows what appears to be a somewhat irregular/fragmented ICM and TE with possible debris, which the model doesn't fully capture. The description is generally accurate but slightly idealized compared to what the image shows."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, endometrial thickness, BMI, stress, partner age, sperm parameters, and ovarian response. Notably flags the AMH/DOR inconsistency (10.64 ng/mL vs DOR diagnosis) and offers a plausible unit conversion explanation. Connects endometrial thickness as the primary limiting factor relative to embryo quality. Minor gap: doesn't deeply explore the interaction between sedentary lifestyle and endometrial perfusion, or the implications of the 7mm endometrium in context of a fresh vs frozen transfer decision."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured. The probability estimate (35-45% implantation, 30-38% live birth) follows reasonably from the stated adjustments. The identification of endometrial thickness as the primary risk factor is coherent with the evidence presented. Minor inconsistency: the baseline of 45-55% cited for a 3AB blastocyst conflates euploid and non-euploid rates without PGT-A data, which slightly inflates the baseline. The downward adjustments are reasonable but somewhat arbitrary in their precise percentages."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: ultrasound-guided transfer, luteal support protocols, hysteroscopy for recurrent thin endometrium, freeze-all consideration, and G-CSF for thin endometrium are all evidence-based. The suggestion of embryo glue (hyaluronan) is supported by some evidence. Sildenafil suppositories are used off-label but referenced in literature. The acupuncture recommendation appropriately notes mixed evidence. Minor deviation: recommending assisted hatching evaluation is reasonable but ESHRE guidelines don't strongly support routine assisted hatching for good-quality blastocysts with already-thinning zona."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical, organized clearly into immediate transfer actions and future cycle planning. Specific drug names, doses (sildenafil, aspirin 75-100mg, progesterone 400-600mg), and techniques (embryo glue, ultrasound guidance) are provided. Future planning includes concrete steps: hysteroscopy, extended estrogen priming timelines (14-21 days), G-CSF infusion, sperm DNA fragmentation testing with rationale, and lifestyle targets (BMI <25, specific kg loss). The prioritization of stress management and endometrial perfusion as immediate actions is clinically useful."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.022299,
+  "judge_latency_ms": 17389.17075000063,
+  "judge_prompt_tokens": 3508,
+  "judge_completion_tokens": 785
+}

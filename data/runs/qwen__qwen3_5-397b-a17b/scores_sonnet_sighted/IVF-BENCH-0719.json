@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, prominent ICM at approximately the 9 o'clock position, and cohesive TE. It correctly notes the AA grading for both ICM and TE. Minor issue: the model flags a discrepancy between Stage 3 and Stage 4 labeling (noting the description aligns more with Stage 4), which shows good critical thinking but introduces slight confusion. The TE description mentions 'loose or cohesive epithelium' which slightly contradicts the pure 'A' grade descriptor. Overall morphological observations match the image well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates all key clinical factors: maternal age (38) and its impact on aneuploidy rates, DOR diagnosis with low AMH (0.59) contextualizing the 'precious embryo' scenario, optimal endometrial thickness (11mm), healthy BMI and lifestyle as favorable receptivity factors, and paternal age with sperm DNA fragmentation consideration. The 'quality over quantity' framing is clinically apt and all factors are meaningfully connected to prognosis rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured: excellent morphology → age-adjusted aneuploidy risk → probability reduction → 35-50% estimate. The probability estimate follows coherently from the evidence. Minor inconsistency: the model describes the embryo as '3AA/4AA' interchangeably throughout, which creates slight ambiguity. The euploid-adjusted probability of ~65% is reasonable and consistent with literature. Overall the conclusions are well-supported by the observations presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation, luteal phase support for DOR, PGT-A discussion with balanced pros/cons for low responders, DuoStim mention for DOR patients, and donor egg counseling as a future option. The aneuploidy rate cited (~40-50% at age 38) is consistent with published data. Minor gap: the DuoStim protocol, while emerging, is not yet a mainstream ESHRE guideline recommendation and is presented without caveats about its investigational status in some centers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: proceed with fresh Day 5 SET given no OHSS risk, ensure robust progesterone support, consider DuoStim for future cycles given DOR, discuss PGT-A with explicit pros/cons tailored to low egg numbers, mention CoQ10/DHEA timing specifics (6-8 weeks prior), and include donor egg counseling as a contingency. Each recommendation is nuanced and directly applicable to this specific clinical scenario, providing clear next steps for both immediate transfer and long-term planning."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020082,
+  "judge_latency_ms": 15299.478542001452,
+  "judge_prompt_tokens": 3084,
+  "judge_completion_tokens": 722
+}

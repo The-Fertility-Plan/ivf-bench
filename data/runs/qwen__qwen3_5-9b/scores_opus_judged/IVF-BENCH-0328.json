@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0328",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The description aligns with the Gardner 3AA grading and identifies key features like zona thinning, ICM compactness, and TE cohesion. However, the mention of the blastocyst 'hatching' or 'about to hatch' is inaccurate for a Grade 3 (expanded) blastocyst—hatching would be Grade 5-6. The claim that the ICM is in the 'center-left' and the zona is thinning 'particularly on the left side' may or may not match the actual image precisely, suggesting some potential fabrication of spatial details. Overall mostly consistent with the lab data but with notable inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does an excellent job integrating BMI, PCOS, FSH, prior cycle history (RIF pattern), sperm parameters, endometrial thickness, and age. It correctly identifies the tension between high embryo quality and concerning patient history. The interpretation of FSH 8.2 as 'elevated for age 36' is debatable—8.2 is generally within normal range—but the overall integration of clinical factors is thorough and well-organized. The discussion of how obesity and PCOS interact with implantation is clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logically flows from observations to conclusions. The probability estimate of 40-60% is reasonably justified given the competing factors. The discussion of aneuploidy as a hidden variable is insightful. Minor inconsistency: calling FSH 8.2 'elevated' while also noting 'diminished reserve' is somewhat overstated for this FSH level. The statement 'proceed with transfer, do not freeze' while simultaneously recommending PGT-A for future cycles is logically consistent but could have been more nuanced about whether PGT-A on this embryo was considered. Overall coherent reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations for PGT-A in the context of RIF, hysteroscopy/endometrial biopsy workup, and metabolic optimization for PCOS are all well-aligned with ESHRE and ASRM guidelines. The Gardner grading interpretation is mostly correct. The recommendation to proceed with fresh transfer of a 3AA is reasonable. The suggestion of weight management and metformin for PCOS is evidence-based. Minor deviation: the model could have discussed the option of a freeze-all strategy given the PCOS diagnosis (risk of OHSS), which is increasingly recommended per guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, PGT-A for future cycles, hysteroscopy, weight management with specific BMI targets, metformin consideration, psychological support. The separation into immediate and future planning is helpful. Could have been more specific about timing of interventions (e.g., when to do hysteroscopy relative to next cycle), specific dietary recommendations, or alternative protocols for future stimulation. The advice to not freeze is somewhat dogmatic without discussing patient preferences."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.032865,
+  "judge_latency_ms": 25151.285250030924,
+  "judge_prompt_tokens": 2768,
+  "judge_completion_tokens": 761
+}

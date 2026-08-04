@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0505",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner score and image by stating classic full blastocyst is stage 4 and calling this stage 2/low 3; in standard Gardner grading, a 2 is an early blastocyst and a full blastocyst is stage 3. It reasonably comments on visible ICM/TE and absence of gross degeneration, but the expansion assessment is notably inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, smoking, BMI, ovarian reserve, male factor, paternal age, embryo day, and endometrial thickness, and connects them to prognosis. Minor overinterpretation exists around semen adequacy versus stated male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the prognosis estimate is internally plausible, but there is a meaningful inconsistency between the provided lab Gardner score and the model's reinterpretation of expansion stage, which weakens the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceed with transfer, smoking cessation, luteal support, consider PGT-A discussion, cavity review), but the Gardner staging explanation is incorrect and some statements about fresh transfer implications and morphology grading are not tightly aligned with standard grading conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including luteal support, smoking cessation, uterine evaluation, FET if embryos remain, and discussion of PGT-A and embryo banking. It is useful, though not highly specific on protocol-level details."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.01569,
+  "judge_latency_ms": 5896.702957994421,
+  "judge_prompt_tokens": 3170,
+  "judge_completion_tokens": 412
+}

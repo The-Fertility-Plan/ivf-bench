@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0303",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a blastocyst with strong ICM and poor TE consistent with AC morphology, but it overcalls expansion as possibly grade 4/5 despite the image and provided score being more consistent with a non-hatching full/early blastocyst; limited direct comment on zona and some reliance on conflicting metadata."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior biochemical pregnancies, tubal factor, endometrium, sperm, ovarian response, BMI, and lifestyle well, with appropriate emphasis on age-related aneuploidy and TE quality as key prognostic factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but there is a notable inconsistency in discounting the stated 2AC grade in favor of a higher expansion stage from the description/image, and the implantation estimate is only partially justified before the response cuts off."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The discussion is broadly consistent with Gardner grading principles and standard IVF prognostic considerations, especially the impact of maternal age and TE grade, though the reinterpretation of expansion grade introduces some deviation from strict grading convention."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides prognostic interpretation but offers few concrete next-step recommendations for the current transfer or future cycle planning, and the recommendations section appears incomplete."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013146,
+  "judge_latency_ms": 5670.124209005735,
+  "judge_prompt_tokens": 2597,
+  "judge_completion_tokens": 357
+}

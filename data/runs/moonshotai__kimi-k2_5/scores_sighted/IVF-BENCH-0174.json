@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2CA label and image as a low-expansion blastocyst with poor/indistinct ICM and relatively better TE, but it overstates visible detail (e.g., compact polar ICM, uniform TE, tight junctions, multinucleated epithelium, zona assessment) that cannot be reliably confirmed from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, BMI, sperm parameters, endometrium, PCOS diagnosis, and low oocyte yield with embryo quality and prognosis. Some interpretations are speculative, especially around ovarian reserve and protocol adequacy without AMH/AFC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it calls the embryo a Gardner stage 2/full blastocyst despite standard Gardner 2 being early blastocyst, treats Day 4 blastocyst transfer as unusual without clarifying possible timing/context, and gives somewhat inconsistent probability framing (<10% effective if aneuploidy considered vs 20-30% overall)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and considering age-related aneuploidy, but includes weaker or non-guideline-supported suggestions such as DHEA supplementation and assumptions about changing stimulation/increasing dose. The Gardner stage terminology is also not fully aligned with standard criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, SET, luteal support considerations, reserve testing, and protocol review. Some recommendations are useful but a few are speculative rather than clearly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014958,
+  "judge_latency_ms": 6037.464708002517,
+  "judge_prompt_tokens": 2856,
+  "judge_completion_tokens": 426
+}

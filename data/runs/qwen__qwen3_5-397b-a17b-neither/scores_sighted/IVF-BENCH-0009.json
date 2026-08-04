@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating embryo-specific morphology. It correctly noted Gardner grading is mainly for day 5/6 blastocysts and that day 4 embryos are often morula/early blastocyst, though it did not assess the visible embryo features in the provided image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, BMI, endometrium, male factor, and cycle history into prognosis reasonably well. Some links were speculative, especially inferring hidden sperm DNA issues and explaining the day 4 transfer choice."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age and transfer timing. Minor issues include speculative assumptions about trilaminar lining, DFI, and stress effects on implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but several recommendations are weaker or not guideline-driven: acupuncture/stress mitigation as medically indicated, restricting exercise to reduce uterine contractions, and suggesting PGT-A at age 34 without stronger indication. Luteal support and day 5 culture discussion are reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current transfer and future planning, including luteal support review, possible sperm DNA fragmentation testing, and consideration of blastocyst culture. Some advice is somewhat generic or speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013707,
+  "judge_latency_ms": 5078.313207995961,
+  "judge_prompt_tokens": 2764,
+  "judge_completion_tokens": 361
+}

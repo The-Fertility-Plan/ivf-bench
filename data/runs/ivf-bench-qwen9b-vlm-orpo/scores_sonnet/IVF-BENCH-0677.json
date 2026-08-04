@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description consistent with the Gardner 2AA score provided, noting the blastocoel, ICM compactness, and TE cohesion. However, the model acknowledges difficulty pinpointing the ICM due to focal plane issues and notes the embryo 'does not appear overexpanded' and 'not appear hatching,' which are appropriate observations for a stage 2 blastocyst. The description is mostly accurate but lacks precise detail about specific visible features, and some observations seem inferred from the Gardner score rather than independently derived from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (32), BMI (31.2), AMH, FSH, oocyte yield, sperm parameters, endometrial thickness, lifestyle factors, and critically the complex prior IVF history including two ectopic pregnancies. It explicitly connects each factor to its prognostic implication and discusses interactions between factors (e.g., unexplained infertility + repeated failures suggesting possible hidden pathology, ectopic history affecting monitoring strategy). The structured favorable vs. tempering factors approach is thorough."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 35-50% implantation follows coherently from the positive factors (age, morphology, reserve) balanced against negative factors (prior failures, ectopics, BMI, unknown ploidy). The live birth estimate being lower than implantation rate is correctly noted. Minor issue: the response occasionally hedges extensively without fully resolving tensions, and the day 4 blastocyst being described as both 'positive feature' and 'still untested' could be more clearly reconciled. Overall the conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommending single embryo transfer at age 32, appropriate luteal support mention, early hCG monitoring for ectopic risk, not recommending routine bed rest, appropriate discussion of PGT-A as optional rather than mandatory at age 32, and suggesting hysteroscopy/endometrial evaluation for recurrent failure. The recommendation for sperm DNA fragmentation testing in recurrent failure context is evidence-supported. Minor gap: could more explicitly reference Gardner grading criteria validation and the specific day 4 vs day 5 blastocyst developmental context per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: serial beta-hCG monitoring given ectopic history, early TVU at 5.5-6 weeks, single embryo transfer rationale, luteal support confirmation, alcohol cessation from transfer onward, and a detailed future cycle planning section covering diagnostic reassessment (endometritis, adenomyosis, hysteroscopy), sperm DNA fragmentation testing, embryology review questions, and individualized protocol considerations including PGT-A discussion. The response also offers to provide patient-friendly or clinician-style versions, demonstrating practical awareness of clinical communication needs."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.022917,
+  "judge_latency_ms": 16021.418708995043,
+  "judge_prompt_tokens": 3834,
+  "judge_completion_tokens": 761
+}

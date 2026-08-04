@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0185",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately identifies very poor ICM and TE and notes possible collapse, but it shows confusion about Gardner staging (including discussion of 1DD inconsistency and stage definitions) and adds some features not clearly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, PCOS, semen parameters, endometrium, and first-cycle status well, and correctly frames embryo quality as the dominant limiting factor, though some interactions are discussed only broadly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: favorable patient factors but poor embryo morphology drives low prognosis. Probability estimates are consistent with that conclusion, though there is some internal uncertainty around exact stage/grading interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are evidence-based (single embryo transfer, avoid empiric add-ons, no bed rest), but the grading discussion contains Gardner-stage inaccuracies and some speculative comments about Day-4 blastocyst staging and lab discrepancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, luteal support, and future-cycle review, with reasonable nuance about when to investigate sperm DNA fragmentation or PCOS metabolic factors. It is useful, though not highly specific on protocol changes."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.018723,
+  "judge_latency_ms": 6314.238500082865,
+  "judge_prompt_tokens": 4511,
+  "judge_completion_tokens": 346
+}

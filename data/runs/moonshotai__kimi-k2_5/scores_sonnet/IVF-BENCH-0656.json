@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response begins to identify a discrepancy in the Gardner score notation but is cut off mid-sentence, leaving the morphological analysis incomplete. It correctly identifies the DD grading as degenerate ICM and TE, but the expansion grade interpretation is confused - Grade 1 means early blastocyst with blastocoel <50%, yet the lab note says 'at least half the embryo.' The response starts to flag this contradiction but never resolves it, and no complete description of the image features (zona pellucida, overall appearance) is provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The response is truncated and never reaches the section on patient clinical factors. There is no integration of the patient's age (28), BMI (34.7), AMH (8.33), male factor diagnosis, sperm parameters, endometrial thickness, or any other clinical variables with the embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is cut off mid-sentence and is fundamentally incomplete. No coherent reasoning chain is established, no probability estimate is provided, and no conclusions are drawn. The partial content that exists begins to identify a contradiction in the grading but fails to resolve it, leaving the reasoning in an incoherent state."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The partial response correctly references Gardner grading criteria and begins to apply them, but the incomplete nature of the response prevents full evaluation. The identification of a potential discrepancy in the Gardner score notation shows some familiarity with grading standards, but no recommendations or guideline-based guidance is offered due to truncation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response provides zero actionable recommendations. It is cut off before reaching any clinical recommendations, transfer considerations, or future cycle planning. No practical guidance of any kind is delivered to the clinician."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011079,
+  "judge_latency_ms": 9020.629791004467,
+  "judge_prompt_tokens": 1373,
+  "judge_completion_tokens": 464
+}

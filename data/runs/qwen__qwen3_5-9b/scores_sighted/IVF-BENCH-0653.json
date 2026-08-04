@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies a blastocyst with visible blastocoel, ICM, and TE, but misstates Gardner expansion 2 as ~50% rather than blastocoel filling the embryo, and overcalls the image as fully expanded; zona/TE detail is somewhat generic rather than image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm quality, BMI, diagnosis, and first-cycle status reasonably well with prognosis, though it does not fully address the inconsistency between a Day 4 transfer label and a blastocyst-stage/Gardner score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable inconsistencies: it calls the embryo both 2BA and fully expanded, misinterprets expansion stage, and bases probability partly on that mismatch. The implantation estimate is plausible but somewhat loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles (young age favorable, PGT-A not routinely indicated in good-prognosis young patients), but the Gardner grading explanation is inaccurate and the recommendation to target BMI 19-20 is more speculative than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, luteal support, follow-up hCG, and future embryo freezing/PGT-A considerations, though recommendations are somewhat generic and not highly tailored to the Day 4/blastocyst discrepancy."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01365,
+  "judge_latency_ms": 5192.226041996037,
+  "judge_prompt_tokens": 2635,
+  "judge_completion_tokens": 383
+}

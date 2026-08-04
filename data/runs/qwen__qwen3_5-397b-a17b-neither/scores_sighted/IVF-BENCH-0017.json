@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating visible embryo features. Its general statement that a Day 4 transfer is typically morula/early blastocyst is reasonable, though the actual image appears to show an early blastocyst with cavitation, so morphology-specific analysis was omitted rather than incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior live birth, endometriosis, thin endometrium, BMI, sperm motility, and prior cycle history into prognosis and transfer planning. It connects these factors to implantation potential well, though some interactions are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a clear explanation for the implantation estimate and recommendations. Minor issues include somewhat simplified quantitative adjustments and assumptions about Day 4 transfer rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is largely consistent with standard IVF practice: it correctly notes Gardner grading is not standard for Day 4 embryos, recognizes thin endometrium as suboptimal, and treats PGT-A at age 31 as optional rather than routine. Some suggested adjuvants (G-CSF/PRP/sildenafil) have limited evidence, but this limitation was acknowledged."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future cycles, including luteal support, endometrial evaluation, possible prolonged suppression for endometriosis, and lifestyle changes. Recommendations are useful, though some are broader than strictly case-specific."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.014796,
+  "judge_latency_ms": 5359.709875003318,
+  "judge_prompt_tokens": 2922,
+  "judge_completion_tokens": 402
+}

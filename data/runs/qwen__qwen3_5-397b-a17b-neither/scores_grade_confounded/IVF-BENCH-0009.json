@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The provided data included a Gardner score of 1DD, but the response failed to analyze it and instead inferred a Day 4 morula/early blastocyst scenario, effectively ignoring the stated morphology and introducing inconsistency."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, semen data, and diagnosis with prognosis reasonably well, though some links are speculative and it does not adequately reconcile these factors with the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has major inconsistencies: it acknowledges no image, ignores the explicit 1DD grade, treats transfer day 4 as if morphology cannot be assessed, and gives a relatively optimistic implantation estimate despite a severely poor-grade embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are several deviations from evidence-based practice, including overemphasis on stress/exercise effects, assuming trilaminar endometrium without data, and suggesting PGT-A/testicular sperm in a broad way; most importantly it does not appropriately use the supplied Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical suggestions for luteal support review, future blastocyst culture, and possible male-factor workup, though some recommendations are not well tailored to the poor 1DD embryo context."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.012873,
+  "judge_latency_ms": 4349.632334000489,
+  "judge_prompt_tokens": 2511,
+  "judge_completion_tokens": 356
+}

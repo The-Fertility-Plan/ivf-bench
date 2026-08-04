@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0736",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key features consistent with a 2AB Gardner score - full blastocoel expansion, tightly packed ICM with many cells, and loose TE. However, there is a notable error: the response states the zona pellucida is 'thinning' and the embryo is 'ready for hatching or hatched,' which is inconsistent with a Grade 2 expansion (full blastocyst but not yet expanded/hatching). Grade 2 typically shows a blastocoel filling the embryo but the zona is not yet significantly thinned - that would be Grade 4-6. This conflation of expansion stages is a meaningful inaccuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age, AMH/FSH reserve markers, 100% maturation rate, endometrial thickness, and lifestyle factors are all connected to prognosis. The insight about Male Factor potentially involving sperm DNA fragmentation despite normal standard parameters is clinically astute. Minor gaps include not discussing BMI (25.5, normal) explicitly, and not addressing the antagonist protocol outcome in more depth. The interaction between alcohol use and implantation is well-noted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 40-60% range is reasonably justified with upward and downward modifiers clearly explained. The SDF hypothesis is coherent given the Male Factor diagnosis with normal standard parameters. Minor inconsistency: describing Grade 2 as 'ready for hatching' contradicts the Gardner grading system where Grade 2 is simply a full blastocyst, not near-hatching. The probability range derivation is transparent and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading, transfer timing, and endometrial receptivity thresholds. The PGT-A recommendation is reasonable but somewhat overstated for a first cycle with a young patient and good embryo - ASRM guidelines do not universally recommend PGT-A in this scenario. The FSH threshold cited (ideal <6.0) is more conservative than standard ASRM cutoffs. The AMH interpretation as 'lower end of normal' is reasonable but the stated typical threshold of >3.0 for 'high reserve' is not a standard clinical cutoff. Alcohol cessation advice aligns with guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, immediate alcohol cessation, remain smoke-free, consider PGT-A for future cycles, order SDF testing, and guidance on future stimulation protocols. The recommendation to vitrify if not transferring is practical. The SDF testing recommendation is particularly actionable and clinically relevant. Could be improved by specifying luteal phase support protocols, suggesting a specific follow-up timeline, or addressing whether a freeze-all strategy should be considered given lifestyle factors."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019614,
+  "judge_latency_ms": 16228.960792002908,
+  "judge_prompt_tokens": 2818,
+  "judge_completion_tokens": 744
+}

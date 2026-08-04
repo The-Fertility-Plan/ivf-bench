@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response likely overcalls the embryo as a 4BB expanded blastocyst with a clear ICM and blastocoel occupying most of the volume. In the image, the blastocoel appears limited/collapsed and the ICM/TE are not clearly defined, so several described features are not confidently visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior cycle history, sperm parameters, BMI, diagnosis, and endometrial thickness with embryo assessment in a clinically relevant way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the chain depends on a questionable morphology assessment and includes some overinterpretation of paternal age and 'functional barrier' from unexplained infertility."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as SET and luteal support are reasonable, but strong endorsement of PGT-A and ERA after limited failure history is more aggressive than guideline-based routine practice, and TESE/PICSI suggestions are not standard from the given data alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including additional testing options, though some recommendations would benefit from more restraint and clearer indication thresholds."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012621,
+  "judge_latency_ms": 4437.119249996613,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 329
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate embryo morphology. However, it provided no actual image-based assessment despite the task requesting one, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, BMI, PCOS, prior live birth/miscarriage/ectopic, ovarian reserve, sperm parameters, and endometrium, and relates them to prognosis and implantation potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear explanation for the probability range. Minor issues include somewhat overstating the impact of stress/alcohol and making assumptions about embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly guideline-consistent, such as SET and lifestyle optimization, but suggesting PCOS itself raises aneuploidy risk and recommending PGT-A/thrombophilia screening in this young patient are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, uterine assessment, and lifestyle changes. Some recommendations are somewhat generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014742,
+  "judge_latency_ms": 4592.647166005918,
+  "judge_prompt_tokens": 3339,
+  "judge_completion_tokens": 315
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0193",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/late morula with absent discernible ICM and poor TE, broadly consistent with 0DD. However, it overinterprets features such as visible 'fissures/cracks' and irregular zona changes that are not clearly reliable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, sperm parameters, and unexplained infertility reasonably well with the poor embryo quality. It appropriately highlights discordance between favorable patient factors and poor embryology, though some inferences (e.g., stimulation under-response) are somewhat speculative from limited cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: severe embryo dysmorphology drives prognosis despite favorable maternal factors. Minor issues include overstatement that such embryos would usually be discarded and a very strong conclusion from a single image/score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing extremely poor prognosis for a 0DD embryo and suggesting counseling and future evaluation. However, recommending cancellation as often medically preferred, implying discard based on morphology alone, and suggesting adjuncts like acupuncture/stress reduction as embryo-quality interventions are less guideline-grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step counseling for the current transfer and practical future-cycle considerations such as sperm DNA fragmentation testing, insemination method review, and protocol reassessment. Some recommendations are useful but not fully nuanced or prioritized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013551,
+  "judge_latency_ms": 5998.838708997937,
+  "judge_prompt_tokens": 2552,
+  "judge_completion_tokens": 393
+}

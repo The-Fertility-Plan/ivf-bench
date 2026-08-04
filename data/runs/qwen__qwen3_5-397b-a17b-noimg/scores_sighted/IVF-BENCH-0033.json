@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly review the image and relied on the provided Gardner description. Its comments on BB morphology are broadly consistent with the image/lab grade, but it overstates a scoring inconsistency by claiming 'full blastocyst' should be stage 3 rather than recognizing common shorthand/possible ambiguity, and it provides no image-based detail on visible collapse/ICM indistinctness."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, smoking, semen data, diagnosis, prior cycle history, and endometrial thickness with embryo quality and prognosis. Some links are speculative, especially around sperm DNA fragmentation and protocol choice, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and understandable, but there are notable issues: it treats the day-4 blastocyst as highly problematic without sufficient nuance, overinterprets the grading discrepancy, and the probability adjustments are somewhat ad hoc. Conclusions are mostly supported but not fully tight."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the response is broadly aligned with IVF practice (importance of age, smoking cessation, BB as usable quality), but there are deviations: the Gardner expansion-stage explanation is inaccurate, concern about 16 mm endometrium is somewhat overstated, and the protocol commentary is not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical steps such as verifying embryo timing, smoking cessation, and evaluating the endometrium, but the recommendations are incomplete/truncated and some are based on questionable assumptions. Useful, but not highly nuanced or fully developed."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014619,
+  "judge_latency_ms": 6059.94350000401,
+  "judge_prompt_tokens": 2788,
+  "judge_completion_tokens": 417
+}

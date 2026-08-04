@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphology description is plausible and reasonably detailed, but it hedges between 3BB and 4BB and includes features like cytoplasmic granularity that may not be reliably assessable from a single blastocyst image. Overall mostly accurate but not precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, endometrial thickness, ovarian reserve, prior failed cycles, and sperm parameters well, though it somewhat overinterprets two prior failed cycles as a difficult implantation environment without more cycle detail."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the implantation estimate follows from embryo quality plus patient factors. Minor issues include labeling two failed cycles as recurrent implantation failure and making strong inferences from limited prior-cycle information."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the response is broadly consistent with IVF practice, but recommending assisted hatching as highly recommended, suggesting immune/NK testing, and emphasizing PGT-A in a 30-year-old after two failed cycles are not strongly guideline-supported routine recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for proceeding with transfer and outlines future workup options, though some recommendations are stronger than evidence supports and would benefit from more nuance about when they are indicated."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.012333,
+  "judge_latency_ms": 3956.6257080005016,
+  "judge_prompt_tokens": 2366,
+  "judge_completion_tokens": 349
+}

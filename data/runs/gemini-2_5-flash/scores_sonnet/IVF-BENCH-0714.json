@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst features consistent with the Gardner 3AA score provided in the lab data, noting expansion, thinning zona, ICM cell cluster, and cohesive TE epithelium. However, the description is largely derived from the provided Gardner score metadata rather than independent image analysis, and the model acknowledges the image is 'grayscale and somewhat indistinct.' The morphological description adds little beyond restating the provided grading criteria, with no independent observations about specific visible features like blastocoel fill percentage, ICM positioning, or TE cell count estimation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-related aneuploidy risk, AMH/ovarian reserve implications, tubal factor diagnosis as favorable for IVF, endometrial thickness adequacy, sperm parameters, and lifestyle factors. It correctly notes the interaction between age and aneuploidy risk versus morphological quality, and connects the tubal factor diagnosis to expected IVF success. Minor gap: BMI of 28.2 is not discussed, and the moderate alcohol consumption (4-6 drinks/week) could have been more strongly flagged as a significant concern rather than 'not ideal.'"
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-65% follows reasonably from the evidence: high-quality blastocyst, good endometrial thickness, tubal factor diagnosis, offset by age-related aneuploidy risk. The response correctly notes that without PGT-A, aneuploidy risk must be factored in. The conclusion that this is a 'very promising outlook' is consistent with the evidence presented. Minor issue: the response slightly underweights the age factor at 38 in the probability estimate, as aneuploidy rates at this age can be 40-50%, which would more substantially reduce the implantation probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for top-quality blastocyst, luteal phase support, PGT-A consideration for age 38, and lifestyle counseling. The suggestion of CoQ10, DHEA, and myo-inositol for diminished ovarian reserve is appropriately caveated with 'evidence is not universally conclusive.' The embryo banking strategy is appropriate given age and AMH. Minor deviation: DHEA supplementation recommendation should be more cautiously framed as it requires careful monitoring and is not universally recommended in guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET with luteal support, alcohol cessation, PGT-A for future cycles, ovarian reserve supplements with appropriate caveats, embryo banking strategy, and counseling. The future cycle planning section provides concrete next steps. Some recommendations could be more specific (e.g., specific progesterone protocol, timing of PGT-A discussion, specific stress reduction modalities), but overall the clinician would have clear actionable guidance from this response."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.020811,
+  "judge_latency_ms": 16047.42479199922,
+  "judge_prompt_tokens": 3177,
+  "judge_completion_tokens": 752
+}

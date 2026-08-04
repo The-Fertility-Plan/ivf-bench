@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0441",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, asserting clearly distinguishable ICM and cohesive grade A TE despite the image showing a somewhat collapsed/partially obscured blastocyst with limited confidence for precise ICM/TE assessment. It largely repeats the provided Gardner score rather than critically describing the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve markers, BMI, endometrium, male factor, and paternal age with embryo quality reasonably well, though it overemphasizes paternal age and underplays maternal age-related aneuploidy risk at 36."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: calling age 36 'young' with 'low' aneuploidy risk is overstated, paternal age is treated as the dominant aneuploidy driver, and recommending both immediate transfer and freezing this embryo is internally inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with evidence-based IVF practice: 3AA is not the highest possible morphology grade, paternal age is overstated as a major cause of embryo aneuploidy, and PGT-A is presented too strongly as improving live birth rate per transfer in this context. The transfer recommendation itself is reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer, counseling, and considering sperm DNA fragmentation testing, but some recommendations are imprecise or conflicting, especially the suggestion to freeze the current embryo despite discussing transfer."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014202,
+  "judge_latency_ms": 5818.640416997368,
+  "judge_prompt_tokens": 2694,
+  "judge_completion_tokens": 408
+}

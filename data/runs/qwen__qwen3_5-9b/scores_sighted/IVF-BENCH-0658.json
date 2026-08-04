@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AB label, but the image does not clearly show a large well-defined blastocoel occupying most of the embryo; calling it high-quality/top-tier overstates the morphology, and zona thinning/ICM localization are somewhat speculative from this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, sperm quality, endometrium, BMI, and diagnosis reasonably well with prognosis, though it overinterprets the AMH/oocyte yield discrepancy and does not fully contextualize tubal factor as favorable once IVF bypasses it."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it labels 2AB as top-tier/high-quality, infers poor response from 11 oocytes despite 10 MII being a good yield, and suggests more aggressive stimulation without clear justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are standard (proceed with transfer, luteal support), but recommending more aggressive stimulation and implying poor response based on this yield are not evidence-based here; suggesting PGT-A because of high AMH/possible PCOS is weakly supported and not guideline-driven for a 32-year-old with this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and maintaining luteal support, but future-cycle advice is only moderately useful because key recommendations are too generic or based on questionable premises."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013383,
+  "judge_latency_ms": 6101.109708004515,
+  "judge_prompt_tokens": 2531,
+  "judge_completion_tokens": 386
+}

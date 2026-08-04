@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0172",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as a Day 4 compacted morula/early blastocyst and states there is no large blastocoel, whereas the image and provided grade are more consistent with a full blastocyst with visible blastocoelic cavity. It notes the grading discrepancy but ultimately anchors to an inaccurate stage assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior cycle history, sperm parameters, endometrial thickness, and ovarian response with embryo quality and prognosis. Some interpretations are overstated, such as implying recurrent implantation failure and questioning the DOR diagnosis based on one retrieval."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it highlights a grading discrepancy yet chooses the less image-concordant interpretation, treats three prior cycles as RIF without nuance, and bases prognosis partly on a potentially incorrect developmental stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard (proceed with transfer, consider uterine evaluation, assess sperm factors), but some are not strongly guideline-based or are overemphasized, especially routine ERA, empiric aspirin, and broad endorsement of PGT-A in a 29-year-old without clearer indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future workup, including luteal support review, hysteroscopy/endometritis assessment, and sperm DNA fragmentation testing. However, some suggestions lack prioritization and evidence nuance."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.0144,
+  "judge_latency_ms": 5873.543624999002,
+  "judge_prompt_tokens": 2810,
+  "judge_completion_tokens": 398
+}

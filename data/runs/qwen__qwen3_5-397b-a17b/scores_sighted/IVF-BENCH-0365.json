@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0365",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage by calling grade 2 a fully expanded blastocyst and says hatching would be grade 3; under Gardner, grade 2 is blastocoel >50% of embryo volume and full blastocyst is grade 3. It also localizes the ICM inaccurately and overcalls image-based certainty, though the loose TE description is broadly reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior live birth, endometrial thickness, oocyte yield, and the male-factor discrepancy with embryo prognosis in a generally thoughtful way. It misses AMH being unavailable and somewhat overinterprets low oocyte yield as possible DOR without enough context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: the embryo is called both 2AB and 'high-quality/excellent,' the expansion-stage interpretation is incorrect, and the implantation estimate is justified partly by broad live-birth averages rather than embryo-specific implantation data. Some causal claims (stress, BMI effect size) are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but the Gardner grading explanation is incorrect, and recommendations such as acupuncture/stress reduction as outcome-improving measures and suggesting protocol changes from limited data are not strongly guideline-based. Fresh transfer with 8 mm lining is reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, luteal support, considering stimulation review, weight optimization, and possible sperm DNA fragmentation workup. However, some recommendations are somewhat generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014208,
+  "judge_latency_ms": 6011.43804100866,
+  "judge_prompt_tokens": 2661,
+  "judge_completion_tokens": 415
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0046",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was provided and based morphology on the supplied Gardner 3AA grade rather than inventing image-specific details. However, it repeated the prompt's interpretation of '3' as expanded/thinning zona, which is somewhat imprecise relative to standard Gardner staging and not a true visual analysis of the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian response, FSH, tubal factor, prior biochemical pregnancy, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the prognosis follows from the favorable embryo and patient factors. Minor issues include slight overconfidence in the implantation estimate and some speculative links for lifestyle factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and luteal support are guideline-concordant, but recommending PGT-A, ERA/EMMA/ALICE, and thrombophilia testing after a single unsuccessful transfer/biochemical pregnancy is more aggressive than most evidence-based guidelines support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer management and contingency planning, though some future investigations are not ideally prioritized for this specific history."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015681,
+  "judge_latency_ms": 4539.57687500224,
+  "judge_prompt_tokens": 3502,
+  "judge_completion_tokens": 345
+}

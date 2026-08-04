@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0745",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst stage and references the Gardner 3AB score, describing the blastocoel cavity, ICM, and TE in general terms. However, the image actually shows a somewhat irregular, granular embryo with a complex internal structure that doesn't clearly display a pristine Grade A ICM or a well-defined Grade B TE as described. The model's description of the blastocoel as occupying the 'lower right quadrant' is partially accurate, but the characterization of the ICM as a 'dense, cohesive cluster' in the 'upper-left to central region' is somewhat imprecise given the image's grainy, complex appearance. The zona pellucida thinning observation is reasonable. Overall, the description largely echoes the provided Gardner score rather than independently analyzing the image's visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most key clinical factors: maternal age (37) and aneuploidy risk, tubal factor diagnosis as a favorable indicator, male factor (motility 30%), endometrial thickness (11mm), BMI, lifestyle factors, and the low ovarian response (4 COCs). It correctly identifies the interplay between embryo quality and patient age. Minor gap: AMH is listed as N/A but the model doesn't explicitly address this missing data point or its implications for ovarian reserve assessment beyond noting the low egg yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 35-45% is coherent with the cited SART data for the age group, adjusted upward for morphology and diagnosis. The aneuploidy ceiling concept is correctly applied. One minor inconsistency: the model recommends 'fresh transfer' but the Gardner score and clinical context don't specify whether this is a fresh or frozen cycle — the recommendation assumes fresh without fully acknowledging that a freeze-all strategy might be considered. The overall reasoning chain from evidence to conclusions is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE and ASRM guidelines: single embryo transfer recommendation, PGT-A consideration for age 37, protocol adjustment for low responders, and sperm DNA fragmentation testing for borderline parameters. The Gardner grading criteria are correctly applied. The recommendation for 'Microdose Flare' protocol is slightly dated terminology (more commonly called 'micro-dose lupron flare') and ESHRE guidelines for poor responders now favor POSEIDON criteria-based approaches, representing a minor deviation. Stress management advice is appropriately caveated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with SET, consider PGT-A in future cycles, adjust stimulation protocol, test sperm DNA fragmentation, and address stress. These are clinically useful next steps. The response could be more actionable by specifying concrete protocol adjustments (e.g., specific gonadotropin dose ranges, POSEIDON group classification) and by addressing luteal phase support or progesterone supplementation, which is a standard consideration for transfer cycles. Overall, a clinician would find this response useful and implementable."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020952,
+  "judge_latency_ms": 17719.217208999908,
+  "judge_prompt_tokens": 3059,
+  "judge_completion_tokens": 785
+}

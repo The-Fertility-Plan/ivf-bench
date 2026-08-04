@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0309",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality, minimally expanded/early blastocyst with poorly defined ICM and TE, consistent with 1DD. However, it overstates some image-specific details such as 'extruded cellular debris,' 'aneuploidy risk marker,' and 'irregular zona contour,' and the statement that blastocoel is absent/minimal is somewhat stronger than the provided Gardner stage 1."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, BMI, ovarian response, sperm quality, diagnosis, and first-cycle status well, and appropriately concludes embryo quality is the dominant limiting factor. It also notes missing AMH and endometrial data, though some factors like alcohol and stress are given more weight than is typically justified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall reasoning is structured and mostly logical, but there are notable issues: it treats Day 4 transfer as inherently non-standard/suboptimal for a blastocyst despite the embryo being more like a morula/early blastocyst, and it applies quantitative penalties for stress/alcohol/hydrosalpinx speculation without strong case-specific evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, especially regarding poor prognosis of a 1DD embryo and hydrosalpinx evaluation. However, recommendations such as thrombophilia testing for poor embryo quality, strong claims about alcohol/stress effects, and avoiding assisted hatching specifically because of degenerative TE are not well supported by standard ESHRE/ASRM guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for transfer counseling, luteal support confirmation, hydrosalpinx assessment, follow-up testing, and future cycle planning. Some recommendations are more expansive than necessary, but overall they are specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.07,
+  "judge_cost_usd": 0.016434,
+  "judge_latency_ms": 5862.753333000001,
+  "judge_prompt_tokens": 3168,
+  "judge_completion_tokens": 462
+}

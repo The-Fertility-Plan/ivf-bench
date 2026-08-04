@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0429",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst with a visible ICM on the right and generally good TE, but overstates expansion as possibly fully expanded/hatching; the image is more consistent with an early/full blastocyst without clear hatching, and zona-related detail is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, male factor, and embryo grade reasonably well, though it overinterprets AMH/response as a 'super-responder' pattern and gives paternal age somewhat disproportionate weight."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: confusion around Gardner expansion grading, questionable emphasis on paternal age lowering implantation substantially, and some unsupported claims about AMH and lingering former smoking effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Morphology discussion is partly aligned with Gardner criteria, but recommending PGT-A largely because of paternal age 41 is not well supported by major guidelines, and some grading terminology is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, standard luteal support, and considering further sperm evaluation if failure occurs; however, the PGT-A recommendation is not ideally tailored to guideline-based practice."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012483,
+  "judge_latency_ms": 4524.779792001937,
+  "judge_prompt_tokens": 2531,
+  "judge_completion_tokens": 326
+}

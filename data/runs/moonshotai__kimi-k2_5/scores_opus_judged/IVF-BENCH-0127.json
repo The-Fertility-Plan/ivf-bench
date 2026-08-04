@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0127",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphological description is detailed and consistent with a 3AA Gardner score. It correctly identifies expansion with thinning zona, compact ICM, and cohesive TE. The description of ICM location ('left side of image') and cytoplasmic texture adds specificity. Minor limitation is that some descriptions may be inferred from the Gardner score rather than purely from image observation, but overall the analysis is accurate and well-detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response explicitly addresses the disconnect between excellent embryo morphology and challenging patient history. It thoroughly considers BMI impact on endometrial receptivity, age-related aneuploidy risk (~35-40%), advanced paternal age effects on sperm DNA fragmentation, prior cycle failures suggesting implantation dysfunction, and the favorable endometrial thickness. The synthesis paragraph effectively ties these together."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimation shows transparent thinking with multiple approaches (adjustment-based and literature-based). However, the visible 'thinking out loud' process where the model recalculates and says 'Wait, this seems too low' introduces some inconsistency - the initial calculation yielded ~33% but was revised upward to ~40% without fully rigorous justification. The final range of 35-50% is reasonable but the path to get there was somewhat meandering. The dual calculation approach is intellectually honest but slightly undermines confidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines. PGT-A recommendation for age 36 with prior failures is appropriate. ERA testing for recurrent implantation failure, SDF testing for advanced paternal age, thrombophilia screening given miscarriage history, aspirin for BMI >30, and progesterone support recommendations all align with current evidence-based practice. Gardner grading interpretation is accurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: alcohol cessation, low-dose aspirin, dual-route progesterone, ultrasound-guided transfer, embryo glue consideration, PGT-A for future cycles, ERA testing, SDF testing with specific thresholds (>25-30%), and antioxidant therapy. The response provides clear next steps for both this transfer and future planning. The response was cut off at the end (thrombophilia screening section incomplete), which slightly reduces the score, but overall the recommendations are highly actionable with specific dosages and thresholds mentioned."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.035395,
+  "judge_latency_ms": 17264.550208987202,
+  "judge_prompt_tokens": 3899,
+  "judge_completion_tokens": 636
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating embryo-specific morphology. It only gave general Gardner criteria, so it is non-assessive rather than inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: young age, prior live birth, tubal factor, endometrium, ovarian reserve, sperm quality, BMI, and lifestyle, and linked them to prognosis. It missed interaction with actual embryo morphology because none was assessed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with prognosis driven by favorable age/history and conditional on blastocyst quality. The implantation estimate is somewhat optimistic given absent morphology, but still broadly coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young good-prognosis patient, luteal support, embryo cryopreservation, and cautious/conditional discussion of PGT-A. Minor overstatement of prognosis prevents a perfect score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, lifestyle advice, and cryopreservation. Recommendations are useful, though somewhat generic because embryo-specific morphology was not available."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014427,
+  "judge_latency_ms": 4335.736209002789,
+  "judge_prompt_tokens": 3219,
+  "judge_completion_tokens": 318
+}

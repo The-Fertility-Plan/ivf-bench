@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 2BB/full blastocyst, with reasonable ICM and TE descriptions, but it overstates quality as 'high-quality/excellent,' introduces uncertainty between grade 2 and 3, and mentions zona thinning/blastocoel pole details that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometrium, ovarian response, BMI, sperm parameters, and prior outcomes well, though it overinterprets absent AMH and does not fully address the nonspecific diagnosis or how prior ectopic specifically affects transfer counseling beyond recurrence risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it calls the embryo both 2BB and possibly 3BB, labels it 'morphologically excellent' despite moderate grading, and gives a base implantation rate that seems somewhat optimistic relative to the stated embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on transfer proceeding and counseling, but recommendations such as routine thrombophilia testing, ERA, and immunologic workup are not strongly guideline-supported in this scenario, and the claim that euploid embryos have >90% live birth is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including uterine evaluation and counseling, though some suggested tests are controversial or insufficiently prioritized according to evidence strength."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013287,
+  "judge_latency_ms": 6951.489375001984,
+  "judge_prompt_tokens": 2634,
+  "judge_completion_tokens": 359
+}

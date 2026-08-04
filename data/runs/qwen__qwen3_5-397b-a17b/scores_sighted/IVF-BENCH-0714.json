@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone, calls it 'fully expanded'/'perfect,' and gives specific ICM/TE detail that is not clearly discernible in this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, ovarian reserve, tubal factor diagnosis, endometrial thickness, BMI, prior cycle history, and partner age/semen data with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, especially around age-related aneuploidy moderating morphology; minor overreach includes equating morphology with 'perfect' quality and some confident inferences from limited image detail."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with IVF practice: recognizes morphology limits, supports single embryo transfer, and notes luteal support and age-related aneuploidy. Minor deviations include calling 3AA the 'highest possible' score and somewhat strong endorsement of PGT-A/DHEA without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer strategy, luteal support, future retrieval/embryo banking, lifestyle changes, and possible sperm DNA fragmentation testing, though some suggestions could be more individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013656,
+  "judge_latency_ms": 4944.195165997371,
+  "judge_prompt_tokens": 2767,
+  "judge_completion_tokens": 357
+}

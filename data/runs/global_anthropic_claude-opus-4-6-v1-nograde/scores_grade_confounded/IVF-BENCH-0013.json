@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "Major mismatch with the provided embryo data: the case gives a Gardner score of 1DD blastocyst, but the response describes a Day 4 compacting morula with invented cell counts, fragmentation, symmetry, and cytoplasmic details not supported by the stated grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometrium, sperm parameters, cycle history, and ovarian response reasonably well, though it underuses the severe poor-quality blastocyst grading and speculates about DOR inconsistency."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is built on an incorrect morphological premise and ignores the key 1DD grade, making the implantation estimate and conclusions internally weak."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard, but the response conflicts with Gardner grading interpretation, overstates euploidy/implantation expectations for a 1DD embryo, and includes less guideline-based suggestions such as routine bed-rest commentary and broad PGT-A encouragement in a 28-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, pregnancy testing, AMH clarification, and future culture strategy, though these are partly undermined by the incorrect embryo-stage assessment."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012153,
+  "judge_latency_ms": 4035.2082919998793,
+  "judge_prompt_tokens": 2316,
+  "judge_completion_tokens": 347
+}

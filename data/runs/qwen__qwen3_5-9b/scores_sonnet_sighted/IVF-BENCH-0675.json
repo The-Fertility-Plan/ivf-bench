@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expansion stage, ICM location, and TE characteristics consistent with a 3BB grade. However, it incorrectly states the embryo 'has successfully hatched or is in the process of hatching' — a Grade 3 blastocyst is an expanded blastocyst with thinning zona but has NOT yet hatched (hatching would be Grade 4-6). This is a notable error in Gardner grading interpretation. The ICM and TE descriptions are reasonably accurate but somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo quality and prognosis. It appropriately highlights age and AMH as positive factors, addresses BMI, smoking, and endometriosis as negative factors, and contextualizes the 3BB grade within the patient's profile. It correctly notes the excellent sperm parameters eliminate male factor. Minor gap: it doesn't deeply explore how endometriosis may have affected oocyte/embryo quality or the specific interaction between obesity and endometrial receptivity beyond surface-level mention."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability adjustment rationale is clear and the 20-30% estimate follows reasonably from the evidence. Minor inconsistency: the response describes the embryo as potentially 'hatching' (morphological error) but this doesn't significantly derail the clinical reasoning. The conclusion to proceed with transfer is well-supported by the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines regarding Gardner grading, PGT-A considerations, and lifestyle counseling. However, the hatching misclassification (Grade 3 described as hatching) reflects a deviation from standard Gardner criteria. The recommendation for PGT-A is appropriate but could note ASRM guidance that PGT-A benefit in young patients (<35) remains debated. FET recommendation for endometriosis patients is evidence-supported. Smoking cessation advice is appropriate but could reference specific guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, immediate smoking cessation counseling, optimize progesterone monitoring, PGT-A for future cycles, endometrial workup if failure occurs, and FET consideration. The response provides clear next steps for both current and future cycles. Could be improved by specifying luteal phase support protocols for endometriosis patients, or mentioning ERA (Endometrial Receptivity Array) testing given two prior failures, which would add clinical specificity."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.018945,
+  "judge_latency_ms": 14664.05258300074,
+  "judge_prompt_tokens": 3020,
+  "judge_completion_tokens": 659
+}

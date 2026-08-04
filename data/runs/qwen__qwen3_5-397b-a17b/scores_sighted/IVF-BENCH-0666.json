@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes key morphology: it calls the embryo a high-quality 2AA/full blastocyst with cohesive AA TE, but the image appears more like an early/full blastocyst with somewhat indistinct ICM and less uniformly cohesive TE; it also incorrectly links stage 2 to 'full blastocyst' and suggests no thinning/hatching as if stage 3 followed full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, sperm parameters, endometrial thickness, and prior cycle history reasonably well with embryo quality, though it somewhat overinterprets AMH as 'robust' and does not deeply address the limited prognostic value of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, especially around balancing favorable embryo/patient factors against BMI-related risk, though the morphology-based premises are somewhat overstated and the implantation estimate may be a bit optimistic for an untested stage-2 blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and counseling on BMI/alcohol are guideline-concordant, but the Gardner staging explanation is inaccurate, and recommending PGT-A primarily because of high BMI/miscarriage risk is not strongly guideline-based for a 34-year-old without recurrent loss or repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable—SET, luteal support, alcohol cessation, and future weight optimization—but they are somewhat generic and do not discuss alternatives such as fresh vs frozen considerations, metabolic optimization, or how future embryo banking decisions would depend on outcomes."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013941,
+  "judge_latency_ms": 5638.605833009933,
+  "judge_prompt_tokens": 2512,
+  "judge_completion_tokens": 427
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0341",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: the image does not clearly show a hatching/herniating blastocyst or a distinctly assessable cohesive TE, and the morphology appears less clearly expanded than described. ICM identification is plausible but not definitive from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, prior live birth, male factor context, and paternal age with embryo quality reasonably well, though it somewhat overstates paternal-age effects on aneuploidy and labels age 36 as 'prime' too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable issues: it treats the provided sperm parameters as good despite a male-factor diagnosis, overemphasizes paternal age as a major aneuploidy driver, and the implantation estimate is only moderately supported given these assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology is broadly aligned, and recognizing BMI as a prognostic factor is appropriate, but the morphology interpretation is not well matched to the image and the statement about paternal age being strongly associated with embryonic aneuploidy is overstated relative to standard guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Recommendations are limited and incomplete; 'proceed with transfer' is generic, and there is little specific guidance on transfer strategy, counseling, luteal support/endometrial considerations, or future cycle planning beyond broad comments."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.0126,
+  "judge_latency_ms": 5412.238624994643,
+  "judge_prompt_tokens": 2370,
+  "judge_completion_tokens": 366
+}

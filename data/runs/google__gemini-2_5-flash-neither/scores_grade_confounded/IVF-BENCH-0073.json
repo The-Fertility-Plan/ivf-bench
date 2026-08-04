@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is unavailable and fails to use the provided 4AA grading, so it omits key known morphology rather than analyzing it."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, endometrium, sperm data, diagnosis, and cycle context, though it misses linking prognosis to the known 4AA embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it contains a major internal inconsistency by claiming morphology/Gardner score are unavailable despite being provided, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but suggesting ERA/endometrial receptivity assessment and relatively early PGT-A consideration is somewhat overextended for a first-cycle good-prognosis patient, and ignoring the provided Gardner grade departs from standard embryo assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, luteal support, counseling, and future evaluation, though some suggestions are generic and less tailored than they could be given the known 4AA embryo."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015354,
+  "judge_latency_ms": 3698.960417001217,
+  "judge_prompt_tokens": 3473,
+  "judge_completion_tokens": 329
+}

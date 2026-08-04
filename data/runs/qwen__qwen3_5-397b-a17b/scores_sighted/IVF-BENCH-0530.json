@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with indistinct ICM/TE and degenerative appearance, but it misstates the Gardner expansion definition by saying stage 1 is less than half the embryo, whereas the provided lab data defines blastocoel at least half the embryo; it also overcalls collapse/non-viability from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, DOR, low oocyte yield, prior miscarriage, paternal age, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links (e.g., sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it makes overly absolute conclusions ('non-viable,' 'no chance') from morphology alone and from a single static image, which weakens the logic behind the near-zero prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned in recognizing very poor prognosis for a 1DD embryo and suggesting protocol review and counseling, but recommending PGT-A strongly in a low-yield DOR patient and stating such embryos are typically discarded/should not be transferred is more categorical than guideline-based practice supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps including counseling against transfer, protocol reassessment, consideration of sperm DNA fragmentation testing, and future-cycle planning; however, the recommendations would be stronger with more nuance about patient preference and clinic policy."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013635,
+  "judge_latency_ms": 5596.127040989813,
+  "judge_prompt_tokens": 2570,
+  "judge_completion_tokens": 395
+}

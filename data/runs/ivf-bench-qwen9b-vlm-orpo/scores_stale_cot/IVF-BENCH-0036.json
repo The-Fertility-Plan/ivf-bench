@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst and absent/poor ICM and TE, but it adds uncertain image-specific details such as collapse, fragmentation/debris, and no obvious hatching that may not be reliably inferable from a single static image; it also mishandles the Gardner '0' notation in one section."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, DOR, prior live birth, endometrial thickness, BMI, sperm parameters, and partner age with embryo quality and prognosis. AMH is unavailable and appropriately not overused, though some interactions could be more tightly linked to the day-4 context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical: poor morphology plus age-related aneuploidy risk leads to low implantation odds. Minor issues include inconsistent discussion of Gardner staging and some speculative comments, but the overall conclusion is coherent and supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: cautious counseling, standard luteal support, no bed rest, avoidance of unproven add-ons, and nuanced PGT-A discussion. Small deviations include overconfidence in specific prognosis from morphology alone and some imprecision around Gardner grading terminology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future cycles, including counseling, SET, luteal support, reserve reassessment, protocol review, and possible PGT-A/embryo banking. Useful and specific, though not highly tailored beyond standard IVF planning."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.017208,
+  "judge_latency_ms": 7284.165333025157,
+  "judge_prompt_tokens": 3831,
+  "judge_completion_tokens": 381
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score was not provided, despite explicit data showing 4AA. It therefore fails to describe the known morphology and omits key blastocyst features available from the grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, sperm, endometrium, prior cycle, and diagnosis, and relates them to prognosis, though it misses integration with the actual provided 4AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is generally structured, but a major internal flaw is the repeated claim that embryo morphology/Gardner score is unavailable when it was provided. This materially weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET at age 35, luteal support, and selective consideration of PGT-A are broadly guideline-consistent. Minor overreach includes suggesting immunologic testing/ERA-type testing despite limited routine evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, embryo selection, luteal support, and uterine evaluation if unsuccessful, though it is limited by not using the known 4AA grade."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014415,
+  "judge_latency_ms": 4023.3613749951473,
+  "judge_prompt_tokens": 3110,
+  "judge_completion_tokens": 339
+}

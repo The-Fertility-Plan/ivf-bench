@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment with expansion, ICM, TE, and zona comments, but assigns fairly specific features and a Gardner grade despite image uncertainty and some overinterpretation (e.g., exact ICM location, early hatching/thinning details)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor context, endometrium, and first-cycle status well with embryo prognosis, though some links (stress/alcohol effects, male factor implications) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, and the implantation estimate is explained transparently via age-related euploidy and morphology; minor issues include speculative assumptions and slight overconfidence in morphology-based grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles and Gardner-style grading, but recommending PGT-A as 'highly recommended' for future cycles in a 36-year-old first-cycle male-factor case is stronger than guideline-based evidence supports; some lifestyle statements are also more advisory than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives practical next steps for transfer and future planning, including proceeding if no OHSS risk, luteal support, lifestyle modification, and possible sperm DNA fragmentation testing; however, recommendations could be more nuanced regarding fresh transfer criteria and PGT-A indications."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012474,
+  "judge_latency_ms": 4275.330583004688,
+  "judge_prompt_tokens": 2423,
+  "judge_completion_tokens": 347
+}

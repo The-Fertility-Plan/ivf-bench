@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst despite the provided Gardner score of 2BA indicating a full blastocyst, and it does not accurately address ICM/TE features consistent with 2BA."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, prior miscarriages, sperm quality, and endometrium, and connects them to prognosis, though some points are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable inconsistencies such as relying on an incorrect developmental stage and mixing implantation and live-birth/miscarriage reasoning in the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are guideline-consistent (SET, RPL workup, uterine assessment), but others are weakly supported or not routinely recommended, such as NK/HLA testing, intralipids/IVIG, endometrial scratch, and broad PGT-A endorsement in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and future evaluation, including SET, luteal support, and RPL workup, though several suggested adjuncts are not well-evidenced."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015807,
+  "judge_latency_ms": 4053.6798750035814,
+  "judge_prompt_tokens": 3494,
+  "judge_completion_tokens": 355
+}

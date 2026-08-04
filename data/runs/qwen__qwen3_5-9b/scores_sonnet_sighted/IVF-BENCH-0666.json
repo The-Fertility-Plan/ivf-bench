@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's expansion stage, ICM, and TE consistent with the 2AA Gardner score. It correctly identifies the blastocoel, tightly packed ICM, and cohesive TE epithelium. Minor deduction for not commenting on zona pellucida status (which appears intact and visible in the image) and the slight hedging on TE description ('slightly translucent in areas') which introduces minor uncertainty not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well — age, AMH, BMI, endometrial thickness, and sperm parameters are all connected to embryo quality and prognosis. It correctly identifies BMI as the dominant risk modifier and links AMH to future cycle planning. Minor gap: the 'Diagnosis: Other' is not addressed, and the moderate alcohol consumption (4-6/week) could have been more strongly integrated into the implantation probability adjustment rather than just mentioned in recommendations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 45-55% follows logically from the stated base rate (~60-70%) adjusted downward for BMI (-10-20%). The reasoning chain is clear and consistent throughout. Minor issue: the AMH is described as indicating 'diminished ovarian reserve' but 1.95 ng/mL is borderline-low rather than clearly diminished, and its use as a probability dampener is not fully justified since the stimulation response was good. Overall the logic is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines — proceeding with transfer of a high-quality blastocyst, endometrial thickness assessment, lifestyle counseling, and PGT-A consideration are all evidence-based. The metabolic workup suggestion for BMI >35 aligns with clinical practice. Minor deduction: the response mentions Metformin as potentially applicable without PCOS diagnosis confirmed, and the framing of AMH 1.95 as 'diminished ovarian reserve' slightly deviates from standard thresholds (typically <1.0-1.1 ng/mL per ESHRE)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, alcohol cessation, metabolic workup (HbA1c, fasting insulin), PGT-A consideration for future cycles, and dietitian/endocrinologist referral. The immediate vs. future planning distinction is useful for clinicians. Minor gap: no mention of luteal phase support protocol specifics, no discussion of progesterone monitoring timing, and the weight loss recommendation before transfer is acknowledged as time-limited but not given a realistic timeline or threshold."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019263,
+  "judge_latency_ms": 15641.845999998623,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 693
+}

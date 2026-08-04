@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response explicitly ignores the provided Gardner score 0DD and instead assumes a good/excellent blastocyst (e.g., 4AA/5AA), which is a major fabrication and opposite of the documented poor morphology with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, sperm, diagnosis, endometrium, and lifestyle, though it fails to connect these appropriately to the actual very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but the core logic is undermined by the unjustified assumption of a high-quality embryo despite explicit lab data showing 0DD, leading to an implausibly high implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (SET, luteal support, cryopreservation), but the assessment departs from Gardner grading interpretation and overstates prognosis; suggestions like ERA/immunologic testing are not guideline-forward for routine planning."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer, lifestyle, luteal support, and future cycle review, though these are based on an incorrect embryo-quality premise and therefore only partially useful."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013707,
+  "judge_latency_ms": 4052.7612500009127,
+  "judge_prompt_tokens": 2954,
+  "judge_completion_tokens": 323
+}

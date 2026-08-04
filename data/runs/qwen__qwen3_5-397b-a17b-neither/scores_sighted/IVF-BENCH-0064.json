@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0064",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model correctly stated that no image was available to it and did not fabricate a Gardner grade or visible embryo features. It only mentioned generic elements that could not be assessed. Minor deduction because it still framed a 'morphological analysis' as a statistical projection rather than explicitly stopping at non-assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, oocyte yield, sperm parameters, diagnosis, endometrial thickness, prior IVF history, and lifestyle factors into prognosis. It connected advanced maternal age to aneuploidy risk and reserve to embryo banking potential, though some inferences (possible PCOS, hidden male factor/DFI) were speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and largely consistent: age-driven aneuploidy risk lowers success despite decent reserve and a good lining. Probability estimates broadly follow the argument. Small issues include speculative assumptions and recommending fresh or frozen transfer without cycle-specific details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (counseling on age-related aneuploidy, lifestyle optimization, consideration of PGT-A, early follow-up), but there are some deviations or overstatements: PGT-A as 'most effective' and strongly recommended is more controversial than presented, TESE for high DFI is not standard first-line guidance, and 'robust progesterone support given the age and Male Factor' is not specifically guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, luteal support, beta-hCG timing, early ultrasound, lifestyle changes, and future-cycle considerations such as embryo banking and further male-factor workup. It is useful, though some recommendations are somewhat generic and a few are speculative."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.01578,
+  "judge_latency_ms": 6285.192415991332,
+  "judge_prompt_tokens": 2990,
+  "judge_completion_tokens": 454
+}

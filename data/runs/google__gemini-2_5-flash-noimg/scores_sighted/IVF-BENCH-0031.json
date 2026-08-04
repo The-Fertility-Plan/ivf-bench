@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and relies on the supplied Gardner 2BB grade rather than inventing image-specific details. Its morphology summary is broadly consistent with 2BB, but it repeats an inaccurate definition of expansion 2 as a 'full blastocyst' and does not address visible image features such as the somewhat irregular blastocoel/ICM appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian response, prior live birth, endometrium, sperm, and smoking, and connects them to prognosis. It somewhat overinterprets the DOR label versus the reassuring AMH/FSH and does not fully address the inconsistency between a Day 4 transfer and a Gardner blastocyst score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable issues: it accepts the provided expansion definition without questioning it, speculates about a Day 4 blastocyst as potentially rapid development, and gives a relatively optimistic implantation estimate despite fair morphology and smoking. These are moderate rather than severe inconsistencies."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are standard and evidence-based (smoking cessation, prenatal vitamins, luteal support, careful transfer). However, the discussion of PGT-A is somewhat overextended for a 29-year-old with prior live birth, and the handling of the Day 4/2BB inconsistency and Gardner staging terminology is not fully aligned with strict grading conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical for both the current transfer and future planning, especially around smoking cessation, supplementation, luteal support, and counseling. They are useful clinically, though some suggestions (such as PGT-A and embryo banking) are a bit broad and not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.017817,
+  "judge_latency_ms": 6135.311459001969,
+  "judge_prompt_tokens": 3634,
+  "judge_completion_tokens": 461
+}

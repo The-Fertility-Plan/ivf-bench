@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies a poor-quality very early blastocyst/morula-like embryo with poorly defined ICM/TE, but incorrectly calls it 'Stage 3' and adds unsupported details such as 10-12 visible cells and shrunken appearance; limited discussion of zona and actual blastocoel morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, prior biochemical pregnancy, sperm parameters, BMI, and endometrium with embryo quality reasonably well, though it overstates paternal age impact and labels the patient a poor responder too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low prognosis follows from the poor embryo grade, but there are notable inconsistencies: confusion about staging, overinterpretation of day-4 vs Gardner discrepancy, and some conclusions stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Acknowledges the mismatch between day-4 transfer and Gardner grading, but recommendations such as 'Do Not Transfer This Embryo' and early discussion of donor eggs are too categorical and not well aligned with standard IVF practice when a poor-quality embryo may still be transferred if no alternatives exist."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as clarifying embryo stage and considering future protocol adjustments, but several recommendations are overly broad or insufficiently nuanced for immediate clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013155,
+  "judge_latency_ms": 4849.70937500475,
+  "judge_prompt_tokens": 2645,
+  "judge_completion_tokens": 348
+}

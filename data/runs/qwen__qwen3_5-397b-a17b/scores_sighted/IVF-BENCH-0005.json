@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and misinterprets staging: Gardner 2 is an early blastocyst, not a full blastocyst, and the image does not clearly show a tightly packed prominent ICM or uniformly cohesive grade-A TE. Description of zona thinning and precise ICM location is more confident than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior failed cycles, endometrial thickness, and semen parameters with prognosis reasonably well, though some links (e.g., inferred PCOS phenotype) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: incorrect blastocyst stage interpretation, questionable concern about Day-4 blastocyst transfer asynchrony, and a probability estimate that may be overly reduced based on assumptions not firmly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines: ERA, NK-cell/immune testing, and empiric aspirin/heparin are not routinely recommended for recurrent implantation failure without specific indications; PGT-A is presented too strongly for a 32-year-old. The grading interpretation is also inconsistent with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for current transfer support and future evaluation, but some proposed actions are not evidence-based enough to merit the highest score."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014073,
+  "judge_latency_ms": 5566.275083008804,
+  "judge_prompt_tokens": 2801,
+  "judge_completion_tokens": 378
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0092",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided Gardner 3AA text. Its description of expanded blastocyst, good ICM, good TE, and thinning zona matches the lab grade, but it overstates 3AA as 'top-tier/highest visual potential' and says 'fully expanded,' whereas stage 3 is expanded rather than fully hatched; no image-specific morphology was assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, PCOS/high ovarian response, AMH, prior live birth, endometrial thickness, BMI/lifestyle, and sperm motility with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to embryo grade and maternal age. Minor issues include some overconfident statements about morphology and assumptions such as likely ICSI/FET despite these not being provided."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-quality blastocyst, OHSS awareness in PCOS, luteal support, and discussion of PGT-A at advanced maternal age. Small deviations include somewhat strong endorsement of freeze-all/FET and PGT-A framing beyond what guidelines universally mandate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical steps for transfer management and future planning, including SET, OHSS monitoring, luteal support, and possible sperm DNA fragmentation testing. It is useful, though some advice is conditional on assumptions not confirmed in the case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015387,
+  "judge_latency_ms": 6078.1821249984205,
+  "judge_prompt_tokens": 3054,
+  "judge_completion_tokens": 415
+}

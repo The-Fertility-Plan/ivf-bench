@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately limited itself to the reported 1DD score and did not fabricate detailed image findings, but it introduced some overconfident claims such as definite developmental arrest/non-viability and discussed a stage-description discrepancy without resolving it. Since no image-based morphology was actually analyzed, accuracy is only moderate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior cycle history, male factor, partner age, endometrial thickness, BMI, and ovarian response with embryo quality in a clinically meaningful way. Some links are somewhat speculative (e.g., sperm DNA fragmentation, BMI effects), preventing a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it treats 1DD as essentially futile with near-certainty, labels prior outcomes as RIF despite biochemical pregnancies, and infers developmental arrest from limited data. The probability estimate is more assertive than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are not strongly guideline-based or are overstated, including 'do not transfer' as a blanket recommendation, ERA use, and strong endorsement of PGT-A/TESE based on this information alone. Gardner grading interpretation is also somewhat inconsistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current transfer counseling and future workup, including SDF testing, protocol review, and consideration of genetic testing. However, some recommendations are too categorical or speculative, so they are useful but not ideally nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015213,
+  "judge_latency_ms": 5454.962083007558,
+  "judge_prompt_tokens": 3016,
+  "judge_completion_tokens": 411
+}

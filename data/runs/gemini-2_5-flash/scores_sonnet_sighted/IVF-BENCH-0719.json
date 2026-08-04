@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: expanded blastocyst with thinned zona, well-defined ICM as a tightly packed cluster, and cohesive TE epithelium. The description aligns well with the Gardner 3AA score. Minor limitation is that the description largely mirrors the provided Gardner score data rather than adding independent morphological observations from the image itself, such as noting the blastocoel cavity size or any subtle TE irregularities visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-related aneuploidy risk, DOR implications (AMH 0.59, FSH 9.5), endometrial thickness favorability, lifestyle factors, and sperm parameters. It correctly contextualizes the 5 MII oocytes as a reasonable yield for DOR. Minor gap: sperm parameters (33.5M/mL, 61.1% motile - borderline normal) are not explicitly discussed in relation to fertilization quality or embryo development potential, and BMI's minimal impact is not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 55-65% implantation probability estimate is reasonably derived from the embryo quality, endometrial thickness, and age considerations. The response correctly notes that DOR affects future cycles more than the current embryo's implantation potential. Minor issue: the response slightly underweights the aneuploidy risk at age 38 (which could push probability lower) while simultaneously acknowledging it, creating a mild tension in the probability justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, PGT-A consideration for age 38 with DOR, luteal phase support, and discussion of donor eggs as future option. The assisted hatching recommendation is somewhat controversial - current evidence does not strongly support routine AH for good-quality blastocysts with already-thinned zona, and ESHRE guidelines do not recommend it routinely. This represents a minor deviation from evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including SET, consideration of AH, luteal phase support, PGT-A for future cycles, protocol adjustment options (antagonist, DHEA, CoQ10), embryo banking strategy, and donor egg counseling timeline. Future cycle planning is well-structured. Slight deduction because some recommendations (e.g., 'review current cycle data') are somewhat generic, and the response could be more specific about timing of PGT-A discussion or specific luteal support protocols."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021171,
+  "judge_latency_ms": 15492.499375002808,
+  "judge_prompt_tokens": 3647,
+  "judge_completion_tokens": 682
+}

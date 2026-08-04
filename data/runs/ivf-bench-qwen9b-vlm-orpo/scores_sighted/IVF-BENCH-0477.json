@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0477",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable but somewhat overcalls quality from the image alone. The embryo appears more like an early/full blastocyst with somewhat indistinct ICM and uneven TE in this frame; calling both ICM and TE clearly favorable relies heavily on the provided 2AA rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Integrates maternal age, tubal factor, ovarian response, BMI, sperm parameters, endometrium, and prior cycle history well, and appropriately emphasizes age-related aneuploidy as the main modifier of prognosis despite good morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, especially around morphology versus ploidy. Minor issue: it labels the embryo as good-quality while also noting visible features that are less clearly AA on the image, but overall conclusions remain supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading concepts and standard IVF counseling: SET, caution about add-ons, discussion of PGT-A at age 38, and attention to hydrosalpinx/uterine cavity. Slight limitation is some speculative management detail without full cycle context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including luteal support review, SET, reassessment of tubal/uterine factors, and stimulation review. Useful and nuanced, though not highly specific to protocol-level decisions."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015777,
+  "judge_latency_ms": 5431.63066598936,
+  "judge_prompt_tokens": 3379,
+  "judge_completion_tokens": 376
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0083",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated it could not visually assess morphology and avoided assigning a false Gardner grade. It only mentioned generic features as unassessable; minor deduction because it still referenced inferred blastocyst status from day-5 transfer rather than image-based morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated maternal age, ovarian response, prior miscarriage, tubal factor, endometrial thickness, sperm parameters, BMI, and lifestyle factors into prognosis and embryo competence in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and largely consistent, with prognosis driven mainly by age-related aneuploidy and supported by the clinical context. Minor issues include some overconfident statements about tubal factor advantage and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including counseling, SET, and discussion of PGT-A. However, suggestions such as TESE for elevated sperm DNA fragmentation and strong claims about stress/cortisol are not standard guideline-based recommendations, and proceeding without nuanced discussion of fresh vs freeze-all/PGT-A tradeoffs lowers alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer counseling, luteal support, SET, future PGT-A discussion, sperm DNA fragmentation testing, embryo banking, lifestyle optimization, and donor-oocyte counseling. Slightly reduced because some recommendations are somewhat generic or controversial."
+    }
+  ],
+  "extracted_probability": 0.125,
+  "judge_cost_usd": 0.01401,
+  "judge_latency_ms": 5178.888416005066,
+  "judge_prompt_tokens": 2885,
+  "judge_completion_tokens": 357
+}

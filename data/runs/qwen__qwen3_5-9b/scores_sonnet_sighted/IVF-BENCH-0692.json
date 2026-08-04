@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0692",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, ICM as a distinct cellular cluster, and TE as a cohesive epithelial layer, consistent with the 3AA Gardner score. The description of ICM location on the left and TE on the right is reasonable. Minor issue: the image appears to show some fragmentation or irregular cellular appearance that the model doesn't critically address, and the blastocyst may not be perfectly classic 3AA morphology based on visual inspection, but overall the description is well-aligned with the provided grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age (36), AMH (2.8), oocyte yield, endometrial thickness (12mm), and sperm parameters effectively. It connects these factors to embryo quality and implantation potential. It notes the male factor diagnosis and paternal age. However, it does not deeply explore the interaction between male factor infertility and potential embryo quality implications (e.g., sperm DNA fragmentation risk), and BMI integration is absent. The response is cut off before completing sections 3-5, limiting full evaluation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning presented is generally logical and consistent — high-grade embryo, good ovarian reserve, optimal endometrial thickness all pointing toward favorable prognosis. However, the response is truncated and does not complete the risk factors section, probability estimate, or recommendations, making it impossible to evaluate whether the full reasoning chain is coherent and whether conclusions are consistently supported throughout. The partial content shown has no contradictions but is incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response correctly applies Gardner grading criteria and references appropriate thresholds (endometrial thickness >7mm acceptable, >10mm optimal; AMH interpretation). The mention of euploid probability at age 36 is reasonable. However, the response is cut off before recommendations are made, so alignment with ESHRE/ASRM guidelines on single embryo transfer, PGT-A considerations for age 36, or male factor management cannot be assessed. No clear guideline citations or deviations noted in visible content."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated and does not reach the recommendations section (sections 4 and 5 are missing). No implantation probability estimate is provided, and no specific clinical next steps, transfer recommendations, or future cycle planning advice is given. The visible content is largely descriptive/analytical without actionable guidance, significantly limiting its practical clinical utility."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.015759,
+  "judge_latency_ms": 15800.761959006195,
+  "judge_prompt_tokens": 2108,
+  "judge_completion_tokens": 629
+}

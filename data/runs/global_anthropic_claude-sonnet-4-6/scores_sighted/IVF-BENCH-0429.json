@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0429",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies a blastocyst with a large blastocoel, intact zona, compact ICM, and reasonably cohesive TE. It appropriately notes the grading discrepancy between the stated 2AA and the descriptor of a full blastocyst. Minor overcalling of TE/ICM quality from a single image and some uncertainty between stage 2-3 prevent a perfect score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrial thickness, male factor context, and cycle history with embryo quality and prognosis. However, some links are overstated or weakly supported, such as BMI 19.8 being a concern and alcohol having a quantified direct effect in this specific setting."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is tied to embryo and patient factors, but there are notable issues: it says the estimate assumes euploidy despite the embryo being untested, and some effect-size adjustments appear arbitrary. A few conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading discussion is appropriate and much of the counseling is broadly evidence-based, but several recommendations are not well aligned with standard IVF guidance: endometrial scratch, routine ERA after one failure, BMI optimization from 19.8 to 21-23, and strong endorsement of PGT-A at age 35 are not guideline-level recommendations for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps such as verifying grading/data discrepancies, standard luteal support, lifestyle counseling, and possible future male-factor workup. Some recommendations are practical, though a few are overly prescriptive or not well justified for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.016758,
+  "judge_latency_ms": 6559.616875005304,
+  "judge_prompt_tokens": 3491,
+  "judge_completion_tokens": 419
+}

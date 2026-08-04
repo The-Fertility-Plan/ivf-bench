@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0429",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable blastocyst description, but it overcalls quality by asserting clearly visible A-grade ICM/TE and suggests 3AA/4AA despite the image and provided grade being 2AA; some features are less distinct than stated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor, sperm parameters, endometrium, and first-cycle status with embryo quality in a clinically meaningful way, though a few points are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally logical, but there are inconsistencies: it calls the profile 'highly favorable' and sperm parameters 'excellent' despite a male-factor diagnosis, and it notes the grading discrepancy without resolving it carefully. The response is also incomplete/truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with Gardner grading concepts and standard IVF prognostic factors, but it misinterprets/overrides the stated expansion grade and overstates prognosis; recommendations are not fully developed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides limited practical next steps; the recommendations section is incomplete and lacks specific transfer management or future-cycle planning details."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01173,
+  "judge_latency_ms": 4582.95516599901,
+  "judge_prompt_tokens": 2395,
+  "judge_completion_tokens": 303
+}

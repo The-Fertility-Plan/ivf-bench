@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key features of a 3AA blastocyst including expansion stage, thinning zona pellucida, ICM cluster, and TE epithelium. However, it acknowledges image resolution limitations and provides somewhat generic descriptions rather than precise morphological observations tied specifically to visible image features. The description of the blastocoel cavity being 'prominent on the right side' and ICM in 'central/left region' suggests some attempt at image-specific analysis, but overall the morphological commentary largely restates the Gardner score criteria rather than independently confirming them from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (34), ovarian reserve markers (AMH 1.59, FSH 8.8), paternal age (40), sperm parameters, endometrial thickness (8.5mm), smoking status, and previous failed cycle. It connects these factors meaningfully to embryo quality and prognosis. Minor gap: BMI of 28.2 is not discussed despite being slightly elevated and potentially relevant to implantation. Tubal factor diagnosis is mentioned implicitly but not explicitly discussed in terms of its impact on transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 30-45% follows reasonably from the stated adjustments to the base rate. The recommendation to consider FET to allow smoking cessation is coherent with the identified risk. The nuanced PGT-A discussion (recommending against it if only one blastocyst) is internally consistent. Minor issue: the response suggests a base rate of 50-60% for a 3AA at age 34, then applies a 10-15% reduction for smoking, which would mathematically yield ~35-50%, making the stated 30-45% range slightly inconsistent with the arithmetic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines. The Gardner grading criteria are correctly applied. The advice against PGT-A when only one blastocyst is available aligns with current guidelines. Smoking cessation counseling is evidence-based. The suggestion to consider antagonist protocol for future cycles is appropriate. However, the suggestion of donor oocytes after 'multiple cycle failures' for a 34-year-old with AMH 1.59 (low-normal but not severely diminished) may be premature and not fully aligned with standard guidelines which would typically explore more options first."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer (or FET after smoking cessation), strong smoking cessation counseling with suggested timeline (4-6 weeks abstinence), nuanced PGT-A guidance based on embryo availability, and future protocol adjustments. The response provides clear next steps and considers alternatives. It could be improved by specifying luteal phase support protocols, addressing the tubal factor more directly in transfer planning, or discussing ERA testing given the previous failed cycle."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.019326,
+  "judge_latency_ms": 13787.734332996479,
+  "judge_prompt_tokens": 2737,
+  "judge_completion_tokens": 741
+}

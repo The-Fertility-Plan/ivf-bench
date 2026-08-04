@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0698",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel cavity, thinning zona pellucida, dense/compact ICM, and cohesive trophectoderm. The description aligns well with the provided grading criteria. Minor limitation noted in acknowledging image resolution constraints for precise cell counting, which is honest but slightly reduces specificity. No fabricated features detected."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age (26) linked to euploidy rates, PCOS connected to ovarian response and metabolic considerations, sperm parameters assessed against normal ranges, and endometrial thickness evaluated for receptivity. BMI and stress are also incorporated. Minor gap: the slightly reduced sperm motility (23.8% is actually below WHO reference value of 42% for progressive motility) is incorrectly characterized as 'well within normal limits,' which is a notable clinical oversight."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality to patient factors to probability estimate. The 60-80% range is reasonably supported by the convergence of favorable factors. The response correctly identifies PCOS as both a favorable (oocyte yield) and risk factor (metabolic). Minor inconsistency: the response recommends fresh transfer but then mentions OHSS risk from PCOS without fully reconciling whether freeze-all should be more strongly considered given PCOS diagnosis and high AMH of 5.61 ng/mL."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with Gardner grading criteria and standard IVF practice. However, several guideline deviations: (1) ESHRE/ASRM guidelines increasingly favor freeze-all strategy for PCOS patients with high AMH (5.61 ng/mL) to reduce OHSS risk and improve endometrial receptivity - the response underweights this; (2) sperm motility of 23.8% total motility is below WHO 2021 reference values and should have been flagged as mild male factor; (3) PGT-A recommendation for a 26-year-old is not strongly supported by current ESHRE guidelines which reserve it for specific indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are generally specific and practical: progesterone support, stress management, dietary guidance for PCOS, BMI targets, and contingency planning with PGT-A. The lifestyle recommendations are appropriately nuanced for PCOS. However, the freeze-all consideration deserved more definitive guidance given PCOS context, and the sperm motility issue warranted a specific recommendation (e.g., ICSI confirmation, repeat semen analysis). Overall provides a useful clinical roadmap with clear next steps."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.018339,
+  "judge_latency_ms": 14064.380625000922,
+  "judge_prompt_tokens": 2658,
+  "judge_completion_tokens": 691
+}

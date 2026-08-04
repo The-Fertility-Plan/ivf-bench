@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: the prominent ICM in the upper-right quadrant with dense granular appearance, the trophectoderm forming a cohesive epithelial layer with visible cell boundaries, and the expanded blastocoel with thinning zona pellucida. The description of polygonal TE cells in a mosaic pattern matches the image. Minor deduction because the image is somewhat low-resolution and grainy, making some described details (e.g., 'no vacuolization within ICM,' 'symmetric uniform expansion') difficult to fully confirm visually, and the response presents these with more certainty than the image quality warrants."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age and its aneuploidy implications, BMI with nuanced commentary on the borderline value, AMH/FSH as corroborating reserve markers, tubal factor diagnosis as a favorable mechanical-only etiology, the lower-than-expected MII rate with differential explanations, paternal age considerations, endometrial thickness optimization, and lifestyle factors. Each factor is explicitly connected to its impact on implantation probability and prognosis, with appropriate weighting of their relative importance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The probability estimate (55-65% implantation) is derived transparently from morphology-based data, age adjustment, diagnosis modifier, endometrial factor, and aneuploidy discount. The model explicitly shows the conditional reasoning (if euploid ~65-75%, discounted for ~20-25% aneuploidy risk yields ~58-63%). Conclusions in the summary align with the detailed analysis, and risk/benefit assessments in recommendations follow from the identified risk factors. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ASRM/ESHRE guidelines: SET recommendation for first-cycle young patient with top-grade embryo, standard luteal phase support protocol, appropriate β-hCG monitoring timeline, evidence-based advice against bed rest, Gardner grading system correctly applied, PGT-A discussion appropriately nuanced for age 32 (not universally recommended but considered for recurrent failure), and dual trigger consideration for MII optimization aligns with current stimulation literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: concrete luteal support regimen (vaginal progesterone 200mg TID), specific β-hCG timing (10-12 days post-transfer with 48h repeat), ultrasound timing (6-7 weeks), specific trigger optimization strategies (dual trigger, 36h timing, 1-day stimulation extension), clear cryopreservation counseling, alcohol cessation timing, and cumulative success rate framing for patient counseling. Alternatives are considered (e.g., dual vs. agonist trigger alone), and recommendations are appropriately stratified by current vs. future cycle context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.026223,
+  "judge_latency_ms": 18128.800375008723,
+  "judge_prompt_tokens": 5031,
+  "judge_completion_tokens": 742
+}

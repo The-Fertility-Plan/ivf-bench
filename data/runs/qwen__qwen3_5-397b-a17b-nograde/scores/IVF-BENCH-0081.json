@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment with Gardner-style grading and comments on ICM/TE/zona, but some image-specific details appear overconfident and may be inferred rather than clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior failed cycles, endometrial thickness, BMI, sperm factors, and the oocyte count discrepancy with embryo quality in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with the implantation estimate tied to morphology and prior failures, though some deductions (e.g., exact impact size, implantation mechanics/immune factors) are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on morphology, age-related aneuploidy risk, and proceeding with transfer, but recommendations such as ERA, NK-cell testing, MTHFR, and immune/thrombophilia workup are not strongly supported by major guidelines for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear next-step recommendations for transfer and future planning, including luteal support review and consideration of PGT-A and sperm DNA fragmentation testing, though some suggested tests are controversial."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011784,
+  "judge_latency_ms": 3868.947750001098,
+  "judge_prompt_tokens": 2388,
+  "judge_completion_tokens": 308
+}

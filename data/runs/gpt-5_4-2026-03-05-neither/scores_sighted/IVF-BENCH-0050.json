@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to invent morphology because no image was available to it. It made no false morphological claims, but also did not analyze visible features such as likely blastocyst expansion, ICM, or TE, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, tubal factor, ovarian response, AMH, BMI, semen parameters, endometrial thickness, and cycle history into prognosis, and correctly highlighted hydrosalpinx as a key modifier."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logical, internally consistent, and transparent about uncertainty. The implantation estimate is appropriately framed as a range driven by favorable age/prognosis but limited by missing morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well aligned with standard IVF practice: avoid fabricating a Gardner grade, favor eSET in a young good-prognosis patient, do not routinely recommend PGT-A at age 24, and address hydrosalpinx before transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including eSET, hydrosalpinx evaluation, cavity assessment, luteal support, and review of embryology data. It is useful, though limited by inability to comment on the actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01527,
+  "judge_latency_ms": 4665.215042012278,
+  "judge_prompt_tokens": 3380,
+  "judge_completion_tokens": 342
+}

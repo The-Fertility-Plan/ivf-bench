@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies a blastocyst and comments on ICM/TE/zona appropriately, but overstates expansion from the image and introduces inconsistency by suggesting Gardner 3/4 despite the provided 2AA label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, FSH, BMI, male factor, endometrium, lifestyle, and first-cycle status with embryo quality, though some points are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable inconsistencies around blastocyst expansion stage and the interpretation of a day-4 full blastocyst, and no implantation estimate is actually provided despite discussing prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles on morphology and age-related aneuploidy risk, but the discussion of Gardner staging is imprecise and the concern about BMI 18.9 is overstated relative to guideline-based significance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides broad prognostic commentary but lacks clear, specific transfer recommendations or concrete future-cycle planning steps."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011907,
+  "judge_latency_ms": 4578.739249991486,
+  "judge_prompt_tokens": 2399,
+  "judge_completion_tokens": 314
+}

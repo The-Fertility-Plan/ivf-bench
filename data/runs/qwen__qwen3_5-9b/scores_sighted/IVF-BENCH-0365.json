@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0365",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features and mislabels expansion: Gardner 2 is an early blastocyst, not a full/fully expanded blastocyst, and claims zona thinning/ready-for-transfer features that are not clearly supported by the image. ICM and relatively loose TE are broadly consistent, but key morphology details are inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior live birth, sperm parameters, endometrium, and embryo grade into prognosis reasonably well. However, it overinterprets low oocyte yield as possible low response without AMH/context and does not fully nuance the male-factor label or limits of morphology-based prediction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: the embryo is described as both Gardner 2 and 'full blastocyst,' and the implantation estimate is built partly on an incorrect staging interpretation. Some causal claims (stress, sperm quality boosting implantation of an already formed blastocyst) are somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-aligned, but there are deviations: incorrect Gardner stage interpretation, somewhat speculative recommendation changes for future stimulation, and PGT-A discussion is not well tailored to a 33-year-old with limited embryo numbers. Overall mostly aligned but not fully precise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support attention, and future considerations such as weight optimization and protocol review. Recommendations are useful, though some are generic and a few are not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013998,
+  "judge_latency_ms": 6320.412166998722,
+  "judge_prompt_tokens": 2581,
+  "judge_completion_tokens": 417
+}

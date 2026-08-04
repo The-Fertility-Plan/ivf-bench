@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0753",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features: expanded blastocyst with thinning zona, dense ICM visible at lower portion of image, and cohesive TE epithelium. The description aligns well with the visible image features. Minor issue: calls it 'zona pellucis' instead of 'zona pellucida' and the ICM location description ('6 o'clock') is reasonable but the image shows it more centrally-lower. Overall solid morphological read consistent with 3AA grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: age-embryo quality relationship, PCOS-BMI metabolic impact on implantation, endometrial thickness as favorable, sperm parameters, and prior failure history. The 'seed and soil' framing is appropriate. Minor gap: doesn't deeply explore how PCOS-specific endometrial receptivity issues (e.g., progesterone resistance, altered gene expression) may contribute beyond just metabolic factors, and the long agonist protocol choice relative to PCOS risk isn't discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 45-55% follows logically from the stated adjustments: baseline 60-70% reduced by BMI penalty (~10-15%) and prior failure history. The reasoning chain is clear and consistent throughout. Minor issue: the response simultaneously describes the embryo as 'perfect' while significantly discounting probability, which is internally consistent but could be more precisely quantified. The conclusion that this is 'the best possible scenario' while estimating below-baseline probability is slightly tension-filled but ultimately coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: single embryo transfer implied, robust luteal support for PCOS patients, PGT-A consideration after recurrent failure, hysteroscopy evaluation for RIF, and metabolic optimization with Metformin for PCOS. The mention of aspirin/heparin is appropriately caveated as conditional on thrombophilia history. Minor deviation: ASRM guidelines suggest thrombophilia testing before empirical anticoagulation, which the response handles correctly. Gardner grading criteria are accurately applied."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: proceed with transfer, robust progesterone support, weight management targets (BMI 25-27), PGT-A for future cycles, HOMA-IR screening, Metformin consideration, and hysteroscopy if failure recurs. The tiered approach (current cycle vs. future planning) is practical. Could be more specific about progesterone dosing/route, timing of hysteroscopy, or specific weight loss targets/timeline, but overall provides clear actionable guidance a clinician could implement."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019404,
+  "judge_latency_ms": 15320.791667007143,
+  "judge_prompt_tokens": 2948,
+  "judge_completion_tokens": 704
+}

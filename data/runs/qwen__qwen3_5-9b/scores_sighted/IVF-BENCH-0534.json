@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0534",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst and broadly matches the provided 4AA label, but overstates visible certainty of ICM/TE quality and calls stage 4 'hatching/herniating,' which is closer to stage 5 terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, tubal factor, sperm quality, prior cycle history, and endometrial thickness with embryo quality well, though it overinterprets the oocyte yield without AMH and misses some nuance about fresh transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: stage 4 vs hatching terminology, claiming very low aneuploidy risk, and inferring poor response from 6 oocytes without sufficient reserve data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer recommendation in a 26-year-old with a top-quality blastocyst is guideline-concordant, but suggesting PGT-A in this young low-yield patient and mentioning an 'antagonist trigger' after a long agonist cycle are not well aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for transfer and contingency planning, though some suggestions are too generic or not protocol-specific and could be more nuanced regarding fresh transfer and ovarian reserve reassessment."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013137,
+  "judge_latency_ms": 4352.8737089945935,
+  "judge_prompt_tokens": 2684,
+  "judge_completion_tokens": 339
+}

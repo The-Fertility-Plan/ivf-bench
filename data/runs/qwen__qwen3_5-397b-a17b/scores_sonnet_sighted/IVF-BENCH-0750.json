@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score (expanded blastocoel, thinned zona, cohesive TE, prominent ICM). However, the image actually shows a somewhat degenerating or poor-quality blastocyst with significant debris, vacuolization, and what appears to be a fragmented or necrotic ICM - features inconsistent with a true 3AA grade. The model largely echoes the provided Gardner score rather than critically analyzing the image, missing visible signs of cytoplasmic abnormalities and granularity. The description of 'minimal fragmentation or vacuolization' contradicts what is visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age and aneuploidy risk, AMH/FSH and ovarian response, endometrial thickness, sperm parameters, BMI, and lifestyle. It connects these factors meaningfully to prognosis. Minor gap: it doesn't deeply explore the implications of unexplained infertility beyond a brief mention, and doesn't address potential endometrial receptivity testing given the unexplained diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate (40-55%) is coherently derived from baseline age-related rates, morphology boost, and aneuploidy ceiling concept. The euploid/aneuploid conditional probability framework is sound. Minor issue: the response recommends fresh transfer while also suggesting PGT-A, which creates a slight tension without fully resolving whether freeze-all for PGT-A should have been considered before this transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: luteal phase support, consideration of PGT-A for age 37, single embryo transfer implied, sperm DNA fragmentation as second-line investigation. The discussion of PGT-A is appropriately nuanced. The fresh vs. frozen transfer recommendation is reasonable given no OHSS risk indicators. Slightly misses ASRM guidance on elective freeze-all considerations and ERA testing for unexplained infertility cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, consider PGT-A for future cycles, sperm DNA fragmentation if failure occurs, maintain lifestyle. The future cycle planning section is well-structured. Could be more specific about progesterone supplementation protocols, timing of beta-hCG testing, or what monitoring post-transfer should look like. The PGT-A recommendation for remaining frozen embryos is a practical and useful addition."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.018771,
+  "judge_latency_ms": 14195.561708009336,
+  "judge_prompt_tokens": 2922,
+  "judge_completion_tokens": 667
+}

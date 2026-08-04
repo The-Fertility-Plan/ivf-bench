@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its description broadly matches a blastocyst with strong ICM and fair TE, but it incorrectly equated expansion grade 2 with a full blastocyst and called 2AB 'top-tier'; image-specific features such as somewhat loose TE and non-fully expanded appearance were not directly assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, tubal factor diagnosis, ovarian response, endometrial thickness, BMI, prior cycle history, and sperm parameters well, and connects these factors to embryo prognosis and transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis and recommendations. Minor issues include overstating embryo quality and a questionable statement that over-expansion/hatching may correlate with lower viability in fresh transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young patient, OHSS assessment before fresh transfer, luteal support, and no routine PGT-A at age 24. Small deviations include imprecise Gardner stage interpretation and some overconfident claims about embryo ranking."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for immediate transfer management and future planning, including SET, OHSS review, luteal support considerations, cryopreservation, weight counseling, and when PGT-A would or would not be indicated."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014736,
+  "judge_latency_ms": 8999.480291007785,
+  "judge_prompt_tokens": 2982,
+  "judge_completion_tokens": 386
+}

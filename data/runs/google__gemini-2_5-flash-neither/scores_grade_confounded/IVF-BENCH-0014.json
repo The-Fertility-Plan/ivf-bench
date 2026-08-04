@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score was not provided, despite explicit lab data showing 0DD. It therefore fails to recognize the embryo as a very poor-quality early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian reserve, endometriosis, prior IVF failure, paternal age, sperm parameters, lining, and lifestyle, though it does not connect these to the known 0DD morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by the major omission of the provided embryo grade and by treating this as an unknown-quality embryo. The implantation estimate is therefore not well supported for a 0DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but there are notable deviations or overstatements, including strong endorsement of ERA and PGT-A, and insufficient emphasis on the extremely poor prognosis implied by a 0DD embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, counseling, endometriosis management, weight optimization, sperm DNA fragmentation testing, and future cycle planning, though these are weakened by the incorrect handling of embryo grade."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015435,
+  "judge_latency_ms": 4144.557749998057,
+  "judge_prompt_tokens": 3415,
+  "judge_completion_tokens": 346
+}

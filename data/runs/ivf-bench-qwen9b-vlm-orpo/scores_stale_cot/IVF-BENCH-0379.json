@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0379",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Describes generally plausible blastocyst features, but makes several unsupported image-specific claims (granularity, possible 4/5 stage, partial collapse, possible 3AB) and overinterprets morphology beyond the provided 3AA label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, semen, endometrium, BMI, first cycle status, and embryo quality well; strongest omission is limited discussion of AMH/ovarian reserve implications beyond oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are inconsistencies in staging and probability estimates (60-75%, 65-80%, 20-30% with hydrosalpinx) and some unsupported links such as TE affecting ectopic risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice on embryo quality, SET, luteal support, and hydrosalpinx concern, but includes questionable statements about Gardner staging and somewhat inflated implantation estimates for an untested 3AA embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including confirming hydrosalpinx/cavity status, luteal support, follow-up hCG/ultrasound, and future-cycle review; recommendations are useful though not highly tailored beyond standard IVF management."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018627,
+  "judge_latency_ms": 6481.193791958503,
+  "judge_prompt_tokens": 4529,
+  "judge_completion_tokens": 336
+}

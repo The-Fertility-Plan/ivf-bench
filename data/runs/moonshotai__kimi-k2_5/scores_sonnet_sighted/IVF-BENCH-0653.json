@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies ICM Grade B and TE Grade A consistent with the 2BA Gardner score, and notes the zona pellucida and blastocoel. However, it describes Expansion Grade 2 as blastocoel occupying >50% but <100%, which is inconsistent with the provided Gardner data stating 'blastocoel fills the embryo' (Grade 2 in Gardner = full blastocyst). The image actually shows a well-expanded blastocyst with visible cellular detail, and the model's expansion grade interpretation is somewhat confused. The claim that this is a Day 4 blastocyst indicating 'rapid development' is noted but the morphological description of the image itself lacks detail about specific cellular architecture visible in the micrograph."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 26 with expected euploidy rates, BMI 18.0 as a primary modifiable risk factor with quantified impact, AMH 1.91 as low-normal for age, sperm parameters as favorable, and unexplained diagnosis implications. The interaction between low BMI and endometrial receptivity is well-articulated. Minor gap: sedentary lifestyle and stress are mentioned but not deeply integrated into the clinical picture, and the Day 4 transfer timing implications for endometrial synchrony are not fully explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 35-45% follows logically from the stated adjustments to a base rate, with clear directional reasoning for each factor. The reasoning is generally consistent throughout. Minor inconsistency: the model states Day 4 blastulation indicates 'superior metabolic activity compared to Day 5 equivalents' which is an oversimplification and somewhat contradicts standard literature where Day 5 blastocysts are the norm. The final live birth estimate of ~40% is coherent with the implantation range provided. The aneuploidy risk discussion is appropriately caveated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation aligns with ESHRE/ASRM guidelines for good-prognosis patients. However, the claim that Day 4 blastocysts are superior to Day 5 is not well-supported by current evidence - Day 5 is standard and Day 4 blastocysts are actually atypical and may warrant scrutiny rather than celebration. The Gardner grading interpretation has minor inconsistencies. PGT-A recommendation for a 26-year-old first-cycle patient is debatable per current ASRM guidelines which don't routinely recommend it at this age. ERA recommendation after single failure is premature per current evidence. Progesterone dosing suggestions lack guideline-specific backing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with luteal support optimization, specific beta-hCG timing (9dp4dt), weight gain target of 3-5 kg with quantified BMI goal, conditional PGT-A and ERA recommendations, and lifestyle modification specifics. The prioritization of BMI optimization as the key modifiable factor is clinically useful. Could be improved with more specific progesterone protocol details and clearer criteria for when to escalate to PGT-A or ERA. The cumulative prognosis estimate (>80% within 2-3 cycles) adds useful context for patient counseling."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.021774,
+  "judge_latency_ms": 19156.5000420087,
+  "judge_prompt_tokens": 3108,
+  "judge_completion_tokens": 830
+}

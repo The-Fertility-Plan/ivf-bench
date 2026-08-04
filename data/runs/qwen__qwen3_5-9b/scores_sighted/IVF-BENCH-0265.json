@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0265",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image: it describes a clearly expanded 3AA blastocyst with tightly packed ICM and cohesive grade A TE, but the image shows limited focal planes, a large blastocoel, and an ICM-like cluster without confident confirmation of top-grade TE or obvious bulging/hatching. Several features are inferred from the reported grade rather than directly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, ovarian reserve markers, sperm parameters, endometrial thickness, and prior failed cycle with embryo quality in a clinically meaningful way. Some claims are overstated, but overall the interaction between embryo quality and uterine/patient factors is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but there are notable issues: calling 3AA the 'highest quality grade available' is inaccurate, AMH 1.6 is somewhat overinterpreted as diminished ovarian reserve, and the recommendation to definitely proceed fresh/'do not freeze' is not fully justified from the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF guidance: asserting a fresh transfer should definitely proceed, suggesting oral progesterone as standard luteal support, and linking endometriosis to higher mosaicism/epigenetic abnormalities for PGT-A consideration are weakly supported. General comments on embryo grading and risk factors are acceptable, but important deviations remain."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as proceeding with transfer, luteal support, weight optimization, and possible endometriosis suppression in future cycles. However, recommendations are somewhat generic and not sufficiently nuanced regarding fresh vs freeze-all decision-making, endometriosis staging, or individualized luteal protocol."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015075,
+  "judge_latency_ms": 6462.886624998646,
+  "judge_prompt_tokens": 2705,
+  "judge_completion_tokens": 464
+}

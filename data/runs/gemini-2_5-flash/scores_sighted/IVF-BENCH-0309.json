@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0309",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with absent/degenerate ICM and TE, but it misstates expansion: Gardner 1 means blastocoel less than half the embryo, whereas the provided lab score explicitly says at least half the embryo. It also adds certainty about severe degeneration beyond what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian response, sperm parameters, prior cycle history, and missing endometrial/AMH data well, and appropriately notes the discordance between favorable patient factors and poor embryo quality. Some comments on stress/alcohol are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: poor embryo morphology dominates prognosis despite favorable patient factors. Minor issues include overconfident statements such as 'effectively zero' and treating stress/alcohol as stronger determinants than evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most statements are broadly consistent with IVF practice, especially that a DD embryo has very poor prognosis. However, the strong recommendation to cancel transfer and the claim that clinics typically would not transfer such embryos are more absolute than guideline-based practice, particularly when no better embryos exist."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps: counseling, informed consent if proceeding, review of fertilization/development data, protocol review, and consideration of sperm DNA fragmentation in future cycles. Recommendations are practical, though some are somewhat generic and not fully tailored to a day-4 transfer context."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015627,
+  "judge_latency_ms": 5081.921040997258,
+  "judge_prompt_tokens": 3204,
+  "judge_completion_tokens": 401
+}

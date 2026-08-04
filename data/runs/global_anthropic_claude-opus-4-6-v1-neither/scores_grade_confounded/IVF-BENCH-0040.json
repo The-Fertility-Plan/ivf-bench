@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was documented and does not analyze the provided 2AA morphology (full blastocyst with AA ICM/TE), so it fails the core morphology task."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, BMI, PCOS, FSH, sperm, endometrium, protocol, and first-cycle status, though it misses linking the actual 2AA embryo grade to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the reasoning is weakened by ignoring the provided embryo grade and then estimating outcomes as if embryo quality were unknown."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognosis are guideline-consistent, but suggesting ERA after a single failed transfer and routine hysteroscopy/ERA-type escalation is not strongly guideline-based for this good-prognosis first-cycle patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET and luteal support, but some recommendations are overly generic or premature for this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011865,
+  "judge_latency_ms": 3258.75200000155,
+  "judge_prompt_tokens": 2505,
+  "judge_completion_tokens": 290
+}

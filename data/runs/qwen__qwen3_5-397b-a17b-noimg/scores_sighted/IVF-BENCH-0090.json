@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0090",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner grade rather than inventing image-specific findings. However, it inaccurately states stage 3 is 'fully expanded' and 'beginning to hatch'; in Gardner grading, 3 is a full blastocyst, while expanded/thinning zona is more consistent with stage 4, so the morphology discussion is only partially accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH-diagnosis discrepancy, BMI, prior failed cycle, sperm parameters, and missing endometrial data well, and connects these factors to prognosis and future management."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with appropriate caveats about missing image data and data inconsistencies. Minor issues include overcalling 3AA as the 'highest standard' and the stage 3 expansion misinterpretation, but overall conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a young patient with a high-quality blastocyst, confirming endometrial readiness, and standard luteal support are broadly guideline-consistent. Slight deviations include somewhat liberal discussion of PGT-A after only one failed cycle and mention of aspirin/thrombophilia workup without strong indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future cycles, including SET, checking lining/progesterone, resolving AMH inconsistency, and considering further testing if repeated failure occurs. It is useful, though some suggestions are a bit generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015801,
+  "judge_latency_ms": 5001.942707996932,
+  "judge_prompt_tokens": 3197,
+  "judge_completion_tokens": 414
+}

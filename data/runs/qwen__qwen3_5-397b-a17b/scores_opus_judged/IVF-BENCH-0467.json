@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0467",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the Gardner score components reasonably well but has a notable inconsistency: a Stage 2 blastocyst means the blastocoel is greater than half the volume but does NOT fill the embryo (that would be Stage 3+), yet the description says 'fills the volume of the embryo' and mentions zona thinning, which is more characteristic of Stage 3-4. The ICM and TE descriptions are consistent with the given grades but the expansion stage interpretation is inaccurate. The claim about zona thinning may or may not match the image. Overall mostly accurate but with meaningful errors in expansion staging."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The response astutely notes the discrepancy between AMH 3.6 ng/mL and the DOR diagnosis, correctly identifies the embryo as 'precious' given low yield, integrates maternal age with aneuploidy risk, considers endometrial thickness, sperm parameters, BMI, stress, and lifestyle factors. The connection between each clinical factor and prognosis is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate is well-reasoned, accounting for both morphology and untested aneuploidy risk. The observation about the AMH/DOR discrepancy is insightful. Minor issue: stating 36 is 'Advanced Maternal Age' category is slightly premature (typically 35+ but the framing could be more nuanced). The probability derivation from baseline rates adjusted for morphology and aneuploidy risk is coherent and well-explained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ASRM/ESHRE guidelines: single embryo transfer, luteal phase support, PGT-A discussion for future cycles. The Gardner grading interpretation is mostly correct. The suggestion of microdose flare protocol for poor responders is clinically appropriate. Minor deviation: the 45-55% implantation estimate is reasonable but could be more precisely anchored to published data for 2BA embryos at age 36."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear, specific recommendations for both the current transfer and future planning. Includes protocol adjustment suggestions (microdose flare, higher gonadotropin doses), PGT-A consideration, nutritional advice for low BMI, stress management strategies, and luteal support. Could be slightly more specific about progesterone dosing/route and timing of interventions, but overall very practical and clinician-useful."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.029575,
+  "judge_latency_ms": 15998.286875023041,
+  "judge_prompt_tokens": 2705,
+  "judge_completion_tokens": 642
+}

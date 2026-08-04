@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 1DD and incorrectly stated morphology could not be assessed; it then speculated about good-quality blastocysts unrelated to the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant patient factors well, including age-related aneuploidy risk, ovarian reserve, tubal factor, prior outcomes, sperm quality, and lining, though this was undermined by not linking them to the actual poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally inconsistent because it ignores the known 1DD embryo grade and bases prognosis on an assumed good-quality blastocyst, leading to a probability estimate that does not follow from the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, such as counseling on age-related aneuploidy and considering PGT-A, but emphasis on ERA/immunologic workup is not strongly guideline-supported and the failure to apply Gardner grading weakens alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers several practical next steps for transfer and future cycles, but they are only moderately useful because they are built around an incorrect assumption of good embryo quality rather than the actual very poor 1DD embryo."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014064,
+  "judge_latency_ms": 3749.469375004992,
+  "judge_prompt_tokens": 2958,
+  "judge_completion_tokens": 346
+}

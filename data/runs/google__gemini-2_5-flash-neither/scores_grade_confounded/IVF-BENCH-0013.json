@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was provided and therefore fails to analyze the known 1DD morphology; it substitutes assumptions about a Day 4 morula rather than the documented poor-quality blastocyst features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, ovarian response, sperm, BMI, lining, and cycle context reasonably well, though it does not connect these factors to the actual 1DD embryo quality because it missed the provided Gardner score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally organized but rests on a major false premise: it ignores the provided 1DD score and treats the case as an assumed good-quality Day 4 morula, leading to an implausibly optimistic prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are broadly standard, but key interpretation deviates from IVF conventions by overlooking the Gardner grade, mischaracterizing transfer-stage implications, and suggesting PGT-A/ERA in ways that are not well-tailored to this young first-cycle patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical steps such as proceeding with transfer, luteal support, counseling, and future culture considerations, but these are only moderately useful because they are based on an incorrect assessment of embryo stage/quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014226,
+  "judge_latency_ms": 4722.678458005248,
+  "judge_prompt_tokens": 3097,
+  "judge_completion_tokens": 329
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0748",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinned zona pellucida, tightly packed ICM with many cells, and cohesive TE epithelium. The description of optical noise from phase contrast/DIC microscopy shows awareness of imaging artifacts. Minor limitation is that the description largely mirrors the provided Gardner score data rather than independently identifying additional visual nuances from the image itself, but overall the morphological characterization is accurate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating multiple clinical factors including maternal age, AMH, BMI, endometrial thickness, lifestyle factors, and male factor parameters. It correctly identifies the contradiction between high embryo quality and poor ovarian response. The interaction between BMI and implantation rates is addressed, as is the significance of sperm motility in the context of male factor diagnosis. A minor gap is that the interaction between the short agonist protocol and the poor oocyte yield could have been explored more deeply in relation to the AMH level, and the former smoking history's specific impact on ovarian reserve was not fully explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 60-75% is coherent with the evidence presented, appropriately anchored to age-based baseline rates and modified by BMI and lifestyle factors. The distinction between embryo implantation probability and overall cycle success rate is a valuable and coherent clarification. Minor inconsistency: the response labels BMI 30.5 as 'obesity' when this technically falls in the overweight category (obesity begins at BMI ≥30, so this is borderline), and the impact magnitude of sedentary lifestyle on implantation rates is somewhat overstated without strong evidence basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommending single embryo transfer for a young patient with a top-grade blastocyst, acknowledging Gardner grading criteria correctly, and suggesting protocol modification for poor responders. The recommendation to consider antagonist protocol or microdose flare for future cycles is evidence-based. The lifestyle modification recommendations are consistent with published guidance. A minor gap is the absence of discussion around PGT-A considerations given the limited embryo cohort, and no mention of luteal phase support protocols which are standard in guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with SET, consider protocol change to antagonist or microdose flare, specific lifestyle targets (BMI below 30, 30 min exercise 3-4x/week), male factor optimization. The structured table format aids clinical utility. The response could be more actionable by specifying gonadotropin dose adjustments, discussing freeze-all vs. fresh transfer considerations, or addressing whether endometrial receptivity testing (ERA) might be warranted given the limited embryo availability. Overall, the recommendations provide clear next steps for both immediate transfer and future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01929,
+  "judge_latency_ms": 15952.560666999489,
+  "judge_prompt_tokens": 2705,
+  "judge_completion_tokens": 745
+}

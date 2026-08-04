@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a Day 4 compacting morula/early blastocyst despite provided lab grading of 2AA full blastocyst, and it describes indistinct ICM/TE rather than the expected well-defined AA features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior IVF outcomes, sperm parameters, diagnosis, and endometrial thickness into prognosis reasonably well, though some inferences (e.g., sperm DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but it is weakened by the incorrect embryo-stage interpretation and by probability reasoning built on that misclassification; some claims are plausible but not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but there are notable deviations: ERA and NK-cell testing are not routinely guideline-supported, and the embryo grading discussion conflicts with Gardner criteria provided in the case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future workup, including luteal support, uterine/tubal evaluation, and sperm testing, though some suggested tests are controversial or insufficiently prioritized."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012561,
+  "judge_latency_ms": 4168.893082998693,
+  "judge_prompt_tokens": 2502,
+  "judge_completion_tokens": 337
+}

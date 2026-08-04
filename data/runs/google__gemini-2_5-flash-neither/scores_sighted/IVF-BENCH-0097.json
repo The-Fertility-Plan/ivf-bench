@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no embryo image was provided and declined to describe morphology, avoiding fabrication. Since it made no incorrect morphological claims, this is fully appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, prior IVF outcome, sperm parameters, endometrium, diagnosis, and lifestyle well, and linked these to prognosis. It missed some nuance around the limited predictive value of AMH for embryo quality and overemphasized prior single-cycle failure somewhat."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the probability estimate appropriately conditioned on missing morphology. Minor issues include treating one prior failed cycle as a stronger risk signal than warranted and some speculative discussion of immunologic factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET at age 35, luteal support, review of prior cycle, and selective consideration of uterine evaluation. Small deviations include somewhat liberal mention of PGT-A, ERA/EMMA/ALICE, and immunologic workup despite limited routine guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, embryo selection, luteal support, and review of prior cycle details. Some recommendations are broad rather than tightly prioritized for this specific case."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.015489,
+  "judge_latency_ms": 4828.989041998284,
+  "judge_prompt_tokens": 3358,
+  "judge_completion_tokens": 361
+}

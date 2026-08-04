@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0311",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality, minimally cavitating embryo, but overstates visible findings by calling it a compacted morula, describing clear fragmentation/debris extrusion and granular dark cytoplasm that are not confidently discernible from the image alone. ICM and TE are indeed poorly defined, consistent with the provided 0DD grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, ovarian reserve, prior IVF outcomes, sperm factors, BMI, endometrium, and prior live birth with embryo quality in a clinically meaningful way. It slightly overinterprets prior failures as recurrent implantation failure and attributes causality somewhat too strongly to embryo factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: very poor embryo morphology plus age-related aneuploidy risk leads to low implantation potential. Minor issues include conflating Day 4 timing with Day 5 expectations and making stronger claims than the evidence supports about sperm DNA fragmentation and uterine factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including counseling about poor prognosis and consideration of PGT-A in this age group. However, statements about aggressive luteal support, routine sperm DNA fragmentation testing/TESE, acupuncture, and early donor gamete discussion are more speculative or not standard guideline-driven for this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, transfer expectations, and future-cycle planning, including PGT-A consideration and lifestyle modification. Some suggestions are useful but not sufficiently nuanced or prioritized according to strongest evidence."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014148,
+  "judge_latency_ms": 5979.081415993278,
+  "judge_prompt_tokens": 2676,
+  "judge_completion_tokens": 408
+}

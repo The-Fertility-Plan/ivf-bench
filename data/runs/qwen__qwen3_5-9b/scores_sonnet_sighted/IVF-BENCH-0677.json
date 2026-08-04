@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst stage and aligns with the provided Gardner 2AA score. However, the morphological description is somewhat generic and relies heavily on the provided laboratory data rather than independent image analysis. The ICM description notes it is 'slightly obscured,' which is honest, but the TE description lacks specificity about cell count or cohesion quality visible in the image. The image actually appears to show a somewhat compacted morula-to-early blastocyst transition with less clear blastocoel expansion than a typical 2AA, which the model does not critically evaluate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, BMI, ovarian reserve markers, sperm parameters, endometrial thickness, and prior obstetric history. It correctly identifies the live birth as a strong positive predictor and the two ectopic pregnancies as significant risk factors. The connection between BMI and implantation/uterine environment is made. Minor gap: the 'unexplained' diagnosis and its implications for recurrent failure are not deeply explored, and the Day 4 transfer timing (unusual, between cleavage and blastocyst) is not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 45-60% is reasonable and the adjustments for BMI are coherent. The model correctly notes that ectopic risk doesn't reduce implantation probability per se but increases risk of abnormal implantation location. Minor inconsistency: the model states >90% euploidy likelihood but then suggests PGT-A, which slightly contradicts the earlier confidence. The Day 4 transfer timing anomaly is not flagged, which represents a logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations for serial beta-hCG monitoring and early ultrasound for ectopic surveillance align with ASRM/ESHRE guidelines. Progesterone support recommendation is appropriate. However, the response does not flag the unusual Day 4 transfer timing, which is atypical (transfers are typically Day 3 or Day 5/6) and warrants clinical comment per standard protocols. PGT-A recommendation is reasonable but the framing could better reflect current ESHRE guidance on its selective use. BMI classification as 'obese' at 31.2 is technically incorrect (overweight threshold is 25-29.9, obese is ≥30), though the clinical concern is valid."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: serial beta-hCG timing, early ultrasound at 5.5-6 weeks, progesterone support, weight management targets, and tubal investigation. The ectopic surveillance protocol is particularly well-specified. Future cycle planning includes PGT-A consideration and BMI targets. Slight deduction for not addressing the Day 4 transfer timing question, not specifying luteal support protocol details, and not discussing single vs. double embryo transfer policy considerations given the ectopic history."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020388,
+  "judge_latency_ms": 16845.68174999731,
+  "judge_prompt_tokens": 3001,
+  "judge_completion_tokens": 759
+}

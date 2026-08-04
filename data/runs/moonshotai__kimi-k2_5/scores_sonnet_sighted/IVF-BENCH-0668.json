@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion grade 3, describes the ICM as compact and well-defined (consistent with grade A), and correctly characterizes the TE as sparse with few large cells (grade C). The zona pellucida thinning observation is appropriate. The description of a 'top-heavy' blastocyst is a useful clinical characterization. Minor limitation: the image shows a somewhat irregular blastocoel with what appears to be some fragmentation or debris, which the response doesn't fully address. Overall morphological description is accurate and well-correlated with the Gardner 3AC score provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response connects smoking to TE invasion impairment (directly relevant to TE-C grade), links low AMH and age 39 to aneuploidy risk, interprets the biochemical pregnancy history meaningfully in context of this embryo's TE quality, considers sperm parameters and raises DNA fragmentation as a possible contributor to poor TE formation, and contextualizes the low blastulation rate (1 blastocyst from 6 MII) as a quality indicator. The interaction between tubal factor diagnosis and uterine environment is appropriately noted as favorable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is transparent and stepwise, applying penalties for TE-C, smoking, and RIF history with partial offset for ICM-A. The final estimate of 15-20% clinical pregnancy rate and 10-15% live birth rate is internally consistent with the reasoning chain. The distinction between clinical pregnancy and live birth rates adds appropriate nuance. Minor issue: the smoking penalty of 40-50% applied multiplicatively may be slightly aggressive given mixed evidence, and the ICM-A '+5%' offset feels somewhat arbitrary. Overall the logic flows well from observations to conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: ERA for RIF workup, hysteroscopy, thrombophilia screening, PGT-A counseling, and donor oocyte discussion at age 39 with RIF are all guideline-consistent. Progesterone support optimization and low-dose aspirin recommendations are reasonable. The assisted hatching recommendation for an already-expanded blastocyst is slightly questionable per current evidence (ESHRE guidelines suggest limited benefit for expanded blastocysts). CoQ10 and DHEA supplementation recommendations, while commonly used, have limited high-quality evidence. Overall well-aligned with contemporary practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific, tiered recommendations. Immediate transfer recommendations include concrete steps (smoking cessation timing, assisted hatching consideration, specific aspirin dose, progesterone route options). Future cycle planning is comprehensive with specific tests (ERA, DFI, hysteroscopy, thrombophilia panel), specific supplement doses (CoQ10 200mg BID, DHEA 25mg TID), and a strategic alternative (embryo banking + PGT-A). The donor egg counseling recommendation with comparative success rates (50-60% vs <15%) provides clinically useful framing. The response appropriately prioritizes smoking cessation as urgent and provides realistic counseling language."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.021918,
+  "judge_latency_ms": 23063.437082993914,
+  "judge_prompt_tokens": 3311,
+  "judge_completion_tokens": 799
+}

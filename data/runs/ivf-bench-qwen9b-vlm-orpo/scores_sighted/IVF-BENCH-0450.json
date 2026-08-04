@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0450",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 0DD, but overstates visibility of an ICM/TE and mentions minimal debris despite the image being quite indistinct and collapsed/irregular."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, ovarian reserve, low oocyte yield, sperm parameters, endometrial thickness, BMI, and prior live birth well, though some links to embryo quality are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and consistent: poor morphology plus age/endometriosis lowers prognosis, while lining and prior live birth are favorable. Minor issue: calling BMI 30.7 'normal' before noting it is elevated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with Gardner grading interpretation and standard IVF counseling, including cautious discussion of transfer, luteal support, and selective use of PGT-A. Some recommendations are broader than guideline-driven and not tightly tied to this single-transfer scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, luteal support, review of embryology history, endometriosis assessment, uterine evaluation, and future cycle planning. Useful, though not highly specific to protocol changes or decision thresholds."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.014649,
+  "judge_latency_ms": 4902.983583000605,
+  "judge_prompt_tokens": 3198,
+  "judge_completion_tokens": 337
+}

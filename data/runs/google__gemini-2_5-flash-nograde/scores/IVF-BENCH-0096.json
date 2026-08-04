@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst description and reasonable Gardner-grade range, but is somewhat overconfident and includes features not clearly verifiable from a single image (e.g., centrally located ICM, no obvious degeneration, limited zona/hatching certainty)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, BMI, ovarian reserve, prior failed cycles, sperm parameters, endometrium, and lifestyle with embryo morphology and prognosis, correctly emphasizing age-related aneuploidy as dominant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with implantation estimate appropriately tempered by maternal age and prior failures; minor issue is somewhat broad confidence in morphology despite image uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based on age, morphology, and PGT-A counseling, but inclusion of ERA, intralipids/steroids/anticoagulants, immunologic testing, thrombophilia screening, and microbiome analysis is not strongly guideline-supported for unexplained repeated failure without specific indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear next steps for proceeding with transfer, counseling, and future planning including PGT-A and uterine evaluation, though some suggested adjuncts are not well-prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015582,
+  "judge_latency_ms": 4469.864958999096,
+  "judge_prompt_tokens": 3449,
+  "judge_completion_tokens": 349
+}

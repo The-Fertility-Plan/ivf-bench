@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst stage, thinning zona pellucida, and correctly localizes the ICM at approximately the 9-11 o'clock position describing it as dense and tightly packed. The TE description as loosely arranged with fewer cells aligns with Grade B. Minor issue: the response mentions the embryo 'is beginning to hatch or preparing to hatch' which is not clearly supported by the image for a Stage 3 (Stage 4-6 would be hatching/hatched). This slight overstatement prevents a score of 5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age, AMH, tubal factor diagnosis, endometrial thickness, sperm parameters, BMI, lifestyle, and previous miscarriage history. Critically, it identifies the important discrepancy between high AMH (12.55) and low retrieval (4 COCs) as a key clinical concern, and connects each factor meaningfully to prognosis and embryo quality assessment. The interaction between young age and embryo euploidy probability is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 50-60% is reasonably derived from the evidence, appropriately discounting from the baseline ~60-65% for Grade B TE and miscarriage history. However, there is a minor inconsistency: the response references 'euploid blastocyst' baseline rates when no PGT-A was performed, making this comparison slightly imprecise. The conclusions follow logically from the observations and the overall reasoning chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for young patient with good quality embryo is appropriate, luteal support emphasis is standard, PGT-A discussion is nuanced and appropriately non-mandatory for age 29 with single miscarriage. The suggestion for uterine evaluation (hysteroscopy/saline sonogram) aligns with recurrent loss workup guidelines. Minor gap: the mention of 'low-dose aspirin' as a potential addition lacks strong evidence-based support in standard IVF protocols and could be seen as a slight deviation from strict guideline adherence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: eSET with clear rationale, protocol review with specific investigative questions about the low retrieval (premature ovulation, dosage, retrieval difficulty), conditional PGT-A discussion, specific lifestyle modifications (Mediterranean diet, resistance training), and uterine evaluation recommendation. Each recommendation is tied to a specific clinical concern identified in the case, providing a clear roadmap for both this transfer and future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.02001,
+  "judge_latency_ms": 15715.20866600622,
+  "judge_prompt_tokens": 3160,
+  "judge_completion_tokens": 702
+}

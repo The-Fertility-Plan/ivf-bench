@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0066",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it incorrectly labels a hatching/herniating embryo as Grade 4 rather than Grade 5 by Gardner criteria and localizes ICM/TE features with more certainty than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, ovarian reserve markers, BMI, sperm parameters, endometrium, and smoking with embryo quality in a clinically meaningful way, though some claims are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a plausible adjustment from morphology to overall prognosis; minor issues include overemphasis on prior live birth and some unsupported statements about oocyte quality and sperm quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age-related aneuploidy risk, smoking cessation, and proceeding with transfer, but misstates Gardner expansion grading, overstates that 4AA is the highest grade, and recommends PGT-A somewhat too strongly for a low-yield patient without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, smoking cessation, luteal support, and future planning, though some advice is generic and could be more individualized regarding PGT-A and embryo banking."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01272,
+  "judge_latency_ms": 4746.374958005617,
+  "judge_prompt_tokens": 2600,
+  "judge_completion_tokens": 328
+}

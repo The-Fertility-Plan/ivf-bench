@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response substantially conflicts with the provided laboratory grading of 2AA by downgrading the embryo to 3BB/4BB and describing loose ICM and sparse TE. While identifying a blastocyst and noting zona thinning is plausible, the morphology assessment appears inaccurate relative to the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm parameters, endometrial thickness, lifestyle, and first-cycle status with prognosis reasonably well. AMH is unavailable and not overinterpreted, though some links (e.g., sperm DNA fragmentation inference) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the incorrect morphology reassignment and by deriving prognosis from a downgraded embryo grade. Probability reasoning is plausible but not fully consistent with the supplied 2AA lab grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a young patient, luteal support, OHSS awareness in PCOS, and optional rather than routine PGT-A at age 31 are broadly guideline-consistent. Minor overstatements about ideal endometrial thickness and PCOS-specific receptivity concerns prevent a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including SET, luteal support, OHSS monitoring if fresh transfer, vitrification of surplus blastocysts, and conditional future PGT-A consideration. It is useful clinically, though not highly detailed on transfer-specific protocol nuances."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01347,
+  "judge_latency_ms": 4636.943333003728,
+  "judge_prompt_tokens": 2470,
+  "judge_completion_tokens": 404
+}

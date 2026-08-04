@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0730",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive TE consistent with a 3AA grade. The ICM localization description ('center-left') is reasonable. Minor issue: the response notes TE is 'slightly less distinct in this specific focal plane,' which is a fair caveat but slightly hedges the A-grade TE assessment. Overall the morphological description matches the image well without fabricating features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates AMH, age, endometrial thickness, sperm parameters, BMI, and unexplained infertility diagnosis effectively with embryo quality. It connects high AMH to oocyte yield and quality, links endometrial thickness to implantation potential, and flags BMI and unexplained infertility as modifying factors. Minor gap: it doesn't deeply explore how unexplained infertility specifically interacts with implantation failure risk beyond a brief mention of possible uterine factors, and the FSH value (5.1 IU/L, very favorable) is not discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 60-75% implantation probability range is well-supported by the cited factors. One minor inconsistency: the response states aneuploidy rates are 'low (<10-15% for euploidy)' which appears to be a typographical error—it likely meant <10-15% for aneuploidy (i.e., >85-90% euploidy rate), which slightly undermines precision. The SET recommendation follows coherently from the high-quality embryo and patient age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: SET is appropriately recommended for a good-prognosis patient under 35 with a top-quality blastocyst, vitrification of remaining embryos is advised, and PGT-A is correctly framed as optional rather than mandatory at age 34. The Gardner grading criteria are correctly applied. Minor deviation: the response suggests OHSS risk with antagonist protocol is 'less likely,' which is accurate but could more explicitly note the high AMH (6.6) does carry meaningful OHSS risk even with antagonist protocol."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with SET, cryopreserve remaining embryos, consider hysteroscopy if transfer fails, discuss PGT-A for future cycles, and lifestyle optimization for BMI. The response provides clear decision points and contingency planning. It could be more actionable by specifying luteal phase support protocols, suggesting endometrial receptivity testing options, or addressing timing considerations for frozen embryo transfer if this cycle fails."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018945,
+  "judge_latency_ms": 14774.186958005885,
+  "judge_prompt_tokens": 2760,
+  "judge_completion_tokens": 711
+}

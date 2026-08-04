@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (3AB) and incorrectly stated morphology could not be assessed, so it omitted the known expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, PCOS, prior outcomes, ovarian reserve, sperm, and endometrium, though it anchors this to an assumed embryo grade rather than the provided 3AB."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured, but it is weakened by the central error of ignoring the provided embryo grade and by some overstatements such as implying PCOS raises aneuploidy risk and recommending thrombophilia workup on limited grounds."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (SET, luteal support, lifestyle optimization), but there are notable deviations: failure to apply Gardner grading data, somewhat liberal endorsement of PGT-A in a young patient, and questionable thrombophilia screening suggestion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer and future planning, including SET, counseling, luteal support, and lifestyle changes, though some recommendations are not ideally tailored because the known 3AB morphology was not incorporated."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014205,
+  "judge_latency_ms": 3610.55904100067,
+  "judge_prompt_tokens": 3090,
+  "judge_completion_tokens": 329
+}

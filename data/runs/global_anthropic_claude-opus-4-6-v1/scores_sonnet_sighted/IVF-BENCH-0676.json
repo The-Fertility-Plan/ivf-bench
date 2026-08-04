@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0676",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, well-developed blastocoel, and identifies the ICM as a tightly packed cluster visible in the right portion of the image. The TE description as a cohesive epithelium is consistent with the image. Minor limitation: the image is somewhat low-contrast and the TE cells are not clearly individually distinguishable, yet the model confidently describes uniformity without acknowledging image quality limitations. Overall description aligns well with visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response systematically integrates all available clinical factors including age, BMI, DOR diagnosis, FSH, endometrial thickness, sperm parameters, and lifestyle into a structured table and narrative. It correctly identifies the discordance between DOR diagnosis and the relatively normal cycle response, flags BMI as the primary modifiable risk factor, and connects each factor to its specific impact on implantation probability. The interaction between obesity and progesterone supplementation needs is a particularly sophisticated integration point."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning flows logically from morphological assessment through clinical factor integration to probability estimation. The probability adjustment methodology is transparent, starting from a literature-based baseline and applying directional corrections for BMI. Conclusions about SET recommendation follow coherently from the obesity-related twin risk concern. The identification of the DOR/response discordance and its implications is internally consistent. No contradictions detected between sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: SET recommendation for good-prognosis patients, luteal phase support, progesterone monitoring in obese patients, and appropriate use of PGT-A only after failure rather than routinely. The progesterone threshold targets cited (>10-20 ng/mL) are clinically reasonable. Minor deduction: the response does not explicitly reference ESHRE obesity BMI thresholds for transfer deferral (some guidelines recommend weight loss before transfer at BMI >30-35), which could have been addressed more directly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: progesterone monitoring with explicit target ranges, alcohol cessation timing, specific future testing (AMH, AFC), weight reduction targets (5-7%, BMI toward 30), conditional use of ERA and PGT-A only if transfer fails, and protocol-specific suggestions for potential future DOR cycles (micro-dose Lupron flare, dual stimulation). Each recommendation is tied to a specific clinical rationale and the response distinguishes between immediate transfer cycle actions and future cycle planning clearly."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019644,
+  "judge_latency_ms": 16152.569792000577,
+  "judge_prompt_tokens": 3268,
+  "judge_completion_tokens": 656
+}

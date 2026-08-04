@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0730",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality relative to the image, describing a well-formed blastocoel, compact ICM, and cohesive TE consistent with 3AA/4AA, whereas the image appears more like a partially collapsed/poorly expanded blastocyst with indistinct ICM and sparse, uneven TE. It also incorrectly states expanded blastocyst is stage 4 while the provided lab score defines 3AA as expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, diagnosis, semen parameters, BMI, endometrium, and first-cycle status into prognosis in a generally appropriate way, though some links are broad and not tightly calibrated to the uncertain morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and internally organized, but the prognosis is built on an overly optimistic morphological interpretation and contains a grading inconsistency, which weakens the support for the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and caution that morphology does not predict ploidy are guideline-concordant, but the Gardner staging comment is inaccurate and some probability framing is somewhat optimistic for an untested embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support adherence, pregnancy testing, and future-cycle review, though much of it is generic rather than highly tailored to the image-specific concerns."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016806,
+  "judge_latency_ms": 4697.280583990505,
+  "judge_prompt_tokens": 3742,
+  "judge_completion_tokens": 372
+}

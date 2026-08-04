@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA blastocyst features including expansion stage with thinning zona pellucida, a dense tightly packed ICM with specific positional reference, and cohesive multi-cellular trophectoderm. The description aligns well with Gardner grading criteria. Minor limitation is that the positional claim about ICM location (12-1 o'clock) may be fabricated detail not verifiable without seeing the image, and the description could be more precise about TE cell count estimation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all key clinical factors: maternal age (29) linked to euploidy probability, BMI (35.1) connected to endometrial receptivity and implantation efficiency, male factor diagnosis cross-referenced with actual sperm parameters and possible DNA fragmentation implications, AMH/oocyte yield contextualized for embryo selection, and endometrial thickness assessed for receptivity. The interactions between factors are explicitly discussed rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 55-65% logically follows from the baseline for young patients with AA-grade blastocysts being adjusted downward for BMI. The conclusion to recommend SET is coherent given the twin risk with elevated BMI. Minor issue: calling the embryo 'a viable, euploid candidate' is slightly overstated since morphology cannot confirm euploidy, though the response later correctly qualifies aneuploidy risk as '<30%' rather than zero."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patients, standard luteal support mention, PGT-A discussion appropriately nuanced for young patients with male factor, and weight management counseling consistent with evidence. The Gardner grading interpretation is accurate. Minor gap: no mention of ERA (Endometrial Receptivity Array) or specific progesterone monitoring protocols that some guidelines now recommend, and the fresh vs. frozen transfer decision is not discussed despite BMI potentially favoring FET."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly justified, weight management targets (5-10% reduction) are quantified, PGT-A is contextualized with clear indications for future use, and lifestyle modifications are specific. The response could be more actionable by addressing the fresh vs. frozen transfer debate given the BMI >35 (some evidence supports FET for obese patients), and by suggesting specific referrals (e.g., dietitian, endocrinologist) or monitoring protocols post-transfer."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.017889,
+  "judge_latency_ms": 14252.994959002535,
+  "judge_prompt_tokens": 2638,
+  "judge_completion_tokens": 665
+}

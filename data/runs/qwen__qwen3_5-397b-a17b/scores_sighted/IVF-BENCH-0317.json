@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0317",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image findings: the blastocoel is not clearly occupying most of the embryo, the ICM is not distinctly identifiable as a dense compact cluster, and TE cannot be confidently called a continuous cohesive epithelium from this image. It also likely misidentifies round structures as polar bodies and claims no vacuolization/fragmentation despite limited visibility."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycle, BMI, sperm parameters, male-factor context, ovarian response, and endometrial thickness with embryo quality reasonably well. Minor issues include overinterpreting low FSH alone as confirming good ovarian reserve and overstating the benefit of lining thickness."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable reasoning issues: morphology is treated as more definitive than the image supports, the embryo is called both stage 3 and 'fully expanded,' and endometrial thickness is said to compensate for embryo deficiencies, which is an overstatement."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and standard luteal support are guideline-consistent, but recommending PGT-A strongly after one failed cycle and suggesting assisted hatching for this case are not strongly evidence-based routine recommendations. Calling 3AA 'among the highest quality embryos achievable' is also imprecise versus higher expansion stages."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including eSET, luteal support, and further evaluation if unsuccessful. However, some recommendations are somewhat generic and a few are more aggressive than necessary after only one prior failed cycle."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014163,
+  "judge_latency_ms": 5563.880417001201,
+  "judge_prompt_tokens": 2621,
+  "judge_completion_tokens": 420
+}

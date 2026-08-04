@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key features of a 3AB blastocyst including expansion grade, ICM density, and TE characteristics consistent with the Gardner score. However, there is an odd mention of 'morula-to-blastocyst transition' in the visual summary which contradicts the expansion grade 3 description, and the description relies heavily on the provided Gardner score rather than independent image analysis. Some fabricated specificity about what is 'visible' in the image without clear grounding."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most key clinical factors: maternal age, AMH/FSH indicating DOR, paternal age impact on sperm DNA fragmentation, endometrial thickness, and prior cycle history. The 'double hit' concept for aneuploidy risk combining paternal age and DOR is clinically relevant. Minor gap: BMI and lifestyle factors are not meaningfully integrated, and the unexplained infertility diagnosis could have been explored more deeply in context of repeated failures."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through clinical factors to probability adjustment and recommendations. The downward adjustment from 40-50% to 25-35% is well-justified with specific reasons. The recommendation to transfer rather than biopsy for PGT-A given limited embryo availability is coherent. Minor inconsistency: the response is cut off mid-sentence in the recommendations section, leaving the reasoning incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines regarding Gardner grading interpretation, SET recommendation, and endometrial thickness thresholds. The discussion of PGT-A is appropriate. However, the characterization of FSH 7.4 IU/L as definitively indicating DOR is slightly overstated without additional context, and the response does not mention ESHRE guidance on recurrent implantation failure workup (thrombophilia, immunological testing, hysteroscopy) which would be highly relevant after 3 failed cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations including proceeding with transfer, SET, and future PGT-A consideration. However, the response is cut off before completing the future cycle planning section. Missing actionable items include: recurrent implantation failure workup recommendations, consideration of endometrial receptivity testing (ERA), sperm DNA fragmentation testing given paternal age concerns, and specific luteal phase support protocols. The existing recommendations lack specificity on timing and protocols."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.017445,
+  "judge_latency_ms": 13479.842000000644,
+  "judge_prompt_tokens": 2655,
+  "judge_completion_tokens": 632
+}

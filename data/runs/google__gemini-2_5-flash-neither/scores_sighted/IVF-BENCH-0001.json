@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate embryo morphology. Since it made no incorrect visual claims, this is fully appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, tubal factor, prior IVF outcomes, sperm quality, BMI, endometrium, and lifestyle into prognosis well, though embryo-stage specifics for a day-4 transfer were not explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, especially around age-related aneuploidy and prior losses. Minor weakness: it assumes a good-quality blastocyst despite the transfer being listed as day 4 and morphology unavailable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but ERA and immunologic workup are suggested too readily, and PGT-A is framed strongly despite ongoing debate about routine benefit in all cases. Overall mostly aligned with some deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer counseling and future planning, including uterine evaluation and consideration of PGT-A. Some recommendations are somewhat generic or controversial, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014478,
+  "judge_latency_ms": 4729.575582998223,
+  "judge_prompt_tokens": 3211,
+  "judge_completion_tokens": 323
+}

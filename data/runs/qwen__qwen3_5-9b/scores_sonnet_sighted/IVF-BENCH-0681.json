@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0681",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocoel cavity, ICM, and TE consistent with the 2AB Gardner score. However, there is a notable error: the model states the Grade 2 expansion means the embryo 'has successfully hatched or is on the verge of hatching,' which is incorrect — Grade 2 is a full blastocyst where the blastocoel fills the embryo but hatching corresponds to Grades 5-6. The ICM is described as being on the 'right side' which is reasonable, and TE description is adequate. The zona pellucida is visible in the image but not described. Overall mostly accurate but with a meaningful expansion grade misinterpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, AMH, endometriosis diagnosis, smoking status, endometrial thickness, and sperm parameters are all connected to embryo prognosis. The interaction between endometriosis and implantation is addressed, and smoking is flagged as a negative modifier. Minor gaps include not discussing the long agonist protocol's specific relevance to endometriosis management, and BMI (23.7, optimal) is not explicitly mentioned as a favorable factor. The first IVF cycle context is noted implicitly but not explicitly leveraged."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The 40-60% range is reasonably derived from stated modifiers. The counterfactual (60-70% without smoking/endometriosis) is helpful. One minor inconsistency: the model describes Grade 2 as near-hatching in morphology section but doesn't reconcile this with the probability discussion. The conclusion that embryo quality and age are 'strong drivers' despite the risk factors is coherent and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM principles. Gardner grading criteria are applied, luteal phase support is recommended, and PGT-A discussion is appropriate. However, the misclassification of Grade 2 expansion as near-hatching deviates from standard Gardner criteria. The endometriosis-specific recommendations are somewhat generic and don't reference current ESHRE endometriosis guidelines specifically. PGT-A aneuploidy rate cited (~30-35% at age 33) is within the plausible range. Smoking cessation advice is evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, smoking cessation emphasized as critical, luteal phase support noted, cryopreservation of surplus embryos advised, PGT-A consideration with appropriate caveats, and endometriosis management options outlined. The response appropriately distinguishes between immediate and future planning steps. Could be improved by specifying progesterone supplementation type/dosing considerations for endometriosis patients, or recommending ERA (Endometrial Receptivity Analysis) given the endometriosis diagnosis, which is increasingly used in this population."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020361,
+  "judge_latency_ms": 17871.99333299941,
+  "judge_prompt_tokens": 2972,
+  "judge_completion_tokens": 763
+}

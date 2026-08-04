@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and based morphology on the provided 2BB grade. Its description of a full blastocyst with loosely grouped ICM and loose/few-cell TE is consistent with the reported Gardner score and broadly compatible with the image. Minor issue: it adds interpretive detail about zona thinning and hatching preference that is not directly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian response, tubal factor diagnosis, endometrial thickness, sperm parameters, BMI, and ovarian reserve markers with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates that generally follow from age and embryo grade. Minor weaknesses include overemphasis on TE as 'most critical' and some speculative links such as BMI and progesterone timing for a grade 2 blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly aligned, including proceeding with transfer and recommending SET. However, suggestions such as starting progesterone earlier because of grade 2 expansion, routine serum progesterone targets in this context, and implying PGT-A may reduce time-to-pregnancy in a 31-year-old are more speculative and not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer, luteal support, SET, cryopreservation, and future-cycle discussion. It is practical, though some recommendations are somewhat generic or not tightly tailored to the specific evidence provided."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015108,
+  "judge_latency_ms": 6765.498667009524,
+  "judge_prompt_tokens": 3006,
+  "judge_completion_tokens": 406
+}

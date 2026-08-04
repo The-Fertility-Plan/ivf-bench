@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response downgrades the provided 3AA embryo to 3BB, states the zona is not significantly thinned despite lab data indicating thinning, and introduces vacuolization not clearly established from the prompt/image. Core blastocyst identification is reasonable, but several morphology claims are inaccurate or overcalled."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/high AMH, oocyte yield, endometrial thickness, prior ectopic, smoking, and sperm motility with prognosis. However, some links—especially attributing embryo morphology/vacuolization directly to smoking—are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it contradicts the supplied Gardner score, infers unsupported image features, and makes causal claims about smoking and morphology without strong support. No implantation estimate is actually provided despite the task requesting one."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points about age, blastocyst transfer, smoking risk, and ectopic history are broadly guideline-consistent, but the Gardner grading interpretation conflicts with the provided embryology assessment and some morphology-based prognostic statements are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It identifies risk factors and favorable factors, but the recommendations are incomplete and not very specific for transfer management or future cycle planning. The response appears truncated and does not provide clear next-step clinical actions or a probability range."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01146,
+  "judge_latency_ms": 5002.821208996465,
+  "judge_prompt_tokens": 1925,
+  "judge_completion_tokens": 379
+}

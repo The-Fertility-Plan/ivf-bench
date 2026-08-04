@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0333",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst image and acknowledges blur/focus limitations, but it downplays the provided Gardner 3AA by describing TE as intermediate and infers ICM/TE detail that is only partially discernible in this static image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian response, endometrium, BMI, smoking, prior IVF outcomes, male factor, and sperm data with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and structured, with probability estimates tied to embryo quality and patient factors; minor issue is some tension between the supplied 3AA grade and the model's more moderate TE interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: single embryo transfer at age 28, smoking cessation, review of uterine cavity and luteal support, and cautious/non-routine use of PGT-A in younger patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear practical next steps for the current transfer and contingency planning for future cycles, including lifestyle modification, transfer considerations, and targeted workup if failure recurs."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015159,
+  "judge_latency_ms": 4560.7924579962855,
+  "judge_prompt_tokens": 3533,
+  "judge_completion_tokens": 304
+}

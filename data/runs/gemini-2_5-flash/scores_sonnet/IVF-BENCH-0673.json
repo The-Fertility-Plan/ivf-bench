@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3BB Gardner score - expanded blastocoel, loosely grouped ICM, and loose TE epithelium. However, the description relies heavily on the provided Gardner score rather than independent image analysis, and some descriptions (e.g., 'clear blastocoel cavity,' 'zona pellucida appears thin') are somewhat generic. The response doesn't provide truly independent morphological observations that would demonstrate the image was carefully analyzed beyond what the score already tells us."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors - maternal age, AMH/FSH values, sperm parameters, endometrial thickness, and lifestyle are all connected to the embryo assessment and prognosis. Notably, the response correctly flags the apparent contradiction between the DOR diagnosis and the excellent AMH/FSH values. The interaction between young age and euploidy probability is well-articulated. Minor gap: doesn't deeply explore how the long agonist protocol relates to outcomes or the significance of 10/10 MII oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-70% follows reasonably from the evidence presented, with clear justification for both the upper and lower bounds. The response correctly identifies young age as the primary driver of favorable prognosis. One minor inconsistency: the response questions the DOR diagnosis but then still lists it as a risk factor, creating slight tension. The overall reasoning chain from morphology → patient factors → probability estimate is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines - single embryo transfer recommendation for a young patient with good prognosis is appropriate, luteal phase support is mentioned, and the conditional use of PGT-A and ERA testing follows evidence-based indications. The Gardner grading interpretation is accurate. The response correctly notes that ERA is not typically indicated for a first transfer. Minor issue: the 8mm endometrial threshold discussion is slightly conservative; most guidelines consider ≥7mm acceptable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering both the current transfer (SET, luteal support, counseling) and future cycle planning (PGT-A consideration, endometrial evaluation, freeze-all strategy). The conditional nature of future recommendations (i.e., 'if this transfer fails') is appropriately nuanced. The response could be more specific about progesterone dosing protocols or timing considerations, and the freeze-all recommendation for future cycles lacks context given this appears to already be a fresh transfer cycle. Overall, a clinician would find these recommendations useful and actionable."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.021642,
+  "judge_latency_ms": 14210.029541005497,
+  "judge_prompt_tokens": 3854,
+  "judge_completion_tokens": 672
+}

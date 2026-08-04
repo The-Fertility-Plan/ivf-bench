@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0093",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology without an image and did not fabricate embryo-specific features. It only gave generic grading principles, so it avoids inaccuracy but does not analyze the visible poor-quality blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, endometrial thickness, ovarian reserve, low oocyte yield, male factor, partner age, BMI, and lifestyle into prognosis and distinguishes embryo-level from cycle-level factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical, internally consistent, and the probability range is appropriately caveated by unknown morphology. Minor limitation is that the estimate may be somewhat broad given the missing embryo assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: single embryo transfer at age 35, standard luteal support, no bed rest, cautious use of PGT-A, and review of stimulation and sperm factors if repeated issues occur."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle review, including specific embryology data to request and possible protocol adjustments, though some advice remains general because morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014079,
+  "judge_latency_ms": 4307.915833996958,
+  "judge_prompt_tokens": 3153,
+  "judge_completion_tokens": 308
+}

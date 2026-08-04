@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating morphology. However, it still framed the embryo as a blastocyst/Day 4 embryo without image-based assessment, so morphology was not actually analyzed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, oocyte yield, BMI, endometrium, prior cycle history, lifestyle, and sperm data well, and linked these to prognosis, though interaction with actual embryo morphology was necessarily limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with clear caveats about missing morphology. Minor issue: the implantation estimate is somewhat confident despite acknowledging the key missing embryo-quality variable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: luteal support, beta-hCG follow-up, review of embryo development, cautious stance on PGT-A in a young patient. Small deviation: some speculative interpretation of Day 4 transfer significance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future planning, including obtaining embryo grading, reviewing fertilization/blastulation data, and considering further male-factor workup if needed. Useful, though not highly tailored to the actual image."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014808,
+  "judge_latency_ms": 4527.655500001856,
+  "judge_prompt_tokens": 3216,
+  "judge_completion_tokens": 344
+}

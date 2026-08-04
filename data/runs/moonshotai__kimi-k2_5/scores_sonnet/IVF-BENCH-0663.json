@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description correlating with the Gardner 2AB score, correctly identifying ICM as compact/tightly packed and TE as fewer cells in loose epithelium. However, there is some inconsistency - the model describes expansion as 'grade 2-3' and 'approaching full blastocyst' while also noting the documented score is 2 (full blastocyst per Gardner criteria). The zona pellucida description as 'thinned without herniation' is plausible but the response conflates Gardner stage 2 with partial expansion when Gardner stage 2 actually means full blastocyst. The response is cut off before completing the endometrial section."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response integrates several key factors including maternal age (30), PCOS diagnosis, AMH, sperm parameters, and begins addressing endometrial thickness but is cut off. It correctly notes the high MII maturity rate and appropriate antagonist protocol for PCOS. However, it misses discussing the moderate alcohol consumption (4-6 drinks/week, which is clinically significant), sedentary lifestyle, partner age of 40 and potential sperm DNA fragmentation concerns, and BMI of 28.6 in context of PCOS insulin resistance. The endometrial thickness discussion at 7.0mm (suboptimal, ideally >8mm) is started but not completed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and the clinical narrative flows coherently from embryo quality to patient factors. The aneuploidy risk estimate of 20-25% for age 30 is reasonable. However, the response is truncated and never provides the implantation probability estimate or completes the endometrial assessment, creating a significant gap. The Gardner stage 2 interpretation shows minor inconsistency. The overall structure is sound but incomplete reasoning due to truncation limits the score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response demonstrates knowledge of Gardner grading criteria and correctly applies ESHRE/ASRM principles regarding blastocyst quality assessment. The recognition of ICM grade A as the primary predictor of fetal development aligns with current literature. The antagonist protocol endorsement for PCOS aligns with ESHRE PCOS guidelines. However, the response is cut off before recommendations are made, preventing full assessment of guideline alignment. The alcohol consumption (4-6/week) should have been flagged more prominently per ASRM guidelines recommending abstinence during IVF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is severely truncated and never reaches the recommendations section. No implantation probability estimate is provided, no transfer recommendations are given, and no future cycle planning is discussed. The sections on risk factors, implantation probability, and recommendations - which are the most actionable parts - are entirely missing. Despite good preliminary analysis, the complete absence of actionable guidance due to truncation warrants the lowest score."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.016479,
+  "judge_latency_ms": 14302.778749995923,
+  "judge_prompt_tokens": 1873,
+  "judge_completion_tokens": 724
+}

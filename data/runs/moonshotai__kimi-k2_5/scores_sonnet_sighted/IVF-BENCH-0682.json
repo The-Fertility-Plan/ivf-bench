@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA grading criteria and provides reasonable descriptions of ICM compactness and TE cohesion. However, the image appears to show a partially expanded blastocyst where the ICM and TE boundaries are somewhat difficult to discern clearly, and the model's confident positional description ('10-11 o'clock position') and specific volumetric estimates (50-70% blastocoel) appear somewhat fabricated or overly precise given the image quality. The zona pellucida thinning description is consistent with grade 3 expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response meaningfully connects AMH, oocyte maturity rate, endometriosis effects on endometrial receptivity (citing specific mechanisms like integrin αvβ3 and inflammatory cytokines), smoking's vascular effects, paternal age considerations, and previous cycle failure into a coherent clinical picture. The identification of the disconnect between embryo quality and maternal environment is clinically astute."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is transparent and logically structured, starting from a base rate and applying evidence-based adjustments. The final estimate of 25-35% follows reasonably from the penalties applied. Minor issue: the smoking penalty of -15 to -20% absolute reduction may be slightly overstated compared to published literature, and the interaction effects between smoking and endometriosis could be more precisely quantified. Overall the reasoning chain is clear and consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE and ASRM guidelines: eSET recommendation, luteal phase support, ERA consideration after repeated failure, PGT-A suggestion, and endometriosis suppression protocols are all evidence-based. The suggestion of varenicline in IVF context is noted as having limited safety data in early pregnancy. Low-dose aspirin recommendation lacks strong RCT support per current ESHRE guidelines but is commonly used. GnRH agonist downregulation for endometriosis FET cycles is supported by evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations covering immediate transfer strategy, urgent smoking cessation with specific pharmacological options, luteal phase support details with target progesterone levels, transfer technique considerations specific to endometriosis anatomy, and a comprehensive future cycle planning roadmap including PGT-A, ERA, CD138 testing, DFI testing, and specific supplement dosing (CoQ10 200mg BID, DHEA 25mg TID). The response clearly prioritizes interventions and provides clinical rationale for each."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.02052,
+  "judge_latency_ms": 14284.049416994094,
+  "judge_prompt_tokens": 3500,
+  "judge_completion_tokens": 668
+}

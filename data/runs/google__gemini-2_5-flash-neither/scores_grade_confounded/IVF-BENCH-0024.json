@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignored the provided Gardner score of 2AA and instead assumed a different good-quality blastocyst such as 4AA/5AA, fabricating morphology rather than analyzing the supplied data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors including age, ovarian reserve, prior IVF outcomes, smoking, alcohol use, paternal age, sperm parameters, and endometrium, though some links are overstated and it mishandles the embryo stage/day context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning has notable inconsistencies: it says morphology cannot be assessed despite having a Gardner grade, assumes a blastocyst quality inconsistent with the provided 2AA and Day 4 transfer, and derives a probability from that faulty premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking/alcohol cessation, uterine assessment, luteal support), but there are deviations such as overconfident PGT-A endorsement in a 32-year-old, questionable implantation-rate assumptions, and weak handling of the Day 4/2AA context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future cycles, including lifestyle modification, sperm DNA fragmentation testing, uterine evaluation, and counseling, though some recommendations are more aggressive than necessary."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015159,
+  "judge_latency_ms": 4042.425708998053,
+  "judge_prompt_tokens": 3268,
+  "judge_completion_tokens": 357
+}

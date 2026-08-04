@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was available and fails to analyze the provided 3AB morphology, so it omits key visible/provided morphological features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm parameters, BMI, and endometrium, though it does not connect them to the actual provided embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is internally structured but undermined by the major premise error that morphology was unavailable; it also inconsistently refers to a Day 4 embryo while discussing blastocyst-based probabilities."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent, but there are notable deviations such as overstating PGT-A as a strong recommendation and suggesting adjuncts like growth hormone/CoQ10 with limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, counseling, and future-cycle considerations, though recommendations are less tailored because the provided embryo grade was ignored."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01356,
+  "judge_latency_ms": 3434.5834589985316,
+  "judge_prompt_tokens": 3000,
+  "judge_completion_tokens": 304
+}

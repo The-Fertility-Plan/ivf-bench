@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 3AB by reclassifying the embryo as 4BB, downgrading ICM and upgrading TE, and it also mentions a vacuole/lipid droplet that may not be reliably inferable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, diagnosis, ovarian response, sperm parameters, and endometrial thickness well with prognosis, though it overstates certainty and does not acknowledge missing AMH or limits of morphology-based prediction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: morphology is internally inconsistent with the supplied Gardner score, the embryo is called both slightly loose ICM and grade B despite lab data indicating A, and the probability estimate is somewhat optimistic without sufficient caveats."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET in a young patient and proceeding with Day 5 transfer are guideline-concordant, but suggesting ERA/immune testing after a first failed transfer is not strongly evidence-based or routinely guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including eSET, proceeding with transfer, vitrifying additional blastocysts, and general future planning, though some suggestions are generic and the post-failure workup is not ideally nuanced."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012144,
+  "judge_latency_ms": 4333.391624997603,
+  "judge_prompt_tokens": 2243,
+  "judge_completion_tokens": 361
+}

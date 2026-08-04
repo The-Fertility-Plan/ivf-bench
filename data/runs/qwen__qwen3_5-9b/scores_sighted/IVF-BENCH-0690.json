@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0690",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner grade rather than the image and misstates grade 3 as 'expanded blastocyst'; image-based description as 'compacted morula or early blastocyst' is inconsistent with 3AA and includes features not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, oocyte yield, sperm parameters, endometrium, diagnosis, and lifestyle reasonably well with embryo quality, though it somewhat overemphasizes AMH/FSH concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling 3AA both expanded blastocyst and optimal for hatching, then visually describing morula/early blastocyst; also overstates the impact of mildly borderline reserve markers on euploidy at age 30."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles, but Gardner staging is inaccurately described, 'top-tier/highest quality' overstates 3AA, and suggestions about luteal-phase endometrial thinning and elevated FSH implying higher aneuploidy are not well grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical advice to proceed with transfer and maintain luteal support, but recommendations are generic and incomplete, with limited nuance for fresh vs frozen transfer or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.012537,
+  "judge_latency_ms": 4832.43266599311,
+  "judge_prompt_tokens": 2429,
+  "judge_completion_tokens": 350
+}

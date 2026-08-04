@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes poor/absent ICM and TE consistent with 0DD, but it overcalls expansion as stage 2 to early 3 and says no overt degeneration, which conflicts with the provided early blastocyst/0DD grading and image showing very poor-quality morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, smoking, BMI, semen, endometrium, and first-cycle status with embryo quality reasonably well, though it overinterprets the DOR label given the discordant AMH/retrieval data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are inconsistencies: it calls the embryo transferable/viable while downplaying the significance of a 0DD embryo, and the implantation estimate seems somewhat high for this morphology and transfer timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling, smoking cessation, luteal support, and future-cycle review are guideline-consistent, but the morphology interpretation is not tightly aligned with Gardner 0DD and some recommendations (exercise, vitamin D/calcium, PGT-A discussion) are more generic than guideline-driven for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer support, cavity review, smoking cessation, and future stimulation reassessment; however, some advice is broad rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.017172,
+  "judge_latency_ms": 5329.828916001134,
+  "judge_prompt_tokens": 3984,
+  "judge_completion_tokens": 348
+}

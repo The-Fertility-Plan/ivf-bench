@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0729",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA features (expansion, thinned zona, tightly packed ICM, cohesive TE) but largely echoes the provided laboratory data rather than independently analyzing the image. The description lacks specific visual observations such as noting the blastocoel cavity size, any irregularities in the TE cells, or the degree of zona thinning visible in the image. The image actually shows a somewhat irregular/herniated appearance that isn't specifically commented upon."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo assessment - linking low AMH to limited oocyte yield, age to aneuploidy risk, endometrial thickness to receptivity, and sperm parameters to embryo quality. It appropriately notes that low AMH did not prevent high-quality blastocyst development. Minor gap: doesn't deeply explore the interaction between vegetarian/vegan diet and low AMH or the potential impact of sedentary lifestyle on endometrial receptivity specifically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 60-75% implantation probability estimate is reasonably supported by the cited factors. The response is internally consistent with no contradictions. Minor issue: the probability range could be slightly high for a non-PGT-A tested embryo even at grade 3AA; published data typically shows 50-65% for untested blastocysts of this grade at this age, making 60-75% slightly optimistic but not unreasonable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines - single embryo transfer recommendation for young patient with good quality blastocyst is appropriate, luteal phase support is mentioned, PGT-A is correctly deferred for first transfer in a 32-year-old. The Gardner grading interpretation is accurate. Minor gap: doesn't mention ESHRE guidance on endometrial thickness thresholds or address whether hydrosalpinx evaluation was completed for tubal factor, which is a guideline-relevant consideration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with clear rationale, specific nutritional supplements mentioned (B12, iron, vitamin D, DHA/EPA), stress reduction modalities named, future cycle considerations including banking and stimulation protocol adjustments. Could be more actionable by specifying progesterone type/route, suggesting specific stress reduction referrals, or recommending HSG/hysteroscopy findings review. Future cycle planning section is well-structured with concrete options."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020424,
+  "judge_latency_ms": 14989.001124995411,
+  "judge_prompt_tokens": 3523,
+  "judge_completion_tokens": 657
+}

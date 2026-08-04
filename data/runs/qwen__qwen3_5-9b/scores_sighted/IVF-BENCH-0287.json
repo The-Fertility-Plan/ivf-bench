@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0287",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but the image itself is somewhat soft and does not clearly show a distinctly expanded blastocoel, tightly packed ICM, or uniformly cohesive TE to the degree claimed; some features appear inferred from the lab grade rather than directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior live births, BMI, endometrium, PCOS, ovarian response, and partner age/sperm data with embryo quality in a clinically meaningful way, though it somewhat overemphasizes paternal age and overstates AMH as 'high.'"
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and structured, with a plausible probability range tied to embryo quality and patient history. Minor issues include calling the embryo 'morphologically perfect' despite image ambiguity and attributing a major reduction in prognosis primarily to paternal age without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, age-related aneuploidy, and considering PGT-A, but it overstates paternal age effects on aneuploidy, implies fresh transfer appropriateness without enough cycle-specific context, and suggests PGT-A is 'highly recommended' rather than individualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, consideration of PGT-A in future cycles, sperm DNA fragmentation testing if failure occurs, and metabolic monitoring. Recommendations are useful, though some are somewhat generic and not deeply protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01365,
+  "judge_latency_ms": 5473.133040999528,
+  "judge_prompt_tokens": 2540,
+  "judge_completion_tokens": 402
+}

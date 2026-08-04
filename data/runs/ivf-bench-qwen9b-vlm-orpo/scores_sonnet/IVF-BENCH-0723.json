@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting expansion, ICM compactness, and TE continuity, but hedges extensively with caveats about imaging artifacts and focal planes. It acknowledges the 3AA Gardner score but questions whether the image fully matches that grade without strong specificity. The description is mostly accurate but lacks precision and introduces unnecessary uncertainty about features that should be assessable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically addresses female age (34), PCOS diagnosis, prior biochemical pregnancy, endometrial thickness (7mm as primary concern), sperm parameters, FSH, BMI, lifestyle factors (alcohol, sedentary), and day 5 development. It clearly explains how these factors interact with embryo quality and modulate the overall prognosis, particularly highlighting the endometrial thickness as the main limiting variable against an otherwise favorable embryo-patient combination."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% logically follows from the favorable embryo/age factors tempered by the 7mm endometrium. The response correctly identifies that without PGT-A data, estimates are morphology-based. Minor issue: the response simultaneously describes the blastocyst as 'good-to-very-good' and 'highly competent' while also noting it doesn't look like a 'textbook 3AA,' creating slight tension, but this is adequately explained by imaging limitations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: single embryo transfer recommendation, appropriate luteal support emphasis, caution against unproven add-ons, appropriate threshold for recurrent failure workup, and evidence-based endometrial optimization strategies. The mention of 'gestodene' as an endometrial adjunct is unusual and not standard evidence-based practice for thin endometrium. Otherwise, the response appropriately discourages empiric immune therapies and heparin without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including single embryo transfer, luteal support optimization, lifestyle modifications (alcohol cessation), and a structured future planning framework. It offers concrete next steps for failed cycles including FET with dedicated endometrial preparation, estrogen-led protocols, and specific investigations for repeated failure. Slightly reduced from top score because some recommendations (e.g., gestodene, dexamethasone) lack strong evidence basis and the endometrial optimization section could be more precisely tailored to PCOS-specific considerations."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021258,
+  "judge_latency_ms": 13684.424041995953,
+  "judge_prompt_tokens": 3821,
+  "judge_completion_tokens": 653
+}

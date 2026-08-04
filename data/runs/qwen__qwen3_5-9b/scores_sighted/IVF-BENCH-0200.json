@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0200",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a poor-quality early blastocyst with weak/absent ICM and TE, but it misstates the stage as 'Stage 3' and says the blastocoel is clearly visible in one quadrant; the image/lab label support an early blastocyst with limited cavity, and several described details are overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior failed cycle, male factor context, sperm parameters, and endometrium with embryo quality reasonably well, though it overstates sperm quality and makes unsupported assumptions about fertilization/embryo yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable inconsistencies: incorrect staging terminology, calling sperm count 'excellent' despite low concentration, implying 100% fertilization/8 embryos without data, and overstating certainty around endometrial receptivity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned in recognizing poor prognosis for a DD early blastocyst and the importance of counseling, but it misapplies Gardner staging, recommends PGT-A somewhat too strongly for a 29-year-old after one failed cycle, and suggests FET/estrogen priming without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including counseling, proceeding with transfer rather than discarding solely on morphology, weight optimization, and possible sperm DNA fragmentation review, though some recommendations are generic and not tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.014025,
+  "judge_latency_ms": 5632.67254200764,
+  "judge_prompt_tokens": 2720,
+  "judge_completion_tokens": 391
+}

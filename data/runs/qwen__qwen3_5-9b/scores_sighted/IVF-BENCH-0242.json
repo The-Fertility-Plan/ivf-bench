@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0242",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates the image findings and misinterprets the expansion stage: it calls the embryo 'fully expanded' with a thinning zona, which is inconsistent with the provided Gardner 2AB and the image. ICM and TE descriptions are plausible but somewhat fabricated in location/detail given the indistinct image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm quality, endometrial thickness, protocol, and prior cycle history reasonably well with prognosis, though it omits some nuance around BMI and tubal factor and overinterprets AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it labels 2AB as 'top-tier,' conflates grade 2 with full expansion, and makes weakly supported claims about high AMH correlating with aneuploidy. Probability reasoning is broadly plausible but somewhat inflated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF guidance: 2AB is good quality but not necessarily 'top-tier,' grade 2 is not full blastocyst, receptivity is not typically 'confirmed by biopsy if available' for routine transfer, and recommending PGT-A based on high AMH is not evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical suggestions on proceeding with transfer, lining optimization, luteal support, alcohol cessation, and future freeze-all consideration, but recommendations are somewhat generic and include questionable elements such as routine biopsy/receptivity confirmation and loosely justified PGT-A."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013266,
+  "judge_latency_ms": 5961.755166994408,
+  "judge_prompt_tokens": 2492,
+  "judge_completion_tokens": 386
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0101",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 3AA grade. Its descriptions generally match Gardner criteria, but it inaccurately equated stage 3 with an expanded blastocyst/thinning zona (more consistent with stage 4), and it added image-level claims such as no fragmentation/degeneration that were not directly observable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, male factor, endometrial thickness, protocol, and prior cycle history into prognosis well. Minor overreach includes speculative links between stress/sedentary lifestyle and implantation strength."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis estimate tied to embryo quality and patient factors. Small issues include conflating implantation and live birth probabilities and somewhat speculative downgrading for stress/male factor despite strong embryo development."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: SET for a young patient with a high-quality blastocyst, avoid bed rest, and no routine PGT-A indication at age 28. Minor deviations include overstating the clinical importance of stress reduction/acupuncture and suggesting SDF-directed add-ons that are not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer and contingency planning, including SET, luteal support, cryopreservation, and what to consider if failure occurs. It is useful, though some advice remains somewhat generic and not tightly individualized beyond standard IVF management."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014658,
+  "judge_latency_ms": 20688.184665996232,
+  "judge_prompt_tokens": 2886,
+  "judge_completion_tokens": 400
+}

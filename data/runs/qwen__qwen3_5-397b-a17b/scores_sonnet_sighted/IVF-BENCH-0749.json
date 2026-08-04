@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel cavity filling the embryo, cohesive TE epithelium, and compact ICM. It correctly identifies the AA grade features. Minor issue: the model flags a 'discrepancy' with the Gardner stage 2 vs. 3 labeling, which shows awareness but slightly undermines confidence. The ICM localization attempt (8-10 o'clock) is reasonable given image appearance. Overall good morphological detail without fabricating features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates all key clinical factors: BMI 17.1 linked to endometrial receptivity and hormonal effects, sperm motility 16.5% connected to DNA fragmentation and biochemical pregnancy history, smoking linked to uterine blood flow and oxidative stress, previous live birth as positive predictor, and age/AMH as favorable factors. The framing as 'high quality embryo vs. suboptimal environment' is clinically insightful and shows sophisticated integration of how each factor modulates the embryo's inherent potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate of 40-55% logically follows from the baseline (~60-65%) adjusted downward for smoking (-10-15%), low BMI, and biochemical pregnancy history. The logic chain is clear and consistent. Minor issue: the model slightly contradicts itself by noting the Gardner score discrepancy (Stage 2 vs 3) but then proceeds without fully resolving it. The AMH comment about 'coasting effect of low BMI' at the end is speculative and not well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: smoking cessation advice, BMI optimization, luteal phase support considerations, sperm DNA fragmentation testing for unexplained infertility with poor motility, and PGT-A discussion. The dual-route progesterone suggestion is evidence-informed though not universally guideline-mandated. The AMH of 4.33 being described as suggesting 'better response' with only 4 COCs retrieved is slightly inconsistent with POSEIDON/Bologna criteria context, but not a major deviation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: proceed with transfer, dual-route luteal support, immediate smoking cessation with rationale, dietitian referral with target BMI range (18.5-20), specific DFI testing with conditional treatment pathways (antioxidants, varicocele repair, TESA-ICSI), PGT-A consideration with clear rationale, and stimulation protocol review. Each recommendation is tied to a specific identified risk factor, making this immediately useful for a clinician managing this case."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.019473,
+  "judge_latency_ms": 14888.261833999422,
+  "judge_prompt_tokens": 2986,
+  "judge_completion_tokens": 701
+}

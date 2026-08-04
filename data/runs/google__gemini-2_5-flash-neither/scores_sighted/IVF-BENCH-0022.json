@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was provided to it and did not fabricate embryo morphology. It appropriately declined morphological assessment rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: young age, prior live birth, BMI, tubal factor, sperm parameters, endometrium, ovarian response, and AMH nuance. It connected these to prognosis, though embryo-specific integration was limited by lack of image access."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis appropriately conditioned on unknown embryo quality. Minor issue: it calls FSH 'normal' as evidence of good reserve somewhat strongly despite lowish AMH, but overall logic is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: caution about missing morphology, luteal support, preference for blastocyst culture for selection, and limited role for PGT-A in a young patient. Minor deviations include somewhat speculative interpretation of Day 4 transfer rationale and overstatement of endometrial ideality without pattern data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including obtaining embryology details, proceeding with transfer, luteal support, counseling, and future culture strategy. Useful, though not highly tailored beyond standard recommendations."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014127,
+  "judge_latency_ms": 4729.734417007421,
+  "judge_prompt_tokens": 3014,
+  "judge_completion_tokens": 339
+}

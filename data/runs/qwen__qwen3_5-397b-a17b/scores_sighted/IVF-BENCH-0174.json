@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a poor-ICM, good-TE blastocyst, but it inaccurately calls grade 2 'fully expanded,' overstates zona thinning/hatching favorability from the image, and identifies ICM somewhat speculatively."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior live birth, endometrium, low oocyte yield, PCOS diagnosis, protocol, and sperm factors with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure and probability rationale are clear, but there are notable issues: confusion between Gardner expansion definitions and transfer day timing, plus speculative claims about protocol oversuppression and endometrial asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on age-related aneuploidy risk, embryo grading significance, and considering PGT-A in future cycles, but misstates grading terminology and makes less-supported recommendations about Day 4 blastocyst asynchrony and protocol choice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, obtaining ovarian reserve testing, and considering alternative stimulation/PGT-A in future cycles, though some recommendations are not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01311,
+  "judge_latency_ms": 4836.997666003299,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 344
+}

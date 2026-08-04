@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0094",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score was not provided and fails to use the supplied 3AB grading data, so it does not assess the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, sperm parameters, endometrium, and lifestyle reasonably well with prognosis, though it does so based on an incorrect assumption that embryo morphology is unknown."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but it is undermined by the major factual error that morphology/Gardner score were missing, leading to conditional reasoning that should have been case-specific."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET counseling, luteal support, and consideration of PGT-A are broadly aligned, but strong endorsement of adjuncts like ERA/intralipids/steroids and some speculative suggestions are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps for transfer and future cycles, but actionability is reduced because the key recommendation is to obtain morphology information that was already available, and several suggestions are generic."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01407,
+  "judge_latency_ms": 3324.836374995357,
+  "judge_prompt_tokens": 3110,
+  "judge_completion_tokens": 316
+}

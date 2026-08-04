@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0371",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but the image itself is low-contrast and does not clearly show a distinctly tight ICM or a well-defined cohesive TE; calling it 'top-tier' and confidently identifying structures from this image alone overstates what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, endometrium, male factor, partner age, and first-cycle status with embryo quality reasonably well, though it overemphasizes paternal age/male factor as determinants of embryo aneuploidy and underplays maternal age as the main driver."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is organized and mostly logical, but there are notable issues: age 36 is described as 'prime reproductive age,' paternal age is framed as a major aneuploidy driver, and the >90% euploid implantation claim is inflated, weakening the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology appropriately, but several recommendations deviate from evidence-based practice: routine/strong recommendation for PGT-A based mainly on paternal age/male factor is not guideline-supported, suggesting biopsy of an already selected embryo for transfer is impractical, and donor sperm consideration is premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides clear next-step suggestions such as proceeding with transfer and counseling about future options, but some advice is not practically framed for this exact cycle and lacks nuance on standard first-transfer management."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013065,
+  "judge_latency_ms": 5117.639834003057,
+  "judge_prompt_tokens": 2510,
+  "judge_completion_tokens": 369
+}

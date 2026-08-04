@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo morphology versus the provided laboratory grade of 4AA, downgrading it to 3BB/3BC and describing irregular TE/vacuolation and fragmentation that may not be reliably supported. It also incorrectly states the image is not clearly fully expanded/hatching despite the known hatching blastocyst designation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior IVF outcome, sperm quality, endometrium, and lifestyle, and relates them to prognosis. Some interactions are somewhat generic and do not fully account for the strong favorable impact of a 4AA embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the prognosis is built on an incorrect morphological assessment, which weakens the reasoning chain. The implantation estimate is internally consistent with its own downgraded grading, but not with the actual case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are broadly guideline-consistent, but suggesting ERA after a single failed cycle and implying assisted hatching based on this case are not strongly evidence-based routine recommendations. The embryo grading discussion also conflicts with Gardner criteria provided in the case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, cycle review, possible PGT-A, and counseling. However, some suggestions are too broad or not well targeted to this specific case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015384,
+  "judge_latency_ms": 4471.082290998311,
+  "judge_prompt_tokens": 3158,
+  "judge_completion_tokens": 394
+}

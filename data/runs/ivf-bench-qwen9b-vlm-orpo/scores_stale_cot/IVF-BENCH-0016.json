@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes plausible blastocyst features (blastocoel, ICM, TE, zona) and appropriately questions whether the image fully matches 3AB, but repeatedly speculates beyond what can be confidently verified from a single image and is somewhat inconsistent about exact grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, prior ectopic/miscarriage, semen quality, endometrium, BMI, and lifestyle with embryo quality and prognosis; misses AMH as unavailable and could better distinguish embryo-driven vs uterine/tubal risks."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: moderate embryo quality tempered by favorable patient factors leads to intermediate implantation odds. Minor issues include some wavering on morphology and broad statements about day-4 kinetics and outcome estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice (single embryo transfer counseling, hydrosalpinx concern, luteal support, ectopic follow-up), but there are some deviations/overreaches such as suggesting double embryo transfer and loosely framed PGT-A/freeze-all recommendations without strong case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps: proceed if no hydrosalpinx, standard luteal support, lifestyle optimization, beta-hCG and early ultrasound, and future evaluation of tubal/cavity factors. Useful, though some recommendations remain somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.018228,
+  "judge_latency_ms": 6772.820916958153,
+  "judge_prompt_tokens": 4296,
+  "judge_completion_tokens": 356
+}

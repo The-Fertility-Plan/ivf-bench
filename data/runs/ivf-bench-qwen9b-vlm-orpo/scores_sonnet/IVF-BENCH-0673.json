@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst as expanded and consistent with 3BB grading, describes the ICM as loosely clustered and TE as sparse/less cohesive. However, it confuses Gardner grading nomenclature by stating '3BB usually denotes a full blastocyst' and '4BB denotes a clearly expanded blastocyst,' when in fact Gardner grade 3 IS the full/expanded blastocyst and grade 4 is the expanded blastocyst with thinning zona — a notable inaccuracy. The description of visible features is generally reasonable but lacks precision about zona pellucida thinning which is characteristic of grade 3."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age 29 is correctly identified as a strong positive, BMI and lifestyle factors are addressed, sperm parameters are evaluated, and the endometrial thickness of 8mm is flagged as a modifiable concern. The response also thoughtfully questions the DOR diagnosis given the reassuring AMH and FSH values. Minor gap: it doesn't deeply explore the interaction between the long agonist protocol and potential endometrial receptivity issues, or the significance of 10/10 MII rate in context of DOR diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 50-65% follows reasonably from the evidence presented (good embryo, young patient, slightly suboptimal lining, no ploidy data). The response correctly identifies that morphology doesn't confirm euploidy and appropriately tempers enthusiasm. One minor inconsistency: the response simultaneously calls this a 'good-quality' embryo and a 'strong embryo' while also noting ICM/TE are 'not perfectly compact,' which slightly undermines the strength of the positive framing without fully reconciling the tension."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: appropriate caution about PGT-A at age 29 without recurrent failure, correct identification of 8mm as acceptable but suboptimal endometrial thickness, appropriate luteal support considerations, and evidence-based lifestyle counseling. The Gardner grading nomenclature error is a deviation from standard guidelines. The recommendation against routine add-ons without clear indication is well-aligned with current evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, optimize lining for future cycles, consider freeze-all strategy, confirm luteal support, reassess DOR diagnosis, review uterine cavity if transfer fails, and defer PGT-A without clear indication. The structured separation of 'this transfer' vs 'future cycle planning' is clinically useful. Could be slightly more specific about what endometrial optimization measures to consider (e.g., specific estrogen dosing adjustments, endometrial scratch timing) and what threshold would trigger protocol change."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.023409,
+  "judge_latency_ms": 14880.319875002897,
+  "judge_prompt_tokens": 4143,
+  "judge_completion_tokens": 732
+}

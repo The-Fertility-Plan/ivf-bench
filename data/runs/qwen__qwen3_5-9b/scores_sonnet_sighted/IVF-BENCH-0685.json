@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, compact ICM cluster on the right side, and the TE layer. The description aligns well with the visible image features. Minor issue: the response states the embryo 'has successfully hatched or is on the verge of hatching' which is slightly inaccurate for a Grade 3 expansion (Grade 3 is expanded but not yet hatching; hatching would be Grade 5-6), though this is a modest error. Overall morphological description is solid and consistent with the Gardner 3AB score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (34), PCOS diagnosis, endometrial thickness, paternal age concerns, sperm parameters, and prior cycle history. It correctly identifies paternal age as a primary risk factor and connects the biochemical pregnancy history to potential aneuploidy. Minor gap: AMH of 2.51 and FSH of 7.4 are not explicitly discussed in context of ovarian reserve quality, and BMI of 28.5 with PCOS is not fully explored for its potential impact on endometrial receptivity or implantation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 30-50% follows reasonably from the evidence presented, with appropriate downward adjustments for paternal age and prior failures. The connection between biochemical pregnancy and aneuploidy risk is coherent. Minor inconsistency: the response attributes aneuploidy risk primarily to paternal age (44), but at maternal age 34, maternal aneuploidy risk is also relevant and should be weighted more carefully. The base rate cited (50-60% for euploid embryos) is reasonable but the adjustment logic could be more explicitly quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines: PGT-A recommendation for recurrent failure with advanced paternal age, SDF testing suggestion, luteal support for PCOS, and metabolic screening are all evidence-based. The Gardner grading interpretation is standard. Minor deviation: ESHRE guidelines are somewhat cautious about routine PGT-A recommendation and its universal benefit is still debated; the response presents it as clearly indicated without acknowledging this nuance. The recommendation to proceed with transfer of this 3AB embryo is appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, maintain luteal support, monitor beta-hCG closely, pursue PGT-A in future cycles, test SDF, and screen for metabolic issues. These are clinically useful next steps. Could be improved by specifying progesterone supplementation type/dosage considerations for PCOS, discussing whether assisted hatching might be beneficial given the Grade 3 expansion, or addressing freeze-all strategy considerations. The future cycle planning section is well-structured but lacks discussion of timing or sequencing of recommended tests."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020454,
+  "judge_latency_ms": 16964.64116599236,
+  "judge_prompt_tokens": 3073,
+  "judge_completion_tokens": 749
+}

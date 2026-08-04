@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response acknowledges image quality limitations and relies heavily on the provided Gardner score rather than independent image analysis. It correctly interprets the 3AA grading components (expansion stage 3, ICM grade A, TE grade A) but does not provide additional morphological observations from the image itself, such as blastocoel cavity characteristics, zona pellucida thickness details, or any visible artifacts. The description is accurate but largely derivative of the provided score rather than independent visual assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, including female age, BMI, ovarian reserve markers, previous ectopic history, sperm parameters, endometrial thickness, and stress levels. It connects these factors to implantation prognosis and explains how they interact with embryo quality. Minor gaps include not fully exploring the interaction between male factor diagnosis and ICSI use, and the paternal age impact on sperm DNA quality is mentioned but not deeply connected to the embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 40-55% follows reasonably from the baseline adjustment framework presented. The response correctly identifies that ectopic risk must be factored separately from intrauterine implantation probability. Minor inconsistency: the response mentions a baseline of 55-70% for a 3AA blastocyst but doesn't clearly specify whether this assumes PGT-A confirmed euploidy, which would be an important distinction affecting the validity of the baseline figure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines, including SET recommendation, early ultrasound monitoring post-transfer, consideration of PGT-A, hysteroscopy for recurrent implantation failure, and sperm DNA fragmentation testing. The suggestion of ERA is appropriately qualified as conditional. Thrombophilia screening recommendation is correctly noted as debated. The response does not contradict any major guidelines, though the BMI classification as 'obese' at 30.4 is technically correct per WHO criteria but could be more nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful, covering immediate transfer management (early ultrasound timing at 5.5-6 weeks, ectopic counseling, SET) and future cycle planning (PGT-A, hysteroscopy/laparoscopy, sperm DNA fragmentation, weight management). Timing details for monitoring are provided. Some recommendations could be more specific, such as exact hCG monitoring intervals or specific stress management referral pathways, but overall the guidance is practical and well-organized for clinical use."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020232,
+  "judge_latency_ms": 14145.80191600544,
+  "judge_prompt_tokens": 3434,
+  "judge_completion_tokens": 662
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model correctly stated that no image was available to it and avoided fabricating specific embryo morphology. It only discussed general blastocyst criteria and did not make false visual claims, though it therefore did not analyze the actual visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, PCOS, antagonist protocol, oocyte yield/maturity, sperm parameters, and endometrial thickness into prognosis reasonably well. Some interactions were somewhat generic and it could not connect actual morphology to these factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with conclusions generally following from the available data and acknowledged uncertainty from missing morphology. Minor overreach exists in inferring prognosis and expected morphology without image review."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a 31-year-old and caution regarding OHSS/PCOS are broadly guideline-consistent. Slight deviations include somewhat strong endorsement of aggressive combined luteal support and a somewhat liberal discussion of PGT-A in a young good-prognosis patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support considerations, metabolic follow-up, and contingency planning. Some advice is still generalized because morphology and cycle details were unavailable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.01395,
+  "judge_latency_ms": 5800.458375000744,
+  "judge_prompt_tokens": 2875,
+  "judge_completion_tokens": 355
+}

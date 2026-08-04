@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no image or Gardner score was provided, despite explicit data showing a 3AA blastocyst. It therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, diagnosis, semen parameters, and lifestyle well, though it misses the key interaction with the provided 3AA embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but a major premise is wrong: morphology was said to be unavailable when the Gardner score was provided, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, avoiding bed rest, luteal support, and not routinely using PGT-A in a 30-year-old first cycle are broadly guideline-consistent, though omission of the provided 3AA grade limits full alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical transfer and future-cycle recommendations with reasonable specificity, but would be more actionable if it had incorporated the known 3AA morphology into counseling."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013299,
+  "judge_latency_ms": 3650.1015000030748,
+  "judge_prompt_tokens": 2978,
+  "judge_completion_tokens": 291
+}

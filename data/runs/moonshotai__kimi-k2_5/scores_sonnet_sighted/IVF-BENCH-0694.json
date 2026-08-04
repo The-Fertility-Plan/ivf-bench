@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA classification features (expanded blastocyst, thinned zona, compact ICM, cohesive TE) consistent with the lab data provided. However, the image itself is quite dark and low-contrast, making independent morphological verification difficult. The description largely echoes the provided Gardner score rather than demonstrating independent image analysis. Some fabricated details like 'darkly staining cellular aggregate' and 'flattened and organized' TE cells go beyond what is clearly discernible in this grainy microscopy image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects maternal age 32 with euploidy rates, links tubal factor diagnosis to preserved uterine/oocyte competence, addresses the slightly low MII maturity rate (53%), considers paternal age 40 with appropriate nuance, integrates endometrial thickness with implantation potential, and incorporates lifestyle factors. The interaction between embryo quality and patient prognosis is well-articulated throughout."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and conclusions follow logically from evidence. The probability estimates are internally consistent across sections. Minor issue: the response states euploidy likelihood ~70% for this embryo but then gives implantation rates of 50-60% without fully reconciling why euploidy-confirmed embryos would only add 5-10% improvement. The oocyte maturity rate concern is raised but then somewhat dismissed without full integration into the final probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: eSET recommendation for age 32 with good prognosis is appropriate, luteal phase support protocols are evidence-based, ERA testing recommendation only after recurrent implantation failure (≥2 failures) aligns with current guidelines, and PGT-A deferral for first cycle at age 32 is consistent with ASRM guidance. Minor deviation: recommending low-dose aspirin lacks strong evidence base in standard IVF without specific indications, and the suggestion is not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific recommendations covering immediate transfer strategy (eSET with rationale), detailed luteal support protocols with specific dosages, embryo disposition planning, and three distinct scenario-based future planning pathways (negative β-hCG, biochemical pregnancy, ongoing pregnancy). The prognostic counseling language provided is directly usable in patient consultation. Recommendations are appropriately nuanced and case-specific rather than generic."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.019689,
+  "judge_latency_ms": 14588.45549999387,
+  "judge_prompt_tokens": 3323,
+  "judge_completion_tokens": 648
+}

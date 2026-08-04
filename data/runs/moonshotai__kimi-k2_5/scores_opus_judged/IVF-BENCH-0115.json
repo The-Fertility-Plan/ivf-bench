@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the embryo as a 2BB blastocyst consistent with the Gardner score provided. However, there is some inconsistency: the lab data states 'full blastocyst, blastocoel fills the embryo' (Grade 2), yet the model describes it as '>50% but not fully expanded,' which slightly contradicts the definition. The ICM and TE descriptions are reasonable but largely restate the provided grading rather than offering independent image-based observations. The zona pellucida comment about thinning is generic. The model doesn't describe specific visual features uniquely visible in the image with great precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model astutely identifies the oocyte-to-blastocyst attrition (7 MII to single 2BB) as concerning, links smoking to mitochondrial/oxidative stress affecting oocyte quality, connects the biochemical pregnancy history to implantation capability, and considers the interplay between age, AMH, endometrial thickness, BMI, and embryo quality. The smoking impact is appropriately highlighted as the dominant negative variable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate follows a clear stepwise adjustment from base rates with explicit modifiers. The identification of smoking as the critical risk factor is consistent throughout. One minor issue: the 40-50% reduction in implantation attributed to smoking is a strong claim that could be better sourced, and the final probability range (10-15% LBR) is quite low but reasonably derived from the adjustments applied. The logic chain from observations to conclusions is generally sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines. eSET recommendation is appropriate, PGT-A suggestion for future cycles given recurrent failure is evidence-based, ERA recommendation is reasonable given the implantation failure pattern, and the workup suggestions (DFI, thrombophilia, hysteroscopy, karyotype) are standard. The assisted hatching recommendation is appropriately conditional. CoQ10 supplementation and growth hormone are mentioned with appropriate context. Minor deviation: the smoking reduction figure of 40-50% is on the high end of published estimates."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations with specific dosages (progesterone 400mg BID, aspirin 81mg, CoQ10 600mg), clear timelines (3-month cessation period), specific tests to order (DFI, thrombophilia panel, karyotype, hysteroscopy, ERA), protocol modifications (antagonist with dual trigger), and a freeze-all strategy option. The recommendations are well-organized into current transfer and future cycle planning sections, with lifestyle interventions clearly delineated. The summary provides a clear clinical bottom line."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.03307,
+  "judge_latency_ms": 17804.523333034012,
+  "judge_prompt_tokens": 3064,
+  "judge_completion_tokens": 710
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score can be assigned and treats this as a Day 4 morula/early blastocyst case, despite provided lab data explicitly giving a Gardner score of 1DD. It fails to analyze the stated poor-quality blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF outcomes, sperm parameters, endometrial thickness, and ovarian response into prognosis reasonably well, though some inferences are speculative and not tightly linked to the actual 1DD embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but a major premise is flawed: it ignores the provided blastocyst grade and builds reasoning around an assumed Day 4 embryo stage. Some conclusions therefore rest on inconsistent interpretation of the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Several recommendations are broadly evidence-based, but there are notable deviations: ERA/immune/NK testing are not routinely guideline-supported, and the response mishandles Gardner grading applicability given the provided 1DD score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It offers practical next steps for luteal support, beta-hCG follow-up, PGT-A consideration, sperm DNA fragmentation testing, and future culture strategy. However, some suggestions are not strongly evidence-based and are not tailored to the actual 1DD morphology."
+    }
+  ],
+  "extracted_probability": 0.14,
+  "judge_cost_usd": 0.013608,
+  "judge_latency_ms": 4504.515916996752,
+  "judge_prompt_tokens": 2711,
+  "judge_completion_tokens": 365
+}

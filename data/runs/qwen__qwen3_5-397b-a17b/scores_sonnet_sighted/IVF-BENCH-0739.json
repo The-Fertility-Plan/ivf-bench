@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the hatching blastocyst stage, thinning zona pellucida, and references ICM and TE consistent with 4AA grading. However, the image is quite low-resolution and grainy, making precise morphological features difficult to confirm. The model describes the ICM as being in the 'lower-left quadrant' which is a reasonable interpretation, but the TE cohesiveness and specific cellular details claimed are difficult to verify from the image. The description is largely derived from the Gardner score data provided rather than independent image analysis, and no mention is made of the visible debris/granularity or the small adjacent structure (possibly a fragment or second structure) visible in the upper right of the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting AMH, age, BMI, male factor, paternal age, and miscarriage history to the embryo assessment. It correctly notes the tension between low ovarian reserve and good embryo quality, addresses aneuploidy risk at age 36, and links paternal age to DNA fragmentation and miscarriage risk. Minor gap: it does not deeply explore how the antagonist protocol or the 12 COC/7 MII conversion rate specifically informs prognosis, and the interaction between BMI and endometrial receptivity could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 45-55% follows logically from the stated adjustments to a baseline of 60-70%, with clear deductions for age, BMI, and miscarriage history. The reasoning is internally consistent and conclusions are supported by observations. Minor issue: the baseline of 60-70% for a 4AA in women under 35 is slightly optimistic compared to published literature (typically 50-65%), and the BMI reduction of 10-15% applied linearly is a simplification. Overall the chain of reasoning is sound and well-structured."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: SET is recommended appropriately, PGT-A suggestion is evidence-based for age 36 with miscarriage history, sperm DNA fragmentation testing aligns with male factor workup guidelines, and endometrial thickness assessment is consistent with current standards. The luteal support recommendation mentioning dual-pathway support is reasonable though not universally guideline-mandated. Weight management advice aligns with ASRM obesity guidelines. No major deviations from established practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly justified, luteal support options are named, PGT-A and sperm DNA fragmentation testing are explicitly recommended with rationale, and embryo banking strategy is addressed given low AMH. The response provides clear next steps for both this transfer and future planning. Could be improved by specifying progesterone dosing protocols, suggesting specific timing for repeat AMH testing, or recommending recurrent pregnancy loss workup given the prior miscarriage, which would add further clinical utility."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019968,
+  "judge_latency_ms": 16907.097334013088,
+  "judge_prompt_tokens": 2921,
+  "judge_completion_tokens": 747
+}

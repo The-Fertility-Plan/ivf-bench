@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific visible features. However, it incorrectly implied Gardner scoring was not applicable because this is Day 4, whereas the provided image is clearly a blastocyst-stage embryo that can be morphologically described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, BMI, tubal factor diagnosis, endometrial thickness, oocyte maturity, and paternal age/sperm factors into prognosis reasonably well, though AMH is unavailable and some links to actual embryo morphology are necessarily limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is logically structured and internally consistent overall, with a clear chain from patient factors to prognosis and recommendations. Minor weakness is the assumption that Day 4 status itself lowers prognosis without acknowledging the image appears blastocyst-stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: Gardner grading can be used once blastocyst morphology is present, paternal age alone is not a standard indication for PGT-A, and suggested sperm-selection add-ons are not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer and future planning, including luteal support review, lifestyle advice, extended culture, and consideration of additional sperm testing. Recommendations are useful, though some are somewhat generic and not tightly tailored to the actual embryo image."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013677,
+  "judge_latency_ms": 5142.015542005538,
+  "judge_prompt_tokens": 2679,
+  "judge_completion_tokens": 376
+}

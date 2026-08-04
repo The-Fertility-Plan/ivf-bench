@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies expansion stage 3, thinned zona, ICM density, and TE cohesion consistent with Gardner 3AA. Notably adds observations of cytoplasmic granularity and vacuolization visible in the image, and notes borderline 3-4 expansion. Minor issue: the image shows a somewhat irregular, granular ICM that could be questioned as truly 'A' grade, but the model appropriately flags this caveat rather than blindly accepting the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all domains: age-related aneuploidy risk linked to embryo ploidy uncertainty, smoking impact on endometrial receptivity connected to implantation, endometrial thickness flagged with differential diagnoses, sperm parameters tied to DFI recommendation, and BMI/FSH as favorable counterbalances. The matrix format clearly shows how each factor interacts with embryo quality and transfer outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability model is transparent and sequential, with each modifier clearly stated and mathematically applied. The base rate of 45-55% for 3AA at age 37 is reasonable. The multiplicative modifier approach is logical though somewhat simplified. Minor inconsistency: the 'No PGT-A' modifier is applied as if it independently reduces implantation rather than reflecting ploidy uncertainty already partially captured in the age modifier. Final range of 22-35% is coherent with the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for age 37, smoking cessation as priority intervention, endometrial thickness concern at 16.5mm with appropriate follow-up suggestions, luteal phase support, and hysteroscopy recommendation. The WHO motility threshold of 42% is correctly cited. Minor deviation: ERA recommendation is somewhat controversial and not universally guideline-supported for first transfers without prior failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with pre-transfer checklist, prioritized lifestyle interventions with timelines and evidence levels, detailed failure workup pathway, and specific future cycle planning including PGT-A, DFI testing, hysteroscopy, and protocol adjustments. The urgency framing around age 37 and egg freezing discussion adds important clinical nuance. Recommendations are tiered by priority and include alternatives, making them directly usable by a clinician."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.02079,
+  "judge_latency_ms": 16577.5539590104,
+  "judge_prompt_tokens": 3825,
+  "judge_completion_tokens": 621
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0262",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the embryo as being within the zona pellucida and notes the discrepancy between the Gardner numeric score (2) and the text description. It describes the embryo as transitioning between compacted morula and early blastocyst with a hint of cavity forming. However, for a 2AA embryo, the description could be more precise about the visible ICM and TE features. The model appropriately flags the scoring discrepancy, which shows careful observation, though the description of the image as resembling a 'compacted morula' may be slightly inaccurate depending on the actual image content."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model connects maternal age (38) to aneuploidy risk (~40-50%), correctly highlights the significance of the uterine factor diagnosis alongside the missing endometrial thickness, notes the previous live birth as a highly favorable prognostic indicator, addresses the partner's age and sperm parameters, and flags the moderate alcohol consumption as a concern. The interaction between embryo quality and patient factors is thoroughly explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 25-35% is derived systematically from a baseline adjusted for positive factors (AA quality, previous live birth) and negative factors (age-related aneuploidy, uterine factor, no PGT-A). The note about COCs being 'None' as a likely clerical error is reasonable. Minor issue: the model states the embryo is 'morphologically beautiful (AA)' while also noting it appears to be an early blastocyst/morula, which creates a slight tension. Overall the logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, PGT-A suggestion for age 38, lifestyle modification advice, and the recommendation for hysteroscopy to investigate uterine factor. The Gardner grading system is correctly referenced. The alcohol cessation recommendation is evidence-based. The endometrial thickness threshold of >7mm is consistent with guidelines. Minor deviation: could have discussed progesterone supplementation or specific transfer protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: verify endometrial thickness before transfer, confirm uterine cavity status via SIS or hysteroscopy, SET recommendation, PGT-A for future cycles, lifestyle modifications (alcohol cessation, increased physical activity), and diagnostic hysteroscopy if transfer fails. The recommendations are well-organized into 'this transfer' and 'future planning' categories. Could be slightly more specific about timing of interventions or alternative protocols."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.03064,
+  "judge_latency_ms": 15203.16841697786,
+  "judge_prompt_tokens": 2788,
+  "judge_completion_tokens": 668
+}

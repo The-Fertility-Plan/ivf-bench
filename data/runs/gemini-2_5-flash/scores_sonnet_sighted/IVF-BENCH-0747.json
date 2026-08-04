@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocyst, tightly packed ICM, cohesive TE epithelium, thinned zona pellucida). However, the image actually shows a somewhat irregular, granular appearance with what appears to be cellular debris or fragmentation visible, and the blastocoel cavity appears somewhat irregular. The response does not note these potentially concerning morphological features visible in the image, instead providing an overly optimistic description that largely mirrors the provided Gardner score rather than independently analyzing the image's actual appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including maternal age, FSH, oocyte yield, endometrial thickness, sperm parameters, BMI, and lifestyle factors. It correctly identifies the uterine factor as the primary clinical concern and discusses how it interacts with the otherwise favorable profile. Minor gap: AMH being N/A is noted but not explored further in terms of what this missing data point means for prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented, with appropriate caveats about the uterine factor. The response correctly identifies that the uterine factor is the primary uncertainty and adjusts its conclusions accordingly. The caveat structure is well-handled. Minor issue: the response could better reconcile the image appearance with the stated Gardner score rather than simply accepting the provided score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation for a young patient with good quality blastocyst, luteal phase support, cryopreservation of remaining embryos, consideration of ERA for recurrent implantation failure, and PGT-A only if recurrent failure occurs rather than routinely. The staging and grading discussion aligns with Gardner criteria. Minor deviation: could have more explicitly referenced endometrial preparation protocols for the uterine factor diagnosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering both immediate transfer considerations and future cycle planning. Specific suggestions include hysteroscopy confirmation, ERA testing if needed, PGT-A consideration for recurrent failure, and lifestyle modifications. The response provides a clear decision tree for future planning. Could be slightly more specific about what type of uterine factor workup should be confirmed prior to transfer and what luteal phase support protocol specifics to consider."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020712,
+  "judge_latency_ms": 14295.29533299501,
+  "judge_prompt_tokens": 3759,
+  "judge_completion_tokens": 629
+}

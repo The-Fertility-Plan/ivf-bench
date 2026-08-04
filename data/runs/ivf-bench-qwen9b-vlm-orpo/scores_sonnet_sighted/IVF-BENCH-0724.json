@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0724",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies key structures (blastocoel, ICM, TE, zona pellucida) and notes the embryo appears less expanded than expected for a 3AA grade. However, the description is somewhat hedged and cautious rather than precise, noting limitations of a static image. The observation that it looks 'compacted rather than widely expanded' is a reasonable caveat but the description lacks the precision expected for a 5-score, and some features described (cohesive TE, compact ICM cluster) are consistent with the image but not elaborated with high specificity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 27 as the strongest positive predictor, BMI 31.4 as the main modifiable concern, prior ectopic and biochemical pregnancy history informing monitoring strategy, endometrial thickness 7mm as a mild concern, AMH/FSH as reassuring, sperm parameters as adequate, and lifestyle factors including former smoking and alcohol use. The interactions between these factors and embryo quality are explicitly discussed and weighted appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 40-55% implantation and 30-45% live birth follows logically from the identified positive and negative factors. The distinction between implantation probability and live birth probability is appropriately made. Minor issue: the response acknowledges morphological limitations but still uses the 3AA grade confidently in probability calculations, which is a slight inconsistency. Overall the logic chain is clear and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer at age 27 is correctly recommended, PGT-A is appropriately framed as non-mandatory at this age, luteal support emphasis is correct, early ectopic monitoring with serial hCG is guideline-consistent, and the cautious approach to add-ons (immune therapies, anticoagulation) aligns with evidence-based practice. The BMI counseling and freeze-all consideration for suboptimal endometrium are also guideline-aligned. Minor deduction for not explicitly referencing ERA or endometrial receptivity testing given repeated implantation failures."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations organized clearly for both immediate transfer management and future cycle planning. Specific actions include: serial beta-hCG monitoring due to ectopic history, alcohol cessation, single embryo transfer, luteal support optimization, early ultrasound timing, hysteroscopy/saline sonogram for uterine evaluation, freeze-all consideration for lining optimization, structured BMI reduction targets (5-10%), stimulation protocol review, and conditional PGT-A discussion. Each recommendation is contextualized to this specific patient's history and risk profile."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.023388,
+  "judge_latency_ms": 15502.514791995054,
+  "judge_prompt_tokens": 4226,
+  "judge_completion_tokens": 714
+}

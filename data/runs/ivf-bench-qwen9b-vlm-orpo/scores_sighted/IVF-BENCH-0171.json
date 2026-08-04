@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0171",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst with blastocoel, ICM, and TE, and appropriately notes limits of a single image. However, it leans too favorably toward a full/expanded AA appearance despite the image looking somewhat early/partially expanded with indistinct ICM and TE, and it does not discuss the mismatch with the provided Gardner 2AA/day 4 context in detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, oocyte yield, unexplained infertility, endometrial thickness, BMI, lifestyle, prior cycle history, and semen parameters with embryo prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with appropriate caveats about morphology and prognosis. Minor issue: it somewhat overstates embryo quality/prognosis relative to the image and day-4 timing, but overall conclusions follow logically from the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: preference for single embryo transfer in a young patient, avoidance of unproven add-ons, and reasonable follow-up steps. Small deviations include overconfident implantation estimates and some speculative lifestyle impact framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for the current transfer and contingency planning if unsuccessful, including SET, luteal support adherence, lifestyle advice, uterine cavity review, and selective further testing."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016428,
+  "judge_latency_ms": 24514.400625004782,
+  "judge_prompt_tokens": 3676,
+  "judge_completion_tokens": 360
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0670",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage, thinning zona pellucida, large blastocoel cavity, and correctly localizes the ICM to the lower right quadrant as a dense granular cluster. TE description as loose epithelium is appropriate. Minor issue: the response describes the zona thinning as 'particularly at the upper left quadrant' which is a reasonable observation, and overall the description aligns well with the image and Gardner 3AB score. No major fabricated features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating maternal age, AMH, oocyte yield, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality. The identification of the DOR vs. high reserve discrepancy is clinically astute and relevant. It connects paternal age to sperm DNA fragmentation risk and links stress/sedentary lifestyle to implantation. Slight weakness: BMI of 27.3 is not meaningfully discussed, and the endometrial thickness of 7.0mm, while called 'ideal,' is actually at the lower acceptable threshold and warrants more nuanced discussion."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 30-50% follows reasonably from the embryo grade and patient age. The identification of the DOR/AMH contradiction is coherent and well-argued. Minor inconsistency: the response mentions ~90% euploidy rate boosting clinical pregnancy rate but then keeps the estimate at 30-50%, which is not fully reconciled. The response was also cut off at recommendation #3, leaving the reasoning incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is mostly correct per established criteria. However, the claim that 'normal AMH range is typically 1.0–4.0 ng/mL' is an oversimplification; ESHRE/ASRM reference ranges vary by age and lab. The endometrial thickness threshold discussion (6-14mm cited as ideal) is slightly off from most guidelines which cite ≥7-8mm as minimum. The response does not mention PGT-A considerations, which ASRM guidelines would suggest discussing for a 3AB embryo in a first cycle. The response is cut off before completing recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations (proceed with transfer, review DOR diagnosis, address lifestyle factors implied). However, the response is truncated and cuts off mid-recommendation #3, leaving out potentially important guidance on luteal phase support, progesterone supplementation, stress management referral, future cycle planning, PGT-A consideration, or OHSS monitoring given the high AMH. What is present is reasonable but incomplete, limiting practical clinical utility."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01914,
+  "judge_latency_ms": 15564.08233300317,
+  "judge_prompt_tokens": 2920,
+  "judge_completion_tokens": 692
+}

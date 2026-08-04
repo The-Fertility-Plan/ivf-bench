@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It repeats the provided 3AB label but over-interprets the image with features not clearly visible, especially a compact Grade A ICM, well-formed blastocoel, TE-specific vacuolation, and fragmentation details. The image itself appears somewhat collapsed/indistinct, so several morphology claims are not well supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, BMI, diagnosis, endometrium, and first-cycle status into prognosis reasonably well. Some assumptions are made (e.g., trilaminar lining) and AMH is unavailable, but overall the patient factors are connected to embryo quality and expected outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but the probability adjustment scheme is somewhat arbitrary and several deductions/additions are not evidence-based. It also gives weight to speculative image findings and lifestyle factors beyond what is justified for implantation prediction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic transfer recommendation is reasonable, but several suggestions are not guideline-concordant for this scenario, including ERA/EMMA/ALICE, NK-cell testing, broad thrombophilia workup, MTHFR testing, aspirin for unexplained infertility, and early PGT-A emphasis in a young first-cycle patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer, luteal support, and contingency planning. However, some actions are overly prescriptive or low-value for this case, which limits the practical quality despite good specificity."
+    }
+  ],
+  "extracted_probability": 0.56,
+  "judge_cost_usd": 0.016242,
+  "judge_latency_ms": 6115.1105419994565,
+  "judge_prompt_tokens": 3404,
+  "judge_completion_tokens": 402
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response contradicts the provided Gardner score 1DD by calling the embryo a good-quality Day 4 morula/early blastocyst with minimal fragmentation and uniform cytoplasm, and it fails to recognize absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, male factor, endometrium, and cycle history, though it overweights favorable clinical factors relative to the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major faulty premise that the embryo is good quality; therefore the 35-50% implantation estimate is not supported for a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some general recommendations are standard, the interpretation departs from Gardner grading and evidence-based prognosis by treating a 1DD embryo as favorable and assigning an overly optimistic implantation chance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer, luteal support, and considering extended culture in future cycles, but the advice is generic and insufficiently tailored to the poor embryo grade."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013362,
+  "judge_latency_ms": 3588.1426249979995,
+  "judge_prompt_tokens": 2814,
+  "judge_completion_tokens": 328
+}

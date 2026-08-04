@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the embryo as a cleavage-stage/morula embryo and describes favorable blastomere symmetry and minimal fragmentation, which conflicts with the provided Gardner score 0DD indicating an early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, prior IVF outcomes, sperm parameters, and endometrium, though it fails to reconcile these with the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good quality; the high implantation estimate is inconsistent with the documented 0DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General points like SET in a young patient and standard luteal support are reasonable, but the interpretation of embryo quality and optimistic prognosis are not aligned with Gardner grading or evidence for a 0DD embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical recommendations such as SET, luteal support, counseling, and cryopreservation planning, but these are only moderately useful because they are based on an incorrect assessment of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 4033.4507079969626,
+  "judge_prompt_tokens": 2909,
+  "judge_completion_tokens": 329
+}

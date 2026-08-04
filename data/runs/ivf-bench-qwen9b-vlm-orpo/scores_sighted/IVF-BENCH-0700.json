@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a usable blastocyst and acknowledges limits of a single still image, but it softens or partially misstates the provided lab grade by calling TE moderate/B despite the assigned 3AB having A-grade ICM and B-grade TE, and some image-specific features are described somewhat generically."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, ovarian reserve, endometriosis, semen parameters, BMI, prior cycle history, and especially thin endometrium into prognosis and transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and well structured, with prognosis tied to embryo quality and uterine factors; minor issue is some ambiguity around exact morphology versus the assigned grade and a few speculative modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading concepts and evidence-based IVF practice, including caution about thin lining and avoiding unsupported add-ons; slight overemphasis on endometrial thickness as the dominant determinant and some speculative discussion lower it from perfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides practical next steps for current transfer, counseling, luteal support review, consideration of fresh versus freeze-all, uterine evaluation if failure occurs, and when to consider PGT-A or male-factor follow-up."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015678,
+  "judge_latency_ms": 5054.320374998497,
+  "judge_prompt_tokens": 3591,
+  "judge_completion_tokens": 327
+}

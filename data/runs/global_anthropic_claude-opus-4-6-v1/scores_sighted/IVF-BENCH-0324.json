@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0324",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 2BA/full blastocyst and correctly identifies a loose ICM and good TE, but it overinterprets image details (e.g., specific ICM location, cytoplasmic granularity, uniform zona) and creates some confusion about expansion grade 2 vs 3."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Comprehensively integrates age, ovarian reserve, prior live birth, endometrium, semen parameters, BMI, diagnosis, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and generally logical, with a plausible prognosis estimate, though there are minor inconsistencies such as calling grade 2 both full blastocyst and slightly delayed and some overconfident quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned on SET appropriateness and general prognostic framing, but includes weaker-evidence recommendations (routine ERA/immunologic workup, strong PGT-A endorsement, specific luteal add-ons) that are not universally guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, monitoring, lifestyle modification, and future planning, though some recommendations go beyond what is clearly indicated for this patient."
+    }
+  ],
+  "extracted_probability": 0.43,
+  "judge_cost_usd": 0.019077,
+  "judge_latency_ms": 4544.632167002419,
+  "judge_prompt_tokens": 4649,
+  "judge_completion_tokens": 342
+}

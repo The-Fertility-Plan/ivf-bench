@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0674",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model struggled significantly with image interpretation, repeatedly questioning whether the image showed a degenerating cell rather than a blastocyst. It ultimately defaulted to trusting the text-provided Gardner score rather than independently analyzing the image. The morphological description was largely derived from the text data rather than genuine image analysis, with the model unable to confidently identify ICM, TE, or expansion stage from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The model identified key clinical factors including age (33), uterine factor diagnosis, sperm parameters, smoking status, and endometrial thickness. It connected smoking and uterine factor as risk factors affecting implantation. However, integration was somewhat superficial - it noted sperm motility of 19.2% is low without flagging this as potentially significant, and did not deeply explore what 'uterine factor' might specifically entail or how it interacts with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is severely compromised by repetitive, circular reasoning about the image interpretation. The model repeated the same analysis loop dozens of times without resolution, creating an incoherent and disorganized response. While the final conclusions were reasonable, the reasoning process was highly fragmented and contradictory, with the model unable to reconcile the image with the provided text data in a logical manner."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The recommendations to proceed with transfer of a 4AA blastocyst, address smoking cessation, consider hysteroscopy for uterine factor, and consider PGT-A are generally aligned with ESHRE/ASRM guidelines. However, the response did not address specific guideline considerations for uterine factor transfers, did not mention luteal phase support protocols, and the PGT-A recommendation lacked nuanced justification given the patient's age and first cycle status."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provided some actionable recommendations including proceeding with transfer, smoking cessation, uterine workup (hysteroscopy), and PGT-A consideration. However, these were presented in a very brief, bulleted format without specificity. Missing were details on endometrial preparation optimization, specific uterine factor workup steps, timing considerations, or contingency planning if this transfer fails. The smoking cessation recommendation lacked specific guidance."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.038754,
+  "judge_latency_ms": 13569.337416993221,
+  "judge_prompt_tokens": 10008,
+  "judge_completion_tokens": 582
+}

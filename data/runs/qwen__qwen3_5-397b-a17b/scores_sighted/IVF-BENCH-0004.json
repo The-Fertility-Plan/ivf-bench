@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it overstates certainty about a distinct tightly packed ICM and cohesive TE from this single image; the image appears somewhat less clearly defined than the description suggests."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, endometrial thickness, sperm parameters, BMI, and lifestyle with embryo quality in a clinically meaningful way, though diagnosis and transfer-day context could be handled more carefully."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: it treats a Day 4 expanded blastocyst as unusually fast without sufficient caution, assumes endometrial synchronization details not provided, and gives a somewhat confident implantation estimate despite these uncertainties."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and acknowledging age-related aneuploidy are broadly guideline-consistent, but the discussion of Day 4/Day 5 synchrony and freeze-all/PGT-A is somewhat speculative and not tightly grounded in standard guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, alcohol avoidance, and future consideration of PGT-A/FET strategy, though some recommendations are generic and not fully tailored to the specific uncertainty around embryo stage and transfer timing."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01323,
+  "judge_latency_ms": 5174.370249995263,
+  "judge_prompt_tokens": 2620,
+  "judge_completion_tokens": 358
+}

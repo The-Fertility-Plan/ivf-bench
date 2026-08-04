@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/early cavitating embryo and ignores the provided Gardner grade 1DD, which indicates a poor-quality early blastocyst with absent/degenerate ICM and TE. It fabricates details such as mild-moderate fragmentation and fair-to-good quality that are not supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, PCOS, ovarian response, sperm parameters, endometrium, and first-cycle status, and relates them to prognosis, though some interactions are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is internally explained, but the reasoning is undermined by the incorrect morphological premise and some speculative assumptions (e.g., likely ICSI, alcohol and former smoking effects on implantation)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (luteal support, consider blastocyst culture/PGT-A), but others are weakly supported or not guideline-based for this scenario, such as routine low-dose aspirin, ERA after a first failed transfer, and overstating antagonist superiority for endometrial environment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer monitoring, luteal support, and future cycle planning, though several recommendations are not sufficiently evidence-based or tailored to the very poor embryo grade."
+    }
+  ],
+  "extracted_probability": 0.27,
+  "judge_cost_usd": 0.014004,
+  "judge_latency_ms": 4750.479958005599,
+  "judge_prompt_tokens": 2758,
+  "judge_completion_tokens": 382
+}

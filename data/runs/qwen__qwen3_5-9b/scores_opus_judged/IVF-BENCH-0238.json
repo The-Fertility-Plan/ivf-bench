@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0238",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and largely accurate morphological description consistent with the 3AA Gardner score. It correctly identifies zona thinning, tightly packed ICM, and cohesive TE. The mention of granularity in the ICM is a reasonable observation. Minor issue: describing a 'gap between ICM and zona' is somewhat generic and the description of thinning 'at the pole opposite the ICM' may or may not be precisely visible, but overall the description aligns well with the image and grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The response thoughtfully connects low AMH (0.68) with limited egg inventory, advanced paternal age (44) with aneuploidy/DNA fragmentation risk, lifestyle factors (former smoker, severe stress) with implantation outcomes, and balances these against favorable factors like BMI, endometrial thickness, and female age. The 'high-stakes' framing is clinically appropriate given the DOR context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 40-60% follows coherently from the base rate adjustment approach (starting at 60-70% for 3AA and adjusting downward for paternal age/male factor). One minor issue: the response states sperm parameters are 'normal' while also noting male factor diagnosis, which could seem slightly contradictory, though the explanation about DNA fragmentation risk resolves this. The logic chain from observations to conclusions is clear throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with guidelines. Correctly advocates for SET, appropriately raises PGT-A discussion (though the response was cut off before completing this section), and the Gardner grading interpretation is accurate. The recommendation for sperm DNA fragmentation testing is evidence-based. The probability range is reasonable. Minor deviations: the response was truncated before completing PGT-A discussion, and calling fresh transfer 'non-negotiable' without fully discussing the freeze-all option for PGT-A is a slight oversight."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear, specific recommendations including proceeding with fresh transfer, SET, sperm DNA fragmentation testing, and initiating PGT-A discussion. The 'biopsy dilemma' framing is clinically relevant. However, the response was cut off mid-sentence during the PGT-A discussion, leaving that critical recommendation incomplete. Future cycle planning is partially addressed (mentions donor gametes, different protocols) but lacks specificity on protocol modifications for DOR."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.028425,
+  "judge_latency_ms": 15313.61954199383,
+  "judge_prompt_tokens": 2485,
+  "judge_completion_tokens": 640
+}

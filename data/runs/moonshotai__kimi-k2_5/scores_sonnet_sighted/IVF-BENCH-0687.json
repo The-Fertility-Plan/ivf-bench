@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3), thinned zona pellucida, compact ICM with dense cellularity, and moderately loose TE consistent with Gardner 3AB grading. The description aligns well with the laboratory data provided and the grayscale microscopy image showing an expanded blastocyst with visible ICM. Minor limitation: the image is low-contrast and grayscale, making precise ICM/TE distinction difficult to confirm visually, yet the model confidently describes features that largely match the provided Gardner score rather than purely image-derived observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors: AMH 0.94 ng/mL interpreted as DOR for age 30, three prior failures analyzed for RIF implications, biochemical pregnancy interpreted as suggestive of aneuploidy, partner age 42 linked to sperm DNA fragmentation risk, endometrial thickness 9mm noted as favorable, and BMI/lifestyle factors acknowledged. The response explicitly connects DOR to higher aneuploidy rates and links prior biochemical pregnancy to chromosomal instability, demonstrating sophisticated multi-factor integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is largely coherent: baseline probability adjusted downward for RIF and DOR, upward for ICM grade A, with a euploidy-blended estimate. The 'DOR paradox' framing is clinically sound. Minor issue: the blastulation rate calculation (1/6 = ~17%) assumes only one blastocyst was obtained, which is inferred but not explicitly stated in the lab data, creating a slight logical assumption gap. The probability adjustments are somewhat arbitrary in their exact percentages but directionally appropriate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: ultrasound-guided transfer, luteal phase support, PGT-A recommendation for RIF with DOR, sperm DNA fragmentation testing for advanced paternal age, ERA consideration after euploid failure, hysteroscopy for RIF workup, and antagonist protocol consideration for DOR. DHEA supplementation recommendation has limited but emerging evidence (not strongly guideline-endorsed). Low-dose aspirin recommendation has weak evidence base in IVF but is commonly used. Overall well-aligned with current evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable across all domains: specific luteal support protocols with target progesterone levels, precise embryo placement guidance (1-1.5 cm from fundus), specific diagnostic workup sequence if cycle fails (PGT-A, DFI, karyotype, ERA, hysteroscopy, thrombophilia panel), specific protocol modifications (antagonist + dual trigger, DHEA dosing 25mg TID, growth hormone dosing), embryo banking strategy with target numbers, and clear counseling points. The response provides a logical decision tree for both success and failure scenarios with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.022566,
+  "judge_latency_ms": 25992.909042004612,
+  "judge_prompt_tokens": 3822,
+  "judge_completion_tokens": 740
+}

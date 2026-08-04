@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0328",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It generally recognizes a blastocyst and references the reported 3AA grade, but it overstates image-visible detail: the blastocoel is not clearly seen as fully expanded, the ICM is not convincingly identifiable at the stated position, and TE cannot be reliably described as a uniform cohesive layer with numerous cells from this image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, prior failed cycles/biochemical pregnancies, sperm quality, endometrial thickness, and ovarian response into prognosis reasonably well, though AMH is unavailable and some causal links are asserted more strongly than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is structured and the probability estimate is tied to embryo quality, age, BMI, and prior outcomes. Minor issues include somewhat speculative quantitative penalties and confidence in morphology beyond what the image shows."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic embryo assessment is aligned with Gardner terminology, but several recommendations are not guideline-supported for routine use in RIF, including empirical steroids, LMWH, NK-cell testing, ERA as a routine next step, and calling PGT-A 'mandatory.' Assisted hatching and embryo glue are also presented too strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer and future planning, including cavity evaluation and weight optimization. However, some actions are overly aggressive or insufficiently evidence-based, which limits practical appropriateness."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014301,
+  "judge_latency_ms": 4894.11987499625,
+  "judge_prompt_tokens": 2942,
+  "judge_completion_tokens": 365
+}

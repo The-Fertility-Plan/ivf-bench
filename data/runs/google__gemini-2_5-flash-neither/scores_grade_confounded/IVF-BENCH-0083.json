@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0083",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and gives no morphology analysis despite explicit data showing a 4AB blastocyst with hatching expansion, strong ICM, and B-grade TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, especially age-related aneuploidy risk, ovarian reserve, tubal factor, prior miscarriage, sperm parameters, and endometrium, though it fails to connect these to the known 4AB embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but it is undermined by the major contradiction that morphology/Gardner score are said to be missing when they were provided, which weakens downstream conclusions and probability framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but recommendations such as intralipids/IVIG, endometrial scratch, ERA, immune panels, and thrombophilia workup are not routinely guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps and future planning, including counseling and consideration of PGT-A, but several suggestions are generic or weakly indicated and it misses transfer-specific guidance based on the known 4AB embryo."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.01506,
+  "judge_latency_ms": 4003.598458999477,
+  "judge_prompt_tokens": 3285,
+  "judge_completion_tokens": 347
+}

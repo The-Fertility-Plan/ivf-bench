@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 morula/M2 good-quality embryo, while the provided laboratory grading is 0DD early blastocyst with degenerative/absent ICM and TE. It fabricates favorable compaction-based features instead of addressing the very poor blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant patient factors including age, DOR, prior live birth, sperm parameters, endometrial thickness, and lifestyle, and links them to prognosis. However, this integration is weakened by being anchored to an incorrect embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but the core logic is undermined by the incorrect premise that this is a good-quality morula rather than a very poor-quality 0DD blastocyst. As a result, the prognosis and recommendations are overly optimistic relative to the stated embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is partial alignment in discussing age-related aneuploidy, luteal support, and future protocol optimization, but the embryo grading interpretation is inconsistent with Gardner criteria. Recommendations such as routine adjuncts for thin lining and broad endorsement of PGT-A/DHEA are more debatable than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management, monitoring, and future cycle planning. Still, actionability is limited by the inaccurate morphology assessment and insufficient emphasis on the poor 0DD prognosis."
+    }
+  ],
+  "extracted_probability": 0.27,
+  "judge_cost_usd": 0.013701,
+  "judge_latency_ms": 4563.8531660006265,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 396
+}

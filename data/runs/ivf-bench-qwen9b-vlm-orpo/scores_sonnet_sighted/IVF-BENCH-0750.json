@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies expansion stage, ICM compactness, and TE cohesion broadly consistent with 3AA grading, and notes zona thinning. However, the image appears to show a somewhat degenerative or fragmented blastocyst with dark granular debris and irregular cellular organization that the model does not adequately address. The model's description is overly optimistic relative to what is visible, missing potential signs of cytoplasmic abnormalities or cellular debris visible in the image. The acknowledgment of focal plane limitations partially mitigates this."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 37 as the dominant risk factor, AMH and FSH in context of oocyte yield, sperm parameters with appropriate nuance about DNA integrity limitations, endometrial thickness, BMI, lifestyle factors, and first-cycle status. It correctly identifies interactions between age and aneuploidy risk versus morphology, and contextualizes AMH relative to future planning rather than current transfer prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 20-30% implantation with 10-20% live birth is logically derived from the interplay of good morphology and age-related aneuploidy risk. The distinction between implantation and live birth rates is appropriate. Minor issue: the model estimates 20-30% implantation but literature for untested 3AA blastocysts at age 37 typically supports somewhat higher implantation rates (35-45%), making the estimate slightly conservative without full justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: appropriate caution about add-ons without indication (aspirin, steroids, intralipids, ERA) reflecting current evidence-based skepticism, appropriate discussion of PGT-A for age 37 with multiple embryos, recommendation against over-investigation after single failure, and suggestion of hysteroscopy/endometritis workup only after repeated failures. Day 5 transfer preference and Gardner grading application are consistent with established criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, avoid unindicated add-ons, discuss PGT-A for future cycles with adequate cohort, investigate uterine factors only after repeated failure, and address family planning timeline given moderate reserve. The response could be more specific about luteal support protocols, progesterone timing verification, or specific thresholds for triggering further investigation, but overall provides clinically useful guidance with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.021438,
+  "judge_latency_ms": 15232.922833005432,
+  "judge_prompt_tokens": 3816,
+  "judge_completion_tokens": 666
+}

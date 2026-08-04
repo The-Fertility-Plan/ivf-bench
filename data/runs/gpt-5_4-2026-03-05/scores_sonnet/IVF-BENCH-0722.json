@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies key blastocyst features (blastocoel, ICM, TE) and notes the ICM appears compact and cellular. However, it appropriately acknowledges image quality limitations. The notable issue is the Gardner grading discrepancy flagged by the model (3AA vs 4AA terminology confusion regarding expansion stage descriptors), which shows some uncertainty. The description is generally consistent with the provided lab data but lacks precise detail about TE cell count/cohesion and zona thinning that would be expected in a thorough morphological analysis. The caveat about image softness/focus is honest but reduces confidence in the morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (28), AMH, FSH, BMI, tubal factor diagnosis, stimulation response (COCs/MII), endometrial thickness, semen parameters, lifestyle factors (alcohol, activity, smoking), and first-cycle status. Critically, it connects each factor to prognosis and explains how they interact with embryo quality. The hydrosalpinx concern specific to tubal factor diagnosis is highlighted as a key modifier. The alcohol intake is flagged as a modifiable risk. The integration of age with aneuploidy risk relative to morphology is clinically sophisticated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 55-70% is justified with clear reasoning about why it is not higher (morphology imperfect, aneuploidy risk) and not lower (young age, good embryo, good lining). The Gardner grading discrepancy (3AA vs 4AA) is noted but then appropriately dismissed as clinically minor. The conditional reasoning around hydrosalpinx is sound. Minor issue: the response conflates implantation probability with clinical pregnancy rate in section 4, which are technically distinct endpoints, creating slight inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer for young good-prognosis patient, appropriately defers PGT-A for age 28 tubal factor without recurrent failure, recommends hydrosalpinx treatment before transfer per established evidence, advises against routine bed rest, suggests early ultrasound for tubal factor patients, and appropriately reserves extensive immunological/thrombophilia workup for recurrent failure. The alcohol counseling and lifestyle recommendations align with evidence-based preconception guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: single embryo transfer with clear rationale, explicit hydrosalpinx exclusion requirement, specific lifestyle modifications (stop alcohol, folic acid, caffeine limit), early ultrasound timing (5.5-6.5 weeks) for ectopic surveillance, clear contingency planning for failed transfer, specific criteria for when to consider PGT-A or further workup, and a practical summary table. The response also offers a patient-friendly counseling note option. Each recommendation is tied to case-specific reasoning rather than generic advice."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.022668,
+  "judge_latency_ms": 16388.75058299891,
+  "judge_prompt_tokens": 3751,
+  "judge_completion_tokens": 761
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it misstates expansion grade 1 as blastocoel <50% when the provided Gardner definition says at least half the embryo, and it adds non-visible claims such as necrosis/fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, endometriosis, prior IVF failures, miscarriage/ectopic history, endometrial thickness, BMI/lifestyle, and sperm data into prognosis, though some links are overstated and somewhat one-sided toward oocyte quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis follows from the embryo grade, but there are notable issues: overcalling the embryo as essentially non-viable, attributing morphology too confidently to aneuploidy/oocyte incompetence, and implying elevated ectopic risk from embryo-driven dysfunction without sufficient support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are broadly aligned with IVF practice, but the interpretation is too absolute for morphology alone and includes unsupported causal claims that go beyond guideline-based embryo assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides risk framing and a probability estimate but offers little concrete management guidance for the current transfer or future cycle planning in the excerpt shown."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.01221,
+  "judge_latency_ms": 5353.99104100361,
+  "judge_prompt_tokens": 2200,
+  "judge_completion_tokens": 374
+}

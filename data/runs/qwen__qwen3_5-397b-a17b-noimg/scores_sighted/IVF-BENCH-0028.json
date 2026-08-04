@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it could not directly inspect the image, but it then treated the provided 3AA label as if it matched the image and described an expanded blastocyst with tightly packed ICM and cohesive TE. The image appears more consistent with a blastocyst showing a large cavity but not a clearly excellent 3AA appearance, with indistinct ICM and uneven/sparser TE, so the morphology description overstates visible quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, ovarian response, endometrial thickness, sperm parameters, and prior cycle history into prognosis and transfer planning. AMH is unavailable and not discussed, but overall the clinical synthesis is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it places heavy emphasis on a likely erroneous claim that a stage 3 blastocyst on day 4 is physiologically implausible and would create major asynchrony. Since day-4 early/expanded blastulation can occur and the grading/day data may simply reflect documentation conventions, this weakens the logic and downstream probability adjustment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer, not routinely using PGT-A at age 26, and considering embryo-endometrial synchrony are broadly guideline-consistent. However, the assertion that long agonist is the gold standard for endometriosis and the suggestion of combined vaginal plus IM progesterone or prolonged suppression/freeze-all as routine are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps: verify timing, proceed with SET, ensure luteal support, consider freeze-all in selected endometriosis cases, vitrify surplus embryos, and avoid routine PGT-A. Some recommendations are somewhat overconfident, but they are still practical and case-directed."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01572,
+  "judge_latency_ms": 5846.09720800654,
+  "judge_prompt_tokens": 2885,
+  "judge_completion_tokens": 471
+}

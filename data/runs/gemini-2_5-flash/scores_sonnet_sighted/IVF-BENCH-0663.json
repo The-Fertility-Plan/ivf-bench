@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner score components (expansion 2, ICM A, TE B) as provided in the lab data, but largely relies on the text description rather than independent image analysis. The image shows a compact morula-to-early blastocyst appearance with somewhat indistinct blastocoel, yet the model doesn't critically reconcile what's visible in the image with the provided 2AB score. No mention of zona pellucida integrity, fragmentation, or other visible features that could be assessed from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age, BMI, AMH/FSH, PCOS diagnosis, sperm parameters, endometrial thickness, and lifestyle factors are all addressed and connected to prognosis. The interaction between PCOS and endometrial receptivity is noted. Minor gap: the partner's age of 40 and its potential sperm DNA fragmentation implications are briefly dismissed without deeper consideration, and the interaction between PCOS and the slightly thin endometrium (possibly due to fresh transfer concerns) could have been explored more."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-55% follows reasonably from the identified positive and negative factors. The model correctly identifies that strong positives (age, ICM grade) are tempered by the thin endometrium and BMI. Minor inconsistency: the model initially states typical rates of 45-60% for a 2AB blastocyst in a 30-year-old, then adjusts down to 40-55%, which is coherent but the lower bound adjustment to 40% seems slightly conservative given the overall favorable profile."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: Day 5 transfer rationale, endometrial thickness thresholds, ERA for recurrent implantation failure (not first cycle), PGT-A considerations, and embryo banking are all appropriately framed. The suggestion of adjunct therapies (sildenafil, G-CSF, aspirin) for thin endometrium aligns with current practice though evidence levels vary. The response correctly avoids recommending ERA for a first cycle. Alcohol cessation advice aligns with guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: lifestyle modifications (alcohol cessation, exercise), endometrial monitoring, future cycle planning with embryo banking, and conditional use of ERA and PGT-A are all clearly articulated. The tiered approach (this transfer vs. future cycles) is clinically useful. Could be more specific about progesterone supplementation protocols, specific estrogen dosing adjustments for endometrial optimization, or whether a freeze-all strategy should have been considered given PCOS and the 7mm endometrium."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022473,
+  "judge_latency_ms": 15444.37454099534,
+  "judge_prompt_tokens": 3936,
+  "judge_completion_tokens": 711
+}

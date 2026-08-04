@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner score rather than inventing image-specific findings. However, it repeats the prompt's inaccurate wording that stage 3 is an 'expanded blastocyst' with thinning zona; under standard Gardner criteria stage 3 is a full blastocyst, while expanded/thinning zona is stage 4. It also overstates 3AB as 'top tier.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior live birth, endometrial thickness, BMI, ovarian response, and sperm parameters with embryo quality and prognosis in a clinically meaningful way. Minor limitations include somewhat overstated claims about prior live birth being the single strongest factor and limited discussion of AMH/FSH nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, morphology, uterine factors, and BMI. Small issues include the stage-3/stage-4 grading confusion and some overconfident statements such as reduced risk of early embryonic arrest from ICM grade alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer, standard luteal support, and not routinely recommending PGT-A in a 28-year-old are broadly guideline-concordant. However, the Gardner grading interpretation is off, ERA after a single failed transfer is not guideline-supported routine practice, and advising avoidance of high-impact activity post-transfer is more customary than evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for this transfer and future planning, including SET, luteal support, alcohol cessation, weight counseling, and cryopreservation strategy. It is useful, though some suggestions are generic and a few are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015378,
+  "judge_latency_ms": 6278.807708993554,
+  "judge_prompt_tokens": 2856,
+  "judge_completion_tokens": 454
+}

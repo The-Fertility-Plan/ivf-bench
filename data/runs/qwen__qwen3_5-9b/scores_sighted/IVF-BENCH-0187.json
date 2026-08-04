@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0187",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with an early blastocyst/poor-quality embryo and absent distinct ICM/poor TE, but it overstates some features (e.g., calling it cleavage-stage/morula and describing a clearly visible blastocoel) and gives limited comment on zona/thickness."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, smoking, sperm parameters, endometrium, and diagnosis with prognosis reasonably well, though it overcalls sperm quality as excellent despite low motility and simplifies attribution of embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate follows the poor morphology, but there are inconsistencies such as labeling the embryo Day 4 cleavage-stage while also calling it an early blastocyst, and attributing poor quality away from male factor too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligns with Gardner grading concepts and counseling about poor prognosis, but recommendations around freezing a 0DD embryo and routine PGT-A suggestion are not fully guideline-grounded or sufficiently nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, expectation management, smoking cessation, endometrial optimization, and future culture strategy, though some recommendations could be more individualized and clinic-policy dependent."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012711,
+  "judge_latency_ms": 5398.142999998527,
+  "judge_prompt_tokens": 2487,
+  "judge_completion_tokens": 350
+}

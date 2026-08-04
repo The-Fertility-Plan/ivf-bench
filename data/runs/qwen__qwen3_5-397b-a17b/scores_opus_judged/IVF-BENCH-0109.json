@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0109",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and largely accurate morphological description consistent with a 3AA Gardner score. It correctly identifies the expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive trophectoderm. The specific localization of the ICM at '9 o'clock' and zona thinning on 'the left side' are reasonable observations from the image. Minor deduction because a Stage 3 blastocyst is described as 'fully expanded' when Stage 3 is technically an expanded blastocyst (not fully expanded, which is Stage 4), though the lab data itself describes it as 'expanded blastocyst, increased size with thinning zona' which the model does capture."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects low AMH with cycle efficiency, discusses how endometriosis could affect egg quality yet the 3AA outcome suggests it wasn't significantly compromised, integrates maternal age with aneuploidy risk, considers endometrial thickness, sperm parameters, BMI, and lifestyle factors. The 'quality vs. quantity' framing is clinically insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logical, consistent, and well-structured throughout. The implantation probability estimate of 50-65% is well-reasoned with a clear baseline adjustment approach: starting from age-based averages, boosting for embryo quality, and adjusting downward for endometriosis. No contradictions are present, and all conclusions follow from the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines. eSET recommendation for a top-grade blastocyst is appropriate. PGT-A discussion is balanced and acknowledges the debate around testing single embryos. The aneuploidy rate estimate of 40-50% at age 36 is reasonable. Luteal phase support recommendation is standard. The alcohol cessation advice is consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations. The response addresses both the current transfer (eSET, luteal support, lifestyle modifications including alcohol cessation) and future planning (embryo banking strategy given low AMH, PGT-A consideration for future cycles). The banking strategy advice is particularly nuanced and time-sensitive given the patient's age and reserve. Adjunctive therapy options for endometriosis are mentioned with appropriate caveats about evidence levels."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.029045,
+  "judge_latency_ms": 23887.832958018407,
+  "judge_prompt_tokens": 2654,
+  "judge_completion_tokens": 631
+}

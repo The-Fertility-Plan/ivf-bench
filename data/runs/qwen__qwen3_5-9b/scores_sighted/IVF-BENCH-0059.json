@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-relies on the provided 3AA label and describes an expanded blastocyst with thinned zona and clear blastocoel, but the image itself looks more like a compact/early blastocyst or morula-like embryo with no obvious large blastocoel and limited visible ICM/TE distinction."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS/high AMH, ovarian response, BMI, sperm parameters, paternal age, alcohol use, and endometrium reasonably well with prognosis, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it calls the embryo both a transitioning morula and a 3AA expanded blastocyst, and it overstates paternal-age effects on aneuploidy while deriving a fairly confident implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on lifestyle and morphology is acceptable, but recommending PGT-A largely because of paternal age/PCOS is not strongly guideline-based, and the claim that 3AA is the highest possible grade is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, alcohol cessation, luteal support, and future-cycle considerations, though some recommendations lack nuance and could be more individualized."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013206,
+  "judge_latency_ms": 4964.907415997004,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 362
+}

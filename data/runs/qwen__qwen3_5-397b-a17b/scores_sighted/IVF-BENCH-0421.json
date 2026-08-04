@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies very poor ICM/TE quality and overall degenerative appearance, but misstates Gardner expansion stage 1 as blastocoel less than half despite provided definition, and overcalls non-viability from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, prior miscarriage, tubal factor, sperm parameters, and endometrium reasonably well, though some links (stress, miscarriage implying strong suspicion of aneuploidy) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: contradiction around expansion grading, categorical declaration of medical futility/non-viability, and probability estimates that are more assertive than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner concepts appropriately in part, but recommending routine PGT-A, thrombophilia/immunologic workup after a single miscarriage, and canceling transfer as medically futile are not well aligned with standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer decision and future cycle planning, including protocol review and additional testing, though some suggestions are insufficiently nuanced or not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013182,
+  "judge_latency_ms": 5017.190167010995,
+  "judge_prompt_tokens": 2689,
+  "judge_completion_tokens": 341
+}

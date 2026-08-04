@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0674",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model repeatedly expressed uncertainty about the image, oscillating between interpreting it as a degenerating cell and a blastocyst ICM. It never committed to a clear, confident morphological description. The final description attempts to align with the provided Gardner score text rather than independently analyzing the image, and the model explicitly noted the image 'looks like a degenerating cell' multiple times, suggesting significant difficulty with accurate morphological interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The model does identify and discuss key clinical factors including age (33), FSH, uterine factor diagnosis, sperm parameters, smoking, and endometrial thickness. It connects these to implantation probability in a basic way. However, the integration lacks depth - for example, it doesn't explore the specific nature of the uterine factor, doesn't address the low sperm motility (19.2% is below normal thresholds), and doesn't fully analyze the interaction between smoking and uterine receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is highly incoherent due to the extensive repetitive internal deliberation that was included in the output. The model loops through the same reasoning cycle dozens of times without resolution, creating a contradictory and disorganized response. While the final conclusions are reasonable, the path to get there is riddled with contradictions and circular logic, significantly undermining coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The final recommendations (transfer the embryo, smoking cessation, uterine workup via hysteroscopy, consider PGT-A) are broadly consistent with ESHRE/ASRM guidelines. The Gardner scoring interpretation is correct. However, the response doesn't address the low sperm motility per WHO criteria, doesn't discuss luteal phase support protocols, and the PGT-A recommendation for a first cycle with a 4AA embryo in a 33-year-old is not strongly evidence-based per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some actionable recommendations including proceeding with transfer, smoking cessation, uterine workup (hysteroscopy mentioned), and PGT-A consideration. However, these are fairly generic and lack specificity - no mention of specific timing, luteal support protocols, endometrial preparation details, or concrete smoking cessation resources. The implantation probability range (30-50%) is provided with basic reasoning but without detailed justification for the specific range."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.038274,
+  "judge_latency_ms": 12485.392041999148,
+  "judge_prompt_tokens": 9738,
+  "judge_completion_tokens": 604
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not attempt a detailed morphology read. However, it then assumed a good-quality Day 4 embryo and described a compact morula/early cavitating blastocyst, which is only partially consistent with the actual image showing a cavitating/early blastocyst-like embryo with a poorly defined ICM and uneven TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: maternal age, BMI, tubal factor, ovarian response, sperm parameters, endometrium, and prior cycle history, and links them to prognosis. It slightly overstates the predictive value of some factors and does not temper conclusions enough for an ungraded Day 4 embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is logically structured, but there is a notable gap in inferring good embryo quality from favorable patient factors and then using that assumption to justify a high implantation estimate. The probability range is somewhat optimistic for an ungraded Day 4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET in a good-prognosis 33-year-old, luteal support, cryopreservation of surplus embryos, and cautious use of PGT-A after failures. Minor issues include overemphasis on ERA and lifestyle restrictions with limited evidence strength."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, embryo prioritization, luteal support, and future investigations if unsuccessful. Some suggestions are generic rather than tightly tailored to this specific Day 4 embryo scenario."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.01614,
+  "judge_latency_ms": 5660.599791997811,
+  "judge_prompt_tokens": 3300,
+  "judge_completion_tokens": 416
+}

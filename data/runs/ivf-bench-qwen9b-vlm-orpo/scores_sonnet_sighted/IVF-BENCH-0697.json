@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0697",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies key morphological features visible in the image: expanded blastocyst with thinning zona pellucida, compact and dense ICM, and reasonably continuous trophectoderm. The description aligns well with the Gardner 3AA grade. Minor limitation is that TE assessment is acknowledged as less reliable visually, and the description could be more precise about cell counts or specific TE characteristics visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects maternal age (28) to euploidy rates, tubal factor diagnosis to uterine receptivity, AMH/FSH to ovarian reserve quality, prior miscarriage to aneuploidy risk, endometrial thickness to receptivity, sperm parameters to fertilization potential, and lifestyle factors to overall prognosis. The interactions between these factors and embryo quality are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 45-55% implantation follows logically from the presented evidence (young age, good morphology, favorable diagnosis). The distinction between implantation probability and live birth probability is appropriately made. Minor issue: the response slightly conflates OHSS risk with endometrial thickness, which are not directly linked in the same way described."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer for young patient with good-quality blastocyst, appropriately positions PGT-A as non-mandatory at age 28, suggests uterine cavity assessment after prior miscarriage, and recommends standard luteal phase support. Gardner grading criteria are correctly applied. Minor gap: does not specifically address hydrosalpinx management per ESHRE guidelines despite tubal factor diagnosis being present."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations covering immediate transfer decisions (single ET, luteal support, hCG monitoring), contingency planning for failed cycles (PGT-A discussion criteria, uterine cavity assessment, metabolic workup), and lifestyle modifications with specific items listed. The response provides clear decision trees and thresholds for when to escalate investigation, making it practically useful for clinical counseling."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01785,
+  "judge_latency_ms": 12659.568541988847,
+  "judge_prompt_tokens": 3080,
+  "judge_completion_tokens": 574
+}

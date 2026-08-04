@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0662",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a poorly expanded early blastocyst with absent/degenerate ICM and sparse disorganized TE, consistent with the provided 0DD grade. Minor issue: mentions possible collapse/handling effect and 'nonstandard' 0DD notation, which are not clearly supported by the image/prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, sperm quality, endometrial thickness, BMI, endometriosis, stress, and first-cycle status, and appropriately frames embryo morphology as the dominant limiting factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with conclusions generally supported by morphology and clinical context. Slight overprecision in assigning very low implantation/live birth percentages from morphology alone prevents a perfect score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Overall consistent with Gardner-based assessment and standard IVF counseling, including emphasis on poor prognosis and single embryo transfer. Minor deviations include suggesting PGT-A in a very young patient without nuance about limited routine benefit and calling 0DD 'nonstandard' despite D grades being used in some labs."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling and future-cycle considerations (SET, expectations, review embryology workflow, endometriosis management, lifestyle/stress support). Some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.014586,
+  "judge_latency_ms": 5082.547917001648,
+  "judge_prompt_tokens": 3152,
+  "judge_completion_tokens": 342
+}

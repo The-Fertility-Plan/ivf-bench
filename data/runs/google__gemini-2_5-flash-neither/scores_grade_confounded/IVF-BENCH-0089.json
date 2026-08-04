@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no morphology/Gardner information was available, despite the provided 3AA grade and its component descriptors. It therefore fails to analyze the known expansion stage, ICM, TE, or zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian reserve, prior biochemical pregnancies, sperm parameters, endometrium, and transfer timing, and connects them to prognosis. However, it does not integrate the actual 3AA embryo quality into that assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, especially around age, BMI, and recurrent biochemical pregnancies. However, it is weakened by the false premise that morphology is missing, which undermines the implantation estimate and several conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (single blastocyst transfer context, luteal support, lifestyle optimization, consideration of PGT-A after recurrent losses). But recommending ERA and thrombophilia/immunologic workup relatively early is not strongly guideline-supported, and ignoring the provided Gardner score is a notable deviation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, luteal support, lifestyle changes, and future-cycle planning. Still, its main immediate action—obtaining morphology—is unnecessary because the 3AA grade was already provided."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01488,
+  "judge_latency_ms": 4592.926375000388,
+  "judge_prompt_tokens": 3195,
+  "judge_completion_tokens": 353
+}

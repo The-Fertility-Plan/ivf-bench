@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response shows clear uncertainty about the image, initially misidentifying it as a single-cell/zygote and then forcing agreement with the provided 2BC label. It also incorrectly describes grade 2 as 'fully expanded' and adds features like zona thinning/hatching that are not reliably supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, endometrium, prior cycle, and sperm data with embryo quality reasonably well, especially emphasizing age-related aneuploidy risk versus acceptable morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are notable inconsistencies: repeated reversals on image interpretation, incorrect expansion-stage terminology, and some overstatement of morphology despite visual uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations from Gardner grading interpretation and the recommendation for PGT-A is presented too strongly/absolutely rather than as individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, future consideration of PGT-A, expectation management, and possible sperm DNA fragmentation testing, though some recommendations are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.00977625,
+  "judge_latency_ms": 5564.317125012167,
+  "judge_prompt_tokens": 5157,
+  "judge_completion_tokens": 333
+}

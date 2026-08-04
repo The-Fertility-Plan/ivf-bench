@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely repeats the provided 3AA label rather than what is confidently visible in this single image. It overstates certainty about a dense Grade A ICM and cohesive Grade A TE, which are not clearly discernible here, and calls it a top-tier expanded blastocyst despite limited visual support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, ovarian reserve markers, prior failed cycle, smoking, sperm parameters, and endometrial thickness, and relates them to prognosis. BMI is not meaningfully discussed and some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it labels AMH/FSH as diminished reserve somewhat strongly for age 34, infers sperm DNA integrity from blastulation, and gives a relatively optimistic implantation range despite emphasizing smoking as a major detractor."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer for a good-quality day-5 blastocyst in a 34-year-old is guideline-concordant, and smoking cessation counseling is appropriate. However, recommending assisted hatching based on smoking/one prior failure and suggesting PGT-A at age 34 after a single failed cycle are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and specific, especially SET and smoking cessation, with some future-planning suggestions. Still, a few actions are not sufficiently nuanced or evidence-based enough to merit the highest score."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013893,
+  "judge_latency_ms": 5781.344124989118,
+  "judge_prompt_tokens": 2636,
+  "judge_completion_tokens": 399
+}

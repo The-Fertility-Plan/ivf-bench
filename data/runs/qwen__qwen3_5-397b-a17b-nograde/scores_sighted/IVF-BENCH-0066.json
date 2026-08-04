@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0066",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonable overall blastocyst interpretation, but the image does not clearly support a confidently 'fully expanded stage 4' embryo with a distinct blastocoel filling the embryo; ICM and TE are somewhat indistinct, so the specific 4BB call is plausible but somewhat overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, prior live birth, endometrial thickness, smoking, and sperm motility with embryo assessment well, though AMH/FSH and the limits of inferring receptivity from thickness alone could have been handled more precisely."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a probability estimate that broadly follows from morphology, age, prior live birth, and smoking; minor issues include some overstatement of morphology and uterine receptivity assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: proceed with transfer, favor single embryo transfer, counsel smoking cessation, and discuss PGT-A in future planning. Small deviations include implying trilaminar pattern from thickness and slightly simplistic use of morphology-to-outcome estimates."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycles, including SET, smoking cessation, and possible PGT-A discussion; useful clinically, though it could be more specific about counseling, luteal support, or contingency planning after failure."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01323,
+  "judge_latency_ms": 5095.87379200093,
+  "judge_prompt_tokens": 2525,
+  "judge_completion_tokens": 377
+}

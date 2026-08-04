@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially contradicts the provided laboratory grade of 1DD by reclassifying the embryo as 3BC/4BC, describing a visible ICM and usable TE despite the case data indicating degenerative/absent ICM and TE. This is a major morphological error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior miscarriage, endometriosis, ovarian response, sperm parameters, and endometrial thickness reasonably well with prognosis, though the integration is undermined by the incorrect embryo morphology assessment and it does not acknowledge AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but key conclusions rest on a misread embryo grade. Calling the embryo a fair-quality transferable 3BC/4BC and estimating prognosis from that is inconsistent with the supplied 1DD data, creating a significant logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly guideline-consistent (considering PGT-A, proceeding based on clinical context), but the embryo grading departs from Gardner criteria given the provided 1DD score, and suggestions like dual-pathway luteal support or TESA for DNA fragmentation are more speculative than standard guideline-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer and future planning, including proceeding with transfer, luteal support considerations, PGT-A discussion, endometriosis suppression, and male-factor follow-up. However, actionability is limited by the incorrect morphological premise."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.012999,
+  "judge_latency_ms": 4486.230916998466,
+  "judge_prompt_tokens": 2358,
+  "judge_completion_tokens": 395
+}

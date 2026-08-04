@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly notes the image is blurry and relies mainly on the provided 3AA label rather than image-based morphology. It adds speculative features like a granular cluster/TE visibility and calls 3AA the 'best possible grade,' which is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, prior ectopic/no pregnancy history, sperm parameters, male age, and endometrial thickness with embryo quality and prognosis. Some interactions are oversimplified, but most relevant factors are connected."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are inconsistencies: it oscillates between uncertainty about the image and confidence in morphology, overstates paternal-age impact on aneuploidy, and gives a probability range that is somewhat optimistic relative to the cited assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on early ectopic surveillance are appropriate, but recommending PGT-A largely because of paternal age/male factor is not strongly guideline-based, and calling 3AA the top/best possible grade is not strictly correct."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, close beta-hCG follow-up, early ultrasound, discussion of PGT-A in future cycles, and BMI/stress optimization. Recommendations are useful, though some are broad rather than highly tailored."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0094825,
+  "judge_latency_ms": 8732.730290968902,
+  "judge_prompt_tokens": 4602,
+  "judge_completion_tokens": 373
+}

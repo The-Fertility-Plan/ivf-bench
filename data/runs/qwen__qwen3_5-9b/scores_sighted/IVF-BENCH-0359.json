@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0359",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AA label, but it overstates confidence in ICM/TE quality from this single image and describes a large blastocoel/full expansion somewhat imprecisely for a grade 2 embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, oocyte yield, sperm parameters, BMI, and endometrial thickness with embryo quality reasonably well, though it overinterprets FSH as DOR without AMH/AFC and gives limited attention to tubal factor and fresh-vs-frozen context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: calling 2AA the 'highest implantation potential,' implying morphology can indicate exceptional oocyte quality, and linking stress/cortisol directly to implantation in an overstated way."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age-related aneuploidy risk and the value of counseling/support, but recommendations such as 'do not freeze it,' inability to do PGT-A on a single embryo, and strong claims about stress effects are not fully guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, counseling, and future-cycle discussion, though some advice is too absolute and lacks nuanced alternatives such as individualized fresh vs freeze-all decision-making."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013236,
+  "judge_latency_ms": 5467.156834012712,
+  "judge_prompt_tokens": 2542,
+  "judge_completion_tokens": 374
+}

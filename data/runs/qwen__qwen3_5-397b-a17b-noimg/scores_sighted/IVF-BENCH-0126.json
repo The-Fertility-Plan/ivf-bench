@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0126",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but it then treated the embryo as a textbook 3AA and stated features such as fully expanded blastocoel, thinning zona, tightly packed ICM, and cohesive TE as if visually confirmed. In the actual image, these features are not clearly appreciable and the embryo does not convincingly look like a classic well-expanded 3AA blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior cycle history, male factor, sperm parameters, endometrial thickness, BMI, and lifestyle reasonably well with embryo quality and prognosis. Some points are somewhat speculative, but overall the interaction between embryo morphology and maternal age-related aneuploidy risk is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially the distinction between strong morphology and age-related chromosomal risk. Minor issues include overconfident statements such as calling 3AA the highest standard and giving somewhat assertive probability anchors that may vary by clinic and outcome definition."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: single embryo transfer, routine luteal support, and cautious consideration of further testing after repeated failure. However, ERA is of limited evidence and the strong push toward PGT-A after one failed transfer is somewhat more aggressive than guideline-based individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for this transfer and contingency planning, including SET, luteal support, and possible future investigations. Some suggestions are more optional than essential, but the advice is practical and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015042,
+  "judge_latency_ms": 6302.114458987489,
+  "judge_prompt_tokens": 2899,
+  "judge_completion_tokens": 423
+}

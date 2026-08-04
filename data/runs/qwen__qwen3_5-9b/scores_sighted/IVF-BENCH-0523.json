@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0523",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a high-quality 2AA/full blastocyst and describes cohesive grade A TE and tightly packed ICM with more confidence than the image supports. It also inconsistently references the cavity location and introduces speculative comparisons to a degenerating oocyte."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, sperm parameters, endometrial thickness, first-cycle status, and ovarian response with prognosis reasonably well, though AMH is unavailable and some claims about PCOS/FSH are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: calling 2AA the highest grade, treating it as top-tier despite stage 2, and making unsupported statements about PCOS-related aneuploidy and 'last chance' implications from FSH 8.8."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF guidance: 2AA is not the highest possible Gardner grade, implantation estimates are likely inflated for an untested age-38 embryo, and recommendations about egg freezing/donor eggs after one failed cycle are premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer and counseling about aneuploidy risk, but future planning is generic and somewhat overreaching rather than tailored to this first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013491,
+  "judge_latency_ms": 5308.541999998852,
+  "judge_prompt_tokens": 2627,
+  "judge_completion_tokens": 374
+}

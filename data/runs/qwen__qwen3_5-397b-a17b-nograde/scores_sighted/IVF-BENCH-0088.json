@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst with visible ICM and non-top-tier morphology, but the stage is somewhat overcalled; the image looks more like an early/full blastocyst than clearly expanded/hatching, and TE assessment is limited by image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, BMI, prior failed cycle, sperm motility, and endometrial thickness with embryo quality in a clinically meaningful way, though some links (e.g., sperm DNA fragmentation inference) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate derived from morphology and patient factors; minor issues include confident quantitative adjustments and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading concepts and standard IVF counseling, but PGT-A is presented a bit too favorably for a young DOR patient with limited embryo yield, and some recommendations go beyond what guidelines strongly support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support consideration, lifestyle modification, and future cycle planning; useful clinically, though some suggestions could be more individualized and evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012948,
+  "judge_latency_ms": 5215.078125009313,
+  "judge_prompt_tokens": 2626,
+  "judge_completion_tokens": 338
+}

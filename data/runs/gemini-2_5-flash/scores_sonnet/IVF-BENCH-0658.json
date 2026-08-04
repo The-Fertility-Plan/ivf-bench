@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion stage 2, ICM grade A, TE grade B) and provides reasonable descriptions consistent with the grading criteria. However, the morphological analysis is largely derived from the provided Gardner score data rather than independent image analysis. The description of the zona pellucida is absent, and the image-specific observations are vague ('appears distinct,' 'appears somewhat thinner'), suggesting limited independent visual analysis beyond what the score already conveys."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (32), AMH (9.3), FSH (6.6), BMI (29.5), tubal factor diagnosis, previous live birth, endometrial thickness (11.0 mm), sperm parameters, and lifestyle factors. It clearly connects each factor to its impact on prognosis and explains how they interact with embryo quality, including nuanced discussion of BMI borderline status and the significance of previous live birth as a prognostic indicator."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 60-75% logically follows from the presented evidence, with clear justification for each contributing factor. The identification of minor risk factors (TE grade B, BMI 29.5) appropriately tempers the upper range without contradicting the overall positive assessment. Minor issue: the response could more explicitly quantify how each factor contributes to the probability range, but the overall logic chain is sound and free of contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer is appropriately recommended for a good-prognosis patient with previous live birth, luteal phase support is mentioned, PGT-A is correctly positioned as not first-line for this age group, and cryopreservation of surplus embryos is recommended. The Gardner grading interpretation is accurate per standard criteria. Minor gap: no mention of specific luteal support protocols or ERA/endometrial receptivity testing considerations, and the beta-hCG timing of 9-11 days is slightly earlier than some guidelines suggest (typically 10-14 days post-transfer)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal phase support is mentioned, beta-hCG timing is specified, and future cycle planning includes conditional recommendations (PGT-A if multiple failures, cryopreservation if surplus embryos). The response addresses both immediate transfer management and contingency planning. Slight deductions for not specifying luteal support type/dosage, not addressing whether frozen or fresh transfer considerations apply, and stress management recommendations remaining somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019617,
+  "judge_latency_ms": 13976.484250000794,
+  "judge_prompt_tokens": 3149,
+  "judge_completion_tokens": 678
+}

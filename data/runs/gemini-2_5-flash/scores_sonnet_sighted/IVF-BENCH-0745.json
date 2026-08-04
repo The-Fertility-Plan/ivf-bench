@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0745",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion, ICM quality, and blastocoel formation consistent with the Gardner 3AB score. However, the image actually shows a somewhat irregular, granular blastocyst with what appears to be cytoplasmic fragmentation or debris visible, and the TE appears somewhat disorganized - features not adequately captured in the description. The response largely echoes the provided Gardner score rather than independently analyzing the image's visible features, missing some concerning morphological details visible in the image such as the irregular cellular texture and apparent fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age-related aneuploidy risk, endometrial thickness, tubal factor diagnosis, sperm parameters, BMI, and lifestyle factors. It correctly identifies age as the primary risk factor and connects it to euploidy probability. Minor gap: the 30% motility is on the lower end of normal and could have been flagged more explicitly as a concern, and the interaction between sedentary lifestyle and stress on endometrial receptivity could be more deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-55% is reasonably derived from the interplay of age-related aneuploidy risk (~40-50% euploidy at 37) and positive factors like endometrial thickness and ICM quality. The distinction between morphological implantation probability and euploid-confirmed probability is clearly made. Minor issue: the response states euploidy rate of 40-50% for a 37-year-old but then estimates implantation at 40-55%, which slightly conflates euploidy rate with implantation probability without fully accounting for the conditional probability chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: SET recommendation is appropriate, PGT-A suggestion for age 37 aligns with current guidelines, luteal phase support is standard, and sperm DNA fragmentation testing for age 40 partner is evidence-based. The Gardner grading criteria are correctly applied. Minor deviation: ESHRE guidelines have nuanced positions on PGT-A utility that could have been more carefully presented, including the debate around its benefit for this age group in first cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering immediate transfer management, luteal support, stress management, and detailed future cycle planning including PGT-A, AMH testing, sperm DNA fragmentation, and protocol adjustment. The response provides clear next steps for both scenarios (successful and unsuccessful transfer). Could be improved by specifying progesterone type/dosage, providing specific exercise recommendations, or discussing ERA testing given the patient's age and first cycle status."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022473,
+  "judge_latency_ms": 15529.02758300479,
+  "judge_prompt_tokens": 4071,
+  "judge_completion_tokens": 684
+}

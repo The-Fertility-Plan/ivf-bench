@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately identifies key features consistent with a 3AA Gardner score (expanded blastocyst, thinned zona, compact ICM, organized TE). However, the description is somewhat hedged and cautious ('acceptable rather than top-tier visually,' 'roughly early-expanded/fully expanded'), suggesting uncertainty about what is actually visible in the image versus what is stated in the lab data. The model appears to rely heavily on the provided Gardner score rather than independently confirming morphological features from the image, and notes some granularity/debris without strong confidence. This reflects moderate accuracy with some reliance on provided data rather than pure image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all relevant clinical factors: maternal age 38 with its aneuploidy implications, AMH 0.59 indicating DOR, modest oocyte yield (6 COCs/5 MII), favorable endometrial thickness of 11mm, healthy BMI, lifestyle factors, partner age and sperm parameters, and first-cycle status. It clearly explains how these factors interact with embryo quality, particularly emphasizing that good morphology cannot overcome age-related chromosomal risk, and addresses the tension between embryo quality and patient prognosis in a nuanced way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 20-35% follows logically from the balance of favorable embryo quality against age-related aneuploidy risk. The live birth estimate of 15-25% appropriately accounts for miscarriage risk. Minor issue: the response occasionally hedges excessively, and the phrase 'balanced balance' is a minor editorial error. The distinction between implantation probability and live birth rate is appropriately made, and conclusions are well-supported throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation, standard luteal support, caution about add-ons without specific indications, nuanced discussion of PGT-A in low-reserve patients (acknowledging the controversy of reduced cumulative live birth potential when embryo numbers are limited), and appropriate mention of sperm DNA fragmentation only if indicated. The PGT-A discussion is particularly well-calibrated to current evidence. Minor gap: could have referenced specific ESHRE DOR management guidelines more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for the current transfer (SET, luteal support, prenatal vitamins) and detailed future cycle planning (timing of next cycle, stimulation review, selective PGT-A consideration, male factor follow-up criteria, nutritional counseling). The recommendations are appropriately nuanced for this specific case. Slight deduction because some recommendations (e.g., 'review follicle counts,' 'check estradiol response') are somewhat generic and could be more specific to the DOR/long agonist protocol context."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.021942,
+  "judge_latency_ms": 16900.818083006016,
+  "judge_prompt_tokens": 3664,
+  "judge_completion_tokens": 730
+}

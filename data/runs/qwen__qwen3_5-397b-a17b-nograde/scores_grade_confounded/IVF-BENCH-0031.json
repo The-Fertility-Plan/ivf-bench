@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst despite provided lab grading of 2BB full blastocyst, and it does not accurately address the visible ICM/TE features expected under Gardner scoring."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior live birth, endometrial thickness, sperm parameters, and smoking reasonably well, though some links to embryo-stage-specific prognosis are oversimplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it is weakened by the central morphological misread and by conclusions built on the embryo being Day 4 morula/early blast rather than a 2BB blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Lifestyle counseling and consideration of extended culture are broadly guideline-consistent, but the interpretation of staging/grading is not aligned with Gardner criteria and the transfer-stage discussion is somewhat off."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable—proceed with transfer, ensure luteal support, smoking cessation, clarify diagnosis, and consider extended culture—though they are not highly nuanced."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011817,
+  "judge_latency_ms": 4581.024792001699,
+  "judge_prompt_tokens": 2299,
+  "judge_completion_tokens": 328
+}

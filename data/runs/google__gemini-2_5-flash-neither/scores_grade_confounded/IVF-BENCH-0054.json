@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states the Gardner score is unavailable, despite provided morphology data of 3AB. It fails to describe the known expansion stage, ICM, TE, or zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF outcomes, ovarian response, sperm parameters, BMI, endometrium, and diagnosis reasonably well with prognosis, though it misses using the provided 3AB embryo quality in that integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but there is a key inconsistency: it claims morphology is unavailable when the Gardner score is provided, yet still gives prognosis estimates based on assumed embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Most recommendations are consistent with IVF practice, including counseling on age-related aneuploidy, luteal support, and considering PGT-A after prior failures. Minor overreach includes speculative adjuncts like ERA/DHEA without stronger case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including counseling, luteal support, uterine cavity evaluation, and PGT-A consideration. Specificity is good, though limited by failure to use the known 3AB grading."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013887,
+  "judge_latency_ms": 3892.8238750013406,
+  "judge_prompt_tokens": 3029,
+  "judge_completion_tokens": 320
+}

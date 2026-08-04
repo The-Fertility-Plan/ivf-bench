@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates key morphology: Gardner 2 is an early/full blastocyst with blastocoel occupying part to most of the embryo, not a fully expanded or hatching blastocyst, and the image does not clearly show a thin taut zona or hatching. It correctly notes poor TE and a relatively better ICM, but overall overcalls quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, BMI, smoking, diagnosis, and endometrial thickness with prognosis reasonably well, though it overstates some positives and does not fully contextualize that tubal factor mainly affects access to conception rather than embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable inconsistencies: it calls a 2AC embryo 'top-tier' and 'high-quality' despite C-grade TE and only stage-2 expansion, and the implantation estimate seems somewhat inflated relative to that morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on smoking cessation, weight optimization, and proceeding with transfer is broadly aligned, but the morphology interpretation is not faithful to Gardner criteria, the statement that ICM is the primary driver is oversimplified, and recommending stronger luteal support specifically because of smoking/BMI is not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, smoking cessation, luteal support, weight management, and consideration of future testing, though some recommendations are generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013383,
+  "judge_latency_ms": 5210.908834007569,
+  "judge_prompt_tokens": 2576,
+  "judge_completion_tokens": 377
+}

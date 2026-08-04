@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "gpt-5.4-2026-03-05-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 1DD by reclassifying the embryo as a Day-4 morula/very early blastocyst and stating ICM/TE are not gradable. It gives some plausible generic observations, but the morphology interpretation appears inconsistent with the case labeling and likely undercalls the poor-quality blastocyst features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, ovarian response, endometrial thickness, sperm parameters, BMI, and lifestyle reasonably well, and connects these to prognosis. AMH is appropriately not overinterpreted since unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the mismatch between the stated morphology assessment and the supplied Gardner score/transfer context, which affects the implantation estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (luteal support, no bed rest, discuss SET vs DET, consider blastocyst culture/PGT-A), but the dismissal of Gardner grading despite a provided 1DD score and the morphology reinterpretation reduce alignment with standard embryo assessment conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response offers practical next steps for transfer management, future cycle planning, male-factor review, and lifestyle optimization. Recommendations are useful, though some are somewhat generic and depend on a potentially incorrect morphology read."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.016119,
+  "judge_latency_ms": 4373.672708999948,
+  "judge_prompt_tokens": 3483,
+  "judge_completion_tokens": 378
+}

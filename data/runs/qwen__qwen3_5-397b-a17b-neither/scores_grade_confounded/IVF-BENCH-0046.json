@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0046",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated that a specific morphological grading could not be performed, omitting the known expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor diagnosis, ovarian response, prior biochemical pregnancy, sperm parameters, and endometrial thickness into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis estimate, but it is weakened by ignoring the provided embryo grade and by some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but recommendations such as thrombophilia screening after a single biochemical pregnancy, MTHFR testing, ERA, and intensified luteal support are not strongly guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer support, lifestyle measures, and future evaluation, though several recommendations are more aggressive than typically indicated after one biochemical pregnancy."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011829,
+  "judge_latency_ms": 3418.088999998872,
+  "judge_prompt_tokens": 2478,
+  "judge_completion_tokens": 293
+}

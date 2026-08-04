@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and avoided fabricating specific visible features. However, it did not analyze the actual embryo morphology in the image, so accuracy is limited to generic Day 4 expectations rather than image-matched assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior cycle history, BMI, endometrial thickness, ovarian response, and sperm data into prognosis reasonably well, though some links are somewhat overstated and AMH was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with a clear chain from age/RIF/endometrium to lower implantation odds. Minor issues include speculative assumptions about why Day 4 transfer was chosen and somewhat aggressive negative weighting."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are evidence-based (hysteroscopy, chronic endometritis evaluation, sperm DNA fragmentation consideration), but others are weakly supported or not guideline-endorsed for routine use, including ERA, NK cell testing, prednisolone, hCG booster, G-CSF/PRP, and broad adjuvant use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next-step suggestions for transfer support and future workup/planning. However, several recommendations lack prioritization and include interventions of uncertain benefit, reducing practical precision."
+    }
+  ],
+  "extracted_probability": 0.115,
+  "judge_cost_usd": 0.013803,
+  "judge_latency_ms": 5243.141083003138,
+  "judge_prompt_tokens": 2801,
+  "judge_completion_tokens": 360
+}

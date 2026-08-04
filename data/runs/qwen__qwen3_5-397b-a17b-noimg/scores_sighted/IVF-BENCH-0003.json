@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its textual description of 2AA is broadly consistent with the lab label, but it overstates this as the 'highest quality category' despite expansion grade 2 not being top expansion, and it adds claims about accelerated Day 4 kinetics/endometrial synchrony that are not image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, BMI, FSH, tubal factor diagnosis, oocyte maturity yield, endometrial thickness, prior cycle history, sperm motility, and paternal age into prognosis in a clinically meaningful way. AMH is unavailable and not discussed, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to embryo grade and patient age. Minor issues include treating a Day 4 blastocyst as clearly accelerated/highly favorable and some overconfidence around endometrial thickness and synchrony concerns."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is guideline-concordant, including SET emphasis and cautious interpretation of morphology. However, recommending PGT-A after a single failed transfer at age 33 and suggesting ERA relatively early are not strongly guideline-supported, and the Day 4 progesterone-synchrony framing is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, luteal support review, lifestyle advice, and possible male-factor workup. Some recommendations are less nuanced than ideal, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014838,
+  "judge_latency_ms": 5416.142582995235,
+  "judge_prompt_tokens": 2846,
+  "judge_completion_tokens": 420
+}

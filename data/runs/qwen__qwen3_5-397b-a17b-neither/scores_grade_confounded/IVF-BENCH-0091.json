@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The case provided a Gardner score of 3AB, but the response incorrectly states no specific Gardner score can be assigned and fails to analyze the known morphology from the supplied data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, male factor, endometrium, and cycle history with prognosis reasonably well, though some inferences are speculative and it misses direct linkage to the known 3AB grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable gaps: it ignores the provided embryo grade, makes unsupported assumptions about cohort/blastocyst numbers and possible PCOS phenotype, and mixes implantation and live birth benchmarks."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but recommending PGT-A as highly recommended for age 36/male factor is stronger than guideline-based evidence supports, and stress/acupuncture claims are not strongly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future evaluation, including luteal support considerations, weight optimization, and cavity assessment, though some recommendations are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013032,
+  "judge_latency_ms": 3896.8269169999985,
+  "judge_prompt_tokens": 2704,
+  "judge_completion_tokens": 328
+}

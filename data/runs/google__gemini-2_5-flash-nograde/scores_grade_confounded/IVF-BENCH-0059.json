@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 3/4 morula rather than a Day 5 expanded blastocyst and therefore fails to accurately describe blastocoel expansion, ICM, TE, and zona features consistent with the provided 3AA grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, PCOS, sperm parameters, endometrium, and lifestyle, and connects them to prognosis, though some links are overstated or imprecise."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by the fundamental morphological misread and by building the prognosis around an assumed earlier-stage embryo while simultaneously discussing a Day 5 transfer; probability reasoning is therefore internally inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly reasonable, but there are notable deviations: misapplication of morphology staging, overstating PCOS as an aneuploidy concern, and suggesting PGT-A partly on that basis rather than standard indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The advice includes practical steps such as alcohol cessation, lifestyle optimization, and future-cycle considerations, but transfer-specific recommendations are generic and not well tailored to the actual 3AA blastocyst scenario."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01395,
+  "judge_latency_ms": 3926.6122080007335,
+  "judge_prompt_tokens": 2915,
+  "judge_completion_tokens": 347
+}

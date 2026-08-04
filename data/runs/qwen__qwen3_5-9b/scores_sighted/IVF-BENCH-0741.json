@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes the image does not resemble a clear blastocyst and defers to the provided Gardner grade, but it inaccurately states that grade 3 means 'expanded' with thinning zona; in Gardner grading, 3 is a full blastocyst, while expanded/thinning zona is grade 4. It also describes features not actually visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior miscarriage, sperm parameters, diagnosis, and endometrial thickness with embryo prognosis reasonably well, though it overstates sperm quality relative to the male-factor label and does not deeply discuss BMI or prior cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, especially in prioritizing lab grading over a poor/mismatched image, but there is an internal inconsistency in calling 3AA the highest grade and in linking grade 3 to expanded blastocyst. The implantation/live birth estimates are somewhat overstated for age 37."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned with IVF practice in emphasizing age-related aneuploidy risk and proceeding with transfer, but it misstates Gardner grading details and somewhat overemphasizes/strongly recommends PGT-A in a way that is not fully nuanced per current evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, counseling about aneuploidy risk, considering PGT-A for future planning, and ensuring luteal support. Some advice is generic (exercise/stress) and lacks cycle-specific nuance, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014007,
+  "judge_latency_ms": 12859.1971249989,
+  "judge_prompt_tokens": 2539,
+  "judge_completion_tokens": 426
+}

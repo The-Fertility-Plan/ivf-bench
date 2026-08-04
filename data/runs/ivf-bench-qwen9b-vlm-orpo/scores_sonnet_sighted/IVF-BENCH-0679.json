@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0679",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion stage, thinning zona, and general TE/ICM features consistent with 3AA grading. However, the image actually shows a somewhat irregular, granular blastocyst with what appears to be a less-than-perfectly compact ICM and some cytoplasmic irregularities. The model notes limitations of single-frame analysis but doesn't specifically call out the visible granularity, the somewhat irregular blastocoel, or the less-than-ideal ICM compaction visible in the image. Description is generally accurate but somewhat generic rather than image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response meaningfully connects AMH/FSH to ovarian reserve adequacy, addresses male factor implications for prognosis, correctly identifies maternal age 36 as the primary limiting factor for aneuploidy risk, integrates endometrial thickness favorably, and considers lifestyle factors including former smoking. The interaction between morphology grade and age-related chromosomal risk is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (45-60% implantation, 35-50% live birth) logically follows from the evidence presented. The model correctly identifies aneuploidy as the main limiting factor and explains why morphology alone cannot guarantee success. Minor issue: the summary states 'roughly a one-in-two chance' which slightly undersells the upper range previously stated, creating a small inconsistency in framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines including single embryo transfer recommendation, luteal support mention, PGT-A consideration for age 36 with untested embryos, and sperm DNA fragmentation testing suggestion for male factor. The Gardner grading interpretation is accurate. Slightly misses explicitly referencing ESHRE age-specific aneuploidy rate data or specific PGT-A threshold recommendations by age group that would strengthen guideline alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with SET, luteal support compliance, activity modifications, post-failure pathway including PGT-A consideration, sperm DNA fragmentation testing, and staged escalation strategy. The response provides clear decision trees for both success and failure scenarios. Could be slightly more specific about luteal support protocols, timing of beta-hCG testing, or specific exercise restrictions to achieve a score of 5."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.019179,
+  "judge_latency_ms": 15063.49025000236,
+  "judge_prompt_tokens": 3263,
+  "judge_completion_tokens": 626
+}

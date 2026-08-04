@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0382",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes an expanded blastocyst with visible cavity/zona thinning and sparse TE, but it over-interprets the image by asserting vacuolization, scalloped blastocoel, debris, and possible herniation that are not clearly demonstrable from this single frame, and it questions the reported 3AB grade without strong visual basis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian reserve, BMI, male factor, prior failed cycles, endometrium, and day-5 development into prognosis reasonably well, though some links (stress, former smoking) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis is internally organized, but the probability adjustment scheme is partly ad hoc and relies on unsupported penalties from speculative morphology and nonvalidated factors, reducing rigor."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (review luteal support, consider sperm DNA fragmentation testing, hysteroscopy if repeated failure), but others are not guideline-based or are controversial for routine use, including ERA, NK-cell testing, thrombophilia screening without indication, MTHFR, and presenting PGT-A as a strong indication after two failed cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer optimization and future planning, including specific investigations and management options, although several suggested tests/interventions are more aggressive than evidence supports."
+    }
+  ],
+  "extracted_probability": 0.26,
+  "judge_cost_usd": 0.015249,
+  "judge_latency_ms": 5958.590249996632,
+  "judge_prompt_tokens": 3188,
+  "judge_completion_tokens": 379
+}

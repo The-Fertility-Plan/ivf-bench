@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0300",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a poor-quality blastocyst with poorly defined ICM/TE, but it misstates the Gardner expansion criterion by saying grade 1 means blastocoel less than half the embryo; the provided lab definition says at least half, and the image is more consistent with an early/poor blastocyst rather than confidently 'arrested' or necrotic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, endometrial thickness, endometriosis, and paternal age/semen data with embryo quality reasonably well, though it somewhat overemphasizes paternal age/DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but the prognosis is pushed too far ('non-viable,' 'virtually zero') from morphology alone, and some conclusions rely on speculative causes such as sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General recognition of very poor prognosis is aligned with practice, but recommending discard/no transfer and stating no risk of viable ongoing pregnancy are too absolute; the expansion-stage interpretation is also inaccurate, and routine PGT-A/TESE based on this single embryo is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for counseling, transfer decision-making, and future workup/planning, but some suggestions are overly aggressive or insufficiently nuanced for a first cycle with limited embryo data."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013374,
+  "judge_latency_ms": 5266.781500002253,
+  "judge_prompt_tokens": 2528,
+  "judge_completion_tokens": 386
+}

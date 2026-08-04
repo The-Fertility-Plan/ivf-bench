@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0727",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, and provides reasonable descriptions of ICM and TE consistent with a 3AB grade. The ICM localization to 'bottom-right' and TE description as 'somewhat flattened epithelium' are reasonable interpretations. Minor limitation: the image shows a fairly complex internal structure that could warrant more nuanced commentary on the TE cell count visibility and the somewhat irregular blastocoel shape, but overall the description aligns well with the reported Gardner score and visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age (24), sperm parameters, endometrial thickness, oocyte yield, and previous cycle failure into the assessment. It correctly identifies young age as the dominant prognostic factor and connects sperm quality to fertilization outcomes. Minor gap: AMH being N/A is not addressed as a potential data gap, and the tubal factor diagnosis is mentioned but not fully explored in terms of its implications for transfer strategy (e.g., hydrosalpinx risk assessment)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 40-60% probability range is reasonably supported by the evidence presented. Minor inconsistency: the response notes FSH of 7.4 as 'slightly on the higher end' for a 24-year-old but then largely dismisses it, which is appropriate but could be more explicitly reconciled. The PGT-A discussion is coherent and well-reasoned. Overall the conclusions follow from the observations without major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines. The Gardner grading interpretation is accurate. The cautious approach to PGT-A in a young patient with limited embryos aligns with current guidelines discouraging routine PGT-A in low-risk young patients. The ERA testing caveat (not indicated without multiple failures) is guideline-appropriate. Minor deviation: the FSH reference range comment ('typically <5-6 is ideal') is somewhat non-standard; most guidelines use age-adjusted norms where 7.4 at age 24 is within normal limits, not 'slightly high.'"
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations: proceed with transfer, rationale against PGT-A, contingency planning if transfer fails, ERA testing threshold, and lifestyle maintenance. The future cycle planning section with conditional recommendations (if failure occurs) adds practical value. Could be improved with more specific guidance on luteal phase support protocol, whether fresh vs. frozen transfer was considered given tubal factor diagnosis, and specific follow-up timing recommendations. Overall highly useful for a clinician."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019038,
+  "judge_latency_ms": 15505.08775000344,
+  "judge_prompt_tokens": 2886,
+  "judge_completion_tokens": 692
+}

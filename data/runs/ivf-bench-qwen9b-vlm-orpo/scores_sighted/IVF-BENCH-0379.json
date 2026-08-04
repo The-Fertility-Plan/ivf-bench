@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0379",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst with favorable morphology and notes ICM/TE quality consistent with the provided 3AA label, but several image-based claims are overconfident from a single static frame; the statement that it may be early hatching/above stage 3 is not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, embryo grade, semen parameters, endometrial thickness, BMI, first-cycle status, and tubal factor reasonably well. However, it overemphasizes hydrosalpinx despite this not being specified in the case data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, linking embryo quality and young age to favorable prognosis. Minor issues include speculative morphology upstaging and a somewhat optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: good prognosis for a day-5 AA blastocyst, caution about untreated hydrosalpinx, no routine bed rest, and no automatic PGT-A in a very young patient. Small deviations include imprecise Gardner stage commentary and optimistic success estimates."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, follow-up, and contingency planning after failure, including cavity/tubal review and luteal support. Slightly limited by speculative focus on hydrosalpinx not established in the case."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.017286,
+  "judge_latency_ms": 5722.1894999966025,
+  "judge_prompt_tokens": 3882,
+  "judge_completion_tokens": 376
+}

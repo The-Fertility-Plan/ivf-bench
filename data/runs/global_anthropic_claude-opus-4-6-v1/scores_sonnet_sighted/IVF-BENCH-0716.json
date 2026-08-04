@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, identifies a compact ICM cluster, and describes a cohesive TE epithelium consistent with the 3AA grade. The description of the blastocoel as well-expanded is appropriate. Minor issue: the image is somewhat blurry and granular, making definitive ICM/TE characterization challenging, yet the model confidently describes 'distinct, well-defined borders' and 'uniformly thinned' zona which may be overconfident given image quality. The model does note some darker granular regions as potential debris, showing appropriate hedging."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical domains. The response systematically connects each patient factor to embryo quality and prognosis using a structured table, then synthesizes interactions (e.g., AMH vs. retrieval count discordance, smoking impact on endometrial receptivity, partner age and sperm DNA fragmentation). The framing of 'favorable embryo in a moderately compromised host environment' demonstrates sophisticated clinical synthesis. The tubal factor diagnosis is correctly identified as favorable for IVF outcomes, and the interplay between smoking and borderline AMH is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The baseline probability is established from literature, adjustments are applied systematically with justification, and the final 35-45% estimate follows coherently from the evidence. The model appropriately introduces PGT-A uncertainty as a major variable and provides conditional probabilities (euploid vs. aneuploid scenarios). There are no internal contradictions, and conclusions in the summary align with the detailed analysis. The smoking cessation emphasis is consistently maintained throughout all sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: Gardner grading criteria are correctly applied, luteal phase support recommendations are appropriate, Day 5 transfer timing rationale is sound, and PGT-A indications are reasonable. Endometrial assessment recommendations (hysteroscopy, ERA, CD138) align with ESHRE recurrent implantation failure guidelines. Minor deductions: the 7mm endometrial threshold is cited as minimum which is debated in literature, and the suggestion of acupuncture has limited evidence base. The freeze-all banking strategy recommendation is reasonable but presented without discussing fresh vs. frozen transfer outcome data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations for both immediate transfer management and future cycle planning. Includes specific progesterone dosing (200mg TID), catheter placement guidance (1.5-2.0cm from fundus), specific diagnostic tests (CD138, ERA, EMMA/ALICE, sperm DNA fragmentation), protocol alternatives (antagonist vs. short agonist), and pharmacological smoking cessation options with appropriate contraindication noted. The recommendations are appropriately prioritized with smoking cessation flagged as most impactful. Future planning includes concrete decision trees based on outcome of current transfer."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.026391,
+  "judge_latency_ms": 18546.88404200715,
+  "judge_prompt_tokens": 5027,
+  "judge_completion_tokens": 754
+}

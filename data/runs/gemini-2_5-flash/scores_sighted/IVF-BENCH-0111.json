@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0111",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a blastocyst and broadly matches the reported 3AA grade, but overstates image certainty by calling the ICM centrally located and the TE uniformly cohesive/organized; the image shows a somewhat indistinct ICM and TE that is not crisply visualized throughout."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior losses, endometrial thickness, sperm parameters, PCOS, and lifestyle with embryo morphology and prognosis, though some links (e.g., PCOS and aneuploidy) are stated a bit too broadly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, especially emphasizing morphology versus age-related aneuploidy risk, but the response is incomplete and does not actually provide the requested implantation probability range or fully develop recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Use of Gardner grading concepts and emphasis on maternal age/aneuploidy risk are consistent with standard IVF practice, with only minor overinterpretation of morphology and limited nuance around recurrent loss workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It offers only broad points and is truncated before concrete transfer or future-cycle planning is presented, so practical next steps are limited."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011919,
+  "judge_latency_ms": 6587.274791992968,
+  "judge_prompt_tokens": 2288,
+  "judge_completion_tokens": 337
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0497",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a very poor-quality early blastocyst with poorly defined/absent ICM and degenerate TE, but it incorrectly states blastocoel <50% despite the provided Gardner 1 definition here being at least half the embryo, and adds some specific features (dark inclusions/granularity) that are not clearly established from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, prior IVF failure, semen parameters, endometrium, and ovarian response with embryo quality reasonably well, though some inferences about oocyte competence and sperm DNA fragmentation are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the poor prognosis estimate follows from the severe morphology, age, and reserve data; minor issues include overinterpreting blastulation rate from limited data and some speculative causal links."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing very poor prognosis and recommending counseling, but includes weaker-evidence suggestions such as routine intensified luteal support, GH/androgen priming, and broad karyotype/thrombophilia-style workup without strong indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling and future cycle planning, including expectations and possible further evaluation, though some recommendations are more aggressive or less evidence-based than ideal."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.012861,
+  "judge_latency_ms": 5190.598750006757,
+  "judge_prompt_tokens": 2482,
+  "judge_completion_tokens": 361
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0662",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies limited blastocoel expansion, poorly defined or absent ICM, and disorganized/sparse trophectoderm consistent with the image and Gardner 0DD score. It correctly notes the embryo appears developmentally delayed for day 5. Minor issue: mentions 'possible mild collapse/handling effect' which adds some uncertainty, and the Gardner 0DD notation interpretation could be more precise (0 typically means not yet a blastocyst in standard Gardner), but overall morphological observations align well with the visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 24 as a strong positive, AMH/FSH/oocyte yield indicating good reserve, excellent semen parameters reducing male factor concerns, 12mm endometrial thickness as favorable, endometriosis as a relevant negative factor affecting both oocyte quality and endometrial receptivity, BMI 29 as a modest concern, and severe stress acknowledged. The interaction between embryo quality and patient factors is clearly articulated, with the embryo identified as the dominant limiting variable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is internally consistent throughout. The 1-5% implantation probability estimate logically follows from the morphological assessment (poor ICM, limited expansion, disorganized TE) while appropriately acknowledging the favorable patient factors. The distinction between implantation probability, clinical pregnancy rate, and live birth rate is coherent. The conclusion that the embryo rather than the uterine environment is the limiting factor is well-supported. No contradictions identified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation is appropriate, PGT-A consideration for future cycles is evidence-based, antagonist protocol is acknowledged as standard, endometriosis management advice is appropriately nuanced with mixed evidence acknowledged. The response correctly avoids recommending surgery without clear indication. Minor gap: does not explicitly reference luteal phase support protocols or ERA testing considerations for endometriosis patients, which some guidelines would highlight."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: single ET, low-probability counseling framing, future cycle considerations including PGT-A, embryology workflow review, endometriosis management, lifestyle optimization, and psychosocial support. The response provides clear next steps for both this transfer and future planning. Slight deduction because some recommendations (e.g., 'review embryology workflow') could be more specific about what parameters to evaluate, and the offer to provide additional tables/summaries at the end slightly dilutes the actionability focus."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.020793,
+  "judge_latency_ms": 14808.85175000003,
+  "judge_prompt_tokens": 3616,
+  "judge_completion_tokens": 663
+}

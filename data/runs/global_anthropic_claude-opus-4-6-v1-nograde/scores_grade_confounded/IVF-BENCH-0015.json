@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 compacting morula and ignores the provided Gardner score of 1DD, which indicates an early blastocyst with absent/degenerative ICM and TE. It fabricates morula-specific features such as cell count, compaction grade, and fragmentation rather than describing blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant factors including age, AMH, ovarian response, sperm parameters, endometrium, protocol, and cohort size, and connects them to prognosis. Some interpretations are somewhat speculative, but overall the clinical context is well incorporated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is built on an incorrect morphological premise. Probability estimates and conclusions are therefore weakened, and there are speculative adjustments presented with unwarranted precision."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is notable misalignment with Gardner grading because the embryo is not interpreted as 1DD. Several recommendations are reasonable, but others are weakly evidence-based or overly assertive for this case, such as routine ICSI solely for paternal age and growth hormone/DHEA suggestions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for luteal support, monitoring, lifestyle modification, and future cycle planning. Although some recommendations are debatable, they are generally specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013521,
+  "judge_latency_ms": 4378.532582995831,
+  "judge_prompt_tokens": 2637,
+  "judge_completion_tokens": 374
+}

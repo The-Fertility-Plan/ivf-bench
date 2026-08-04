@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0213",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone (e.g., 'aligns perfectly,' 'top-tier,' clearly distinct ICM/TE details) given the image is somewhat soft and not all features are crisply discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF outcomes, sperm parameters, endometrium, and diagnosis reasonably well, especially highlighting prior biochemical losses and age-related aneuploidy risk, though some links (e.g., AMH to oocyte quality) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate appropriately tempered by age and repeated prior failures; minor issues include overconfidence in morphology and attributing biochemical pregnancies partly to luteal defect without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on proceeding with transfer and considering further uterine evaluation, but it overstates that 3AA is the 'highest' grade, suggests thrombophilia screening despite limited guideline support for routine testing after biochemical losses, and presents PGT-A somewhat too strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including transfer, luteal support review, possible hysteroscopy, and consideration of PGT-A; however, some recommendations are broad and not fully prioritized or guideline-nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01311,
+  "judge_latency_ms": 5095.438499993179,
+  "judge_prompt_tokens": 2540,
+  "judge_completion_tokens": 366
+}

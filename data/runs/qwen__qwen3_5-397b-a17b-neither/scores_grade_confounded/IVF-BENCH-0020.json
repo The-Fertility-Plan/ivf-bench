@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes no image was provided, but it dismisses the supplied Gardner 2BA morphology as inconsistent with Day 4 and substitutes speculative comments about morula/early blastocyst rather than analyzing the given full blastocyst with B-grade ICM and A-grade TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, prior live birth, endometrial thickness, ovarian response, and sperm motility into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable inconsistency in treating the embryo as not a blastocyst despite the provided 2BA grade, and some probability adjustments are heuristic rather than clearly evidence-based."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent, but it overstates issues such as stress effects, suggests PGT-A somewhat loosely for a 32-year-old low-yield case, and treats Day 4 vs Gardner grading too rigidly without accommodating possible early blastocyst grading practices."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for luteal support, beta-hCG timing, protocol review, ICSI consideration, ovarian reserve testing, and lifestyle optimization, though some recommendations are generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014142,
+  "judge_latency_ms": 4191.835916994023,
+  "judge_prompt_tokens": 2904,
+  "judge_completion_tokens": 362
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0307",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a clear discrepancy and correctly notes the image does not look like a well-expanded high-quality blastocyst, but it overcalls the embryo as a morula and inaccurately states there is no blastocoel; the image is more consistent with an early/poorly expanded blastocyst with indistinct ICM/TE rather than a solid morula."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key prognostic factors well, including young age, ovarian reserve, BMI, sperm quality, endometrium, and smoking, and relates them to expected outcome, though it could better discuss tubal factor as largely neutral once IVF is performed and the limits of using AMH/oocyte yield to infer implantation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: it flags the grading-stage mismatch, adjusts prognosis downward based on the apparent morphology, and explains the probability range. Minor weakness is that the morphology conclusion is somewhat overstated given the image ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on confirming embryo stage and counseling smoking cessation is appropriate, but there are guideline-level inaccuracies: Gardner 2 denotes an early blastocyst rather than a full blastocyst, and the suggestion that a Day 4 morula could be graded '4AA/4BB' is incorrect because Gardner grading applies to blastocysts, not morulae."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as verifying embryo stage with the lab, proceeding with transfer if confirmed suitable, smoking cessation counseling, and considering extended culture in future cycles. Recommendations are useful, though somewhat generic and not deeply nuanced about transfer strategy or documentation review."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013425,
+  "judge_latency_ms": 6217.263166996418,
+  "judge_prompt_tokens": 2410,
+  "judge_completion_tokens": 413
+}

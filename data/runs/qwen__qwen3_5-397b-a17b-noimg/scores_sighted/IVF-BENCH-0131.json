@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the reported 1DD grade. Its comments about absent/degenerative ICM and TE are consistent with the provided grade, but it incorrectly stated stage 1 means blastocoel less than 50%, whereas the case text defines it as at least half the embryo, and it did not describe visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior outcomes, sperm motility, paternal age, endometrial thickness, BMI, and lifestyle with embryo prognosis in a clinically meaningful way. Some links are somewhat speculative, such as attributing the embryo appearance primarily to aneuploidy or lab issues."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and the very poor prognosis follows from the reported 1DD grading and day-5 delay. Minor issues include overstatement of non-viability and some speculative causal inferences, but overall the logic is clear and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly consistent with poor-prognosis blastocyst management, but calling transfer categorically futile and recommending PGT-A as strongly indicated are stronger than guideline-based evidence supports in all settings. The interpretation of stage 1 expansion is also not fully aligned with the case definition."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for counseling, reviewing the protocol discrepancy, considering whether to proceed with transfer, and planning future evaluation including sperm DNA fragmentation and protocol optimization. It is practical, though somewhat one-sided and lacking nuanced alternatives if transfer must proceed."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014652,
+  "judge_latency_ms": 6379.916833990137,
+  "judge_prompt_tokens": 2769,
+  "judge_completion_tokens": 423
+}

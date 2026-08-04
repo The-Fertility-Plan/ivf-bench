@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was available and relied on the provided Gardner 2AB grade rather than fabricating image-specific details. However, it repeated an inaccurate interpretation from the prompt by calling expansion 2 a 'full blastocyst'; stage 2 is more consistent with an early blastocyst with blastocoel occupying more than half the embryo, and the visible image does not support a precise image-based morphology analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve/response, tubal factor diagnosis, prior miscarriage, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with conclusions generally supported by the case details. Minor issues include overconfidence in the implantation estimate and some ambiguity around Day 4 versus blastocyst-stage timing and the expansion-stage interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: misstatement of Gardner expansion stage 2, somewhat liberal endorsement of ERA despite limited indication, and suggestion of immunologic workup, which is not routinely guideline-supported. PGT-A after a single miscarriage in a 30-year-old is also more debatable than strongly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for proceeding with transfer, counseling, and contingency planning if unsuccessful. It is useful, though some recommendations are somewhat generic or not tightly prioritized for this specific favorable-prognosis case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015507,
+  "judge_latency_ms": 5396.297500003129,
+  "judge_prompt_tokens": 3129,
+  "judge_completion_tokens": 408
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies key blastocyst features (blastocoelic cavity, ICM compactness, TE cells, cellular cohesion) and appropriately notes limitations of single-image assessment. However, it lacks precision about the expansion stage visible in the image, does not comment on zona pellucida thinning (relevant for a 3AA grade), and the description is somewhat generic rather than image-specific. The caveat about whether grading is truly 3AA across all focal planes is appropriate but slightly undermines confidence in the morphological read."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors using structured tables, connecting age-related aneuploidy risk, smoking effects on endometrial receptivity, sperm parameters, and cycle history to the overall prognosis. It correctly identifies age 37 and smoking as the dominant negative predictors. Minor gaps include not addressing the significance of AMH being unavailable, not fully exploring the 'Other' diagnosis category, and the endometrial thickness concern (16.5mm) is raised but not well-contextualized against evidence-based thresholds."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is generally logical and the conclusions follow from the evidence presented. However, the response notably fails to provide a specific implantation probability estimate despite being asked for one, which is a significant gap in coherence relative to the task. The response also ends abruptly mid-sentence ('Limited') suggesting incomplete reasoning. The Gardner score interpretation note (3AA on day 5 being 'very good') contains a minor inconsistency since expansion grade 3 is already defined as expanded blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned with ESHRE/ASRM principles regarding blastocyst grading, PGT-A considerations for age 37, and smoking cessation advice. However, it does not explicitly reference PGT-A guidelines for women ≥35-37 (ASRM recommends discussing PGT-A), does not address single embryo transfer (SET) policy recommendations, and the endometrial thickness concern at 16.5mm is not well-grounded in guideline thresholds (most guidelines consider >14mm as potentially suboptimal but evidence is mixed)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is notably incomplete - it ends abruptly without providing the requested implantation probability estimate, specific transfer recommendations, or future cycle planning guidance. While the risk/benefit tables provide some clinical context, there are no concrete next steps such as PGT-A recommendation, luteal support protocol suggestions, smoking cessation referral specifics, endometrial evaluation recommendations, or freeze-all considerations. The actionability is substantially diminished by the truncated response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.017718,
+  "judge_latency_ms": 16611.237125005573,
+  "judge_prompt_tokens": 2471,
+  "judge_completion_tokens": 687
+}

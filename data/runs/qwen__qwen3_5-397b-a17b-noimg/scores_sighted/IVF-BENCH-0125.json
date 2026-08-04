@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0125",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly review the image and based morphology on the provided Gardner 3AA label. Its description is broadly consistent with the lab grade, but it overstates stage 3 as 'fully expanded' and says the embryo is 'ready for hatching,' which is closer to later stages; no image-based detail was actually assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, endometrial thickness, and cycle history well, and explains how these interact with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible probability estimate adjusted for BMI. Minor issues include overcalling morphology as 'textbook perfect' and some speculative assumptions about sperm DNA issues and ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, especially eSET for a good-quality day-5 blastocyst in a 33-year-old and counseling on obesity-related risks. Small deviations include implying morphology is the strongest predictor of euploidy and suggesting MFM referral/aspirin somewhat broadly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for transfer management, luteal support considerations, lifestyle advice, and contingency planning for future cycles, with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014175,
+  "judge_latency_ms": 4979.710166997393,
+  "judge_prompt_tokens": 2915,
+  "judge_completion_tokens": 362
+}

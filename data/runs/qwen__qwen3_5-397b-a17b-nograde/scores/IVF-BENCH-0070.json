@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible Day-5 blastocyst assessment with coherent Gardner-style grading, but some features such as exact expansion stage, zona thinning, and precise ICM/TE grades are somewhat overconfident given a single image and may reflect inference beyond clearly visible detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most key factors well, including age, ovarian reserve, endometriosis, BMI, prior biochemical pregnancy, sperm motility, and endometrial thickness, and relates them to implantation potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with a clear link from embryo quality and patient factors to prognosis; minor issue is the somewhat simplistic numeric adjustment approach for implantation probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with IVF practice in emphasizing embryo quality, age, lining, and consideration of endometriosis and sperm factors, but suggestions like aspirin/heparin without a defined indication and relatively early PGT-A recommendation are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives practical next steps for proceeding with transfer, luteal support review, lifestyle optimization, sperm DNA fragmentation testing, and future endometriosis reassessment, though some recommendations could be more conditional and evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012195,
+  "judge_latency_ms": 3899.5627500044066,
+  "judge_prompt_tokens": 2445,
+  "judge_completion_tokens": 324
+}

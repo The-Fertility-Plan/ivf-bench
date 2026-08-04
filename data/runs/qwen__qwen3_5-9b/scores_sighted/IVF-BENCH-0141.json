@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0141",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB grade, correctly identifies a blastocyst with compact ICM and looser TE, but overstates image certainty ('clearly shows') and likely overcalls zona thinning/expansion details that are not sharply discernible from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, PCOS diagnosis, sperm quality, BMI, and endometrial thickness with embryo prognosis reasonably well, though it somewhat overinterprets the low oocyte yield as possible DOR without enough nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable issues: calling age 35 'prime' and aneuploidy risk 'low enough' is somewhat overstated, and the PGT-A discussion is not fully coherent or balanced for a 35-year-old with limited embryos."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general morphology interpretation align with standard practice, but suggestions such as donor eggs based on this first cycle and recommending Lupron trigger/mild stimulation despite low response are not well supported or sufficiently individualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for transfer and future planning, including SET and luteal support considerations, but some future-cycle advice is too speculative and not tightly tailored to the presented data."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013383,
+  "judge_latency_ms": 5372.51087500772,
+  "judge_prompt_tokens": 2746,
+  "judge_completion_tokens": 343
+}

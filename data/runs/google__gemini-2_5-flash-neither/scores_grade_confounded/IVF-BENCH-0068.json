@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is unavailable, despite the provided 3BA grade. It fails to analyze the known morphology (expanded blastocyst, loosely grouped ICM, cohesive TE) from the supplied data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, sperm, endometrium, smoking, and uterine factor, though it misses linking the actual provided 3BA embryo quality into the prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is weakened by the major premise error that morphology is unknown when 3BA was provided, leading to an unnecessarily broad and partly miscalibrated probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, uterine evaluation, cautious use of PGT-A), but suggesting embryo morphology must be obtained is inappropriate because it was already provided, and ERA discussion after a single failure is of limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as smoking cessation, uterine review, lifestyle optimization, and future-cycle considerations, though some advice is less tailored because it overlooks the known 3BA grading."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014331,
+  "judge_latency_ms": 3716.606916997989,
+  "judge_prompt_tokens": 3157,
+  "judge_completion_tokens": 324
+}

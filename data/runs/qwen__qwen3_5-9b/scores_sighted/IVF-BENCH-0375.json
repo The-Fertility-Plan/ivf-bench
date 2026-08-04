@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0375",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone, including claiming the ICM is clearly on the left and that the image aligns perfectly; the ICM/TE detail is not that unequivocal in this frame."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte yield, BMI, endometriosis, sperm parameters, and endometrial thickness with prognosis reasonably well, though some links (stress, sedentary lifestyle) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, and the implantation estimate broadly follows from embryo quality and patient factors, though some deductions are imprecise and a few claims are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are notable deviations: calling 3AA the highest grade, recommending not to freeze without fuller OHSS/fresh-transfer considerations, suggesting combined progesterone support without indication, and implying surgery for endometriosis as routine future planning."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including weight optimization and endometriosis review, but some advice is not sufficiently individualized or evidence-based enough to merit the highest score."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012579,
+  "judge_latency_ms": 5459.218250005506,
+  "judge_prompt_tokens": 2498,
+  "judge_completion_tokens": 339
+}

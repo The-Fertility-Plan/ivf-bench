@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 3AB with explicit expansion, ICM, and TE descriptors; it therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, prior live birth, ovarian reserve, semen, BMI, and endometrium, though it misses linking these to the actual known 3AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and structured, but a major premise is wrong because morphology was in fact available, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, caution about hydrosalpinx, no routine PGT-A at age 28, and early ectopic monitoring are broadly guideline-consistent, with only minor limitations from ignoring the provided grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including SET, cavity/hydrosalpinx assessment, luteal support, alcohol cessation, and early monitoring, though advice would be stronger if tailored to the known 3AB embryo."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01305,
+  "judge_latency_ms": 4710.620750003727,
+  "judge_prompt_tokens": 2665,
+  "judge_completion_tokens": 337
+}

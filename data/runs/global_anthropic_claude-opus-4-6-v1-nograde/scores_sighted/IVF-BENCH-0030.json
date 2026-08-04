@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The image shows a blastocyst with a blastocoel cavity, not a Day 4 compacting morula. The response misclassifies the developmental stage and therefore incorrectly describes cell number, compaction, fragmentation, and lacks appropriate ICM/TE assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, endometrium, diagnosis, and cycle history, and relates them to prognosis, though this is undermined by the incorrect embryo-stage assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but the core reasoning is built on a major morphological misread of the embryo as a morula rather than a blastocyst, making the implantation estimate and conclusions poorly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (single embryo transfer, luteal support, ultrasound-guided transfer), but the use of a nonstandard 'Grade 2 compacting morula' framework for a blastocyst image and suggestion of routine PGT-A consideration at age 29 are not well aligned with guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, beta-hCG timing, and extended culture considerations, though actionability is limited by the incorrect morphology interpretation."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013431,
+  "judge_latency_ms": 5671.921542001655,
+  "judge_prompt_tokens": 2657,
+  "judge_completion_tokens": 364
+}

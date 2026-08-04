@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a blastocyst with visible blastocoel, ICM, and TE, but it overstates quality by calling it fully expanded/top-tier and highest possible grade; Gardner 2 is early/full blastocyst rather than expanded, and TE/ICM detail is somewhat more confident than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, endometrial thickness, BMI, and uterine factor with embryo assessment reasonably well, though AMH is unavailable and the impact of uterine factor remains somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: it equates 2AA with highest possible morphology, assumes very high implantation from morphology alone, and the probability estimate is somewhat inflated given age 35 and unspecified uterine pathology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice in emphasizing embryo quality and uterine evaluation, but misstates Gardner grading/expansion, overinterprets morphology as a predictor of euploidy, and recommends transfer over freeze without sufficient nuance about the uterine factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, assessing uterine cavity, ensuring luteal support, and considering future PGT-A selectively, though some recommendations are generic and not fully tailored to the unspecified uterine diagnosis."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013131,
+  "judge_latency_ms": 4665.3778750041965,
+  "judge_prompt_tokens": 2597,
+  "judge_completion_tokens": 356
+}

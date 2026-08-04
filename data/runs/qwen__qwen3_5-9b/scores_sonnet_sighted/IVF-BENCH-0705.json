@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies key features consistent with the Gardner 3AA score (expanded blastocyst, thinning zona, dense ICM, cohesive TE). However, the image appears to show a somewhat granular/heterogeneous ICM and the blastocoel cavity details are not precisely described. The description of the ICM as a 'dense, dark aggregation' is somewhat generic and doesn't fully capture the textured, granular appearance visible in the image. The TE description is adequate but lacks specificity about cell count or cohesion quality as actually visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (29) linked to euploidy probability, AMH to ovarian reserve, BMI as a risk modifier, endometrial thickness as favorable, and sperm parameters contextualized against WHO limits. The note about male factor possibly being morphology/DNA fragmentation-related shows clinical nuance. Minor gap: doesn't explicitly discuss how BMI 35.1 might affect endometrial receptivity beyond implantation rates, and the interaction between restricted diet and stimulation response is not explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality to patient factors to probability estimate. The 60-75% range is reasonable and the BMI adjustment rationale is coherent. The response correctly notes that high embryo quality partially offsets BMI risk. Minor inconsistency: states euploidy likelihood >90% at age 29 but then gives a 60-75% implantation rate without fully reconciling why the gap exists beyond BMI, missing discussion of other implantation failure mechanisms."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: appropriate Gardner grading interpretation, reasonable PGT-A discussion (correctly noting it's not mandatory at 29), BMI counseling consistent with ASRM obesity guidelines, and endometrial thickness assessment within accepted norms. The suggestion to consider PGT-A only for recurrent miscarriage history aligns with current guidelines. Minor gap: doesn't mention single embryo transfer (SET) recommendation per ASRM guidelines for good-prognosis patients, which is a notable omission."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are generally specific and practical: proceed with transfer, optional PGT-A with clear rationale, nutritionist referral for diet review, continued smoking cessation, and early obstetric monitoring plan. The weight management advice is clinically appropriate though somewhat generic. Missing specifics such as luteal phase support protocol considerations, ERA testing given BMI-related potential receptivity issues, or specific monitoring timelines post-transfer that would elevate this to a 5."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018192,
+  "judge_latency_ms": 15221.74120901036,
+  "judge_prompt_tokens": 2644,
+  "judge_completion_tokens": 684
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a compacted morula and states Gardner grading cannot be applied, despite the provided laboratory grade being 0DD early blastocyst. It also describes it as good-quality, which conflicts with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, ovarian response, sperm parameters, prior biochemical pregnancy, and endometrial thickness, and relates them to prognosis, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is weakened by the core morphological error and by conclusions built on that error, such as calling it a good-quality morula and recommending transfer on that basis. The implantation estimate is therefore not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are notable deviations from standard embryo assessment principles: rejecting Gardner grading despite a blastocyst-stage lab grade, overcalling embryo quality, and strongly advising PGT-A/sperm DNA fragmentation testing without sufficient case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps on luteal support, trigger review, extended culture, and future testing, but these recommendations are partly undermined by the incorrect embryo-stage assessment and some overreaching suggestions."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012498,
+  "judge_latency_ms": 4649.060167001153,
+  "judge_prompt_tokens": 2391,
+  "judge_completion_tokens": 355
+}

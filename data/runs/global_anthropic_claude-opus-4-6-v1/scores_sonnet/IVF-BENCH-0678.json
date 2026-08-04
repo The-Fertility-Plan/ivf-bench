@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the 3AA Gardner grade provided in the lab data, covering ICM density, TE cohesion, blastocoel expansion, and zona thinning. It also notes peripheral debris/fragments. However, since the image is not directly accessible to the evaluator, the description largely mirrors the provided Gardner score rather than independently identifying novel image features. The description is thorough and well-structured, with appropriate caveats about what is visible, earning a 4 rather than 5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: patient age (27), BMI (28.1), AMH, FSH, endometrial thickness, sperm parameters, diagnosis of unexplained infertility, lifestyle factors, and first-cycle status. Each factor is explicitly connected to its impact on implantation probability and prognosis. The interaction between factors (e.g., borderline sperm with unexplained infertility suggesting DNA fragmentation testing, BMI affecting endometrial receptivity) is well-articulated. The summary dashboard effectively synthesizes all variables."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly structured and internally consistent. The probability estimate (45-55%) is derived transparently through a stepwise adjustment framework starting from a baseline and applying directional modifiers for each clinical variable. The Day 4 discrepancy is identified and explored with multiple plausible explanations. Conclusions follow logically from observations, and the final prognosis is consistent with the cumulative evidence presented. No contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: Gardner grading criteria are correctly applied, Day 5 blastocyst transfer preference is noted, luteal phase support recommendations are appropriate, PGT-A considerations are evidence-based, and FET advantages are correctly cited. Supplement recommendations (CoQ10, Vitamin D) are reasonable though evidence levels vary. The 7mm endometrial threshold cited is consistent with literature. Minor deduction for recommending acupuncture without stronger caveat about limited evidence, and CoQ10 recommendation lacks strong RCT support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical, divided clearly into immediate perioperative actions and future cycle planning. Each recommendation includes rationale and specifics (e.g., progesterone 200mg TID, 150 min/week exercise, DFI threshold of 30%, specific supplements with doses). The response addresses the clinician's immediate needs (this transfer) and longer-term planning (ERA, hysteroscopy, ICSI consideration, PGT-A). Alternatives are considered and the cumulative prognosis estimate (75-85% over 2-3 cycles) provides useful counseling context."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.026025,
+  "judge_latency_ms": 15482.383540998853,
+  "judge_prompt_tokens": 5155,
+  "judge_completion_tokens": 704
+}

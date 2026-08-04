@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0313",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a poor-quality early blastocyst/1DD, noting limited blastocoel and absent/degenerate ICM and TE, but it overstates features like cytoplasmic fragmentation, developmental arrest, and zona characteristics that are not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, DOR label, sperm parameters, and endometrium with embryo quality in a clinically meaningful way, though some inferences (e.g., severe qualitative failure, expected blast yield) are somewhat strong for the available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: poor morphology drives poor prognosis despite favorable age and endometrium. Minor issues include overconfident causal attributions and extrapolation from a single embryo image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis for 1DD are aligned with standard IVF practice, but the response appears to overinterpret nonviability and uses stronger conclusions than guidelines typically support without full embryology context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides limited practical next-step recommendations for transfer or future cycle planning; it is more descriptive than operational and lacks specific management guidance in the excerpt shown."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01116,
+  "judge_latency_ms": 5225.336124989553,
+  "judge_prompt_tokens": 2070,
+  "judge_completion_tokens": 330
+}

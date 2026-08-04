@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0280",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, calling it a fully expanded blastocyst with clearly identifiable ICM and cohesive TE. The image does not convincingly show a classic expanded blastocyst architecture, distinct blastocoel, or confidently gradable TE/ICM, so several features appear inferred from the provided Gardner score rather than the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, sperm parameters, endometrial thickness, diagnosis, and cycle history reasonably well with embryo quality, though some claims are overstated and AMH is unavailable. Overall the patient factors are connected to prognosis in a clinically useful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable reasoning issues: FSH 7.8 is characterized too negatively, the link between mildly higher-normal FSH and increased aneuploidy is weak, and euploidy likelihood is overstated. Probability reasoning is generally coherent but somewhat optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly consistent with IVF practice, including proceeding with transfer and noting good prognosis, but there are deviations: claiming >90% euploidy for a 34-year-old 3AA embryo is not evidence-based, and the image-based morphology assessment is not well grounded. PGT-A comments are somewhat oversimplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, luteal support, prenatal supplementation, alcohol reduction, and considering AMH if needed. Recommendations are useful, though some are generic and not highly nuanced."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013494,
+  "judge_latency_ms": 5951.608208997641,
+  "judge_prompt_tokens": 2513,
+  "judge_completion_tokens": 397
+}

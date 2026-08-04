@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: thinning zona pellucida, dense and cellular ICM visible as the dark granular mass, and cohesive trophectoderm epithelium. The description maps well to what is visible in the image. Minor limitation is that the image is somewhat low-resolution and the model's description is partially anchored to the provided Gardner score rather than purely independent visual analysis, but no fabricated features are introduced."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (32), AMH, oocyte yield, endometrial thickness, paternal age, sperm parameters, and lifestyle factors are all connected to the embryo assessment and prognosis. The tubal factor diagnosis is acknowledged implicitly (first cycle, no uterine scarring) but not explicitly discussed in terms of its implications for transfer success. The interaction between paternal age and embryo aneuploidy risk is addressed, though the impact is slightly overstated given the dominant role of maternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented (young maternal age, top-grade embryo, ideal endometrium, first cycle). The caveat about PGT-A absence is appropriately noted. One minor inconsistency: the model states euploidy likelihood is 'likely >90%' for a 32-year-old with 3AA but then estimates implantation at 60-75%, without fully reconciling why euploidy rates don't translate more directly to higher implantation rates. The reasoning could better explain this gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: Day 5 blastocyst transfer, luteal phase support, beta-hCG timing, and PGT-A consideration for paternal age factors. The Gardner grading criteria are correctly applied. The suggestion of PGT-A primarily for paternal age (40) is a slight deviation from standard guidelines, which primarily recommend PGT-A based on maternal age or recurrent failure rather than paternal age alone. Otherwise well-aligned with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure luteal support, schedule beta-hCG at 14 days, consider PGT-A for future cycles, monitor sperm parameters. The response correctly identifies this as a fresh transfer and provides relevant next steps. Some additional specificity could improve the response, such as recommending ERA (Endometrial Receptivity Array) consideration, specific progesterone protocols, or discussing single vs. double embryo transfer policy explicitly. Overall, a clinician would find these recommendations useful and actionable."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019311,
+  "judge_latency_ms": 14148.216874993523,
+  "judge_prompt_tokens": 2902,
+  "judge_completion_tokens": 707
+}

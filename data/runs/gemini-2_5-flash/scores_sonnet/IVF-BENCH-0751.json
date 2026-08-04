@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0751",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3BA score - expanded blastocyst, visible ICM, cohesive TE layer. However, the description is largely derived from the Gardner score data provided rather than independent image analysis. The model acknowledges image resolution limitations and hedges its ICM assessment, which is honest but reduces precision. No fabricated features, but the morphological analysis lacks the depth expected from true image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all relevant clinical factors. It correctly identifies smoking as the primary modifiable risk factor and quantifies its impact on implantation probability. It connects tubal factor diagnosis to hydrosalpinx risk, links age and ovarian reserve to embryo quality, integrates sperm parameters with fertilization outcomes, and addresses endometrial thickness in context of implantation. The interaction between favorable factors and the smoking detriment is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 50-65% logically follows from the baseline 65-75% for a non-smoking 32-year-old with a 3BA blastocyst, reduced by the smoking penalty. The reasoning chain from embryo quality through patient factors to final probability is clear. Minor issue: the 10-20% smoking reduction cited is reasonable but the final range could be more precisely derived. No contradictions present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation for young patient with good quality blastocyst is appropriate, hydrosalpinx screening for tubal factor is evidence-based, smoking cessation counseling is guideline-supported, and PGT-A consideration for future cycles if needed is reasonable. The Gardner grading interpretation is accurate. Minor gap: could have referenced specific ESHRE smoking impact data or mentioned luteal phase support protocols more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: mandatory smoking cessation with timeline (3-6 months), hydrosalpinx evaluation, SET recommendation, PGT-A consideration for future cycles, and referral to cessation programs. The distinction between current transfer recommendations and future cycle planning is helpful. Could be slightly more specific regarding luteal phase support protocols, progesterone administration routes, or specific follow-up timelines post-transfer, but overall provides clear actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.019191,
+  "judge_latency_ms": 12893.061499999021,
+  "judge_prompt_tokens": 3327,
+  "judge_completion_tokens": 614
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst assessment, but it overstates image quality: the ICM is not clearly well-defined in the image, TE does not obviously appear uniformly cohesive, and calling it 'top-tier' from the image alone is stronger than warranted despite the provided 2AA label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including maternal age, tubal factor diagnosis, BMI/lifestyle, endometrial thickness, low MII yield, and paternal age with sperm parameters, though AMH is unavailable and some links (especially paternal age effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to age, morphology, lining, and untested status. Minor issues include tension between the stated 2AA grade and visual uncertainty, and somewhat strong conclusions about paternal-age impact."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and reviewing low maturation yield, but recommending PGT-A primarily because of paternal age is not strongly guideline-based, and sperm DNA fragmentation/PICSI/IMSI suggestions are more selective than routine evidence-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycle review, including SET and investigation of low MII rate. Recommendations are useful, though some future interventions are not fully nuanced regarding indications."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013113,
+  "judge_latency_ms": 4913.039209000999,
+  "judge_prompt_tokens": 2606,
+  "judge_completion_tokens": 353
+}

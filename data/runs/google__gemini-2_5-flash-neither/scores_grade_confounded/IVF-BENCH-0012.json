@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states morphology cannot be assessed and says the Gardner score cannot be evaluated, despite explicit lab morphology being provided (0DD: early blastocyst with absent/degenerative ICM and TE). It then reasons as if embryo quality might be good."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, PCOS, prior IVF outcomes, sperm parameters, and endometrium reasonably well, though it fails to anchor these factors to the actual very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is weakened by a major internal flaw: it ignores the provided 0DD grade and assumes a potentially good Day 4 embryo, leading to an implausibly optimistic implantation estimate and inconsistent conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (uterine evaluation, counseling, weight optimization), but several are weakly supported or overreaching for this case (ERA, thrombophilia/immunologic workup, strong PGT-A recommendation at age 29), and it mishandles Gardner grading data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete next steps and future planning ideas, but key actions are misdirected because it does not recognize the embryo is graded 0DD and instead prioritizes obtaining morphology already supplied."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014637,
+  "judge_latency_ms": 4579.802915999608,
+  "judge_prompt_tokens": 3199,
+  "judge_completion_tokens": 336
+}

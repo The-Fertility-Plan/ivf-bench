@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0657",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion, ICM grade B, and TE grade A consistent with the Gardner 3BA score. However, there is a notable error: the response states the zona pellucida 'appears thin and taut, indicating that the blastocyst has hatched or is in the process of hatching,' which contradicts a Grade 3 classification (Grade 3 is expanded with thinning zona but not yet hatching - hatching would be Grade 4-6). The ICM and TE descriptions are reasonable but somewhat generic rather than precisely tied to visible image features. Vacuolization mention is appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively connects patient age (37), AMH (1.32), and recurrent pregnancy loss history to aneuploidy risk. It appropriately links biochemical pregnancies to likely chromosomal abnormalities and integrates endometrial thickness and sperm parameters as favorable factors. The interaction between DOR and oocyte quality is addressed. Minor gap: tubal factor diagnosis is not discussed in relation to transfer strategy or ectopic risk monitoring, which would be relevant given the diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate (15-25%) is derived through a coherent weighted-average framework accounting for aneuploidy risk. The distinction between morphological and genetic quality is clearly articulated. Minor inconsistency: the response describes the zona as suggesting hatching (Grade 4+) but then uses Grade 3 criteria throughout, creating a small internal contradiction. The probability derivation logic is sound and follows from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines. PGT-A recommendation for recurrent pregnancy loss is well-supported by current evidence. Luteal support and hCG monitoring recommendations are appropriate. The Gardner grading system is correctly referenced. The suggestion of thrombophilia screening aligns with RPL workup guidelines. Donor egg discussion is appropriate as a contingency. Minor issue: ESHRE RPL guidelines now emphasize that PGT-A evidence for RPL is still debated, and this nuance is not acknowledged."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including proceeding with transfer, luteal support optimization, early hCG monitoring, and PGT-A for future cycles. The contingency planning (thrombophilia screening, donor eggs) adds practical value. The summary is clinically useful. Could be improved with more specific luteal support protocol suggestions, timing of hCG monitoring, or specific PGT-A biopsy day recommendations. The tubal factor diagnosis warrants mention of ectopic pregnancy vigilance which is absent."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.019404,
+  "judge_latency_ms": 15206.432124992716,
+  "judge_prompt_tokens": 3023,
+  "judge_completion_tokens": 689
+}

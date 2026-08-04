@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately reflects the Gardner 2BA score provided in the lab data, correctly describing blastocoel expansion, ICM as loosely grouped (Grade B), and TE as cohesive epithelium (Grade A). However, the morphological analysis is largely derived from the provided Gardner score rather than independent image analysis, and the ASCII diagram adds little diagnostic value. Some observations like 'mildly heterogeneous texture' and 'granularity' appear speculative rather than clearly image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects BMI 35.5 to implantation impairment, correctly identifies the AMH/DOR diagnosis contradiction, flags the natural cycle vs. 11 COC inconsistency, integrates sperm parameters, endometrial thickness, patient age, and lifestyle factors. The PCOS differential diagnosis suggestion based on the combined profile (high AMH, high BMI, 11 COCs in 'natural cycle') demonstrates sophisticated clinical reasoning beyond surface-level factor listing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability adjustment framework is transparent and logical, with base rates appropriately modified by identified risk factors. The final 25-35% estimate follows coherently from the adjustments presented. Minor issue: the Day 4 transfer concern is flagged heavily but the model still recommends proceeding, which is reasonable but could be more explicitly justified. The data discrepancy flags are handled well without derailing the overall assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: correct Gardner grading interpretation, appropriate luteal phase support recommendation for natural cycles, evidence-based dismissal of bed rest, appropriate PGT-A consideration, freeze-all strategy rationale, and ERA recommendation threshold (2+ failures). The PCOS screening recommendation aligns with Rotterdam criteria. Minor deduction for not explicitly addressing whether Day 4 blastocyst transfer has any guideline support, and the assisted hatching recommendation lacks strong evidence-based justification in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable across all dimensions: immediate transfer recommendations include specific steps (confirm LH surge timing, verify trilaminar pattern, progesterone supplementation), future cycle planning is detailed with prioritized interventions, weight loss targets are quantified (5-10% reduction), exercise recommendations are specific (150 min/week moderate aerobic), and diagnostic workup is clearly outlined. The summary dashboard provides a quick-reference clinical tool. Recommendations are appropriately tiered by priority and include alternatives."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.023742,
+  "judge_latency_ms": 13936.130582995247,
+  "judge_prompt_tokens": 4659,
+  "judge_completion_tokens": 651
+}

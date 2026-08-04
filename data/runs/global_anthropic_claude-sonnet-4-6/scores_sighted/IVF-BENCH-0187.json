@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0187",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 0DD, but adds features like severe vacuolization and irregular zona that are not clearly visible, and overstates certainty about some image details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm motility, smoking, BMI, endometrial thickness, and first-cycle status well with embryo prognosis, though some links (e.g., direct attribution of embryo quality to sperm issues) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally consistent, with the low prognosis logically tied to poor morphology and thin endometrium; however, the quantitative penalty-style probability calculation is somewhat arbitrary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly aligned with IVF practice, but recommendations such as endometrial scratch, ERA without recurrent failure, sildenafil/aspirin, and PGT-A for male factor/poor morphology are not strongly guideline-supported; calling Day 4 transfer non-standard is also overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, endometrial evaluation, sperm workup, lifestyle modification, and future cycle planning, though some suggested interventions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.055,
+  "judge_cost_usd": 0.014325,
+  "judge_latency_ms": 4584.167665991117,
+  "judge_prompt_tokens": 3095,
+  "judge_completion_tokens": 336
+}

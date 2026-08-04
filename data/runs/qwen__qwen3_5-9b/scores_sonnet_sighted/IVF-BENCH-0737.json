@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocoel expansion, thinned zona pellucida, and ICM location, aligning with the Gardner 3AA score. However, the description of the TE as 'slightly less distinct' is somewhat inconsistent with a Grade A TE designation. The image actually shows a somewhat irregular or fragmented appearance that the model doesn't critically address, and the description of the ICM location as 'lower-right quadrant' is a reasonable approximation but lacks precision about the somewhat granular/irregular texture visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors including maternal age, endometriosis diagnosis, AMH, sperm parameters, endometrial thickness, and the critical history of 5 failed cycles. It correctly identifies the RIF/RPL phenotype and connects endometriosis to endometrial receptivity concerns. Minor gap: doesn't deeply explore the interaction between the restricted diet and endometriosis-related inflammation, or the potential impact of the antagonist protocol on endometrial receptivity in an endometriosis patient."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality to patient history to adjusted probability. The downward adjustment from >60% base rate to 30-50% is well-justified by the RIF history and endometriosis. The recommendation to proceed with transfer is consistent with the embryo quality assessment. Minor inconsistency: the response calls 3AA 'the highest quality grade available' when grades like 4AA, 5AA, 6AA exist in the Gardner system, which slightly undermines credibility."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations for hysteroscopy, thrombophilia screening, and PGT-A consideration are broadly aligned with ESHRE RIF guidelines. However, calling 3AA 'the highest quality grade' misrepresents the Gardner grading system (expansion grades go to 6). The immune workup recommendation (NK cells, HLA) is appropriately caveated as having mixed evidence. PGT-A recommendation for a 27-year-old with RIF is debatable per current ESHRE guidelines which don't universally recommend it at this age. The response doesn't mention ERA (Endometrial Receptivity Analysis) which is commonly considered in RIF cases per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including proceeding with transfer, lifestyle modifications, RIF workup components (thrombophilia, immune, hysteroscopy), and PGT-A consideration. The recommendations are practical and clinically relevant. However, it lacks specificity on luteal phase support protocols, doesn't mention potential adjuvants like progesterone supplementation optimization or endometrial scratch, and misses ERA testing which would be highly actionable in this RIF context."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.019467,
+  "judge_latency_ms": 15265.153207990807,
+  "judge_prompt_tokens": 2934,
+  "judge_completion_tokens": 711
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting the zona pellucida, blastocoel expansion, TE presence, and absence of major degenerative features. However, the ICM description is vague and hedged ('not sharply defined'), and the response relies heavily on the lab-assigned Gardner score rather than independent image analysis. The description of the TE as 'present circumferentially but not particularly dense/continuous' is somewhat consistent with the image but lacks precision. The response appropriately caveats limitations of single-image assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age 30 as a euploidy predictor, AMH/FSH/oocyte yield for reserve assessment, endometriosis impact on receptivity, partner age 40 for DNA fragmentation risk, and lifestyle factors. The endometrial thickness of 6.0 mm is correctly identified as the primary limiting factor. Minor gap: the response could have more explicitly connected the endometriosis diagnosis to potential adenomyosis or the specific antagonist protocol choice in the context of endometriosis management."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 30-45% implantation follows logically from the identified favorable and unfavorable factors. The response correctly prioritizes endometrial thickness as the dominant limiting variable and provides conditional adjustments to the probability estimate. Minor inconsistency: the response simultaneously describes the embryo as 'reasonable' and 'not top-tier' while the Gardner 3AB grade with A-grade ICM is actually above average, slightly undervaluing the embryo quality relative to the assigned grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: appropriate use of Gardner grading, correct identification of 7-9mm as optimal endometrial thickness threshold, appropriate caution about PGT-A at age 30 in a first cycle, recommendation against non-evidence-based add-ons, and consideration of freeze-all strategy. The hydrosalpinx/salpingectomy recommendation is evidence-based. The response correctly notes that routine ERA/immunologic therapies are not indicated without specific indication, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: conditional transfer based on lining acceptability, luteal support optimization, realistic counseling, freeze-all consideration, endometriosis workup pathway, sperm DNA fragmentation as a conditional future test, and PGT-A discussion framework. The response provides clear decision trees for both this cycle and future planning. Slight weakness: could have been more specific about what 'acceptable' lining criteria would be (e.g., trilaminar pattern, specific thickness cutoff for proceeding vs. canceling)."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.022794,
+  "judge_latency_ms": 15584.25441700092,
+  "judge_prompt_tokens": 4093,
+  "judge_completion_tokens": 701
+}

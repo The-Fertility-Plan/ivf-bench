@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0425",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: it claims the blastocyst is hatching/has ruptured and that the zona is thin, but the image does not clearly show hatching and the blastocoel appears collapsed/poorly expanded rather than a clearly expanded 3-stage blastocyst. ICM and TE are not distinctly visualized enough to support such confident A-grade descriptions from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, sperm parameters, endometrium, and cycle history with embryo quality reasonably well, though it overinterprets the discrepancy between AMH and oocyte yield and does not discuss that morphology alone cannot exclude aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: calling the sperm parameters excellent despite a male factor diagnosis, and describing the embryo as expanded/hatching despite the image not clearly supporting that. It also references implantation probability in the task but does not actually provide a numeric range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology and recognition of favorable age/endometrium are broadly aligned with IVF practice, but stating 3AA is the highest morphological grade is inaccurate, and equating morphology with very strong implantation potential without caveat is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response offers general observations but lacks concrete transfer recommendations or future cycle planning steps. It does not specify practical next actions, contingency planning, luteal support considerations, or what to do if this transfer fails."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.012318,
+  "judge_latency_ms": 5711.618375004036,
+  "judge_prompt_tokens": 2061,
+  "judge_completion_tokens": 409
+}

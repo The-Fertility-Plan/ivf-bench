@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the embryo's morphological features reasonably well given the 1DD Gardner score, noting degenerative ICM and TE. However, there is a discrepancy: the Gardner score states expansion level 1 (blastocoel at least half the embryo per the provided definition), but the model describes the blastocoel as 'less than half the volume,' contradicting the provided lab data definition. The description of cellular degeneration and fragmentation is consistent with a DD grade but specific image-based observations (zona pellucida details, specific cellular features) are somewhat generic rather than precisely tied to what's visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects maternal age (37) with aneuploidy risk, AMH with diminished reserve and limited oocyte pool, previous miscarriage with potential chromosomal issues, sperm parameters as unlikely primary contributor, endometrial thickness as adequate, and lifestyle factors. Each factor is weighed appropriately relative to the dominant issue of poor embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logically structured throughout. The probability estimate of 0-1% follows directly from the 1DD grading and the biological reasoning about non-viable ICM and TE. The recommendation against transfer logically follows from the near-zero implantation probability. No contradictions are present, and conclusions are well-supported by the observations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with established guidelines. The Gardner grading interpretation is appropriate, the recommendation to consider antagonist protocols for DOR is evidence-based, PGT-A recommendation is appropriate for age 37 with miscarriage history, and the discussion of donor eggs as a future option is guideline-consistent. The suggestion to advise against transfer of a 1DD embryo is clinically sound, though some clinics might still transfer if it's the only embryo. Minor deviation: the long agonist protocol critique could be more nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations covering both the current transfer decision and future planning. Specific protocol alternatives are named (antagonist, microdose flare), adjuvant therapies mentioned (DHEA, CoQ10), PGT-A recommended with clear rationale, donor egg discussion suggested with appropriate timing, sperm DNA fragmentation testing mentioned as a secondary consideration, and psychological support recommended. The counseling approach respects patient autonomy while being transparent about prognosis."
+    }
+  ],
+  "extracted_probability": 0.005,
+  "judge_cost_usd": 0.033285,
+  "judge_latency_ms": 19116.765499988105,
+  "judge_prompt_tokens": 3567,
+  "judge_completion_tokens": 618
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0225",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the Gardner 3AA grading components - expansion with thinning zona, tightly packed ICM, and cohesive TE. The description of ICM location ('bottom-left') and TE characteristics shows engagement with the image. Minor issue: describing the embryo as 'ready for hatching' slightly overstates a Grade 3 (expanded but not hatching, which would be Grade 4+). Overall a solid morphological description consistent with the provided grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response connects maternal age to aneuploidy risk, AMH to ovarian response quality, endometriosis to implantation impairment, ectopic history to recurrence risk, sperm parameters to fertilization potential, and endometrial thickness to receptivity. The 'perfect storm' framing effectively communicates how favorable factors interact with the endometriosis diagnosis. The note about high AMH and potential PCOS-like physiology shows nuanced thinking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 60-75% follows coherently from the stated base rate (>70%) adjusted downward for endometriosis (10-20% reduction). One minor inconsistency: the claim that high AMH 'can sometimes correlate with a higher rate of aneuploidy' is not well-supported in the literature, especially as the model itself acknowledges this is unlikely at age 26. The distinction between implantation probability and ectopic risk is appropriately handled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Correct use of Gardner grading criteria. Appropriate recommendation against routine PGT-A at age 26 with top-grade embryo. The antagonist protocol acknowledgment for OHSS risk mitigation is correct. The suggestion of laparoscopy for endometriosis re-evaluation after failure aligns with clinical practice. Minor deviation: the statement that PGT-A provides 'absolute certainty' is an overstatement. The recommendation to proceed with fresh transfer given 10mm lining is appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear, specific recommendations including: proceeding with transfer, serial beta-hCG monitoring schedule (Day 14, then q48h), early ultrasound timing (5.5-6 weeks), endometriosis re-evaluation if failure occurs, and FET considerations for remaining embryos. The ectopic surveillance protocol is particularly practical. Could be improved with more specific endometriosis management recommendations (e.g., GnRH agonist pretreatment, progesterone supplementation details) and discussion of how many embryos to transfer."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.030615,
+  "judge_latency_ms": 15380.68420800846,
+  "judge_prompt_tokens": 2673,
+  "judge_completion_tokens": 690
+}

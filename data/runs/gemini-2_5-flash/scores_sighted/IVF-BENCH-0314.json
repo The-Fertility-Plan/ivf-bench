@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0314",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality, minimally cavitating embryo consistent with 0DD, but overstates certainty with claims like necrotic/apoptotic tissue and sparse TE that are not directly visible; it also does not clearly describe the zona or acknowledge image-based uncertainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, semen parameters, endometrium, prior biochemical pregnancy/miscarriage, BMI, and lifestyle reasonably well, linking favorable baseline factors to discordantly poor embryo quality, though some inferences are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: poor morphology drives poor prognosis despite favorable patient factors. Minor issues include overconfident statements about non-viability and some ambiguity around day-4 versus blastocyst timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but the strong recommendation against transfer/discard is somewhat overreaching given clinic-specific practices and the unusual day-4 context; PGT-A as the 'highest priority' is also stronger than guideline-based individualized counseling would suggest for age 34."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for counseling, informed consent, and future-cycle considerations, but some advice is too absolute and the future planning section is incomplete/truncated."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014721,
+  "judge_latency_ms": 7163.73608300637,
+  "judge_prompt_tokens": 3067,
+  "judge_completion_tokens": 368
+}

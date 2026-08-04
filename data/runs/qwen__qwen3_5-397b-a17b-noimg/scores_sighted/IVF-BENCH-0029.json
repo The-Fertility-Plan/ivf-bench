@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it could not directly assess the image, but its morphology interpretation from the provided score contains notable errors: it says stage 1 means blastocoel less than half the embryo, whereas the case data defines it as at least half, and it overstates non-viability from D/D without image-based confirmation. It did not fabricate detailed visible features, but the grading interpretation is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, endometrial thickness, sperm parameters, BMI/lifestyle, and ovarian response with embryo quality reasonably well. It correctly notes favorable maternal factors versus poor embryo quality, though some inferences about cycle attrition and reserve are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are important reasoning issues: it misinterprets the expansion stage, assumes only one embryo existed, and makes an absolute claim that the embryo is non-viable and transfer should be canceled based on limited data. The implantation estimate follows its premise, but the premise is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF practice: a blanket recommendation to cancel transfer and discard a poor-quality embryo is too absolute, and PGT-A after a first cycle in a 28-year-old with tubal factor is not routinely indicated. The discussion of poor morphology is directionally reasonable, but the guidance is more rigid than guideline-based care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decision-making, reserve testing, lab review, and future cycle planning. Although some recommendations are overly strong or debatable, they are specific and practically usable."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015027,
+  "judge_latency_ms": 5493.2269169948995,
+  "judge_prompt_tokens": 2819,
+  "judge_completion_tokens": 438
+}

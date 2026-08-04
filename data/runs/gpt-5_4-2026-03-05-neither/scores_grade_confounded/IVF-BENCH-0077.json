@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0077",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 4BA. It therefore fails to analyze the known morphology and treats morphology as unknown."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, PCOS, prior live birth, semen quality, BMI, and endometrium, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is undermined by the major premise error that morphology was unavailable, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: preference for single embryo transfer, standard luteal support, no bed rest, and individualized discussion of PGT-A. Minor limitation is failure to use the provided Gardner grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future planning, including SET preference, luteal support, cavity reassessment, metabolic review, and protocol review, though not tailored to the known 4BA grade."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.015315,
+  "judge_latency_ms": 3472.132667004189,
+  "judge_prompt_tokens": 3550,
+  "judge_completion_tokens": 311
+}

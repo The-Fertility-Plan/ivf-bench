@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0753",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocyst with thinning zona pellucida, tightly packed ICM described at a specific location (6 o'clock), and cohesive TE epithelium. Minor issue: refers to 'zona pellucis' (typo for zona pellucida) and the description is largely derived from the provided Gardner score metadata rather than clearly demonstrating independent image-based observation. Overall detail is good but not fully independent of the provided labels."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-embryo quality relationship, PCOS and BMI impact on implantation, endometrial thickness as favorable, sperm parameters, and prior failed cycles as a risk factor. The 'seed and soil' framing is appropriate. Minor gap: does not deeply explore how PCOS-specific endometrial receptivity issues (e.g., progesterone resistance, altered gene expression) may interact with the embryo beyond general metabolic effects, and the long agonist protocol choice relative to PCOS risk is not critically analyzed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 45-55% follows reasonably from the stated adjustments (baseline 60-70%, reduced by BMI and prior failures). The conclusion that this is still a strong cycle despite history is coherent. Minor issue: the response states the embryo is 'likely euploid' based on morphology alone, which is an overreach since morphology does not reliably predict euploidy. The quantified BMI reduction of 10-15% in success rates is presented with more precision than the literature typically supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: proceeding with transfer of a high-quality blastocyst, robust luteal support for PCOS patients, consideration of PGT-A after recurrent failure, hysteroscopy evaluation, and metabolic optimization with Metformin. The mention of low-dose aspirin/heparin is appropriately caveated as conditional on thrombophilia history. Minor deviation: ASRM guidelines do not broadly recommend empirical heparin/aspirin without thrombophilia diagnosis, and this nuance could be stated more firmly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure progesterone support, consider PGT-A if failure recurs, pursue weight management, screen for insulin resistance, and consider hysteroscopy. Future cycle planning is well-structured. Slight limitation: weight management advice lacks specific targets or referral pathways (e.g., referral to dietitian, specific BMI target before next cycle), and the recommendation for Metformin could specify whether this applies pre-transfer or only in future cycles."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018789,
+  "judge_latency_ms": 15433.233333002136,
+  "judge_prompt_tokens": 2678,
+  "judge_completion_tokens": 717
+}

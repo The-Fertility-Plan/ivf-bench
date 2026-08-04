@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0507",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA Gardner score features including expansion, ICM, and TE characteristics. It appropriately notes zona pellucida thinning and blastocoel expansion. The description is consistent with the provided grading data, though the model acknowledges image resolution limitations and relies heavily on the lab-provided grade rather than independent image analysis. Minor note: Grade 3 is described as 'fully expanded' but the Gardner system defines 3 as 'full blastocyst with blastocoel completely filling the embryo' — the thinning zona description is more characteristic of grade 4-5, though the lab data itself mentions thinning zona for this grade 3."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically addresses maternal age (41) as the dominant prognostic factor, connects the previous miscarriage to aneuploidy risk, appropriately contextualizes AMH/FSH for age, discusses the male factor diagnosis alongside good sperm parameters, notes advanced paternal age, evaluates endometrial thickness, and considers lifestyle factors. The interplay between excellent morphology and high aneuploidy risk is well articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly logical and internally consistent. The probability estimate of 20-35% is well-derived from the conditional probability framework: high implantation potential if euploid (60-70%) multiplied by the estimated euploidy rate at age 41 (20-30%), yielding approximately 12-21%, with the stated range being slightly higher to account for the excellent morphology and endometrial factors. The reasoning chain from morphology → aneuploidy risk → adjusted probability is clear and well-supported. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Recommends SET appropriately, discusses PGT-A relevance for age-related aneuploidy, uses Gardner grading correctly, and provides evidence-based counseling points. The recommendation for close monitoring in early pregnancy is appropriate. The response was cut off before completing future cycle planning recommendations, which slightly limits the assessment. The discussion of aneuploidy rates at age 41 aligns with published literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some clear recommendations (SET, patient counseling, luteal phase support, close monitoring) but was cut off before completing the future cycle planning section, which is a significant limitation. The recommendations given are appropriate but somewhat standard/generic. Missing specific recommendations about PGT-A for future cycles, consideration of donor oocytes, specific monitoring protocols, progesterone supplementation details, or timeline considerations. The truncation significantly impacts the actionability score."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.032095,
+  "judge_latency_ms": 19722.746790968813,
+  "judge_prompt_tokens": 3039,
+  "judge_completion_tokens": 676
+}

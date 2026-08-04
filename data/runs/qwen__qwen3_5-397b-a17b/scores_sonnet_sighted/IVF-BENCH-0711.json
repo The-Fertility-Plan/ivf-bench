@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 2AA Gardner score (blastocoel filling, cohesive TE, dense ICM). However, the image actually shows a somewhat irregular, complex internal structure with what appears to be a partially collapsed or irregularly shaped blastocoel rather than a perfectly turgid spherical embryo. The description of the ICM at '3 o'clock position' and the zona pellucida 'thinning' are reasonable observations, but the response somewhat over-idealizes the morphology without noting the visible irregularities in the blastocoel architecture visible in the image. The description reads more like a textbook 2AA than a careful analysis of this specific image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a commendable job integrating most key clinical factors: maternal age (35) with aneuploidy risk, tubal factor diagnosis as favorable, paternal age (48) with sperm DNA fragmentation concerns, borderline sperm motility, endometrial thickness (9.5mm) as optimal, and low BMI considerations. The interaction between paternal age and embryo viability despite good morphology is well-articulated. Minor gap: AMH being N/A is not addressed, and the previous failed cycle could have been explored more deeply in terms of what protocol was used."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability range of 45-55% is reasonably derived from the stated adjustments (baseline ~50-60% for age/grade, downward adjustment for paternal age and prior failure, upward for endometrium and tubal diagnosis). The conclusions are internally consistent and the recommendations follow from the identified risk factors. Minor issue: the baseline of 50-60% for a 35-year-old with AA blastocyst is slightly conservative per current literature, making the final range somewhat lower than most published data would support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: eSET recommendation at age 35 with top-quality blastocyst is appropriate, PGT-A suggestion for future cycles given paternal age and prior failure is evidence-based, sperm DNA fragmentation testing recommendation aligns with current guidelines for recurrent failure. Luteal support recommendation is standard. The Gardner grading criteria are correctly applied. Minor deviation: ESHRE guidelines don't universally recommend PGT-A after just one failed cycle, and the nutritional counseling recommendation, while sensible, is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: proceed with transfer, robust luteal support given low BMI, eSET, PGT-A for future cycles, sperm DNA fragmentation testing, and nutritional counseling. Each recommendation is tied to a specific clinical finding. The response distinguishes between current transfer recommendations and future cycle planning. Could be improved by specifying progesterone dosing considerations, recommending endometrial receptivity testing (ERA) given prior failure, or discussing whether fresh vs. frozen transfer is preferable given the patient's low BMI."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020892,
+  "judge_latency_ms": 16593.61783399072,
+  "judge_prompt_tokens": 3044,
+  "judge_completion_tokens": 784
+}

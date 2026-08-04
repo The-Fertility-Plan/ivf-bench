@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0313",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a data inconsistency and poor overall quality, but much of the morphology is speculative and partly inaccurate: it describes the image as possibly cleavage-stage/2-cell, states grade 1 as blastocoel <50% despite the provided definition saying at least half the embryo, and infers features not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, sperm parameters, endometrium, and cycle history with embryo quality reasonably well, though some links (e.g., attributing poor morphology to aneuploidy or fertilization issues) are somewhat overextended."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and acknowledges inconsistencies, but there are notable logical issues: conflicting interpretation of embryo stage, incorrect expansion-stage explanation, and a strong conclusion of non-transferability from uncertain morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While recognizing 1DD as poor prognosis is reasonable, recommending 'Do Not Transfer' and suggesting optional cryopreservation of such an embryo are not well aligned with standard embryo-selection guidance, and routine PGT-A in a 26-year-old with a first cycle is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers concrete next steps such as clarifying staging, considering sperm DNA fragmentation testing, weight management, and reassessing diagnosis, but some recommendations are too categorical or insufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013893,
+  "judge_latency_ms": 5328.820249997079,
+  "judge_prompt_tokens": 2716,
+  "judge_completion_tokens": 383
+}

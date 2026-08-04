@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0480",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the 4AA Gardner score, describing the hatching status, ICM compactness, and TE cohesiveness. The description of zona pellucida thinning and herniation is appropriate. Minor issue: the specific spatial localizations (e.g., 'center-left' for ICM, 'right side' for TE) may not precisely match the image, and the description of the cavity being 'bottom left' is somewhat vague, but overall the morphological assessment is accurate and well-detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, FSH, oocyte yield, sperm parameters, endometrial thickness, and lifestyle factors. The model correctly notes the discrepancy between the 'Male Factor' diagnosis and apparently normal sperm parameters. It appropriately highlights the tension between excellent morphology and age-related aneuploidy risk. Minor issue: the characterization of FSH 7.6 as 'slightly elevated' is inaccurate—7.6 is well within normal range. AMH being N/A was acknowledged indirectly but could have been discussed more explicitly as a data gap."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logically flows from morphological assessment through clinical integration to probability estimation. The probability estimate of 40-50% is well-reasoned, accounting for the high morphological quality tempered by age-related aneuploidy risk. The model correctly identifies the Day 4 transfer discrepancy with a blastocyst-stage embryo. Minor inconsistency: stating FSH 7.6 is 'slightly elevated' contradicts the stated normal threshold of <10. The claim that sperm parameters are 'normal' when the diagnosis is male factor could have been explored more carefully."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for age 38 with prior failure, lifestyle modifications, hysteroscopy after repeated failure, and appropriate discussion of ICSI. The Gardner grading interpretation is correct. The model appropriately flags the Day 4 transfer timing discrepancy. Minor deviation: the probability estimate is reasonable but the model could have been more explicit about the evidence base. The suggestion that even light alcohol should be stopped is appropriately conservative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides specific, practical recommendations including proceeding with transfer, lifestyle modifications (exercise, alcohol cessation), PGT-A for future cycles, ICSI consideration, and hysteroscopy if transfer fails. The conditional recommendations based on transfer day clarification are helpful. The recommendations are well-organized into immediate and future planning categories. Could be slightly more specific about progesterone support, follow-up timing, or specific exercise recommendations."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.031405,
+  "judge_latency_ms": 22977.956000017002,
+  "judge_prompt_tokens": 2806,
+  "judge_completion_tokens": 695
+}

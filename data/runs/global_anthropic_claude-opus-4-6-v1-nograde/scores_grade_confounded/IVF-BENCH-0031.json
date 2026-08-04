@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 compacting morula and states Gardner scoring is not applicable, despite the provided laboratory grade being 2BB blastocyst. It fabricates morula-specific features rather than describing blastocoel expansion, ICM, and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant patient factors well, including age, ovarian reserve markers, prior live birth, endometrium, smoking, and semen parameters, and relates them to prognosis. However, this integration is built partly on an incorrect embryo-stage interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but a major contradiction undermines it: it rejects the supplied Gardner score and bases prognosis on a morula assessment instead of the stated 2BB blastocyst. Probability estimates therefore rest on a flawed premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly evidence-based (e.g., smoking cessation, luteal support), but key elements are not well aligned with standard embryo assessment practice because it dismisses Gardner grading and reframes the case as a morula transfer. Suggesting dual progesterone specifically due to smoking is not standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management, lifestyle modification, and future cycle planning. Recommendations are fairly specific, though some are weakened by the incorrect embryo-stage assessment and a few speculative suggestions."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.012489,
+  "judge_latency_ms": 4941.879083002277,
+  "judge_prompt_tokens": 2343,
+  "judge_completion_tokens": 364
+}

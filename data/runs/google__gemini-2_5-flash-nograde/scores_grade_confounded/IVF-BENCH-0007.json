@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good Day 4 morula and ignores the provided Gardner score 0DD, which indicates a very poor-quality early blastocyst with absent/degenerative ICM and TE. It fabricates favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It discusses many relevant patient factors (age, prior live birth, sperm, endometrium, ovarian response), but integrates them with an incorrect embryo-quality assessment and underweights the major negative prognostic impact of a 0DD embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but built on a faulty premise: calling the embryo a good morula despite the stated 0DD grade. The high implantation estimate is not supported given the very poor morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It departs from Gardner grading interpretation by dismissing the provided blastocyst grade and overstates prognosis. SET and luteal support are reasonable, but the morphology interpretation and success estimate are not well aligned with standard IVF grading principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations are practical in a general sense (SET, luteal support, follow-up, consider PGT-A in future), but they are insufficiently tailored to the poor-quality 0DD embryo and do not adequately address counseling about low expected success."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013872,
+  "judge_latency_ms": 4810.951208004553,
+  "judge_prompt_tokens": 2794,
+  "judge_completion_tokens": 366
+}

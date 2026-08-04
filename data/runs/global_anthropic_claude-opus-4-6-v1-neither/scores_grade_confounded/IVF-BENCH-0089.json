@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and incorrectly stated that no morphology/Gardner score was available, so it omitted the key blastocyst features that could have been accurately described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, prior biochemical pregnancies, male factor, endometrial thickness, and oocyte maturity reasonably well with prognosis, though some links are speculative and it misses the impact of the known 3AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a major inconsistency in ignoring the provided 3AA morphology while still estimating prognosis, and some deductions are asserted without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but recommending ERA, NK/immunologic testing, intralipid/IVIG, and routine aspirin/thrombophilia workup is not strongly guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for luteal support, monitoring, and future-cycle considerations, though several recommendations are more controversial than standard and should have been more qualified."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01308,
+  "judge_latency_ms": 4076.208750004298,
+  "judge_prompt_tokens": 2705,
+  "judge_completion_tokens": 331
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0202",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with poorly defined ICM/TE, but it overstates image-specific details not clearly visible (e.g., vacuolization, dark coarse granularity, fragmentation, moderately thick zona) and describes the blastocoele as <50% despite the provided Gardner expansion definition indicating at least half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, oocyte maturity, sperm factors, BMI, endometrial thickness, and first-cycle status with embryo prognosis reasonably well, though some links are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall conclusion of very poor prognosis is logical, but several deductions are weak or speculative, and the probability adjustment framework appears somewhat arbitrary with unsupported causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic Gardner interpretation is aligned, but multiple recommendations are not guideline-based or are controversial for routine use (ERA in this setting, LMWH for endometriosis alone, NK-cell testing, oxidative stress panels, TESE based on DNA fragmentation, repeat laparoscopy without indication)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear counseling points and practical future-cycle considerations, but some suggested interventions are not evidence-based enough for strong clinical action."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015213,
+  "judge_latency_ms": 5128.6755410110345,
+  "judge_prompt_tokens": 3301,
+  "judge_completion_tokens": 354
+}

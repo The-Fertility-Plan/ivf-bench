@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0279",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA grading features including expansion with thinning zona, tightly packed ICM, and cohesive TE. The description of zona thinning 'particularly at the superior aspect' adds specificity that appears consistent with the image. Minor issue: a Grade 3 expanded blastocyst description is accurate but the model could have noted more nuanced features visible in the image. The claim that 3AA is 'the highest morphological grade possible' is slightly misleading since higher expansion grades (4-6) exist."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects patient age (32) with expected euploidy rates, links PCOS diagnosis to protocol choice (Long Agonist) and potential complications, acknowledges the prior live birth as the strongest predictor of success, integrates sperm parameters to rule out male factor, and considers endometrial thickness. The discussion of how former smoking and moderate alcohol interact with the case is well-handled."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical throughout. The probability estimate of 60-75% is well-supported by the evidence presented. One minor inconsistency: the model states 3AA is 'the highest morphological grade possible' when higher expansion grades exist (4AA, 5AA, 6AA). Also, the statement that Long Agonist is chosen 'to minimize OHSS risk' is debatable—antagonist protocols are more commonly used for OHSS prevention in PCOS. These are relatively minor issues in an otherwise coherent analysis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned but with notable deviations. The claim that Long Agonist protocol minimizes OHSS risk in PCOS is incorrect—ESHRE guidelines generally favor GnRH antagonist protocols for PCOS patients to reduce OHSS risk, as agonist trigger can be used. The statement that 3AA is the highest grade is inaccurate per Gardner criteria. The recommendation against PGT-A is reasonable for this case. The suggestion of single embryo transfer is implied and appropriate. Luteal phase support recommendation is appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including proceeding with transfer, lifestyle optimization, luteal phase support for PCOS, and a detailed contingency plan if the cycle fails (investigating chronic endometritis, fibroids, insulin resistance). The recommendation to minimize alcohol during the luteal phase is practical. Could have been more specific about progesterone dosing/route, or specific PCOS metabolic screening recommendations (e.g., metformin, glucose tolerance testing)."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.028345,
+  "judge_latency_ms": 14869.381666998379,
+  "judge_prompt_tokens": 2404,
+  "judge_completion_tokens": 653
+}

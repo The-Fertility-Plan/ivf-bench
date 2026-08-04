@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate any embryo morphology from the unseen image; its hypothetical examples were clearly labeled as assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, BMI, endometrium, male factor, lifestyle, and first-cycle status with expected embryo competence and implantation potential, though some links were somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the probability estimate explicitly contingent on assuming a good-quality blastocyst; however, the estimate is somewhat optimistic given absent morphology and age-related aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice (single best embryo selection, consider PGT-A, luteal support, lifestyle optimization), though ERA is mentioned somewhat early and endometrial thickness is treated a bit too simplistically."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including embryo selection, alcohol cessation, stress management, luteal support, and contingency planning, though some advice remains generic rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014487,
+  "judge_latency_ms": 4451.716875002603,
+  "judge_prompt_tokens": 3239,
+  "judge_completion_tokens": 318
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0403",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a poor-quality embryo with poorly defined ICM/TE, but it misstates Gardner stage 1 as blastocoel less than half the embryo (stage 1 is at least half) and overcalls degeneration/arrest from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates female age, low oocyte yield, DOR diagnosis, prior failed cycle, sperm concentration/motility, partner age, and endometrial thickness with embryo prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly consistent and the poor prognosis follows from the DD grading, but there are notable issues such as the incorrect stage definition and speculative claims about why a day-4 transfer occurred."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and poor-prognosis framing is reasonable, but recommendations such as routine PGT-A based mainly on paternal age/one failed cycle and adjuncts like DHEA/PICSI/IMSI are not strongly guideline-based for this specific case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer counseling, luteal support, protocol reconsideration, and male-factor workup, though some suggestions are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012951,
+  "judge_latency_ms": 4773.753082990879,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 346
+}

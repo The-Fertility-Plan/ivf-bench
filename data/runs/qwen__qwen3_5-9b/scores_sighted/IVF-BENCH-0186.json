@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0186",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with poorly defined ICM/TE, but inaccurately calls it Stage 3 and overstates visible features; image/lab label are more consistent with an early blastocyst with minimal cavity rather than a clearly expanded stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "Integrates age, BMI, uterine factor, prior ectopic, sperm, and endometrium reasonably well, but makes unsupported links such as assuming PCOS and increased aneuploidy risk from high AMH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Overall structure is clear, but key conclusions rely on weak or incorrect premises (e.g., PCOS implies significantly higher aneuploidy, 0DD equals essentially no potential, recommendation not to transfer despite this being a day-4 transfer context)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (uterine evaluation, weight optimization, counseling), but several statements are not guideline-aligned: misinterpretation of Gardner expansion, overcalling non-viability, routine strong endorsement of PGT-A in a 28-year-old, and unsupported PCOS/aneuploidy claims."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including uterine workup, metabolic optimization, counseling, and future cycle considerations, though the immediate recommendation to discard/not transfer is too absolute for the evidence presented."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012852,
+  "judge_latency_ms": 5110.779374997946,
+  "judge_prompt_tokens": 2494,
+  "judge_completion_tokens": 358
+}

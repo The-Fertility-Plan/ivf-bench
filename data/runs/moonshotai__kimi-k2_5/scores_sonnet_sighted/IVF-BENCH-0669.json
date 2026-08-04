@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the DD grading for ICM and TE and describes their degenerate nature accurately. However, the expansion grade description contains an error: Gardner Grade 1 is defined in the lab data as 'blastocoel at least half the embryo,' yet the model incorrectly states Grade 1 means blastocoel occupies less than 50% of embryo volume. The image actually shows a fairly expanded blastocyst with visible cellular structures, and the model's description of Grade 1 as 'early blastocyst' with limited cavitation contradicts the provided Gardner criteria. The zona pellucida is visible in the image but not discussed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting AMH, endometriosis, and the recurrent failure history to the embryo quality assessment. It correctly identifies the ectopic history as elevating repeat ectopic risk, links DOR to poor embryogenesis, and discusses endometriosis-related oocyte and endometrial dysfunction. Sperm parameters are mentioned though appropriately downweighted. Minor gap: does not discuss potential thrombophilia workup given ectopic and miscarriage history, or ERA/receptivity testing given RIF pattern."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological findings to clinical context to probability estimate. The conclusion that this is a near non-viable embryo is well-supported by the DD grading. The implantation probability of <5% (1-3%) is consistent with the evidence presented. Minor issue: the response is cut off before completing the full probability section and recommendations, limiting full evaluation of coherence in conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation of DD components aligns with established criteria. The response appropriately flags the poor prognosis. However, the mischaracterization of Grade 1 expansion is a guideline accuracy issue. The response does not explicitly address ESHRE/ASRM guidance on whether to transfer a 1DD embryo, PGT-A considerations for RIF patients, or endometrial receptivity assessment (ERA) which are standard considerations per current guidelines for this clinical scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is cut off before completing the recommendations section, which significantly limits actionability. The probability estimate is provided but the 'Recommendations for this transfer and future cycle planning' section appears incomplete. What is present focuses on risk stratification rather than specific next steps. No concrete recommendations are given regarding whether to proceed with transfer, freeze, discard, consider PGT-A, ERA, immunological workup, donor egg counseling, or protocol modifications for future cycles."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.017598,
+  "judge_latency_ms": 15457.679333005217,
+  "judge_prompt_tokens": 2516,
+  "judge_completion_tokens": 670
+}

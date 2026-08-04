@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies poor embryo quality and references the 1DD Gardner score appropriately. However, the image actually shows what appears to be a more expanded blastocyst with visible cellular mass rather than a simple morula, and the model's description of 'no distinct blastocoel' conflicts with the visible expansion in the image. The large clear area at the bottom is described as a fragment/vacuole rather than considering it could be a collapsing blastocoel. The zona pellucida is visible but not described. Some morphological observations are inferred from the score rather than the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates multiple clinical factors including age, AMH, male factor diagnosis, sperm parameters, and reproductive history. It correctly connects the male factor diagnosis to potential sperm DNA fragmentation as a cause of embryonic degeneration, links the recurrent pregnancy loss pattern to chromosomal aneuploidy, and notes the PCO phenotype from the AMH/retrieval data. The endometrial thickness is acknowledged as favorable. Minor gap: BMI and lifestyle factors could be more deeply integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is largely coherent and internally consistent. The <1% implantation probability logically follows from the 1DD grading and morphological assessment. The connection between male factor, sperm DNA fragmentation, and embryonic degeneration is well-reasoned. The recommendation against transfer is consistent with the quality assessment. Minor inconsistency: the model attributes PCO phenotype to the patient based on AMH alone without sufficient diagnostic criteria, which is a slight logical overreach."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines. PGT-A recommendation for recurrent pregnancy loss is evidence-based. Sperm DNA fragmentation testing aligns with male factor workup guidelines. Day 5/6 extended culture recommendation is consistent with current best practices. The Gardner grading interpretation is mostly correct, though the expansion grade '1' description slightly mischaracterizes the criteria (Grade 1 = early blastocyst with blastocoel less than half the embryo volume, which is accurate). The recommendation to avoid transfer of degenerative embryos aligns with clinical standards."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including PGT-A, sperm DNA fragmentation testing, protocol review, and extended culture recommendations. The immediate transfer decision is clearly stated with nuanced counseling guidance for the scenario where this is the only embryo. Recommendations are prioritized and practical. Could be improved by specifying DNA fragmentation thresholds, suggesting specific alternative sperm selection techniques (e.g., IMSI, PICSI), or discussing freeze-all strategy more explicitly."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.019137,
+  "judge_latency_ms": 16221.904709003866,
+  "judge_prompt_tokens": 2914,
+  "judge_completion_tokens": 693
+}

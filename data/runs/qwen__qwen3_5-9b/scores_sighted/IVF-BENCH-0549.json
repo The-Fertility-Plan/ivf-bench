@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0549",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image-based certainty and largely mirrors the provided 4AA label rather than the actual image, which is grainy and does not clearly show a tightly packed ICM, cohesive TE, or obvious herniation; several described features are not confidently visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF failures/biochemicals, sperm parameters, endometrial thickness, and tubal factor reasonably well with embryo quality, though it misses AMH being unavailable and overinterprets some factors such as lining thickness as a strong receptivity marker."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear adjustment from embryo quality to patient-specific prognosis, though some quantitative deductions (e.g., BMI penalty, base implantation rates) are somewhat asserted rather than rigorously supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but calling 4AA 'the highest possible grade' is inaccurate, ERA is not routinely supported after repeated failure, and thrombophilia screening after biochemical losses is not standard without additional history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, weight optimization, and possible future PGT-A consideration, but some suggestions are not sufficiently nuanced regarding evidence strength and indications."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013101,
+  "judge_latency_ms": 4954.8257090064,
+  "judge_prompt_tokens": 2637,
+  "judge_completion_tokens": 346
+}

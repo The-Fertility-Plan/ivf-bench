@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BB Gardner grade blastocyst: expanded blastocoel with thinned zona pellucida, loosely grouped ICM with several cells, and a loose TE epithelium with moderate cellularity. The ICM location description (lower left quadrant) and cell count estimate (5-10 cells) add specificity. Minor deduction because some descriptive details (e.g., intercellular spaces in TE, exact ICM positioning) may be inferred from the grade rather than directly observed in the image, and the response cannot be fully verified against the actual image content."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all key clinical factors: age 35 with euploidy rate estimates, AMH 1.56 ng/mL contextualized against oocyte yield, the critical positive prognostic value of the previous live birth, male factor diagnosis with sperm parameter interpretation, endometrial thickness assessment, BMI and lifestyle factors, and the significance of two prior failures. The interactions between these factors and embryo quality are explicitly discussed rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (35-50% implantation) is logically derived from baseline data, positive modifiers (prior live birth, endometrial thickness), and negative modifiers (TE grade B, prior failures), with a euploidy-blended calculation provided. Minor issue: the response notes 'previous 2 failures' as a risk factor but also states the prior live birth provides '2-3x higher chance,' without fully reconciling how the mixed history (1 success, 2 failures) nets out quantitatively. The assisted hatching recommendation for a Grade 3 blastocyst is slightly inconsistent since Grade 3 already indicates imminent natural hatching."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: eSET recommendation for good-quality blastocyst at age 35, appropriate luteal phase support mention, PGT-A consideration for recurrent implantation failure, ERA recommendation after multiple failures, and SDF testing for male factor with RIF. The assisted hatching recommendation for a Grade 3 blastocyst is a minor deviation, as current evidence does not strongly support routine assisted hatching for already-expanded blastocysts and guidelines are cautious about its routine use. Microflare protocol suggestion for low responders is reasonable though protocol choice nuances vary by guideline."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically organized into immediate transfer decisions (eSET, luteal support, assisted hatching consideration, stress management) and contingency planning (PGT-A, SDF testing, ERA, stimulation protocol modification, embryo banking). Each recommendation is tied to specific clinical rationale from this case. The tiered structure (this transfer vs. if unsuccessful vs. long-term) makes it immediately usable for clinical decision-making, and the final prognostic summary provides a clear communication framework for the patient."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020349,
+  "judge_latency_ms": 15378.159875006531,
+  "judge_prompt_tokens": 2948,
+  "judge_completion_tokens": 767
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and largely accurate morphological description consistent with a 3AA Gardner score. It correctly describes the expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive TE. The description of ICM location ('lower central region') and zona thinning 'particularly at the poles' are reasonable interpretations, though some specifics may be slightly embellished beyond what's clearly visible. The note about Grade 3 not yet being fully hatched (Grade 4/5) shows good understanding of the grading system."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of multiple clinical factors including maternal age, ovarian reserve markers, sperm parameters, endometrial thickness, and lifestyle factors. The model appropriately flags the discrepancy between the 'Male Factor' diagnosis and seemingly normal semen parameters, suggesting DNA fragmentation as a possible explanation. The discussion of AMH/FSH relative to age is relevant. However, the characterization of AMH 1.93 ng/mL as 'slightly diminished ovarian reserve' for a 30-year-old is debatable—this is within normal range for many labs, though the concern about FSH 8.8 is reasonable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 60-75% is well-reasoned given the favorable factors and appropriately accounts for the uncertainty around the male factor diagnosis. The model correctly identifies that the male factor diagnosis with normal SA parameters is a key variable. One minor issue: stating this is the patient's first IVF cycle but then saying 'if previous attempts failed' introduces a slight inconsistency. The logic connecting lifestyle factors to outcomes is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with guidelines. The Gardner grading description is accurate. However, the suggestion of TESE for high DNA fragmentation is not a standard first-line recommendation—lifestyle modifications, antioxidants, or shorter abstinence periods are more typical initial interventions. The recommendation for PGT-A is appropriately hedged. The alcohol counseling is evidence-based. The characterization of AMH 1.93 as DOR is not standard per ASRM criteria. The mention of 'more aggressive stimulation' for future cycles is somewhat premature given the good response (13 COCs, 10 MII)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, alcohol cessation advice, progesterone support monitoring, SDF testing for the male partner, and ovarian reserve monitoring. The suggestion of SDF testing is particularly actionable and clinically relevant given the diagnostic discrepancy. The lifestyle modification advice is concrete. However, some recommendations like 'freeze-all strategy' and 'more aggressive stimulation' seem premature given this is the first cycle with a good response. The response could have been more specific about cryopreservation of remaining embryos."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.03143,
+  "judge_latency_ms": 15218.46987499157,
+  "judge_prompt_tokens": 2636,
+  "judge_completion_tokens": 730
+}

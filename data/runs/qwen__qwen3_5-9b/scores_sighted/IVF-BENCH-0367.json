@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0367",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst, correctly identifies blastocoel, ICM on the left, and peripheral TE, but overstates certainty that it is fully expanded/ready to hatch and calls 3AA the highest grade; image shows some ambiguity in expansion and TE detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, prior failed cycles, sperm quality, and endometrium with embryo quality well, though the interpretation of 7 oocytes as surprisingly low for PCOS is somewhat overstated and not fully contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with a plausible probability estimate tied to age and morphology; minor issues include overconfidence in morphology and speculative explanations for prior failures and oocyte yield."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned with standard IVF principles on morphology, age, and cautious PGT-A use in young patients, but includes less evidence-based suggestions such as an 'immune workup' after failed transfer and overstates 3AA as top/highest grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer and outlines reasonable future evaluation if unsuccessful, though recommendations could be more specific regarding uterine assessment timing and transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01254,
+  "judge_latency_ms": 5041.32324999955,
+  "judge_prompt_tokens": 2405,
+  "judge_completion_tokens": 355
+}

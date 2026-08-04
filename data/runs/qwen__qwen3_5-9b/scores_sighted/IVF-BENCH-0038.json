@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2BA label and image, but it incorrectly states the embryo is fully expanded/near hatching and says the blastocoel occupies the majority; a Gardner 2 blastocyst is early blastocyst, not hatched, and the image does not show hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well: young age, BMI, male factor context, prior failed cycles, sperm parameters, endometrium, and ovarian response. Minor issue: it infers fertilization from MII count and overstates sperm quality without discussing morphology/DNA fragmentation uncertainty."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with conclusions tied to age, embryo grade, lining, and prior failures. Minor inconsistency arises from misinterpreting the expansion stage and calling the embryo high-quality on that basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recommending transfer and noting young age lowers aneuploidy risk, but there are deviations: incorrect Gardner stage interpretation, premature labeling of recurrent implantation failure after two failed cycles, and suggesting immune/NK-cell workup despite limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including proceeding with transfer, luteal support, and uterine evaluation if failure recurs. Slightly limited by nonspecific advice and inclusion of less evidence-based future testing."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013191,
+  "judge_latency_ms": 8162.584167002933,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 362
+}

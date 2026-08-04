@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0517",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates Gardner expansion staging by calling grade 2 a full blastocyst and implying grade 3 is herniation; in standard Gardner grading, full blastocyst is grade 3 and herniation is grade 5. It also overcalls image-based certainty about ICM/TE robustness and absence of abnormalities not clearly discernible from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: very young age, ovarian reserve, PCOS, BMI, prior failed cycles/miscarriage, sperm parameters, and endometrial thickness, and relates them to prognosis. Some interactions are somewhat generalized, but overall clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, especially the adjustment downward for repeated failures, but there are notable issues: incorrect blastocyst stage interpretation, calling 2BA 'top-tier,' and some overconfident inferences from morphology. The probability estimate is plausible but only moderately supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly reasonable (consider uterine evaluation after repeated failures, assess chronic endometritis selectively), but recommending PGT-A as the highest priority in a 24-year-old is not strongly guideline-supported, and suggestions such as metformin for implantation benefit and dual luteal support are more context-dependent than standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future workup, including proceeding with transfer, luteal support review, hysteroscopy/endometritis evaluation, and sperm DNA fragmentation testing. It is useful, though some recommendations lack nuance regarding indications and evidence strength."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014499,
+  "judge_latency_ms": 6075.750999996671,
+  "judge_prompt_tokens": 2703,
+  "judge_completion_tokens": 426
+}

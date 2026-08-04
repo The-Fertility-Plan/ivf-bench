@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst cavity, loosely organized ICM in the lower-left quadrant, sparse trophectoderm with visible gaps, and thinning zona pellucida consistent with the Gardner 3BB grade. The description of ICM granularity and TE discontinuity matches visible image features. Minor limitation: the image is somewhat low-contrast and the model's confident description of specific TE cell gaps may slightly overinterpret image resolution limits, but overall the morphological narrative is well-matched to both the image and the reported grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors — age, BMI, AMH, FSH, endometriosis diagnosis, prior failed cycles, smoking status, sperm parameters, endometrial thickness, and embryo grade — into a coherent prognostic framework. The table format clearly maps each factor to its directional impact, and the narrative explains mechanistic interactions (e.g., progesterone sequestration in adipose tissue, endometriosis-related progesterone resistance, smoking effects on zona hardening). The cumulative burden framing is clinically sophisticated and appropriate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimate of 18-28% (point estimate ~22-25%) follows logically from a transparent sequential adjustment framework starting from a reasonable baseline of 40-45% for a 3BB blastocyst in a 31-year-old. Each modifier is directionally justified with cited effect sizes. The final clinical pregnancy probability reduction to 15-20% accounting for miscarriage risk is internally consistent. Recommendations flow logically from identified risk factors, with no contradictions between the assessment and the action plan."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: ERA for recurrent implantation failure, hysteroscopy, chronic endometritis workup, thrombophilia screening, PGT-A consideration, GnRH agonist pre-treatment for endometriosis, and smoking cessation. The suggestion of IM progesterone preference in obese patients reflects current pharmacokinetic evidence. Minor deductions: the recommendation to 'consider dual embryo transfer' with PGT-A normal embryos somewhat conflicts with current single embryo transfer guidelines given the high BMI and associated obstetric risks, and the immunological workup (NK cells, Th1/Th2) has limited evidence base per ESHRE RIF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and tiered by priority: immediate transfer optimizations (IM progesterone rationale, aspirin, prednisolone with evidence caveat), future workup steps (ERA, hysteroscopy, CD138 biopsy, thrombophilia panel, immunological testing), lifestyle interventions with specific targets (GLP-1 agonists with washout period, bariatric surgery referral criteria, 5-10% weight loss threshold, 150 min/week exercise), and embryo strategy (PGT-A, freeze-all, assisted hatching, time-lapse). The response provides alternatives and contextualizes recommendations within the patient's specific risk profile, making it directly usable by a clinician."
+    }
+  ],
+  "extracted_probability": 0.235,
+  "judge_cost_usd": 0.024243,
+  "judge_latency_ms": 18481.660666002426,
+  "judge_prompt_tokens": 4046,
+  "judge_completion_tokens": 807
+}

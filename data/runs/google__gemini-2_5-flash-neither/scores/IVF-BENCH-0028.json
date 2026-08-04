@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly states that no image was provided and does not fabricate morphology, but it cannot perform the requested morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, BMI, endometrial thickness, first cycle status, and endometriosis well, though interaction with actual embryo morphology is limited by missing image data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with the probability estimate tied to favorable age/endometrium factors and uncertainty from endometriosis and absent morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, including luteal support, embryo selection, cryopreservation, and cautious discussion of PGT-A; minor overreach exists in suggesting PGT-A relatively early in a 26-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including counseling, embryo selection, freezing, and endometriosis review, though some suggestions remain somewhat general due to missing embryo-specific data."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012978,
+  "judge_latency_ms": 3444.1514579957584,
+  "judge_prompt_tokens": 2911,
+  "judge_completion_tokens": 283
+}

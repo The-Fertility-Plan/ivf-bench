@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst and broadly matches the provided 3AB grade, but overstates visible certainty (e.g., distinct ICM/TE, thinning zona) given the image quality and labels expansion grade 3 as 'expanded' rather than full blastocyst terminology; limited image-specific detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm parameters, endometrium, lifestyle, and first-cycle status with embryo quality in a clinically meaningful way, though some links (e.g., ICM grade and euploidy) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and internally consistent, with a plausible implantation estimate based on embryo grade and patient factors; minor issues include overinterpretation of morphology and the transfer-day discrepancy assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice (SET, importance of age and morphology), but contains some deviations or overstatements: grade 3 terminology is imprecise, routine PGT-A suggestion in a 31-year-old is not strongly guideline-based, and 'immediate' progesterone wording is overly generic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with SET, clarifying transfer day, ensuring luteal support, and considering sperm DNA fragmentation if needed; useful but some recommendations are somewhat generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013401,
+  "judge_latency_ms": 5262.637207997614,
+  "judge_prompt_tokens": 2687,
+  "judge_completion_tokens": 356
+}

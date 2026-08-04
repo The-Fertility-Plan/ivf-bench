@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly expressed uncertainty about whether the image was a blastocyst versus morula/degenerating embryo, then defaulted to the provided 2AB score rather than image-grounded analysis. It also inaccurately described expansion 2 as 'expanded' and mentioned zona thinning not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, sperm quality, endometrium, BMI, AMH, and tubal factor reasonably well with prognosis, though some links (especially AMH implications) are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning contains notable contradictions and self-corrections, especially around embryo stage and the interpretation of AMH versus oocyte yield. It alternates between uncertainty and confident conclusions without resolving the inconsistencies."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF practice, including suggesting more aggressive stimulation solely because 11 oocytes is 'low' for AMH 9.3, implying high AMH raises aneuploidy risk, and loosely proposing PGT-A in a 32-year-old without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer and maintaining luteal support, but future-cycle advice is only moderately useful because some recommendations are speculative and insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.01085125,
+  "judge_latency_ms": 7319.180959020741,
+  "judge_prompt_tokens": 5737,
+  "judge_completion_tokens": 368
+}

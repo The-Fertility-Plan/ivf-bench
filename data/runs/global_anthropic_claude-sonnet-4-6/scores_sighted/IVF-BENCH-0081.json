@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It identifies a likely ICM in the upper-left and notes zona thinning/expansion, but overstates confidence in TE being clearly cohesive and introduces questionable features like vacuolization/ICM irregularity that are not reliably discernible from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, BMI, sperm parameters, endometrial thickness, diagnosis, and embryo stage into prognosis reasonably well, though some links are overstated and AMH absence is given too much weight."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but several adjustments in the probability framework are arbitrary, and some conclusions (e.g., strong alcohol and sedentary penalties, occult immune/thrombophilic pathology emphasis) are not well supported by the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are standard (uterine cavity assessment, consider PGT-A discussion after repeated failures), others such as routine ERA, thrombophilia screening, NK cell testing, aspirin for perfusion, endometrial scratch, and MTHFR testing are not well aligned with current evidence-based IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for transfer and future planning, including cavity evaluation and lifestyle counseling, but several actions are overly aggressive or insufficiently evidence-based for routine use."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013749,
+  "judge_latency_ms": 5176.353874994675,
+  "judge_prompt_tokens": 2853,
+  "judge_completion_tokens": 346
+}

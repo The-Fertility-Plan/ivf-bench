@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided 3AA score. Its statements are broadly consistent with Gardner 3AA, but it overstates visible/image-based certainty and says 'fully expanded' whereas grade 3 is expanded rather than fully expanded/hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, prior live births/miscarriage, endometrial thickness, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability adjustment from embryo quality to patient-specific prognosis. Minor issues include somewhat strong inferences from endometrial thickness and miscarriage history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is reasonable, but there are deviations/overreaches: recommending PGT-A primarily for a 31-year-old with one clinical miscarriage is not standard, and thrombophilia testing is not routinely indicated after a single loss. Some statements about stress and very thick endometrium are more speculative than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, lifestyle counseling, possible cavity assessment, luteal support review, and future male-factor workup. It is useful, though some recommendations are more aggressive than necessary for this profile."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014634,
+  "judge_latency_ms": 5505.830875001266,
+  "judge_prompt_tokens": 3018,
+  "judge_completion_tokens": 372
+}

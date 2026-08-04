@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a cleavage-stage 8-10 cell embryo with uniform blastomeres and minimal fragmentation, whereas the image/lab data indicate an early blastocyst with very poor ICM/TE quality (0DD)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response focuses on a staging discrepancy and does not meaningfully integrate age, male factor, prior live birth, ovarian response, sperm parameters, or endometrial factors with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "It identifies a possible discrepancy between image interpretation and lab data, but the core reasoning is undermined by the incorrect morphological classification, creating a major logical flaw."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Noting inconsistency between morphology and reported Gardner score is reasonable, but the embryo assessment itself does not align with Gardner blastocyst grading principles or standard day-4 morula/early blastocyst interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No clear, practical transfer or future-cycle recommendations are provided in the visible response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.00891,
+  "judge_latency_ms": 4367.574917007005,
+  "judge_prompt_tokens": 1460,
+  "judge_completion_tokens": 302
+}

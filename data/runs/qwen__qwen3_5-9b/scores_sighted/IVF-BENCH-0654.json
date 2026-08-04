@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0654",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes a mismatch between the image and the provided 2AA label and avoids confidently describing classic blastocyst features that are not obvious. However, it repeatedly speculates that the image is a single cell, oocyte, polar body, or degenerating embryo without delivering a clear, accurate morphology assessment of the visible blastocyst-like structure."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "It does not meaningfully integrate age, PCOS, prior biochemical pregnancy, sperm parameters, BMI, endometrium, or cycle context with embryo quality or prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is highly repetitive, circular, and internally conflicted, never resolving the image-text discrepancy into a coherent clinical conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It references Gardner grading and recognizes that a 2AA should show blastocyst features, but it does not provide guideline-consistent clinical recommendations or evidence-based interpretation beyond noting the discrepancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "There are essentially no practical recommendations for transfer management, prognosis counseling, or future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.031956,
+  "judge_latency_ms": 5636.957249997067,
+  "judge_prompt_tokens": 9112,
+  "judge_completion_tokens": 308
+}

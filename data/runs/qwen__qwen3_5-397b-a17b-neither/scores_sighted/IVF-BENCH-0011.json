@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology because no image was provided to it and avoided fabricating image-specific features. It correctly noted Day 4 embryos are typically morula/early blastocyst rather than Gardner-graded blastocysts, but it did not describe the actual visible embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated maternal age, low AMH/low oocyte yield, tubal factor, endometrial thickness, sperm parameters, and lifestyle into prognosis reasonably well, with good emphasis on age-related aneuploidy and DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, linking age, embryo stage, and uterine factors to prognosis. Minor issues include some speculative inferences about why Day 4 transfer was chosen and assumptions about ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including caution about hydrosalpinx and noting Gardner scoring is for blastocysts. Slight overstatement around strong PGT-A recommendation in a low-yield 39-year-old and some protocol suggestions are more practice-dependent than guideline-mandated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future planning, including hydrosalpinx assessment, luteal support, embryo banking discussion, and protocol review. Some recommendations are somewhat generic but still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014559,
+  "judge_latency_ms": 5120.6814579927595,
+  "judge_prompt_tokens": 2953,
+  "judge_completion_tokens": 380
+}

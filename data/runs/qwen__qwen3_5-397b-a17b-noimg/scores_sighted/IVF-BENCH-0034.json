@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and based morphology on the reported Gardner score. Its comments on poor ICM/TE are broadly consistent with a 1DD designation, but it overstates certainty by calling the embryo non-viable and adds stage interpretation details that are somewhat inconsistent with the provided text and the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, BMI, sperm concentration/motility, paternal age, protocol, and endometrial thickness with embryo prognosis in a clinically meaningful way. Some links are somewhat speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it highlights a contradiction in the expansion description yet still draws very definitive conclusions, and it equates a poor-grade embryo with absolute non-viability more strongly than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are too absolute for guideline-based practice, especially stating the embryo is non-viable, recommending 'do not transfer' categorically, and calling ICSI 'mandatory.' PGT-A is presented as strongly indicated rather than individualized, which is more aggressive than standard guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current-cycle decision-making and future planning, including lab review, male-factor workup, lifestyle optimization, and consideration of culture strategy. It loses points because some recommendations are overly rigid rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014736,
+  "judge_latency_ms": 5422.509542011539,
+  "judge_prompt_tokens": 2932,
+  "judge_completion_tokens": 396
+}

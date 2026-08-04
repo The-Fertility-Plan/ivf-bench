@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA features (expanded blastocyst, thinned zona, tightly packed ICM, cohesive TE) consistent with the provided score, but largely echoes the laboratory data rather than independently analyzing the image. The image actually shows a somewhat irregular/asymmetric blastocyst with what appears to be a partially collapsed or re-expanding morphology and notable fragmentation in the ICM region, which the response fails to identify. No mention of potential image-specific concerns like asymmetry or ICM heterogeneity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors: age-aneuploidy relationship, DOR impact on oocyte yield vs. embryo quality, endometrial thickness receptivity, sperm parameters, BMI, and lifestyle factors. It correctly contextualizes DOR as affecting quantity rather than necessarily quality. Minor gap: does not discuss the low oocyte yield (5 COCs, 3 MII) in terms of conversion rate to blastocyst or the implications of having no frozen embryos for future attempts."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-70% implantation probability estimate is reasonably supported by the cited factors. The response correctly distinguishes implantation probability from live birth rate. Minor inconsistency: states DOR 'carries a slightly higher risk of aneuploidy' but then suggests the embryo is 'likely euploid' based on morphology alone, which is an overreach since morphology is a poor predictor of euploidy. Overall flow from evidence to conclusions is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patients, luteal phase support, PGT-A consideration for DOR patients, and embryo banking discussion. The 60-70% implantation estimate is within published ranges for 3AA blastocysts in this age group. Minor deviation: the suggestion that morphology suggests likely euploidy is not supported by current guidelines, which emphasize that PGT-A is needed to confirm chromosomal status regardless of morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with luteal support, oocyte/embryo banking given DOR, PGT-A consideration for future cycles, protocol review, and long-term family planning discussion. The response provides clear next steps for both current transfer and future planning. Could be more specific regarding luteal support protocols, timing of beta-hCG testing, or specific lifestyle modifications. The DOR-specific banking recommendation is particularly valuable and actionable for this patient."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.021105,
+  "judge_latency_ms": 15664.56966700207,
+  "judge_prompt_tokens": 3650,
+  "judge_completion_tokens": 677
+}

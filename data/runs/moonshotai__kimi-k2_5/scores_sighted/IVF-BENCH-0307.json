@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0307",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality features not clearly visible: the blastocoel does not appear cleanly >50% with a clearly defined tightly packed ICM and uniformly cohesive TE, and claims such as distinct cell boundaries, high nuclear:cytoplasmic ratio, and minimal vacuolization are not reliably assessable from this image. It largely repeats the provided Gardner score rather than critically matching the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor diagnosis, BMI, semen parameters, endometrium, and smoking with embryo prognosis in a clinically meaningful way, though some links (e.g., strong morphology-euploidy inference) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it calls a Day 4 stage-2 blastocyst 'accelerated development,' uses somewhat inflated baseline success rates, and then applies a large smoking penalty somewhat inconsistently. Conclusions are mostly supported but not tightly calibrated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET in a 30-year-old with a good-quality embryo and smoking/alcohol cessation are guideline-concordant, but suggesting routine PGT-A/embryo banking after one failed cycle and thrombophilia screening is not standard evidence-based practice for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, lifestyle modification, luteal support, and contingency planning. Some suggestions are practical and specific, though a few are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014541,
+  "judge_latency_ms": 4865.361999996821,
+  "judge_prompt_tokens": 2892,
+  "judge_completion_tokens": 391
+}

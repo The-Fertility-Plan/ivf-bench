@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a low-detail static image, asserting blebs, vacuolation, apoptosis, and likely regrading to 3BB or lower without clear visual support. It notes partial collapse/irregularity, which is plausible, but overall morphology assessment is more speculative than image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, PCOS, prior ectopic, endometrium, and semen data into prognosis reasonably well, though some links are overstated and not all factors directly modify embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate follows its stated assumptions, but several deductions rely on speculative morphology and somewhat exaggerated penalty adjustments, reducing overall coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice (smoking cessation, ectopic surveillance, OHSS/freeze-all consideration in PCOS), but ERA suggestion, routine second-opinion regrading from this image, and some strong claims about morphology/receptivity are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer monitoring, smoking cessation, and future cycle planning. Some recommendations are useful and specific, though a few are more aggressive than necessary for this case."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015609,
+  "judge_latency_ms": 4815.547624995816,
+  "judge_prompt_tokens": 3423,
+  "judge_completion_tokens": 356
+}

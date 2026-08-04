@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "Major mismatch with the provided lab grade 0DD: the response calls the embryo a good-quality Day 4 compacted morula and describes absent fragmentation/degeneration, while the case indicates an early blastocyst with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, BMI, prior miscarriage, sperm parameters, endometrium, and cycle response reasonably well, though some conclusions are built on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but key conclusions rest on a contradictory embryo assessment versus the stated 0DD grade, making the prognosis and transfer optimism insufficiently supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (SET, weight optimization, RPL workup after further loss, OHSS awareness), but applying Gardner grading incorrectly and suggesting a favorable-quality transfer despite 0DD reduces alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including luteal support, blastocyst culture, weight management, protocol review, and possible RPL workup/PGT-A, though recommendations are somewhat skewed by the morphology error."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012675,
+  "judge_latency_ms": 4280.177833999915,
+  "judge_prompt_tokens": 2510,
+  "judge_completion_tokens": 343
+}

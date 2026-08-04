@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response downgrades the embryo to an estimated 3BB despite provided lab grading of 3AA, and describes B-grade ICM/TE and an unthinned zona that conflict with the stated Gardner features. Some general blastocyst observations are reasonable, but key morphology calls are inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, endometrium, male factor, and cycle history with prognosis fairly well. It misses some nuance around AMH/FSH and overinterprets lifestyle factors, but overall connects patient factors to embryo potential appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and the probability estimate is internally explained, but it is weakened by the incorrect morphology reassessment and some speculative claims (e.g., exercise/pelvic blood flow, alcohol impact on current transfer)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, including favorable prognosis at age 30 and no routine need for PGT-A in a first cycle. However, the morphology interpretation conflicts with Gardner grading provided, and recommendations like fertility yoga/pelvic blood-flow exercises and broad antioxidant advice are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for proceeding with transfer, alcohol abstinence, and future considerations such as DFI testing or PGT-A if failure occurs. Some recommendations are practical, though a few are not especially evidence-based or sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012522,
+  "judge_latency_ms": 4281.317166998633,
+  "judge_prompt_tokens": 2309,
+  "judge_completion_tokens": 373
+}

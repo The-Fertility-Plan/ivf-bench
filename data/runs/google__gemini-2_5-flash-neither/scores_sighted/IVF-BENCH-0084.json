@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate a morphology description. It therefore avoids inaccuracies, but it also provides no actual image-based assessment despite morphology being visible in the reference image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: age, ovarian reserve, tubal factor, sperm quality, endometrium, prior failed cycle, and lifestyle, and relates them to expected embryo competence and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis explicitly conditioned on assumed embryo quality. Minor weakness is that probability estimates rely heavily on hypothetical morphology and somewhat overextend from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, luteal support, review prior cycle, uterine cavity assessment if repeated failure), but suggesting PGT-A strongly after a single failed cycle and mentioning ERA relatively early are more aggressive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including obtaining morphology, SET, reviewing prior cycle details, considering uterine evaluation, and discussing PGT-A. Some recommendations are somewhat generic or contingent on unavailable details."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015141,
+  "judge_latency_ms": 5297.985875004088,
+  "judge_prompt_tokens": 3452,
+  "judge_completion_tokens": 319
+}

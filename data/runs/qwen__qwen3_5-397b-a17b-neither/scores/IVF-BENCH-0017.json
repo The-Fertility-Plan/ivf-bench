@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "It correctly states that no image was provided, avoids fabricating blastocyst features, and appropriately notes that Day 4 embryos are typically morula/early blastocyst and not suitable for Gardner grading. Limited only because no actual morphology could be analyzed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, AMH, ovarian response, endometriosis, prior live birth/biochemical pregnancy, sperm motility, BMI, and thin endometrium into prognosis and transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with a clear explanation for the probability range. Minor issue: some quantitative adjustments are somewhat heuristic rather than evidence-calibrated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligns with IVF practice by not misusing Gardner grading on Day 4 and by emphasizing endometrial and endometriosis considerations. Slightly reduced for suggesting adjuvants like G-CSF/PRP/sildenafil, which are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear immediate and future-cycle recommendations, including transfer approach, luteal support, endometrial workup, culture strategy, possible suppression, and lifestyle changes."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.01269,
+  "judge_latency_ms": 4343.942082996364,
+  "judge_prompt_tokens": 2645,
+  "judge_completion_tokens": 317
+}

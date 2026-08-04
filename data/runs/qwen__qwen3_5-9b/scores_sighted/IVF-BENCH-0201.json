@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0201",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst, correctly identifying a blastocoel and compact ICM, but it overstates visible zona thinning/expanded status and assigns TE location/detail with more certainty than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "Incorporates age, ovarian reserve, BMI, endometrium, diagnosis, and sperm data, but overemphasizes paternal age while underweighting the dominant effect of maternal age on euploidy and makes an incorrect inference from MII/COC as a fertilization rate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable reasoning issues: MII/COC is mislabeled as fertilization, paternal age is treated as the main aneuploidy driver, and the probability estimate appears lower than expected for this scenario without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows Gardner grading concepts and supports proceeding with transfer, but the strong recommendation for PGT-A based mainly on paternal age is not well aligned with evidence-based guideline emphasis, and some morphology wording is imprecise for grade 3."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer and future planning, including counseling and consideration of PGT-A, though recommendations could be more nuanced and individualized."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012918,
+  "judge_latency_ms": 5136.1828750086715,
+  "judge_prompt_tokens": 2496,
+  "judge_completion_tokens": 362
+}

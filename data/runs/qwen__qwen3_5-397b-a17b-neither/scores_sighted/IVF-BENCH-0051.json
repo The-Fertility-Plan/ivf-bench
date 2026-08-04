@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated it could not view the image and avoided detailed fabricated morphology. Minor deduction because it inferred a likely transferable blastocyst and suggested clinics typically transfer at least stage 3/full blastocyst, which is not image-based and may not match this embryo exactly."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, endometrium, prior failures, and sperm parameters into prognosis reasonably well. Slight overreach in labeling this as recurrent implantation failure and in linking some factors too strongly without embryo-specific morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a probability estimate tied to age, transfer stage, endometrium, and prior failures. Minor issues include assuming transferable quality despite no image access and some speculative causal links."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly aligned (importance of age, blastocyst stage, endometrium, luteal support), but several recommendations are not strongly guideline-based or are controversial for routine use, including ERA, NK-cell testing, broad thrombophilia/immunologic workup, and calling failure after this cycle RIF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current transfer and contingency planning, including luteal support review and possible further workup. Slight deduction because some suggested tests/interventions are controversial or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014076,
+  "judge_latency_ms": 5781.330041994806,
+  "judge_prompt_tokens": 2912,
+  "judge_completion_tokens": 356
+}

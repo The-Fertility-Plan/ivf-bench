@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0178",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality early blastocyst consistent with 1DD, but it inaccurately states the blastocoel is less than half the embryo despite grade 1 being at least half, and adds speculative features like classic necrosis/dark degeneration not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, oocyte yield, sperm parameters, endometrium, and lifestyle with embryo prognosis well, though it overinterprets the PCOS-versus-DOR issue and protocol choice."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable issues: misstatement of blastocyst expansion, treating a day-4 transfer as a true blastocyst-stage delay, and some overconfident causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling about very poor prognosis for a 1DD embryo is aligned, but recommendations such as DHEA, sperm DNA fragmentation testing, and PGT-A for poor-quality/low-yield embryos are not strongly guideline-based, and the interpretation of day-4 timing is imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, reassessing diagnosis, considering protocol changes, and planning future cycles, though some suggestions are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013326,
+  "judge_latency_ms": 6526.634292007657,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 370
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner score (expansion, ICM compactness, TE looseness) but largely echoes the provided laboratory data rather than independently analyzing the image. The description of the zona pellucida thinning and ICM compactness aligns with what is visible, but the analysis lacks independent morphological observations such as noting the degree of hatching, blastocoel cavity size, or any fragmentation visible in the image. The TE description slightly contradicts itself by saying cells appear 'relatively uniform' while acknowledging the B grade looseness."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, oocyte yield, sperm parameters, endometriosis diagnosis, and endometrial thickness. It correctly identifies the thin endometrium and endometriosis as the primary concerns and contrasts them against the favorable embryo quality and patient age. Minor gap: partner age of 40 and its potential sperm DNA fragmentation implications are not discussed, and BMI is not meaningfully integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to patient factors to risk stratification to probability estimation. The probability reduction from ~50-65% baseline to 25-40% due to thin endometrium is coherent and well-explained. The recommendation to freeze-all follows consistently from the identified endometrial concern. Minor inconsistency: the model recommends freeze-all as primary recommendation yet the transfer is labeled as Day 5, implying the transfer may already be occurring, which slightly undermines the practical coherence of the primary recommendation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines. The freeze-all strategy for thin endometrium, FET optimization strategies (sildenafil, aspirin, extended estrogen), hysteroscopy recommendation, ERA consideration for recurrent failure, and GnRH agonist suppression for endometriosis are all evidence-based. The 7-8mm threshold cited for endometrial thickness aligns with current literature. Minor gap: the response could have referenced specific ESHRE endometriosis guidelines more explicitly and noted that the evidence for sildenafil and aspirin is limited."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including freeze-all rationale, multiple endometrial optimization strategies, hysteroscopy, ERA, endometriosis surgical evaluation, and lifestyle modifications. It also addresses the scenario where the patient insists on fresh transfer. Recommendations are well-organized and clinically practical. Could be improved by specifying dosing ranges for estrogen supplementation or sildenafil, and by providing clearer criteria for when to proceed with FET after optimization."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.021942,
+  "judge_latency_ms": 15851.174291005009,
+  "judge_prompt_tokens": 3844,
+  "judge_completion_tokens": 694
+}

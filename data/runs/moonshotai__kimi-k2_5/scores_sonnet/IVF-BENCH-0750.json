@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and accurate morphological description consistent with a 3AA Gardner-graded blastocyst, including expansion status, ICM compactness at a specific clock position, TE cohesiveness, and zona pellucida thinning. Minor issue: the model cannot truly verify image-specific details like the exact ICM position (10-11 o'clock) without confirmed image analysis, and some descriptions may be inferred from the Gardner score rather than the image itself. Overall description is clinically appropriate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 37 with aneuploidy risk quantification, AMH 1.48 with ovarian reserve context, BMI, endometrial thickness optimization, sperm parameters with borderline motility noted, unexplained infertility implications, and lifestyle factors. Each factor is connected to its impact on prognosis and embryo-endometrial interaction, demonstrating thorough clinical synthesis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate is derived from morphology-based rates adjusted for age and euploidy probability, which is coherent. Minor inconsistency: the blastulation rate calculation (12.5% per MII) is actually the rate of producing one top-quality blastocyst, not overall blastulation rate, which could be misleading. The euploidy-weighted probability calculation is sound and conclusions follow from evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation, luteal support, PGT-A consideration after failed transfer, ERA for recurrent implantation failure, and sperm DNA fragmentation testing. The DHEA/CoQ10 supplementation recommendation has limited evidence base and is not formally endorsed in major guidelines. The dual trigger suggestion is appropriate for certain protocols. Overall strong alignment with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering the current transfer (eSET, transfer technique, luteal support), success pathway (early scan, NIPT), and failure pathway (PGT-A, ERA, SDF testing, cycle modifications). Recommendations are nuanced with rationale provided for each, alternatives are considered, and long-term planning including oocyte donation counseling is addressed. Clinically practical and immediately applicable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018468,
+  "judge_latency_ms": 14055.07954100176,
+  "judge_prompt_tokens": 3076,
+  "judge_completion_tokens": 616
+}

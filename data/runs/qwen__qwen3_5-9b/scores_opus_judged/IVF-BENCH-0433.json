@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0433",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage, thinning zona pellucida, tightly packed ICM, and cohesive TE consistent with the 3AA grading. The model appropriately acknowledges image resolution limitations while still correlating visual features with the Gardner score. Minor limitation is that the description largely mirrors the provided lab data rather than offering independent image-based observations, but the descriptions are consistent and reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration using the 'seed vs. soil' analogy. The response thoroughly connects maternal age, BMI, endometrial thickness, sperm parameters, uterine factor diagnosis, and smoking status to the embryo quality assessment. The FSH comment (noting 7.0 is on the higher end) is a minor stretch but shows thoughtful consideration. The uterine factor is correctly identified as the critical variable that creates tension between an excellent embryo and potentially compromised implantation environment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimation follows a clear deduction: starting from a 60-70% base rate for 3AA, then applying reductions for uterine factor (15-25%) and smoking (10-20%) to arrive at 35-50%. One minor issue: the statement that FSH 7.0 is 'on the higher end of normal' for age 31 is slightly overstated—7.0 is quite normal. Also, stating 'do not freeze this embryo' as a blanket recommendation without considering the severity of the uterine factor is a slight logical inconsistency given the emphasis on uterine pathology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is correct. However, the blanket recommendation to 'proceed with transfer' and calling a 3AA a 'must-transfer' embryo is problematic—if the uterine factor is significant and uncorrected, guidelines would suggest addressing the uterine pathology first rather than transferring a top-quality embryo into a suboptimal environment. The recommendation for hysteroscopy is appropriate but contradictory when placed after recommending immediate transfer. PGT-A recommendation for future cycles is reasonable. The smoking cessation advice aligns with guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides specific, practical recommendations including smoking cessation, hysteroscopy, and a clear plan for if the transfer fails (HSG, PGT-A consideration). The recommendations are well-organized into immediate and future planning categories. However, there's a contradiction in recommending both immediate transfer and pre-transfer hysteroscopy. The response could have been more nuanced about whether to proceed with transfer vs. freeze-all depending on the nature of the uterine factor."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.03045,
+  "judge_latency_ms": 16413.593208009843,
+  "judge_prompt_tokens": 2690,
+  "judge_completion_tokens": 680
+}

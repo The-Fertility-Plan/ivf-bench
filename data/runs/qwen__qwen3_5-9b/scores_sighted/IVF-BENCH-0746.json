@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided Gardner score rather than the image, overstates that grade 3 means expanded blastocyst, and infers detailed ICM/TE features from a blurry image where these are not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, BMI, male factor, prior ectopic, endometrium, and cycle response with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it calls 3AA 'top-tier/best possible,' conflates stage 3 with expanded blastocyst, and uses a speculative euploidy/implantation calculation that is not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice on embryo grading context and ectopic follow-up, but contains inaccuracies in Gardner staging and overstates support for paternal age and stress effects; PGT-A recommendation is stronger than typical guideline-based indications for a 30-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, early beta-hCG/ultrasound monitoring for ectopic risk, and future considerations like weight optimization and review of tubal history, though recommendations could be more nuanced regarding fresh vs frozen transfer and PGT-A."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013068,
+  "judge_latency_ms": 5562.107417004881,
+  "judge_prompt_tokens": 2606,
+  "judge_completion_tokens": 350
+}

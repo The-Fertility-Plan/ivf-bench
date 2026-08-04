@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, tightly packed ICM on the right side, and loosely organized TE consistent with 3AB grading. The description aligns well with visible image features. Minor limitation: the response doesn't note the somewhat irregular/asymmetric appearance of the blastocyst or comment on the apparent partial collapse or irregularity visible in the image, which could affect grading nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of maternal age, AMH, ovarian response, sperm parameters, endometriosis diagnosis, and endometrial thickness with embryo quality assessment. Correctly identifies paternal age as a confounding factor and links endometriosis to potential implantation issues. Minor gap: doesn't deeply explore the interaction between endometriosis and endometrial receptivity (e.g., altered gene expression, ERA testing consideration), and BMI of 25.6 is mentioned in data but not discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The 30-45% clinical pregnancy rate estimate is reasonably justified by the competing positive (young age, good morphology) and negative (thin lining, paternal age, endometriosis) factors. The conditional reasoning about euploidy vs aneuploidy is sound. Minor inconsistency: the response states 6mm is 'acceptable' in recommendations but flags it as a risk factor, creating slight tension without full resolution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines including Gardner grading criteria application, endometrial thickness thresholds (>7mm preference), PGT-A considerations for advanced paternal age, and FET optimization strategies. The suggestion to confirm receptivity and optimize estrogen support is evidence-based. Minor deviation: ASRM guidelines don't specifically recommend PGT-A for paternal age alone at 40; the evidence base for this recommendation is weaker than implied."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, optimize endometrial support, consider PGT-A for future cycles, aim for FET with better lining, stress management referral. The response provides clear decision points and rationale. Could be more actionable by specifying estradiol dosing thresholds, suggesting ERA testing given endometriosis diagnosis, or recommending sperm DNA fragmentation testing given paternal age concerns rather than just noting the risk."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.018135,
+  "judge_latency_ms": 14060.43441699876,
+  "judge_prompt_tokens": 2840,
+  "judge_completion_tokens": 641
+}

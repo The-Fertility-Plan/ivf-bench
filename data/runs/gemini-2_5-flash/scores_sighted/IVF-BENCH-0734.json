@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0734",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst image and the provided 2AA label, but it overstates confidence in ICM/TE quality from a somewhat indistinct single image and repeats the prompt's grading rather than strictly image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, BMI, prior failed cycle, sperm quality, and endometrium well with embryo quality, though it somewhat overinterprets the prior failed cycle as suggesting implantation issues."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with a probability estimate that follows from the stated positives and negatives; only minor overreach in linking obesity and prior failure to this specific embryo's implantation chance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognosis, but ERA after one failed cycle, adjuncts like aspirin/steroids, and immunologic workup are not routine evidence-based recommendations and are presented too readily."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET, protocol review, uterine cavity assessment, and lifestyle optimization, though some suggestions are broader than strictly indicated."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014904,
+  "judge_latency_ms": 4583.549290997325,
+  "judge_prompt_tokens": 3423,
+  "judge_completion_tokens": 309
+}

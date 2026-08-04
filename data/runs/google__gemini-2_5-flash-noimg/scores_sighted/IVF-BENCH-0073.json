@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied 4AA grade rather than inventing image-specific details. However, it inaccurately equated expansion grade 4 with a hatching/herniating blastocyst (more consistent with grade 5), so morphology is only partially accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, sperm parameters, endometrium, diagnosis, and cycle history with embryo quality in a clinically meaningful way. Some points are slightly overstated or speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, linking embryo quality and patient factors to prognosis and recommendations. Minor issues include overconfidence in implantation probability and the incorrect interpretation of grade 4 as hatching."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer for a good-prognosis 33-year-old with a top-quality blastocyst are guideline-concordant, and the Gardner grading framework is used appropriately overall. Small deviations include the grade 4/hatching misstatement and somewhat casual endorsement of post-transfer activity advice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support continuation, follow-up timing, and future-cycle considerations including cryopreservation and possible PGT-A if clinically indicated. It is useful, though not highly nuanced in protocol-specific detail."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.014973,
+  "judge_latency_ms": 4980.5677920085145,
+  "judge_prompt_tokens": 3081,
+  "judge_completion_tokens": 382
+}

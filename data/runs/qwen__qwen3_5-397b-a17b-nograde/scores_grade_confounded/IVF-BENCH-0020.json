@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/early blastocyst and infers cavitation from the image, whereas the provided lab grade is 2BA full blastocyst; it also does not accurately address ICM/TE morphology consistent with the stated grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior live birth, BMI, endometrium, oocyte yield, and sperm motility into prognosis reasonably well, though AMH is unavailable and some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the core reasoning is weakened by the incorrect morphological staging and by drawing prognosis from that mistaken premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations are mostly standard, but the embryo staging conflicts with Gardner criteria and some suggestions (stress reduction improving IVF outcomes, PICSI/MACS) are presented more strongly than evidence/guidelines typically support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, protocol review, sperm optimization, and future culture strategy, though recommendations are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.012105,
+  "judge_latency_ms": 3865.0699999998324,
+  "judge_prompt_tokens": 2360,
+  "judge_completion_tokens": 335
+}

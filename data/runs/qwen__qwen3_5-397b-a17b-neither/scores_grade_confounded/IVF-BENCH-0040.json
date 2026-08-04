@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score can be assigned and fails to use the provided 2AA morphology; it does not analyze the known expansion, ICM, and TE features from the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm parameters, endometrium, and protocol reasonably well, though it misses linking the provided 2AA grade to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is weakened by the major premise error that morphology is unavailable despite explicit 2AA data being provided."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a good-prognosis 31-year-old and acknowledging adequate 8 mm lining are broadly guideline-consistent, though the morphology handling and somewhat strong luteal support recommendation are less precise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, metabolic optimization, and contingency planning, though some advice is generic and not tailored to the known 2AA embryo."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012321,
+  "judge_latency_ms": 3629.7697500049253,
+  "judge_prompt_tokens": 2627,
+  "judge_completion_tokens": 296
+}

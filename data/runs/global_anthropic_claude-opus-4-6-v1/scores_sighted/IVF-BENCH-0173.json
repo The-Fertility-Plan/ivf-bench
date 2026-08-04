@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0173",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as compacting morula/very early cavitation and states no convincing blastocoel is visible, despite the provided lab grade indicating an early blastocyst and the image showing blastocyst-like architecture. It also speculates on blastomere counts and fragmentation/ICM-TE non-visualization beyond what can be confidently assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, BMI, AMH, PCOS, prior miscarriage, paternal age, sperm parameters, endometrium, and transfer timing with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with a clear link from embryo quality and patient factors to prognosis. Minor weakness is that the probability estimate is built on a questionable morphological interpretation of the image/stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is evidence-based, but there are notable deviations or overreaches: applying strong conclusions about Day 4 transfer being suboptimal, recommending ERA/EndomeTRIO and thrombophilia workup after limited loss history, and suggesting adjuncts like growth hormone/DHEA with limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for luteal support, monitoring, metabolic optimization, future culture/selection strategy, and counseling. Some suggestions are more speculative than standard-of-care, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.019992,
+  "judge_latency_ms": 5625.379417004297,
+  "judge_prompt_tokens": 4759,
+  "judge_completion_tokens": 381
+}

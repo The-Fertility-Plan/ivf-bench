@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model correctly notes a discrepancy between the image and the stated Gardner score, which shows good observational awareness. However, it then largely abandons image-based analysis and defaults entirely to the text-provided grade. The image appears to show a partially collapsed or degenerating blastocyst with fragmented/cracked zona and poor cellular organization, not a pristine 3AA. The model's description of the image as a 'cumulus cell or polar body' is inaccurate - it is clearly a blastocyst-stage embryo, just not matching the 3AA grade. The morphological analysis is therefore based on the label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (37) and aneuploidy risk, AMH/FSH indicating good ovarian reserve, sperm parameters contextualized against the male factor diagnosis, endometrial thickness assessment, and previous miscarriage history. The interaction between age and morphological grade is appropriately highlighted. Minor gap: BMI and lifestyle factors (former smoker, sedentary) could have been more deeply integrated with implantation risk rather than briefly mentioned."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but contains some inconsistencies. The model flags the image discrepancy but then proceeds as if the 3AA grade is fully reliable, which creates a logical tension. The probability estimate of 50-70% live birth rate is reasonable for age 37 with a top-grade embryo, and the aneuploidy reasoning is sound. However, citing '>80% in younger patients' and then adjusting for age is coherent. The ~50% aneuploidy risk statement is slightly overstated for age 37 (closer to 40-50% range). Overall reasoning flows adequately but the image-data conflict is not fully resolved."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: PGT-A discussion for age 37 with prior miscarriage is appropriate per ASRM guidelines, progesterone support recommendation is standard, endometrial thickness threshold cited (>7mm) is consistent with guidelines. Gardner grading interpretation is accurate. The lifestyle recommendations, while reasonable, are not strongly evidence-based in IVF guidelines. The 50-70% live birth estimate is within published ranges for this demographic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with transfer, consider PGT-A with rationale, lifestyle modifications with specific examples, progesterone support reminder, and future cycle planning contingency. Recommendations are appropriately nuanced for the clinical scenario. Could be improved by specifying progesterone protocol details, addressing whether to do fresh vs. frozen transfer, or discussing luteal phase support specifics. The PGT-A recommendation is well-contextualized with the miscarriage history."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019452,
+  "judge_latency_ms": 16991.007707998506,
+  "judge_prompt_tokens": 2864,
+  "judge_completion_tokens": 724
+}

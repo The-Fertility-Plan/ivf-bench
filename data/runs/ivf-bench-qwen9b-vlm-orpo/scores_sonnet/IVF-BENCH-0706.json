@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes general blastocyst features (blastocoel, ICM, TE, zona pellucida) in a reasonable way, but the description is somewhat generic and hedged. It acknowledges limitations of a static image appropriately, but doesn't provide precise morphological detail that would distinguish this from any other blastocyst. The description aligns with the provided Gardner score (3AA) but doesn't add independent morphological insight beyond confirming what the lab data already states. No fabricated features, but lacks the precision expected from direct image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: female age (29) as the strongest prognostic driver, AMH/FSH/oocyte yield for ovarian reserve context, endometriosis impact on receptivity and implantation, borderline endometrial thickness (7.5mm), partner sperm parameters, BMI, lifestyle factors (alcohol, stress, diet), and prior failed cycle. It explicitly discusses how these factors interact with embryo quality and each other, including mechanisms by which endometriosis affects implantation beyond embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (45-60%) logically follows from the identified favorable factors (age, embryo grade, day-5) and risk factors (7.5mm lining, endometriosis, prior failure). The differential for failure is presented in a logical hierarchy. Minor issue: the range of 45-60% is somewhat broad and the upper bound may be slightly optimistic given the combination of endometriosis and suboptimal lining, but the reasoning for the range is clearly articulated and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer for young patient with good-quality blastocyst, appropriately discusses PGT-A as optional rather than mandatory, correctly advises against routine empiric immune treatments without indication, recommends cavity evaluation and hydrosalpinx assessment, and addresses endometriosis management. The endometrial thickness thresholds cited (7mm, 8mm) are consistent with published literature. Minor gap: doesn't explicitly mention ERA testing or personalized embryo transfer timing, which is relevant for endometriosis patients with receptivity concerns."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: proceed with SET, confirm no hydrosalpinx, consider saline sonogram/hysteroscopy, stop alcohol, optimize nutrition, avoid empiric immune treatments, consider GnRH agonist suppression for endometriosis, discuss PGT-A if multiple blastocysts or repeated failure, consider sperm DNA fragmentation only if recurrent failure. The response also provides a clear decision tree for if the transfer fails, with prioritized next steps. The offer of a counseling script and workup checklist adds further practical value."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022569,
+  "judge_latency_ms": 15462.714834000508,
+  "judge_prompt_tokens": 3868,
+  "judge_completion_tokens": 731
+}

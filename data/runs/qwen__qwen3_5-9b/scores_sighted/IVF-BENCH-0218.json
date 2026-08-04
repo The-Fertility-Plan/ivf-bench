@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0218",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates expansion: Gardner 2 is an early blastocyst with blastocoel occupying >50% of embryo, not a fully expanded blastocyst distending the zona. ICM/TE comments broadly follow the provided grade, but image-specific morphology is only loosely described and overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, prior live births, and sperm parameters with embryo prognosis reasonably well, though it overinterprets prior live births as evidence of embryo euploidy and does not address missing endometrial data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: incorrect interpretation of expansion stage, calling age 35 a prime bracket without nuance, and a somewhat optimistic implantation estimate based on morphology plus prior outcomes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as proceeding with single embryo transfer are broadly guideline-consistent, but the Gardner grading explanation is inaccurate for stage 2, and the implantation estimate appears somewhat high for an untested day-5 2AB embryo at age 35."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical advice (proceed with transfer, eSET), but the response is truncated and lacks fuller transfer-specific and future-cycle planning details such as luteal support, counseling on uncertainty, or contingency planning."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012078,
+  "judge_latency_ms": 4845.9528329985915,
+  "judge_prompt_tokens": 2271,
+  "judge_completion_tokens": 351
+}

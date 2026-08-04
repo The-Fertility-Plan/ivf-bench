@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls morphology relative to the provided lab grade, describing TE as numerous/cohesive and suggesting a 3BB-4BB or higher despite the known 2BB designation with loosely grouped ICM and few TE cells. It includes generally plausible blastocyst features but appears to fabricate stronger quality than supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, FSH, endometrium, sperm, BMI, prior IVF outcomes, and lifestyle factors with prognosis reasonably well. It misses some nuance around absent AMH and the limited significance of some lifestyle details, but overall connects patient factors to embryo potential effectively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: favorable age/endometrium versus poorer prognosis from prior failed cycles. The main weakness is that the implantation estimate is somewhat optimistic for a 2BB embryo with this history, but the logic itself is clear."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and uterine evaluation after repeated failures are guideline-concordant. However, ERA is presented too favorably despite debated utility, and broad thrombophilia/immunologic testing is suggested more expansively than most evidence-based guidelines support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future workup, including SET, counseling, uterine assessment, and consideration of genetic testing. Some recommendations are broad rather than tightly prioritized, but they are still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016617,
+  "judge_latency_ms": 4820.127207996848,
+  "judge_prompt_tokens": 3584,
+  "judge_completion_tokens": 391
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0092",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was documented and does not use the provided 3AA grade; it instead speculates about morphology, making the morphological assessment inaccurate for the available case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, PCOS with normal BMI, prior live birth, endometrium, and sperm motility, though some links to the actual known embryo grade are missed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but a key inconsistency undermines it: the model claims morphology is unknown despite the provided 3AA score, so downstream probability reasoning is partly based on a false premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are some deviations or overstatements, such as suggesting estradiol support and strong PGT-A endorsement without sufficient nuance, and not grounding morphology in the provided Gardner grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including luteal support, beta-hCG timing, and sperm optimization, though some recommendations are somewhat generic and not fully tailored to the known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012852,
+  "judge_latency_ms": 4042.4611249982263,
+  "judge_prompt_tokens": 2579,
+  "judge_completion_tokens": 341
+}

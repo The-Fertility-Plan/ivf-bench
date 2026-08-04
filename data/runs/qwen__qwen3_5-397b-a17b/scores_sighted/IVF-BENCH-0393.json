@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0393",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst and absent/degenerate ICM/TE, but it overstates certainty of non-viability and adds features like necrosis/pyknosis that cannot be confidently determined from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior miscarriages, ovarian response, tubal factor, sperm parameters, and endometrium well with embryo prognosis, though AMH is unavailable and some links (e.g., sedentary lifestyle) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical: poor morphology plus age and miscarriage history support a very low implantation estimate. Minor issue is the absolute language ('non-viable', 'will not result in pregnancy') despite residual uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing extremely poor prognosis for a 1DD day-5 embryo, but recommending PGT-A as 'essential' and suggesting TESE/PICSI based only on possible DNA fragmentation goes beyond guideline-supported certainty."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer decision and future workup/planning, including embryo selection strategy and male-factor evaluation, though some recommendations are stronger than the evidence warrants."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012984,
+  "judge_latency_ms": 4820.246375005809,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 350
+}

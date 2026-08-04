@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies poor ICM/TE consistent with DD, but makes notable errors about expansion grading, asserts features not reliably discernible, and omits useful observations such as zona pellucida/hatching status."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, low oocyte yield, sperm quality, BMI, and endometrium with embryo prognosis well, though it somewhat overstates AMH/DOR interpretation and does not fully nuance unexplained infertility."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate follows from poor morphology and age, but there are internal inconsistencies around Gardner expansion stage and some overconfident inferences from the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing poor prognosis of a DD blastocyst and limited role for PGT-A with very few embryos, but includes weaker-evidence suggestions (GH, DHEA, aspirin/heparin discussion) and misstates Gardner expansion criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points and future-cycle considerations, including expectation setting and stimulation optimization, though some recommendations are broad and not all are strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.010735,
+  "judge_latency_ms": 5940.5638329917565,
+  "judge_prompt_tokens": 5948,
+  "judge_completion_tokens": 330
+}

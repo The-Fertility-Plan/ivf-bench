@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0521",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AA and identifies ICM and blastocoel appropriately, but overstates certainty from the image, calls 3AA the highest possible grade, and describes TE as clearly cohesive despite limited visualization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, BMI, endometriosis, ovarian reserve markers, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some points are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and logical, but there are notable issues: 3AA is not the highest possible grade, the natural-cycle yield comment is questionable, and the implantation estimate may be somewhat optimistic given BMI/endometriosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but contains deviations such as labeling 3AA as the top possible grade, implying robust progesterone support specifically because natural cycles have lower endogenous progesterone, and suggesting expected retrieval of 10-15 eggs with mild stimulation despite low AMH."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling on BMI-related risks, luteal support consideration, weight management, and future protocol discussion, though recommendations could be more individualized and evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013029,
+  "judge_latency_ms": 4464.569458999904,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 353
+}

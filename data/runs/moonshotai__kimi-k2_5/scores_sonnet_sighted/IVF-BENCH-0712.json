@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a structured morphological description referencing thinning zona, blastocoele expansion, TE cohesiveness, and ICM compactness consistent with the 3AA Gardner score. However, the image is quite grainy and low-contrast, making definitive morphological features difficult to confirm visually. The model notes 'some granular inclusions' and 'no significant vacuolization,' but the image actually shows considerable granularity and what appear to be multiple vacuole-like structures throughout the cytoplasm. The model also speculatively upgrades to 'possible Grade 4' without strong visual justification. The description is largely derived from the Gardner score data rather than independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects AMH 6.8 to euploidy probability, links endometriosis to specific implantation mechanisms (cytokine profiles, progesterone resistance), contextualizes the 13mm endometrial thickness as partially compensatory, addresses the prior failed cycle, considers male age and sperm DNA fragmentation, and incorporates lifestyle factors. The tabular format clearly maps each factor to its clinical significance, and the synthesis section ties these together coherently."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is transparent and follows logically from stated adjustments. The base rate, modifiers, and final estimate are internally consistent. The distinction between implantation probability, clinical pregnancy, and live birth rates is appropriate. Minor issue: the model states 'clinical pregnancy probability 45-55%' which is higher than the implantation probability of 40-50%, which is slightly inconsistent since clinical pregnancy should not exceed implantation rate. Otherwise the reasoning chain from morphology through patient factors to recommendations is well-structured."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation for top-quality blastocyst is appropriate, luteal phase support protocols are reasonable, PGT-A suggestion for age 36 with prior failure aligns with guidelines, ERA recommendation after recurrent failure is evidence-based. The suggestion of intralipid emulsion is noted as controversial, which is appropriate. Low-dose corticosteroid (Medrol) recommendation has limited evidence base and is not standard guideline practice. Sperm DNA fragmentation testing recommendation for age 40 with prior failure aligns with current guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering immediate transfer optimization (specific drug names, doses, routes), transfer technique details, adjunctive therapies with appropriate caveats, and a detailed future planning pathway contingent on outcome. Specific progesterone protocols with alternatives are named. The conditional structure (if this cycle fails, then...) makes the recommendations practically navigable. Lifestyle modifications are specific rather than generic. The summary statement provides a clear clinical bottom line."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.021597,
+  "judge_latency_ms": 17396.709417007514,
+  "judge_prompt_tokens": 3574,
+  "judge_completion_tokens": 725
+}

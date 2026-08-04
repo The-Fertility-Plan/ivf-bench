@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2AA label, but it inaccurately states the blastocoel fully fills the embryo for grade 2 and overcalls image-based certainty for ICM/TE detail that is only partly appreciable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, prior cycle history, FSH, lifestyle, and especially thin endometrium with embryo quality in a clinically meaningful way, though some points are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the thin endometrium appropriately identified as the main limiting factor; minor issue is some overstatement of embryo quality and confidence in the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on age, morphology, and concern about 6 mm endometrium, but includes several adjuncts with limited evidence (sildenafil, aspirin, vitamin E, acupuncture, ERA/G-CSF) and overstates 2AA as 'top-tier/excellent' despite modest expansion grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step options including counseling, proceed vs freeze-all, and future endometrial workup/planning; however, some recommendations are not strongly evidence-based and could be better prioritized."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01545,
+  "judge_latency_ms": 4524.660291994223,
+  "judge_prompt_tokens": 3505,
+  "judge_completion_tokens": 329
+}

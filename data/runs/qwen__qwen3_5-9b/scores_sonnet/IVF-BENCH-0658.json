@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0658",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 2AB grading components - expansion stage as full blastocyst, ICM as tightly packed with many cells, and TE as fewer cells forming a loose epithelium. However, the description of the zona pellucida as 'slightly thinned in areas' and the specific localization of the ICM as 'center-left' appear to be speculative image interpretations that may not be verifiable. The description largely mirrors the provided Gardner score text rather than demonstrating independent morphological analysis from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well - maternal age, AMH, previous live birth, sperm parameters, endometrial thickness, and BMI are all connected to the embryo assessment and prognosis. The identification of the AMH/egg yield discrepancy is clinically astute. Minor gap: the tubal factor diagnosis and its implications for natural conception vs. IVF success are not specifically addressed, and the long agonist protocol choice is not critically evaluated in context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability range of 50-65% is reasonably justified with modifiers clearly explained. One minor inconsistency: the response flags high AMH as a risk factor for OHSS but then notes the low egg count makes OHSS less likely - this creates slight confusion about whether AMH or egg count is the better OHSS predictor. The AMH/egg yield discrepancy reasoning is sound but the conclusion to use 'more aggressive stimulation' could be better nuanced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading, single embryo transfer principles, and luteal support. However, the recommendation to increase gonadotropin dosage for a patient with AMH 9.3 ng/mL is potentially concerning and not well-aligned with guidelines that caution against aggressive stimulation in high-responders. PGT-A recommendation rationale citing high AMH as associated with higher aneuploidy is not strongly evidence-based. The 11 COCs retrieved from AMH 9.3 is not necessarily abnormally low and the characterization as 'poor responder' may be misleading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical - proceed with transfer, maintain luteal support, monitor for OHSS, consider protocol adjustment, discuss PGT-A, and address BMI. The future cycle planning section provides concrete suggestions. However, the recommendation to increase stimulation aggressiveness for a high-AMH patient without more nuanced discussion of risks is a practical concern. No mention of endometrial receptivity testing, ERA, or specific progesterone protocols which could add value for a clinician."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.01839,
+  "judge_latency_ms": 15764.182124999934,
+  "judge_prompt_tokens": 2595,
+  "judge_completion_tokens": 707
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner 3AB grade rather than inventing image-specific findings. However, it repeated the prompt's inaccurate gloss that stage 3 is 'expanded blastocyst with thinning zona' (more consistent with stage 4), so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve, diagnosis, prior live birth, sperm parameters, endometrium, BMI, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is clear and internally consistent overall, with prognosis logically tied to age, embryo grade, prior success, and uterine factors. Minor issue: implantation estimate may be somewhat optimistic and partly anchored to euploid-transfer data despite no PGT-A."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young patient with a good blastocyst, luteal support, and cautious optional PGT-A discussion. Minor deviations include overstating embryo quality as 'good to excellent' and the stage-3 expansion description."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, counseling on alcohol/BMI, and protocol continuity. Useful but somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014724,
+  "judge_latency_ms": 5382.979249989148,
+  "judge_prompt_tokens": 3193,
+  "judge_completion_tokens": 343
+}

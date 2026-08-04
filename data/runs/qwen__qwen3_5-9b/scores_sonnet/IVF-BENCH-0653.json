@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately identifies key blastocyst structures (zona pellucida, blastocoel, ICM, TE) and correlates them with the Gardner score. However, the description of expansion stage 2 as 'blastocoel occupies approximately 50% of the embryo' is inaccurate - Gardner stage 2 means the blastocoel fully fills the embryo (not 50%), which is actually consistent with the lab data stating 'blastocoel fills the embryo.' This is a notable error in interpreting the Gardner expansion grading scale. The ICM and TE descriptions are reasonably accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (26), oocyte yield (8 MII), sperm parameters, AMH/FSH, BMI, and lifestyle factors. It correctly identifies BMI 18.0 as a risk factor and young age as the strongest favorable predictor. The integration of sperm quality with embryo development potential is appropriate. Minor gap: the 'unexplained infertility' diagnosis could have been explored more deeply in terms of potential implantation failure mechanisms, and the Day 4 transfer timing anomaly deserved more critical analysis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but contains some inconsistencies. The model notes baseline implantation rate for a 26-year-old is 'often >60%' but then estimates 40-60%, which is somewhat contradictory without sufficient justification for the downward adjustment. The Day 4 transfer concern is raised but not fully reconciled with the probability estimate. The Gardner stage 2 misinterpretation (calling it ~50% fill rather than full fill) creates a minor internal inconsistency when the lab data clearly states 'blastocoel fills the embryo.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines regarding blastocyst grading, single embryo transfer considerations, and PGT-A recommendations for young patients. However, the Gardner expansion stage 2 definition is mischaracterized. The recommendation to target BMI 19-20 before transfer is reasonable but the suggestion to gain weight 'prior to or during pregnancy' conflates pre-conception counseling with pregnancy management. Day 4 blastocyst transfer is noted as non-standard but the clinical implications are not fully explored per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are generally specific and practical: proceed with transfer, nutritional counseling with a specific BMI target, luteal phase support, embryo freezing consideration, and PGT-A guidance. The follow-up monitoring plan (hCG tracking) is appropriate. The response could be more actionable by specifying progesterone supplementation protocols, addressing the Day 4 transfer timing more concretely, and providing clearer criteria for when to consider additional workup for unexplained infertility if this cycle fails."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019263,
+  "judge_latency_ms": 13856.3082499968,
+  "judge_prompt_tokens": 2726,
+  "judge_completion_tokens": 739
+}

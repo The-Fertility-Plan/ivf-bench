@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0697",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: expanded blastocyst with thinning zona pellucida, well-defined centrally located ICM appearing tightly packed, cohesive trophectoderm epithelium, and well-formed blastocoel. The description aligns well with the Gardner 3AA score. Minor limitation is acknowledging image quality constraints for TE cell counting without overreaching, though the expansion stage '3' description is slightly conservative given the image appears to show a more moderately expanded blastocyst rather than a fully expanded one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (28) linked to euploidy rates, AMH/FSH values connected to ovarian reserve and oocyte quality, tubal factor diagnosis correctly identified as not compromising embryo quality, sperm parameters assessed against WHO criteria, endometrial thickness evaluated for receptivity, previous miscarriage contextualized appropriately, and lifestyle factors (stress, sedentary behavior, diet) discussed with appropriate nuance regarding their relative impact on outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The 60-70% implantation probability estimate is logically derived from the confluence of favorable factors (age, embryo grade, endometrial thickness). The response correctly distinguishes between implantation probability and live birth rate. Minor issue: the Gardner expansion score of '3' typically denotes a full blastocyst rather than an expanded one (which would be '4' or '5'), yet the response accepts the provided score without questioning this potential discrepancy, which slightly undermines analytical rigor."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for young patients with good prognosis embryos, luteal phase support mention, cryopreservation of surplus embryos, and conditional PGT-A discussion for recurrent miscarriage. The response correctly applies Gardner grading criteria. Minor gap: does not mention ERA (Endometrial Receptivity Array) testing consideration given the previous miscarriage and thick endometrium, and does not address whether this is a fresh or frozen transfer cycle, which has guideline implications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: SET with clear rationale, stress management with concrete techniques listed, luteal phase support reminder, cryopreservation guidance, and conditional genetic testing pathway. The future cycle planning section provides a logical decision tree. Slight deductions for not specifying luteal phase support protocol details, not addressing transfer timing optimization (natural vs. programmed FET), and not mentioning thrombophilia screening given the previous miscarriage history."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.020973,
+  "judge_latency_ms": 14644.29412499885,
+  "judge_prompt_tokens": 3536,
+  "judge_completion_tokens": 691
+}

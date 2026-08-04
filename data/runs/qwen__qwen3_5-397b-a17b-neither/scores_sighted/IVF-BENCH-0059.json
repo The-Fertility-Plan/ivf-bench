@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating embryo morphology. It made only a limited inference that this was a Day 5 blastocyst, which is consistent with the case data, though it did not analyze the visible poor/early blastocyst morphology in the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated female age, PCOS, AMH, BMI, ovarian response, paternal age, semen parameters, endometrial thickness, protocol, and lifestyle factors into prognosis and embryo competence in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from baseline prognosis to adjusted implantation estimates. Minor issues include somewhat confident quantitative adjustments for paternal age/alcohol effects and broad statements about PCOS embryo competence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET at age 34, attention to OHSS risk in PCOS, luteal support, and lifestyle optimization. Some suggestions, such as routine PGT-A or TESE based mainly on paternal age, are more debatable and not universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for this transfer and future planning, including SET, alcohol cessation, luteal support review, sperm DNA fragmentation testing consideration, and lifestyle changes. It is useful, though some recommendations could be more individualized and less assertive."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014226,
+  "judge_latency_ms": 5337.112583001726,
+  "judge_prompt_tokens": 2827,
+  "judge_completion_tokens": 383
+}

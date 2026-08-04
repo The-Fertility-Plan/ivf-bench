@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0247",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BA label, but it overstates certainty from a single partial image by calling the embryo high-quality/top-tier and describing a distinct large cavity and smooth uniform TE/visible ICM features that are not clearly demonstrable in this cropped view."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, prior miscarriages, male factor, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though it could better distinguish prognosis for implantation versus miscarriage/live birth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the probability estimate tied to embryo grade, age, endometrium, and miscarriage history; minor issues include somewhat confident assumptions about embryo quality and causal attribution of prior losses."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on transfer suitability, luteal support, and RPL workup, but recommending PGT-A as highly recommended in a 29-year-old with low embryo numbers and only two prior miscarriages is more aggressive than guideline-based evidence would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future evaluation, including RPL workup and sperm DNA fragmentation consideration, though some recommendations are broad and not prioritized by strongest evidence."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013602,
+  "judge_latency_ms": 5300.359375003609,
+  "judge_prompt_tokens": 2774,
+  "judge_completion_tokens": 352
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the 3AA Gardner score features (expanded blastocyst, tightly packed ICM, cohesive TE) but largely restates the provided laboratory data rather than independently analyzing the image. The description of zona pellucida thinning, ICM density, and TE organization is consistent with the grade but lacks truly independent morphological observations that would demonstrate actual image analysis beyond what was given in the data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, BMI, endometriosis diagnosis, sperm parameters, endometrial thickness, and lifestyle factors. It connects smoking and endometriosis specifically to implantation mechanisms (oocyte quality, endometrial receptivity). Minor gap: does not deeply explore how endometriosis stage/severity interacts with the antagonist protocol choice or the previous cycle failure in a more nuanced way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from baseline probability for a 3AA blastocyst at age 36, then applies downward adjustments for smoking and endometriosis, arriving at a 40-55% range. The conclusions in recommendations follow from the identified risk factors. Minor inconsistency: the response suggests ERA consideration while simultaneously noting the endometrium appears receptive at 11.5mm, creating slight ambiguity. Overall the probability derivation is transparent and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: PGT-A suggestion for age 36 with prior failure, GnRH agonist down-regulation for endometriosis FET, smoking cessation emphasis, and consideration of laparoscopy for endometriomas. The luteal phase support mention is appropriate. Slight deviation: recommending ERA after a single failed cycle is not strongly supported by current ESHRE guidelines which suggest ERA after recurrent implantation failure (typically 3+ failures), though the response appropriately qualifies it as optional."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: immediate smoking cessation with timeline (3-6 months before future cycles), PGT-A for remaining embryos, GnRH agonist down-regulation protocol specifics (2-3 months), laparoscopy consideration for endometriomas, and thrombophilia screening for recurrent failure. The response provides clear prioritization (smoking cessation as non-negotiable). Could be more specific about luteal phase support protocols and transfer technique details, but overall provides clinically actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020172,
+  "judge_latency_ms": 13123.051374997885,
+  "judge_prompt_tokens": 3464,
+  "judge_completion_tokens": 652
+}

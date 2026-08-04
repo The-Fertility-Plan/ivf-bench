@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AB label, but it overstates certainty from the image alone, describes features like uniformly thinned zona, clear cavity, and absence of collapse/artifact that are not confidently assessable, and accepts the supplied TE description despite the lab note saying 'few cells forming a loose epithelium' which is closer to C than classic B."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, diagnosis, sperm factors, endometrium, cycle history, and oocyte yield with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to morphology and patient factors; minor issues include overinterpreting the Day-4 blastocyst timing and some speculative quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET, luteal support, and avoiding routine ERA/PGT-A in a first cycle, but it treats a Day-4 transfer of an expanded blastocyst as a realistic planning issue and repeats the inconsistent Gardner interpretation of TE grade B despite the lab definition matching TE C more closely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer monitoring, luteal support, SET, and future FET planning, though some recommendations are somewhat generic and based on uncertain assumptions about transfer timing."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018207,
+  "judge_latency_ms": 5534.115750007913,
+  "judge_prompt_tokens": 4184,
+  "judge_completion_tokens": 377
+}

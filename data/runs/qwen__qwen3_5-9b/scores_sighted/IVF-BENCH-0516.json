@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0516",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst description and is broadly consistent with the reported 3AA grade, but it overstates certainty from a single image and likely overcalls the TE as clearly cohesive/distinct; the image appears somewhat collapsed/irregular and not 'perfectly' demonstrative of textbook 3AA morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, semen parameters, BMI, endometrium, and ovarian reserve markers with embryo quality reasonably well, though it overemphasizes paternal age and makes speculative assumptions about AMH discrepancy and DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning contains notable inconsistencies: age 38 is described as 'favorable,' sperm parameters are called within normal limits when they are borderline/subnormal, prior two failed cycles are labeled as a pattern of RIF, and the implantation estimate is driven down more than the presented evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent (SET, considering sperm DNA fragmentation in selected cases), but several recommendations are not well aligned: strong recommendation for PGT-A on an embryo already slated for fresh transfer, overstating paternal-age effects, suggesting donor sperm after one more failure, and implying a 3AA embryo has a high chance of being euploid."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers concrete next steps such as SET, SDF testing, and lifestyle review, but some recommendations are impractical or insufficiently nuanced for this exact cycle (e.g., PGT-A for the current transfer, donor sperm suggestion, speculative protocol changes)."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014892,
+  "judge_latency_ms": 6230.758667006739,
+  "judge_prompt_tokens": 2859,
+  "judge_completion_tokens": 421
+}

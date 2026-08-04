@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0696",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BA Gardner score: expanded blastocyst with thinned zona pellucida, loosely grouped ICM with several cells, and cohesive trophectoderm epithelium. The description of ICM location ('on the right side') adds some image-specific detail. Minor limitation is that the description largely mirrors the provided Gardner score labels rather than adding independent morphological observations beyond what was given in the lab data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well, including age, BMI, FSH, sperm parameters, endometrial thickness, diagnosis, and previous cycle outcome. It correctly identifies BMI as the most significant modifiable risk factor and connects it to endometrial receptivity and oocyte quality. The interaction between FSH 10.4 and the good MII yield is noted. Minor gap: AMH is N/A and not addressed, and the tubal factor diagnosis could be more specifically linked to IVF success rates."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 45-55% is reasonably supported by the identified positive and negative factors. The response correctly identifies that the 'A' TE grade is a strong implantation predictor while BMI and age moderate the estimate downward. The conclusion that BMI is the most critical modifiable factor is consistently reinforced throughout. Minor issue: the 45-55% range may be slightly optimistic given the BMI 34.5 and previous failed cycle, but the reasoning chain is internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation for good quality blastocyst, luteal phase support, PGT-A consideration for age 36 with prior failure, ERA for recurrent implantation failure, and weight management guidance. The Gardner grading interpretation is accurate. The FSH interpretation as 'higher end of normal' is appropriate. PGT-A recommendation is appropriately framed as conditional rather than mandatory, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering immediate transfer considerations (SET, luteal support, patient counseling) and future planning (weight management referral, PGT-A, ERA, protocol review, psychological support). The prioritization of BMI management as the most critical recommendation adds clinical utility. Could be improved with more specific targets (e.g., specific BMI threshold before retry, specific PGT-A timing) and consideration of whether frozen vs. fresh transfer was used, but overall provides clear actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019494,
+  "judge_latency_ms": 14414.5847089967,
+  "judge_prompt_tokens": 3193,
+  "judge_completion_tokens": 661
+}

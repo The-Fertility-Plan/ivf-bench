@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the reported Gardner score, so it should not be penalized for lack of image-specific detail. Its comments about poor ICM/TE based on 1DD are broadly consistent with the image and label, but it incorrectly stated grade 1 means blastocoel less than half the embryo and made unsupported claims such as definite non-viability and abnormal premature cavitation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, tubal factor, sperm parameters, endometrium, and first-cycle status well, and correctly noted that patient factors are favorable while embryo quality is poor. It also identified the COC/MII discrepancy, though some conclusions were overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but several conclusions are too absolute or weakly supported, including calling the embryo non-viable, asserting day-4 blastocyst transfer creates uterine asynchrony, and inferring likely lab problems from a single poor embryo/data inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While it uses Gardner terminology and recognizes poor prognosis with DD morphology, it departs from guideline-consistent practice by recommending not to transfer/cancel based solely on this embryo description and by overstating the role of PGT-A and ICSI in this scenario. The interpretation of expansion grading is also inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps including reviewing lab discrepancies, considering culture strategy, and discussing future cycle adjustments. However, some recommendations are too prescriptive or not sufficiently nuanced for a single poor-quality embryo in a young tubal-factor patient."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01479,
+  "judge_latency_ms": 6178.651458991226,
+  "judge_prompt_tokens": 2760,
+  "judge_completion_tokens": 434
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "gpt-5.4-2026-03-05-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a day-4 cavitating morula/early blastocyst with poor ICM/TE, despite the provided laboratory grading of 2AA indicating a full blastocyst with excellent ICM and TE. This is a major morphological error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, ovarian response, BMI, endometrium, prior cycles, and sperm parameters, and relates them to prognosis. It misses AMH only because unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The internal logic is mostly consistent, but the prognosis and probability estimate are built on an incorrect morphological premise, which weakens the overall reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET at age 33, luteal support, and addressing hydrosalpinx are broadly guideline-consistent, but the embryo grading interpretation deviates from Gardner criteria and undermines alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, hydrosalpinx review, luteal support, lifestyle, future culture strategy, and contingency planning. Recommendations are useful though partly based on misread morphology."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013794,
+  "judge_latency_ms": 4440.93037499988,
+  "judge_prompt_tokens": 3008,
+  "judge_completion_tokens": 318
+}

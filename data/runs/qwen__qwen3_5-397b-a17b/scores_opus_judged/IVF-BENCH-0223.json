@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0223",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately describes the embryo as lacking a distinct blastocoel cavity, with dark, granular, disorganized cells and no clear ICM/TE differentiation. The interpretation of the 0DD Gardner score as a degenerating/arrested embryo is consistent with the grading. The description of cytoplasmic degeneration and necrosis aligns with a DD-graded embryo. Minor deduction because the model could have been more specific about zona pellucida observations and the exact visual features, but overall the morphological assessment is well-aligned with the grade and expected appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model astutely identifies the discrepancy between PCOS diagnosis and low AMH (1.39 ng/mL), questions the PCOS phenotype, connects low sperm motility (23.2%) to potential DNA fragmentation and poor blastocyst development, considers the age-quality discrepancy at 33, and integrates lifestyle factors (former smoker, BMI). The connection between male factor and embryo arrest is particularly well-reasoned."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logical throughout. The conclusion that the embryo is non-viable follows directly from the DD grading and visual assessment. The implantation probability of <1% is well-justified. The reasoning chain from poor embryo quality → investigation of causes (male factor, ovarian reserve) → future cycle modifications is logical and consistent with no contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The recommendation to cancel transfer of a degenerative embryo aligns with clinical guidelines. The suggestion for SDF testing given unexplained poor blastocyst development, ICSI recommendation, lifestyle optimization for PCOS/BMI, CoQ10 supplementation, and protocol adjustment based on actual ovarian reserve rather than PCOS label are all evidence-based. The Gardner grading interpretation is accurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and actionable recommendations: cancel transfer, SDF testing for partner, consider TESE/MACS if SDF elevated, ICSI for next cycle, protocol adjustment for low-normal responder, specific supplements (CoQ10, antioxidants for partner), lifestyle modifications with BMI target, and lab condition review. The recommendations are prioritized and include alternatives, making them immediately useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.02846,
+  "judge_latency_ms": 16046.662458975334,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 606
+}

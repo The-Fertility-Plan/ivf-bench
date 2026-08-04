@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes the blastocyst reasonably but introduces some inconsistency by suggesting 'stage 2 to early 3 AA' or 'fair-to-good expansion' when the Gardner Score provided is 2AA (full blastocyst). It appropriately notes possible transient collapse and describes ICM and TE in general terms consistent with AA grading, but hedges unnecessarily on features already defined by the lab data. Some observations about 'perivitelline debris/fragmentation' may be fabricated or over-interpreted without clear image evidence. Overall mostly accurate but with notable inconsistencies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 34, AMH, FSH, prior live birth, endometrial thickness, smoking, BMI 17.1, sperm parameters, and previous cycle outcomes. It correctly identifies smoking and low BMI as the most impactful modifiable risk factors and connects them to implantation and pregnancy outcomes. The interaction between modest ovarian response (4 oocytes despite normal reserve) and limited embryo selection is noted. Minor gap: the significance of the biochemical pregnancy in prior cycles could be explored more deeply as a potential recurrent implantation failure signal."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 45-60% follows logically from the favorable (good morphology, age 34, prior live birth) and unfavorable (smoking, low BMI, untested embryo) factors. The distinction between implantation rate, clinical pregnancy rate, and live birth rate is appropriately made. Minor issue: the model slightly contradicts the provided Gardner Score by suggesting the expansion may be stage 2-3 rather than accepting the lab-confirmed 2AA, creating mild inconsistency between morphological analysis and the overall favorable framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: single embryo transfer at age 34, smoking cessation, PGT-A discussion framed as optional rather than mandatory, consideration of sperm DNA integrity with reduced motility, and uterine cavity assessment. The nuanced PGT-A discussion acknowledging limited benefit with small cohorts aligns with current evidence. Nutritional and lifestyle recommendations are appropriate. The response correctly avoids recommending bed rest. Minor gap: no explicit mention of luteal phase support protocols or endometrial preparation considerations for frozen vs. fresh transfer context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with single embryo transfer, immediate smoking cessation, nutritional optimization for low BMI, prenatal vitamins, TSH/vitamin D checks, and a structured future planning framework including PGT-A discussion, sperm assessment, and uterine review. The tiered approach (this transfer vs. future cycles) is clinically useful. Slight reduction because some recommendations (e.g., 'check basic metabolic labs') remain somewhat generic, and the response could be more specific about transfer protocol type (frozen vs. fresh) and luteal support."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.021909,
+  "judge_latency_ms": 17384.841084000072,
+  "judge_prompt_tokens": 3503,
+  "judge_completion_tokens": 760
+}

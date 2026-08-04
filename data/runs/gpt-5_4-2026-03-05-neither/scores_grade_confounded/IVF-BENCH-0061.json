@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner grade was provided and does not analyze the known 2AA morphology (full blastocyst with strong ICM and TE), so it fails the core morphology task."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, endometrium, prior biochemical pregnancy, sperm parameters, and lifestyle, though it does not connect these to the actual provided 2AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured and logical, but a major premise is wrong because morphology was in fact provided; this weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: single embryo transfer at age 27, caution about hydrosalpinx, luteal support adherence, and avoiding routine PGT-A. Minor limitation is underuse of the provided embryo grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including SET, hydrosalpinx review, lifestyle changes, and escalation only after repeated failure, though embryo-specific advice is blunted by missing the 2AA data."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014523,
+  "judge_latency_ms": 3865.4939999978524,
+  "judge_prompt_tokens": 3271,
+  "judge_completion_tokens": 314
+}

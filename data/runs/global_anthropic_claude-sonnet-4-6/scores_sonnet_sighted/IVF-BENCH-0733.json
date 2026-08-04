@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage (Grade 3), thinning zona pellucida, loosely cohesive ICM, and sparse trophectoderm consistent with 3BB grading. Notably identifies the small circular vesicle/bleb visible in the lower left of the image, which is a genuine morphological finding. Minor issue: describes ICM as 'asymmetrically positioned' which is a reasonable observation but could be more precisely characterized. Overall description aligns well with the visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. Connects AMH/FSH values to ovarian reserve context, reconciles the 'male factor' diagnosis with current normal sperm parameters and appropriately flags DFI as missing data, links prior cycle history (1 live birth + 2 failures) to both uterine receptivity confirmation and aneuploidy risk, considers endometrial thickness in probability modeling, and addresses high stress as an HPA axis concern. The interaction between age 35, limited reserve, and unknown aneuploidy status is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured with explicit adjustments for each factor. The base rate of 38-45% for 3BB at age 35 is reasonable, and the bleb deduction is justified with cited literature. The final live birth estimate of 20-28% follows coherently from the chain of adjustments. Minor inconsistency: the response flags the bleb as 'moderate-high' risk but the probability deduction (-8-12%) may underrepresent this if blebs truly reduce rates by 15-25% as stated earlier in the response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation is appropriate, PGT-A suggestion for recurrent failure at age 35 aligns with guidelines, ERA recommendation after 2 implantation failures is evidence-supported, luteal phase support is standard. The urgency around ovarian reserve banking aligns with POSEIDON/ESHRE poor responder guidance. Minor concern: low-dose aspirin recommendation lacks strong evidence base in standard IVF (ESHRE does not routinely recommend it), and acupuncture is appropriately caveated but its inclusion may be seen as borderline guideline-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with clear decision trees (bleb resolved vs. persistent → proceed vs. freeze-all), specific drug class recommendations for luteal support, prioritized future cycle interventions with evidence levels, explicit urgency framing around ovarian reserve timeline, and a structured table of future recommendations with rationale. The recommendation to reassess bleb status immediately before transfer is a concrete, time-sensitive clinical action. The summary provides a clear bottom-line for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.24,
+  "judge_cost_usd": 0.020682,
+  "judge_latency_ms": 17577.741957997205,
+  "judge_prompt_tokens": 3319,
+  "judge_completion_tokens": 715
+}

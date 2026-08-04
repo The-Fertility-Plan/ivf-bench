@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies blastocoel expansion, zona thinning, and peripheral TE layer. It appropriately flags upper-right quadrant debris and ICM irregularity visible in the image. However, the image is quite blurry and low-resolution, making definitive morphological assessment difficult. The model's suggestion of 3AB or 3BB downgrade is reasonable given visible debris, but the structured table format implies more precision than the image quality supports. The asymmetric zona observation is plausible but not clearly verifiable from this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical domains. The response connects AMH/FSH to reserve trajectory, links smoking to endometrial receptivity and oocyte quality mechanistically, addresses partner age 40 with SDF implications, integrates prior failed cycle into RIF workup recommendations, and considers BMI effects on implantation. The maturation rate (85% MII) is correctly contextualized against borderline reserve markers. Tubal factor diagnosis is appropriately noted as preserving uterine integrity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate (28-38%) follows logically from the modifier matrix presented. The reasoning chain from base rate through modifiers is transparent and traceable. Smoking is correctly identified as the primary modifiable detractor. Minor issue: the modifier matrix arithmetic is somewhat imprecise (modifiers don't cleanly sum to the stated range), and the image quality concern modifier (-5 to -8%) may be slightly overstated given uncertainty. Overall the logic is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: ERA for recurrent implantation failure workup, PGT-A consideration, hysteroscopy before repeat transfer, SDF testing for older male partners, and smoking cessation counseling are all evidence-based. Gardner grading criteria are correctly applied. Low-dose aspirin recommendation is noted as adjunct without overstating evidence. CoQ10 dosing (600mg) is within commonly cited ranges though evidence remains limited. The response appropriately avoids overconfident claims about adjunct therapies."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized recommendations. Smoking cessation pathway includes specific pharmacological options with timing guidance. Pre-transfer workup provides a concrete checklist (hysteroscopy, ERA, SDF, thrombophilia, CD138). Luteal support optimization includes specific progesterone threshold values. Future cycle planning table with rationale and priority levels is clinically useful. The summary dashboard provides clear decision support. Recommendations are appropriately sequenced and nuanced for the specific case context."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.021453,
+  "judge_latency_ms": 16710.792458005017,
+  "judge_prompt_tokens": 3796,
+  "judge_completion_tokens": 671
+}

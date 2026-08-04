@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overinterprets the image as possibly showing two blastocysts; this is more consistent with a single hatching/partially collapsed blastocyst. ICM and TE are poorly visualized, yet the model assigns fairly specific grades and describes features not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, prior biochemical pregnancies, male factor, endometrium, and oocyte maturity with embryo quality and prognosis in a generally relevant way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: likely misreading the morphology, somewhat arbitrary probability adjustments, and strong conclusions from limited evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable, but several are not well aligned with mainstream evidence/guidelines for recurrent biochemical loss/implantation failure, including routine aspirin, thrombophilia expansion, ERA, NK/immunologic testing, intralipids, prednisolone, and MTHFR emphasis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for transfer monitoring and future-cycle planning, though some actions are overly aggressive or insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.015114,
+  "judge_latency_ms": 5118.142999999691,
+  "judge_prompt_tokens": 3373,
+  "judge_completion_tokens": 333
+}

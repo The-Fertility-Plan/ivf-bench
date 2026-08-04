@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate embryo morphology. However, it provided no image-based assessment despite morphology being inferable from the actual image, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated key factors well: young age, strong ovarian reserve, tubal factor, sperm quality, endometrial thickness, BMI, lifestyle, and prior failed cycle, and linked these to prognosis and embryo expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with clear caveats about missing morphology. Probability estimates are framed conditionally on embryo quality, though somewhat broad and assumption-dependent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young good-prognosis patient, morphology-based selection, cautious stance on PGT-A at age 25, and reserving ERA-style testing for repeated failure. Minor overreach includes mentioning thrombophilia/immunologic workup relatively early."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, review of prior cycle details, uterine cavity assessment, and lifestyle optimization. Some suggestions are generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014649,
+  "judge_latency_ms": 5211.994415993104,
+  "judge_prompt_tokens": 3258,
+  "judge_completion_tokens": 325
+}

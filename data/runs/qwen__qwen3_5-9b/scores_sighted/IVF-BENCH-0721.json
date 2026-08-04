@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates visible certainty: calls grade 3 'expanded' and says the embryo has successfully hatched or is near hatching, which is inaccurate for Gardner 3 and not clearly shown. TE/ICM descriptions are broadly reasonable but somewhat inferred from the supplied score rather than strictly the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, oocyte yield, sperm quality, and endometrial thickness well with embryo prognosis. It appropriately frames this as good embryo quality despite low ovarian reserve, though some claims about DOR affecting implantation environment are less well supported."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it equates Gardner 3 with expanded blastocyst, suggests hatching, and cites very high euploidy/implantation assumptions. The probability estimate is plausible but the supporting rationale is somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer is guideline-concordant, but several recommendations are not: advising not to freeze unless medically necessary is too absolute, discussing PGT-A on a fresh day-5 transfer as if biopsy/transfer timing were interchangeable is misleading, and suggesting donor eggs after one unsuccessful cycle in a 34-year-old with AMH 1.3 is premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical suggestions such as proceeding with SET and ensuring luteal support, but several recommendations lack nuance or are potentially misleading. Future planning is somewhat generic and prematurely escalates to donor eggs."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014637,
+  "judge_latency_ms": 6061.6145410022,
+  "judge_prompt_tokens": 2774,
+  "judge_completion_tokens": 421
+}

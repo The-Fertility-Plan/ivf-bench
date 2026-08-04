@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0183",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes poor-quality morphology with absent/degenerate ICM and TE, but it misstates the Gardner expansion definition (1 = blastocoel at least half the embryo, not less than half), calls it late morula/very early blastocyst despite the provided 1DD blastocyst grading, and overstates non-viability from image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, prior miscarriage, sperm concentration, BMI, and endometrium with embryo prognosis reasonably well, though some links (e.g., sperm DNA fragmentation implication) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis estimate follows from the very poor grade, but there are notable issues: incorrect interpretation of expansion stage, conflation of poor morphology with certain non-viability, and strong conclusions beyond what the image alone proves."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (consider PGT-A discussion, assess male factor, continue blastocyst culture), but advising to cancel transfer or not transfer a 1DD embryo is too absolute and not universally guideline-based, and calling such embryos typically designated for discard is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for current transfer and future planning, including male-factor workup and cycle strategy, but the recommendations are somewhat overly directive and insufficiently nuanced for patient-centered decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013473,
+  "judge_latency_ms": 4988.931457992294,
+  "judge_prompt_tokens": 2541,
+  "judge_completion_tokens": 390
+}

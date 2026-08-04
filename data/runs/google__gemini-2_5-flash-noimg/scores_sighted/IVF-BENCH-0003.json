@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted that no image was provided, but then relied on the supplied Gardner score and repeated an incorrect interpretation of stage 2 as a 'full blastocyst.' It did not assess visible image features and made morphology claims not supported by the actual image/day context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: maternal age, tubal factor, ovarian response, endometrium, prior cycle history, sperm parameters, and lifestyle, and connects them to prognosis. Minor overstatement of sperm and lifestyle effects prevents a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and internally consistent, but it contains a notable logic problem around calling a 2AA embryo 'excellent/top-tier' while also mislabeling stage 2 as full blastocyst and treating a Day 4 '2AA blastocyst' as straightforwardly favorable without enough caution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but the Gardner grading interpretation is inaccurate, ERA is suggested somewhat too readily, and the implantation estimate appears optimistic for an untested Day 4/stage 2 embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, review of transfer details, and selective further testing. Some suggestions are generic or not tightly prioritized, but overall clinically usable."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015243,
+  "judge_latency_ms": 5620.812249995652,
+  "judge_prompt_tokens": 3266,
+  "judge_completion_tokens": 363
+}

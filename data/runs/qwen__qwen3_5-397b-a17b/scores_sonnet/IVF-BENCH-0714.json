@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and accurate morphological description consistent with a 3AA Gardner score: correctly identifies the expanded blastocoel, thinned zona pellucida, tightly packed ICM at a specific clock position, and cohesive TE epithelium. Minor limitation is that some descriptive elements (e.g., 'particularly on the right side' for zona thinning) may be image-specific observations that are difficult to fully verify, but overall the description is thorough and well-aligned with the reported grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates all major clinical factors: maternal age (38) and its impact on euploidy rates, low AMH (0.96) and its implications for future cycles, paternal age (42) and sperm DNA fragmentation risk, endometrial thickness (9.0 mm) as favorable, tubal factor diagnosis as a positive prognostic indicator, BMI consideration, and the significance of being a first-time IVF patient. The interactions between these factors and embryo quality are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (35-45% clinical pregnancy, 30-40% live birth) logically follows from the age-adjusted euploidy probability framework presented. The model correctly frames the estimate as a weighted average of euploid vs. aneuploid outcomes. Minor issue: the response could more explicitly reconcile why the estimate sits at 35-45% rather than higher given the 'more likely euploid' assertion, but the overall logic chain is sound and coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation is appropriate and evidence-based, luteal support emphasis is standard, PGT-A recommendation for age 38 with low reserve aligns with current guidelines, and embryo banking advice is consistent with best practices for diminished ovarian reserve. CoQ10 and DHEA recommendations are noted as having mixed evidence, which is appropriately caveated. No major guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: eSET with clear rationale, robust luteal support, immediate embryo banking counseling given low AMH, PGT-A for future cycles with specific reasoning, lifestyle modifications (alcohol cessation, supplements with evidence caveats), and a conditional recommendation for sperm DNA fragmentation testing. Each recommendation is tied to specific patient factors, making them directly applicable to clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.018246,
+  "judge_latency_ms": 12911.686166997242,
+  "judge_prompt_tokens": 2857,
+  "judge_completion_tokens": 645
+}

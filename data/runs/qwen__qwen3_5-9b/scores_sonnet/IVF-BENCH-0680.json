@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0680",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The model repeatedly and extensively deliberates that the image appears to be a polar body (PB1) rather than a blastocyst, contradicting the provided Gardner Score 3AA. The model fails to provide any coherent morphological analysis of a blastocyst, instead spending the majority of its response in circular self-contradiction about whether the image is a polar body or ICM. No meaningful description of expansion stage, TE, ICM, or zona pellucida is provided as a final analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The model does identify and discuss relevant clinical factors including age 38 (aneuploidy risk), AMH 7.5 (good reserve), BMI 31.5 (risk factor), sperm parameters (favorable), endometrial thickness 11mm (favorable), previous failed cycle, and high stress. However, the integration is superficial and buried within extensive rambling. The interaction between high AMH and fresh transfer estrogen levels is briefly mentioned but not developed. The tubal factor diagnosis and its implications are minimally addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is largely incoherent, consisting primarily of extensive internal deliberation and self-contradiction rather than structured clinical reasoning. The model repeatedly reverses its conclusions about the image. The final probability estimate (40-50%) is stated without a clear, logical derivation chain. The reasoning about euploidy rates (~50-60% at age 38) leading to implantation probability is partially logical but not well-structured or clearly presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The recommendations that do emerge (PGT-A consideration for age 38 with prior failure, stress management, monitoring for OHSS with antagonist protocol, consideration of FET) are broadly consistent with ESHRE/ASRM guidelines. The mention of aneuploidy risk at age 38 aligns with guidelines. However, the response lacks depth in guideline-specific recommendations and the chaotic structure undermines confidence in alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The actionable recommendations are minimal and generic: proceed with transfer, consider PGT-A for future cycles, stress management, monitor beta-hCG, consider FET for next cycle. These are not specific or nuanced enough for a clinician. No specific luteal support recommendations, no discussion of progesterone supplementation, no specific PGT-A protocol details, no BMI management plan, and no specific follow-up timeline is provided. The recommendations are buried in extensive deliberation."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.03882,
+  "judge_latency_ms": 12148.97966600256,
+  "judge_prompt_tokens": 9820,
+  "judge_completion_tokens": 624
+}

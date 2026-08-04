@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image is available, but it largely ignores the provided Gardner score 0DD and instead argues Gardner scoring is not applicable on Day 4. This misses key morphology data indicating an early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, prior live birth, sperm parameters, BMI, endometrium, and lifestyle reasonably well with prognosis, though it underweights the severe adverse morphology implied by 0DD."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable inconsistency in dismissing the supplied Gardner score while still discussing embryo stage and prognosis. Probability estimates are not well reconciled with the very poor 0DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but the claim that Gardner scoring cannot be used here is questionable given the provided early blastocyst score. Stress/acupuncture comments are less guideline-grounded, while PGT-A and extended culture are reasonable discussion points."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for luteal support, future culture strategy, PGT-A discussion, sperm DNA fragmentation testing, and endometrial evaluation. However, recommendations are somewhat generic and not sufficiently tailored to the poor 0DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013287,
+  "judge_latency_ms": 4450.425709001138,
+  "judge_prompt_tokens": 2599,
+  "judge_completion_tokens": 366
+}

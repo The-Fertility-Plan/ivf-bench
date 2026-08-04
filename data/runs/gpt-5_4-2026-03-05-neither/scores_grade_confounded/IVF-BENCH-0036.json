@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response avoids fabricating image findings, but it fails to use the provided Gardner score 0DD, which itself indicates a very poor-quality early blastocyst with absent/degenerate ICM and TE. It instead discusses hypothetical day-4 morphology in general terms."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, DOR, prior live birth, endometrial thickness, semen parameters, BMI, and lifestyle factors well, and connects these to prognosis and embryo competence. Minor limitation: it underweights the severe adverse implication of the reported 0DD grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with sensible discussion of age-related aneuploidy, DOR, and day-4 transfer context. However, the prognosis is somewhat optimistic given the explicitly poor 0DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice and evidence-based guidance, including caution about PGT-A in low-yield DOR cases and avoiding bed rest. Small deviation: it overstates the inapplicability of Gardner grading despite a provided early blastocyst grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management, additional embryology data review, future culture strategy, selective PGT-A consideration, stimulation reassessment, and endometrial review. It is useful, though not tightly tailored to the poor 0DD embryo grade."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.016308,
+  "judge_latency_ms": 4764.776625001105,
+  "judge_prompt_tokens": 3511,
+  "judge_completion_tokens": 385
+}

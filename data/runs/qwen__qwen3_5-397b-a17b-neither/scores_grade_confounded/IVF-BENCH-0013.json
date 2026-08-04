@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 1DD and instead claimed Gardner grading was not applicable because transfer was on Day 4. It did not describe the known poor-quality blastocyst morphology and introduced generic Day 4 expectations unrelated to the provided embryo grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian response, sperm parameters, BMI, lifestyle, and endometrial thickness reasonably well with prognosis, though it underused the key embryo-quality data and overemphasized the DOR discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by a major internal inconsistency: ignoring the supplied 1DD blastocyst grade while discussing a hypothetical Day 4 morula/early blastocyst. This leads to an implantation estimate that is likely far too optimistic for a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent (SET, considering Day 5/6 culture), but key deviations include disregarding the Gardner score, suggesting assisted hatching/embryo glue without clear indication, and implying likely surplus embryos from 9 MII oocytes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps for luteal support, future AMH testing, and considering extended culture/SET, but recommendations are only moderately useful because they are based on an incorrect interpretation of embryo stage and quality."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013698,
+  "judge_latency_ms": 4654.034750004939,
+  "judge_prompt_tokens": 2681,
+  "judge_completion_tokens": 377
+}

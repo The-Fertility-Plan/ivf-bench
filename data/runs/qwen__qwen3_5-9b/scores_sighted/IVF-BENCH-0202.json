@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0202",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly identifies a very poor-quality embryo with absent/degenerate ICM and TE, but it misstates Gardner stage 1 as blastocoel <50% and overcalls specific cavity location; the image is consistent with a very early/poor blastocyst, so several morphology details are inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, endometriosis, BMI, endometrial thickness, sperm parameters, and low mature oocyte yield with embryo prognosis reasonably well, though it overemphasizes paternal age and infers developmental bottlenecks without full cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate fits the poor embryo grade, but there are notable issues: incorrect interpretation of expansion grade 1, unsupported claim of only one blastocyst available, and some overstatement about paternal age and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The general conclusion that this is a poor-prognosis embryo and counseling is needed is guideline-consistent, but there are deviations: incorrect Gardner grading explanation, overly strong recommendation for PGT-A/ICSI based mainly on paternal age, and limited nuance about evidence for stress reduction and endometriosis management."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, proceeding with transfer, and future cycle considerations, though some recommendations are somewhat generic and a few are not sufficiently individualized or evidence-nuanced."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013164,
+  "judge_latency_ms": 5671.488457999658,
+  "judge_prompt_tokens": 2558,
+  "judge_completion_tokens": 366
+}

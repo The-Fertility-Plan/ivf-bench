@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately identifies the ICM as compact and the TE as forming a loose epithelium consistent with Gardner 3AB grading. However, the description is largely derived from the provided Gardner score rather than independent image analysis. The image shows a blastocyst with the ICM visible in the upper right quadrant, but the response doesn't specifically note this positioning or provide truly independent morphological observations beyond confirming the provided score. Some descriptions (zona pellucida thinning) are inferred from the grade rather than clearly visible in this somewhat low-contrast image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors - female age, BMI, AMH, FSH, PCOS diagnosis, previous cycle outcomes, partner age, sperm parameters, endometrial thickness, and lifestyle factors - and explicitly connects each to the embryo quality assessment and prognosis. The interaction between PCOS and oocyte quality, the significance of the biochemical pregnancy history relative to current embryo quality, and the partner's age in context of sperm parameters are all thoughtfully addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the 55-65% probability estimate follows logically from the presented evidence. The response appropriately tempers the upper probability bound due to previous failures while acknowledging favorable factors. Minor inconsistency: the response describes the TE as 'somewhat thin in areas' and 'not grade A' but then states it's 'still functional' without fully reconciling why previous failures occurred despite presumably similar embryo quality. The probability range is reasonable and well-justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst in a 34-year-old, luteal phase support, ultrasound-guided transfer, and PGT-A consideration for recurrent implantation failure. The suggestion of ERA, hysteroscopy, and immunological workup for future planning aligns with ESHRE RIF guidelines. The antagonist protocol endorsement for PCOS is appropriate. Minor gap: doesn't specifically mention OHSS risk monitoring given PCOS diagnosis, though this may be less relevant at transfer stage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, including SET, optimized luteal phase support, careful transfer technique, and a clear hierarchy of future investigations (PGT-A first, then ERA, hysteroscopy, immunological workup, sperm DNA fragmentation). The response provides clear decision trees for both current transfer and future planning. Slight limitation: doesn't specify progesterone dosing/route or specific timing for ERA, and the immunological workup recommendation lacks specificity about which tests to order."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021552,
+  "judge_latency_ms": 15752.771041996311,
+  "judge_prompt_tokens": 3769,
+  "judge_completion_tokens": 683
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0168",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a low-grade, minimally expanded embryo, but it overcalls a discernible ICM despite the provided 0DD grade indicating absent/degenerative ICM and TE, and adds reassuring statements about no major degeneration that are not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, prior IVF outcome, semen parameters, and endometrial thickness reasonably well with embryo quality, though some links are somewhat speculative given limited cycle data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent, with embryo quality appropriately treated as the dominant prognostic factor; minor issues include tension between describing a visible ICM and accepting a 0DD-grade poor prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations such as discussing a day-4 embryo as a blastocyst despite the supplied Gardner 0DD label, and some speculative suggestions (e.g., sperm DNA fragmentation, protocol changes) without strong case-specific indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support, counseling, and future workup/planning, though some recommendations remain broad rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014934,
+  "judge_latency_ms": 5596.015041010105,
+  "judge_prompt_tokens": 3233,
+  "judge_completion_tokens": 349
+}

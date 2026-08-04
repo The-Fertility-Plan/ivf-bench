@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response is appropriately cautious and avoids overcalling features, but it remains generic and does not provide a detailed morphology assessment from the visible image; calling it possibly morula/early blastulation is plausible but somewhat nonspecific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, sperm parameters, diagnosis, endometrium, and cycle history well with overall prognosis, though the interaction with the specific embryo's uncertain morphology could be more tightly framed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: strong patient factors improve prognosis while poor image interpretability limits embryo-specific confidence. Minor issue: probability ranges are broad and partly speculative given absent morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including SET in a young good-prognosis patient and cautious use of PGT-A. Small limitation: suggesting ERA/immunologic workup after repeated failures is more controversial and not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as confirming embryologist grading, proceeding with SET, continuing luteal support, and reviewing cohort development if unsuccessful. Useful, though some advice remains general rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014421,
+  "judge_latency_ms": 4369.453832994623,
+  "judge_prompt_tokens": 3117,
+  "judge_completion_tokens": 338
+}

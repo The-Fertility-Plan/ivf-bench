@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0736",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst features consistent with a 2AB Gardner score, describing the expanded blastocoel, tightly packed ICM, and loose TE. However, there is a notable error: the model states the zona pellucida is 'thinning' and the embryo is 'ready for hatching or hatched,' which contradicts a Grade 2 expansion (full blastocyst where ZP is still intact and not yet thinning significantly — thinning/hatching corresponds to grades 4-6). The image actually shows a compact, lobulated morula-to-early blastocyst appearance rather than a clearly expanded Grade 2 blastocyst, suggesting some disconnect between image interpretation and the provided score. The description of TE as 'loose and sparse' is appropriate for Grade B."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a commendable job integrating most clinical factors: maternal age, AMH/FSH reserve markers, 100% maturation rate, endometrial thickness, and the male factor diagnosis. The astute observation that normal sperm parameters with a 'Male Factor' diagnosis likely implies DNA fragmentation is clinically insightful. The lifestyle factors (alcohol, smoking history) are connected to implantation outcomes. Minor gap: BMI of 25.5 is not discussed, and the interaction between former smoking and current alcohol use on endometrial receptivity could be more explicitly linked."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-60% follows reasonably from the upward and downward adjustments described. The identification of the discrepancy between 'Male Factor' diagnosis and normal sperm parameters, leading to the SDF hypothesis, is coherent. Minor inconsistency: the model describes the ZP as thinning (suggesting Grade 4+) while simultaneously confirming Grade 2, which is a small internal contradiction. The final probability range is appropriately hedged given the risk factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines. Gardner grading interpretation is largely correct. The recommendation for PGT-A is reasonable but current ASRM guidelines (2023) do not universally recommend PGT-A for young patients with good prognosis in a first cycle — this recommendation may be slightly aggressive for a 29-year-old first-time IVF patient. The alcohol cessation advice aligns with WHO/ASRM recommendations. The FSH threshold cited ('ideal often <6.0') is more conservative than standard ASRM cutoffs (typically <10 IU/L is normal). The '2AB' grading description slightly misrepresents Gardner criteria (Grade 2 = full blastocyst, not 'fully expanded' which is Grade 3+)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, immediate alcohol cessation, remain smoke-free, consider PGT-A for future cycles, order SDF testing, and vitrify if not transferring. The future cycle planning section addresses stimulation protocol considerations given the reserve profile. The response could be more actionable by specifying luteal phase support protocols, suggesting a specific SDF threshold for clinical decision-making, or addressing whether a freeze-all strategy should be considered given lifestyle factors. Overall, a clinician would find these recommendations useful and implementable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021864,
+  "judge_latency_ms": 18904.899417000706,
+  "judge_prompt_tokens": 3088,
+  "judge_completion_tokens": 840
+}

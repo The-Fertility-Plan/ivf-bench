@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0102",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner 3AA grade rather than inventing image-specific findings. Its descriptions of expansion, ICM, TE, and thinning zona are consistent with the supplied grading, though it slightly overstates 3AA as unequivocally 'top-tier/highest' and does not reflect any uncertainty from the actual image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, PCOS/high AMH response, BMI, prior failed cycles, endometrial thickness, sperm parameters, and lifestyle factors well, and connects these to prognosis despite good embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a plausible adjustment from strong morphology to lower implantation odds based on age and repeated failures. Minor issues include labeling three prior failed cycles as RIF without transfer-count detail and some confident causal inferences where evidence is limited."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based (age/aneuploidy, OHSS risk in PCOS, consideration of freeze-all, chronic endometritis workup), but several recommendations are less guideline-concordant or controversial, including ERA emphasis, NK-cell testing, MTHFR testing, and aspirin as an adjunct in RIF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for immediate transfer management and future planning, including OHSS assessment, luteal support considerations, and targeted workup. Some suggestions are practical and specific, though a few are controversial and would need stronger qualification in real clinical use."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.015234,
+  "judge_latency_ms": 5585.528124996927,
+  "judge_prompt_tokens": 3068,
+  "judge_completion_tokens": 402
+}

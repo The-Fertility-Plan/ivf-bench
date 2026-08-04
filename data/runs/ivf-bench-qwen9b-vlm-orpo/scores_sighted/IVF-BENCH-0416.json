@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0416",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AB and appropriately notes image limitations, but it over-interprets features not clearly discernible in this single blurry frame (e.g., stage 3 or early 4, TE A/B nuance, zona thinning) and gives more confidence than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, prior IVF history, prior live birth, ovarian reserve, BMI, PCOS, semen parameters, endometrium, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, especially around age-related aneuploidy limiting prognosis despite good morphology. Minor issue: it calls the embryo 'good-prognosis' while acknowledging substantial uncertainty from the image and prior failures."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice: reliance on embryologist grading, SET appropriateness, counseling on age-related aneuploidy, and selective further workup after failure. Slight overreach in lifestyle/stress emphasis and somewhat casual framing of PGT-A, but no major guideline conflicts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support adherence, follow-up hCG/ultrasound, and future evaluation including uterine assessment and metabolic review. Useful and specific, though some recommendations remain general rather than protocol-level."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.016302,
+  "judge_latency_ms": 5249.436083002365,
+  "judge_prompt_tokens": 3649,
+  "judge_completion_tokens": 357
+}

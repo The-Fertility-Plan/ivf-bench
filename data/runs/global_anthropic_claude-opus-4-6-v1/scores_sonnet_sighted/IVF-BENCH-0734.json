@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0734",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocyst stage, describes the ICM as tightly packed at approximately the 8-10 o'clock position, notes the cohesive TE layer, and observes the intact zona pellucida. The description of the blastocoel filling the embryo is consistent with Stage 2. Minor limitation: the image actually appears to show a somewhat irregular/slightly collapsed blastocoel with visible cell boundaries suggesting it may be slightly earlier or showing some compaction artifacts, but the overall description is concordant with the provided Gardner score and image appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including AMH (correctly flagged as severely diminished), BMI impact on endometrial receptivity and implantation, age-related aneuploidy rates, previous failed cycle, sperm parameters, endometrial thickness, and lifestyle factors. The table format clearly maps each factor to its clinical impact, and the narrative explains interactions between factors (e.g., dissociation between AMH and FSH, BMI effects on progesterone metabolism, sedentary lifestyle compounding BMI concerns)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimate is derived through a transparent, stepwise framework starting from literature-based baselines and applying quantified adjustments for each clinical modifier. The euploidy-weighted calculation (0.625 × 0.60 + 0.375 × 0.05 ≈ 39%) is methodologically sound and consistent with the final 38-50% range. Conclusions in recommendations follow logically from the risk/benefit analysis, and no contradictions are present between sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: single embryo transfer implied, standard luteal support protocols cited, PGT-A discussion appropriately nuanced for DOR context, DuoStim and DHEA recommendations reflect current evidence for poor responders, ERA and chronic endometritis workup align with ESHRE recurrent implantation failure guidelines. Minor deduction: low-dose aspirin recommendation lacks strong RCT support per current ASRM guidelines, and growth hormone is noted as 'emerging evidence' which is appropriately caveated but still somewhat speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: exact progesterone dosing regimens provided, specific diagnostic tests named (ERA, CD138, thrombophilia panel), concrete protocol alternatives for future cycles (DuoStim, microdose flare), specific supplement doses (DHEA 75mg, CoQ10 600mg), quantified lifestyle targets (5-10% BMI reduction, 150 min/week activity), and time-sensitive counseling points about ovarian reserve trajectory. The response distinguishes between immediate transfer recommendations and future cycle planning with clear conditional logic."
+    }
+  ],
+  "extracted_probability": 0.44,
+  "judge_cost_usd": 0.023688,
+  "judge_latency_ms": 15867.83975000435,
+  "judge_prompt_tokens": 4336,
+  "judge_completion_tokens": 712
+}

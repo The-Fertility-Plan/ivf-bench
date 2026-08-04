@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0692",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological analysis covering blastocoel expansion, ICM characteristics, TE description, and zona pellucida observations consistent with a 3AA Gardner grade. It correctly identifies the expansion stage, compact ICM in the upper-left quadrant, cohesive TE epithelium, and notes a possible extruded fragment at the 5 o'clock position. Minor deduction because some specific observations (like the exact fragment location and mild ICM granularity) may be interpretive assumptions rather than clearly visible features, and the description occasionally reads as confirming the provided grade rather than independently assessing the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical parameters. The response systematically addresses maternal age and its aneuploidy implications, AMH/FSH/COC/MII data for ovarian reserve assessment, male factor sperm parameters with ICSI inference, endometrial thickness optimization, BMI impact, lifestyle factors, and first-cycle status. Crucially, it shows how these factors interact — e.g., male-factor-only diagnosis preserving female receptivity, age driving aneuploidy risk, and endometrial thickness supporting implantation. The tabular presentations enhance clarity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimation follows a transparent, stepwise Bayesian-style framework: baseline morphology rate → age adjustment → euploid probability weighting → patient-specific modifiers → final integrated estimate. The blended calculation (0.60 × 0.70 + 0.40 × 0.07 ≈ 45%) is mathematically sound and internally consistent. The final reported range of 50-58% clinical implantation is slightly higher than the calculated ~45%, which the response reconciles with positive patient modifiers. Conclusions throughout are well-supported by the observations presented, with no contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Strongly aligned with ESHRE and ASRM guidelines. Recommends SET appropriately for a top-grade blastocyst. PGT-A discussion is nuanced and references the STAR trial evidence correctly. Luteal phase support recommendations are standard. β-hCG timing (9-11 days), doubling kinetics, and ultrasound at 6-7 weeks follow established protocols. ERA recommendation is correctly reserved for recurrent implantation failure (≥3 failed euploid transfers). WHO 2021 sperm reference values are correctly cited. The response appropriately avoids recommending bed rest post-transfer per current evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific recommendations across pre-transfer, transfer technique, post-transfer monitoring, and future cycle planning. Includes concrete progesterone dosing (200mg TID vaginal), specific β-hCG timing, ultrasound scheduling, and conditional pathways for different outcomes (live birth, failed transfer, biochemical pregnancy, miscarriage). The PGT-A discussion provides a balanced decision framework with clear recommendation. Future planning addresses fertility preservation timing relative to age trajectory. Sperm DNA fragmentation testing is appropriately suggested as a next step given male factor diagnosis."
+    }
+  ],
+  "extracted_probability": 0.54,
+  "judge_cost_usd": 0.026382,
+  "judge_latency_ms": 16590.5792919948,
+  "judge_prompt_tokens": 4929,
+  "judge_completion_tokens": 773
+}

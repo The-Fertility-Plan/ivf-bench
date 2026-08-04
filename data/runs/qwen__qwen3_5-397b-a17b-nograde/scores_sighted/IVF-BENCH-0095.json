@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Reasonable identification of a blastocyst with suboptimal quality, but it overcalls specific features not clearly visible, especially 'significant intracellular vacuoles,' and the exact 3BC/3CC grading is uncertain from the image. ICM/TE descriptions are somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, prior outcomes, sperm motility, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are overstated and AMH/diagnosis limitations are not emphasized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable overinterpretations: labeling this as RIF from the provided history is not clearly justified, attributing morphology to sperm/lab stress is speculative, and the probability adjustment chain is somewhat loosely supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with standard IVF practice in discussing morphology, uterine evaluation, and counseling, but recommending PGT-A as 'highly recommended' in a 29-year-old based mainly on prior failures/miscarriage is stronger than guideline-based evidence supports; stress/acupuncture claims are also not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, uterine evaluation, sperm DNA fragmentation consideration, and future planning. Some recommendations are useful and specific, though a few are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012993,
+  "judge_latency_ms": 4810.181291992194,
+  "judge_prompt_tokens": 2536,
+  "judge_completion_tokens": 359
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0718",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the reported 3AA grade, but it overstates certainty from the image alone; the zona does not appear clearly markedly thinned, and calling TE a distinctly cohesive A-grade ring is somewhat stronger than what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve markers, prior IVF failures, sperm parameters, endometrium, and PCOS context reasonably well, though it overinterprets AMH/FSH and labels her as poor responder/DOR too strongly from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: it conflates low-normal reserve with DOR, treats FSH 8.1 as clearly elevated, suggests only 1-2 blastocysts from 8 oocytes without evidence, and states PGT-A would 'guarantee' best chance, which is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (proceed with transfer, consider luteal support, weight optimization), but several are not guideline-aligned or are overstated, including NK/HLA immune workup and IVIG/immunology emphasis, and the claim that PGT-A would guarantee the best chance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer, checking for contraindications to fresh transfer, luteal support, and lifestyle optimization, but some future-planning advice is too generic or based on weak evidence and lacks nuanced evidence-based prioritization."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014256,
+  "judge_latency_ms": 6631.0373749875,
+  "judge_prompt_tokens": 2717,
+  "judge_completion_tokens": 407
+}

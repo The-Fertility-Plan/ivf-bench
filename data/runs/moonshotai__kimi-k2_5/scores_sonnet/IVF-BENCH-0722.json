@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the Gardner 3AA grading provided in the lab data. It accurately describes blastocoel expansion, ICM compactness and positioning, TE cohesiveness, and zona pellucida thinning. The description of ICM at '1-2 o'clock position' and TE cell count estimation adds specificity. Minor deduction because some details (e.g., 'TE herniation through the ZP is minimal') may be speculative without clear image confirmation, and the response cannot be fully verified against the actual image content."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including maternal age, AMH, BMI, diagnosis (tubal factor), sperm parameters, endometrial thickness, lifestyle factors, and first-cycle status. It uses a structured table to map each parameter to clinical significance and synthesizes them into a coherent prognostic picture. The interaction between tubal factor diagnosis and preserved endometrial quality, borderline sperm motility and potential DNA fragmentation, and alcohol consumption effects on implantation are all addressed with appropriate nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with probability estimates building from base rates and applying adjustments for age, diagnosis, and endometrial factors. The final live birth estimate of 50-60% is coherent with the evidence presented. Minor issues include the additive probability adjustments being somewhat informal rather than evidence-based multiplicative modeling, and the '95% CI [52%, 75%]' appears to be an informal estimate rather than a statistically derived interval. The distinction between implantation, clinical pregnancy, and live birth rates is appropriately maintained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines including eSET recommendation for young patients with good-quality blastocysts, ultrasound-guided transfer, luteal phase support protocols, and hydrosalpinx evaluation for tubal factor patients. The recommendation for ERA only after failed transfers is appropriate. Minor concerns: the claim that MBSR improves implantation by 20% is overstated relative to current evidence, and the recommendation for low-dose aspirin is presented as optional but lacks strong guideline support for routine use. Sperm motility threshold commentary (47.3% vs WHO 50% reference) is accurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical, covering transfer technique (catheter type, placement depth, timing), luteal support dosing, lifestyle modifications with specific timeframes, and branched future planning scenarios (negative beta, biochemical pregnancy, clinical pregnancy). The inclusion of specific catheter brands, progesterone dosing ranges, hydration targets, and conditional workup pathways (SDF testing, ERA, thrombophilia panel) provides genuine clinical utility. The scenario-based future planning is particularly well-structured for clinical use."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.021024,
+  "judge_latency_ms": 15248.500958005025,
+  "judge_prompt_tokens": 3393,
+  "judge_completion_tokens": 723
+}

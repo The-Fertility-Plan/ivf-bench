@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0231",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA grading and gives a plausible blastocyst description, but it hedges against the lab score by calling it early/full rather than clearly expanded, and mentions peripheral artifact/collapse not clearly established from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometrium, prior IVF history, male factor, and semen parameters well, though some interactions are discussed somewhat generally rather than deeply quantified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with the implantation estimate tied to age, embryo quality, and prior failures; minor tension remains between calling the embryo high quality while downplaying the expansion grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: supports SET, avoids unproven add-ons, and treats PGT-A as optional at age 32. Minor deviations include overemphasis on 12.5 mm as potentially high and some speculative uterine workup language."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and contingency planning for future cycles, including SET, luteal support, uterine evaluation, and selective sperm/PGT-A workup, though not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.47,
+  "judge_cost_usd": 0.017103,
+  "judge_latency_ms": 6176.509042037651,
+  "judge_prompt_tokens": 3981,
+  "judge_completion_tokens": 344
+}

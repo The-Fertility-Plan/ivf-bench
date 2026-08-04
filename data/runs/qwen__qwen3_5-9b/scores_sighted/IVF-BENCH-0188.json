@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0188",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates certainty from the image alone, calls grade 3 'expanded' rather than full blastocyst by standard Gardner terminology, and describes a clear cavity/optimal stage despite the image appearing somewhat collapsed/less distinctly expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, prior IVF outcomes, sperm parameters, and endometrium with embryo quality reasonably well, though it overinterprets AMH as likely PCOS and does not fully address the unusual day-4/3AA data inconsistency."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable issues: calling this a 'perfect storm' despite repeated failures, implying very high euploidy from morphology/age alone, and invoking immunologic causes without evidence. Probability adjustment is plausible but only moderately supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on valuing embryo morphology and considering recurrent failure workup, but there are deviations: grade terminology is imprecise, routine escalation to combined vaginal+IM progesterone is not guideline-based for all cases, and strong PGT-A recommendation in a 33-year-old is more controversial than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, reviewing luteal support, addressing BMI, and considering future-cycle evaluation, though recommendations are somewhat generic and truncated before detailing a full recurrent implantation failure workup."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012741,
+  "judge_latency_ms": 5456.664208002621,
+  "judge_prompt_tokens": 2382,
+  "judge_completion_tokens": 373
+}

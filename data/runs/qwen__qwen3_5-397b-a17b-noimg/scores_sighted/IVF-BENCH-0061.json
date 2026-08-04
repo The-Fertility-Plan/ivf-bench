@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner 2AA label rather than inventing image-specific findings. However, it overcalled 2AA as 'top tier' and said full blastocyst is the ideal Day 5 stage; 2AA is good quality but not the highest expansion stage, and no actual image-based morphology was assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, prior biochemical pregnancy, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality in a clinically meaningful way. Some points are somewhat speculative, but overall the interaction between embryo quality and patient factors is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to embryo quality and patient modifiers. Minor issues include overstating morphology as a predictor of euploidy and some speculative links (e.g., biochemical pregnancy implying thrombophilia/immunology concerns)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is evidence-based (proceed with transfer, smoking cessation, hydrosalpinx consideration), but several recommendations are not strongly guideline-supported or are overstated, including routine dual-route luteal support, immune profiling/NK cells, MTHFR testing, and relatively liberal PGT-A consideration in a 27-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for the current transfer and future planning, including smoking cessation, luteal support review, hydrosalpinx check, and male factor follow-up. It is useful clinically, though some recommendations would need stronger evidence-based qualification."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.015669,
+  "judge_latency_ms": 5206.195459002629,
+  "judge_prompt_tokens": 3063,
+  "judge_completion_tokens": 432
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated morphology could not be assigned, then assumed a different embryo quality (e.g., 3BB or better), which is inaccurate and ignores available morphological data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian response, sperm concentration, prior ectopic, and endometrial thickness, and connects them to prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it overlooks the provided 3AA grade, makes unsupported assumptions about embryo quality and ICSI/SDF, and labels two prior cycles as RIF, which weakens the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable, but several are not strongly guideline-based or are overstated, including ERA/immune testing/NK cells, thrombophilia screening without indication, and implying PGT-A for a 25-year-old after two failed cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as luteal support review, serial beta-hCG, early ultrasound for ectopic risk, and future tubal/uterine and male-factor evaluation, though some suggestions are not well prioritized or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013845,
+  "judge_latency_ms": 4078.463332996762,
+  "judge_prompt_tokens": 2805,
+  "judge_completion_tokens": 362
+}

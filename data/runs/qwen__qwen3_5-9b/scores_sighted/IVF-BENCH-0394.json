@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0394",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a poor-quality early blastocyst/1DD, noting poorly defined ICM and sparse/degenerative TE, but it overstates expansion as '>50%' and says 'well-formed' cavity despite the image showing a small early blastocoel and overall collapsed/irregular appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, sperm parameters, endometrium, and diagnosis with embryo quality reasonably well. However, it overinterprets FSH 8.5 as DOR without AMH and does not fully nuance that morphology alone does not prove aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from poor morphology plus age, but there are notable inconsistencies: calling expansion 'good' for a grade 1 embryo and recommending immediate vitrification in the context of a transfer discussion is illogical."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent (poor prognosis counseling, considering PGT-A in advanced maternal age), but several recommendations are off: grade 1 does not mean 'good expansion,' routine strong endorsement of PGT-A is overstated, donor egg counseling is premature after a first cycle at age 39, and advising vitrification 'if fresh transfer' is inappropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and future-cycle considerations, but some advice is too generic and one key recommendation is incorrect/confusing (vitrify immediately if fresh transfer). It lacks more specific transfer-cycle management details."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.014304,
+  "judge_latency_ms": 5639.224708997062,
+  "judge_prompt_tokens": 2803,
+  "judge_completion_tokens": 393
+}

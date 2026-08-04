@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel cavity, thinning zona pellucida, compact ICM with many cells, and cohesive TE epithelium. The description aligns well with the provided grade. Minor limitation is that it largely echoes the Gardner score description rather than providing independent morphological observations that go beyond the given data, but no fabricated or inaccurate features are introduced."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, FSH, oocyte yield, endometrial thickness, sperm parameters, BMI, and lifestyle factors. It correctly identifies BMI as the primary modifiable risk factor and connects it to implantation and obstetric outcomes. It appropriately notes the discrepancy between 'male factor' diagnosis and the seemingly normal sperm parameters. Minor gap: does not deeply explore the interaction between obesity and endometrial receptivity or potential OHSS risk given high AMH and 19 COCs retrieved."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 60-75% logically follows from the positive factors (age, embryo quality, endometrial thickness) tempered by BMI concerns. The conclusion that BMI is the main modifiable risk factor is consistently applied throughout. Minor issue: the response could more explicitly quantify how much BMI reduces the baseline probability, and the upper bound of 75% could be better justified given that some literature reports higher rates for 3AA in young patients."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer for young patients with good quality blastocysts, luteal phase support, BMI counseling, and conditional PGT-A consideration. The Gardner grading criteria are correctly applied. The response appropriately defers PGT-A as not strictly necessary for a 29-year-old first cycle, consistent with current guidelines. Minor gap: does not mention OHSS risk monitoring despite high COC yield (19) and elevated AMH, which would be guideline-relevant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal phase support is mentioned, BMI counseling is suggested with concrete referral to nutritionist, lifestyle modifications are detailed, and future cycle planning includes embryo banking and conditional ERA/PGT-A. The response provides clear decision trees for both current and future scenarios. Could be improved by specifying progesterone protocol details, timing of beta-hCG testing, or specific weight loss targets before future cycles."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020337,
+  "judge_latency_ms": 14503.418749998673,
+  "judge_prompt_tokens": 3429,
+  "judge_completion_tokens": 670
+}

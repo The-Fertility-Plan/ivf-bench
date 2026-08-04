@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0698",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, identifies the ICM as compact and tightly packed, and describes the TE as cohesive and continuous. The ICM localization at '1-2 o'clock position' is a reasonable interpretation. Minor issue: the image appears somewhat blurry/lower resolution making precise ICM/TE distinction challenging, yet the model confidently describes features with high specificity. Overall description aligns well with the Gardner 3AA score provided, though some described details (e.g., 'high nuclear:cytoplasmic ratio') may exceed what is clearly visible in this image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects PCOS diagnosis with long agonist protocol rationale, links sperm motility concerns to blastocyst development as a selection filter, correlates AMH with ovarian reserve and stimulation response, addresses endometrial thickness optimality, and considers age-related euploidy rates. The interaction between PCOS and endometrial receptivity, sperm DNA fragmentation risk, and BMI effects are all addressed with appropriate nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Generally well-structured reasoning with clear logic flow. The probability calculation (0.65 × 0.85 × 0.95) is transparent and methodologically sound. However, there is a minor inconsistency: the headline estimate is '60-70%' implantation probability, but the calculation yields '52-65%', and then clinical pregnancy rate is stated as '65-75%' which is higher than implantation rate - these figures are not fully reconciled. The overall narrative remains coherent despite these numerical inconsistencies."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation for good prognosis patients, appropriate luteal phase support protocols, OHSS monitoring, and judicious use of PGT-A and ERA only when indicated. Low-dose aspirin recommendation is somewhat controversial as routine use is not strongly supported by current ESHRE guidelines for standard IVF cases without thrombophilia. Progesterone dosing and duration recommendations are appropriate for PCOS patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations covering immediate transfer strategy (eSET with clear rationale), specific luteal support protocols with dosages, OHSS monitoring criteria, lifestyle modifications, and a tiered future cycle planning approach. The response provides clear decision trees for if the cycle fails, including specific tests (SDF, ERA, PGT-A) with appropriate indications rather than blanket recommendations. The family planning strategy adds valuable long-term perspective."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.020949,
+  "judge_latency_ms": 15999.027999991085,
+  "judge_prompt_tokens": 3563,
+  "judge_completion_tokens": 684
+}

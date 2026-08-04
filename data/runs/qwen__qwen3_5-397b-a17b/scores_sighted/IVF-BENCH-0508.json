@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0508",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a Day 5 blastocyst and the provided 3AA label, correctly noting a large blastocoel and visible ICM, but it overstates certainty about a uniformly cohesive TE and thinning zona from this single image and says 'aligns perfectly' despite some image ambiguity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior reproductive history, endometrium, sperm data, diagnosis, and oocyte maturity reasonably well with embryo quality, though AMH is unavailable and some links (e.g., stress, sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally logical, with probability estimates broadly matching the favorable embryo and patient factors; minor issues include overconfidence in morphology and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in supporting SET for a good-quality Day 5 blastocyst in a 33-year-old, but recommendations such as aspirin/heparin and acupuncture/stress interventions are not well supported without specific indications, and PGT-A is presented somewhat too readily for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET, luteal support review, trigger review, and possible sperm DNA fragmentation testing, though some suggestions would benefit from tighter indication-based nuance."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.013776,
+  "judge_latency_ms": 5110.703915997874,
+  "judge_prompt_tokens": 2767,
+  "judge_completion_tokens": 365
+}

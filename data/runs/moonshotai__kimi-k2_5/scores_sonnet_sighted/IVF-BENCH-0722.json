@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, identifies the ICM as compact and tightly packed, and describes the TE as cohesive with numerous cells. The ICM localization at '1-2 o'clock position' and the description of blastocoel homogeneity are reasonable. However, the image appears somewhat grainy and the TE description claiming '>50 cells visible' is overly precise for what can be reliably assessed from this image quality. The description of 'minimal TE herniation' is not clearly supported by the image. Overall good but slightly over-specified in areas."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including maternal age, AMH, BMI, tubal factor diagnosis, sperm parameters, endometrial thickness, lifestyle factors, and first-cycle status. It uses a structured table to show interactions, addresses how each factor modifies the base implantation probability, and correctly identifies tubal factor as a favorable prognosis category. The alcohol consumption risk and borderline sperm motility are appropriately flagged and connected to outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimates follow logically from the evidence. The additive probability adjustments (+10-15% for age, +5-8% for tubal factor, etc.) are presented transparently. However, some minor inconsistencies exist: the euploidy probability stated as 65-70% for a 28-year-old is slightly high compared to published data, and the '95% CI [52%, 75%]' is presented without statistical methodology. The final live birth probability of 50-60% is coherent with the reasoning chain overall."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: eSET recommendation for young patients with good-quality blastocysts, Gardner grading criteria application, luteal phase support protocols, and hydrosalpinx consideration for tubal factor patients are all guideline-consistent. The progesterone dosing (800-900mg/day vaginal) is appropriate. Minor deviations include the claim that MBSR improves implantation by 20% (limited evidence base) and the optional low-dose aspirin recommendation which lacks strong guideline support for this indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: catheter type named (Wallace or Cook), precise fundal placement distance (1.5-2.0cm), specific progesterone formulations and doses, concrete lifestyle modifications with timeframes, and a well-structured three-scenario future planning framework (negative beta, biochemical pregnancy, clinical pregnancy). The hydrosalpinx re-evaluation reminder is clinically important and specific to the tubal factor diagnosis. The SDF testing recommendation with specific assay types (SCSA or TUNEL) adds further actionable detail."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.021954,
+  "judge_latency_ms": 16201.33429201087,
+  "judge_prompt_tokens": 3663,
+  "judge_completion_tokens": 731
+}

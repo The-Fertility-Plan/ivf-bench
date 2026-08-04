@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting expansion, ICM compactness, and TE characteristics. However, there is some inconsistency: the lab data states Gardner 3AA but the model suggests stage 4 by strict morphology, creating confusion. The TE is described as 'good to fair (roughly B)' which contradicts the provided AA grade. The model acknowledges zona thinning but doesn't precisely characterize the degree of expansion visible. Some granularity observations are noted but the overall description lacks precision about what is actually visible in this somewhat grainy microscopy image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most key clinical factors including age, BMI, AMH, FSH, endometrial thickness, sperm parameters, smoking status, and prior cycle history. The structured table format clearly delineates positive vs. concerning factors. The connection between endometriosis and uterine receptivity issues is appropriately raised. The response correctly identifies the recurrent implantation failure/pregnancy loss pattern as a key clinical concern that may override embryo quality considerations. Minor gap: the response appears truncated and doesn't fully address the clinical miscarriage entry or sperm motility concerns (22.9% is below WHO reference values)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning framework is sound - good embryo quality in context of poor prior outcomes suggests non-embryo factors. However, the response is clearly truncated, cutting off mid-sentence during the clinical miscarriage discussion. This prevents full evaluation of the reasoning chain. The morphological grading inconsistency (suggesting 4AB/4AA when lab data says 3AA) introduces some logical tension. The framing of 'very favorable baseline case' alongside 5 failed cycles creates a tension that is acknowledged but not fully resolved before the response ends."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response demonstrates familiarity with Gardner grading criteria and appropriately references ESHRE-aligned concepts like recurrent implantation failure thresholds. The acknowledgment that morphology cannot determine ploidy aligns with current guidelines. However, the response is truncated before recommendations are made, so full guideline alignment cannot be assessed. The suggestion to consider PGT-A would be guideline-consistent given the RIF history, but this wasn't explicitly stated in the visible portion. No specific mention of endometriosis management protocols per ESHRE endometriosis guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is significantly truncated and does not reach the recommendations section. While the analytical framework is being built, no concrete actionable recommendations for this transfer or future cycle planning are provided in the visible text. The structured analysis of risk factors is a prerequisite for recommendations but the actual clinical guidance (e.g., PGT-A, ERA testing, immunological workup, endometriosis treatment, FET protocol optimization) is absent. This severely limits the practical utility of the response for a clinician needing to make decisions."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.017859,
+  "judge_latency_ms": 16517.387208004948,
+  "judge_prompt_tokens": 2303,
+  "judge_completion_tokens": 730
+}

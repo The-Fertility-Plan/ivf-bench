@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0314",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a very poor-quality early/incipient blastocyst or morula-like embryo with minimal cavity, absent discernible ICM, and poorly defined TE. Minor issue: calls it a '0' expansion/solid mass despite Gardner data labeling 0DD as early blastocyst, so staging language is slightly imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, prior biochemical pregnancy/miscarriage, sperm parameters, and endometrial thickness with prognosis. However, it overemphasizes paternal age as the dominant factor and underuses transfer day/context and diagnosis uncertainty."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate is consistent with the poor morphology, but there are notable overstatements: claiming paternal age is 'the most critical factor,' implying high aneuploidy largely from age 42 alone, and suggesting donor sperm despite normal semen parameters and limited indication."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Morphology interpretation and guarded prognosis are broadly aligned, but several recommendations are not well guideline-based: strong endorsement of PGT-A as clearly improving outcomes in this scenario, attributing major aneuploidy risk to paternal age 42, and suggesting donor sperm without clear male-factor indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling to proceed with transfer with low expectations and mentions future-cycle considerations, but recommendations are somewhat generic and include questionable steps (donor sperm, protocol changes without clear rationale). More nuanced next steps such as repeat culture strategy, lab review, or miscarriage workup would improve usefulness."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013539,
+  "judge_latency_ms": 6188.845291995676,
+  "judge_prompt_tokens": 2503,
+  "judge_completion_tokens": 402
+}

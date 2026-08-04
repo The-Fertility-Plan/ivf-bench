@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the provided 2AA grade, which avoids fabrication. However, it repeated an incorrect stage interpretation from the prompt/lab data ('2' as full blastocyst) and added image-like claims such as symmetry and cell cohesion that were not directly observed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, endometrial thickness, sperm parameters, prior cycle history, and lack of AMH reasonably well with embryo quality and prognosis. Some interactions are somewhat generic and it does not deeply explore PCOS-specific transfer strategy nuances."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age, morphology, and lack of PGT-A. Minor issues include overcalling 2AA as 'top-tier' despite the expansion-stage inconsistency and some speculative assumptions about endometrial pattern and fresh-cycle penalties."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a good-prognosis 31-year-old and caution about OHSS/PCOS are broadly guideline-concordant. Small deviations include overstating the role of PGT-A in a young good-prognosis patient and the inaccurate Gardner stage wording."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including SET, luteal support, OHSS monitoring, cryopreservation, and metabolic follow-up. It is useful clinically, though some recommendations remain somewhat generic and depend on unspecified fresh vs frozen context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014898,
+  "judge_latency_ms": 6262.104833003832,
+  "judge_prompt_tokens": 2946,
+  "judge_completion_tokens": 404
+}

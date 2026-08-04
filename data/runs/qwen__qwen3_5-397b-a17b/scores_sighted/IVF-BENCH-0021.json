@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/compacted embryo with absent discernible ICM and TE, broadly consistent with 0DD. However, it overstates that there is no visible cavity and comments on zona pellucida visibility somewhat inaccurately; the image does suggest an early blastocoel and a visible outer boundary."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, AMH/diagnosis discrepancy, smoking, sperm motility, and endometrial thickness with embryo quality in a clinically meaningful way. Could be stronger by discussing the limitations of inferring causality from a single embryo image and by contextualizing day-4 timing more carefully."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the poor prognosis estimate follows from the 0DD grade and image. Minor issues include treating the embryo as essentially non-viable with near-certainty and some overinterpretation of smoking/sperm factors as primary causes without sufficient evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing very poor prognosis for a 0DD embryo and emphasizing lifestyle optimization. However, recommending 'do not transfer' is too absolute for a day-4 embryo, and stating such embryos are typically discarded overreaches because day-4 embryos may warrant further culture rather than definitive non-viability labeling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including smoking cessation, semen reassessment, diagnostic review, and extended culture planning. It is practical, though the transfer recommendation is overly categorical and would benefit from more nuanced options such as continued culture/reassessment."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013626,
+  "judge_latency_ms": 5872.520000004442,
+  "judge_prompt_tokens": 2542,
+  "judge_completion_tokens": 400
+}

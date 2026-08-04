@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 morula/good compacting embryo and dismisses the provided Gardner 1DD blastocyst grade. It fabricates favorable compaction and minimal fragmentation rather than addressing the poor-quality early blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major patient factors well, including age, BMI, prior live birth, recurrent ectopics, smoking, endometrium, and sperm parameters, and links them to prognosis. However, integration is weakened by anchoring prognosis to an incorrect embryo-quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the risk-benefit discussion is generally coherent, but the reasoning is undermined by the central morphological error and by deriving implantation odds from a falsely favorable embryo assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (smoking cessation, early ectopic surveillance, luteal support, hydrosalpinx evaluation), but there are notable deviations: misapplication of Gardner grading, overstatement that no further cycles should occur until prolonged smoking cessation, and somewhat broad endorsement of PGT-A in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for current transfer and future planning, including counseling, monitoring, lifestyle modification, and tubal evaluation. It is useful clinically, though some recommendations are too rigid and not sufficiently tailored to the actual poor embryo grade."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015531,
+  "judge_latency_ms": 4486.511707997124,
+  "judge_prompt_tokens": 3202,
+  "judge_completion_tokens": 395
+}

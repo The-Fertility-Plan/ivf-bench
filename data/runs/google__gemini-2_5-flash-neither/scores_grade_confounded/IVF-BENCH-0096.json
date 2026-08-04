@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and fails to use the supplied 3AA morphology data; it does not describe the known expansion, ICM, TE, or zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, prior failed cycles, endometrium, and sperm factors reasonably well with prognosis, though it bases this on an incorrect assumption that embryo morphology was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is undermined by the central error that morphology/Gardner score were missing despite being provided, leading to avoidable speculative branching."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling, luteal support, consideration of PGT-A), but ERA is overemphasized after only two failed cycles and the sperm interpretation is somewhat too reassuring given low concentration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, counseling, luteal support, PGT-A discussion, weight optimization, and further uterine evaluation if needed; however, recommendations are less tailored because the known 3AA grade was ignored."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.013494,
+  "judge_latency_ms": 3762.543208002171,
+  "judge_prompt_tokens": 2923,
+  "judge_completion_tokens": 315
+}

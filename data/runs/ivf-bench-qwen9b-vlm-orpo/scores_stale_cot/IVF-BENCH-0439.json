@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0439",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and acknowledges stage uncertainty, but it introduces speculative image features (e.g., zona thinning/reabsorption, dense cellularity details) and contains confusion about Gardner stage 3 versus expanded stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor, prior cycle outcomes, and endometrial thickness well, though it could more explicitly connect day-4 development and prior biochemical pregnancy to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with probability estimates tied to morphology and age-related aneuploidy risk; minor inconsistency remains around staging terminology and day-4 interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with standard IVF practice: morphology is interpreted cautiously, SET is implicitly favored, add-ons are discouraged without indication, and PGT-A is presented as optional rather than mandatory. Minor deviation is the staging confusion under Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support adherence, lifestyle advice, and future-cycle considerations including selective PGT-A and sperm DNA fragmentation testing, though recommendations are somewhat general rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015615,
+  "judge_latency_ms": 5998.776916996576,
+  "judge_prompt_tokens": 3595,
+  "judge_completion_tokens": 322
+}

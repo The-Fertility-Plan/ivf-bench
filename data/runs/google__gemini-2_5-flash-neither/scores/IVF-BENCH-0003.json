@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly states that no image was provided, but then assumes a good-quality Day 4 embryo and describes possible morula/early blastocyst features that are not actually observable, introducing fabricated morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, BMI, tubal factor, ovarian response, sperm parameters, endometrium, and prior cycle history, though some links to actual embryo quality are necessarily speculative without morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is optimistic and rests heavily on an assumed good-quality embryo despite explicitly lacking image or grading data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a good-prognosis 33-year-old, luteal support, and considering further testing only after failure are broadly guideline-consistent, though suggesting PGT-A and ERA relatively early is somewhat debatable and not universally recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer management and contingency planning, including SET, embryo selection priorities, luteal support, cryopreservation, and escalation options if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013674,
+  "judge_latency_ms": 4645.031667001604,
+  "judge_prompt_tokens": 3023,
+  "judge_completion_tokens": 307
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0288",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a 3AC pattern with strong ICM and sparse TE, but overstates expansion/hatching features; a grade 3 blastocyst is full rather than clearly expanded, and the claim that it has successfully hatched or is about to hatch is not supported by the image or Gardner score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, sperm parameters, endometrial thickness, and oocyte maturity with embryo quality reasonably well, though it overinterprets low oocyte yield as possible diminished reserve without AMH and does not fully contextualize the unspecified diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, especially around TE-C lowering implantation despite good ICM and receptive endometrium. Minor issues include conflating grade 3 with expanded/hatching and some speculative links such as sperm DNA fragmentation explaining TE grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles, but there are notable deviations: mislabeling Gardner 3 as expanded, suggesting PGT-A as 'highly recommended' based mainly on age in a low-yield setting, and implying protocol changes without enough evidence. Luteal support recommendation is standard but generic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, counseling on prognosis, luteal support, weight optimization, and considering further male-factor assessment. Some recommendations are somewhat generic or speculative, but overall clinically usable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013737,
+  "judge_latency_ms": 5060.32183401112,
+  "judge_prompt_tokens": 2724,
+  "judge_completion_tokens": 371
+}

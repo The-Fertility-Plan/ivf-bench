@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 4AA Gardner score: hatching blastocyst with zona pellucida breach, densely packed ICM on the right side, and cohesive TE epithelium along the periphery. The description aligns well with the image and grading criteria. Minor limitation is that it doesn't comment on blastocoel cavity size or provide more granular TE cell count observations, but overall the description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, including age, AMH, sperm parameters, endometrial thickness, and smoking status. It correctly identifies the AMH/DOR discrepancy and connects it to clinical interpretation. It links sperm quality to blastocyst formation and endometrial thickness to receptivity. However, it somewhat misinterprets the AMH of 6.88 ng/mL as 'quite high' suggesting PCOS-range when it is actually within normal range for age 34, and the DOR diagnosis context is not fully reconciled. BMI and lifestyle factors beyond smoking are underexplored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 60-75% follows reasonably from the base rate adjustment for smoking. The identification of the AMH/DOR discrepancy shows analytical thinking. However, there is a minor inconsistency in calling AMH 6.88 'quite high' and suggesting PCOS when this value is normal-to-good for age 34, which slightly undermines the coherence. The conclusion that the patient is in a 'very favorable position' despite smoking is appropriately nuanced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: proceeding with fresh transfer of a top-quality blastocyst, smoking cessation counseling, luteal phase support, and PGT-A consideration for future cycles. The Gardner grading interpretation is accurate. The suggestion to consider PGT-A for future cycles at age 34 is appropriate. Minor issue: the response suggests AMH >4.0 ng/mL indicates PCOS-range reserve, which is not strictly accurate per current guidelines, and the DOR diagnosis at AMH 6.88 is not well-reconciled with standard diagnostic thresholds."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, urgent smoking cessation, ensure luteal support, and plan for further workup if cycle fails. Future cycle planning includes protocol considerations and PGT-A. The response appropriately prioritizes smoking cessation as the most modifiable risk factor. Could be improved with more specific luteal support protocols, ERA testing consideration given DOR diagnosis, or specific smoking cessation resources/timeline recommendations, but overall provides clear clinical guidance."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018813,
+  "judge_latency_ms": 12872.313708001457,
+  "judge_prompt_tokens": 2716,
+  "judge_completion_tokens": 711
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0458",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the Gardner 3AB grading, including zona thinning, expanded blastocoel, distinct ICM, and loose TE epithelium. The spatial descriptions (ICM on left, TE on right/bottom) attempt to map to the image. Minor issue: describing the ICM as 'somewhat irregular in texture' while still calling it Grade A is slightly hedging, but overall the description is accurate and well-detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response thoroughly connects maternal age (43) to aneuploidy risk, discusses the interplay between AMH and FSH for ovarian reserve assessment, considers advanced paternal age and its implications for DNA fragmentation, contextualizes the two prior failed cycles, and notes the favorable endometrial thickness. The discussion of how morphology does not predict ploidy at this age is particularly well-integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 10-20% follows logically from the age-related aneuploidy risk applied to a morphologically good embryo. One minor inconsistency: the response states success rate with own eggs at 43 is '<5% per transfer' in the donor egg section, which contradicts the 10-20% estimate given earlier. Also, stating FSH 9.9 indicates 'diminished ovarian reserve' is slightly overstated—it's borderline. Otherwise, the reasoning chain is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ASRM/ESHRE guidelines. The Gardner grading interpretation is correct. PGT-A recommendation at advanced maternal age is appropriate and evidence-based. Donor egg counseling is guideline-appropriate. The recommendation for hysteroscopy after repeated failures aligns with clinical practice. One minor deviation: recommending PGT-A as 'the most critical recommendation' when the embryo may already be prepared for fresh transfer on Day 5 is somewhat impractical without prior planning, though the principle is sound."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: PGT-A testing, sperm DNA fragmentation testing, hysteroscopy, donor egg counseling, and psychological support. The response provides clear next steps for both the current transfer and future planning. It appropriately distinguishes between scenarios where PGT-A is or isn't performed. Could be slightly more specific about protocol modifications for future cycles (e.g., dosing changes, different stimulation approaches) and timing considerations."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.029955,
+  "judge_latency_ms": 17767.937124997843,
+  "judge_prompt_tokens": 2751,
+  "judge_completion_tokens": 648
+}

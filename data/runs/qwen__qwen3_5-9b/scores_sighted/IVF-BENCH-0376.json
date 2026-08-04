@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0376",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided 3AA label rather than the image and fabricates features not clearly visible, including a large blastocoel occupying most of the embryo, clear expansion/hatching status, and cohesive TE; calling refractile bodies a positive sign is also unsupported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, tubal factor, sperm parameters, endometrium, and oocyte yield with embryo quality reasonably well, though some claims about embryo availability and obesity effects are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it calls 3AA the highest possible grade, equates grade 3 with near hatching, and infers image features and biologic meaning that are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF practice on age, BMI, and single good-quality blastocyst transfer, but contains deviations such as overstating morphology, suggesting lipid droplets are favorable, and implying PGT-A because obesity raises aneuploidy/mosaicism risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support consideration, and future weight optimization, though recommendations are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012744,
+  "judge_latency_ms": 5543.650250008795,
+  "judge_prompt_tokens": 2473,
+  "judge_completion_tokens": 355
+}

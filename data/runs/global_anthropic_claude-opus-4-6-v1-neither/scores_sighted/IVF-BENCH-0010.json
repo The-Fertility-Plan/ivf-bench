@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted that no image was provided to it, but it inferred a Day 4 morula-stage transfer from the transfer day and discussed expected morula morphology rather than the actual image, which appears blastocyst-stage. It avoided detailed fabrication, but its staging assumption does not match the visible embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, endometriosis, ovarian response, sperm parameters, endometrial thickness, and first-cycle status, and links them to prognosis and implantation potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it is anchored on an incorrect assumption that Day 4 implies morula-stage transfer, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable, but several are not well aligned with evidence-based IVF guidance, including suggesting dexamethasone peri-implantation, vaginal estradiol if levels drop, growth hormone co-treatment, and broad assumptions about Day 4 transfer being atypical or less evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for luteal support, future cycle strategy, endometriosis management, and follow-up planning, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.36,
+  "judge_cost_usd": 0.01383,
+  "judge_latency_ms": 4752.651874994626,
+  "judge_prompt_tokens": 2815,
+  "judge_completion_tokens": 359
+}

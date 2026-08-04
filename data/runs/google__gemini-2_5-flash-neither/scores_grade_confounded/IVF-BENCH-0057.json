@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (3AA) and incorrectly stated that a Gardner score could not be assigned, omitting clear available morphology data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, smoking, prior biochemical pregnancy, sperm parameters, and endometrium, though it does not connect these to the known 3AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured, but it is weakened by the central error of treating embryo morphology as unknown despite the provided 3AA grade, which affects downstream conclusions and probability estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, counseling, lifestyle optimization), but the morphology handling is inconsistent with Gardner grading use, and PGT-A is presented somewhat strongly for age 35 with one biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical recommendations for current transfer and future cycles, especially smoking cessation and counseling, though some advice is generic and not tailored to the known 3AA blastocyst."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.014421,
+  "judge_latency_ms": 3823.207375004131,
+  "judge_prompt_tokens": 3232,
+  "judge_completion_tokens": 315
+}

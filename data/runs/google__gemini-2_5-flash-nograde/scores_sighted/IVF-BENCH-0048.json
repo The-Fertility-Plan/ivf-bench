@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls visible blastocyst features: a clear ICM and definite blastocoel are not convincingly identifiable in this image, which looks more like a poorly expanded/degenerating blastocyst or cavitating embryo with indistinct TE. It appropriately notes image limitations but still fabricates some morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, BMI, FSH, sperm quality, endometrium, prior IVF outcomes, and oocyte yield reasonably well, and relates these to prognosis. It misses some nuance around miscarriage interpretation and overstates ovarian reserve from FSH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the implantation estimate is somewhat optimistic given the uncertain/possibly poor morphology and the morphology discussion itself is internally tentative yet used to support a fairly broad probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as SET, luteal support, and uterine cavity evaluation are aligned with practice. However, strong endorsement of PGT-A, ERA, thrombophilia, and immunologic workup after this history is more aggressive than guideline-based routine care and not clearly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including SET, protocol review, uterine evaluation, and counseling. Some suggestions are less evidence-based, but overall the advice is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.0165,
+  "judge_latency_ms": 5551.952042005723,
+  "judge_prompt_tokens": 3720,
+  "judge_completion_tokens": 356
+}

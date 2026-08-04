@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0301",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the Gardner 3AA grading, including expansion, zona thinning, ICM compactness, and TE cohesiveness. The description of the ICM being on the 'right side' and zona thinning 'particularly on the right side' are specific spatial claims that may or may not precisely match the image, but overall the description is well-aligned with a 3AA blastocyst. Minor concern is that some descriptions may be slightly over-interpreted or templated rather than purely image-driven, but no major fabrications are evident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects maternal age with aneuploidy rates, AMH with ovarian reserve and maturation rate, endometriosis with implantation and miscarriage risk, partner age with aneuploidy risk, BMI with nutritional status, endometrial thickness with receptivity, and lifestyle factors as positive modifiers. The interactions between these factors are well-articulated and clinically sound."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 35-50% follows from the evidence presented, with clear reasoning about how endometriosis modifies the baseline rate. One minor issue: the model states a 50% implantation rate for a euploid blastocyst in a healthy uterus, then says endometriosis lowers it to 35-40%, but the stated range is 35-50%, which is slightly inconsistent. Also, the euploid implantation rate for a top-grade blastocyst is typically higher (55-65%), so the baseline assumption is somewhat conservative. Overall coherent but with minor logical gaps."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is well-aligned with established guidelines. Gardner grading criteria are correctly applied. The recommendation for SET is appropriate. PGT-A discussion is reasonable though the suggestion that partner age 39 significantly warrants PGT-A is debatable—ASRM guidelines don't strongly recommend PGT-A based on paternal age alone. The endometrial thickness assessment and progesterone support recommendations are consistent with standard practice. The implantation probability estimate of 35-50% is somewhat conservative for a 3AA in a 31-year-old; literature suggests closer to 50-60% for untested 3AA blastocysts at this age, even with endometriosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, nutritional optimization for low BMI, precise progesterone timing, PGT-A consideration for future cycles, surveillance plan if transfer fails, and freeze-all strategy discussion. The nutritional advice for borderline BMI is a nice clinical touch. However, some recommendations could be more specific (e.g., specific progesterone protocols, specific endometriosis management strategies, or whether to consider GnRH agonist add-back). The mention of laparoscopy if transfer fails is appropriate but could be more nuanced regarding timing and indications."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.03236,
+  "judge_latency_ms": 21849.993791023735,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 762
+}

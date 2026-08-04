@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and relied on the provided 0DD grade, avoiding fabricated visual details. However, it overinterpreted grade 0 as definitive developmental arrest/non-viability and stated transfer is contraindicated, which is stronger than what can be concluded from the image/grade alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, prior failed cycle, semen parameters, and endometrial thickness with embryo quality in a clinically meaningful way. Some links are speculative, especially inferred insulin resistance/PCOS phenotype and hidden male-factor mechanisms."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable overstatements: equating 0DD with certain non-viability, assuming embryonic rather than endometrial failure, and recommending cancellation despite the case indicating a Day 5 transfer context. Probability reasoning is directionally consistent but overly absolute."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are deviations: Gardner grading is typically 1-6 with A-C descriptors, so interpreting '0DD' as standard is problematic; declaring transfer contraindicated and recommending routine PGT-A in a 28-year-old after limited failures is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including trigger review, retrieval timing review, sperm DNA fragmentation testing, metabolic screening, lifestyle optimization, and protocol adjustment. Some recommendations are practical, though a few are more speculative than case-driven."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014733,
+  "judge_latency_ms": 6076.952125004027,
+  "judge_prompt_tokens": 2861,
+  "judge_completion_tokens": 410
+}

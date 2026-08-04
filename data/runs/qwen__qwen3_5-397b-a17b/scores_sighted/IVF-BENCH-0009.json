@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies very poor-quality morphology and absent/degenerate ICM/TE consistent with 1DD, but inaccurately calls it cleavage-to-morula transition and overstates arrest/non-viability from a single image; the image is more consistent with an early poorly formed blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, male-factor diagnosis, and cycle context reasonably well, though it over-attributes the embryo appearance to sperm DNA fragmentation without supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the 1DD grade, but there are notable leaps such as inferring Day 4 arrest and suggesting the embryo would usually be discarded despite this being a transfer scenario."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing very poor prognosis for a 1DD embryo, but recommendations such as routine PGT-A at age 34 and strong claims about discarding/using testicular sperm are more speculative than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and future-cycle suggestions, including male-factor workup and transfer counseling, though some recommendations are somewhat overconfident or not sufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.012504,
+  "judge_latency_ms": 4839.108500003931,
+  "judge_prompt_tokens": 2553,
+  "judge_completion_tokens": 323
+}

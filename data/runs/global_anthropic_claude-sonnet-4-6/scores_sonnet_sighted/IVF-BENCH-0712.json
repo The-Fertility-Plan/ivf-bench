@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies zona thinning, attempts to describe ICM and TE organization, and flags granularity/debris concerns. However, the image shows a notably degenerate or poor-quality blastocyst with extensive vacuolation and fragmentation that appears inconsistent with a 3AA grade. The model notes a discordance but doesn't fully characterize the severity of the morphological abnormalities visible, such as the extensive dark inclusions and irregular cytoplasmic texture that suggest significant embryo compromise beyond 'subclinical concerns.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does an excellent job integrating multiple clinical factors including endometriosis effects on implantation, age-related aneuploidy risk, prior failed cycle, partner age and sperm DNA fragmentation risk, endometrial thickness, and lifestyle factors. The risk-benefit matrix effectively connects these factors to prognosis. Minor gap: doesn't explore the specific endometriosis stage or its likely impact on the current cycle more deeply."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 22-35% live birth follows logically from the adjustments applied to the baseline rate, and each deduction is justified. The reasoning chain from morphology to patient factors to recommendations is consistent. Minor inconsistency: the model flags significant image quality concerns suggesting the embryo may be worse than 3AA, yet the probability adjustment for this is only -3 to -5%, which seems conservative given the described visual findings."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for age 36, ERA consideration after failed cycle, sperm DNA fragmentation testing, hysteroscopy, progesterone support, and GnRH agonist pre-treatment for endometriosis. CoQ10 dosing at 600mg is within commonly cited ranges. The freeze-all strategy recommendation is evidence-based. Minor issue: immunological panel including NK cell assay is not universally guideline-supported and could be flagged as investigational."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, organized recommendations covering immediate transfer support, peri-transfer adjuncts, and a detailed future cycle plan. The structured diagnostic workup with prioritized tests, specific IVF strategy modifications, and lifestyle recommendations with specific supplements and dosages make this immediately actionable for a clinician. The summary box with overall prognosis framing aids clinical communication with the patient."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.019218,
+  "judge_latency_ms": 15334.181665995857,
+  "judge_prompt_tokens": 3306,
+  "judge_completion_tokens": 620
+}

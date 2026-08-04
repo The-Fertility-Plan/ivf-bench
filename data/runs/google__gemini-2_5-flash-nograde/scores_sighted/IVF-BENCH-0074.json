@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly recognizes a blastocyst-stage embryo and notes image limitations, but it overstates visibility of a compact ICM and cohesive TE. The image appears poorly expanded/collapsed with indistinct ICM and sparse hard-to-assess TE, so estimates like 3BB/4BB are likely too optimistic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian reserve, endometrium, male factor context, and first-cycle status, and relates them appropriately to prognosis. Some points are somewhat generic and not tightly linked to the actual embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the implantation estimate seems high relative to the uncertain/possibly lower-quality morphology described from the image. There is some internal tension between acknowledging grading uncertainty and giving a fairly confident favorable prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are guideline-consistent, but suggesting ERA/mock cycle based on this case is not routine evidence-based practice, and PGT-A rationale is somewhat overstated for a 30-year-old first cycle. Overall mostly aligned with some deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, lifestyle advice, review of embryo cohort, uterine cavity assessment if failure occurs, and male-factor workup. Some recommendations are broader than necessary for this favorable first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015882,
+  "judge_latency_ms": 5810.30120801006,
+  "judge_prompt_tokens": 3449,
+  "judge_completion_tokens": 369
+}

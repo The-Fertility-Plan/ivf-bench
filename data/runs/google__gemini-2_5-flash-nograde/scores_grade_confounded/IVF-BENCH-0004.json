@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and states that clear blastocyst features are not evident, despite the provided laboratory Gardner score of 3AA indicating an expanded blastocyst with identifiable ICM and cohesive TE. It also omits meaningful discussion of the documented ICM/TE quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, prior live birth, sperm quality, endometrial thickness, and lifestyle, and connects them to prognosis. BMI and the nonspecific diagnosis are only lightly addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the incorrect premise that this is not clearly a blastocyst. The implantation estimate follows its narrative, though the morphology misread undermines the logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and general IVF management is broadly consistent with practice, but the response does not properly apply Gardner grading already provided and overemphasizes uncertainty about a Day 4 embryo. PGT-A comments are broadly acceptable but somewhat generic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, counseling, beta-hCG timing, and future-cycle considerations. Recommendations are useful, though somewhat generic and based partly on an inaccurate morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014271,
+  "judge_latency_ms": 3914.427167001122,
+  "judge_prompt_tokens": 2887,
+  "judge_completion_tokens": 374
+}

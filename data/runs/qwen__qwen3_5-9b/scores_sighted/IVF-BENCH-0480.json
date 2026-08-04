@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0480",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a clear 4AA hatching blastocyst with well-defined ICM and TE, but the image does not convincingly show a classic expanded blastocoel, distinct tightly packed ICM, or cohesive TE; several described features appear inferred from the provided grade rather than visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycle, ovarian response, sperm parameters, endometrial thickness, BMI/lifestyle, and diagnosis with embryo quality reasonably well, though AMH is unavailable and some interpretations are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it treats morphology as 'perfect' despite image ambiguity, labels sperm as normal despite a male-factor diagnosis without nuance, and states the embryo would likely be euploid with PGT-A, which is not justified at age 38."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, including caution about age-related aneuploidy and considering uterine evaluation after failure, but there are deviations such as calling 7.5 mm 'ideal/perfect,' recommending PGT-A too strongly, and suggesting ICSI despite essentially acceptable semen parameters without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, clarifying the day-4/day-5 discrepancy, lifestyle optimization, and future-cycle considerations, though some recommendations are more generic than case-specific."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014157,
+  "judge_latency_ms": 5153.140583002823,
+  "judge_prompt_tokens": 2724,
+  "judge_completion_tokens": 399
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0271",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly identifies a compact ICM and looser TE, but overstates confidence from a single suboptimal image, calls it 'fully expanded' while stage 3 is expanded rather than full/hatching, and infers zona thinning/prerequisite-for-hatching somewhat generically rather than strictly from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, male factor, endometrium, and first-cycle status well with embryo quality; however, it somewhat overinterprets 100% MII as 'exceptional' and assumes likely ICSI without provided confirmation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability range tied to age and morphology. Minor issues include overemphasis on endometrial thickness and speculative linkage of mild motility issues to DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading and general transfer considerations, but recommending PGT-A after a single failed transfer in a 31-year-old and mentioning ERA relatively early are not strongly guideline-supported; fresh transfer recommendation is also somewhat assertive without full cycle context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including luteal support and possible male-factor workup. Recommendations are useful, though some are broader than necessary and not fully individualized to first-cycle prognosis."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013143,
+  "judge_latency_ms": 6178.148292005062,
+  "judge_prompt_tokens": 2481,
+  "judge_completion_tokens": 380
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description referencing ICM compactness, blastocoel expansion, and TE appearance, largely relying on the Gardner score rather than independent image analysis. The image shows a somewhat grainy, partially focused blastocyst with visible cellular structures, but the model's description of a 'clear' blastocoel and 'flattened stretched' TE cells is somewhat generic. The model acknowledges limitations in visualizing zona pellucida thickness and TE looseness from the image, which is honest, but the description doesn't add significant detail beyond what the Gardner score already provides."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age (39) as the dominant risk factor for aneuploidy, normal FSH and BMI as favorable indicators, excellent endometrial thickness (9.0mm), good ovarian response (7 MII from 10 COCs), and the previous failed cycle. The male factor diagnosis is appropriately contextualized with the good sperm parameters. The moderate alcohol consumption (4-6/week) is noted as favorable but this frequency is actually a potential concern that deserved more critical evaluation. AMH absence is noted appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The 30-40% implantation probability estimate is well-justified by the interplay of good morphology offset by age-related aneuploidy risk. The connection between euploidy rates (~30-40% at age 38-40) and implantation probability is coherent. Minor issue: the response doesn't fully reconcile why a previous failed cycle doesn't lower the estimate further, and the alcohol consumption assessment is inconsistently handled (labeled favorable when 4-6 drinks/week warrants caution)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate and guideline-concordant, PGT-A recommendation for age 39 with prior failure aligns with current evidence, luteal phase support is standard, hysteroscopy recommendation for recurrent implantation failure is guideline-supported, and donor oocyte discussion is appropriately framed as a future option. The batching strategy for PGT-A is clinically sound. Minor gap: no mention of ERA (endometrial receptivity testing) which some guidelines consider in recurrent implantation failure cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET is clearly recommended, PGT-A is prioritized for future cycles with explanation of benefits/risks, hysteroscopy/SIS is suggested for uterine evaluation, batching strategy is outlined, and donor oocyte discussion is appropriately timed. Luteal phase support and adjunctive therapy discussion are included with appropriate caveats. The response could be more specific about alcohol reduction counseling (4-6 drinks/week exceeds recommended limits for IVF patients) and could specify ERA testing as a consideration given the prior failure."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.023154,
+  "judge_latency_ms": 17710.56220898754,
+  "judge_prompt_tokens": 3928,
+  "judge_completion_tokens": 758
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 2AB and instead stated no specific morphology could be assigned, then speculated about likely grades and features not supported by the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including young age, tubal factor, ovarian response, endometrium, BMI, and sperm parameters, though it does not connect them specifically to the known 2AB morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a key inconsistency: it ignores the provided embryo grade and bases prognosis on assumed better morphology, which weakens the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as eSET in a very young patient, luteal support, and not routinely recommending PGT-A are broadly guideline-consistent, with only minor overreach in speculative assumptions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including eSET, luteal support, hydrosalpinx consideration, cryopreservation, and follow-up, though some advice is somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01269,
+  "judge_latency_ms": 3571.7678340006387,
+  "judge_prompt_tokens": 2625,
+  "judge_completion_tokens": 321
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It repeats the reported 3AA features rather than what is clearly visible, and likely overcalls a dense ICM/cohesive TE from a low-quality image where these structures are not well delineated. Comments about granularity/debris are plausible, but several morphology details appear inferred rather than directly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior failed cycle, sperm parameters, BMI, and endometrial thickness into prognosis reasonably well, though some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but there are inconsistencies such as citing baseline rates then dropping to a much lower final live birth range with partly speculative penalties, and mixing implantation/pregnancy/live birth concepts."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but recommendations such as ERA after a single failed cycle, aspirin, NK/immunologic testing, oxidative stress markers, and strong endorsement of PGT-A/MACS are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides concrete next-step suggestions for transfer support and future workup/planning, but some recommendations are not well prioritized and include tests/interventions with limited evidence."
+    }
+  ],
+  "extracted_probability": 0.285,
+  "judge_cost_usd": 0.013854,
+  "judge_latency_ms": 5491.708750007092,
+  "judge_prompt_tokens": 2838,
+  "judge_completion_tokens": 356
+}

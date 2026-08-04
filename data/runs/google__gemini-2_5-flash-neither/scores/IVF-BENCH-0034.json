@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly states that no image was provided and avoids inventing visible embryo features, but it cannot perform the requested morphology assessment and repeatedly refers to blastocyst grading despite a Day 4 transfer context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm parameters, endometrium, and lifestyle factors with prognosis reasonably well, though some links are somewhat generic and not tightly tied to an actual embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it relies on an unsupported assumption of a good-quality blastocyst and mixes Day 4 transfer data with blastocyst-stage reasoning, which weakens the logic of the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (single embryo transfer consideration, luteal support, antagonist use in PCOS), but strong endorsement of PGT-A and mention of ERA/intralipids/G-CSF are more conditional and not universally guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer counseling, luteal support, embryo selection, and future evaluation, though some recommendations are generic and limited by the absence of actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013824,
+  "judge_latency_ms": 4064.090125000803,
+  "judge_prompt_tokens": 2988,
+  "judge_completion_tokens": 324
+}

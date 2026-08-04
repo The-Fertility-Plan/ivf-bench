@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided, despite the case giving 3AB with defined expansion, ICM, and TE features. It therefore fails to analyze the available morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian response, sperm parameters, diagnosis, and endometrium, though it misses how the known 3AB grade should modify prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the false premise that embryo morphology is unavailable, which affects downstream conclusions and probability estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as eSET in a young good-prognosis patient, standard luteal support, avoiding bed rest, and not routinely using PGT-A are broadly guideline-consistent, with only minor limitations from not using the provided grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future review points, though actionability is reduced because it does not tailor recommendations to the known 3AB embryo quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013398,
+  "judge_latency_ms": 4812.083083001198,
+  "judge_prompt_tokens": 2991,
+  "judge_completion_tokens": 295
+}

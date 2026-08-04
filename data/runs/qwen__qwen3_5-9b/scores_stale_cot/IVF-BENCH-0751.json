@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0751",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3BA grading appropriately and gives a generally plausible blastocyst description, but it overstates image-specific certainty and includes some questionable visual claims given the noted ambiguity between morula/early blastocyst and expanded blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, tubal factor, sperm quality, endometrium, and smoking with embryo quality and prognosis well, though some interactions are simplified and prior-cycle context is limited by no history."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are internal inconsistencies in staging confidence and probability framing, including shifting estimates and a somewhat speculative multiplication of euploidy and implantation assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles on morphology, single good-quality day-5 transfer, and smoking cessation, but recommending PGT-A after one failed transfer in a 32-year-old is not strongly guideline-driven and some statements about TE importance are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, smoking cessation counseling, luteal support, and future planning, though recommendations could be more nuanced regarding exercise, smoking timing, and indications for PGT-A."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.00830375,
+  "judge_latency_ms": 5671.463083010167,
+  "judge_prompt_tokens": 4035,
+  "judge_completion_tokens": 326
+}

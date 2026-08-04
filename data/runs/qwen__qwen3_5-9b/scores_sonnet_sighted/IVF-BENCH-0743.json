@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0743",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion, thinning zona, and general blastocyst features consistent with Gardner 3AA. However, the ICM localization description ('right side') and characterization as 'dark, granular' is somewhat imprecise for what is visible in the image, where the ICM and TE boundaries are difficult to clearly delineate. The description of hatching/about-to-hatch is slightly overstated for a Grade 3 expansion. Overall mostly accurate but with some interpretive liberties not fully supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (39) and aneuploidy risk, PCOS implications for oocyte quality and miscarriage risk, sperm parameters, endometrial thickness, and lifestyle factors. It correctly notes that BMI 21.3 and Mediterranean diet mitigate PCOS metabolic risks. Minor gap: AMH is N/A and FSH of 9.5 is not discussed in context of ovarian reserve assessment, which would be relevant for a 39-year-old PCOS patient."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality to age-related aneuploidy risk to probability estimate. The 40-60% range is coherent with the evidence presented. The response correctly notes that younger patients would have higher rates and age reduces euploidy probability. Minor inconsistency: the response describes the embryo as potentially 'hatching' in morphology section but the Gardner score is 3 (not 4 or 6), which is a slight contradiction in the expansion staging logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: appropriate discussion of PGT-A for age 39, progesterone support mention, beta-hCG monitoring timeline (12-14 days), and endometrial thickness thresholds (>10mm). The short agonist protocol rationale for PCOS is correctly noted. The PGT-A discussion appropriately distinguishes fresh vs. FET scenarios. Minor gap: does not address single embryo transfer (SET) policy recommendations which are guideline-supported for good-quality blastocysts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, consider PGT-A with fresh vs. FET distinction, lifestyle maintenance, progesterone support, and early monitoring schedule. The response provides clear next steps. Could be improved by addressing whether to freeze remaining embryos, specific progesterone protocol suggestions, or luteal phase support details. The PGT-A recommendation is nuanced and clinically useful."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018507,
+  "judge_latency_ms": 14137.828624996473,
+  "judge_prompt_tokens": 2784,
+  "judge_completion_tokens": 677
+}

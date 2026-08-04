@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion grade, ICM location and characteristics, and TE morphology consistent with a 3AA blastocyst. The description of the zona pellucida thinning and blastocoel expansion is appropriate. However, the image appears somewhat granular and the ICM boundaries are not entirely crisp, and the model's description of 'minimal fragmentation' and 'uniform TE cells with distinct cell boundaries' may be slightly idealized compared to what is visible in the somewhat murky microscopy image. The positional description of ICM at '1-2 o'clock' adds specificity but cannot be fully verified from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (29) and its impact on euploidy rates, BMI 35.1 and its quantified effect on implantation, AMH/FSH and oocyte yield, endometrial thickness adequacy, male factor diagnosis with sperm parameters, former smoking history, and first-cycle status. The interactions between these factors and embryo quality are explicitly discussed with appropriate weighting, particularly the BMI-embryo quality interaction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The probability estimate of 45-55% implantation rate is derived transparently from a stated baseline (55-65% for AA morphology, age <35) with a clearly quantified BMI adjustment (15-25% relative reduction). The live birth rate estimate further accounts for miscarriage risk. Conclusions in recommendations follow directly from the risk-benefit analysis presented, with no internal contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: eSET recommendation for high-quality blastocyst in young patient, luteal phase support protocols, Gardner grading criteria application, and PGT-A indications. The recommendation for progesterone monitoring and consideration of IM vs vaginal routes in obese patients reflects current evidence. Minor issue: the suggestion of metformin prophylaxis for GDM is somewhat premature without confirmed insulin resistance diagnosis, and the euploidy rate estimate of 70-80% for age 29 is slightly optimistic compared to most published data (typically 60-70%)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: eSET with clear rationale, specific progesterone threshold (>10 ng/mL), early GDM screening timing, quantified weight loss targets (5-10%, BMI <30), specific timeline for weight optimization (6-12 months), freeze-all strategy rationale, PGT-A trigger criteria (>2 failed transfers), and SDF testing indications. Each recommendation includes clinical reasoning and alternatives, making this immediately useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021027,
+  "judge_latency_ms": 16090.387625008589,
+  "judge_prompt_tokens": 3474,
+  "judge_completion_tokens": 707
+}

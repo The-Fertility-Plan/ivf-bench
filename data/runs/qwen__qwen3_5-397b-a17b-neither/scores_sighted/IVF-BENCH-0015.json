@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating specific embryo features. It correctly noted Day 4 assessment would focus on morula/early blastocyst features, but it did not analyze the actual visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated maternal age, AMH, BMI, diagnosis mismatch, sperm parameters, paternal age, endometrium, and cycle history into prognosis reasonably well, though some links to actual embryo morphology were necessarily limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a logical explanation for prognosis and recommendations. Minor issues include an imprecise statement about live birth rates 'if a euploid blastocyst is transferred' and some speculative assumptions about why Day 4 transfer was chosen."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are some overreaches: strong recommendation for PGT-A in this exact scenario, suggesting TESE based mainly on paternal age/DNA fragmentation concerns, and implying Day 4 transfer is generally less favored without nuance. Overall mostly aligned but not fully."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for current transfer and future planning, including luteal support review, diagnostic reassessment, AFC/metabolic workup, sperm DNA fragmentation testing, and protocol discussion. Some recommendations are somewhat generic or stronger than the evidence warrants."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014589,
+  "judge_latency_ms": 5050.175249998574,
+  "judge_prompt_tokens": 3068,
+  "judge_completion_tokens": 359
+}

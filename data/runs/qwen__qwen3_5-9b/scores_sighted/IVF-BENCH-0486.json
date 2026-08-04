@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0486",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, claiming a clear blastocoel, compact ICM, cohesive TE, and thinning/hatching zona that are not convincingly identifiable here. It relies heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm, endometrium, and lifestyle with embryo quality reasonably well, though it overcalls the patient as a low responder and misses some nuance around unexplained infertility and first-cycle context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: calling 10 MII oocytes a low response, citing >70% implantation for 3AA in younger patients without context, and recommending fresh transfer over freezing based on questionable reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF practice, especially the directive to avoid freezing because of 'risk losing the best chance' and the strong endorsement of PGT-A after one failed cycle in a 37-year-old with limited embryo numbers. Donor egg counseling is also premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical lifestyle advice and suggests transfer/future planning, but the recommendations are insufficiently nuanced and include potentially inappropriate directives rather than balanced clinician-oriented options."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013197,
+  "judge_latency_ms": 4671.258917005616,
+  "judge_prompt_tokens": 2584,
+  "judge_completion_tokens": 363
+}

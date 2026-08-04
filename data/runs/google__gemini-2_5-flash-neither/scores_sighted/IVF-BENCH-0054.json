@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate embryo morphology. It therefore avoided inaccuracies, but provided no actual morphological assessment despite visible features in the reference image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated key factors well, especially maternal age, prior miscarriage/failed cycle, ovarian response, sperm parameters, BMI, and endometrial thickness, and linked these to likely embryo competence and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with the implantation estimate tied mainly to age, prior history, and the absence of morphology/euploidy data. Minor limitation: the estimate is necessarily broad and somewhat generic without image-based grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: counseling on age-related aneuploidy, luteal support, consideration of PGT-A, and uterine cavity assessment after repeated failure. Minor caveat: ERA and supplements are presented despite limited/conditional evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future cycles, including counseling, luteal support, uterine evaluation, and consideration of PGT-A. It is useful clinically, though some suggestions remain somewhat broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014784,
+  "judge_latency_ms": 5301.37770800502,
+  "judge_prompt_tokens": 3278,
+  "judge_completion_tokens": 330
+}

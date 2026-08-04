@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a compacted morula/early blastocyst with favorable compaction and minimal fragmentation, whereas the provided laboratory grade is 1DD, indicating a poor-quality early blastocyst with degenerative/absent ICM and TE. It also infers favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including maternal age, low AMH/low oocyte yield, endometrial thickness, sperm parameters, and lifestyle, and relates them to prognosis, though it does not fully reconcile these with the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the incorrect morphological premise and by optimistic assumptions about embryo quality that do not fit a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but there are notable issues: overreliance on endometrial thickness as 'excellent receptivity,' questionable statement that waiting risks the implantation window closing in this context, and some speculative protocol/adjuvant suggestions not firmly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support and future cycle planning, including protocol reconsideration and discussion of embryo banking/PGT-A, though some recommendations are more speculative than case-specific."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.012891,
+  "judge_latency_ms": 4368.535209003312,
+  "judge_prompt_tokens": 2427,
+  "judge_completion_tokens": 374
+}

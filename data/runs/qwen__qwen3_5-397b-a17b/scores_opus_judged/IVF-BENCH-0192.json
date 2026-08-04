@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0192",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst features generally consistent with the Gardner 4BC score, including expansion, loosely grouped ICM, and sparse TE. However, the use of 'hyperechoic' is an ultrasound term misapplied to microscopy, and the visual descriptions are somewhat generic. The identification of the blastocoel cavity and zona pellucida thinning/breach is appropriate for a stage 4 hatching blastocyst. Some descriptions feel like they are derived more from the lab data than from independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors including maternal age, AMH with oocyte yield, BMI, previous miscarriage history, sperm parameters, endometrial thickness, and the unusual Day 4 transfer timing with a hatching blastocyst. The model astutely identifies the potential embryo-endometrial asynchrony issue and connects the low AMH with the actual good response. Each factor is meaningfully connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 15-25% follows from the baseline of ~50% for a top-quality blastocyst with appropriate downgrades for TE grade C, BMI, and miscarriage history. The note about Day 4 transfer timing discrepancy is a thoughtful observation. Minor issue: the claim that Gardner stage 4 means 'hatching' is correct per the provided data, but the model could have been more precise about the distinction between expanded and hatching stages. The logic chain is clear and consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines. PGT-A recommendation for future cycles given miscarriage history is appropriate. The suggestion to proceed with transfer of a BC-grade embryo is reasonable. The correlation of TE grade C with lower implantation and higher aneuploidy rates is evidence-based. The BMI recommendation to target <25 aligns with guidelines. Minor deviation: the statement that TE grade C 'often correlates with chromosomal abnormalities' is somewhat overstated, though there is some literature support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure robust luteal support, counsel on expectations, recommend PGT-A for future cycles, lifestyle modifications with specific BMI target, protocol considerations, and timing review for Day 5 transfers. The recommendations are well-organized into current transfer and future planning. Could be slightly more specific about progesterone dosing/route and specific recurrence risk counseling details."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.03052,
+  "judge_latency_ms": 22339.09170900006,
+  "judge_prompt_tokens": 2789,
+  "judge_completion_tokens": 663
+}

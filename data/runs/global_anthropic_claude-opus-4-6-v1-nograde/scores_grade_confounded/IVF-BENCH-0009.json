@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the embryo as a Day 4 morula with partial compaction, despite the provided laboratory grade being Gardner 1DD, a poor-quality early blastocyst. It fabricates morula-specific features and does not address the absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, endometrium, male factor, and first-cycle status, and relates them to prognosis, though this is undermined by the incorrect embryo-stage assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but the core reasoning is built on a wrong morphological premise, leading to an implausibly optimistic implantation estimate and conclusions inconsistent with the stated 1DD embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner terminology is not respected because a 1DD blastocyst is reclassified as a morula. Recommendations are partly standard, but the prognosis and transfer assessment are not well aligned with evidence for a very poor-quality DD embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical recommendations for luteal support, follow-up, and future planning, though some advice is less useful because it is based on an incorrect assessment of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.34,
+  "judge_cost_usd": 0.012684,
+  "judge_latency_ms": 4113.2642080046935,
+  "judge_prompt_tokens": 2458,
+  "judge_completion_tokens": 354
+}

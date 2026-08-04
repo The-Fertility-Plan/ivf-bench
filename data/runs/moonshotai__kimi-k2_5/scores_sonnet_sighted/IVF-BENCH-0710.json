@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies key morphological features including the hatching/herniating blastocyst, cohesive TE, compact ICM, and thinned zona pellucida. The ICM localization and blastocoel expansion description are consistent with the image. Minor issue: describing TE as 'syncytial layer' is technically incorrect (TE is epithelial, not syncytial), and some described details (e.g., 'granular cytoplasm without vacuolization') are difficult to confirm from this resolution image. The grading concordance note about Grade 4 vs 5 distinction shows good morphological knowledge."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response critically identifies the AMH/DOR discrepancy and offers plausible explanations (unit conversion, functional DOR). It connects age-specific euploidy rates, smoking effects on uterine perfusion, endometrial thickness optimization, sperm parameters, and oocyte maturity rate into a coherent prognostic picture. The interaction between smoking and implantation is quantified with specific mechanistic reasoning. No major clinical factors are overlooked."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is generally well-structured and conclusions follow from evidence. The probability adjustment methodology (baseline minus smoking penalty plus endometrial bonus) is transparent. Minor inconsistency: the response states 4AA corresponds to 'top decile' while also noting the Gardner score technically suggests Grade 5 hatching, creating slight confusion. The DOR discrepancy analysis is logical but introduces uncertainty that slightly undermines the overall coherence. Probability ranges are internally consistent between sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation for high-quality blastocyst, appropriate luteal support protocol, evidence-based smoking cessation counseling, and conditional PGT-A recommendation at age 34. The low-dose aspirin suggestion for smoking history is reasonable but not strongly guideline-supported for this indication. The note against routine PGT-A at age 34 with good morphology aligns with current ASRM guidance. ERA/EMMA/ALICE recommendation for failed cycle is consistent with current practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations covering immediate transfer decisions (eSET, luteal support dosing, aspirin consideration), lifestyle interventions with timeline specificity (48-72 hour smoking cessation benefit), future cycle planning with protocol alternatives based on AMH clarification, and specific supplementation recommendations with doses (CoQ10 200mg BID). The prognostic counseling script is directly usable in clinical consultation. Contingency planning (if cycle fails) with specific next investigations is particularly practical."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.020172,
+  "judge_latency_ms": 16889.115041005425,
+  "judge_prompt_tokens": 3219,
+  "judge_completion_tokens": 701
+}

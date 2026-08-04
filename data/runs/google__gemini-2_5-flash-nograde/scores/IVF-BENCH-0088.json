@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst-stage assessment with reasonable ICM/TE grading uncertainty, but uses broad speculative ranges and describes features like disorganization/irregularity without clear image-grounded precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, prior failed cycle, sperm motility, endometrium, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, and the implantation estimate follows from the stated embryo quality and patient factors, though some assumptions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with IVF practice on morphology, SET counseling, luteal support, and lifestyle modification, but includes less guideline-supported suggestions such as ERA/immunologic workup after only one failed cycle and somewhat liberal PGT-A framing in a young DOR patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear practical recommendations for current transfer and future planning, including counseling, lifestyle changes, protocol review, and male-factor follow-up, though some steps are broader than necessary for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014706,
+  "judge_latency_ms": 4262.7202500007115,
+  "judge_prompt_tokens": 3372,
+  "judge_completion_tokens": 306
+}

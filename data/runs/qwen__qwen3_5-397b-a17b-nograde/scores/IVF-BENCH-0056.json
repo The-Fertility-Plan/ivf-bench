@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment with appropriate Gardner-style descriptors, but some image-specific details appear overconfident (e.g., exact thinning/hatching verge, prominent ICM location/quality) without clear support, so accuracy is moderate rather than precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor diagnosis, ovarian reserve, sperm quality, BMI, smoking, and endometrial thickness into prognosis well, though some links are somewhat generalized and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent: good embryo and favorable age balanced against smoking/BMI risks. Probability estimate generally follows the narrative, though some quantitative adjustments are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, especially support for single embryo transfer in a young patient with a good-quality day-5 blastocyst. Minor deviations include somewhat assertive statements about progesterone route/BMI and PGT-A framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear practical next steps for current transfer and future planning, including SET, smoking cessation, weight management, and uterine evaluation if failure occurs. Useful, though some suggestions depend on unavailable cycle details."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012423,
+  "judge_latency_ms": 4673.210000000836,
+  "judge_prompt_tokens": 2431,
+  "judge_completion_tokens": 342
+}

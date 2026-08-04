@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0262",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies AA-quality ICM and TE features, but flags a discrepancy between the documented Gardner score of 2AA and what it sees in the image, suggesting the embryo looks more like a 4AA or 5AA. While this critical observation about expansion stage is noteworthy and potentially valid, the documented score is 2AA (full blastocyst), and the model's claim of seeing an expanded or hatching blastocyst may overstate what's visible. The description of zona pellucida as 'thin and distinct' and the ICM/TE descriptions are reasonable but the expansion stage disagreement with the provided data is a significant point of contention."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors: maternal age 38 with high AMH, prior IVF live birth as a strong prognostic indicator, uterine factor diagnosis with appropriate caveats about unknown etiology, optimal BMI, excellent sperm parameters, and lifestyle factors including alcohol consumption. The model thoughtfully connects each factor to prognosis and considers how they interact with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimates follow from the evidence presented, with appropriate adjustments for age, aneuploidy risk, uterine factor, and prior success. The conditional probability reasoning (euploid vs aneuploid) is sound. Minor issue: the handling of the grading discrepancy could be more decisive rather than hedging between 2AA and 4/5AA. The logic chain from morphology to clinical factors to probability is clear and consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Appropriate use of Gardner grading criteria, correct aneuploidy risk estimates for age 38, reasonable SART-based outcome estimates, and appropriate mention of PGT-A consideration. The recommendation to eliminate alcohol pre-transfer aligns with clinical guidance. The probability ranges are consistent with published literature for this age group and embryo quality."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations including lifestyle modification (alcohol cessation), PGT-A consideration, and endometrial assessment. However, the recommendations section appears truncated ('For This Transfer' is cut off), significantly limiting the actionability. What is present is reasonable but incomplete - missing specific transfer protocol recommendations, endometrial preparation details, and future cycle planning specifics."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.027985,
+  "judge_latency_ms": 21016.997000027914,
+  "judge_prompt_tokens": 2527,
+  "judge_completion_tokens": 614
+}

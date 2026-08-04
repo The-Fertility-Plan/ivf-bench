@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and fails to use the supplied 3AA morphology data, so it does not assess the embryo's known expansion, ICM, or TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, prior live birth, sperm quality, BMI, and endometrium, though it does so without incorporating the actual provided embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by a key factual error: it claims morphology and Gardner score are absent despite being provided. It also creates inconsistency by discussing a Day 4 transfer while assuming unspecified morula/early blastocyst quality instead of the stated 3AA blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but the discussion of Day 4 versus Day 5/6 transfer and the suggestion to 'confirm morphology before transfer' are misapplied given the provided 3AA grade; PGT-A is presented somewhat broadly rather than selectively."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical steps such as luteal support, beta-hCG timing, and future-cycle considerations, but several recommendations are generic and less useful because they ignore the known embryo grading information."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013938,
+  "judge_latency_ms": 4116.180457996961,
+  "judge_prompt_tokens": 2856,
+  "judge_completion_tokens": 358
+}

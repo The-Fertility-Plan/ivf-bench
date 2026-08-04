@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies poor ICM and TE consistent with the 1DD Gardner score, and notes irregular/patchy trophoblast and lack of robust expansion. However, looking at the image, the embryo actually appears to show a reasonably cavitated blastocoel with multiple cells visible - it does not appear as collapsed or degenerative as described. The model somewhat over-relies on the reported Gardner score rather than independently analyzing the image, and some described features (collapsed/irregular blastocoel) don't fully match what's visible. The description of 'no obvious compact ICM' is consistent with the grade but the overall morphological narrative has some inaccuracies relative to the actual image appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 38 as dominant variable, AMH 1.71 in context of age, FSH 6.2, BMI 24.4, unexplained infertility diagnosis, sperm parameters (concentration and motility), endometrial thickness, lifestyle factors (former smoking, diet, activity), and first IVF cycle status. Each factor is connected to its specific impact on prognosis, and interactions between factors (age + embryo quality, endometrium + male factor as favorable offsets) are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 2-8% logically follows from the combination of poor morphology and age-related aneuploidy risk. The model correctly distinguishes implantation probability from live birth probability. Minor issue: the model notes the embryo 'does not look like a clearly expanded blastocyst' yet the image shows reasonable cavitation, creating slight tension between image interpretation and stated conclusions. Overall the logic chain from evidence to recommendations is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, PGT-A discussion for age 38 with appropriate caveats about limitations, avoidance of unproven add-ons, standard luteal support, folate supplementation, and appropriate counseling. The Gardner grading interpretation is correct. The model appropriately notes PGT-A doesn't create healthier embryos - a nuanced guideline-consistent point. Minor gap: could have referenced specific ESHRE blastocyst grading consensus more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations organized clearly for both immediate transfer management and future cycle planning. Includes: single ET rationale, luteal support continuation, prenatal optimization specifics, serial beta-hCG monitoring, PGT-A discussion with explicit pros/cons, stimulation protocol review considerations (double trigger, dosing), sperm DNA fragmentation testing criteria, avoidance of specific unproven add-ons listed by name, and emotional support recommendation. The structured tables and clear bottom-line summary make this highly usable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.024906,
+  "judge_latency_ms": 17893.84458299901,
+  "judge_prompt_tokens": 4597,
+  "judge_completion_tokens": 741
+}

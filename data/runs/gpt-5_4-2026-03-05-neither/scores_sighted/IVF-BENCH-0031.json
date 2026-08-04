@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to describe unseen morphology and did not fabricate image-specific features. However, it incorrectly framed the case as lacking an image and as likely Day 4 morula rather than recognizing the attached embryo appears blastocyst-like, so morphology assessment was omitted rather than matched to the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve markers, oocyte yield, BMI, prior live birth, endometrium, sperm parameters, smoking, and transfer timing into prognosis and counseling."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to embryo-quality uncertainty and patient factors. Minor issue: it leans heavily on the assumption that no image was available and Day 4 implies morula, which limits precision."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: eSET in a young favorable patient, smoking/alcohol cessation, questioning routine PGT-A at age 29, and considering blastocyst culture if embryo numbers allow. Slight limitation is the generic handling of Day 4 transfer and morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including eSET preference, smoking cessation, alcohol avoidance, luteal support continuation, reassessing DOR labeling, and considering blastocyst culture. Useful though not highly tailored to the actual imaged embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.016143,
+  "judge_latency_ms": 5758.398417005083,
+  "judge_prompt_tokens": 3596,
+  "judge_completion_tokens": 357
+}

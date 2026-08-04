@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the provided 1DD grade. It correctly noted severe poor-quality ICM/TE per the supplied score, but it overreached by calling the embryo definitively non-viable and unsuitable for transfer, and it did not describe visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated maternal age, endometriosis, prior failed cycles/miscarriage, endometrial thickness, ovarian response, BMI, lifestyle, and paternal factors with embryo prognosis in a clinically meaningful way, though some links were somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains important overstatements: equating a poor-grade blastocyst with absolute non-viability, saying transfer is medically contraindicated, and inferring certainty beyond the evidence. Probability estimates are directionally reasonable but the certainty is too strong."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While it correctly references Gardner grading limitations and age-related aneuploidy, several recommendations are not well aligned with standard practice: DD is not a standard Gardner grade in many labs, poor morphology alone does not make transfer categorically contraindicated, and strong endorsement of PGT-A/ultra-long suppression is more assertive than guideline-supported individualized use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer decision-making, future cycle planning, endometriosis management, and adjunct evaluation. However, some actions are too absolute and insufficiently nuanced for a poor-quality but not necessarily impossible embryo."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014793,
+  "judge_latency_ms": 5891.030207989388,
+  "judge_prompt_tokens": 2851,
+  "judge_completion_tokens": 416
+}

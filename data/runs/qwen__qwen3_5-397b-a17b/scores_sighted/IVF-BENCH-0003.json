@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst and notes visible blastocoel, but overstates image support for 2AA features; ICM location/quality and cohesive TE are not clearly demonstrated, and it inaccurately equates grade 2 with full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, tubal factor, endometrial thickness, ovarian response, and paternal age with prognosis reasonably well, though AMH is unavailable and some links (e.g., former smoking, paternal-age effect magnitude) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: misinterpretation of Gardner expansion stage, strong emphasis on day-4 blastocyst/endometrial asynchrony without clear support, and a probability estimate that may be affected by these assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Appropriately supports eSET in a young patient with a good-quality embryo, but PGT-A recommendation based mainly on paternal age is not strongly guideline-based, and the discussion of day-4 blastocyst asynchrony/freeze-all is more speculative than standard guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with eSET, luteal support, and future-cycle considerations, though some recommendations are generic and a few are based on debatable premises."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0135,
+  "judge_latency_ms": 5021.6303750057705,
+  "judge_prompt_tokens": 2755,
+  "judge_completion_tokens": 349
+}

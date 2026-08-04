@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description confirming the 2AA grade with appropriate ICM and TE characterizations. However, there is a notable inconsistency: the Gardner score states 'full blastocyst' for expansion stage 2, but the model correctly notes that a full blastocyst typically aligns with Stage 3, then awkwardly tries to reconcile this. The description of zona pellucida thinning and hatching preparation may be fabricated or over-interpreted without clear image evidence. The analysis is mostly accurate but contains some confusion around expansion staging definitions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (32), BMI (31.2), AMH, endometrial thickness, and critically the two ectopic pregnancies. It correctly identifies the ectopic history as the dominant risk factor and connects it to the 'unexplained' diagnosis being potentially misleading. Sperm parameters are not explicitly discussed despite being provided, which is a minor omission. The previous live birth is appropriately noted as a favorable indicator. The interaction between BMI and endometrial receptivity is addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 40-55% follows reasonably from the stated adjustments to a baseline of 60-70%. The identification of two ectopics as a major risk factor driving down probability is coherent. Minor inconsistency: the model flags Day 4 transfer as a risk for synchrony issues but doesn't fully reconcile this with the Gardner score description stating 'full blastocyst' at Day 4, which would actually suggest accelerated development rather than a simple timing mismatch. The PGT-A recommendation citing rapid development as correlating with aneuploidy is a slight overreach."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate and well-justified given ectopic history, early beta-hCG and ultrasound monitoring aligns with standard ectopic surveillance protocols, salpingectomy recommendation for tubal pathology aligns with ESHRE hydrosalpinx guidelines, and ERA consideration for repeated implantation failure is evidence-based. PGT-A recommendation at age 32 with this history is reasonable though not universally guideline-mandated. The Day 4 transfer concern about window of implantation is clinically valid."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: SET is clearly justified, early monitoring protocol is specified (6-week ultrasound, beta-hCG), tubal evaluation with potential salpingectomy is a concrete next step, weight management with a specific target (5-10% body weight) is practical, and ERA is suggested as a contingency if transfer fails. The response provides a clear hierarchy of next steps. Could be slightly more specific about monitoring intervals for beta-hCG or specific ERA timing protocols, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.019329,
+  "judge_latency_ms": 15589.771083003143,
+  "judge_prompt_tokens": 2698,
+  "judge_completion_tokens": 749
+}

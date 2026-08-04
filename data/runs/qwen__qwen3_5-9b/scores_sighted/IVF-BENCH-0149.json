@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0149",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the image as a single-cell zygote/oocyte, whereas the image shows a blastocyst. It fabricates features like a central nucleus and fails to describe visible blastocyst morphology such as cavity, ICM, TE, and zona characteristics."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, AMH, oocyte yield, sperm parameters, BMI, diagnosis, endometrium, and first-cycle status, though it somewhat overstates diminished ovarian reserve and embryo exceptionalism."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by the major image misclassification and by internal inconsistency in interpreting Gardner 2AA as both 'full blastocyst' and 'Grade 6.' Several conclusions are built on this flawed premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are notable deviations from standard grading interpretation: Gardner 2AA is not a full/expanded grade 6 blastocyst, and calling 2AA 'top-tier' is overstated. The PGT-A suggestion for a 32-year-old with low yield is not clearly guideline-supported in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, luteal support, freezing additional viable embryos, lifestyle optimization, and future monitoring, though some recommendations are generic and not tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013332,
+  "judge_latency_ms": 5194.748667010572,
+  "judge_prompt_tokens": 2574,
+  "judge_completion_tokens": 374
+}

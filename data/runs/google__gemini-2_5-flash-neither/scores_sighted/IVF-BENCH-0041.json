@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was available to it and did not fabricate embryo morphology. It appropriately declined morphological assessment rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, BMI, male factor, prior failed cycle, endometrial thickness, and lifestyle factors into prognosis reasonably well, though some interactions were generalized and depended on an assumed good-quality blastocyst."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with clear acknowledgment that prognosis is conditional on unknown embryo morphology. Minor weakness is the relatively optimistic estimate despite missing embryo-specific data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are guideline-concordant, but suggesting ERA after a single failure and relatively early consideration of PGT-A/immunologic testing is more aggressive than current evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, cycle review, uterine cavity assessment, and lifestyle optimization. Some suggestions are somewhat broad and include tests not routinely indicated after one failed cycle."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015627,
+  "judge_latency_ms": 4506.246083998121,
+  "judge_prompt_tokens": 3614,
+  "judge_completion_tokens": 319
+}

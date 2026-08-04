@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a blastocyst but conflicts with the provided lab grade, calling it 3BB/4BB instead of 2AB, and likely overstates expansion while downgrading ICM from A to B. TE as B is closer, but the morphology assessment is not well matched to the reference grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, prior miscarriage/failed cycles, sperm parameters, and endometrial thickness with embryo prognosis reasonably well, though it could better distinguish morphology from likely euploidy and avoid overinterpreting lifestyle factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: good morphology/endometrium versus age-related aneuploidy risk and miscarriage history. Minor issues include inconsistent expansion terminology and some speculative statements, but the probability estimate broadly follows the argument."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET and considering PGT-A at age 40. However, the morphology grading does not align with Gardner data provided, and suggestions such as TESA for elevated DNA fragmentation are somewhat overstated without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including proceeding with transfer, luteal support, SET, consideration of PGT-A, and sperm DNA fragmentation testing. Some recommendations are somewhat generic, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013167,
+  "judge_latency_ms": 4717.257374999463,
+  "judge_prompt_tokens": 2449,
+  "judge_completion_tokens": 388
+}

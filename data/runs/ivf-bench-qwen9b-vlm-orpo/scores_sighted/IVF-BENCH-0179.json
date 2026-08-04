@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0179",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 1DD, but it inaccurately states the blastocoel is less than half the embryo despite the provided Gardner stage 1 definition and image suggesting at least about half; also adds speculative collapse/degeneration details not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, tubal factor, prior live birth and failed cycles, semen parameters, and endometrial thickness with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and internally consistent overall, with the conclusion that embryo quality is the main limiting factor well supported; minor weakness is the probability estimate resting partly on a somewhat inconsistent expansion-stage description."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligns with Gardner grading concepts and standard IVF counseling, including caution about hydrosalpinx, selective rather than routine PGT-A at age 30, and realistic counseling for poor-quality embryos; minor deviations include overinterpreting Day-4 morphology and giving fairly specific probabilities without clear evidence basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear practical recommendations for proceeding with transfer, counseling expectations, checking/treating hydrosalpinx, reassessing uterine factors after failure, and future lifestyle/weight optimization with nuanced discussion of PGT-A."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.016323,
+  "judge_latency_ms": 11437.368041006266,
+  "judge_prompt_tokens": 3571,
+  "judge_completion_tokens": 374
+}

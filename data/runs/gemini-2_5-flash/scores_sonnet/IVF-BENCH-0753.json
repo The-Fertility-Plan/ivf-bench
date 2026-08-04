@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0753",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA features (expansion, ICM density, TE cohesion) but largely restates the provided laboratory data rather than independently analyzing the image. It mentions visible ICM as a 'distinct, dense cluster' and TE as 'uniform, numerous, and well-organized' but doesn't add independent morphological observations beyond what was given in the Gardner score description. No mention of blastocoel cavity quality, zona pellucida thickness measurement, or any image-specific details that would demonstrate actual visual analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting most clinical factors to prognosis: age-aneuploidy relationship, BMI impact on implantation, PCOS implications, endometrial thickness adequacy, and sperm parameters are all addressed in context. The integration of previous failed cycles with current embryo quality is particularly well handled. Minor gap: doesn't deeply explore how PCOS-specific hormonal environment (e.g., LH/progesterone ratios, insulin resistance) might specifically affect endometrial receptivity in this case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from favorable factors to risk factors to probability estimate. The downward adjustment from baseline 50-70% to 35-50% due to prior failures and BMI is coherent and well-explained. The response consistently acknowledges uncertainty without contradiction. Minor issue: the response notes BMI can reduce rates by '10-20% or more' but the final adjustment seems conservative given two prior failures, which could warrant a larger downward revision with more explicit justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for top-grade blastocyst, ERA consideration for recurrent implantation failure, hysteroscopy workup, PGT-A consideration, thrombophilia screening, and karyotyping are all evidence-based. Luteal phase support recommendation is appropriate. The immunological factor mention is appropriately caveated as controversial. Minor deviation: long agonist protocol for PCOS is noted without flagging the increased OHSS risk more prominently, which ESHRE guidelines specifically address for PCOS patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and well-organized into immediate transfer recommendations and future planning. ERA, EMMA/ALICE, hysteroscopy, PGT-A, karyotyping, and thrombophilia screening are all named explicitly. BMI management with referral to nutritionist is practical. The response could be more actionable by suggesting specific timing considerations (e.g., frozen vs. fresh transfer given PCOS OHSS risk), specific progesterone protocols, or threshold criteria for proceeding vs. canceling transfer."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021735,
+  "judge_latency_ms": 14807.4674160016,
+  "judge_prompt_tokens": 3805,
+  "judge_completion_tokens": 688
+}

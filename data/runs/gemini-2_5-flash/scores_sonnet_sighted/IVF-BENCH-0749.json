@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general blastocyst features consistent with the Gardner 2AA score (full expansion, distinct ICM, cohesive TE). However, the description largely echoes the provided Gardner Score data rather than offering independent morphological observations from the image itself. The response acknowledges image resolution limitations but doesn't add meaningful visual observations beyond what was given in the lab data, such as noting the irregular/complex folding pattern visible in the image or commenting on the zona pellucida thinning. No fabricated features, but limited independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age, AMH/FSH, BMI, smoking, endometrial thickness, previous outcomes, and sperm parameters are all connected to the embryo assessment and prognosis. The interaction between smoking and endometrial receptivity, the significance of previous live birth for uterine receptivity, and the low BMI implications are well-addressed. Minor gap: the low sperm motility (16.5%) is somewhat glossed over despite being notably below WHO reference values, and the interaction between underweight BMI and hormonal milieu could be explored more deeply."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate (40-55%) follows reasonably from the stated adjustments for smoking and BMI applied to a baseline estimate. The conclusion that smoking is the most significant modifiable risk factor is consistently maintained throughout. Minor issue: the baseline probability of 55-65% for a 2AA blastocyst is slightly optimistic without PGT-A confirmation, and the quantified smoking reduction (10-15%) is presented with more precision than the evidence typically supports, but overall the chain of reasoning is coherent and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: SET recommendation for good-quality blastocyst, luteal phase support, smoking cessation counseling, PGT-A consideration for recurrent failure, and freeze-all strategy are all evidence-based. The Gardner grading interpretation is correct. Minor deviations: the response doesn't explicitly reference ESHRE guidelines on BMI thresholds for treatment, and the suggestion of ERA (endometrial receptivity array) is mentioned cautiously but its limited evidence base per current ESHRE guidelines could have been noted more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: urgent smoking cessation with resources, nutritionist referral for BMI, SET recommendation, luteal phase support, and a clear hierarchy of future steps including PGT-A, freeze-all, and further investigation for implantation failure. The response provides clear next steps for both this transfer and future planning. Could be slightly more actionable by specifying smoking cessation timing relative to transfer, specific nutritional targets for BMI, or referencing specific support protocols, but overall the recommendations are clinically useful and well-prioritized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022875,
+  "judge_latency_ms": 16889.36204199854,
+  "judge_prompt_tokens": 3945,
+  "judge_completion_tokens": 736
+}

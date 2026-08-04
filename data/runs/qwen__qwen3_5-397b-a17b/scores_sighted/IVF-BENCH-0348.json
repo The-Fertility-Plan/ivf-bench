@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0348",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AB blastocyst and correctly notes expanded stage and looser TE, but it overstates certainty about specific visible structures (e.g., dense ICM location and clearly visible cavity/zona thinning) given the image is somewhat indistinct."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, PCOS, endometrium, sperm parameters, and lifestyle factors with embryo quality reasonably well, though some links (e.g., paternal age effect magnitude, protocol inference) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent, with a plausible probability estimate tied to embryo grade and patient factors; minor issues include assuming a stimulated cycle from the retrieval count and slightly overstating the embryo as 'top tier.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but there are notable deviations: calling 3AB 'top tier,' recommending PGT-A largely on age 35/41 alone, and suggesting testicular sperm/TESA based on paternal age without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer, lifestyle modification, and future evaluation, though some suggestions are broader than necessary and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012924,
+  "judge_latency_ms": 4652.099708997412,
+  "judge_prompt_tokens": 2668,
+  "judge_completion_tokens": 328
+}

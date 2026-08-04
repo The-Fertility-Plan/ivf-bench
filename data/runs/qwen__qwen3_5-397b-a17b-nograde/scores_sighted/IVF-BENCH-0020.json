@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as a Day 4 compacting morula/early blastocyst with Gardner stage 2 features. The image appears more consistent with a blastocyst with a large blastocoel and visible ICM/TE, and the described small cavitation in the upper right is not an accurate characterization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, prior live birth, BMI, endometrium, oocyte yield, and sperm motility, and relates them to prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a probability estimate that follows from the stated positives and negatives. The main weakness is that conclusions rely on an inaccurate morphological staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly reasonable, but applying Gardner stage 2 to a Day 4 embryo and suggesting techniques like PICSI/MACS without clear indication weakens alignment with standard evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, protocol review, sperm optimization, and future culture strategy. Some recommendations are somewhat generic and not tightly tailored to the actual morphology."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.012891,
+  "judge_latency_ms": 4742.653916007839,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 347
+}

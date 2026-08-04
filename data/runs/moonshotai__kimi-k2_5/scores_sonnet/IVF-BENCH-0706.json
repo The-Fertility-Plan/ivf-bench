@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel occupying >75% of volume, thinned zona pellucida, compact well-defined ICM with tight intercellular adhesion, and cohesive TE monolayer. The description aligns well with the provided laboratory data. Minor limitation is that the model cannot truly independently assess the image beyond confirming the provided Gardner score, but the descriptions are internally consistent and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 29 with favorable oocyte quality implications, AMH and MII oocyte count for ovarian reserve assessment, endometriosis impact on endometrial receptivity and implantation, prior IVF failure as a risk signal, borderline sperm motility with DNA fragmentation concern, suboptimal endometrial thickness of 7.5mm, BMI, and lifestyle factors including severe stress, sedentary behavior, restricted diet, and alcohol consumption. The interactions between these factors and embryo quality are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 35-45% follows coherently from a stated baseline of 50-60% with systematic downward adjustments for endometriosis, prior failure, thin endometrium, and lifestyle stress. The conclusion that this is a 'favorable embryo in a challenging endometrial environment' is well-supported. Minor issue: the euploidy rate stated as ~40-50% for a 3AA blastocyst at age 29 is slightly inconsistent with the stated aneuploidy rate of 15-20% for age 29, though these refer to different metrics."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: appropriate consideration of ERA for recurrent implantation failure with endometriosis, sperm DFI testing for borderline parameters, GnRH agonist downregulation for endometriosis suppression, and PGT-A consideration after second failure. The 8mm endometrial thickness threshold is evidence-based. Some recommendations like corticosteroid cover and endometrial scratch have limited/mixed evidence bases but are acknowledged as considerations rather than definitive recommendations. Low-dose aspirin recommendation is somewhat controversial without thrombophilia indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering immediate transfer optimization (luteal support specifics, assisted hatching, embryo glue), lifestyle interventions with clear rationale, and a detailed future cycle planning pathway with prioritized diagnostic workup (ERA, DFI, hydrosalpinx screening) and therapeutic strategies (freeze-all, HRT preparation, PGT-A). The recommendations are nuanced, case-specific, and presented in a clinically usable format with clear decision points."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01914,
+  "judge_latency_ms": 13626.830332999816,
+  "judge_prompt_tokens": 2770,
+  "judge_completion_tokens": 722
+}

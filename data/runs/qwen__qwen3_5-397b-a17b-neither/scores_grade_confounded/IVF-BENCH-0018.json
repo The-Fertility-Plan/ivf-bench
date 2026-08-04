@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly notes no image was provided and flags the Day 4/Gardner inconsistency, but it does not analyze the supplied 2BB morphology and instead infers unsupported features from oocyte maturity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, tubal factor, endometrium, sperm parameters, prior cycle history, and lifestyle factors well, though some links to embryo-specific quality are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and structured, with a clear prognosis rationale; minor issues include overinterpreting 100% MII as embryo quality and the Day 4 versus blastocyst grading tension."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-aligned on smoking cessation, BMI, luteal support, and tubal factor prognosis, but recommending routine Day 5 culture and suggesting PGT-A at age 33 are somewhat overgeneralized, and dismissing the provided Gardner score due to Day 4 transfer is imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for immediate transfer management and future planning, including lifestyle modification and cycle strategy, though some advice could be more individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012294,
+  "judge_latency_ms": 4298.91850000422,
+  "judge_prompt_tokens": 2543,
+  "judge_completion_tokens": 311
+}

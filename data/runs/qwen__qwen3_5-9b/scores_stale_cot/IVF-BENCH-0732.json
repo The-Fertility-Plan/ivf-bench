@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches the provided 2AA grading and describes ICM/TE reasonably, but it shows uncertainty between morula/early blastocyst vs blastocyst and incorrectly calls grade 2 'fully expanded,' reducing precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, tubal factor, endometrium, sperm parameters, and low MII yield with embryo quality and prognosis, though AMH is unavailable and some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning contains notable inconsistencies: fluctuates on morphology, overemphasizes paternal age as the main driver of aneuploidy, and gives shifting implantation estimates that are not tightly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology but includes several guideline-level issues: misstates expansion stage, overstates paternal-age impact on aneuploidy, strongly recommends PGT-A in a single-embryo poor-response setting, and suggests donor eggs prematurely for a 33-year-old after one cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and reviewing stimulation strategy, but recommendations are somewhat generic and some are insufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.00864625,
+  "judge_latency_ms": 7713.77366699744,
+  "judge_prompt_tokens": 4349,
+  "judge_completion_tokens": 321
+}

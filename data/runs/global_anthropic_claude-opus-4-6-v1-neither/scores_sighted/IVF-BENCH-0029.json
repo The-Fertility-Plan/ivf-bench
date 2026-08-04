@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific embryo features. It only gave generic Day 4 morula benchmarks, which are not image-specific; this is safe but incomplete for the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, tubal factor, BMI, FSH, oocyte maturity, sperm parameters, endometrium, and lifestyle into prognosis well, though some assumptions were made and AMH was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability range tied to patient factors and uncertainty about morphology. Minor issues include speculative interpretation of why Day 4 transfer was chosen."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including attention to hydrosalpinx and avoiding bed rest. However, suggesting ICSI simply because of a limited cohort and implying a trilaminar pattern from thickness alone are not fully guideline-grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for luteal support, activity, beta-hCG timing, and future planning, with useful mention of hydrosalpinx management. Some recommendations remain somewhat generic and not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013245,
+  "judge_latency_ms": 4892.209124998772,
+  "judge_prompt_tokens": 2820,
+  "judge_completion_tokens": 319
+}

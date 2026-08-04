@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA Gardner score components: expansion stage with thinning zona, compact ICM with many cells, and cohesive TE epithelium. The ICM location is described specifically ('7 o'clock position'), showing engagement with the image. Minor deduction because the description largely mirrors the provided Gardner score text rather than adding independent morphological observations that go beyond the lab data provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age 37 with aneuploidy risk, smoking as a major modifiable risk, BMI as favorable, FSH and sperm parameters as reassuring, and endometrial thickness concern at 16.5mm. The interaction between embryo morphology and chromosomal risk at age 37 is well-articulated. Minor gap: AMH is N/A and the response doesn't address this missing data point or its implications, and the 'Other' diagnosis is not explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 30-45% follows logically from the reasoning chain: baseline high-quality blastocyst rate adjusted downward for age-related aneuploidy risk and smoking penalty. The note distinguishing euploid vs aneuploid outcomes is clinically sound. Minor inconsistency: the response states smoking can reduce success by 'up to 50%' but the final range doesn't fully reflect this magnitude of reduction from a 60%+ baseline, suggesting the arithmetic could be more explicitly reconciled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst, PGT-A suggestion for age 37, luteal phase support, endometrial evaluation for thick lining, and smoking cessation counseling. The Gardner grading interpretation is accurate. Minor issue: the characterization of 16.5mm endometrium as potentially problematic is somewhat overstated compared to current evidence, which generally considers >7mm acceptable with less consensus on upper thresholds."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with immediate smoking cessation counseling, robust luteal support, PGT-A for future cycles, and hysteroscopy/saline sonogram if implantation fails. The response provides clear next steps for both this transfer and future planning. Could be improved with more specific luteal support protocol details, stress reduction referral pathways, or specific smoking cessation resources, but overall provides clinically useful guidance."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.017574,
+  "judge_latency_ms": 13429.558333002205,
+  "judge_prompt_tokens": 2698,
+  "judge_completion_tokens": 632
+}

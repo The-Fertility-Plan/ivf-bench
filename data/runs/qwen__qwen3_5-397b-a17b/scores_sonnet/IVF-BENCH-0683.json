@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0683",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocyst cavity, thinning zona pellucida, tightly packed ICM described at the 9 o'clock position, and a cohesive but loose TE epithelium. The description aligns well with the grading criteria. Minor deduction because the spatial description of the ICM location ('left side, 9 o'clock') may be an assumption rather than a confirmed image observation, and the description could be more precise about TE cell count/distribution."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, FSH level, maturation rate, endometrial thickness, sperm parameters, BMI, stress, diet, and alcohol use are all connected to embryo quality and prognosis. The 100% MII maturation rate is correctly highlighted as a positive indicator. The missing AMH is noted indirectly via FSH discussion. Minor gap: the 'Other' diagnosis is not addressed, and the interaction between BMI and endometrial receptivity beyond implantation rates could be explored more deeply."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and well-structured. The probability estimate of 45-55% follows reasonably from the baseline for a 3AB blastocyst in a 32-year-old, with appropriate downward adjustment for BMI and aneuploidy risk. The recommendation for fresh transfer is coherent given the absence of OHSS risk. Minor issue: the response states baseline rates of 50-60% then adjusts down to 45-55% for BMI, which is a modest adjustment given cited 10-15% reduction studies — slightly underweighted negative adjustment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: elective single embryo transfer (eSET) for young patients with good-quality blastocysts, endometrial thickness thresholds, and lifestyle modification advice are all evidence-based. The Gardner grading interpretation is accurate. The suggestion to consider PGT-A is implicitly referenced via aneuploidy risk discussion. Minor deduction: the response does not explicitly address ESHRE guidance on alcohol cessation (which recommends complete abstinence, not just reduction), and the FSH interpretation as 'higher end of normal' for age 32 could be more precisely contextualized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with fresh SET, weight management targets (5-10% reduction), stress counseling referral, activity increase to 150 min/week, AMH testing, and protocol adjustment considerations for future cycles. These are clinically useful. Minor deduction: no mention of luteal phase support protocol, no specific guidance on alcohol cessation timeline, and the 'Other' diagnosis is not addressed with any specific follow-up recommendation."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018816,
+  "judge_latency_ms": 13990.881582998554,
+  "judge_prompt_tokens": 2672,
+  "judge_completion_tokens": 720
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a compacted morula/early blastocyst, whereas the provided laboratory grade is 2BB full blastocyst. It does not describe the expected loose ICM and sparse TE of a 2BB blastocyst and instead fabricates morula-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, endometriosis, prior outcomes, sperm motility, and thin endometrium, and relates them to prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is built on a major morphological misread of the embryo stage, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, especially regarding thin endometrium and endometriosis, but suggestions such as aspirin/sildenafil and broad PGT-A consideration in a 31-year-old are not strongly guideline-based, and the embryo staging conflicts with Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer counseling, luteal support discussion, endometrial optimization, possible freeze-all/FET strategy, and further male factor evaluation, though some recommendations are not highly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012435,
+  "judge_latency_ms": 4392.932333001227,
+  "judge_prompt_tokens": 2320,
+  "judge_completion_tokens": 365
+}

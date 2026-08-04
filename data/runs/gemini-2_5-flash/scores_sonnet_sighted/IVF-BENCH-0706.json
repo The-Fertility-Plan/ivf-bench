@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score (expanded blastocoel, thinned zona, compact ICM, cohesive TE). However, the image appears to show a blastocyst that may be earlier in expansion or have some morphological nuances not fully captured. The description is largely derived from the Gardner score label rather than independent image analysis, and lacks specific observations about what is actually visible in this particular image (e.g., the ICM appears somewhat granular/irregular in the image, TE cells appear somewhat loosely organized)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: endometriosis impact on implantation, borderline endometrial thickness, previous cycle failure, lifestyle factors, and their interactions with embryo quality. It correctly identifies endometriosis as the primary medical risk factor and connects it to endometrial receptivity. Minor gap: doesn't specifically address the interaction between endometriosis stage/severity and the specific stimulation protocol used, or the significance of the moderate alcohol consumption quantitatively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from favorable factors (young age, good AMH, excellent morphology) to risk factors (endometriosis, previous failure, lifestyle) to a probability estimate of 45-60%. The probability adjustment methodology is transparent and consistent. Minor issue: the baseline of 55-70% cited assumes euploidy testing which wasn't mentioned as having been performed, and the final range of 45-60% is reasonable but the deductions could be more precisely quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for young patient with good quality blastocyst, ERA consideration for previous failure with endometriosis, luteal phase support, hysteroscopy before further transfers, chronic endometritis screening (CD138), and PGT-A consideration after failure. The endometrial thickness threshold discussion (≥7mm vs ≥8mm) is slightly inconsistent within the response. Endometrial scratch recommendation appropriately caveated with mixed evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: specific tests mentioned (ERA, CD138 biopsy, hysteroscopy, thrombophilia screening), specific lifestyle interventions (alcohol cessation, nutritionist referral), and a clear decision tree for current vs. future cycles. The response provides good prioritization. Could be improved by specifying timing of interventions, specific luteal support protocols, or addressing whether to freeze remaining embryos for PGT-A now vs. later."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.021393,
+  "judge_latency_ms": 15993.836166002438,
+  "judge_prompt_tokens": 3811,
+  "judge_completion_tokens": 664
+}

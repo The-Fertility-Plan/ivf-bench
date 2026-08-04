@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "No image was provided, and the model appropriately avoided fabricating blastocyst morphology. However, it therefore did not deliver any actual morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, prior live birth, prior failed cycles, sperm quality, endometrium, and cycle context, though some links to embryo-specific prognosis remain limited by absent morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and transparent, especially about uncertainty from missing morphology. Minor issues include overemphasis on former smoking and speculative interpretation of the natural-cycle discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggestions such as routine thrombophilia or immunologic testing for implantation failure are not strongly guideline-supported, and the age statement is somewhat imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including luteal support, counseling, protocol clarification, uterine evaluation, and consideration of PGT-A, though some recommendations are somewhat generic or controversial."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013335,
+  "judge_latency_ms": 3982.3176249992684,
+  "judge_prompt_tokens": 2890,
+  "judge_completion_tokens": 311
+}

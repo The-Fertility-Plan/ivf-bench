@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0294",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: calling it 'fully expanded' and describing a clearly visible cohesive TE and distinct ICM is somewhat stronger than what is crisply discernible in this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including female age, ovarian reserve/response, tubal factor diagnosis, prior outcomes, smoking, paternal age, sperm parameters, and endometrial thickness, though it somewhat overemphasizes paternal age/SDF relative to the available semen data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible adjustment from embryo quality to prognosis based on history and lifestyle risks; minor issue is some overconfident attribution of prior biochemical loss to smoking/genetic factors without stronger evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo assessment, smoking cessation, and considering further evaluation after repeated failures, but recommending PGT-A and especially ERA/TESE-related strategies after this history is more aggressive than guideline-supported routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer, counseling on smoking cessation, checking luteal support, and possible future investigations; however, some recommendations would benefit from more nuance on indications and sequencing."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012636,
+  "judge_latency_ms": 5159.223958005896,
+  "judge_prompt_tokens": 2492,
+  "judge_completion_tokens": 344
+}

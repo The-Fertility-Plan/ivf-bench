@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0394",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality blastocyst with absent/degenerate ICM and TE, but misstates the expansion stage by saying the blastocoel is less than half and describes collapse/shrinkage and dark granular degeneration more strongly than is clearly supported by the image and provided 1DD label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, ovarian response, endometrium, and sperm data with embryo prognosis well, though some speculation about sperm DNA fragmentation and protocol effects goes beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear, but there is an internal inconsistency in interpreting Gardner 1 versus the prompt's expansion description, and the absolute statement of non-viability/medical futility is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis for a 1DD embryo and age-related aneuploidy risk, but recommending outright cancellation as medically futile and strongly endorsing interventions like routine sperm DNA fragmentation testing/PGT-A is more assertive than guideline-based evidence typically supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer decision-making and future cycle planning, though some suggestions are somewhat generic or speculative rather than tightly tailored to the documented findings."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012813,
+  "judge_latency_ms": 5563.726209002198,
+  "judge_prompt_tokens": 2491,
+  "judge_completion_tokens": 356
+}

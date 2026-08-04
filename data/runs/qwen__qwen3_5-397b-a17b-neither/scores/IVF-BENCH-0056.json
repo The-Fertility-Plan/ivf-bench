@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly states morphology cannot be assessed without an image and avoids detailed fabrication, but it still makes an unsupported assumption of a good-quality blastocyst (e.g., 3BB or better) for probability estimates."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, tubal factor, ovarian reserve/response, sperm quality, endometrial thickness, BMI, smoking, and lifestyle factors into prognosis and transfer considerations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear link from baseline prognosis to downward adjustment for smoking and BMI; minor issue is the speculative assumption about embryo quality without image or grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, smoking cessation, weight optimization), but stating SET is 'medically mandatory' due to BMI overstates guideline requirements, and suggesting PGT-A because of BMI/smoking-related miscarriage risk is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, luteal support considerations, smoking cessation, and weight management, though some recommendations could be more nuanced and less absolute."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01218,
+  "judge_latency_ms": 5234.664957999485,
+  "judge_prompt_tokens": 2505,
+  "judge_completion_tokens": 311
+}

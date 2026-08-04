@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst and correctly identifies a loosely grouped ICM and thinned zona, but it overstates confidence about TE quality from this single image and describes quadrant-specific thinning/cavity detail that is not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, tubal factor diagnosis, sperm quality, prior cycle outcome, endometrial thickness, and lifestyle factors with embryo quality in a clinically meaningful way, though some links (especially stress effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, and the prognosis follows from the factors discussed, but the implantation estimate is somewhat optimistic and the impact assigned to stress and FSH is not strongly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but recommending that the embryo should not be frozen unless better embryos exist is too directive without cycle-context, and strongly recommending PGT-A at age 33 after one failed cycle is more aggressive than guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, stress management, and future-cycle considerations, though some recommendations are generic and not sufficiently individualized to fresh versus frozen transfer context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013353,
+  "judge_latency_ms": 4927.062375005335,
+  "judge_prompt_tokens": 2701,
+  "judge_completion_tokens": 350
+}

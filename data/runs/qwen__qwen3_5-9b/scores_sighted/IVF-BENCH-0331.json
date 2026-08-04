@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0331",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with scant/degenerative ICM and TE, but it misstates the expansion stage by calling it clearly expanded and suggesting zona thinning; Gardner 1 indicates an early blastocyst, and several described focal features are not confidently visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH/low oocyte yield, tubal factor context, sperm parameters, endometrial thickness, and lifestyle factors with embryo prognosis reasonably well, though it somewhat overstates links between DOR/stress and embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate fits the poor morphology, but there are notable inconsistencies, especially describing the embryo as expanded despite a 1DD grade and the contradictory statement about cryopreservation after transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned (poor prognosis counseling, limited value of PGT-A with a single embryo), but there are important deviations: misunderstanding Gardner stage 1, overstating paternal age effects, and the incorrect recommendation to cryopreserve an embryo after transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical counseling and future-cycle considerations, but recommendations are only moderately specific and are weakened by the erroneous cryopreservation statement and somewhat generic lifestyle advice."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.013359,
+  "judge_latency_ms": 5348.739166991436,
+  "judge_prompt_tokens": 2643,
+  "judge_completion_tokens": 362
+}

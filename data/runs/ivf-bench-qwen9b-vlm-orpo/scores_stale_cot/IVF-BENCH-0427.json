@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0427",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives some plausible blastocyst descriptors, but it repeatedly contradicts the provided Gardner 3BA label by calling it partially/early expanded with very little blastocoel and sparse TE, which may reflect overinterpretation from a single image and introduces likely inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior failed cycles, uterine factor, ovarian response, endometrial thickness, BMI, and sperm parameters reasonably well, though some interactions are discussed somewhat generically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are internal inconsistencies in morphology interpretation and probability discussion, with multiple differing ranges appearing before settling on 25–40%."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: proceed with transfer, evaluate uterine cavity/hydrosalpinx, discuss PGT-A after repeated failures, avoid unsupported add-ons, and follow early pregnancy appropriately. Minor overreach appears in some speculative comments."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including uterine evaluation, luteal support adherence, PGT-A discussion, and possible sperm DNA fragmentation testing, though some advice remains broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.018753,
+  "judge_latency_ms": 5852.26012498606,
+  "judge_prompt_tokens": 4541,
+  "judge_completion_tokens": 342
+}

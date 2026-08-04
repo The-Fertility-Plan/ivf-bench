@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0481",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with poorly defined ICM/TE, but overstates certainty by calling it non-viable/degenerate from the image alone and fabricates features such as a large vacuole/retracted blastocoel and 'dark embryo' appearance not clearly established."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, BMI, smoking, sperm parameters, and endometrium with embryo quality reasonably well, though it over-attributes the poor outcome to smoking/BMI without sufficient caution."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the reasoning becomes too absolute: it equates a 1DD embryo with certain non-viability and recommends never transferring/discarding, which is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While much of the counseling is standard, stating that D-grade embryos are never transferred and that transfer should be canceled is not well aligned with routine IVF practice, where poor-quality blastocysts may still be considered depending on context; antioxidant and PGT-A recommendations are also somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for counseling, lifestyle modification, and future cycle planning, but the transfer recommendation is overly categorical and lacks nuance about clinic policy and patient-specific decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013254,
+  "judge_latency_ms": 4987.182374999975,
+  "judge_prompt_tokens": 2568,
+  "judge_completion_tokens": 370
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0080",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately noted that no image was available to the model, but it still inferred likely blastocyst features such as expansion >=3 and A/B ICM/TE, which are not supported by the actual image and amount to speculative morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, BMI, sperm motility, and endometrial thickness into prognosis reasonably well, though some links to actual embryo quality are necessarily indirect."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible prognosis estimate based on age and diagnosis; minor issues include overinterpreting selection for transfer and assuming likely ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including caution about routine PGT-A at age 31 and emphasis on luteal support and vitrification; however, suggestions like aspirin/estrogen for a 7.5 mm lining are more speculative and not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, embryo freezing, male-factor follow-up, and future-cycle planning, though some recommendations remain somewhat generic rather than tightly tailored to the specific embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013635,
+  "judge_latency_ms": 4331.576040989603,
+  "judge_prompt_tokens": 2845,
+  "judge_completion_tokens": 340
+}

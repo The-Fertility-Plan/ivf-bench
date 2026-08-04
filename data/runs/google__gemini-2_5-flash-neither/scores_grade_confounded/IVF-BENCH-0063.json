@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score or morphology information was available, despite the provided 3AB grade and its component descriptors. It therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age-related aneuploidy risk, ovarian reserve, uterine factor, prior failed cycles, sperm parameters, and endometrium, though this is weakened by not linking them to the actual 3AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is undermined by the false premise that morphology was unavailable and by recommendations built around that error."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but recommending ERA/receptivity panels and strongly framing PGT-A as paramount after two failed cycles is more controversial and not uniformly guideline-supported; failure to use the provided Gardner grade also detracts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps on uterine evaluation, luteal support, and future planning, but some actions are misdirected because it unnecessarily requests morphology that was already provided."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014673,
+  "judge_latency_ms": 3793.796834004752,
+  "judge_prompt_tokens": 3336,
+  "judge_completion_tokens": 311
+}

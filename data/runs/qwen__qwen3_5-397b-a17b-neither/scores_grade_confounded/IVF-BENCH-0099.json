@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no specific score could be assigned, then speculated about a likely >=3BB embryo. This ignores available morphology data and introduces unsupported assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live births, sperm data, endometrial thickness, lifestyle, and cycle history into prognosis reasonably well, though some links are speculative and it misses direct integration of the known 3AA quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it contradicts the provided data by claiming no morphology is available, infers possible PCO morphology without evidence, and bases probability partly on speculative concerns."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, such as proceeding with transfer, lifestyle counseling, and considering uterine evaluation if failure occurs. However, the morphology handling is inconsistent with Gardner grading, and some recommendations (e.g., strong emphasis on dual-pathway luteal support or PGT-A discussion at age 31) are more clinic-dependent than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management, male factor workup, trigger review, uterine evaluation, and lifestyle modification. It is useful clinically, though some actions are based on speculative rather than clearly established issues."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013827,
+  "judge_latency_ms": 4562.89316600305,
+  "judge_prompt_tokens": 2729,
+  "judge_completion_tokens": 376
+}

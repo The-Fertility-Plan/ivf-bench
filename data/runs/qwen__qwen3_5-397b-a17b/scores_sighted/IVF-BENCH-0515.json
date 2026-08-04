@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0515",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and assigns specific visible features (clear dense ICM, cohesive TE, homogeneous cytoplasm, thinning zona on one side) that are not convincingly identifiable in this image. It relies heavily on the provided 3AA label rather than the actual morphology shown."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, BMI, endometrium, prior cycle history, and semen parameters reasonably well with prognosis, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are inconsistencies: it cites a calculation suggesting ~35% then concludes 45-55%, and some favorable adjustments are not strongly justified. Morphology-euploidy correlation is also overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and consideration of PGT-A at age 38 are broadly aligned, but calling 3AA the 'gold standard,' strongly endorsing fresh transfer without fuller OHSS/endocrine context, and suggesting testicular sperm for possible DNA fragmentation are somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer strategy and future planning, including SET and possible PGT-A/SDF testing, though some suggestions lack nuance and depend on information not provided."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012918,
+  "judge_latency_ms": 5198.234124996816,
+  "judge_prompt_tokens": 2611,
+  "judge_completion_tokens": 339
+}

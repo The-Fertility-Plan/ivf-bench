@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and bases morphology on the supplied Gardner 3AA grade rather than inventing image-specific findings. However, it repeats the prompt's expansion description as 'expanded blastocyst' for stage 3, which is not strictly Gardner-consistent, and does not assess visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, unexplained infertility, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality and prognosis. It misses AMH being unavailable and somewhat overinterprets ovarian response from inconsistent COC/MII data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: strong embryo quality and favorable uterine/sperm factors balanced against repeated prior failures. Minor issues include equating excellent morphology with possible euploidy too strongly and some speculative causes of prior failure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and standard luteal support are guideline-concordant, but recommending ERA/EMMA/ALICE, immune testing, and thrombophilia screening for recurrent implantation failure is more controversial and not routinely supported by major guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, luteal support, lifestyle advice, and further workup if unsuccessful. Some suggestions are practical but a few are overly broad or based on low-evidence interventions."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016236,
+  "judge_latency_ms": 7160.196374999941,
+  "judge_prompt_tokens": 3507,
+  "judge_completion_tokens": 381
+}

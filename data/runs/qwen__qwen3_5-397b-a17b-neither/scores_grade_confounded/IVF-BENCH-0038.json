@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 2BA and instead stated no specific grade could be assigned, then speculated about possible grades and morphology not grounded in the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF failures, sperm parameters, endometrial thickness, and ovarian response reasonably well with prognosis, though it overinterprets male factor and recurrent implantation failure."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and understandable, but there are notable issues: it ignores the known embryo grade, assumes image absence prevents morphology assessment from available data, and makes some unsupported inferences about hidden sperm pathology and RIF."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (SET, luteal support), but others are not well aligned with current evidence/guidelines, including routine assisted hatching, broad ERA use, PGT-A being 'indicated' in a 26-year-old after two failures, and NK cell testing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer and contingency planning, but several suggestions are overly aggressive or insufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013053,
+  "judge_latency_ms": 3997.1394169988343,
+  "judge_prompt_tokens": 2686,
+  "judge_completion_tokens": 333
+}

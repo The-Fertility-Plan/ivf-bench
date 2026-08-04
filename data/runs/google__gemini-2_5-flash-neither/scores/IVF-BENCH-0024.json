@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "No image was available, and the response improperly assumed a good-quality blastocyst despite a Day 4 transfer; it did not provide an actual morphology assessment and introduced unsupported morphology assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior IVF outcomes, paternal age, sperm parameters, endometrium, and lifestyle, though some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: calling this a blastocyst despite Day 4 transfer, inferring embryo quality from missing data, and giving a probability estimate based on an assumed morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking/alcohol cessation, uterine assessment, luteal support), but there are deviations such as overemphasis on PGT-A for a 32-year-old and speculative quantitative penalties for smoking/alcohol without strong guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future cycles, including lifestyle modification, sperm DNA fragmentation testing, uterine evaluation, and counseling, though some recommendations are more aggressive than necessary."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014787,
+  "judge_latency_ms": 4172.658125004091,
+  "judge_prompt_tokens": 3239,
+  "judge_completion_tokens": 338
+}

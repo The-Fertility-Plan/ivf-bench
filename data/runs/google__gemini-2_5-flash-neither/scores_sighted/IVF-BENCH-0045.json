@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was available to it and did not fabricate embryo morphology. It appropriately declined morphological assessment rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well, including age, BMI, ovarian reserve, tubal factor, sperm parameters, endometrium, and first-cycle status, and linked them to prognosis. Minor overstatement of endometrial thickness as 'excellent' and limited nuance on embryo-specific uncertainty prevent a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with the probability estimate tied to age and assumed blastocyst quality. However, it relies somewhat heavily on assuming good embryo quality despite lacking morphology, which introduces a modest logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, especially support for single embryo transfer in a good-prognosis 33-year-old. Some suggestions are less guideline-grounded or overstated for this scenario, such as ERA after a single failed transfer and implying PGT-A based partly on BMI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, review of embryo development, luteal support, and counseling. It is useful clinically, though some recommendations remain somewhat generic and not tightly tailored to the limited embryo data."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015309,
+  "judge_latency_ms": 5187.109332997352,
+  "judge_prompt_tokens": 3268,
+  "judge_completion_tokens": 367
+}

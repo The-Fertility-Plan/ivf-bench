@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0380",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor morphology with absent/degenerate ICM and TE, but it misstates the Gardner expansion stage as blastocoel less than half the embryo and describes it as early blastocyst/late morula, whereas the provided score defines stage 1 here as blastocoel at least half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, uterine factor, prior ectopic, endometrium, BMI, and semen parameters with prognosis reasonably well, though some links are speculative (e.g., PCOS phenotype, oocyte quality, hydrosalpinx)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the very low implantation estimate follows from the extremely poor embryo grade, but there are minor issues from the stage misinterpretation and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The emphasis on very poor prognosis for a 1DD embryo is broadly aligned with IVF practice, but recommending outright cancellation/'do not transfer' is stronger than standard guideline-based individualized counseling, and some suggestions (routine PGT-A, BMI target, sperm DNA fragmentation) are not universally indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for uterine evaluation and future cycle review, with practical considerations for transfer decision-making, though some recommendations are somewhat overconfident or not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013452,
+  "judge_latency_ms": 6014.9011250032345,
+  "judge_prompt_tokens": 2609,
+  "judge_completion_tokens": 375
+}

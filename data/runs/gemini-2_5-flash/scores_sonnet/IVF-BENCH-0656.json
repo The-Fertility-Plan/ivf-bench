@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion stage 1, ICM grade D, TE grade D) and provides reasonable descriptions of what these mean clinically. However, the visual description of the image ('somewhat disorganized cellular structure with indistinct boundaries') is generic and may not precisely reflect what is actually visible in the image. The response relies heavily on the provided Gardner score rather than independent morphological observation, and the zona pellucida is not mentioned at all."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates all provided clinical factors: young maternal age (28), elevated BMI (34.7), high AMH (8.33), normal FSH, male factor diagnosis, sperm parameters, endometrial thickness, lifestyle factors, and first-cycle status. Critically, it identifies the key discrepancy between excellent female factors and poor embryo quality, and logically connects this to potential undetected male factor issues (DNA fragmentation). The interaction between BMI and endometrial receptivity is also addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The identification of the paradox between excellent female parameters and 1DD embryo quality is coherent and well-argued. The probability estimate of <5% (0-1%) follows logically from the morphological assessment. Minor issue: the response notes Day 4 blastocyst transfer as unusual but doesn't fully resolve whether this represents accelerated development or misclassification, leaving slight ambiguity. Overall conclusions are well-supported by the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines regarding Gardner grading interpretation, recommendation against transferring severely compromised embryos, suggestion of extended culture to Day 5/6, ICSI for male factor, sperm DNA fragmentation testing, and PGT-A consideration. The recommendation to counsel against transfer of a 1DD embryo is consistent with evidence-based practice. Minor gap: does not explicitly reference specific guideline thresholds or cite specific evidence-based cutoffs for transfer decisions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: explicit counseling guidance, clear transfer decision discussion, sperm DNA fragmentation index testing, strict morphology assessment, andrologist referral, ICSI consideration, TESE/microTESE if indicated, time-lapse imaging, extended culture to Day 5/6, PGT-A for future cycles, and lifestyle modifications including BMI management. Each recommendation is contextualized to this specific case with clear rationale, making it immediately useful for a clinician."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.021804,
+  "judge_latency_ms": 12861.70583400235,
+  "judge_prompt_tokens": 4008,
+  "judge_completion_tokens": 652
+}

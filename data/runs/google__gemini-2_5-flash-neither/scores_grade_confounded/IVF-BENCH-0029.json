@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score can be assessed, despite the provided laboratory data explicitly giving a Gardner score of 1DD. It also misclassifies the transfer as a Day 4 morula/early cavitating morula rather than integrating the stated poor-quality blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, ovarian response, endometrium, sperm, BMI/lifestyle, and prior cycle history reasonably well, though it fails to connect these factors to the actual provided embryo grade of 1DD."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that embryo morphology is unavailable. This leads to an inflated implantation estimate and conclusions inconsistent with the known 1DD poor-prognosis embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General comments on SET, blastocyst culture, and cautious use of PGT-A are broadly aligned, but ignoring the provided Gardner 1DD grade and giving a high implantation estimate for such an embryo is not consistent with standard embryo grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations are practical in a general IVF sense, but they are insufficiently tailored to this specific case because they do not address the implications of transferring a 1DD embryo or the poor morphology already documented."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013359,
+  "judge_latency_ms": 4869.397082999058,
+  "judge_prompt_tokens": 2648,
+  "judge_completion_tokens": 361
+}

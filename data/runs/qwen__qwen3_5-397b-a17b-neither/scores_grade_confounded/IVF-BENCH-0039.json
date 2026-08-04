@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AB and instead claimed no specific morphology could be assigned, then inferred likely grades. This omits and contradicts the available morphological data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: young age, tubal factor, prior live birth, endometrium, sperm quality, ovarian response, and BMI. Minor limitation is that integration is weakened by not incorporating the actual 3AB morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it has a notable logical flaw in ignoring the provided embryo grade and basing conclusions on inferred morphology instead."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a good-prognosis young patient, luteal support, lifestyle counseling, and limited routine role for PGT-A at age 28. Small deviations include overstatement around morphology uncertainty and somewhat strong wording on alcohol cessation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, prenatal supplementation, SET, and future weight optimization. It is useful clinically, though less tailored than it could be because it did not act on the known 3AB grade."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012303,
+  "judge_latency_ms": 4240.40412499744,
+  "judge_prompt_tokens": 2476,
+  "judge_completion_tokens": 325
+}

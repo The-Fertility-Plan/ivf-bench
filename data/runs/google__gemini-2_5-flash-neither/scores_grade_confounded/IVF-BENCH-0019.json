@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states it cannot comment on morphology despite the provided Gardner score 1DD, and then substitutes an assumed good-quality embryo, ignoring the actual very poor morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "It mentions many patient factors, but integrates them with an assumed good embryo rather than the actual 1DD poor-quality embryo and Day 4 context, missing the key interaction driving prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by a major premise error: it claims morphology is unavailable, then estimates prognosis based on a hypothetical good-quality embryo, leading to an implausibly high implantation estimate for a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (early ectopic surveillance, smoking cessation), but the failure to use the Gardner grade, the assumption of a good blastocyst, and the optimistic implantation estimate are not well aligned with evidence-based embryo assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Despite flawed embryo assessment, it provides practical next steps including ectopic monitoring, serial hCG, early ultrasound, and future-cycle counseling that would be useful clinically."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013866,
+  "judge_latency_ms": 4802.943791000871,
+  "judge_prompt_tokens": 3022,
+  "judge_completion_tokens": 320
+}

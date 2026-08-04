@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly notes a discrepancy between the stated 2AA/full blastocyst label and the image, but overcalls specific features not reliably visible (e.g., 5–7 blastomeres, multinucleation, 10–20% fragmentation) and likely understages what appears to be a blastocyst with a large blastocoel and asymmetric cell distribution."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most relevant patient factors well, including age, BMI, tubal factor, ovarian response, sperm parameters, partner age, and endometrium, and connects them to prognosis, though some lifestyle effects are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the reasoning is weakened by an uncertain morphological interpretation and by strong deductions from limited evidence in the image and history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Appropriately questions applying Gardner blastocyst grading to a Day 4 embryo, but several recommendations are not guideline-based or are overstated, including urgent concern over moderate alcohol use, suggesting low-dose aspirin for tubal factor, and implying transfer rescheduling for this alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as verifying embryo stage/grade, reviewing transfer timing, checking hydrosalpinx status, and considering sperm DNA fragmentation testing, though some actions are too prescriptive given the evidence."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.015738,
+  "judge_latency_ms": 6378.356458997587,
+  "judge_prompt_tokens": 3361,
+  "judge_completion_tokens": 377
+}

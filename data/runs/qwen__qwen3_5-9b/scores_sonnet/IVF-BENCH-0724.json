@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0724",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocyst with thinned zona pellucida, well-formed blastocoel, tightly packed ICM on the left side, and cohesive TE epithelium. The description is detailed and internally consistent. Minor issue: the claim that the ICM is 'protruding' through the zona is not clearly supported by a stage 3 classification (protrusion is more characteristic of stages 5-6), which is a slight inaccuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, BMI, ovarian reserve (AMH/FSH), sperm parameters, endometrial thickness, and prior IVF history. It correctly identifies the history of three failures as the dominant clinical concern and connects BMI to endometrial receptivity. Minor gap: the 'unexplained infertility' diagnosis and its implications for recurrent failure are not deeply explored, and the lifestyle factors (alcohol, exercise) could be more thoroughly integrated with implantation biology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 50-70% is coherently derived from a base rate adjusted downward for BMI and prior failure history. The response correctly identifies that embryo quality alone doesn't explain prior failures and points toward uterine/immunological factors. Minor inconsistency: the response calls 3AA 'the highest possible grade' which is accurate, but then the probability range (50-70%) is somewhat conservative without fully quantifying each adjustment factor, leaving slight ambiguity in the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer is implied, early ectopic surveillance is recommended, RIF workup (ERA, hysteroscopy, thrombophilia, antiphospholipid) is appropriate and evidence-based. The 7mm endometrial thickness threshold discussion aligns with current literature. PGT-A discussion is appropriately nuanced for age 27. Minor deviation: the response does not explicitly address single vs. double embryo transfer policy, and the alcohol threshold characterization ('generally acceptable') slightly understates current guidance recommending abstinence during IVF cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: proceed with transfer, early beta-hCG monitoring, transvaginal ultrasound at 5-6 weeks for ectopic surveillance, lifestyle modifications, and a structured RIF workup if transfer fails. The future planning section is well-organized with specific tests named. Slight limitation: no mention of luteal phase support optimization, no discussion of endometrial preparation protocol adjustments given the borderline 7mm thickness, and no specific timing recommendations for the RIF workup."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019251,
+  "judge_latency_ms": 15436.32783400244,
+  "judge_prompt_tokens": 2852,
+  "judge_completion_tokens": 713
+}

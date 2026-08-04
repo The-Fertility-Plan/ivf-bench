@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0693",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with the 3AA Gardner score (expansion stage, ICM density, TE cohesiveness), but largely echoes the provided laboratory data rather than independently analyzing the image. The description lacks specific visual observations unique to the image (e.g., blastocoel cavity size, zona pellucida thickness measurements, specific cell count estimates, symmetry observations) that would demonstrate genuine image-based analysis beyond what was given in the data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including maternal age, AMH, FSH, endometrial thickness, tubal factor diagnosis, previous IVF outcomes, and sperm parameters with embryo quality assessment. It correctly identifies the interaction between young maternal age and euploidy rates, and appropriately contextualizes the tubal factor diagnosis as favorable for IVF. Minor gap: alcohol consumption (4-6 drinks/week classified as 'moderate' but this is actually above recommended limits for women trying to conceive) is not flagged as a concern."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 60-75% follows logically from the presented evidence (top-tier embryo, young age, prior live birth, optimal endometrial thickness). The response correctly identifies that the prior live birth is a strong positive predictor while appropriately contextualizing the 'no pregnancy' cycle. The logic flows coherently from observations to conclusions without contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for young patient with good prognosis embryo is appropriate, luteal phase support is mentioned, vitrification of remaining embryos is recommended, and PGT-A is correctly positioned as optional rather than mandatory for a 30-year-old. Minor issue: the response does not flag the alcohol consumption level (4-6 drinks/week) as potentially problematic per reproductive medicine guidelines, which recommend abstinence or minimal alcohol during IVF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and specific: SET is recommended with justification, standard luteal support is mentioned, beta-hCG timing is specified (9-11 days post-transfer), cryopreservation is recommended, and PGT-A is discussed with appropriate nuance. The response provides useful guidance for both current transfer and future planning. Could be improved by specifying progesterone route/dosage considerations, addressing the alcohol consumption concern directly, or discussing endometrial receptivity testing options given the prior failed cycle."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019341,
+  "judge_latency_ms": 13202.657124995312,
+  "judge_prompt_tokens": 3197,
+  "judge_completion_tokens": 650
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided Gardner grade 3AB and the image by downgrading the embryo to roughly B/low-C and suggesting an early-to-full blastocyst transition rather than an expanded blastocyst. It reasonably notes indistinct ICM/loose TE and possible collapse, but overall morphology interpretation is notably off."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young maternal age, BMI, AMH/ovarian reserve, prior IVF outcomes, endometrial thickness, diagnosis, and partner age/semen data, and relates them to prognosis. It misses some nuance around cumulative prior cycle context and overemphasizes embryo morphology uncertainty."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear structure linking morphology and patient factors to prognosis and recommendations. Minor issues arise because the probability estimate is based partly on an arguably inaccurate morphology reassessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: proceed with single embryo transfer, avoid routine immune/ERA testing, consider cavity reassessment only after repeated failures, and discuss PGT-A selectively in a young low-yield patient. The main deviation is the morphology interpretation relative to Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and sensible future planning, including SET, luteal support, review of lab performance, selective uterine workup, and possible sperm DNA fragmentation testing if failures persist. Useful, though some suggestions remain somewhat general."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.016179,
+  "judge_latency_ms": 5606.059124998865,
+  "judge_prompt_tokens": 3473,
+  "judge_completion_tokens": 384
+}

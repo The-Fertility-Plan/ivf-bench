@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets the Gardner notation, incorrectly calling the embryo fully expanded and reversing the meaning of the score components. For 1DD, the expansion is stage 1 (early blastocyst), while D/D refers to degenerative or absent ICM and TE. The image and lab label support poor ICM/TE, but the expansion description is inaccurate and partly fabricated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, stimulation response, prior cycle history, and sperm parameters reasonably well with embryo quality. However, it overstates some inferences, especially around sperm DNA fragmentation and expected embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis estimate is directionally consistent with a 1DD embryo, but there are notable internal issues: misreading the grading system, unsupported claims about aneuploidy likelihood from morphology alone, and some overconfident causal attribution to sperm DNA damage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF guidance: the grading interpretation is incorrect, PGT-A is presented too strongly for a 35-year-old first cycle, and ICSI is recommended broadly despite limited evidence that it improves outcomes outside clear indications. Some general counseling points are appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for counseling, transfer decision-making, and future evaluation, including sperm DNA fragmentation testing and lifestyle optimization. It is useful clinically, though some recommendations are too assertive or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013851,
+  "judge_latency_ms": 5568.519542008289,
+  "judge_prompt_tokens": 2572,
+  "judge_completion_tokens": 409
+}

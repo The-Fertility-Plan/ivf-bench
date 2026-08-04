@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0231",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in this cropped image, confidently identifying the ICM and inferring expansion, thinning zona, and TE quality from features that are not clearly assessable here. It relies heavily on the provided Gardner grade rather than image-grounded morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, endometrial thickness, and sperm parameters well with embryo quality, though it somewhat overinterprets morphology as a predictor of euploidy and does not fully nuance prior failed cycles."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a probability estimate that follows from the favorable factors. Minor issues include overstating 3AA as 'top-tier' and implying morphology strongly predicts euploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: calling 3AA 'expanded blastocyst' is inconsistent with standard Gardner staging (3 is full blastocyst, 4 is expanded), and the discussion of PGT-A and stress/acupuncture is somewhat more speculative than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps such as proceeding with transfer, considering sperm DNA fragmentation testing if unsuccessful, and discussing PGT-A in future planning. Recommendations are practical, though some are generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013683,
+  "judge_latency_ms": 4612.302541005192,
+  "judge_prompt_tokens": 2691,
+  "judge_completion_tokens": 374
+}

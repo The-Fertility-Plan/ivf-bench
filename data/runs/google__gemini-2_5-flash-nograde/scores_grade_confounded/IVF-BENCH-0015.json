@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a morula/compacting morula despite the provided Gardner score of 1DD indicating a poor-quality early blastocyst with absent/degenerate ICM and TE. It also describes favorable uniform blastomeres and no fragmentation, which conflicts with the stated grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors including age, ovarian reserve markers, PCOS, sperm parameters, endometrium, and first-cycle status, and relates them to prognosis, though some statements overstate ovarian reserve and embryo potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major morphological error, leading to an overly optimistic prognosis and recommendations based on a 'good morula' rather than a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner terminology is not respected, and the implantation estimate is too favorable for a 1DD embryo. General comments on age, endometrium, and possible future PGT-A are broadly acceptable, but the core embryo assessment deviates from standard grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer, luteal support, review of embryo development, and discussing blastocyst culture/PGT-A in future cycles, but recommendations are only moderately useful because they are based on an incorrect embryo-quality assessment."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013773,
+  "judge_latency_ms": 4269.58050000394,
+  "judge_prompt_tokens": 2726,
+  "judge_completion_tokens": 373
+}

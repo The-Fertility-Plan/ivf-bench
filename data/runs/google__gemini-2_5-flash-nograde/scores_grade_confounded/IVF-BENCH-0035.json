@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and explicitly ignores the provided Gardner 2AA blastocyst grading, leading to fabricated or unsupported morphology details rather than describing a full blastocyst with strong ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian response, endometrium, sperm parameters, prior cycle history, and diagnosis, though some points are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there is a major inconsistency between the provided embryo grade and the model's own morphology assessment, which weakens the logic behind the prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but the morphology interpretation is not aligned with Gardner grading and the strong recommendation for PGT-A after a single failed cycle is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, counseling, luteal support, and contingency planning, though some advice is generic rather than case-specific."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013068,
+  "judge_latency_ms": 3348.572333001357,
+  "judge_prompt_tokens": 2701,
+  "judge_completion_tokens": 331
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0696",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona, identifies the ICM as loosely cohesive (consistent with Grade B), and notes the TE as forming a cohesive epithelial layer (Grade A). The description aligns well with the Gardner 3BA score provided and what is visible in the image. Minor limitation: the image is somewhat blurry/low resolution making precise cell counting difficult, and the model appropriately hedges on ICM cell count (10-20 cells). The description of the blastocoel occupying majority of volume and the thinned zona is accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all key clinical factors: age 36 with aneuploidy risk quantification, BMI 34.5 with specific endometrial receptivity implications, FSH 10.4 as ovarian reserve indicator, 100% MII maturation rate, previous failed cycle context, tubal factor diagnosis with hydrosalpinx consideration, sperm parameters, endometrial thickness, and lifestyle factors. The BMI-embryo quality interaction and age-aneuploidy relationship are explicitly connected to prognosis rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and consistent: baseline probability established, then systematically adjusted for age and BMI factors, with compensatory factors acknowledged. The 25-35% estimate follows reasonably from the adjustments described. Minor issue: the BMI adjustment of '20-25% reduction' applied to a baseline of 40-50% would mathematically yield a lower range than 25-35%, creating slight internal inconsistency. The conclusion that TE-A grade is the strongest predictor while simultaneously heavily discounting for BMI is slightly underweighted in the final synthesis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation appropriate for this patient profile, PGT-A recommendation for age 36 with prior failure is evidence-based, hydrosalpinx salpingectomy recommendation aligns with ESHRE guidelines showing 50% implantation reduction, ERA consideration for recurrent implantation failure is guideline-consistent. The metformin suggestion without confirmed insulin resistance diagnosis is slightly speculative. Low-dose aspirin recommendation lacks strong RCT evidence for this indication. Overall strong guideline adherence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: eSET with rationale, specific luteal support route considerations (vaginal + oral or IM) accounting for obesity pharmacokinetics, concrete adjunctive therapy options with caveats, specific PGT-A recommendation with expected outcome improvement (50-60%), quantified weight loss target (5-10%, BMI <30), explicit hydrosalpinx management recommendation, ERA timing guidance (after second failure), and cumulative live birth rate counseling framework. The tiered approach (current transfer vs. future planning) is clinically useful."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.020352,
+  "judge_latency_ms": 16613.70720800187,
+  "judge_prompt_tokens": 3054,
+  "judge_completion_tokens": 746
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0377",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst and correctly identifies a prominent ICM and fair TE, but it overstates the embryo as clearly 'expanded' with significantly thinning zona and gives more certainty than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, PCOS, oocyte yield, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it overemphasizes paternal age and infers egg genetic quality from morphology too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it says TE B is lower than A or C, which is incorrect, and it gives disproportionate weight to paternal age as a major determinant of aneuploidy/implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows standard IVF concepts and Gardner grading, but recommendations such as strongly promoting PGT-A and ERA are more aggressive than guideline-supported routine use, and paternal-age claims are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling, luteal support, and future testing considerations, though some suggestions are not sufficiently nuanced regarding evidence strength."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.013146,
+  "judge_latency_ms": 5252.846666990081,
+  "judge_prompt_tokens": 2702,
+  "judge_completion_tokens": 336
+}

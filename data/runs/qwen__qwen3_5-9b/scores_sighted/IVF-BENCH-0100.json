@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology: it calls the embryo fully expanded/maximally stretched and says the blastocoel occupies most of the embryo, which is not consistent with a Gardner 2 blastocyst image. It also describes ICM and TE somewhat generically rather than strictly from visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, diagnosis, sperm parameters, and lifestyle with prognosis reasonably well, though it makes some speculative claims about male factor subtype and fertilization that are not supported by the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it misinterprets expansion stage, labels 2AB as top-tier, cites a fertilization rate that was not provided, and gives a relatively optimistic probability estimate for an untested 2AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF guidance: 2AB is not typically described as top-tier, routine PGT-A is not broadly recommended solely for male factor in a 33-year-old, and the claim that PGT-A is not feasible with only one embryo is incorrect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer and maintaining lifestyle measures, but recommendations are partly generic and include questionable advice about PGT-A and freeze-all without sufficient case-specific justification."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.012954,
+  "judge_latency_ms": 4649.147625008482,
+  "judge_prompt_tokens": 2423,
+  "judge_completion_tokens": 379
+}

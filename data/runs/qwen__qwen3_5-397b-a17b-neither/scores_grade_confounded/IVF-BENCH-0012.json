@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner score 0DD and instead states no specific Gardner score can be assigned, inferring a generic Day 4 morula/early blastocyst with idealized features not supported by the case data. It misses the key morphology of poor-quality early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major factors well, including age, PCOS/AMH, BMI, prior outcomes, sperm parameters, and endometrial thickness, and relates them to prognosis. However, it does not adequately connect the very poor embryo grade 0DD to the overall assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but undermined by a major inconsistency: it bases prognosis on a presumed generic Day 4 embryo while disregarding the explicit 0DD grade. This leads to an implausibly optimistic implantation estimate relative to the embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but there are notable deviations: dismissing the provided Gardner score, suggesting aspirin/heparin without clear indication, and recommending PGT-A somewhat strongly in a 29-year-old with limited prior history. Overall mostly aligned but with important caveats."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical, covering luteal support, follow-up testing, protocol clarification, Day 5 culture, metabolic optimization, and possible RPL workup. Specificity is good, though some suggestions are not sufficiently tailored to the poor 0DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013872,
+  "judge_latency_ms": 4606.7314999963855,
+  "judge_prompt_tokens": 2554,
+  "judge_completion_tokens": 414
+}

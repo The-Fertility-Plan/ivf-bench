@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately notes no image was available, but it then treats the provided 3AA label as if it directly described visible morphology, including expanded blastocyst, thinning zona, tightly packed ICM, and cohesive TE. The actual image appears more like a lower-quality/partially collapsed blastocyst with indistinct ICM/TE rather than a clearly expanded textbook 3AA, so these morphology claims are not image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte maturity, endometrial thickness, sperm parameters, diagnosis, prior cycle history, and lifestyle factors with prognosis in a generally appropriate way, though some points are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent overall, with conclusions broadly supported by the favorable clinical profile and reported embryo grade. Minor issues include overconfidence in morphology despite no image access and a somewhat optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET for a young patient with a good-quality day-5 blastocyst, luteal support, and reserving further uterine/sperm investigations for repeated failure. Mention of ERA is somewhat dated/non-routine, preventing a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and contingency planning for future cycles, including SET, progesterone support, review after failure, and selective further testing. Some advice remains broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.016044,
+  "judge_latency_ms": 5492.669832994579,
+  "judge_prompt_tokens": 3368,
+  "judge_completion_tokens": 396
+}

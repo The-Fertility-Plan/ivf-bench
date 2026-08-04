@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinning zona pellucida, compact ICM, and continuous TE ring. It appropriately notes some TE non-uniformity as potentially a static image artifact. The description correlates well with the 3AA Gardner score. Minor deduction for not more precisely quantifying the expansion stage or noting specific ICM cell density visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically connects female age 36 to aneuploidy risk, endometriosis to implantation environment, smoking to gamete/endometrial quality, prior failed cycle to implantation failure risk, and positive factors like AMH, FSH, BMI, endometrial thickness, and semen parameters. Interactions between factors are explicitly discussed rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 45-60% is logically derived from balancing excellent morphology against age-related aneuploidy, endometriosis, and smoking. The response correctly notes that euploid status would shift the estimate higher. Minor issue: the range is somewhat broad and the lower bound could be better justified given the strong embryo quality and favorable uterine parameters."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, appropriate PGT-A discussion for age 36 with prior failure, hydrosalpinx screening, hysteroscopy consideration, luteal support mention, and smoking cessation counseling. Gardner grading interpretation is accurate. Slight deduction for not explicitly referencing endometriosis-specific ESHRE guidelines regarding surgical management timing relative to IVF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific next steps organized clearly: immediate transfer recommendations (luteal support, smoking cessation, activity guidance), and a structured post-failure workup including hysteroscopy, hydrosalpinx evaluation, PGT-A discussion, stimulation protocol review, and lifestyle optimization. Each recommendation includes clinical rationale, making it directly usable in a clinical consultation setting."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.019197,
+  "judge_latency_ms": 13580.163916994934,
+  "judge_prompt_tokens": 3589,
+  "judge_completion_tokens": 562
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0425",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphological description is accurate and consistent with a 3AA Gardner score. The model correctly describes the expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive TE. The placement of the ICM at '4 o'clock' is a specific claim that may or may not match the image precisely, and the statement about no vacuolization or fragmentation is a positive assertion that could be slightly over-interpreted without higher resolution confirmation. Overall, the description is detailed and largely accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model connects maternal age and AMH to euploidy likelihood, addresses the discrepancy between high AMH and low oocyte yield, integrates male factor with ICSI success, evaluates endometrial thickness in context, and considers the 100% maturation rate as a quality indicator. The observation about AMH-retrieval discrepancy is particularly insightful and clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical throughout. The probability estimate of 60-70% is well-justified with a clear baseline and adjustments. One minor issue: the model states the sperm motility of 32% is 'borderline/low' when it is actually within normal WHO reference ranges (≥32% progressive motility), though the overall male factor diagnosis is acknowledged. The caveat about aneuploidy risk without PGT-A is appropriately included. The logic flows well from observations to conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied. The recommendation to proceed with fresh transfer given no OHSS risk is appropriate. Luteal phase support recommendation is standard. PGT-A discussion is balanced and appropriate for age. The alcohol cessation advice is evidence-based. Minor deviation: the model implies a trilaminar pattern from thickness alone, which is an assumption rather than a confirmed finding. The suggestion of 'more aggressive stimulation' for future cycles is reasonable but could be more nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Clear, specific recommendations for both the current transfer and future cycle planning. The advice to cease alcohol, continue moderate exercise, ensure robust progesterone support, and review stimulation protocol if unsuccessful are all practical. The suggestion of dual trigger and higher gonadotropin doses for future cycles is specific. Could be improved with more specific progesterone dosing recommendations and timing details, and more nuanced discussion of when to consider freeze-all vs. fresh in future scenarios."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.0296,
+  "judge_latency_ms": 18365.46316597378,
+  "judge_prompt_tokens": 2700,
+  "judge_completion_tokens": 644
+}

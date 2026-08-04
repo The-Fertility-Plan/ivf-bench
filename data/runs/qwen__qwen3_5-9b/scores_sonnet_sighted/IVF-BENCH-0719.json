@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinning zona, large blastocoel, and well-defined ICM on the left side. The TE description is reasonable. Minor issue: the response describes the zona as 'particularly thinned at the pole opposite the ICM' which is a reasonable inference but somewhat speculative given image resolution. The granular, dark ICM description matches the visible cluster. Overall good morphological correlation with the Gardner 3AA grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates DOR context with embryo quality, correctly framing this as a 'quality over quantity' scenario. It addresses maternal age, AMH, FSH, sperm parameters, and endometrial thickness in relation to embryo prognosis. The paternal age consideration and restricted diet flag are thoughtful additions. Minor gap: no explicit discussion of how the long agonist protocol may have affected oocyte quality or the stimulation response in a DOR patient, which is clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 50-65% range is reasonably justified with age and DOR adjustments from a higher base rate. Minor inconsistency: the response states DOR 'does not necessarily degrade the quality of the specific embryo transferred' yet earlier acknowledges DOR is associated with higher aneuploidy rates, creating a slight tension. The probability estimate is coherent with the evidence presented overall."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer implied, luteal support for DOR, PGT-A counseling for age 38 with DOR, and donor egg discussion as future option. The Gardner grading interpretation is accurate per standard criteria. Minor deviation: the response does not explicitly address single vs. double embryo transfer considerations, which ASRM guidelines specifically address for this age group. PGT-A recommendation is appropriately nuanced regarding statistical viability with low oocyte yield."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, nutritional optimization, PGT-A for future cycles, donor egg counseling threshold, and stress management. The response provides clear decision points and future planning pathways. Could be more specific on luteal support protocol details (e.g., progesterone type/dosage) and timing of PGT-A discussion. The donor egg recommendation with a specific success rate estimate (50-60%) adds useful context for patient counseling."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.018723,
+  "judge_latency_ms": 15913.810207988718,
+  "judge_prompt_tokens": 2971,
+  "judge_completion_tokens": 654
+}

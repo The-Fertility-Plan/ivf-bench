@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0464",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonably identifies a blastocyst with loosely grouped ICM and relatively cohesive TE, but overstates expansion as 3/4 and calls the embryo high-quality despite the provided Gardner score being 2BA; some features are inferred beyond what is clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, endometrium, sperm factors, BMI, and prior cycle history with embryo prognosis in a clinically meaningful way, though some links (e.g., BMI 18.2 as a major concern) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the implantation estimate is tied to morphology and age-related aneuploidy, but there is internal tension from re-grading the embryo upward and then basing prognosis on that adjusted grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading concepts and age-related prognosis, but the reinterpretation of the embryo as 3BA/4BA despite the supplied 2BA is not ideal, and some statements about underweight BMI/endometrial receptivity are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides broad counseling points and prognosis but offers limited concrete transfer-management or future-cycle planning steps; recommendations remain fairly generic and incomplete."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013215,
+  "judge_latency_ms": 5055.222541996045,
+  "judge_prompt_tokens": 2625,
+  "judge_completion_tokens": 356
+}

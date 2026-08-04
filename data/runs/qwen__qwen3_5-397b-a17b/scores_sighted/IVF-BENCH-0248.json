@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0248",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates image certainty: the ICM is not crisply defined, TE detail is limited in this single focal plane, and calling 3AA 'the highest morphological score possible' is incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, prior failed cycle, male factor, BMI, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH is unavailable and some inferences are stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, especially around age-related aneuploidy and morphology versus euploidy uncertainty. Minor issues include overconfidence in morphology and some broad assumptions about prior failure and lab performance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice, including SET for a good-quality day-5 blastocyst and consideration of PGT-A at age 37. Small deviations include overstating morphology rank and suggesting exercise/stress changes with limited direct transfer-specific evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including proceeding with SET, considering PGT-A, and evaluating sperm DNA fragmentation. It is useful, though not highly nuanced regarding fresh-versus-freeze contingencies or luteal support details."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013251,
+  "judge_latency_ms": 5616.744667000603,
+  "judge_prompt_tokens": 2537,
+  "judge_completion_tokens": 376
+}

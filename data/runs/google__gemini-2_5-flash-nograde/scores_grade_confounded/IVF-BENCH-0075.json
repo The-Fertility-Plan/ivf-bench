@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0075",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response undercalls the provided laboratory grade of 3AA by estimating 3BB/4BB and introduces uncertain features like vacuolization/irregular TE not clearly supported. It does recognize an expanded blastocyst and visible ICM/TE, but the morphology assessment is notably off."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, tubal factor, prior IVF failures/miscarriages, sperm parameters, endometrial thickness, and lifestyle factors well, linking them to prognosis and embryo potential. AMH is unavailable and not discussed, but most relevant interactions are covered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it overweights thin endometrium to produce a very low implantation estimate despite a young patient and good-quality embryo, and it infers possible embryo aneuploidy somewhat strongly for age 26. Some recommendations also extend beyond the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many points are guideline-consistent, such as concern about a 5 mm endometrium, smoking cessation, and considering further evaluation after repeated failures. However, strong endorsement of ERA, NK/immunologic testing, G-CSF/PRP, and broad thrombophilia screening is not well supported by major guidelines for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps, including considering freeze-all, evaluating the thin endometrium, hysteroscopy, lifestyle modification, and broader recurrent failure workup. It is practical, though some suggested tests/interventions are not sufficiently nuanced regarding evidence strength."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.016425,
+  "judge_latency_ms": 5903.940625001269,
+  "judge_prompt_tokens": 3490,
+  "judge_completion_tokens": 397
+}

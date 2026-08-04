@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0528",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, incorrectly describing the blastocyst as hatched/about to hatch and claiming clearly distinct numerous TE cells and a significantly thinned zona; the ICM description is plausible but overall morphology interpretation is only partially supported by the image and lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, uterine factor, sperm parameters, endometrial thickness, and first-cycle status with embryo quality reasonably well, though it somewhat overinterprets AMH as diminished reserve and does not fully nuance the uterine diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but there are notable issues: expansion grading is mischaracterized, low oocyte yield is framed as a major prognostic issue for this transfer, and the probability estimate is only loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are deviations: Gardner stage 3 is mislabeled as expanded/hatched, and suggesting donor egg consideration after a first failed transfer in a 35-year-old with one embryo is not guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps such as proceeding if the cavity is optimized, considering freeze-all if uterine pathology remains, and luteal support, but recommendations are somewhat generic and future planning becomes less appropriate with premature donor-oocyte discussion."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013503,
+  "judge_latency_ms": 5326.103790997877,
+  "judge_prompt_tokens": 2686,
+  "judge_completion_tokens": 363
+}

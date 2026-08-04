@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 compacted morula and states Gardner grading is not applicable, despite the provided laboratory grade being 2BA blastocyst. It therefore gives incorrect expansion-stage, ICM, and TE interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major clinical factors well, including age, tubal factor, ovarian reserve, prior miscarriages, sperm parameters, and endometrial thickness, and relates them to prognosis, though this is built on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally mostly structured and the prognosis estimate is explained, but the chain is weakened by the central contradiction between the stated morula assessment and the provided blastocyst Gardner score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable (RPL workup, cavity assessment), but there are notable deviations: dismissing the Gardner score despite provided blastocyst grading, recommending broad thrombophilia screening and empiric aspirin/heparin without clear indication, and overstating PGT-A recommendation in a 28-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support and future evaluation, including RPL workup and sperm DNA fragmentation testing, though some suggestions are insufficiently nuanced or not guideline-based."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012768,
+  "judge_latency_ms": 3846.335333000752,
+  "judge_prompt_tokens": 2451,
+  "judge_completion_tokens": 361
+}

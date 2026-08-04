@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0689",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst with herniation through the zona pellucida, compact ICM with high cell density, and cohesive TE layer. The description of herniation at '12 o'clock position' matches the image. Minor issue: describing TE as 'syncytial layer' is technically imprecise (TE is epithelial, not syncytial). Overall morphological characterization aligns well with the visible image features and Gardner 4AA criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response meaningfully connects BMI 35.7 to endometrial milieu and progesterone metabolism, age 39 to aneuploidy risk, previous cycle outcomes (miscarriage + no pregnancy) to implantation failure workup needs, borderline sperm motility to DNA fragmentation concerns, and tubal factor diagnosis as a favorable indicator. The 'embryo-endometrial mismatch' framing effectively synthesizes the paradox of high-quality embryo in a challenging clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is well-structured: baseline age-adjusted rate → morphology premium → euploidy adjustment → BMI penalty → history penalty. The logic flows consistently and conclusions are supported. Minor inconsistency: the response states clinical pregnancy rate 30-40% but live birth rate 20-30%, which is reasonable, yet the PGT-A euploid scenario jumping to 50-60% clinical pregnancy despite BMI penalty could be better reconciled with the earlier BMI penalty calculation. Overall reasoning is sound and transparent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation, PGT-A for age 39 with RIF, ERA testing for recurrent implantation failure, SDF testing for borderline parameters, progesterone monitoring in obese patients. Low-dose aspirin recommendation is somewhat controversial per current ESHRE guidelines (not routinely recommended without thrombophilia). LMWH recommendation appropriately flagged as mixed evidence. Donor oocyte discussion at appropriate threshold. Minor deviations from strictest evidence-based practice but clinically reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations throughout. Includes specific drug names and doses (Enoxaparin 40mg, aspirin 81mg), specific progesterone targets (>20 ng/mL), specific diagnostic tests (ERA, EMMA/ALICE, ReceptivaDx BCL6, TUNEL/SCSA), specific BMI targets for future cycles (<32, ideally <30), and a clear decision tree for escalating interventions. The tiered approach (this transfer → future cycle → third-line) provides a complete roadmap. Recommendations are appropriately nuanced with caveats about evidence quality."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.02112,
+  "judge_latency_ms": 16835.393625005963,
+  "judge_prompt_tokens": 3430,
+  "judge_completion_tokens": 722
+}

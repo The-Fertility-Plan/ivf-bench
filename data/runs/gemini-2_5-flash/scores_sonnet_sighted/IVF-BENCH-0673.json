@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general blastocyst features consistent with Gardner 3BB grading - expanded blastocoel, loosely grouped ICM, and loose TE epithelium. However, the description relies heavily on the provided Gardner score rather than independent image analysis. The image actually shows notable fragmentation/debris visible along the upper portion of the blastocyst and what appears to be herniation or irregular TE morphology that the model fails to identify. The claim of 'no significant fragmentation or signs of degeneration' appears inaccurate given the visible cellular debris in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors - maternal age, AMH, FSH, sperm parameters, endometrial thickness, and lifestyle are all connected to the embryo assessment and prognosis. The response appropriately questions the DOR diagnosis given the strong AMH/FSH values. Minor gap: doesn't fully explore the implications of the long agonist protocol choice for a patient with apparent good reserve, and doesn't deeply address how the 8mm endometrium specifically interacts with a BB-grade embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-70% follows reasonably from the evidence presented. The response correctly identifies that young age is the primary driver of favorable prognosis and appropriately weights the BB grading as a moderate rather than major concern. Minor inconsistency: the response questions the DOR diagnosis but then includes it as a risk factor, creating slight tension. The reasoning chain from evidence to recommendation is clear and well-structured."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines - SET recommendation for young patient with good quality blastocyst is appropriate, luteal phase support is mentioned, and the graduated approach to further investigation (ERA, hysteroscopy) follows standard protocols. The Gardner grading interpretation is accurate. Minor deviation: the response suggests PGT-A consideration after first failure for a 29-year-old, which is not strongly supported by current ASRM guidelines for this age group without additional risk factors."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical - SET recommendation with clear rationale, specific mention of luteal phase support, conditional ERA testing, and a structured plan for failure scenarios including hysteroscopy and PGT-A consideration. The future cycle planning section provides a logical decision tree. Could be improved with more specific progesterone protocol suggestions, timing recommendations, or specific thresholds that would trigger intervention (e.g., what endometrial thickness would prompt cancellation)."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.022302,
+  "judge_latency_ms": 15615.962500000023,
+  "judge_prompt_tokens": 4124,
+  "judge_completion_tokens": 662
+}

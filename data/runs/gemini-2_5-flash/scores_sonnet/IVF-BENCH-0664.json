@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score - expanded blastocyst with thinning zona, compact ICM, and cohesive TE. However, it acknowledges image blurriness and hedges descriptions rather than providing precise morphological detail. The description is largely derived from the Gardner score data rather than independent image analysis, and the caveat about 'slight blurriness' suggests limited confidence in direct image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors: age, AMH/FSH, BMI, previous miscarriage, endometrial thickness, sperm parameters, and lifestyle. It connects these factors to prognosis meaningfully - e.g., linking previous miscarriage to aneuploidy risk, BMI to implantation rates, and male factor to embryo quality considerations. Minor gap: doesn't deeply explore the interaction between male factor diagnosis and the specific sperm parameters provided (45.1M/mL, 48.8% motile are borderline-normal, not 'quite good')."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 55-70% range is well-justified with specific reasoning for each modifier. The response consistently applies the previous miscarriage as a moderating factor without overstating it. Minor inconsistency: describes sperm parameters as 'quite good' when 48.8% motility is only marginally above WHO threshold, slightly undermining the male factor discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: advocates for SET given age and embryo quality, recommends luteal phase support, discusses PGT-A appropriately in context of recurrent pregnancy loss, and suggests recurrent miscarriage workup if needed. The PGT-A discussion is balanced and evidence-based. BMI counseling is handled sensitively. The response correctly identifies Day 5 blastocyst transfer advantages. No major guideline deviations noted."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with rationale, luteal support reminder, PGT-A discussion for future cycles, miscarriage workup triggers, lifestyle optimization, and embryo banking strategy. The response provides clear decision points and contingency planning. Could be more specific about luteal support protocols or ERA testing given the previous miscarriage history, and could address whether frozen vs. fresh transfer considerations are relevant here."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.01974,
+  "judge_latency_ms": 13035.09866600507,
+  "judge_prompt_tokens": 3430,
+  "judge_completion_tokens": 630
+}

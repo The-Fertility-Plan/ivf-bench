@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0086",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets image details that are not clearly discernible, especially assigning a specific ICM location/quality and TE grade. The embryo appears poorly expanded/possibly early blastocyst or suboptimal image rather than a confidently classifiable 3BB full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, prior live birth/miscarriage, BMI, smoking, endometrium, ovarian reserve, and male factor, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis framework. The main weakness is that the implantation estimate depends on a likely overconfident morphology assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, proceed with transfer, luteal support consideration), but PGT-A for a 28-year-old based mainly on one miscarriage is not strongly guideline-driven, and morphology grading is more certain than the image supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including lifestyle modification and possible sperm DNA fragmentation testing, though some suggestions are somewhat generic and not fully prioritized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012657,
+  "judge_latency_ms": 4679.354249994503,
+  "judge_prompt_tokens": 2524,
+  "judge_completion_tokens": 339
+}

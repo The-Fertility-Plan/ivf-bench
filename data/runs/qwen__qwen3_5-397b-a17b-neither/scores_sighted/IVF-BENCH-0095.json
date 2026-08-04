@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated that no image was available, but it then assumed a good-quality Day 5 blastocyst (e.g., 4AA-4BB) despite the actual image appearing more like an early/poorly expanded blastocyst with indistinct ICM and sparse/irregular TE. This introduces fabricated morphology-based optimism."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, oocyte yield, endometrial thickness, BMI, prior IVF outcomes, ectopic history, stress, and semen parameters into prognosis reasonably well, though AMH was unavailable and some links (e.g., sperm motility to DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there is a notable inconsistency in declining morphology assessment while still basing prognosis on an assumed good-quality blastocyst. The implantation estimate follows the narrative but rests on that unsupported assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice (evaluate uterine/tubal factors, consider hysteroscopy/endometritis workup, optimize weight), but some suggestions are not strongly guideline-based or are overstated, such as routine PGT-A recommendation at age 29, NK cell testing, and asserting RIF after this history without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future evaluation, including luteal support review, tubal/anatomical assessment, and male-factor follow-up. Some recommendations are practical, though a few are overly broad or controversial."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015324,
+  "judge_latency_ms": 5994.531917007407,
+  "judge_prompt_tokens": 3158,
+  "judge_completion_tokens": 390
+}

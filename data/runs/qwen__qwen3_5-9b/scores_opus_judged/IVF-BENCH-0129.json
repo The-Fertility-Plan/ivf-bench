@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0129",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA blastocyst features including expansion, thinning zona pellucida, tightly packed ICM, and cohesive TE. The descriptions align well with the Gardner grading provided. Minor issue: the model states the ICM appears as a 'darker, granular region in the center' which is a reasonable but somewhat generic description. Overall the morphological analysis is solid and consistent with the reported grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of patient age, AMH, BMI, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality. The model correctly notes the fertilization rate is strong, addresses the male factor diagnosis while noting sperm concentration is actually good, and connects the endometrial thickness to receptivity. One error: it states '11 MII oocytes fertilized out of 13 retrieved' when the data says 11 MII oocytes were obtained from 13 COCs - fertilization numbers weren't provided. Minor but notable inaccuracy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 50-60% is reasonable and well-justified through baseline rates, age adjustment, and uterine factors. The risk-benefit analysis is balanced. Minor issue: the claim that 35 is in the 'prime reproductive window' is slightly optimistic - it's generally considered the beginning of decline, though outcomes are still good. The logic chain from observations to conclusions is generally sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with guidelines. The Gardner grading interpretation is correct. However, the WHO reference for total motility is 42% (not 40% as stated, per WHO 2021 6th edition). The suggestion of PGT-A as optional is appropriate. The recommendation to proceed with transfer is sound. The BMI discussion is reasonable. However, calling 35 the 'prime' reproductive window slightly misrepresents ASRM/ESHRE guidance which notes declining fertility from 35. Also, the mention of 'chromosomal normality rate of 80-85%' at age 35 is slightly high; literature suggests closer to 50-65% euploid rates at 35."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure progesterone support, lifestyle modifications (exercise, weight management, stress reduction), consideration of PGT-A for future cycles, and cryopreservation of surplus embryos. The advice is well-tailored to this patient's profile. Could be improved with more specific progesterone protocols, timing details, or beta-hCG monitoring schedule, but overall provides clear next steps."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.02969,
+  "judge_latency_ms": 13903.892082977109,
+  "judge_prompt_tokens": 2568,
+  "judge_completion_tokens": 674
+}

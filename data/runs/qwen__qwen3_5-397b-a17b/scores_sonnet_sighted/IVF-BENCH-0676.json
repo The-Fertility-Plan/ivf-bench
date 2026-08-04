@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0676",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's expansion stage, ICM density and location, and TE cohesiveness consistent with a 3AA Gardner score. The description of the blastocoel cavity, thinning zona, and ICM as a dense cluster on the right side aligns well with the image. Minor limitation: the image appears somewhat ambiguous in quality and the TE description could be more nuanced given the slightly irregular appearance visible, but overall the morphological analysis is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors including age, BMI, DOR diagnosis, ovarian response, endometrial thickness, and sperm parameters. It correctly notes the apparent contradiction between DOR diagnosis and the relatively robust oocyte yield, and connects BMI to implantation risk. The missing AMH value is acknowledged. Minor gap: the response could have explored more deeply how DOR at age 33 with normal FSH might suggest a subclinical reserve issue, and the interaction between BMI and progesterone metabolism is a sophisticated addition that demonstrates good clinical integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The probability range of 50-60% is reasonably derived from baseline SART data adjusted for embryo quality and BMI. The conclusions are internally consistent and well-supported. Minor issue: the aneuploidy rate cited (30-40% at age 33) is slightly conservative but acceptable, and the BMI adjustment of 10-15% is applied coherently to arrive at the final estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines, particularly the strong recommendation for single embryo transfer (eSET) for a high-grade blastocyst in a patient under 35. Luteal support considerations for obese patients reflect current evidence. PGT-A recommendation is appropriately framed as optional at age 33 per current guidelines. The Gardner grading criteria are correctly applied. Minor deviation: the response could have referenced ESHRE's specific BMI counseling thresholds more precisely, and some clinics would consider BMI >30 a relative contraindication requiring pre-treatment weight loss."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering SET rationale, progesterone dosing adjustments for obese patients, weight management counseling, embryo banking strategy for DOR, PGT-A consideration, and metabolic screening. These are clinically actionable steps a reproductive endocrinologist could implement. The response would score higher with more specific progesterone dosing guidance (e.g., specific mg ranges) and clearer criteria for when to pursue PGT-A versus empirical transfer in future cycles."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.019068,
+  "judge_latency_ms": 15442.368375006481,
+  "judge_prompt_tokens": 2886,
+  "judge_completion_tokens": 694
+}

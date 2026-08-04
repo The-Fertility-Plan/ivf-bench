@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls image quality and likely misidentifies key structures: the embryo appears collapsed/partially hatched with limited clear visualization of ICM and TE, yet the model describes a well-expanded, good-to-excellent hatching blastocyst with cohesive ICM and numerous uniform TE cells and suggests 5AA-6BB, which is not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age-related aneuploidy risk, ovarian reserve, tubal factor diagnosis, sperm parameters, endometrium, and lifestyle, and connects them to prognosis, though it somewhat overstates how favorable reserve markers mitigate age-related embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and internally consistent overall, but the implantation estimate is inflated because it is based on an overly optimistic morphology assessment and assumes top-quality blastocyst status not clearly supported by the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, counseling about aneuploidy risk, and considering PGT-A at age 38 are broadly consistent with IVF practice guidelines, though the morphology-based grading confidence and success estimates are stronger than guideline-based caution would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, counseling, cryopreservation, and possible PGT-A, but lacks more nuanced contingency planning tied to the uncertain morphology."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.015459,
+  "judge_latency_ms": 5367.057374998694,
+  "judge_prompt_tokens": 3158,
+  "judge_completion_tokens": 399
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly misidentified the image before settling on a blastocyst interpretation and then described ICM/TE/zona features largely from the provided Gardner score rather than clearly visible morphology, so morphology assessment is unreliable and partly fabricated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, sperm parameters, diagnosis, and lifestyle with embryo quality reasonably well, though some links are overstated and it misses nuance around day-4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by extensive internal contradiction about whether the image is a zygote, cleavage embryo, or blastocyst, and by forcing a blastocyst-transfer interpretation despite conflicting case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and preference for single embryo transfer are aligned, but statements such as ICM grade being strongly correlated with euploidy, recommending routine sperm DNA fragmentation testing, and suggesting PGT-A in future cycles for this 31-year-old are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, clarifying the transfer day discrepancy, luteal support, and future-cycle considerations, though some recommendations are generic or based on questionable assumptions."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01220875,
+  "judge_latency_ms": 5952.848374960013,
+  "judge_prompt_tokens": 7135,
+  "judge_completion_tokens": 329
+}

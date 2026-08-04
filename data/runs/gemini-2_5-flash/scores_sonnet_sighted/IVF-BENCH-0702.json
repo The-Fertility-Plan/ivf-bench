@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0702",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: well-expanded blastocoel, compact ICM with numerous tightly packed cells, cohesive TE epithelium, and thinned zona pellucida. The description aligns well with the Gardner 3AA score. Minor limitation is that the image actually shows some granularity/heterogeneity in the ICM that could have been noted, and the expansion stage (3) description could have been more precise about the degree of expansion relative to stages 4-6."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most clinical factors well: age, AMH, FSH, endometrial thickness, sperm parameters, tubal factor diagnosis, lifestyle, and previous cycle failure are all connected to prognosis. The interaction between high AMH and relatively low oocyte yield is noted. Minor gap: the response doesn't deeply explore why the previous cycle failed or how the long agonist protocol relates to the modest oocyte yield given the high AMH, which could indicate a protocol mismatch worth discussing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-75% probability estimate is reasonably derived from the stated factors. The response appropriately weights the 3AA grade as the dominant positive factor while acknowledging the previous failure as a modest downward modifier. Minor issue: the response slightly underweights the previous failed cycle's impact and doesn't fully reconcile why a patient with AMH 9.77 only yielded 3 MII from 5 COCs, which could suggest a protocol or lab issue worth more explicit reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patient, luteal phase support, beta-hCG timing (9-11 days), consideration of ERA and hysteroscopy only after recurrent failure, PGT-A as a secondary option rather than first-line for age 33. The Gardner grading interpretation is accurate. Minor gap: could have mentioned endometrial receptivity assessment tools more specifically or referenced ESHRE's position on elective SET more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal support is mentioned, beta-hCG timing is specified, and future planning includes ERA, hysteroscopy, PGT-A, and protocol review with clear triggers for each. The response provides a logical decision tree for if the transfer fails. Minor limitation: specific progesterone protocol details are not mentioned, and the recommendation for stress reduction, while valid, is somewhat generic given the patient already reports mild stress."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.02109,
+  "judge_latency_ms": 15673.055708000902,
+  "judge_prompt_tokens": 3650,
+  "judge_completion_tokens": 676
+}

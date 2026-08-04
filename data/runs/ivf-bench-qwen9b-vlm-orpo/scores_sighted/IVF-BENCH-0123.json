@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a good-quality blastocyst and comments on ICM/TE, but overstates confidence from a single image, is somewhat inconsistent on expansion stage, and infers AA-level features that are not crisply demonstrable in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, BMI, ovarian reserve markers, diagnosis, semen parameters, cycle history, and endometrium with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with a plausible probability estimate tied to embryo quality and patient factors; minor tension exists around calling the embryo both strong and not elite, and around stage 3 vs expanded terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely consistent with IVF practice and evidence-based counseling, including avoiding overtesting after a first failure; minor deviations include somewhat overemphasizing evaluation of a 15 mm lining and some looseness around Gardner staging terminology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, cavity review, lifestyle optimization, and future-cycle considerations; useful though some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015336,
+  "judge_latency_ms": 8429.549417007365,
+  "judge_prompt_tokens": 3472,
+  "judge_completion_tokens": 328
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphological description is detailed and largely consistent with a 3AA blastocyst. The model describes expansion, ICM compactness, TE cohesion, zona thinning, and provides specific cell count estimates. The ICM localization at '10-11 o'clock' and specific cell counts (15-20 ICM cells, >50 TE cells) add detail, though some of these specifics may be somewhat fabricated or overly precise given typical image resolution. The description of minimal vacuolization and absence of herniation/multinucleation is appropriate. Minor concern about whether all described features are truly discernible from the image, but overall a strong morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model creates a comprehensive table linking each factor to clinical implications. It identifies the critical paradox of high-quality embryo + good endometrium + young age vs. 3 prior failures. It correctly flags the COC/MII discrepancy (6 COCs but 7 MII), addresses moderate alcohol intake as a potential contributor, considers paternal age, and integrates the unexplained diagnosis with RIF workup needs. The AMH being N/A is appropriately handled by inferring possible DOR from low oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and well-structured. The baseline probability is established first, then systematically adjusted downward based on RIF history with clear rationale. The model correctly identifies that repeated failure with good-quality embryos suggests either aneuploidy or receptivity issues. The 'critical paradox' framing is logically sound. The probability estimates (30-45% clinical pregnancy, 25-35% live birth) follow logically from the evidence. No contradictions detected throughout the analysis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied. PGT-A recommendation for RIF is evidence-based. ERA/EMMA/ALICE testing recommendations are current. Hysteroscopy recommendation is appropriate. The suggestion of low-dose aspirin is reasonable though evidence is mixed. Some recommendations like NK cell testing are appropriately flagged as controversial. The DHEA and GH supplementation suggestions are noted but evidence is limited. Minor deviation: the thrombophilia panel recommendation is somewhat controversial in current guidelines, though reasonable in RIF context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations. The response provides: (1) immediate transfer optimization steps including luteal support specifics, lifestyle modifications, and transfer technique suggestions; (2) a comprehensive diagnostic workup plan if the cycle fails, organized by category; (3) future cycle planning with three distinct options; (4) specific lifestyle prescriptions for both short-term and long-term. The recommendations are appropriately nuanced with alternatives considered and prioritized. The summary clearly states the key clinical insight and recommended pivot strategy."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.03721,
+  "judge_latency_ms": 17868.348749994766,
+  "judge_prompt_tokens": 3767,
+  "judge_completion_tokens": 735
+}

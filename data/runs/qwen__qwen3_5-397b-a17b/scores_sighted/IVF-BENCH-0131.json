@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies very poor-quality blastocyst with absent/degenerate ICM and TE, but misstates Gardner expansion 1 as <50% blastocoel and overcalls non-viability/arrest from a single image; limited discussion of possible collapse and zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior outcomes, AMH, sperm parameters, and endometrium reasonably well with embryo prognosis, though some links are somewhat speculative and diagnosis is not meaningfully addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the grade, but there are notable issues: incorrect interpretation of expansion stage, strong claim of 'medically futile' from morphology alone, and some overstatement regarding paternal age/stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is broadly appropriate, but recommending outright cancellation because the embryo is 'non-viable' is stronger than standard evidence-based practice from morphology alone; PGT-A is presented too strongly as recommended rather than individualized, and natural-cycle comments are partly speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer decision, protocol review, sperm DNA fragmentation consideration, and future planning, though recommendations would be stronger with more nuance about counseling versus absolute cancellation and individualized PGT-A discussion."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01275,
+  "judge_latency_ms": 5152.672666998114,
+  "judge_prompt_tokens": 2535,
+  "judge_completion_tokens": 343
+}

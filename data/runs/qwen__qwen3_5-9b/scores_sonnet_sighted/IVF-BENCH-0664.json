@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst, thinning zona pellucida, and correlates with the Gardner 3AA score. However, the description of internal structures is vague ('somewhat clear area' and 'darker granular region') and does not clearly distinguish ICM from TE in the image. The response appropriately acknowledges image resolution limitations but lacks precision in describing what is actually visible versus what is inferred from the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, BMI, ovarian reserve, sperm parameters, endometrial thickness, and previous miscarriage history. It correctly identifies BMI as a negative factor and endometrial thickness as favorable. It raises the important point about sperm DNA fragmentation beyond standard parameters. Minor gap: does not explicitly discuss how the antagonist protocol or the previous miscarriage might relate to potential uterine or immunological factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and the risk/benefit analysis is structured. However, the response is notably incomplete - it cuts off mid-sentence in the Risk Factors section ('Previous Miscarriage: Indicates') and never provides the promised implantation probability estimate or recommendations sections (sections 4 and 5 are entirely missing). This is a significant coherence failure as the conclusions are never drawn."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation aligns with established criteria. The clinical observations about BMI, age, and endometrial thickness are consistent with ESHRE/ASRM guidance. However, the response never reaches the recommendations section, so it cannot be evaluated for guideline-aligned transfer recommendations (e.g., single embryo transfer policy, PGT-A considerations, luteal support). The incomplete response limits this score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is fundamentally non-actionable as it is incomplete. Sections 4 (implantation probability) and 5 (recommendations for transfer and future cycle planning) are entirely absent. The response cuts off abruptly without providing any specific clinical recommendations, next steps, or probability estimates, which were the core deliverables of the task."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.015441,
+  "judge_latency_ms": 12803.59862500336,
+  "judge_prompt_tokens": 2367,
+  "judge_completion_tokens": 556
+}

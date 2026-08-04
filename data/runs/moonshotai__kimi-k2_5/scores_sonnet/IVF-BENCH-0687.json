@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the Grade 3 expansion with thinned zona pellucida, Grade A ICM as compact and densely cellular, and Grade B TE as cohesive but moderately loose. Descriptions align well with Gardner grading criteria provided in the lab data. Minor limitation is that the model is largely confirming the provided Gardner score rather than independently analyzing novel image features, but the descriptions are consistent and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors: AMH 0.94 flagged as DOR for age 30, three prior failures contextualized as RIF, biochemical pregnancy interpreted as transient aneuploid implantation, partner age 42 linked to sperm DNA fragmentation risk, 100% MII rate noted as favorable, and endometrial thickness of 9mm recognized as optimal. The 'DOR paradox' framing effectively captures the disconnect between chronological age and ovarian reserve, and interactions between factors are explicitly discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (25-35% clinical pregnancy) is derived through a transparent adjustment framework from a baseline, and the euploidy-blended estimate logic is sound. Minor issue: the -15% RIF adjustment and other deductions are presented with false precision without explicit evidence base, and the baseline of 45-55% for 3AB at age 30 is on the higher end of published data. Overall the conclusions follow logically from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines: ultrasound-guided transfer, luteal phase support, PGT-A consideration for RIF, sperm DNA fragmentation testing for advanced paternal age, ERA for recurrent implantation failure, hysteroscopy, and thrombophilia workup. DHEA and growth hormone recommendations are noted as adjunctive with appropriate caveats. Low-dose aspirin recommendation has limited evidence base in IVF but is commonly used. No recommendations contradict established guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific immediate steps (luteal support optimization, transfer technique details), a prioritized diagnostic workup if this cycle fails (PGT-A, DFI, karyotype, ERA, hysteroscopy, thrombophilia panel), and detailed future cycle planning (protocol switch to antagonist, dual trigger, DHEA priming, GH, embryo banking strategy). Prognostic counseling points are practical and patient-centered. Recommendations are well-sequenced and appropriately nuanced for the clinical scenario."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.020616,
+  "judge_latency_ms": 14675.789624998288,
+  "judge_prompt_tokens": 3552,
+  "judge_completion_tokens": 664
+}

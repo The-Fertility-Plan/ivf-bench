@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0176",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with poorly defined/degenerate ICM and TE, broadly consistent with 1DD. However, it overstates image-specific findings such as zona pellucida 'stress,' irregular cavity significance, necrosis, apoptotic cascade, and 'empty/ghost' blastocyst features that are not directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, low AMH/low oocyte yield, endometriosis, sperm quality, endometrial thickness, and first-cycle context well, and links them to prognosis. It slightly over-attributes embryo morphology to DOR/endometriosis and is somewhat deterministic about causation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent: very poor morphology drives a very low implantation estimate despite favorable age and uterine factors. Minor issues include strong claims of developmental arrest/aneuploidy from morphology alone and some extrapolation beyond the available evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis for DD embryos are broadly aligned with IVF practice. However, the response blurs day-specific context (transfer day listed as Day 4 while discussing a blastocyst as if fully standard Day 5/6), and some statements are stronger than guideline-supported conclusions from morphology alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins to recommend counseling and possible transfer if this is the only embryo, but the recommendations are truncated and do not provide a complete, practical plan for this transfer or future cycle optimization."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.013731,
+  "judge_latency_ms": 5967.32370799873,
+  "judge_prompt_tokens": 2517,
+  "judge_completion_tokens": 412
+}

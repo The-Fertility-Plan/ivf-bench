@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0483",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and describes features not clearly visible in this image, including a distinct large blastocoel, tightly defined ICM at 7-9 o'clock, and uniformly cohesive TE. The image appears blurry/collapsed enough that these details cannot be confidently confirmed from morphology alone, despite the provided 3AA label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, prior biochemical pregnancy, smoking, endometrial thickness, and male-factor context with embryo quality and prognosis. It misses some nuance around BMI being only mildly elevated and the uncertainty of the male-factor diagnosis given the listed semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: strong morphology is tempered by age-related aneuploidy risk and lifestyle factors. Probability estimates are internally consistent, though some claims such as 'top 5-10%' and the exact euploidy/implantation framing are somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-quality day-5 blastocyst, counseling on smoking/alcohol, and consideration of PGT-A in future cycles at age 39. However, the strong endorsement of PGT-A as reducing time to pregnancy/live birth is somewhat stronger than guideline-supported certainty in all patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, lifestyle modification, luteal support review, and possible sperm DNA fragmentation testing. It is useful clinically, though some recommendations could be more individualized and evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01422,
+  "judge_latency_ms": 5594.75374998874,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 418
+}

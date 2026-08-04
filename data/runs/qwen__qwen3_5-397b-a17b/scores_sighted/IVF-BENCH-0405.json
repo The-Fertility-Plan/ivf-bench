@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0405",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE, but overstates non-viability from image alone and includes some uncertain features (vacuolation, collapse) while also noting the expansion-score inconsistency."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, low MII yield, uterine factor, prior biochemical pregnancy, partner age, sperm parameters, and endometrium with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it calls the embryo non-viable/arrested despite it being a day-5 blastocyst, and recommends cancellation based on a poor-grade embryo in a way that is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is appropriate, but several recommendations are not well aligned with evidence-based practice, including strong advice to cancel transfer, claiming effectively zero chance, and suggesting ICSI/PGT-A largely on paternal age and prior biochemical pregnancy alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, protocol review, uterine evaluation, and future cycle planning, though some recommendations are overly directive and insufficiently nuanced for a poor but potentially transferable embryo."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013431,
+  "judge_latency_ms": 4909.363333004876,
+  "judge_prompt_tokens": 2657,
+  "judge_completion_tokens": 364
+}

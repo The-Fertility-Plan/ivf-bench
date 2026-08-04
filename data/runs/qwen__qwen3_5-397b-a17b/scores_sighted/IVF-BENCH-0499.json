@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0499",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2BA label, but it overstates visible features: calls the zona thinning/preparing to hatch and localizes the ICM with more certainty than the image supports; also refers to stage 2 while lab data describes a full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, male factor, prior failed cycle, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with a plausible probability range tied to embryo quality and patient age; minor issues include overconfidence in endometrial receptivity and morphology-based conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on general prognosis and transfer considerations, but includes weaker-evidence recommendations such as strongly considering PGT-A at age 27 after limited failure and ERA after two failures, and assumes fresh transfer is preferable without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including luteal support, ultrasound-guided transfer, and further male-factor workup, though some recommendations are broader than guideline-based."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012447,
+  "judge_latency_ms": 5138.729375001276,
+  "judge_prompt_tokens": 2514,
+  "judge_completion_tokens": 327
+}

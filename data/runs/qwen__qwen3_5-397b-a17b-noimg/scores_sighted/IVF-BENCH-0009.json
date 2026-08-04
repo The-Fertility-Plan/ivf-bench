@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the reported Gardner score. Its comments on poor ICM/TE are consistent with 1DD, and it correctly noted the stage-description discrepancy. However, it overstates non-viability and does not describe visible image features; calling the embryo definitively non-viable from the score alone is stronger than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, endometrium, oocyte maturity, male-factor diagnosis, and lifestyle with embryo quality in a clinically meaningful way. It links the unexpectedly poor embryo outcome to possible sperm-related factors, though some inferences are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it makes unsupported leaps: inferring likely fertilization/developmental failure details not provided, labeling the embryo categorically non-viable, and recommending cancellation despite the transfer day already being specified. The probability estimate follows its premise but the premise is overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the Gardner grading discussion is broadly correct and noting poor prognosis is appropriate, stating that a DD embryo is effectively non-transferable/non-viable and advising outright cancellation is stronger than standard evidence-based guidance. Recommendations such as routine PICSI/IMSI, acupuncture, and broad PGT-A suggestion are not strongly guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps: review fertilization/development data, consider sperm DNA fragmentation testing, confirm insemination method, and plan future culture strategy. Some recommendations are practical, though a few are overly prescriptive or not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014943,
+  "judge_latency_ms": 6838.911291997647,
+  "judge_prompt_tokens": 2796,
+  "judge_completion_tokens": 437
+}

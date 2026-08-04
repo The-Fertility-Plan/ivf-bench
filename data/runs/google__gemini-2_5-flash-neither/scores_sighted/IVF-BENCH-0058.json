@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it could not assess morphology without an image, but then assumed a good-quality blastocyst (e.g., 4AA/5AA), which is unsupported by the actual image and effectively introduces fabricated morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, BMI, AMH/FSH, oocyte yield, tubal factor, sperm parameters, endometrium, prior cycle, and stress, and relates them to prognosis, though the interaction with actual embryo morphology is limited because morphology was not assessed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is built on an explicit hypothetical good-quality embryo assumption rather than the presented embryo, weakening the evidentiary basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a good-prognosis 33-year-old and standard luteal support are broadly guideline-consistent, but suggestions like ERA, immunologic/thrombophilia workup, and routine consideration of PGT-A after limited failure are more weakly supported and not standard early recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, embryo prioritization, luteal support, cycle review, and stress management, though some advice is somewhat generic and partly contingent on an assumed embryo grade."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014841,
+  "judge_latency_ms": 5055.187959005707,
+  "judge_prompt_tokens": 3092,
+  "judge_completion_tokens": 371
+}

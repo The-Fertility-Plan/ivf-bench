@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0734",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The model repeatedly identifies the image as an MII oocyte rather than a blastocyst, and never provides any actual morphological description of blastocyst features (blastocoel, ICM, TE). It gets stuck in a loop of contradictions and fails to deliver any meaningful morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The model never integrates any clinical factors (age, AMH, BMI, sperm parameters, previous cycle outcome) with embryo quality. The entire response is consumed by confusion about the image identity, with zero clinical synthesis performed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is entirely incoherent — it consists of repetitive, circular reasoning loops that never resolve. The model contradicts itself repeatedly and fails to reach any conclusion. There is no coherent clinical reasoning chain whatsoever."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 1,
+      "justification": "No clinical guidelines (ESHRE, ASRM, Gardner grading) are referenced or applied. No recommendations are made. The response does not demonstrate any knowledge of evidence-based reproductive medicine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "Zero actionable recommendations are provided for either the current transfer or future cycle planning. The response is entirely non-functional from a clinical standpoint, offering no practical guidance whatsoever."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.034611,
+  "judge_latency_ms": 7489.743167003326,
+  "judge_prompt_tokens": 9777,
+  "judge_completion_tokens": 352
+}

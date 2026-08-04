@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality cavitating/early blastocyst with absent/degenerate ICM and TE, but overstates expansion as 'expanded' with a blastocoel occupying most of the embryo and mentions zona thinning, which are not well supported by the image or the provided 1DD grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, tubal factor, sperm quality, BMI, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis estimate follows from the poor morphology and age, but there are inconsistencies such as calling the embryo both early and expanded, and suggesting Day 4 blastulation as favorable while also framing it as possible stress/asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: ERA/EMMA/ALICE and thrombophilia testing are not routinely guideline-supported in this scenario, and recommending extended culture of a Day 4 transfer embryo is not clearly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer counseling, luteal support consideration, and future-cycle planning including PGT-A discussion, though some recommendations are not sufficiently prioritized or guideline-restrained."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013707,
+  "judge_latency_ms": 5300.526542006992,
+  "judge_prompt_tokens": 2694,
+  "judge_completion_tokens": 375
+}

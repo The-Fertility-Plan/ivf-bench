@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0219",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and assigns clearly visible features (dense ICM at 7-8 o'clock, cohesive TE, thinning zona) that are not convincingly discernible in this image; calling it 'gold standard' is not well supported by the visual appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, prior cycle history, and endometrial thickness with embryo prognosis reasonably well, though some assumptions (e.g., likely trilaminar lining, DNA fragmentation implication) go beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it labels 3AA as the highest possible grade and 'gold standard,' and some conclusions rely on unsupported assumptions from the image and diagnosis details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: 3AA is not the highest possible blastocyst grade, recommending fresh transfer based on absent OHSS/progesterone data is overconfident, and suggesting PGT-A to address male factor/chromosomal issues is somewhat overstated for a 29-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable (proceed/consider transfer, luteal support, future sperm DNA fragmentation testing if failure, discuss PGT-A if needed), though some are not sufficiently nuanced to the missing cycle details."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013536,
+  "judge_latency_ms": 5246.464958006982,
+  "judge_prompt_tokens": 2552,
+  "judge_completion_tokens": 392
+}

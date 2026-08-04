@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0330",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a low-quality single image, asserting features such as TE grade A confirmation, partial blastocoel assessment, vacuolation/granularity, internal debris, and focal zona irregularity that are not reliably discernible here. It loosely matches the provided 3BA label but includes several likely fabricated image-specific details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior IVF outcomes, sperm quality, diagnosis, and endometrial thickness with embryo quality in a clinically meaningful way. Some conclusions, such as labeling this as clear DOR phenotype and emphasizing declining trajectory, are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis discussion is generally coherent, but the probability adjustments are not well validated and rely on questionable morphology claims. Some deductions, such as specific penalties for zona irregularity and vacuolation, are weakly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic embryo grading and transfer discussion are broadly aligned, but several recommendations are not guideline-forward or are controversial for routine use, including ERA as high priority, NK cell testing, thrombophilia workup for biochemical losses, aspirin/sildenafil/G-CSF suggestions, and assisted hatching based on presumed zona irregularity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for proceeding with transfer, luteal support, and future-cycle considerations. However, some suggested interventions are not strongly evidence-based, which limits practical appropriateness."
+    }
+  ],
+  "extracted_probability": 0.28,
+  "judge_cost_usd": 0.016413,
+  "judge_latency_ms": 6076.305208000122,
+  "judge_prompt_tokens": 3491,
+  "judge_completion_tokens": 396
+}

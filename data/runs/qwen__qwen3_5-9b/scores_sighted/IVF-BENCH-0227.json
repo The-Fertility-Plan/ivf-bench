@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0227",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It broadly matches the provided 3BA label but inaccurately calls the embryo 'early-stage' and states the zona is thinned/expanded based on the image when the blastocoel appears limited/collapsed and key features are not clearly visualized."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, sperm, unexplained infertility, and prior outcomes with embryo quality reasonably well, though some interactions are oversimplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues such as calling this a 'high-risk patient,' labeling 4 prior cycles as RIF without nuance, and citing implausibly low aneuploidy rates for age 33."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and general transfer reasoning are mostly aligned, but the response overstates certainty around TE as a predictor, loosely applies RIF terminology, and hints at non-guideline etiologies like immunologic/thrombophilic causes without context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It gives only generic immediate advice and the recommendations are truncated, with limited concrete planning for transfer optimization or future cycle workup."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011802,
+  "judge_latency_ms": 4680.6022910022875,
+  "judge_prompt_tokens": 2359,
+  "judge_completion_tokens": 315
+}

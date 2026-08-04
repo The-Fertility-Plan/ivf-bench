@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0199",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD and notes disorganized cellular architecture with poorly defined ICM/TE. However, it inaccurately calls grade 1 an expanded blastocyst and overstates non-viability/arrest from a single image; zona and blastocoel description are only partly precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, BMI, ovarian reserve, prior IVF outcomes, endometrial thickness, oocyte yield, and sperm data with embryo quality in a clinically meaningful way. It slightly overinterprets prior outcomes as proving uterine receptivity and labels the pattern as recurrent implantation failure somewhat loosely."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor morphology plus age/BMI/history leads to low implantation potential. Minor issues include conflating grade 1 with expansion, treating DD as essentially non-viable with excessive certainty, and some strong causal claims not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, especially emphasizing poor prognosis and individualized counseling. However, several recommendations are not guideline-based or are overstated, including 'PGT-A mandatory,' routine ERA/EMMA/ALICE, empiric LMWH, growth hormone, very high-dose stimulation, and calling weight loss 'non-negotiable.'"
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer counseling, ectopic surveillance if pregnant, and future-cycle considerations with alternatives. Actionability is reduced by inclusion of several speculative or nonstandard interventions and somewhat overly directive recommendations."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014994,
+  "judge_latency_ms": 6464.043499989202,
+  "judge_prompt_tokens": 2898,
+  "judge_completion_tokens": 420
+}

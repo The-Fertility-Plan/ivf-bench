@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0125",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, asserting clear confirmation of a 3AA blastocyst, robust TE, and thinning zona. The image is limited/blurred, with ICM only partly appreciable and TE/cavity not well delineated, so several features are inferred rather than directly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, sperm parameters, diagnosis, and endometrial thickness with embryo quality reasonably well. It appropriately identifies obesity as the main adverse factor, though some links (e.g., FSH interpretation) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: calling this a top-tier embryo with very high euploidy potential from morphology alone, and attributing significance to a normal FSH as evidence of metabolic strain. Probability adjustment is plausible but somewhat loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, including proceeding with transfer and counseling on BMI-related risks. However, recommending CoQ10 for this transfer context, implying morphology strongly predicts euploidy, and suggesting PGT-A partly due to male factor are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, metabolic screening, prenatal supplementation, alcohol avoidance, and future weight optimization. Recommendations are useful, though not highly nuanced regarding transfer strategy or limits of additional testing."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01332,
+  "judge_latency_ms": 5394.537458996638,
+  "judge_prompt_tokens": 2555,
+  "judge_completion_tokens": 377
+}

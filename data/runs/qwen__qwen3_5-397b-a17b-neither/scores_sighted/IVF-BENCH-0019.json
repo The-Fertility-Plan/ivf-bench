@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined direct image interpretation and correctly noted that Gardner grading is not applicable to a Day 4 transfer. It did not fabricate specific visible features, but it also missed that the provided image appears blastocyst-like rather than simply a compacting morula, so morphology assessment was limited and partly mismatched to the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low oocyte yield, prior cycle history, ectopic history, smoking, BMI, sperm parameters, and endometrial thickness into prognosis reasonably well. Some links are somewhat overstated (e.g., severe RIF framing, uterine/immunologic emphasis) but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable leaps: calling this severe RIF from the listed history, assuming Day 4 transfer is inherently lower potential without embryo-specific morphology, and giving a fairly low implantation estimate based on speculative causes. Reasoning is coherent but not fully well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (smoking cessation, early ectopic surveillance, hysteroscopic evaluation when indicated, review of stimulation). However, recommending immunologic/thrombophilia screening and PGT-A in a 29-year-old with low embryo numbers is not strongly guideline-supported, and some statements about Day 4 transfer are oversimplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future planning, including smoking cessation, luteal support, early beta-hCG/ultrasound, protocol review, and further workup. Recommendations are clinically usable, though a few are broader or more speculative than ideal."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.014916,
+  "judge_latency_ms": 5768.135958991479,
+  "judge_prompt_tokens": 2867,
+  "judge_completion_tokens": 421
+}

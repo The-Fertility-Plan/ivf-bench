@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes poor-quality blastulation with poorly defined ICM/TE, but it misstates the reported expansion grade by calling grade 1 '<50%' rather than 'at least half the embryo' per the provided lab data, and overinterprets non-viability from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior cycle history, BMI, endometrial thickness, and male factor reasonably well with embryo prognosis, though some links are somewhat speculative (e.g., paternal DNA fragmentation, BMI impact)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the low prognosis estimate follows from the poor embryo grade, but the claim that the embryo is 'biologically incapable' is too absolute and not fully supported by morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It appropriately recognizes the mismatch between Day 4 transfer and Gardner blastocyst grading and generally follows poor-prognosis principles, but it overstates certainty about non-viability and uses some non-guideline assertions (e.g., ideal endometrium thresholds, lethality language)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion gives prognosis and risk framing but provides limited concrete management steps for the current transfer or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.011622,
+  "judge_latency_ms": 5151.681666000513,
+  "judge_prompt_tokens": 2244,
+  "judge_completion_tokens": 326
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0186",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early/collapsed blastocyst and absent ICM/TE, but it speculates beyond the image (e.g., fragmented morula-like structure, zona thinning comments) and shows some uncertainty against the provided 0DD label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, uterine factor, prior ectopic/failed cycles, semen parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are inconsistencies in probability estimates (5-15%, 10-20%, 10-25%, 25%) and some contradictory statements about prognosis and embryo interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with IVF practice: poor prognosis for 0DD, attention to uterine/tubal evaluation, hydrosalpinx management, luteal support, and cautious use of PGT-A in a 28-year-old. Minor deviations include overemphasis on PGT-A and some imprecise grading language."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including uterine/tubal reassessment, ectopic monitoring, luteal support, and lifestyle optimization, though recommendations are not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.016467,
+  "judge_latency_ms": 5739.024457987398,
+  "judge_prompt_tokens": 3744,
+  "judge_completion_tokens": 349
+}

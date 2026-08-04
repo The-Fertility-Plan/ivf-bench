@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion grade 2, ICM grade B, TE grade C) and provides reasonable descriptions. However, it relies heavily on the provided Gardner score rather than independently analyzing the image. The image shows a blastocyst with visible internal cell mass and trophectoderm cells, and the zona pellucida appears thin/hatching which is not mentioned. The description of the blastocoel filling the embryo is consistent with the image, but no mention of zona pellucida thinning or early hatching signs visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age-related aneuploidy risk, AMH/FSH indicating good ovarian reserve, oocyte yield, endometrial thickness, male factor diagnosis with ICSI implication, and previous failed cycle. The interaction between age and embryo quality is well-articulated. Minor gap: BMI is not discussed, and the specific sperm parameters could be more critically analyzed in context of male factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 15-25% follows reasonably from the stated risk factors (age 41, C-grade TE, previous failure) balanced against favorable factors (endometrial thickness, ovarian reserve). The chain from morphological assessment to clinical factors to probability estimate is coherent. Minor issue: the response states 20-30% euploid rate at 41 but then estimates 15-25% implantation, which is reasonable but the mathematical reasoning connecting these could be more explicit."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for advanced maternal age, consideration of accumulation cycles, discussion of donor oocytes as escalation, and luteal phase support. Gardner grading criteria are correctly applied. The recommendation to proceed with transfer of the best available embryo is appropriate. The suggestion of PGT-A is consistent with current guidelines for women 38+ with previous failures. No major deviations from established practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, manage expectations, consider PGT-A for future cycles, accumulation strategy, protocol review, and donor oocyte discussion as escalation. The tiered approach (current transfer vs. future planning) is clinically useful. Could be more specific about luteal phase support protocols, timing of beta-hCG testing, or specific PGT-A laboratory considerations, but overall provides clear actionable steps for a clinician."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.021024,
+  "judge_latency_ms": 13736.124165996443,
+  "judge_prompt_tokens": 3723,
+  "judge_completion_tokens": 657
+}

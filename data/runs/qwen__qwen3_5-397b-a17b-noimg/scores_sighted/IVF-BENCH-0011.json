@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 1DD grade. Its interpretation of very poor ICM/TE quality is broadly consistent with the image and lab grade, but it incorrectly stated Gardner expansion grade 1 means blastocoel less than 50% of embryo volume and added unsupported claims such as clear atresia/non-viability."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated maternal age, low AMH/low oocyte yield, tubal factor, sperm parameters, endometrial thickness, BMI/lifestyle, and linked these appropriately to embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with prognosis logically driven by very poor embryo grade plus age-related aneuploidy risk. Minor issues include overstatement of non-viability and some uncertainty around day-4 timing/asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: misstatement of Gardner expansion criteria, overconfident labeling of the embryo as non-viable, and strong endorsement of PGT-A/DHEA without sufficient nuance for a low-yield 39-year-old patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points, transfer options, and future-cycle strategies such as embryo banking and protocol reconsideration. It is useful, though some recommendations are somewhat overdirective and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014775,
+  "judge_latency_ms": 4892.388791995472,
+  "judge_prompt_tokens": 2990,
+  "judge_completion_tokens": 387
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner 2BA grade. Its description of 2BA is broadly correct, but it did not analyze visible image features directly and slightly overstated expansion by calling 2 'full blastocyst' rather than blastocoel filling the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, diagnosis, prior failed cycles, sperm parameters, endometrium, oocyte yield, and transfer timing with embryo quality in a clinically meaningful way. It misses some nuance around the limited significance of some factors and overemphasizes certain speculative causes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear explanation for lowering prognosis due to prior failed cycles despite favorable age and embryo quality. Minor issues include speculative attribution to immunologic/receptivity causes and somewhat assertive probability adjustment without strong evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and uterine cavity review are guideline-consistent, but ERA, NK/immunologic testing, endometrial scratch, and routine PGT-A in a 26-year-old after two failures are not strongly supported by current ASRM/ESHRE guidance and are presented too favorably."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer and contingency planning, including SET, cavity assessment, luteal support, and possible further workup. However, some suggested interventions are controversial and would need stronger caveats."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.016131,
+  "judge_latency_ms": 5913.2844590058085,
+  "judge_prompt_tokens": 3477,
+  "judge_completion_tokens": 380
+}

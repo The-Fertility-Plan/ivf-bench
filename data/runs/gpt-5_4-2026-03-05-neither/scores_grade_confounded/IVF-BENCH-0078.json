@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner grade was provided and does not analyze the supplied 0DD morphology. It misses the key poor-quality features: early blastocyst with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, semen, endometrium, and cycle context well, though it fails to connect these factors to the actually provided very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally organized, but a major premise is wrong: morphology was available and very poor. This leads to an overly optimistic prognosis and weakens the logic of the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations are broadly consistent with IVF practice, including single embryo transfer and avoiding routine PGT-A at age 28, but the failure to interpret Gardner 0DD departs from standard embryo grading-based prognostication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical transfer and future-cycle recommendations, medication adherence, lifestyle advice, and review points after failure. However, it does not address the implications of transferring a 0DD embryo specifically."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.016071,
+  "judge_latency_ms": 3857.7667499994277,
+  "judge_prompt_tokens": 3727,
+  "judge_completion_tokens": 326
+}

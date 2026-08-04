@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls visible detail. The image shows a blastocyst with a large cavity and overall fair-poor definition, but the ICM is not clearly identifiable and TE appears sparse/irregular rather than confidently grade B. Calling a distinct ICM at 8 o'clock and assigning 3BB/4BB is more specific than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, tubal factor, prior miscarriage/failed cycles, endometrial thickness, and sperm parameters with embryo prognosis reasonably well. It appropriately emphasizes age-related aneuploidy as the dominant factor, though some lifestyle comments are less clinically central."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: morphology is acceptable, but prognosis is tempered by age-related aneuploidy and prior history. Minor issues include labeling BB as 'top-tier' and some speculative statements about implantation factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET and consideration of PGT-A at age 40. However, morphology grading is overstated from the image, and suggestions such as TESA for elevated sperm DNA fragmentation are not standard first-line recommendations in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, luteal support, SET, and discussing PGT-A in future cycles. It is useful clinically, though some recommendations could be more nuanced and less speculative."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014013,
+  "judge_latency_ms": 5335.7130420045,
+  "judge_prompt_tokens": 2651,
+  "judge_completion_tokens": 404
+}

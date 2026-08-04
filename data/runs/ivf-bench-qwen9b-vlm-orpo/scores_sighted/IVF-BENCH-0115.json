@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a BB blastocyst image, correctly noting modest ICM and loose TE, but it likely overcalls the expansion as stage 3 rather than the provided Gardner 2 full blastocyst and includes some features not confidently assessable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, diagnosis, prior IVF outcomes, sperm parameters, endometrium, and smoking with embryo morphology to frame prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible probability range tied to embryo grade and patient factors; only minor tension comes from reinterpreting the stage while still accepting the lab grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: single embryo transfer at age 31, attention to cavity assessment after repeated failures, and selective rather than routine PGT-A. Minor overreach includes speculative comments on developmental robustness from morphology alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for current transfer optimization, smoking cessation, supportive care, and structured future workup including cavity reassessment, luteal review, and selective sperm DNA fragmentation/PGT-A discussion."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.017307,
+  "judge_latency_ms": 23760.434666997753,
+  "judge_prompt_tokens": 4069,
+  "judge_completion_tokens": 340
+}

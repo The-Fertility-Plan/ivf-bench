@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0667",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies blastocoel cavity, thinned zona pellucida, and peripheral cell layer, and notes uncertainty about ICM visualization. However, it lacks specific description of the trophectoderm epithelium quality, does not clearly describe the ICM compactness or cell count visible in the image, and the hedging about ICM visibility is somewhat excessive given the image shows a reasonably identifiable structure. The description is cautious but somewhat generic rather than precisely matched to image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age, BMI, AMH, FSH, oocyte yield, sperm parameters, endometrial thickness, lifestyle factors, and prior cycle history. It explicitly connects each factor to prognosis, explains how the prior miscarriage and failed cycle temper expectations, and discusses potential underlying causes (sperm DNA fragmentation, occult endometrial factors) in the context of unexplained infertility. The interaction between factors is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 45-60% implantation follows logically from the balance of positive and negative factors presented. The response correctly distinguishes implantation probability from clinical pregnancy and live birth rates. Minor issue: the clinical pregnancy probability (50-65%) being stated as higher than implantation probability (45-60%) is slightly inconsistent, as clinical pregnancy cannot exceed implantation rate. Otherwise the logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The response strongly aligns with ESHRE/ASRM guidelines: recommends single embryo transfer for a 28-year-old with good prognosis, advises against unnecessary add-ons (intralipids, steroids, anticoagulation) without specific indication, appropriately frames PGT-A as optional at age 28, recommends standard luteal support, and outlines a structured recurrent pregnancy loss workup only if failures continue. The stepwise approach to investigation is consistent with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: single embryo transfer rationale is clearly stated, luteal support is addressed, lifestyle guidance is concrete (caffeine limits, activity level), and a detailed stepwise plan for failed transfer scenarios is provided including specific investigations (saline sonogram, hysteroscopy, antiphospholipid antibodies, TSH, sperm DNA fragmentation). The response also offers to reformat for clinical or patient use, demonstrating practical awareness of clinical workflow needs."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.02055,
+  "judge_latency_ms": 13902.48329199676,
+  "judge_prompt_tokens": 3600,
+  "judge_completion_tokens": 650
+}

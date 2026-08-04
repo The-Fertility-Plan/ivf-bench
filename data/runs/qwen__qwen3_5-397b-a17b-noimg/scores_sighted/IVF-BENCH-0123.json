@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the provided Gardner 3AA score. Its description of grade 3/AA features is generally consistent with the lab data, but it overstates this as the 'highest morphological score' and mentions absence of anomalies not visually confirmed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, male factor, endometrial thickness, and first-cycle status with embryo quality in a clinically meaningful way. Some points are somewhat speculative, such as inferring possible DNA fragmentation from the male-factor label."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with prognosis tied to embryo quality and patient factors. Minor issues include overstating morphology as top/highest quality and some speculative links, but overall the probability estimate and recommendations follow logically."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: eSET for a good-quality day-5 blastocyst in a 34-year-old, standard luteal support, and lifestyle optimization are guideline-concordant. Small deviations include somewhat liberal discussion of assisted hatching and PGT-A based partly on borderline FSH rather than stronger indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management, future evaluation, and lifestyle optimization. It is useful and specific, though some suggestions (DFI testing, DuoStim, assisted hatching) are less clearly indicated for this exact case."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.015183,
+  "judge_latency_ms": 5374.8111669992795,
+  "judge_prompt_tokens": 3086,
+  "judge_completion_tokens": 395
+}

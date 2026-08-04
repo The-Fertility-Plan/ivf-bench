@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls several image features and conflicts with the provided Gardner 3AB label, describing the embryo as less expanded with a relatively thick zona and uncertain ICM/TE; some observations are plausible, but the morphology assessment is not well matched to the stated grading and visible image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, ovarian reserve signal, semen quality, BMI, endometrium, and prior ectopic/miscarriage into prognosis reasonably well, though AMH is unavailable and some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with conclusions generally following from embryo quality plus favorable patient factors; the main weakness is the morphology downgrade driving prognosis despite the supplied 3AB grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: single-embryo transfer counseling, luteal support, ectopic surveillance, and hydrosalpinx consideration are appropriate. Minor issues include speculative emphasis on day-4 blastocyst timing and somewhat imprecise use of morphology terminology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, follow-up, lifestyle modification, and future-cycle review, including hydrosalpinx assessment and early hCG/ultrasound monitoring; useful though not highly individualized beyond standard care."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.016497,
+  "judge_latency_ms": 5980.969250013004,
+  "judge_prompt_tokens": 3659,
+  "judge_completion_tokens": 368
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated it could not assess morphology because no image was provided to it and did not fabricate embryo features; therefore it avoided any inaccurate morphological claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, PCOS, ovarian response, sperm parameters, endometrium, protocol, and lifestyle into prognosis well, though embryo-specific integration was limited by absent morphology and some points were somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, clearly separating what can and cannot be concluded and tying prognosis to embryo quality assumptions; minor overreach exists in estimating success without morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a young good-prognosis patient, antagonist use in PCOS, luteal support, and cautious consideration of PGT-A are broadly guideline-consistent; ERA suggestion after recurrent failure is more controversial and prevents a perfect score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, morphology review, luteal support, cryopreservation, and contingency planning, though some advice remains general rather than case-tailored."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014733,
+  "judge_latency_ms": 4585.545082998578,
+  "judge_prompt_tokens": 3281,
+  "judge_completion_tokens": 326
+}

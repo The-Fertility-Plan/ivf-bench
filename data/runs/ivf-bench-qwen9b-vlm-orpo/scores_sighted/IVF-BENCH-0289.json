@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0289",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable but it likely undercalls expansion relative to the provided Gardner 2AA/full blastocyst label and identifies an ICM location that is not clearly discernible on this single image; TE and overall transferable quality comments are broadly fair."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, semen, endometrium, and cycle context well with prognosis, though AMH is framed as moderate rather than clearly diminished and some interactions are discussed somewhat generally."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is structured and mostly consistent, with a plausible probability estimate tied to age, morphology, and BMI; minor tension exists between the image-based stage assessment and the lab-reported grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including eSET at age 32 and attention to luteal support and metabolic optimization; however, some comments about fresh-transfer concerns are speculative without cycle hormone data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including eSET, endocrine/metabolic checks, and uterine cavity review, though future-cycle advice is somewhat generic and the response is truncated at the end."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.016434,
+  "judge_latency_ms": 5645.7449160079705,
+  "judge_prompt_tokens": 3803,
+  "judge_completion_tokens": 335
+}

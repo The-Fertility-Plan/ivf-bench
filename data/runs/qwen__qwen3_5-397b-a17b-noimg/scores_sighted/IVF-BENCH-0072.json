@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its written description is broadly consistent with 3AB, but it repeats the prompt's inaccurate wording that stage 3 is 'expanded blastocyst' with thinning zona (more typical of stage 4), so morphology is only moderately accurate relative to the actual image and standard Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH, tubal factor, prior failed cycle, sperm quality, BMI, endometrial thickness, and stimulation response well, and connects these factors to embryo prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a plausible prognosis estimate and clear explanation. Minor issues include overemphasis on a single prior failed cycle and some speculative links such as assisted hatching for 'loose' TE."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-concordant (eSET, hydrosalpinx consideration, luteal support, no routine PGT-A at age 25), but suggesting assisted hatching and ERA after limited failure, and discussing PGT-A after one additional failure, are more controversial and not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including eSET, hydrosalpinx assessment, progesterone monitoring, and lifestyle advice. Some recommendations are somewhat speculative, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014583,
+  "judge_latency_ms": 5175.480749996495,
+  "judge_prompt_tokens": 2891,
+  "judge_completion_tokens": 394
+}

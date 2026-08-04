@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0223",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early/collapsed blastocyst with absent/degenerate ICM and TE, consistent with 0DD, but overstates certainty of non-viability and adds features like necrosis/granular darkness not reliably inferable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, PCOS, sperm motility, endometrium, and oocyte yield with embryo quality in a clinically meaningful way, though some links (e.g., former smoking, specific PCOS phenotype) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent: poor morphology drives very low prognosis, with patient factors modifying interpretation. Minor overreach appears in declaring the embryo definitively non-viable and recommending cancellation solely from this description."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but absolute statements such as 'do not transfer' and suggestions like TESE/MACS based mainly on low motility are stronger than guideline-supported evidence for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current-cycle decision-making and future workup, including male-factor evaluation, protocol review, and lifestyle optimization, though some recommendations are more aggressive than necessary."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012825,
+  "judge_latency_ms": 4764.049500008696,
+  "judge_prompt_tokens": 2585,
+  "judge_completion_tokens": 338
+}

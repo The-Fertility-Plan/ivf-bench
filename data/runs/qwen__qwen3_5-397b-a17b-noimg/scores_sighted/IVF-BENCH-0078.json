@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly inspect the image and based morphology on the provided 0DD data. Its comments on degenerative/absent ICM and TE are consistent with the lab grade, but it introduced some inaccuracy by interpreting expansion '0' as no cavity/collapsed state despite the case text specifying an early blastocyst with blastocoel less than half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, sperm parameters, diagnosis, protocol, and endometrial thickness with the poor embryo grade and overall prognosis. It connects favorable patient factors with unexpectedly poor embryo development, though some causal inferences are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but it overstates certainty by calling the embryo definitively non-viable and transfer medically contraindicated based solely on a 0DD label. It also infers protocol over-suppression and recommends cancellation with more confidence than the provided data alone supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, including caution about very poor-quality embryos and noting favorable age-related prognosis. However, asserting 0% implantation, mandatory cancellation/no transfer, and routine ICSI or PGT-A consideration after a single poor cycle goes beyond standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical, covering immediate transfer decisions, counseling, protocol review, sperm DNA fragmentation testing, and lifestyle optimization. They are useful clinically, though some suggestions are more aggressive than necessary for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.0,
+  "judge_cost_usd": 0.014913,
+  "judge_latency_ms": 6238.288707987522,
+  "judge_prompt_tokens": 2876,
+  "judge_completion_tokens": 419
+}

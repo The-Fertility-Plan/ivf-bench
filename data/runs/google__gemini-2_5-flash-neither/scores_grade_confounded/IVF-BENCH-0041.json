@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 0DD and instead assumed a good-quality blastocyst, omitting the key morphology of early expansion with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It discusses age, ovarian reserve, BMI, male factor, prior cycle, and endometrium, but integrates them with an incorrect assumption of good embryo quality rather than the actual very poor 0DD morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but the central premise is flawed because it ignores the supplied embryo grade and bases prognosis on an assumed good-quality blastocyst, leading to an unsupported high implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (SET, luteal support, cycle review), but assuming good morphology despite a provided 0DD grade and suggesting ERA/immunologic testing relatively early are not well aligned with evidence-based IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps and future planning, but their usefulness is limited because they are built around an incorrect embryo-quality assumption and do not address the implications of transferring a 0DD embryo."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014781,
+  "judge_latency_ms": 3431.8549590025214,
+  "judge_prompt_tokens": 3362,
+  "judge_completion_tokens": 313
+}

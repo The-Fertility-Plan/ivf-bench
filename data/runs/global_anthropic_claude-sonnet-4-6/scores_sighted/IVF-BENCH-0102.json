@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0102",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a low-detail single image, assigning specific findings such as blastocoele occupying 60-65%, intracavitary debris, ICM irregularity, and TE discontinuity that are not reliably discernible. It reasonably notes a blastocyst with thinning zona/expansion, but the confident reclassification to 4BA/4AB is not well supported by the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, PCOS/high AMH, BMI, prior failed cycles, semen parameters, and endometrial thickness with embryo quality and prognosis. Some links are somewhat speculative, but overall the clinical context is well connected to expected outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis estimate is explained, but several deductions are overstated or inconsistent, especially treating prior failed cycles as formal RIF without transfer details and subtracting for 'no PGT-A' as if it independently lowers implantation beyond age-related aneuploidy already considered."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some points align with standard practice (age-related aneuploidy discussion, considering uterine cavity assessment, possible PGT-A discussion), several recommendations are not guideline-based or are controversial for routine use in RIF, including ERA, NK/HLA immune testing, MTHFR testing, empiric aspirin, and strong insistence on pre-transfer RIF workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer planning and future cycles, including cavity assessment, progesterone review, lifestyle optimization, and discussion of PGT-A. However, some actions are overly prescriptive or not evidence-based, which limits practical appropriateness."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.016929,
+  "judge_latency_ms": 6377.287374998559,
+  "judge_prompt_tokens": 3403,
+  "judge_completion_tokens": 448
+}

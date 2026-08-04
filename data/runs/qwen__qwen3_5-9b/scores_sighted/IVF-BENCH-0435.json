@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0435",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor ICM/TE quality and overall degeneration, but it misstates the expansion stage by saying the blastocoel is not more than half the embryo and calls it morula-like, which conflicts with the provided Gardner 1DD definition and the image showing a blastocyst-like structure."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diminished ovarian reserve, uterine factor, prior outcomes, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way, though some statements are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the very low implantation estimate follows from poor morphology plus age-related aneuploidy risk and uterine factor, though terms like 'non-viable by most standard criteria' and 'perfect storm' are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are notable deviations: overcalling 1DD as essentially non-transferable, misdescribing Gardner stage 1, and recommending PGE1 rescue, which is not standard guideline-based management."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as prognosis counseling, uterine cavity evaluation, and future-cycle planning including genetic considerations, but some recommendations are incomplete and one (PGE1 rescue) is not standard."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.0132,
+  "judge_latency_ms": 4843.189000006532,
+  "judge_prompt_tokens": 2525,
+  "judge_completion_tokens": 375
+}

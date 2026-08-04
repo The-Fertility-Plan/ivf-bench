@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response acknowledges image limitations (low contrast) and attempts to correlate visual features with the 3AA Gardner score. It describes TE cohesion and ICM density in general terms consistent with the score, but lacks precise morphological detail about expansion degree, zona pellucida thinning, blastocoel cavity size, or specific cell counts. The description is largely inferred from the provided score rather than independently derived from image analysis, limiting its accuracy as a true morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: endometriosis impact on uterine environment, smoking effects on uterine blood flow, endometrial thickness adequacy, BMI, AMH/FSH interpretation, sperm parameters, and maternal age considerations. It connects these factors to implantation probability in a meaningful way. Minor gap: does not deeply explore the interaction between endometriosis stage/severity and implantation, nor does it address the previous failed cycle in detail to hypothesize why it failed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality to patient factors to probability adjustment. The probability estimate (50-60%) follows reasonably from the stated adjustments. However, there is a minor inconsistency: the response states 36 is in the 'prime reproductive window' yet also notes maternal age risk starts rising after 35, which is slightly contradictory. The base rate of 60-70% for 3AA is reasonable, and the downward adjustments for endometriosis and smoking are justified, though the magnitude of adjustment could be better quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines: luteal phase support for endometriosis patients, smoking cessation advice, PGT-A consideration for advanced maternal age after failed cycle, and GnRH agonist pre-treatment discussion for endometriosis. The suggestion to 'not freeze unless contraindicated' is reasonable but slightly oversimplified - freeze-all strategies are increasingly supported. The paternal age threshold cited (35-40) is somewhat imprecise per current literature. Overall well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, smoking cessation with timing guidance (2-3 weeks), progesterone support emphasis, PGT-A for future cycles with clear rationale, and GnRH agonist consideration for endometriosis management. The response provides clear next steps for both immediate transfer and future planning. Could be improved by addressing endometrial receptivity testing (ERA), discussing freeze-all as an option, or specifying progesterone supplementation protocols, but overall provides clinically useful guidance."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.018144,
+  "judge_latency_ms": 13844.29983299924,
+  "judge_prompt_tokens": 2658,
+  "judge_completion_tokens": 678
+}

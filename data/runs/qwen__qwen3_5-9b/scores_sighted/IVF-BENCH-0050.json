@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst with intact zona and relatively loose TE, but overstates the blastocoel as occupying most of the embryo and speculates about ICM location/possible hatching despite limited image support and mismatch with the provided 2AB grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, tubal factor, sperm quality, endometrium, and first-cycle status with embryo prognosis reasonably well, though it overinterprets AMH/FSH as poor response and invents a fertilization rate not provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: confusion over expansion grading, calling the embryo high-quality despite a modest 2AB, inferring poor responder status from reserve markers alone, and unsupported statements about luteal phase and fertilization."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are standard (young age favorable, proceed with transfer), but several recommendations are weakly aligned or unsupported: routine combined luteal support, GH use, PGT-A suggestion at age 24, and donor egg consideration are not guideline-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and follow-up, but recommendations are somewhat generic and include questionable interventions without sufficient case-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.01314,
+  "judge_latency_ms": 4676.396333001321,
+  "judge_prompt_tokens": 2655,
+  "judge_completion_tokens": 345
+}

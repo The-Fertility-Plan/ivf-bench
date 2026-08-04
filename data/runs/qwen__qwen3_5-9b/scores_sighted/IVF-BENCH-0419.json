@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0419",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes expansion: a Gardner 2 blastocyst is an early blastocyst, not 'fully expanded,' and the image does not clearly show a distended zona or a distinctly obvious tightly packed ICM/AA-quality TE. It also claims no degeneration/poor distribution despite a somewhat irregular appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, prior live birth, sperm parameters, and endometrial thickness, though it somewhat overweights prior live birth and underexplores the prior ectopic and prior failed cycles."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it calls 2AA 'the highest morphological grade,' conflates expansion grading, and derives a very optimistic implantation estimate from an overstated morphology assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, including limited enthusiasm for routine PGT-A at age 31 without clear indication. However, the Gardner grading interpretation is inaccurate, and recommending fresh transfer without discussing clinic-specific OHSS/endocrine context is somewhat overconfident."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable—proceeding with transfer, avoiding routine PGT-A, lifestyle reinforcement, and future-cycle considerations—though they are somewhat generic and miss nuances such as ectopic-history counseling and contingency planning after failure."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013674,
+  "judge_latency_ms": 5650.05954199296,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 393
+}

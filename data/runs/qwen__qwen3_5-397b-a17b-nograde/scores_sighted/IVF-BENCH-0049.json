@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0049",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a blastocyst with a visible blastocoel and an ICM-like cluster, but likely overcalls expansion and TE quality. The embryo appears more like an early/full blastocyst with sparse, not clearly robust TE, so assigning 4BB/high-quality is somewhat optimistic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, BMI, prior miscarriage/failed cycle, sperm parameters, and endometrial thickness with embryo assessment in a clinically meaningful way, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to embryo morphology and patient factors. Minor weakness is that the prognosis depends on a somewhat optimistic morphology call."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most comments are broadly consistent with IVF practice, but recommendations such as aspirin, ERA, and PGT-A in a 28-year-old after limited failures are not strongly guideline-driven and should be framed more cautiously."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including luteal support review and future investigations. Some suggestions are useful but would benefit from clearer prioritization and stronger evidence-based caveats."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01314,
+  "judge_latency_ms": 4276.875291005126,
+  "judge_prompt_tokens": 2665,
+  "judge_completion_tokens": 343
+}

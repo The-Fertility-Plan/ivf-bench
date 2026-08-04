@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0518",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BA label and identifies a loose ICM and good TE, but it overstates image-visible certainty (e.g., fully expanded blastocoel occupying most of the embryo, precise clock-face localization) and calls stage 3 'expanded' rather than full blastocyst/early expansion terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, endometrium, BMI, first-cycle status, and lifestyle with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is structured and mostly consistent, with a plausible probability estimate tied to age and morphology; minor issues include overconfident morphology interpretation and some unsupported quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (eSET, luteal support, age-related counseling), but suggesting ERA after multiple failures and co-culture/time-lapse to improve selection is not strongly guideline-supported, and routine assisted hatching here is questionable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, follow-up, and contingency planning, including eSET and future-cycle considerations, though a few recommendations are more optional/speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01353,
+  "judge_latency_ms": 4694.498916986049,
+  "judge_prompt_tokens": 2780,
+  "judge_completion_tokens": 346
+}

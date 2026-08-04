@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo morphology. The provided lab grade is 1DD blastocyst, indicating a very poor-quality early blastocyst with absent/degenerative ICM and TE, but the model describes a compacting morula with early cavitation, estimates cell number and fragmentation, and assigns fair-to-good quality—features inconsistent with the stated grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major clinical factors well, including age-related aneuploidy risk, ovarian response, prior IVF outcomes, tubal factor diagnosis, sperm quality, BMI, and endometrial thickness, and connects them to prognosis. Some conclusions are weakened by the incorrect embryo morphology interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is internally explained, but the reasoning is built on a flawed morphological premise and includes some speculative inferences, such as interpreting Day 4 transfer timing as evidence of lab concern."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable, such as luteal support review, consideration of FET/endometrial optimization, and discussion of PGT-A at advanced maternal age. However, ERA, NK-cell testing, MTHFR/thrombophilia screening, and broad immunologic workup are not routinely guideline-supported for this history, and the morphology discussion does not align with Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for current transfer support and future cycle planning, including protocol reconsideration, endometrial optimization, and counseling. Actionability is reduced somewhat by inclusion of low-value investigations and recommendations based on an inaccurate embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.16,
+  "judge_cost_usd": 0.014781,
+  "judge_latency_ms": 4943.444709002506,
+  "judge_prompt_tokens": 2797,
+  "judge_completion_tokens": 426
+}

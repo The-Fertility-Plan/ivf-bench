@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a blastocyst and gives a plausible stage estimate, but it overinterprets image details by asserting significant intracellular vacuoles and specific zona thinning/TE abnormalities that may not be reliably visible from a single image; the 3BC/3CC call appears more speculative than image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrial thickness, BMI, prior outcomes, and sperm motility with embryo quality reasonably well, though it overstates some links such as severe stress and morphology-specific causation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable leaps: labeling this as RIF/RPL without sufficient nuance, attributing morphology to sperm/lab factors, and lowering implantation probability partly on weakly supported factors like stress."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but recommending PGT-A as 'highly recommended' in a 29-year-old based mainly on prior failed cycles/miscarriage is stronger than guideline-based evidence supports, and adjuncts like acupuncture are not guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer counseling, uterine evaluation, and sperm DNA fragmentation testing, with practical future planning; however, some recommendations are somewhat overconfident or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.012195,
+  "judge_latency_ms": 4728.167667002708,
+  "judge_prompt_tokens": 2305,
+  "judge_completion_tokens": 352
+}

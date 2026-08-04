@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misreads the image and conflicts with the provided lab grade 0DD. It describes a good-quality early/full blastocyst with a visible cavity, present ICM, and cohesive TE, whereas the image appears more like a cleavage/compacting embryo with no clear blastocoel, and the stated ICM/TE are degenerative or absent."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major patient factors well, including age, ovarian reserve, semen parameters, endometrium, BMI, and prior IVF outcomes, and relates them to prognosis. It slightly overstates uterine favorability and underweights the poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the core reasoning is undermined by a major contradiction: it calls the embryo good quality despite the image and explicit 0DD grade indicating very poor morphology. The implantation estimate is therefore not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are guideline-concordant (avoid immune overtesting, consider targeted RPL workup, single embryo transfer), but the interpretation of Gardner grading is inaccurate and the embryo is described far more favorably than standard morphology criteria would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer management, luteal support, and future evaluation, including when to consider RPL workup or sperm DNA fragmentation. However, actionability is limited by the incorrect premise that this is a good-quality embryo."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.017439,
+  "judge_latency_ms": 5413.846708994242,
+  "judge_prompt_tokens": 3853,
+  "judge_completion_tokens": 392
+}

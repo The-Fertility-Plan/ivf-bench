@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0077",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner 4BA score rather than inventing image-specific details. Its description of stage 4, ICM B, and TE A is consistent with the supplied grading, though it repeated the prompt's wording that stage 4 is 'hatching/herniating,' which is not strict Gardner terminology and was not independently image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve markers, PCOS context, prior live birth, endometrial thickness, sperm quality, BMI, and prior cycle outcomes with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with a plausible probability range tied to embryo quality and maternal age. Minor issues include calling 4BA 'top tier' somewhat strongly and some speculative interpretation of the PCOS/DOR discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-quality blastocyst, acknowledgment of age-related aneuploidy, and balanced discussion of PGT-A. Small deviations include overstatement of TE grade lowering miscarriage risk and inclusion of less guideline-grounded adjuvant suggestions such as DHEA/CoQ10."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear practical next steps for this transfer and future planning, including SET, luteal support, timing of beta-hCG and ultrasound, embryo banking considerations, protocol review, PGT-A discussion, and metabolic optimization."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.015738,
+  "judge_latency_ms": 5414.508874993771,
+  "judge_prompt_tokens": 3171,
+  "judge_completion_tokens": 415
+}

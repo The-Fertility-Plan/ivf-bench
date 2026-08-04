@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image/grade was available to it and avoided fabricating embryo features. It therefore made no incorrect morphological claims, but also did not analyze the visible blastocyst image, so accuracy is limited by omission."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, tubal factor, possible hydrosalpinx, ovarian reserve, low oocyte yield, BMI, endometrium, semen parameters, and lifestyle with prognosis and transfer expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with uncertainty appropriately tied to missing morphology. Probability estimates are broadly supported, though somewhat generic because embryo morphology was not incorporated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET at age 33, attention to hydrosalpinx, luteal support, cautious use of PGT-A, and review of stimulation response. Minor limitation is reliance on broad prognostic ranges without morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including confirming hydrosalpinx status, obtaining Gardner grading, reviewing stimulation details, and considering weight optimization. Useful but not highly tailored to the actual embryo image."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01647,
+  "judge_latency_ms": 4781.821291995584,
+  "judge_prompt_tokens": 3775,
+  "judge_completion_tokens": 343
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0238",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a single image and likely fabricates features such as micro-vacuolation, peripheral debris, and a confident downgrade to 'functional 3BB.' The image supports a blastocyst with visible zona and blastocoel, but ICM/TE detail is limited and not sufficient for such specific adverse claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, ovarian response, BMI, sperm parameters, endometrium, and cycle history reasonably well with prognosis, though some links are overstated and not always directly tied to embryo-specific outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is driven by unsupported additive penalties for stress, alcohol, endometrial thickness, and lack of PGT-A, and it inconsistently treats normal semen parameters as male factor concern mainly due to age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with routine evidence-based IVF practice, including strong claims about stress/cortisol and implantation, routine ERA/hysteroscopy/thrombophilia/karyotype after a first failed transfer, and implying no PGT-A itself lowers implantation probability rather than reflecting unknown ploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, but some suggested investigations/interventions are too aggressive for a first cycle and limited embryo cohort."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015201,
+  "judge_latency_ms": 5585.308333000285,
+  "judge_prompt_tokens": 3177,
+  "judge_completion_tokens": 378
+}

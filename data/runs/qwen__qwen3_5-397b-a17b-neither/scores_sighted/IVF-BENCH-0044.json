@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not view the image and avoided assigning a specific Gardner grade. It gave only generic Day-5 blastocyst criteria, so it did not fabricate image-specific features, but it also did not analyze the visible embryo morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated maternal age, AMH, tubal factor, prior miscarriage, partner age, semen parameters, BMI, endometrial thickness, and lifestyle with embryo prognosis, especially emphasizing age-related aneuploidy versus ovarian reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with prognosis driven mainly by maternal age and prior history. Minor overreach includes labeling the profile as 'high response' and suggesting recurrent pregnancy loss implications from a single miscarriage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET at age 40, hydrosalpinx assessment, luteal support, uterine cavity evaluation, and consideration of PGT-A. Slight deviations include presenting PGT-A somewhat too strongly as outcome-improving overall and mentioning TESA based on possible SDF without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future cycles, including hydrosalpinx check, luteal support, SET, PGT-A discussion, cavity assessment, and lifestyle measures. Some suggestions are broad rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013938,
+  "judge_latency_ms": 4699.676417003502,
+  "judge_prompt_tokens": 2841,
+  "judge_completion_tokens": 361
+}

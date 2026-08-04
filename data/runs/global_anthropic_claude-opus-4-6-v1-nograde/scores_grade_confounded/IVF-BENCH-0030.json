@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 4 compacting morula with 8–12 blastomeres, while the provided lab data identify it as a Gardner 2AB blastocyst. It fabricates morula-specific features and fails to assess blastocoel expansion, ICM, and TE appropriately."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including age, ovarian reserve, endometrium, diagnosis, and cycle history, and relates them to prognosis. However, the integration is weakened by anchoring prognosis to an incorrect embryo-stage assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is built on a major internal inconsistency: it ignores the stated Gardner 2AB blastocyst grade and instead reasons from a morula diagnosis. This undermines the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard (single embryo transfer, luteal support, ultrasound-guided transfer), but the embryo grading discussion is not aligned with Gardner criteria, and suggestions like routine PGT-A consideration at age 29 are not strongly guideline-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, beta-hCG timing, and consideration of extended culture. Still, actionability is limited by the incorrect morphological premise."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013095,
+  "judge_latency_ms": 4268.683582995436,
+  "judge_prompt_tokens": 2455,
+  "judge_completion_tokens": 382
+}

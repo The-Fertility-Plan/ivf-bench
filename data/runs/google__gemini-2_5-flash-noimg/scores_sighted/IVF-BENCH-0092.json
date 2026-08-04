@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0092",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner 3AA grade rather than inventing image-specific details. However, it inaccurately equated stage 3 with an expanded blastocyst and thinning zona; by Gardner criteria stage 3 is a full blastocyst, while expansion/thinning is more consistent with stage 4. Thus morphology is mostly grounded in provided data but contains a notable grading error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, prior live birth, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically sensible way. It misses some nuance around age-related aneuploidy dominating prognosis despite morphology and overstates mitigation by prior live birth/AMH, so not fully comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally organized and internally consistent, but there are important logical overreaches: morphology is said to be highly predictive of euploidy, prior live birth is claimed to raise implantation by 10-15%, and the implantation estimate appears too high for an untested day-5 embryo at age 38. Reasoning is coherent overall but has meaningful evidentiary gaps."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer, luteal support, and considering PGT-A at age 38 are broadly guideline-concordant. However, the misstatement of Gardner stage 3, overemphasis on morphology as a predictor of euploidy, and somewhat inflated prognosis reduce alignment with evidence-based IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, counseling, cryopreservation, and consideration of PGT-A/ICSI. It is useful clinically, though some recommendations are generic and not highly individualized beyond the provided case."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.016161,
+  "judge_latency_ms": 6245.306083001196,
+  "judge_prompt_tokens": 3007,
+  "judge_completion_tokens": 476
+}

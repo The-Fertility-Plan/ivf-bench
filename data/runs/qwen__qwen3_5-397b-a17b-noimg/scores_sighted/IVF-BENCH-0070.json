@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately notes it did not see the image, but it repeats the provided Gardner score inaccurately by calling grade 3 'expanded' rather than full blastocyst and incorrectly labels the TE as 'Grade E' instead of A. It relies on report text rather than visible morphology, so image-based assessment is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometriosis, prior biochemical pregnancy, sperm motility, and endometrial thickness with embryo quality in a generally thoughtful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it conflates implantation and live birth probabilities, overstates certainty that the embryo is 'perfect,' and makes unsupported assumptions such as implied fertilization/blastulation details and likely ICSI use."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognosis are guideline-consistent, but suggestions such as aggressive luteal support, low-dose aspirin/immunologic protocol language, and broad PGT-A consideration after a biochemical pregnancy are not strongly evidence-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer strategy, lifestyle optimization, and contingency planning for future cycles, though some recommendations are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014688,
+  "judge_latency_ms": 6568.448083009571,
+  "judge_prompt_tokens": 3091,
+  "judge_completion_tokens": 361
+}

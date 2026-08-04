@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0680",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response repeatedly misidentifies the image as a polar body/oocyte and fails to provide a reliable blastocyst morphology assessment; it fabricates uncertainty rather than describing visible blastocyst features consistent with the provided case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It appropriately discusses age-related aneuploidy risk, BMI, ovarian reserve, tubal factor, prior failed cycle, sperm quality, and endometrial thickness, and relates these to prognosis, though some interactions are only broadly stated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The reasoning is highly repetitive and internally contradictory, oscillating between multiple incompatible interpretations of the image and probability assumptions without a stable conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points such as considering PGT-A at age 38, acknowledging morphology limits, and proceeding with transfer are broadly reasonable, but claims like euploid embryos implanting at >90% and stress materially impacting implantation are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers some practical next steps—proceed with transfer, consider PGT-A in future cycles, monitor beta-hCG, consider FET if needed—but recommendations are generic and not well tailored due to the confused morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.031575,
+  "judge_latency_ms": 4620.854583001346,
+  "judge_prompt_tokens": 8940,
+  "judge_completion_tokens": 317
+}

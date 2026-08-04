@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately declined direct morphology assessment because it stated no image was available, avoiding fabricated visual details. However, it did not analyze the actual embryo image, so accuracy against visible features is limited rather than precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, BMI, endometrium, and prior cycle history into prognosis well, though interaction with actual embryo morphology is necessarily limited by the refusal to assess the image."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially around prognosis and data-quality concerns. Minor issues include leaning heavily on generalized success rates and treating the day-4/day-5 discrepancy as central without considering that the image itself appears blastocyst-like."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The discussion is broadly consistent with IVF practice: Gardner grading is for blastocysts, luteal support after antagonist cycles is standard, and PGT-A is not routinely indicated at age 25. Slight overreach appears in suggesting PGT-A partly because of lab data integrity concerns."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and practical, including verifying embryo stage, auditing the COC/MII discrepancy, confirming witnessing, proceeding with transfer if appropriate, and planning future blastocyst culture. They are useful, though some are more administrative than embryo-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014082,
+  "judge_latency_ms": 5164.152750003268,
+  "judge_prompt_tokens": 2854,
+  "judge_completion_tokens": 368
+}

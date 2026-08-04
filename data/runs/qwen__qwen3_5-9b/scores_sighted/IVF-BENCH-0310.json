@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0310",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes a blastocyst with visible blastocoel, ICM, and cohesive TE reasonably well, but overstates quality as 'top-tier' and calls it expanded/full despite the image and provided grade being 2AA (early blastocyst rather than expanded). No meaningful discussion of zona pellucida or day-appropriate morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, ovarian response, sperm parameters, endometrial thickness, and prior biochemical pregnancy with prognosis. However, it overstates euploidy likelihood and makes somewhat speculative links such as luteal phase defect from a prior biochemical pregnancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: it misinterprets Gardner expansion, labels 2AA as one of the highest grades, and gives unsupported quantitative claims (e.g., >90% euploidy, top 1%, specific endometriosis penalty). Probability reasoning is directionally sensible but not tightly evidence-based."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF practice in recommending transfer and acknowledging endometriosis, but several statements are not guideline-grounded: suggesting estradiol addition based on low levels, implying luteal phase defect from biochemical pregnancy, and using inflated success/euploidy estimates. Also the transfer day listed is day 4 while the embryo is discussed as a blastocyst without addressing that discrepancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, ensuring luteal support, monitoring beta-hCG, and considering further evaluation or PGT-A only if repeated failure/loss occurs. Recommendations are useful, though some are somewhat generic and a few are speculative."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014211,
+  "judge_latency_ms": 5725.209625001298,
+  "judge_prompt_tokens": 2612,
+  "judge_completion_tokens": 425
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 1DD and instead stated no specific morphology could be assigned, then discussed hypothetical Day 4 morula/early blastocyst features not supported by the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior outcomes, endometrial thickness, sperm quality, BMI, diagnosis, and lifestyle with prognosis reasonably well, though it misses the key interaction between the explicitly poor 1DD embryo grade and outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but contains important inconsistencies: it ignores the supplied 1DD grade, treats the case as if morphology were unavailable, and frames transfer timing as Day 4 despite using blastocyst-stage concepts. Probability estimates therefore rest on a flawed premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard, but there are notable deviations: dismissing Gardner grading despite it being provided, strongly recommending assisted hatching and ERA without appropriate nuance, and suggesting adjuncts like Viagra/L-arginine that are not guideline-based routine recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current transfer counseling, luteal support review, alcohol cessation, and future planning including PGT-A and uterine evaluation, though some recommendations are overconfident or insufficiently evidence-qualified."
+    }
+  ],
+  "extracted_probability": 0.125,
+  "judge_cost_usd": 0.013548,
+  "judge_latency_ms": 4170.679625000048,
+  "judge_prompt_tokens": 2696,
+  "judge_completion_tokens": 364
+}

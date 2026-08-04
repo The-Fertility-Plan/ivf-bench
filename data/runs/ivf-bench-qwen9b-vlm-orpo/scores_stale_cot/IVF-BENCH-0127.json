@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0127",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes an expanded blastocyst with thinned zona and compact ICM reasonably well, but hedges against the provided 3AA grade and adds uncertain image-specific details about TE looseness/irregularity that may not be reliably visible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, prior miscarriage/no pregnancy, male factor, partner age, endometrial thickness, and oocyte yield into prognosis appropriately, though AMH is unavailable and some links (e.g., obesity impact magnitude) are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are internal inconsistencies: it references euploid and untested probabilities in multiple ranges and ultimately settles on 20–30%, which feels somewhat conservative for a good-quality day-5 blastocyst without fully reconciling the earlier higher estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligns with IVF practice: acknowledges morphology limits, supports single embryo transfer, luteal support, and selective consideration of PGT-A and sperm DNA fragmentation testing. Minor deviations include speculative comments like avoiding NSAIDs and broad RPL workup after only one miscarriage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, luteal support, lifestyle modification, review of prior cycle data, cavity/RPL evaluation, and male-factor refinement. Useful, though not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.017559,
+  "judge_latency_ms": 7075.87808300741,
+  "judge_prompt_tokens": 3928,
+  "judge_completion_tokens": 385
+}

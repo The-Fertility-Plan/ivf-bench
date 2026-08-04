@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0275",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided 3AA label rather than the image; claims clear expanded blastocyst features, thinning zona, and well-defined TE/ICM that are not convincingly visible in this low-quality partial image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm parameters, endometrium, and prior failed cycles with embryo quality well, though it overstates some factors such as AMH and endometrial thickness as uniformly ideal."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable overstatements and some unsupported inferences, especially labeling this as clear RIF and invoking immune rejection/stress effects without adequate nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice in recommending transfer and considering uterine evaluation after repeated failures, but it overreaches on immunologic/thrombophilia workup and presents PGT-A as strongly recommended in a young patient more strongly than guidelines support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including luteal support and further evaluation, though some recommendations would benefit from clearer sequencing and evidence-based prioritization."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012483,
+  "judge_latency_ms": 4689.003166000475,
+  "judge_prompt_tokens": 2581,
+  "judge_completion_tokens": 316
+}

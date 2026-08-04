@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0135",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label, but it overstates visible certainty from a low-contrast single image and inaccurately calls grade 3 'expanded'; true expanded blastocyst is grade 4. Description of ICM/TE is plausible but not precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, prior cycle, oocyte yield, sperm data, diagnosis, and endometrium with embryo prognosis reasonably well, though it overinterprets low oocyte yield as diminished reserve without AMH and overemphasizes paternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable logic issues: calling 3AB 'top-tier/highest potential,' equating paternal age 40 with major aneuploidy risk, and deriving a relatively low implantation estimate from factors that do not clearly justify that degree of reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains important deviations from standard IVF guidance: misstates Gardner expansion terminology, overstates the indication for PGT-A in a 33-year-old with male factor, and suggests robust luteal support due to BMI/stress without evidence-based specificity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer and future planning, including lifestyle optimization and consideration of ICSI/PGT-A, but some recommendations are too strong or insufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013548,
+  "judge_latency_ms": 5494.623250007862,
+  "judge_prompt_tokens": 2616,
+  "judge_completion_tokens": 380
+}

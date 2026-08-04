@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately describes the blastocyst as having a partially expanded blastocoel, loosely grouped ICM consistent with B-grade, and sparse/uneven TE consistent with C-grade, all matching the 2BC Gardner score and visible image features. Minor issue: the model notes it 'does not appear markedly expanded' which is reasonable but slightly inconsistent with the Gardner '2' designation meaning full blastocyst. Overall description is detailed and matches the image well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 41 as dominant aneuploidy risk, AMH/FSH as reassuring reserve markers, 55% MII maturity rate flagged for optimization, male factor diagnosis with appropriate nuance about sperm DNA fragmentation, endometrial thickness as favorable, lifestyle factors, and prior failed cycle context. The interactions between these factors and embryo quality are explicitly discussed and weighted appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logical and internally consistent throughout. The probability estimate of 8-15% follows coherently from the combination of suboptimal morphology (2BC), maternal age 41 aneuploidy burden, and favorable uterine/lifestyle factors. The model correctly identifies age as the dominant limiting factor over morphology, and the downstream miscarriage risk estimate is consistent with age-related aneuploidy rates. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines and Gardner grading criteria. PGT-A discussion is appropriately nuanced with acknowledgment of limitations in low-yield patients. Luteal support, beta-hCG monitoring, and uterine cavity assessment recommendations are guideline-consistent. The model correctly notes the imperfect correlation between morphology and ploidy. Minor gap: could have referenced specific ESHRE age-related aneuploidy data more precisely, and the TE grade appears to be C rather than the lab-reported C, which is consistent but the model could have more explicitly reconciled the image with the provided Gardner score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: optimizing trigger strategy for the 55% MII rate, ICSI confirmation for male factor, sperm DNA fragmentation testing if recurrent failure, dual trigger consideration, PGT-A discussion with explicit pros/cons for low-yield patients, embryo banking strategy, uterine cavity assessment, CoQ10 supplementation with appropriate evidence caveat, and donor oocyte discussion threshold. Each recommendation is contextualized to this specific case rather than generic advice."
+    }
+  ],
+  "extracted_probability": 0.115,
+  "judge_cost_usd": 0.022449,
+  "judge_latency_ms": 15963.631042002817,
+  "judge_prompt_tokens": 4188,
+  "judge_completion_tokens": 659
+}

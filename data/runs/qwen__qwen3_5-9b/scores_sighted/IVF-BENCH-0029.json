@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality blastocyst with absent/degenerative ICM and TE, but overstates expansion, introduces a 'large central cavity/vacuole' interpretation, and does not clearly reconcile the image with the provided 1DD/day-4 context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, oocyte yield, sperm, endometrium, diagnosis, and cycle history reasonably well, but overinterprets FSH 9.2 as a major abnormality and does not sufficiently note that tubal factor and young age are generally favorable independent of embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate follows from poor morphology, but there are notable inconsistencies: confusion about blastocyst stage, calling FSH a major red flag, and linking morphology too strongly to presumed egg quality without enough support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner concepts appropriately at a basic level, but several recommendations are weakly aligned with evidence-based practice: PGT-A is not routinely 'highly recommended' for a 28-year-old based on one poor embryo, donor eggs are premature, and higher stimulation is not automatically indicated from this dataset."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling and suggests further reserve testing and protocol review, but recommendations are somewhat generic and include premature escalation to PGT-A/donor eggs without sufficient case-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013248,
+  "judge_latency_ms": 5331.200915999943,
+  "judge_prompt_tokens": 2511,
+  "judge_completion_tokens": 381
+}

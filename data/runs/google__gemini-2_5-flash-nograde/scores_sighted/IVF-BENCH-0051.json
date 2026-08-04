@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a blastocyst with suboptimal morphology and notes poorly defined ICM/TE, but it overstates confidence about blastocoel expansion and assigns speculative Gardner grades despite limited image clarity and no clear, distinct ICM."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm quality, endometrium, and prior failed cycles well, linking these to prognosis, though it somewhat overinterprets two failed cycles as strong evidence of implantation pathology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with the lower implantation estimate tied to morphology and prior failures; minor issues include labeling this as recurrent implantation failure and inferring aneuploidy risk somewhat strongly for age 30."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but endorsement of ERA, thrombophilia/immunologic testing, intralipids/IVIG, and endometrial scratch is more aggressive than guideline-supported routine practice, especially after only two failed cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer counseling, luteal support, uterine evaluation, and future cycle planning, though some suggested adjuncts are not strongly evidence-based and should have been framed more cautiously."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.016023,
+  "judge_latency_ms": 4870.408999995561,
+  "judge_prompt_tokens": 3561,
+  "judge_completion_tokens": 356
+}

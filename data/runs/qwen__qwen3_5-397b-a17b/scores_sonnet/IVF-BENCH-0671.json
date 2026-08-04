@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0671",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 4BA Gardner score: Stage 4 expansion with herniation through the zona pellucida, Grade B ICM described as loosely grouped, and Grade A TE with many cohesive cells. Additional observation about cytoplasmic homogeneity adds value. Minor limitation is that the description largely mirrors the provided Gardner score text rather than independently identifying novel image features, but overall the morphological characterization is accurate and well-detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (31) linked to euploidy probability, AMH and 100% maturation rate noted as favorable, male factor diagnosis connected to potential sperm DNA fragmentation concerns, endometrial thickness assessed as optimal, and BMI flagged as a mild risk. The connection between male factor and ICSI use is appropriately inferred. Minor gap: alcohol consumption (4-6 drinks/week, moderate-to-heavy range) is not addressed despite being a potentially relevant lifestyle risk factor for implantation and early pregnancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and internally consistent. The probability estimate of 55-65% follows reasonably from the baseline adjustment framework presented. Upward adjustments for TE grade A and endometrial thickness, and downward adjustments for Grade B ICM and male factor, are coherently explained. The euploidy estimate of 60-70% for age 31 is reasonable. Minor issue: the response notes the embryo is 'hatching (Stage 4)' but Stage 4 in Gardner grading is an expanded blastocyst, while hatching is Stage 5-6; this is a subtle inconsistency with standard Gardner staging nomenclature."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM principles regarding blastocyst grading, luteal support, and fresh transfer considerations. However, there is a notable Gardner staging error: the response conflates Stage 4 (expanded blastocyst) with hatching, when hatching corresponds to Stage 5 (hatching) or Stage 6 (hatched) in the standard Gardner system. The provided lab data describes a 'hatching blastocyst herniating through zona' which would be Stage 5, not Stage 4. This misalignment with Gardner grading criteria is a meaningful guideline accuracy issue. PGT-A discussion is appropriately nuanced for current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with fresh transfer with clear rationale, ensure luteal progesterone support, sperm DNA fragmentation testing if cycle fails, lifestyle modification for BMI optimization, and a nuanced PGT-A discussion for future cycles. The response appropriately avoids over-recommending freeze-all without OHSS risk. The alcohol consumption issue (4-6 drinks/week) is not addressed in recommendations, which is a missed actionable counseling opportunity. Otherwise, the recommendations are well-tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019179,
+  "judge_latency_ms": 15696.207625005627,
+  "judge_prompt_tokens": 2628,
+  "judge_completion_tokens": 753
+}

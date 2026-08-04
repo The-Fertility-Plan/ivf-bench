@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocyst, thinned zona, compact ICM, cohesive TE). However, the image actually shows a somewhat irregular/granular ICM and TE that appears less pristine than a true AA grade - the response largely echoes the provided Gardner score rather than critically analyzing the image independently. Some visible features like the irregular texture and potential fragmentation in the TE are not mentioned."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically addresses maternal age, AMH, FSH, BMI, endometriosis diagnosis, the critical RIF/RPL history across 5 cycles, sperm parameters (correctly flagging low motility at 22.9%), endometrial thickness, and lifestyle factors. It clearly explains how each factor interacts with embryo quality and implantation potential, with endometriosis and RIF history correctly identified as dominant modifying factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 30-45% logically follows from balancing the excellent embryo quality against the strong RIF/RPL history and endometriosis. The response correctly identifies that morphological quality alone cannot overcome unresolved implantation factors. Minor issue: the baseline 50-70% estimate for a 3AA embryo is slightly high for a non-PGT-A embryo, but the downward adjustment reasoning is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE guidelines for RIF workup including ERA testing, hysteroscopy, immunological screening, and thrombophilia testing. PGT-A recommendation for future cycles is appropriate given RPL history. SET recommendation aligns with ESHRE/ASRM guidelines for young patients with good-quality embryos. Adjunctive therapies (intralipids, IVIG) are appropriately caveated as having mixed evidence. Sperm DNA fragmentation testing recommendation is evidence-based given the history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized recommendations for both the current transfer and future cycle planning. Recommendations include ERA/ERPeak testing, hysteroscopy/SIS, immunological workup, thrombophilia screening, PGT-A for future cycles, laparoscopy consideration, sperm DNA fragmentation testing, genetic counseling, and psychological support. Each recommendation is justified by specific patient factors, and adjunctive therapies are presented with appropriate nuance regarding evidence quality."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.022134,
+  "judge_latency_ms": 14572.427958002663,
+  "judge_prompt_tokens": 4098,
+  "judge_completion_tokens": 656
+}

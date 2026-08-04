@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0697",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: the prominent, lobulated ICM with tightly packed cells, the TE forming a cohesive epithelium, the expanded blastocyst with thinning zona, and the well-formed blastocoelic cavity. The description of cytoplasmic granularity and irregular ICM contour as minor observations is appropriate. Minor deduction because the image appears to show a somewhat less expanded blastocyst than a typical Grade 3 expanded, and the TE cells are not clearly distinguishable at this resolution, yet the model describes them with confidence. Overall concordance with Gardner 3AA is reasonable but slightly overclaimed given image resolution limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It systematically connects female age to aneuploidy risk, AMH/FSH to ovarian reserve adequacy, the prior clinical miscarriage to current risk stratification, tubal factor diagnosis to IVF bypass advantage, sperm parameters to male factor exclusion, endometrial thickness to receptivity, and lifestyle factors (stress, BMI, sedentary behavior, diet) to implantation probability. The interaction between prior miscarriage and absence of PGT-A is particularly well-articulated. The tabular format enhances clarity without sacrificing depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The probability estimate is derived transparently from a baseline rate with explicit adjustments for each clinical factor (age, endometrial thickness, diagnosis, prior miscarriage, stress, absence of PGT-A). Conclusions follow from observations without contradiction. The distinction between implantation rate, clinical pregnancy rate, and live birth rate is methodologically sound. The conditional probability for euploid embryos is correctly calculated and presented as a separate scenario. No internal contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: SET is correctly recommended for a top-grade blastocyst in a young patient, luteal phase support with micronized progesterone is standard of care, the miscarriage workup (antiphospholipid antibodies, thyroid function, karyotype, uterine cavity evaluation) aligns with ESHRE RPL guidelines, PGT-A recommendation for future cycles is appropriately nuanced rather than mandated, and the ERA discussion correctly notes the debated evidence base. The dual trigger suggestion for improving MII rate reflects current clinical practice. Low-dose aspirin is appropriately flagged as having mixed evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and immediately actionable: concrete luteal support protocols, specific stress intervention modalities (MBSR, CBT, acupuncture), specific laboratory investigations with rationale, specific stimulation modifications (dual trigger, corifollitropin alfa), specific BMI and activity targets (150 min/week, <25 BMI), specific vitamin D and folate targets, and a clear decision tree for success vs. failure scenarios. The response distinguishes between concurrent workup and future cycle planning, and provides alternatives at each decision point. A clinician could directly implement these recommendations."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.026934,
+  "judge_latency_ms": 18836.89754200168,
+  "judge_prompt_tokens": 5058,
+  "judge_completion_tokens": 784
+}

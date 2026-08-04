@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0065",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no specific grading could be performed, then speculated about likely morphology. This omits the known expansion, ICM, and TE features and introduces unsupported assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including maternal age, AMH, tubal factor, prior live birth, endometrium, paternal age, and semen parameters, and relates them to prognosis. Minor overreach appears in assumptions about hyper-response and euploid expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with age-driven aneuploidy appropriately emphasized. The main weakness is that morphology reasoning is built on an incorrect premise that no grading information was available."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET, consideration of hydrosalpinx management, luteal support, and discussion of PGT-A in advanced maternal age are broadly guideline-consistent. Some suggestions, like TESE based on possible sperm DNA fragmentation, are more speculative than standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for current transfer and future planning, including SET, hydrosalpinx verification, luteal support, PGT-A discussion, and lifestyle advice. It is useful, though somewhat limited by the missed direct interpretation of the known 3AA embryo grade."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 4393.456916004652,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 380
+}

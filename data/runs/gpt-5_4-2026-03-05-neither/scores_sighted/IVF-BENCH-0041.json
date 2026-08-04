@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to assign morphology because it stated no image was available, avoiding fabricated embryo features. However, the actual task included an image, so it omitted morphology that could have been assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve, BMI, prior failed cycle, male-factor context, sperm parameters, endometrial thickness, and Day 5 timing into prognosis and future planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is internally consistent, clearly structured, and the implantation estimate is logically tied to favorable age/endometrium factors and uncertainty from missing morphology and prior failure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: preference for single embryo transfer in a young patient, appropriate caution on routine PGT-A at age 28, luteal support, and review of stimulation/trigger strategy. Minor limitation is the broad probability framing without embryo-grade-specific evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "It provides practical next steps for the current transfer and future cycles, including SET, luteal support, OHSS monitoring, obtaining lab grading details, reviewing low MII yield, and reassessing male-factor workup."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01503,
+  "judge_latency_ms": 4220.91454200563,
+  "judge_prompt_tokens": 3340,
+  "judge_completion_tokens": 334
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined morphology assessment because no image was available to it and did not fabricate visible embryo features. However, it also did not analyze the actual image, so morphology-specific accuracy is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, sperm quality, prior biochemical pregnancy, endometrium, and day of transfer into prognosis reasonably well, though some links to actual embryo quality remain speculative without morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with uncertainty appropriately acknowledged. Minor issues include speculative interpretation of the day-4 transfer choice and somewhat broad assumptions from the low MII yield."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A after a single biochemical pregnancy and mentioning ERA relatively early are more aggressive than standard guideline-based practice; calcium ionophore is also not clearly indicated from the provided data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer support and future cycle review, including protocol reassessment and counseling. Some recommendations are somewhat generic or contingent on missing embryo/lab details."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.015303,
+  "judge_latency_ms": 4426.650082998094,
+  "judge_prompt_tokens": 3571,
+  "judge_completion_tokens": 306
+}

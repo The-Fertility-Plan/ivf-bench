@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0117",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and misinterprets the Gardner expansion stage: a score of 2 is an early blastocyst, not a fully expanded blastocyst. It also describes a thin zona and highly cohesive TE/clear symmetry that are not convincingly visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve markers, sperm parameters, endometrial thickness, prior cycle history, and lifestyle reasonably well with embryo prognosis, though it somewhat overinterprets the DOR label given the ovarian reserve data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a key internal inconsistency: it calls a 2AA embryo both 'fully expanded' and 'top-tier,' which conflicts with Gardner grading. The implantation estimate is plausible but partly built on that grading error."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and counseling about age-related aneuploidy are broadly guideline-consistent, but the incorrect interpretation of Gardner stage and somewhat strong endorsement of PGT-A as improving outcomes in all future scenarios reduce alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, counseling, and contingency planning. Some advice is generic and not highly individualized, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014475,
+  "judge_latency_ms": 4971.218374994351,
+  "judge_prompt_tokens": 3095,
+  "judge_completion_tokens": 346
+}

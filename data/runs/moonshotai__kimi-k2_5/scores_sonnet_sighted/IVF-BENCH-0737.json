@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinned zona pellucida, well-defined ICM, and cohesive TE layer consistent with Gardner 3AA grading. The ICM localization at '1-2 o'clock position' is a reasonable description of what appears visible in the image. Minor deduction because the image appears somewhat grainy/difficult to assess with full precision, and the description of the TE as 'flattened and organized with uniform cell size' may be slightly idealized given image quality. Overall the morphological narrative aligns well with the provided Gardner score and visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all relevant clinical factors. The response correctly identifies the central paradox of excellent embryo quality against 5 failed cycles, addresses the RIF diagnosis, connects endometriosis to endometrial receptivity issues, flags sperm motility (22.9%) as below WHO thresholds and links it to DNA fragmentation risk, considers the nutritional/lifestyle factors, and distinguishes between implantation failure and pregnancy maintenance based on the biochemical pregnancy history. The interaction between endometriosis and oocyte/endometrial quality is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability adjustment methodology (starting from age-appropriate baseline, applying penalties for RIF and early losses, adding buffer for embryo quality) is transparent and internally consistent. The euploid implantation calculation (0.60 × 0.65 = 39%) is coherent. Minor deduction: the response was cut off before completing recommendation section 5, and the '10% aneuploid may implant briefly' addition to reach 45% biochemical is somewhat speculative and not fully justified. The distinction between biochemical (35-50%) and clinical (25-35%) and live birth (20-30%) rates is appropriately tiered."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines on RIF definition (>3 failed transfers), Gardner grading criteria, WHO sperm parameters, and endometriosis impact on IVF outcomes. The aneuploidy rate estimates for age 27 (~20-25%) are consistent with published literature. The endometriosis-related implantation reduction estimate (20-30%) is evidence-based. Minor deduction: the response was truncated before completing recommendations, so full guideline alignment for management (e.g., ERA testing, PGT-A, thrombophilia workup) cannot be fully assessed. The ploidy probability estimates for 3AA blastocysts are slightly optimistic in some literature contexts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response begins strong with clear risk stratification and probability estimates, but the recommendations section (Section 5) is critically truncated - it starts with 'Proceed with transfer' but is cut off mid-sentence before providing the full clinical action plan. This significantly limits actionability. What is present is useful (proceed with transfer rationale), but the absence of complete recommendations for endometrial preparation optimization, PGT-A consideration, sperm DNA fragmentation testing, endometriosis management, thrombophilia workup, and future cycle planning substantially reduces the practical clinical utility of the response."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.021585,
+  "judge_latency_ms": 19188.620707995142,
+  "judge_prompt_tokens": 3140,
+  "judge_completion_tokens": 811
+}

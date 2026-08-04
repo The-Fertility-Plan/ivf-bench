@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "No image was provided, and the model appropriately stated that morphology could not be assessed rather than fabricating visible features. However, it did not provide any actual morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, BMI, sperm parameters, endometrium, and lifestyle factors into prognosis reasonably well, though some interactions are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, day-5 transfer, endometrium, and missing morphology. Minor weakness is reliance on assumed good-quality morphology despite absent image data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting ERA preemptively and PGT-A after a first unsuccessful transfer in a 34-year-old with no prior failures is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as alcohol cessation, luteal support, lifestyle optimization, and future-cycle considerations. Some recommendations are useful but not highly tailored beyond standard IVF counseling."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013305,
+  "judge_latency_ms": 4598.154750005051,
+  "judge_prompt_tokens": 2885,
+  "judge_completion_tokens": 310
+}

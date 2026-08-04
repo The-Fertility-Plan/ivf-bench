@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0226",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label and identifies blastocyst, ICM, TE, and zona thinning, but it overstates certainty from the image alone; the blastocoel does not clearly occupy most of the embryo and TE/ICM quality are less distinctly visualized than described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, prior cycle history, BMI, sperm motility, and embryo grade into prognosis well, though some factors are weighted somewhat speculatively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability range tied to embryo quality and prior failures; minor issues include labeling 3 prior cycles as a RIF pattern and mixing speculative causes with stronger evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Core points on morphology and proceeding with transfer are reasonable, but several recommendations (routine ERA, thrombophilia/immunologic testing, aspirin/heparin/steroids/intralipids, MTHFR testing, strong PGT-A recommendation at age 35) are not well supported by major guidelines for unexplained repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear immediate and contingency steps for transfer management and future workup, but some suggested interventions are controversial or insufficiently evidence-based."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014517,
+  "judge_latency_ms": 5395.250874993508,
+  "judge_prompt_tokens": 3049,
+  "judge_completion_tokens": 358
+}

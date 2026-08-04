@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0466",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes very poor-quality blastocyst features and poor ICM/TE, but inaccurately describes a large central cavity and thinning zona despite the image/lab grade indicating an early blastocyst with limited blastocoel expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, endometrium, sperm, diagnosis, and prior biochemical pregnancies with embryo quality reasonably well, though AMH is unavailable and some inferences are stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there is internal tension between the visual description and the stated Gardner score, and it overstates nonviability from morphology alone. The response is also incomplete/truncated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and broad IVF principles, but stating that D-grade ICM/TE are 'not viable' is too absolute and not fully guideline-consistent; recommendations are not fully developed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides only broad favorable/risk framing and limited practical next steps; transfer-specific and future-cycle planning recommendations are incomplete due to truncation."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010593,
+  "judge_latency_ms": 4052.7252909960225,
+  "judge_prompt_tokens": 2041,
+  "judge_completion_tokens": 298
+}

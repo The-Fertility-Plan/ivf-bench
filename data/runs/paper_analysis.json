@@ -5,66 +5,66 @@
     "models": {
       "gemini-2.5-flash": {
         "n_scored": 550,
-        "overall": 3.3978,
+        "overall": 3.2236,
         "ci95": [
-          3.3433,
-          3.4505
+          3.1749,
+          3.2727
         ]
       },
       "global.anthropic.claude-opus-4-6-v1": {
         "n_scored": 550,
-        "overall": 4.0055,
+        "overall": 3.8316,
         "ci95": [
-          3.984,
-          4.0269
+          3.8095,
+          3.8535
         ]
       },
       "global.anthropic.claude-sonnet-4-6": {
         "n_scored": 550,
-        "overall": 3.5767,
+        "overall": 3.4662,
         "ci95": [
-          3.5476,
-          3.6055
+          3.44,
+          3.4927
         ]
       },
       "gpt-5.4-2026-03-05": {
         "n_scored": 550,
-        "overall": 4.5356,
+        "overall": 4.4433,
         "ci95": [
-          4.524,
-          4.5473
+          4.428,
+          4.4585
         ]
       },
       "ivf-bench-qwen9b-vlm-orpo": {
         "n_scored": 550,
-        "overall": 4.1662,
+        "overall": 4.0364,
         "ci95": [
-          4.1418,
-          4.1902
+          4.012,
+          4.0604
         ]
       },
       "moonshotai/kimi-k2.5": {
         "n_scored": 550,
-        "overall": 3.6291,
+        "overall": 3.3833,
         "ci95": [
-          3.5898,
-          3.6673
+          3.3495,
+          3.4164
         ]
       },
       "qwen/qwen3.5-397b-a17b": {
         "n_scored": 550,
-        "overall": 3.7462,
+        "overall": 3.5596,
         "ci95": [
-          3.716,
-          3.7753
+          3.5353,
+          3.5836
         ]
       },
       "qwen/qwen3.5-9b": {
         "n_scored": 520,
-        "overall": 3.3527,
+        "overall": 3.2358,
         "ci95": [
-          3.315,
-          3.3896
+          3.2004,
+          3.2704
         ]
       }
     },
@@ -73,10 +73,10 @@
         "higher": "gpt-5.4-2026-03-05",
         "lower": "ivf-bench-qwen9b-vlm-orpo",
         "n_shared": 550,
-        "diff": 0.3695,
+        "diff": 0.4069,
         "ci95": [
-          0.344,
-          0.3949
+          0.3815,
+          0.4331
         ],
         "p": 0.0,
         "separable": true
@@ -85,10 +85,10 @@
         "higher": "ivf-bench-qwen9b-vlm-orpo",
         "lower": "global.anthropic.claude-opus-4-6-v1",
         "n_shared": 550,
-        "diff": 0.1607,
+        "diff": 0.2047,
         "ci95": [
-          0.128,
-          0.1924
+          0.172,
+          0.2367
         ],
         "p": 0.0,
         "separable": true
@@ -97,98 +97,98 @@
         "higher": "global.anthropic.claude-opus-4-6-v1",
         "lower": "qwen/qwen3.5-397b-a17b",
         "n_shared": 550,
-        "diff": 0.2593,
+        "diff": 0.272,
         "ci95": [
-          0.2287,
-          0.2902
+          0.2433,
+          0.3007
         ],
         "p": 0.0,
         "separable": true
       },
       {
         "higher": "qwen/qwen3.5-397b-a17b",
+        "lower": "global.anthropic.claude-sonnet-4-6",
+        "n_shared": 550,
+        "diff": 0.0935,
+        "ci95": [
+          0.0607,
+          0.1251
+        ],
+        "p": 0.0,
+        "separable": true
+      },
+      {
+        "higher": "global.anthropic.claude-sonnet-4-6",
         "lower": "moonshotai/kimi-k2.5",
         "n_shared": 550,
-        "diff": 0.1171,
+        "diff": 0.0829,
         "ci95": [
-          0.0767,
-          0.1582
+          0.0454,
+          0.1215
         ],
         "p": 0.0,
         "separable": true
       },
       {
         "higher": "moonshotai/kimi-k2.5",
-        "lower": "global.anthropic.claude-sonnet-4-6",
-        "n_shared": 550,
-        "diff": 0.0524,
+        "lower": "qwen/qwen3.5-9b",
+        "n_shared": 520,
+        "diff": 0.1604,
         "ci95": [
-          0.0055,
-          0.0982
-        ],
-        "p": 0.031,
-        "separable": true
-      },
-      {
-        "higher": "global.anthropic.claude-sonnet-4-6",
-        "lower": "gemini-2.5-flash",
-        "n_shared": 550,
-        "diff": 0.1789,
-        "ci95": [
-          0.1236,
-          0.2367
+          0.1185,
+          0.2027
         ],
         "p": 0.0,
         "separable": true
       },
       {
-        "higher": "gemini-2.5-flash",
-        "lower": "qwen/qwen3.5-9b",
+        "higher": "qwen/qwen3.5-9b",
+        "lower": "gemini-2.5-flash",
         "n_shared": 520,
-        "diff": 0.0673,
+        "diff": -0.0065,
         "ci95": [
-          0.0081,
-          0.1262
+          -0.0619,
+          0.0496
         ],
-        "p": 0.0252,
-        "separable": true
+        "p": 0.8288,
+        "separable": false
       }
     ],
     "rubric_correlation": {
       "matrix": [
         [
           1.0,
-          0.449,
-          0.548,
-          0.501,
-          0.309
+          0.393,
+          0.536,
+          0.412,
+          0.319
         ],
         [
-          0.449,
+          0.393,
           1.0,
-          0.633,
-          0.373,
-          0.689
+          0.605,
+          0.4,
+          0.695
         ],
         [
-          0.548,
-          0.633,
+          0.536,
+          0.605,
           1.0,
-          0.559,
-          0.551
+          0.566,
+          0.519
         ],
         [
-          0.501,
-          0.373,
-          0.559,
+          0.412,
+          0.4,
+          0.566,
           1.0,
-          0.282
+          0.304
         ],
         [
-          0.309,
-          0.689,
-          0.551,
-          0.282,
+          0.319,
+          0.695,
+          0.519,
+          0.304,
           1.0
         ]
       ],
@@ -199,55 +199,55 @@
         "guideline_alignment",
         "actionability"
       ],
-      "mean_offdiag_r": 0.489,
-      "pc1_variance_explained": 0.602,
+      "mean_offdiag_r": 0.475,
+      "pc1_variance_explained": 0.592,
       "n_observations": 4370
     },
     "verbosity_bias": {
       "per_model": {
         "gemini-2.5-flash": {
-          "spearman_rho": 0.764,
+          "spearman_rho": 0.781,
           "p": 0.0,
           "median_chars": 6308
         },
         "global.anthropic.claude-opus-4-6-v1": {
-          "spearman_rho": -0.007,
-          "p": 0.87088,
+          "spearman_rho": -0.017,
+          "p": 0.68271,
           "median_chars": 13702
         },
         "global.anthropic.claude-sonnet-4-6": {
-          "spearman_rho": 0.032,
-          "p": 0.46004,
+          "spearman_rho": 0.046,
+          "p": 0.2823,
           "median_chars": 8104
         },
         "gpt-5.4-2026-03-05": {
-          "spearman_rho": 0.045,
-          "p": 0.29449,
+          "spearman_rho": 0.099,
+          "p": 0.02081,
           "median_chars": 9919
         },
         "ivf-bench-qwen9b-vlm-orpo": {
-          "spearman_rho": 0.231,
+          "spearman_rho": 0.291,
           "p": 0.0,
           "median_chars": 9670
         },
         "moonshotai/kimi-k2.5": {
-          "spearman_rho": 0.479,
+          "spearman_rho": 0.392,
           "p": 0.0,
           "median_chars": 6949
         },
         "qwen/qwen3.5-397b-a17b": {
-          "spearman_rho": 0.079,
-          "p": 0.06346,
+          "spearman_rho": 0.047,
+          "p": 0.2693,
           "median_chars": 5878
         },
         "qwen/qwen3.5-9b": {
-          "spearman_rho": 0.207,
+          "spearman_rho": 0.22,
           "p": 0.0,
           "median_chars": 5581
         }
       },
       "pooled": {
-        "spearman_rho": 0.613,
+        "spearman_rho": 0.631,
         "p": 0.0
       }
     },
@@ -274,35 +274,35 @@
       "scores": {
         "gemini-2.5-flash": {
           "n": 534,
-          "overall": 3.4004
+          "overall": 3.2255
         },
         "global.anthropic.claude-opus-4-6-v1": {
           "n": 534,
-          "overall": 4.0075
+          "overall": 3.8318
         },
         "global.anthropic.claude-sonnet-4-6": {
           "n": 534,
-          "overall": 3.5783
+          "overall": 3.4648
         },
         "gpt-5.4-2026-03-05": {
           "n": 534,
-          "overall": 4.5375
+          "overall": 4.4434
         },
         "ivf-bench-qwen9b-vlm-orpo": {
           "n": 534,
-          "overall": 4.1682
+          "overall": 4.0375
         },
         "moonshotai/kimi-k2.5": {
           "n": 534,
-          "overall": 3.6315
+          "overall": 3.3824
         },
         "qwen/qwen3.5-397b-a17b": {
           "n": 534,
-          "overall": 3.7502
+          "overall": 3.5618
         },
         "qwen/qwen3.5-9b": {
           "n": 505,
-          "overall": 3.3537
+          "overall": 3.2372
         }
       },
       "rank_order": [
@@ -310,10 +310,10 @@
         "ivf-bench-qwen9b-vlm-orpo",
         "global.anthropic.claude-opus-4-6-v1",
         "qwen/qwen3.5-397b-a17b",
-        "moonshotai/kimi-k2.5",
         "global.anthropic.claude-sonnet-4-6",
-        "gemini-2.5-flash",
-        "qwen/qwen3.5-9b"
+        "moonshotai/kimi-k2.5",
+        "qwen/qwen3.5-9b",
+        "gemini-2.5-flash"
       ],
       "rank_changes": []
     }
@@ -324,66 +324,66 @@
     "models": {
       "gemini-2.5-flash": {
         "n_scored": 103,
-        "overall": 3.833,
+        "overall": 3.6932,
         "ci95": [
-          3.7864,
-          3.8777
+          3.6544,
+          3.732
         ]
       },
       "global.anthropic.claude-opus-4-6-v1": {
         "n_scored": 103,
-        "overall": 4.0078,
+        "overall": 3.8214,
         "ci95": [
-          3.965,
-          4.0524
+          3.7689,
+          3.8738
         ]
       },
       "global.anthropic.claude-sonnet-4-6": {
         "n_scored": 103,
-        "overall": 3.6524,
+        "overall": 3.5379,
         "ci95": [
-          3.5864,
-          3.7165
+          3.4796,
+          3.5961
         ]
       },
       "gpt-5.4-2026-03-05": {
         "n_scored": 103,
-        "overall": 4.5495,
+        "overall": 4.4408,
         "ci95": [
-          4.5243,
-          4.5748
+          4.4039,
+          4.4777
         ]
       },
       "ivf-bench-qwen9b-vlm-orpo": {
         "n_scored": 103,
-        "overall": 4.1107,
+        "overall": 3.967,
         "ci95": [
-          4.0427,
-          4.1748
+          3.9049,
+          4.0252
         ]
       },
       "moonshotai/kimi-k2.5": {
         "n_scored": 103,
-        "overall": 3.7282,
+        "overall": 3.4738,
         "ci95": [
-          3.6447,
-          3.8058
+          3.4,
+          3.5476
         ]
       },
       "qwen/qwen3.5-397b-a17b": {
         "n_scored": 103,
-        "overall": 3.8175,
+        "overall": 3.6058,
         "ci95": [
-          3.7495,
-          3.8816
+          3.5573,
+          3.6505
         ]
       },
       "qwen/qwen3.5-9b": {
         "n_scored": 103,
-        "overall": 3.3146,
+        "overall": 3.1825,
         "ci95": [
-          3.2058,
-          3.4117
+          3.0796,
+          3.2757
         ]
       }
     },
@@ -392,10 +392,10 @@
         "higher": "gpt-5.4-2026-03-05",
         "lower": "ivf-bench-qwen9b-vlm-orpo",
         "n_shared": 103,
-        "diff": 0.4388,
+        "diff": 0.4738,
         "ci95": [
-          0.3767,
-          0.5068
+          0.4136,
+          0.5379
         ],
         "p": 0.0,
         "separable": true
@@ -404,22 +404,22 @@
         "higher": "ivf-bench-qwen9b-vlm-orpo",
         "lower": "global.anthropic.claude-opus-4-6-v1",
         "n_shared": 103,
-        "diff": 0.1029,
+        "diff": 0.1456,
         "ci95": [
-          0.0291,
-          0.1729
+          0.0777,
+          0.2136
         ],
-        "p": 0.0074,
+        "p": 0.0,
         "separable": true
       },
       {
         "higher": "global.anthropic.claude-opus-4-6-v1",
         "lower": "gemini-2.5-flash",
         "n_shared": 103,
-        "diff": 0.1748,
+        "diff": 0.1282,
         "ci95": [
-          0.1184,
-          0.233
+          0.0757,
+          0.1825
         ],
         "p": 0.0,
         "separable": true
@@ -428,46 +428,46 @@
         "higher": "gemini-2.5-flash",
         "lower": "qwen/qwen3.5-397b-a17b",
         "n_shared": 103,
-        "diff": 0.0155,
+        "diff": 0.0874,
         "ci95": [
-          -0.0486,
-          0.0816
+          0.033,
+          0.1437
         ],
-        "p": 0.662,
-        "separable": false
-      },
-      {
-        "higher": "qwen/qwen3.5-397b-a17b",
-        "lower": "moonshotai/kimi-k2.5",
-        "n_shared": 103,
-        "diff": 0.0893,
-        "ci95": [
-          0.0135,
-          0.167
-        ],
-        "p": 0.0212,
+        "p": 0.0024,
         "separable": true
       },
       {
-        "higher": "moonshotai/kimi-k2.5",
+        "higher": "qwen/qwen3.5-397b-a17b",
         "lower": "global.anthropic.claude-sonnet-4-6",
         "n_shared": 103,
-        "diff": 0.0757,
+        "diff": 0.068,
         "ci95": [
-          -0.0233,
-          0.1689
+          0.0058,
+          0.1282
         ],
-        "p": 0.1232,
-        "separable": false
+        "p": 0.0318,
+        "separable": true
       },
       {
         "higher": "global.anthropic.claude-sonnet-4-6",
+        "lower": "moonshotai/kimi-k2.5",
+        "n_shared": 103,
+        "diff": 0.0641,
+        "ci95": [
+          -0.0194,
+          0.1534
+        ],
+        "p": 0.1468,
+        "separable": false
+      },
+      {
+        "higher": "moonshotai/kimi-k2.5",
         "lower": "qwen/qwen3.5-9b",
         "n_shared": 103,
-        "diff": 0.3379,
+        "diff": 0.2913,
         "ci95": [
-          0.2194,
-          0.466
+          0.1883,
+          0.3981
         ],
         "p": 0.0,
         "separable": true
@@ -477,37 +477,37 @@
       "matrix": [
         [
           1.0,
-          0.539,
-          0.532,
-          0.424,
-          0.399
+          0.426,
+          0.486,
+          0.344,
+          0.353
         ],
         [
-          0.539,
+          0.426,
           1.0,
-          0.573,
-          0.407,
-          0.588
+          0.571,
+          0.45,
+          0.655
         ],
         [
-          0.532,
-          0.573,
+          0.486,
+          0.571,
           1.0,
-          0.524,
-          0.572
+          0.566,
+          0.569
         ],
         [
-          0.424,
-          0.407,
-          0.524,
+          0.344,
+          0.45,
+          0.566,
           1.0,
-          0.454
+          0.476
         ],
         [
-          0.399,
-          0.588,
-          0.572,
-          0.454,
+          0.353,
+          0.655,
+          0.569,
+          0.476,
           1.0
         ]
       ],
@@ -518,56 +518,56 @@
         "guideline_alignment",
         "actionability"
       ],
-      "mean_offdiag_r": 0.501,
-      "pc1_variance_explained": 0.598,
+      "mean_offdiag_r": 0.49,
+      "pc1_variance_explained": 0.589,
       "n_observations": 824
     },
     "verbosity_bias": {
       "per_model": {
         "gemini-2.5-flash": {
-          "spearman_rho": -0.152,
-          "p": 0.12661,
+          "spearman_rho": -0.095,
+          "p": 0.3387,
           "median_chars": 9280
         },
         "global.anthropic.claude-opus-4-6-v1": {
-          "spearman_rho": 0.157,
-          "p": 0.113,
+          "spearman_rho": 0.337,
+          "p": 0.00049,
           "median_chars": 12845
         },
         "global.anthropic.claude-sonnet-4-6": {
-          "spearman_rho": 0.051,
-          "p": 0.61129,
+          "spearman_rho": 0.045,
+          "p": 0.64822,
           "median_chars": 7941
         },
         "gpt-5.4-2026-03-05": {
-          "spearman_rho": 0.152,
-          "p": 0.12632,
+          "spearman_rho": 0.024,
+          "p": 0.80706,
           "median_chars": 9894
         },
         "ivf-bench-qwen9b-vlm-orpo": {
-          "spearman_rho": 0.206,
-          "p": 0.03727,
+          "spearman_rho": 0.226,
+          "p": 0.02168,
           "median_chars": 9916
         },
         "moonshotai/kimi-k2.5": {
-          "spearman_rho": 0.381,
-          "p": 7e-05,
+          "spearman_rho": 0.191,
+          "p": 0.05333,
           "median_chars": 6877
         },
         "qwen/qwen3.5-397b-a17b": {
           "spearman_rho": 0.047,
-          "p": 0.6404,
+          "p": 0.63825,
           "median_chars": 5883
         },
         "qwen/qwen3.5-9b": {
-          "spearman_rho": -0.141,
-          "p": 0.15458,
+          "spearman_rho": -0.149,
+          "p": 0.1339,
           "median_chars": 5641
         }
       },
       "pooled": {
-        "spearman_rho": 0.458,
-        "p": 6.890201586087261e-44
+        "spearman_rho": 0.502,
+        "p": 1.0060841271045152e-53
       }
     },
     "patient_dedup_robustness": {
@@ -576,35 +576,35 @@
       "scores": {
         "gemini-2.5-flash": {
           "n": 103,
-          "overall": 3.833
+          "overall": 3.6932
         },
         "global.anthropic.claude-opus-4-6-v1": {
           "n": 103,
-          "overall": 4.0078
+          "overall": 3.8214
         },
         "global.anthropic.claude-sonnet-4-6": {
           "n": 103,
-          "overall": 3.6524
+          "overall": 3.5379
         },
         "gpt-5.4-2026-03-05": {
           "n": 103,
-          "overall": 4.5495
+          "overall": 4.4408
         },
         "ivf-bench-qwen9b-vlm-orpo": {
           "n": 103,
-          "overall": 4.1107
+          "overall": 3.967
         },
         "moonshotai/kimi-k2.5": {
           "n": 103,
-          "overall": 3.7282
+          "overall": 3.4738
         },
         "qwen/qwen3.5-397b-a17b": {
           "n": 103,
-          "overall": 3.8175
+          "overall": 3.6058
         },
         "qwen/qwen3.5-9b": {
           "n": 103,
-          "overall": 3.3146
+          "overall": 3.1825
         }
       },
       "rank_order": [
@@ -613,8 +613,8 @@
         "global.anthropic.claude-opus-4-6-v1",
         "gemini-2.5-flash",
         "qwen/qwen3.5-397b-a17b",
-        "moonshotai/kimi-k2.5",
         "global.anthropic.claude-sonnet-4-6",
+        "moonshotai/kimi-k2.5",
         "qwen/qwen3.5-9b"
       ],
       "rank_changes": []

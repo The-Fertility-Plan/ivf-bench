@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately identifies the expanded blastocyst stage and references Gardner 3AA grading. However, the image is quite blurry and low-resolution, making precise morphological assessment difficult. The model confidently describes 'densely aggregated' ICM cells with 'high nuclear-to-cytoplasmic ratio' and 'cohesive continuous epithelial layer' for TE - features that are not clearly discernible in this low-quality image. The description of ICM at '1-2 o'clock position' is plausible but the image quality doesn't support such confident characterization. The model largely echoes the provided Gardner score rather than independently analyzing visible features, and states 'no obvious signs of degeneration' when the image shows considerable granularity and debris-like material in the upper right quadrant that warrants mention."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response demonstrates strong integration of clinical factors. It correctly identifies the discordance between excellent embryo morphology and suboptimal AMH for age 34, connects tubal factor diagnosis to preserved uterine function, addresses smoking's impact on endometrial receptivity, and considers sperm parameters adequately. The integration of BMI, previous failed cycle, and paternal age is appropriate. Minor gap: doesn't fully explore the FSH of 8.8 IU/L in context with AMH 1.59, and the short agonist protocol choice relative to the patient's reserve could be discussed more critically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured. The baseline implantation rate for 3AA at age 34 (50-60%), followed by smoking penalty (-10-15%), leading to 30-40% estimate is coherent and transparent. The live birth probability adjustment (25-35%) accounting for miscarriage risk is appropriately conservative. Minor inconsistency: the response states aneuploidy rate ~30-40% at age 34 but then says euploidy rate is 55-60% for morphologically excellent embryos - these figures are slightly inconsistent (implying ~40-45% aneuploidy for excellent morphology vs 30-40% overall). The smoking penalty quantification is reasonable though on the higher end of published evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines. SET recommendation for high-quality blastocyst is guideline-concordant. Luteal support recommendations are appropriate. Smoking cessation advice aligns with ASRM committee opinions. PGT-A suggestion after failed transfer with good morphology is reasonable per current guidelines. Low-dose aspirin recommendation is somewhat controversial - current ASRM/ESHRE guidelines do not routinely recommend aspirin for unselected IVF patients, representing a minor deviation. ERA recommendation after second failure is guideline-aligned. The antagonist protocol suggestion for future cycles is reasonable given the reserve profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides specific, tiered recommendations covering immediate transfer strategy, luteal support details, and future cycle planning with clear decision branches (if fails/if succeeds). Smoking cessation is emphasized with quantified benefit. The recommendation hierarchy is clinically useful. Specific suggestions like ERA after second failure, PGT-A consideration, and embryo banking given declining reserve add practical value. Slight weakness: doesn't specify progesterone dosing/route details, doesn't address whether frozen vs fresh transfer was performed, and the aspirin recommendation lacks sufficient evidence base to be actionable without caveats."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.022671,
+  "judge_latency_ms": 19609.637792003923,
+  "judge_prompt_tokens": 3222,
+  "judge_completion_tokens": 867
+}

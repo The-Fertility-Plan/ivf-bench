@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0167",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 2AA label, but it overstates confidence in ICM/TE grading from this image and does not note that the blastocoel appears somewhat collapsed/irregular rather than a clearly classic full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm factors, BMI, smoking, endometrium, and prior cycle reasonably well with embryo quality, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the probability estimate is tied to stated positives and negatives, but there are minor issues such as speculative concern about day-4 blastocyst asynchrony and unsupported inferences from high AMH."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, smoking cessation, and general counseling, but it includes weaker guideline support for PGT-A after a single failed cycle and implies high AMH may be associated with higher aneuploidy/PCOS without sufficient basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support review, smoking cessation, and possible sperm DNA fragmentation testing, though recommendations could be more protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013173,
+  "judge_latency_ms": 4889.655333012342,
+  "judge_prompt_tokens": 2666,
+  "judge_completion_tokens": 345
+}

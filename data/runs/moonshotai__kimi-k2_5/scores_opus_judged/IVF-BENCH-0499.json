@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0499",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the embryo as a fully expanded blastocyst but notes expansion grade 2, which per Gardner criteria means the blastocoel fills the embryo - this is correct. However, describing the ZP as 'slightly thickened' is questionable for a grade 2 (full blastocyst should have normal thickness, not thinned). The TE description as 'multi-layered' is inaccurate - TE should be a single-layered epithelium. The ICM localization at '1-2 o'clock position' attempts image-specific detail but may not precisely match. The description of TE as 'dark/granular' is a reasonable attempt at image description. Overall, mostly consistent with the Gardner 2BA grading provided but contains some morphological inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response connects maternal age to euploidy rates, links TE quality to implantation in the context of male factor, relates endometrial thickness to transfer timing, discusses the MII/COC ratio, and considers how the sedentary lifestyle and Mediterranean diet interact with implantation potential. The connection between male factor diagnosis and potential sperm DNA fragmentation affecting ICM quality is insightful. Previous cycle failure is appropriately contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability calculation is transparent with additive adjustments from baseline, which is a reasonable approach. One minor issue: the response states expansion grade 2 is 'not hatching' and implies lower implantation than grades 3-5, but then the baseline calculation doesn't seem to penalize heavily for this. The caveat about PGT-A and euploidy probability is well-reasoned. The cumulative pregnancy rate estimate is logically derived. Minor inconsistency in describing the ZP as 'slightly thickened' while also noting grade 2 expansion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. SET recommendation for patient <35 is correct per guidelines. Gardner grading interpretation is mostly accurate. The recommendation against routine ERA after single failure aligns with current evidence. PGT-A discussion is appropriately nuanced for age 27. Luteal phase support recommendations are standard. Assisted hatching consideration is reasonable though guidelines generally don't strongly support it for grade 2 blastocysts. The suggestion of low-dose aspirin is somewhat evidence-based but not universally recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations with specific dosing (progesterone 600-800mg), transfer technique details (ultrasound-guided, 1-1.5cm from fundus), specific diagnostic tests if failure occurs (DFI, ERA timing, thrombophilia screening, hysteroscopy), and lifestyle modifications (30 min walking). The tiered approach - immediate transfer recommendations, if-failure diagnostics, and future cycle modifications - is practical and well-organized. Alternatives like PICSI, time-lapse monitoring, and growth hormone are mentioned with appropriate context."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.035365,
+  "judge_latency_ms": 17906.3385000336,
+  "judge_prompt_tokens": 3213,
+  "judge_completion_tokens": 772
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies very poor-quality morphology with absent/degenerative ICM and TE, but misstates Gardner expansion grade 1 as blastocoel <1/2 embryo and overcalls the image as possibly morula/degenerating cleavage stage rather than staying with an early blastocyst interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH/low oocyte yield, sperm quality, endometrial thickness, and lifestyle reasonably well with embryo prognosis, though BMI/tubal factor and first-cycle context are not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the poor prognosis estimate follows from the embryo grade and maternal age, but there is some overstatement and a questionable assertion that a day-4 blastocyst transfer is impossible rather than unusual."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis assessment is broadly consistent with IVF practice, recommending categorically not to transfer a 1DD embryo and calling it non-viable is too absolute and not well aligned with nuanced guideline-based counseling; donor egg recommendation is also somewhat premature after a first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as counseling, clarifying staging/day discrepancy, and discussing future protocol/PGT-A options, but the transfer recommendation is overly rigid and lacks nuanced alternatives such as individualized counseling if no other embryos exist."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013281,
+  "judge_latency_ms": 5896.027916009189,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 373
+}

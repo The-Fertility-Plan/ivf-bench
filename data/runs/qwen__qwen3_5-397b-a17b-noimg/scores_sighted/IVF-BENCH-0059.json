@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and relied on the provided Gardner 3AA label, avoiding fabricated image-specific claims. However, it repeated an inaccurate definition of stage 3 as 'fully expanded' with thinning zona, which corresponds more to stage 4, and thus its morphology discussion is only moderately accurate relative to the actual image and grading criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, AMH, oocyte yield, BMI, endometrial thickness, paternal age, and semen parameters with embryo quality and prognosis in a clinically meaningful way. Some links are somewhat generalized, but most relevant factors are connected to transfer outlook."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the implantation estimate tied to embryo quality and modifying patient factors. Minor issues include overemphasis on paternal age and some assumptions about fresh transfer/OHSS risk without trigger or symptom data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET for a good-quality day-5 blastocyst in a 34-year-old, attention to OHSS risk in PCOS, and lifestyle optimization. Small deviations include overstating PGT-A rationale based on paternal age and the stage-3 blastocyst description."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including SET, assessing fresh versus freeze-all based on OHSS risk, luteal support, alcohol cessation, exercise, and future-cycle considerations. It is useful and specific, though some recommendations remain conditional due to missing cycle details."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014982,
+  "judge_latency_ms": 5249.5939590007765,
+  "judge_prompt_tokens": 3014,
+  "judge_completion_tokens": 396
+}

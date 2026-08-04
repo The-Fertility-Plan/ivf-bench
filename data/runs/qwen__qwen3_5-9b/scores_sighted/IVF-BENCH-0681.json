@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0681",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage: Gardner 2 is an early/full cavity-forming blastocyst, not a fully expanded or hatching embryo. It also upgrades TE from the provided 'few cells forming a loose epithelium' (more consistent with C) to B, though the ICM description is broadly reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, smoking, endometrial thickness, sperm parameters, and cycle history with embryo prognosis in a clinically meaningful way, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it calls 2AB 'top-tier,' equates grade 2 with full expansion/hatching, and bases probability partly on euploid blastocyst rates despite no PGT-A. The final estimate is plausible but not tightly calibrated to the stated evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (single embryo transfer suitability, smoking cessation, consideration of endometriosis context), but the Gardner grading interpretation is inaccurate and the recommendation for PGT-A at age 33 without specific indications is more optional than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, smoking cessation, luteal support, cryopreservation, and future consideration of endometriosis management and PGT-A. Recommendations are useful, though some are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013506,
+  "judge_latency_ms": 5545.715790998656,
+  "judge_prompt_tokens": 2612,
+  "judge_completion_tokens": 378
+}

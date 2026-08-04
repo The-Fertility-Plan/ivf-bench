@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted that no image/Gardner score was available to it, but then assumed a good-quality blastocyst and described expanded blastocoel, clear ICM, and cohesive TE that are not reliably supported by the actual image, which appears more like an early/poorly expanded blastocyst with indistinct ICM/TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, ovarian response, endometrium, prior biochemical pregnancy, sperm parameters, and lifestyle risks, and connects them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it relies heavily on an unsupported assumption of good embryo quality and gives a probability estimate derived from that assumption, creating a notable logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET discussion, smoking/alcohol counseling, luteal support review), but suggesting PGT-A and ERA/EMMA/ALICE after only a biochemical pregnancy in a 27-year-old is more aggressive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear practical next steps for transfer and future planning, especially around lifestyle modification and transfer strategy, though some suggestions are somewhat generic or not tightly tailored to this specific embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.015663,
+  "judge_latency_ms": 4723.9826250006445,
+  "judge_prompt_tokens": 3406,
+  "judge_completion_tokens": 363
+}

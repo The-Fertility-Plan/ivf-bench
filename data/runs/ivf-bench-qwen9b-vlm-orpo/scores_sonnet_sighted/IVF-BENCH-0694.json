@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately identifies the compact ICM consistent with A-grade, describes the TE layer with peripheral cells, and notes mild irregularity/focal thickening. It appropriately flags that the image doesn't show maximal expansion while acknowledging lab timing factors. The description of zona integrity and absence of fragmentation/degeneration is reasonable. Minor deduction for not more precisely characterizing the blastocoel cavity size and the somewhat uncertain TE assessment, though the caveat about lab-reported grading being most reliable is appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 32, AMH/FSH reserve markers, tubal factor diagnosis with specific hydrosalpinx caveat, endometrial thickness, partner age 40 with paternal aging considerations, sperm parameters, BMI, lifestyle factors, and first-cycle status. It explicitly connects each factor to implantation prognosis and identifies how they interact with embryo quality. The mature oocyte yield concern relative to COCs retrieved is a nuanced observation showing thorough integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 40-55% follows logically from the enumerated favorable and cautionary factors. The model appropriately distinguishes between tested and untested embryo scenarios and adjusts estimates accordingly. Minor deduction for slight repetitiveness in listing favorable/risk factors across sections, and the probability range is somewhat wide, though this reflects genuine clinical uncertainty. No contradictions identified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends eSET for age 32 with good-quality blastocyst, emphasizes hydrosalpinx management before transfer (consistent with ESHRE hydrosalpinx guidelines), appropriate luteal support emphasis, and measured approach to PGT-A (not automatically recommended at age 32). The probability estimates are consistent with published blastocyst implantation data. Minor deduction for not explicitly referencing freeze-all strategy considerations in antagonist cycles with potential progesterone rise more definitively."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: confirms eSET appropriateness, explicitly flags hydrosalpinx as the key modifiable risk, addresses fresh vs frozen transfer considerations, provides specific hCG and ultrasound follow-up timelines, outlines a structured failure analysis protocol, and gives conditional future cycle planning including sperm DNA fragmentation testing triggers and PGT-A decision criteria. The conditional reasoning ('if hydrosalpinx present,' 'if repeated failures') makes recommendations appropriately nuanced for clinical use."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022533,
+  "judge_latency_ms": 17319.35954200162,
+  "judge_prompt_tokens": 4171,
+  "judge_completion_tokens": 668
+}

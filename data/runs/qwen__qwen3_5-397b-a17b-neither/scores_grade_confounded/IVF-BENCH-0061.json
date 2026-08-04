@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was available, but it fails to use the provided Gardner score of 2AA and instead says a specific grade cannot be assigned, then speculates about a likely >=3BB embryo, which conflicts with the supplied morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, diagnosis, prior biochemical pregnancy, sperm parameters, endometrial thickness, and lifestyle factors well with prognosis, though it underuses the actual embryo grade in that integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there is a notable inconsistency in ignoring the provided 2AA grade while inferring an unverified lower-grade embryo, which weakens the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A after a single biochemical pregnancy in a 27-year-old and mentioning thrombophilia screening/inherited thrombophilias in this context are somewhat overreaching relative to standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for transfer, luteal support review, smoking/alcohol cessation, and future male-factor workup, though some recommendations are more aggressive than necessary for this profile."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013476,
+  "judge_latency_ms": 3858.0642500019167,
+  "judge_prompt_tokens": 2767,
+  "judge_completion_tokens": 345
+}

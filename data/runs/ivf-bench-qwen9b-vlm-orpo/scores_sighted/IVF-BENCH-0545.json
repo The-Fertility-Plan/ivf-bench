@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0545",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality blastocyst with poorly defined/absent ICM and weak TE, but overstates the blastocoel as very small and calls it a very early blastocyst despite the provided Gardner 1DD definition indicating blastocoel at least half the embryo; limited comment on zona/collapse nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, diagnosis, endometrium, first cycle status, and semen findings well, and appropriately frames embryo quality as the main limiting factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and conclusions generally follow from the poor morphology plus favorable patient factors, though there is some inconsistency in probability ranges and in describing the embryo as both very early and fitting the stated grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely consistent with Gardner grading principles and standard IVF counseling, including caution about single-image assessment and limited indication for PGT-A at age 32; minor deviations include some speculative lifestyle emphasis and biopsy comments not central to guideline-based management."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling for proceeding if this is the best/only embryo and sensible future-cycle steps such as embryology review, selective sperm DNA fragmentation testing if poor-quality pattern repeats, and protocol review."
+    }
+  ],
+  "extracted_probability": 0.07,
+  "judge_cost_usd": 0.01764,
+  "judge_latency_ms": 5261.862375002238,
+  "judge_prompt_tokens": 4200,
+  "judge_completion_tokens": 336
+}

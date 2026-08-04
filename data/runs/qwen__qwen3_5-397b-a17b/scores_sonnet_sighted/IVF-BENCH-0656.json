@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies poor morphology and degenerative features consistent with the 1DD grade. However, it misinterprets the Gardner Stage 1 definition, contradicting itself by noting the data says 'blastocoel at least half' while claiming Stage 1 means less than half. The image actually shows a compacted structure with some visible cavity formation, and the model's description of 'no clearly defined blastocoel' may not fully match what is visible. The zona pellucida is not discussed. Overall description is reasonable but contains notable inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The model does well integrating multiple clinical factors: correctly identifies the AMH/yield discrepancy suggesting possible over-suppression, flags BMI 34.7 as a significant risk factor, astutely notes that normal sperm parameters contradict the 'Male Factor' diagnosis and raises DNA fragmentation as a possible explanation, and acknowledges the good endometrial thickness. The 'young patient, poor embryo paradox' framing is clinically relevant. Minor gap: does not discuss light alcohol consumption or stress in context of outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of <1-5% follows coherently from the degenerative grading. The model correctly identifies the contradiction in the Gardner score description provided in the prompt and handles it reasonably. The Day 4 transfer interpretation (embryo not progressing, decision to transfer rather than discard) is clinically sound. Minor inconsistency: the model notes Stage 1 means blastocoel less than half, but the prompt states 'at least half' - the model flags this but doesn't fully resolve it."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: antagonist protocol suggestion for potential over-suppression, sperm DNA fragmentation testing for unexplained male factor, ICSI recommendation, blastocyst culture to Day 5/6, and weight management prior to next cycle. The Gardner grading interpretation is mostly correct. The suggestion to consider transfer of a 1DD embryo only as a last resort aligns with clinical practice. Minor issue: does not mention PGT-A which could be relevant given the poor embryo development history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: protocol switch to antagonist, sperm DNA fragmentation testing, ICSI, Day 5/6 culture, weight loss target of 5-10%. Counseling guidance is appropriate. The response clearly distinguishes between immediate transfer decisions and future cycle planning. Could be improved by specifying gonadotropin dose adjustments, mentioning specific DFI thresholds, or discussing cumulative live birth rate counseling for a first-time IVF patient with this outcome."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.019206,
+  "judge_latency_ms": 15937.292542002979,
+  "judge_prompt_tokens": 2877,
+  "judge_completion_tokens": 705
+}

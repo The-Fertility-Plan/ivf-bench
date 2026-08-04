@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion stage (Grade 3), ICM grade A, and TE grade A consistent with the Gardner 3AA score. However, it introduces a speculative 'blastocoel irregularity/partial collapse' observation that may not be clearly visible in the image, and flags a potential discordance with the documented grade without strong visual evidence. This creates uncertainty about whether the model is accurately reading the image or fabricating concerns. The zona thinning observation is appropriate for a Grade 3 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects DOR diagnosis with AMH 1.3 ng/mL and poor cycle efficiency, links age 34 to aneuploidy risk estimates, integrates endometrial thickness with receptivity, addresses sperm parameters, and considers lifestyle factors. The stimulation funnel analysis effectively contextualizes the single blastocyst outcome within the DOR framework. All major clinical variables are meaningfully connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate (40-45%) follows logically from the adjustment factors presented. The base rate selection is appropriate and adjustments are individually justified. Minor inconsistency: the model flags blastocoel irregularity as a concern but the Gardner score is accepted as 3AA, creating slight tension. The live birth conversion calculation (75-80% of implantation rate) is clinically sound. Overall the conclusions are well-supported by the evidence chain presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: antagonist protocol appropriateness for DOR, luteal phase support protocols, DuoStim consideration for DOR, DHEA supplementation evidence base acknowledged, PGT-A discussion, and donor oocyte counseling pathway. The urgency recommendation for not delaying second cycle aligns with DOR management guidelines. CoQ10 recommendation is evidence-limited but commonly discussed in guidelines. Assisted hatching recommendation for thinning zona is appropriate. Minor gap: no explicit mention of single embryo transfer policy alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, immediately actionable recommendations including pre-transfer blastocoel re-expansion confirmation, ultrasound-guided transfer, specific progesterone dosing (400-600mg/day), βhCG timing (10-12 days post-transfer), and a prioritized future cycle planning table with seven ranked interventions. Lifestyle modifications are specific (aerobic exercise 3x/week, Mediterranean diet, alcohol cessation). The AMH monitoring timeline (6 months) and maximum delay guidance (<3 months for second cycle) add practical clinical utility."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021891,
+  "judge_latency_ms": 14194.341582995548,
+  "judge_prompt_tokens": 3877,
+  "judge_completion_tokens": 684
+}

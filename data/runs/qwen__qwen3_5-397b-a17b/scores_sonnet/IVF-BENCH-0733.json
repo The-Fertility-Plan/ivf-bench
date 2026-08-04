@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BB Gardner score: expanded blastocoel with thinning zona, loosely grouped ICM in a specific quadrant, and loose TE epithelium. The description of the ICM location and TE characteristics aligns well with Grade B criteria. Minor deduction for the speculative mention of a 'circular structure near the ICM' that may be over-interpreted, and some descriptions feel slightly generic rather than image-specific, but overall the morphological analysis is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response meaningfully connects AMH/FSH levels to ovarian response, identifies the discrepancy between 'Male Factor' diagnosis and normal sperm parameters (correctly hypothesizing DNA fragmentation or morphology issues), links reproductive history (prior live birth vs. two failures) to prognosis, and considers endometrial thickness and lifestyle factors. The interaction between maternal age and aneuploidy risk relative to embryo grade is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 30-45% follows logically from the adjustments made for embryo grade, age, history, and uterine factors. The baseline of 40-50% for a Day 5 blastocyst at age 35 is reasonable, and the grade-based downward adjustment is coherent. Minor issue: the response notes the prior live birth pushes probability up while two failures pull it down, but the net effect on the final range could be more explicitly justified. The PGT-A euploid comparison (>60%) is appropriately contextualized."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer is correctly recommended as standard of care, PGT-A suggestion for a 35-year-old with failed cycles is evidence-based, and sperm DNA fragmentation testing is appropriate given the Male Factor diagnosis with normal standard parameters. The assisted hatching recommendation is slightly questionable given the zona is already naturally thinning (guidelines suggest AH for thick zona or frozen embryos), which represents a minor deviation. Stress reduction referral is appropriate though evidence base is modest."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical. For the current transfer: SET with rationale clearly stated, assisted hatching consideration with appropriate caveat. For future planning: specific tests recommended (sperm DNA fragmentation), specific interventions if positive (antioxidants, TESA-ICSI), PGT-A with clear indication rationale, stress management referral, and even a nuanced discussion of stimulation protocol adjustment with specific alternative (Microdose Flare). Each recommendation is tied to a specific clinical finding, making this highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.019311,
+  "judge_latency_ms": 14770.755874997121,
+  "judge_prompt_tokens": 2882,
+  "judge_completion_tokens": 711
+}

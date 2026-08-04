@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner score of 1DD, incorrectly frames the case as lacking morphology data, and misclassifies the embryo as a Day 4 morula/early compaction stage rather than addressing a very poor-quality early blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, PCOS, BMI, sperm parameters, endometrium, and cycle context, though the integration is weakened by the incorrect embryo-stage interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but built on a major false premise that morphology was unavailable and that this was a Day 4 morula transfer; therefore the implantation estimate and conclusions are not well supported by the actual embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but there are notable deviations: failure to apply Gardner grading correctly, overstatement of ERA after a first failure, and somewhat routine endorsement of PGT-A/metformin without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical recommendations for luteal support, lifestyle changes, OHSS monitoring, and future planning, although some advice is less appropriate because it is based on the wrong embryo-stage assessment."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.013545,
+  "judge_latency_ms": 3918.2939999955124,
+  "judge_prompt_tokens": 2755,
+  "judge_completion_tokens": 352
+}

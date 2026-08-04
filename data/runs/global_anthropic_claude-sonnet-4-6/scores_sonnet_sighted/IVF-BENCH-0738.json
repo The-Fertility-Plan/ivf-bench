@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocoel cavity, ICM location and density, TE layer, and intact zona pellucida consistent with a Grade 2AA blastocyst. It appropriately notes ICM granularity and peripheral debris-like structures visible in the image. Minor deduction for not noting the somewhat irregular/lobulated ICM appearance more precisely, and the TE appears less cohesive in the image than a true AA grade would suggest, which the model only partially flags."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response correctly identifies uterine factor as the dominant variable, contextualizes BMI 18.2 as borderline underweight with endometrial implications, addresses the missing AMH, integrates sperm parameters, endometrial thickness, lifestyle factors, and age-related aneuploidy risk. The interaction table for uterine pathology types and their differential impacts demonstrates sophisticated clinical thinking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The three-scenario probability framework is logical and well-structured. The reasoning cascade showing stepwise probability adjustments is transparent and internally consistent. Minor issue: the base rate of ~52% for a 2AA blastocyst at age 35 is slightly optimistic per most published data, and the final adjusted estimate of 38-42% in Scenario A is reasonable but the arithmetic cascade could be more rigorously justified. Overall conclusions follow well from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines including Gardner grading criteria, ERA consideration for uterine factor patients, PGT-A discussion with appropriate caveats about morphology-euploidy correlation, luteal phase support dosing, and hysteroscopy recommendations. The progesterone dosing recommendation (≥600mg/day vaginal) aligns with current protocols. Minor deduction for not explicitly referencing freeze-all strategy considerations for the current cycle given uterine factor diagnosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with prioritized recommendations (CRITICAL/HIGH/MODERATE/LOW), specific lifestyle interventions with dosing/frequency, a detailed future cycle planning decision tree, specific progesterone dosing, ERA timing considerations, and a comprehensive list of investigations for failed transfer. The scenario-based probability framework gives clinicians clear decision points. The summary scorecard provides an at-a-glance reference useful in clinical settings."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.02214,
+  "judge_latency_ms": 14483.793625011458,
+  "judge_prompt_tokens": 4335,
+  "judge_completion_tokens": 609
+}

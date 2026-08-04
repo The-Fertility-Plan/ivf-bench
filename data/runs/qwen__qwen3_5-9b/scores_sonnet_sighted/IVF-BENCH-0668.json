@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3 with thinning zona), identifies the prominent ICM as Grade A with high cellularity, and correctly characterizes the TE as Grade C with few, large, sparse cells. The observation of zona thinning particularly on the right side and irregular contour aligns with the image. Minor limitation: the description of ICM texture as 'heterogeneous' is a slight overreach, and the blastocoel cavity description could be more precise given the complex internal structure visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: maternal age (39) and aneuploidy risk, AMH/FSH indicating DOR, the 4 failed previous cycles including pattern analysis, smoking impact on oocyte quality and endometrial receptivity, sperm parameters ruling out severe male factor, optimal endometrial thickness, BMI, and partner age. The interaction between TE grade C and implantation potential is well-connected to the patient's history of failure. The response correctly identifies the discrepancy between good ICM and poor TE as the central clinical tension."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological findings to clinical risk factors to probability estimates. The probability range (10-15% live birth) is appropriately lower than morphology-alone estimates (15-25%) given age and history, which is internally consistent. The recommendation for PGT-A follows coherently from the aneuploidy risk argument. Minor issue: the response recommends 'proceeding with caution' but doesn't explicitly address whether to transfer now vs. biopsy first, creating a slight ambiguity in the immediate action plan."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: PGT-A recommendation for recurrent implantation failure at advanced maternal age is evidence-based, smoking cessation aligns with ASRM guidelines, sperm DNA fragmentation testing for recurrent failure is guideline-supported, and FET strategy considerations are appropriate. Gardner grading criteria are correctly applied. Minor deviation: ICSI recommendation 'to minimize sperm DNA damage' is not strongly evidence-based for cases with normal sperm parameters, representing a slight deviation from strict guideline alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with transfer, order SDF testing, mandate smoking cessation, consider PGT-A for future cycles, and plan FET strategy. Recommendations are case-specific rather than generic. The summary effectively prioritizes actions. Slight limitation: the response doesn't address whether to biopsy this current embryo for PGT-A before transfer (a critical decision point), doesn't specify endometrial support protocols, and doesn't discuss ERA testing given the history of recurrent implantation failure, which would add practical value."
+    }
+  ],
+  "extracted_probability": 0.125,
+  "judge_cost_usd": 0.020253,
+  "judge_latency_ms": 15837.03166700434,
+  "judge_prompt_tokens": 3146,
+  "judge_completion_tokens": 721
+}

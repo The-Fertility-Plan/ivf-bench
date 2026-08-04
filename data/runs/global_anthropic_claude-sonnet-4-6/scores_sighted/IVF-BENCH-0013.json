@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a poor-quality early blastocyst with poorly defined ICM/TE, but it misinterprets the provided Gardner 1DD score by stating blastocoel is <50% rather than at least half the embryo, and it adds features like vacuolization and zona thinning/irregularity that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve diagnosis, BMI, sperm parameters, endometrium, and first-cycle status well, and appropriately contrasts favorable patient factors with very poor embryo quality, though some statements are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: severe embryo morphology drives prognosis despite favorable maternal factors. The main issue is the incorrect interpretation of expansion grade 1 and some overconfident causal attributions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and emphasis on informed consent are reasonable, but several recommendations go beyond guideline-based practice or are weakly supported (routine PGT-A in a 28-year-old with few embryos, DHEA/GH/testosterone, autoimmune testing, karyotype/Fragile X without clearer indication)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer counseling and future workup/planning, including documenting low prognosis and discussing alternatives. However, some suggested interventions are not strongly evidence-based, which limits practical reliability."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015645,
+  "judge_latency_ms": 5696.786125001381,
+  "judge_prompt_tokens": 3305,
+  "judge_completion_tokens": 382
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0743",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with the Gardner 3AA score (expanded blastocoel, thinned zona, compact ICM, cohesive TE), but largely echoes the provided laboratory data rather than independently analyzing the image. The description lacks specific visual observations unique to the image (e.g., precise cell counts, specific ICM positioning, TE cell uniformity details) that would demonstrate true image-based analysis beyond what was given in the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well, including age-related aneuploidy risk, PCOS implications, sperm parameters, endometrial thickness, and lifestyle factors. It correctly identifies age 39 as the primary risk modifier and connects it to aneuploidy probability. Minor gap: AMH being N/A is noted but not deeply explored in context of PCOS (where AMH is often elevated), and the FSH of 9.5 is described as 'borderline elevated' without full contextual nuance for a PCOS patient."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and consistent. The probability estimate of 30-45% follows coherently from the high morphological quality offset by age-related aneuploidy risk. The two-step reasoning (euploid implantation rate ~55-65% × euploidy rate ~30-40% ≈ 30-45%) is transparent and well-explained. Minor issue: the euploidy rate estimate of 30-40% for a 39-year-old with good morphology is slightly conservative; literature suggests ~40-50% for this age group, creating a slight underestimation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer is appropriately recommended, PGT-A discussion is evidence-based for age 39, luteal phase support is mentioned, and embryo banking strategy is appropriate. The response correctly applies Gardner grading criteria. Minor deviation: the suggestion to thaw, biopsy, re-vitrify an already-vitrified embryo is presented somewhat casually without adequately noting the significant additional risk and limited evidence base for this approach."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, covering immediate transfer decisions (SET, luteal support), counseling points, and future cycle planning (PGT-A, AMH testing, embryo banking, protocol review). The response provides clear next steps with appropriate nuance. Slight weakness: lacks specific progesterone protocol details, doesn't address endometrial receptivity testing options (ERA), and the PGT-A discussion for the current embryo could be more decisively framed given the clinical scenario."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020934,
+  "judge_latency_ms": 14283.209249995707,
+  "judge_prompt_tokens": 3553,
+  "judge_completion_tokens": 685
+}

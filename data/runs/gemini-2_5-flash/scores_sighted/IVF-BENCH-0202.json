@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0202",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies very poor-quality blastocyst features with poorly defined ICM and TE, but misstates/hedges on expansion by saying Gardner 1 is less than half volume and adds features like dark fragmentation/regression that are not clearly visible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, ovarian response, sperm parameters, endometrium, BMI/lifestyle, and first-cycle status with embryo quality appropriately, though some links (e.g. stress/inflammation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and consistent: severely compromised morphology dominates prognosis despite favorable uterine and semen factors. Minor issue is overstatement of non-viability from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner-based interpretation and poor prognosis for 1DD embryos, but contains a grading inaccuracy about stage 1 expansion and does not fully reflect the caution that morphology alone cannot prove non-viability."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides prognosis but little concrete management guidance for the current transfer or future cycle planning; lacks specific next steps such as counseling, transfer decision framework, protocol review, or future testing considerations."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.012687,
+  "judge_latency_ms": 4909.182666990091,
+  "judge_prompt_tokens": 2629,
+  "judge_completion_tokens": 320
+}

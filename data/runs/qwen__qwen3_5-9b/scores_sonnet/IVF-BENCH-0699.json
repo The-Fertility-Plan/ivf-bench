@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0699",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly vacillates between describing the embryo as a morula and an early blastocyst, never committing to a clear morphological description. While it correctly identifies the 0DD score components, the actual visual analysis is muddled and contradictory, with excessive hedging about whether a blastocoel is present. The description of 'shrunken cells' and 'disorganized' appearance is vague and not systematically tied to specific morphological criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response does identify key clinical factors: age 39 as AMA, partner age 45 and sperm DNA fragmentation risk, AMH 2.31 as favorable, prior live birth as positive predictor, and 8mm endometrium as adequate. However, the integration is fragmented and buried within repetitive internal deliberation. The interaction between poor embryo quality and patient age is noted but not systematically analyzed. The sperm parameters (29.9% motility being borderline) are mentioned but not deeply integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is dominated by repetitive, circular internal deliberation that never resolves cleanly. The model identifies the Day 4 transfer vs. blastocyst Gardner score contradiction but spends excessive time going back and forth without reaching a definitive conclusion. The final probability estimate (5-10%) appears without a clear logical derivation from the evidence. The reasoning is significantly undermined by the unresolved contradictions and the stream-of-consciousness format that was never cleaned up into a coherent clinical narrative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response correctly identifies that Gardner scores apply to blastocysts and not Day 4 embryos, showing awareness of grading standards. It appropriately flags 0DD as very poor quality per Gardner criteria. PGT-A recommendation for advanced maternal/paternal age aligns with ESHRE/ASRM guidance. However, the response never cleanly applies the guidelines to reach a structured conclusion, and the Day 4 vs. Day 5 transfer confusion is never resolved in a guideline-consistent manner."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The recommendations are vague and conditional ('if Day 4 transfer... if Day 5/6 transfer...') without committing to a clear clinical path. While PGT-A for future cycles is mentioned, specific next steps for this transfer are not clearly articulated. The response ends abruptly mid-sentence, leaving the recommendations incomplete. A clinician would find little practical guidance here beyond the general suggestion to clarify the transfer day and consider PGT-A."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.039441,
+  "judge_latency_ms": 13205.064458998095,
+  "judge_prompt_tokens": 9907,
+  "judge_completion_tokens": 648
+}

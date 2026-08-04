@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0321",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates the image findings: it calls the embryo 'fully expanded' and 'perfectly' matching 2AA, whereas the image appears more like an early/full blastocyst with a relatively modest blastocoel, not an obviously fully expanded blastocyst. ICM and TE are only partly appreciable, so describing both as clearly grade A is more reliance on the provided score than image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, smoking, sperm parameters, endometrium, and diagnosis with embryo quality reasonably well. However, it somewhat overlabels the patient as a poor responder/DOR case and does not fully contextualize tubal factor as a favorable indication outside embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable issues: it says grade 2 means 'fully expanded' and calls the embryo optimal for biopsy/transfer, which is inconsistent with Gardner staging. It also infers only one blastocyst from a single image and frames the case as higher risk than the data alone support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based (age-related aneuploidy risk, smoking cessation, discussion of PGT-A), but there are deviations from standard morphology interpretation and some overconfident statements such as 'must proceed' and mischaracterization of stage 2 expansion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including transfer counseling, smoking cessation, and future-cycle discussion of PGT-A and lifestyle optimization. Still, they lack some nuance around individualized transfer strategy and do not discuss alternatives such as single embryo transfer rationale or prenatal genetic counseling after conception."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014445,
+  "judge_latency_ms": 6442.365083988989,
+  "judge_prompt_tokens": 2690,
+  "judge_completion_tokens": 425
+}

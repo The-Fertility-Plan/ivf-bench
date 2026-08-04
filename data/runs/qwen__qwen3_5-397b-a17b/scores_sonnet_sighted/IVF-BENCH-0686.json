@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0686",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the degenerative features consistent with 1DD grading - granular cytoplasm, lack of cohesive ICM, indistinct TE boundaries, and irregular vacuoles. It correctly notes the absence of turgor pressure and healthy blastocoel. Minor issue: the description slightly contradicts itself by questioning the expansion stage description from the Gardner score, and the image actually shows a reasonably expanded blastocyst (stage 1 per Gardner), which the model somewhat underplays. Overall morphological characterization of degeneration is accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model explicitly highlights the discordance between the ideal patient profile (33yo, AMH 4.5, 14 MII, normal sperm, 10mm endometrium) and the poor embryo outcome. It correctly identifies that the bottleneck is post-fertilization, connects unexplained infertility to possible hidden factors like sperm DNA fragmentation, and addresses lifestyle factors including alcohol consumption. All major clinical parameters are meaningfully connected to the embryo quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and internally consistent. The probability estimate of <1% logically follows from the morphological assessment of a degenerating embryo. The recommendation not to transfer follows directly from the viability assessment. The suggestion to investigate lab conditions and sperm DNA fragmentation follows logically from the paradox of excellent patient parameters yielding zero viable embryos. No contradictions detected throughout the response."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. The Gardner grading interpretation is correct, the recommendation against transferring a grade D embryo is evidence-based, and suggestions for DFI testing and ICSI are appropriate next steps per guidelines. PGT-A recommendation is appropriately caveated for age 33. Minor deduction: the response could have more explicitly referenced the possibility of total fertilization failure or discussed whether fertilization data was available, which is a key clinical data point per standard protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized recommendations: cancel transfer, do not freeze, conduct lab root-cause analysis, order sperm DFI testing, consider switching to ICSI, advise alcohol cessation, and consider PGT-A in future cycles. Each recommendation is justified and sequenced logically. The response addresses both immediate (this cycle) and future cycle planning with appropriate nuance, making it directly useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.018177,
+  "judge_latency_ms": 13191.804292000597,
+  "judge_prompt_tokens": 2854,
+  "judge_completion_tokens": 641
+}

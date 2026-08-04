@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a compacted morula/average-good Day 4 embryo, whereas the provided laboratory grade is 1DD, indicating a very poor-quality early blastocyst with absent/degenerative ICM and TE. It also fabricates favorable features such as homogeneous cytoplasm, cohesive cell mass, and minimal fragmentation that are not consistent with a DD-grade embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including maternal age, ovarian reserve, tubal factor diagnosis, prior IVF outcomes, sperm quality, and endometrial thickness, and relates them to prognosis. However, the integration is weakened by relying on an overly optimistic embryo-quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is undermined by the incorrect morphological premise. Conclusions about viability and prognosis are therefore only partially supported, and the embryo is described inconsistently with the known 1DD grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Several recommendations are broadly guideline-consistent, such as discussing PGT-A, luteal support, and considering blastocyst culture in future cycles. However, calling this a morphologically average-good embryo and recommending adjuvant therapies like aspirin, L-arginine, or sildenafil without strong evidence reduces alignment with evidence-based IVF guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, checking progesterone support, considering PGT-A, and evaluating endometrial factors. It is useful clinically, though some suggestions are not strongly evidence-based and should be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.14,
+  "judge_cost_usd": 0.01359,
+  "judge_latency_ms": 4997.375792001549,
+  "judge_prompt_tokens": 2405,
+  "judge_completion_tokens": 425
+}

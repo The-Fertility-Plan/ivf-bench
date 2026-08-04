@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately declined to describe morphology because no image was available to it and did not fabricate visible embryo features. It correctly noted that expansion, ICM, and TE grading could not be assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, endometrial thickness, BMI, semen parameters, and the COC/MII discrepancy into prognosis reasonably well, though it somewhat overstates RIF implications and lacks nuance about embryo-specific morphology because none was available."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: inability to assess morphology, then prognosis based on clinical context. Minor issues include labeling 3 failed IVF cycles as RIF without transfer details and a somewhat assertive probability reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly evidence-based, but strong endorsement of PGT-A, ERA, dual-pathway progesterone, and TESA/SDF workup after unexplained failures goes beyond what major guidelines uniformly support for all such cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current transfer and future evaluation, including luteal support review, cavity assessment, and possible additional testing. Some suggestions are useful but not all are equally guideline-supported or prioritized."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.013473,
+  "judge_latency_ms": 5093.931875002454,
+  "judge_prompt_tokens": 2771,
+  "judge_completion_tokens": 344
+}

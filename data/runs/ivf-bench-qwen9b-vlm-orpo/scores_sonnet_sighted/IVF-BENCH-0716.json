@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable description of the blastocyst features visible in the image, noting the blastocoel, thinned zona, ICM location, and trophectoderm cells. However, there is a notable error in interpreting Gardner stage 3: the response states 'stage 3 is a fully hatched/expanded blastocyst' which is incorrect (stage 3 is a full blastocyst, stage 4 is expanded, stages 5-6 involve hatching). The image description is generally consistent with what is visible but lacks precision in describing the somewhat irregular/granular appearance and the degree of expansion. The caveat about trusting the lab grade is appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age 34, AMH/FSH/oocyte yield, tubal factor diagnosis with the important hydrosalpinx caveat, semen parameters, endometrial thickness, smoking status, BMI, and prior cycle failure. It correctly identifies smoking as the most important modifiable risk factor and appropriately contextualizes the tubal factor diagnosis. Minor gap: does not explicitly discuss the interaction between partner age 40 and sperm DNA fragmentation in more depth, and the short agonist protocol is not discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-60% implantation with 30-45% live birth is coherent with the factors presented. The response correctly identifies that untested embryo ploidy is the main uncertainty. The upward and downward modifying factors are clearly laid out. Minor inconsistency: the response questions the 3AA grade visually but then uses it as a basis for the favorable prognosis estimate, which is slightly contradictory though ultimately resolved by deferring to the lab grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer at age 34, luteal phase support, hydrosalpinx management before transfer, uterine cavity assessment after failure, and smoking cessation advice. The Gardner grading interpretation error (stage 3 described as 'fully hatched') is a minor guideline knowledge gap. The probability estimates are within reasonable evidence-based ranges for this patient profile. PGT-A discussion is appropriately nuanced rather than reflexively recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including SET, smoking cessation, hydrosalpinx confirmation, luteal support optimization, and post-failure workup steps (saline sonogram/hysteroscopy). The response is cut off at point 3 of the future planning section, which slightly reduces completeness. The lifestyle recommendations are specific and practical. The hydrosalpinx caveat is repeatedly and appropriately emphasized as a critical actionable point."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021111,
+  "judge_latency_ms": 15014.482208003756,
+  "judge_prompt_tokens": 3487,
+  "judge_completion_tokens": 710
+}

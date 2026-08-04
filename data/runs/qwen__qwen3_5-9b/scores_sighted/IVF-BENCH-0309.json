@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0309",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality early blastocyst/compact embryo with absent-poor ICM and TE, consistent with 1DD, but inaccurately calls Day 4 transfer 'cleavage stage' and gives limited detail on zona/true blastocoel morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "Integrates age, BMI, sperm quality, first cycle, and tubal factor reasonably, but overinterprets 9 MII oocytes and FSH 7.5 as low response/DOR without AMH or protocol context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate fits the poor morphology, but there are notable inconsistencies and overstatements, especially around ovarian reserve, Day 4 staging, and stress effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic Gardner interpretation is acceptable, but several recommendations are not well guideline-based: labeling this as poor responder from one cycle, suggesting growth hormone, and raising donor eggs prematurely in a 28-year-old after a first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and suggests transfer only if no better embryos exist, but future planning is somewhat generic and includes questionable interventions rather than specific evidence-based next steps."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012864,
+  "judge_latency_ms": 4814.697166002588,
+  "judge_prompt_tokens": 2573,
+  "judge_completion_tokens": 343
+}

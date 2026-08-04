@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response acknowledges image blur and relies heavily on the Gardner score rather than independent morphological analysis. It correctly interprets the 3AA grading criteria but doesn't add meaningful independent observations from the image itself, such as commenting on blastocoel cavity characteristics, ICM positioning, or TE cell distribution visible in the image. The description is accurate but largely derivative of the provided score rather than the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response systematically addresses all major clinical factors including age, BMI, AMH, FSH, diagnosis, previous cycle outcomes, sperm parameters, endometrial thickness, and lifestyle. It connects these factors to prognosis meaningfully, noting how male factor diagnosis implies better female prognosis, how ectopic history raises recurrence risk, and how BMI affects implantation. Minor gap: doesn't deeply explore the interaction between paternal age 40 and sperm DNA fragmentation risk, or how the long agonist protocol choice relates to the patient's specific profile."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from baseline probability to adjusted estimate, with clear justification for each modifier. The 40-55% intrauterine implantation estimate is reasonable given the adjustments made. The response correctly distinguishes between intrauterine implantation probability and overall implantation including ectopic risk. Minor inconsistency: BMI of 30.4 is technically overweight/class I obesity borderline, not clearly 'obese,' and the response labels it obese without nuance. Overall the probability derivation is transparent and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation is appropriate, early ultrasound monitoring for ectopic risk is standard of care, ERA consideration is evidence-based though appropriately hedged, PGT-A suggestion for recurrent failure is guideline-consistent. Sperm DNA fragmentation testing recommendation aligns with recent ESHRE male infertility guidelines. The thrombophilia screening recommendation is appropriately caveated as debated. Gardner grading interpretation is accurate per standard criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: concrete timing for early ultrasound (5.5-6 weeks), specific investigations for future planning (hysteroscopy, laparoscopy, SDF testing, thrombophilia screen), and clear rationale for each. The division between current transfer and future cycle planning is helpful. Could be more specific about luteal support protocols, progesterone supplementation considerations, or specific stress intervention referrals. The weight management recommendation lacks specific targets or timelines, reducing its actionability slightly."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.021102,
+  "judge_latency_ms": 15860.215541993966,
+  "judge_prompt_tokens": 3704,
+  "judge_completion_tokens": 666
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a compacting morula with no blastocoel. The image is more consistent with an early cavitating/early blastocyst-stage Day 4 embryo, with a visible cavity and emerging blastocoel, so the core morphology assessment is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, response, endometrium, male factor, and cycle history reasonably well with prognosis, though some links are speculative and not tightly tied to the actual morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the reasoning is weakened because the implantation estimate and recommendations are built on an incorrect stage assignment. Some statements, such as stress materially affecting implantation and assuming hidden sperm DNA fragmentation, are not strongly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned in discussing morphology, endometrium, and possible extended culture, but there are deviations: incorrect non-blastocyst classification, overstatement about stress effects, and recommending ICSI as a blanket future step without enough supporting detail."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including luteal support review, consideration of blastocyst culture, and male-factor workup. However, some recommendations are somewhat generic or based on speculative assumptions."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013188,
+  "judge_latency_ms": 5042.612083008862,
+  "judge_prompt_tokens": 2581,
+  "judge_completion_tokens": 363
+}

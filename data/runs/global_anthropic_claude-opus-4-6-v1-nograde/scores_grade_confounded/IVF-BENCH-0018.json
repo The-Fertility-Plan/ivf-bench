@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 partially compacted morula/Grade C morula despite the provided lab grading of 2BB full blastocyst, and it fabricates features like moderate fragmentation and excluded blastomeres that are not supported by the stated embryo stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm parameters, BMI, smoking, alcohol, and endometrium, and relates them to prognosis, though some links to embryo morphology are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by the incorrect core morphology assessment, leading to a probability estimate and conclusions based on a likely false premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some advice is guideline-consistent (lifestyle optimization, early ectopic surveillance), but key elements deviate from standard practice, including disregarding Gardner grading, suggesting routine intensified luteal support due to smoking, and proposing ICSI/PGT-A without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical for transfer follow-up and future planning, though several are based on the incorrect embryo interpretation and include some questionable interventions."
+    }
+  ],
+  "extracted_probability": 0.22,
+  "judge_cost_usd": 0.012804,
+  "judge_latency_ms": 4341.848415999266,
+  "judge_prompt_tokens": 2528,
+  "judge_completion_tokens": 348
+}

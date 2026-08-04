@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0315",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology: it calls the embryo fully expanded with a taut zona and top-tier ICM/TE, whereas the image appears more consistent with an early/full but not clearly high-quality blastocyst, with poorly distinct ICM and uneven/sparse TE. It relies heavily on the provided grade rather than the visible image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, diagnosis, sperm parameters, endometrium, and first-cycle status, and relates them to prognosis. Some statements are overly favorable and not sufficiently tempered by embryo-stage ambiguity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: it identifies a Day 4 versus blastocyst grading discrepancy yet assumes Day 5 without adequately addressing implications, and it gives a high implantation estimate that is not well supported by the image quality shown."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard practice: calling 2AA a top-tier blastocyst is inaccurate relative to higher expansion grades, suggesting routine correction to Day 5 transfer from the provided data is speculative, and recommending PGT-A partly due to male age 38 and a freeze-all/banking strategy without clear indication is weakly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It provides concrete suggestions on transfer timing, luteal support, cryopreservation, and future planning, but some are based on questionable assumptions and lack nuance around verifying the actual developmental day and clinic-specific transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013413,
+  "judge_latency_ms": 5989.872083009686,
+  "judge_prompt_tokens": 2546,
+  "judge_completion_tokens": 385
+}

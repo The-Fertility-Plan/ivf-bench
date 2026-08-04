@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner 3AB data. Its description of expansion, ICM, and TE is largely consistent with the supplied grading, though it repeats the prompt's slightly inconsistent wording for TE ('few cells' despite B grade) and does not verify image-specific details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, prior miscarriage/no pregnancy, ovarian response, endometrial thickness, BMI, unexplained diagnosis, and paternal age/semen data with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially around morphology versus age-related aneuploidy risk. Minor issues include somewhat confident claims about uterine receptivity and speculative attribution of miscarriage to thrombophilia/immunologic factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but some elements are more aggressive or controversial than guideline-standard practice, including strong endorsement of PGT-A, routine dual-pathway luteal support targets, thrombophilia testing after a single miscarriage, and ERA suggestion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, monitoring, and future-cycle considerations. It is practical and specific, though some recommendations would benefit from more nuance regarding indications and evidence strength."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014532,
+  "judge_latency_ms": 5589.966125000501,
+  "judge_prompt_tokens": 3024,
+  "judge_completion_tokens": 364
+}

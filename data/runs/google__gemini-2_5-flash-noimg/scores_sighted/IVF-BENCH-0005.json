@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner 2AA grade rather than inventing image-specific details. However, it repeated the prompt's incorrect definition of expansion 2 as a full blastocyst and called the embryo excellent without noting the image appears more like an early/full blastocyst with somewhat limited expansion and less clearly ideal ICM/TE than a classic AA."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: age, ovarian reserve, endometriosis, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle, and linked them to prognosis. It could have been stronger on the implications of day-4 transfer timing and on distinguishing repeated failed cycles from formal recurrent implantation failure."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: it treats 2AA as unequivocally excellent despite the expansion-stage inconsistency, speculates that day-4 blastulation may indicate aneuploidy, and labels 3 failed cycles as RIF without needed nuance. The probability estimate is plausible but partly built on these assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines for routine use in IVF/RIF, including ERA/ERPeak, NK-cell/immunologic workup, intralipids/IVIG, empiric steroids, and endometrial scratch. Some suggestions are reasonable (consider hysteroscopy, endometriosis management, individualized future planning), but overall there are multiple deviations from evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps and future planning options, including clarifying embryo timing, considering uterine evaluation, and discussing endometriosis management. Although some actions are not evidence-based enough for routine recommendation, the advice is specific and practically framed."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.018264,
+  "judge_latency_ms": 6096.9868329993915,
+  "judge_prompt_tokens": 3713,
+  "judge_completion_tokens": 475
+}

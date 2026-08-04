@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0313",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a very poor-quality early blastocyst/compacting embryo, but it misstates the Gardner expansion definition (1 = early blastocyst with cavity less than half the embryo, not 'at least half'), calls D grades essentially nonviable/atresia, and overinterprets degeneration from image features that are not clearly demonstrable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve markers, sperm parameters, endometrium, and cycle history reasonably well, especially highlighting the discrepancy between DOR labeling and actual reserve; however, some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it assumes this is the only embryo and infers catastrophic arrest without supporting data, and it conflates poor morphology with near-certain nonviability more strongly than warranted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: inaccurate Gardner stage interpretation, overstating that D/D embryos are generally not transferred, and recommending 'aggressive progesterone support given the BMI' without clear guideline basis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, transfer expectations, lifestyle optimization, sperm DNA fragmentation consideration, and future culture strategy, though some recommendations are not fully nuanced or evidence-graded."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013431,
+  "judge_latency_ms": 5329.983917006757,
+  "judge_prompt_tokens": 2602,
+  "judge_completion_tokens": 375
+}

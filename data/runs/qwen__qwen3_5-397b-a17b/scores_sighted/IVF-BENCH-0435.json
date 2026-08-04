@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0435",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality blastocyst with poorly defined/degenerate ICM and TE, but it inaccurately states expansion 'less than half' despite Gardner 1 meaning blastocoel at least half the embryo, and it adds somewhat speculative features such as marked vacuolization/collapse."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates advanced maternal age, very low AMH, prior ectopic/biochemical pregnancy, uterine factor, endometrial thickness, and semen parameters into prognosis well, though the uterine factor discussion remains somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from age plus 1DD morphology, but there is an internal inconsistency around the expansion-stage interpretation and some conclusions (e.g., biochemical pregnancy implying chromosomal issues) are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and counseling that DD embryos have very low potential, but recommending PGT-A as 'essential' overstates guideline support in a 42-year-old with very low yield, and some protocol suggestions are not strongly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling for low-probability transfer, uterine cavity evaluation, donor-oocyte discussion, and consideration of further testing/planning, though some recommendations could be more individualized and prioritized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013452,
+  "judge_latency_ms": 5544.753583002603,
+  "judge_prompt_tokens": 2614,
+  "judge_completion_tokens": 374
+}

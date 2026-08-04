@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a compacted morula despite provided lab grading of 2BB full blastocyst, and therefore fails to describe ICM/TE features consistent with the stated embryo stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, ovarian reserve, endometrium, BMI, smoking, and sperm parameters, though some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by the central morphological error and repeated treatment of the embryo as a Day 4 morula rather than a graded blastocyst, making the probability estimate and conclusions internally inconsistent with the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (proceeding with transfer, smoking cessation, luteal support), but the interpretation conflicts with Gardner grading and the emphasis on morula-stage transfer and speculative sperm DNA fragmentation testing is not well grounded in the presented case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, smoking cessation, nutrition/weight optimization, and future culture strategy, though these are based partly on an incorrect embryo-stage assessment."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.011946,
+  "judge_latency_ms": 4082.8542910021497,
+  "judge_prompt_tokens": 2312,
+  "judge_completion_tokens": 334
+}

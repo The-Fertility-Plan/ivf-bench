@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate embryo morphology; therefore it avoided inaccurate morphological claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, PCOS, endometrium, sperm, smoking, and prior ectopic well, though some links to actual embryo quality were necessarily hypothetical because morphology was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to favorable age/reserve and negative smoking history; the estimate is conditional on assumed good-quality blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based (smoking cessation, standard luteal support, embryo selection by morphology/PGT if available, caution with PCOS), though PGT-A at age 32 is more optional than routinely indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, especially smoking cessation and lifestyle optimization, though some advice remains somewhat general."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013707,
+  "judge_latency_ms": 4066.175167012261,
+  "judge_prompt_tokens": 3114,
+  "judge_completion_tokens": 291
+}

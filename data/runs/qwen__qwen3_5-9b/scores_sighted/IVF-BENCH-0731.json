@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates Gardner staging and morphology: it calls expansion 'Grade 1' while labeling the embryo 2AA, and describes a fully expanded/high-quality blastocyst despite the image showing a relatively early/full blastocyst with somewhat loose ICM and nonuniform TE. It also does not address the apparent discrepancy between the provided textual grading and the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, prior cycle history, lifestyle, and especially thin endometrium with embryo quality and prognosis. AMH is unavailable and not discussed, but overall integration is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: confusion between Gardner expansion numbering and descriptive grading, overcalling euploidy likelihood, and stating transfer should proceed while also suggesting freezing unless other embryos exist. Probability reasoning is somewhat optimistic given the 6 mm lining."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF guidance: Gardner grading is misapplied, euploidy estimate of 80-90% at age 33 is too high, and recommendations such as 'do not freeze unless...' and transfer delay only if lining drops below 5 mm are oversimplified and not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer, monitoring/supporting the endometrium, considering PGT-A selectively, and follow-up beta-hCG. However, recommendations are somewhat generic and lack nuanced management options for a 6 mm lining or fresh-vs-frozen decision-making."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014106,
+  "judge_latency_ms": 6235.3778749966295,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 423
+}

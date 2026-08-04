@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0445",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the zona does not appear clearly thinned, TE cohesion/uniformity is not crisply appreciable, and the ICM location/quality is somewhat inferred rather than unequivocally visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm parameters, prior ectopic, diagnosis, and endometrial thickness well with embryo quality and prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate that broadly follows the case features; minor issues include overconfidence in morphology and some speculative deductions (e.g., receptivity implied from thickness/protocol)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognosis and single embryo transfer, but includes weaker or non-guideline-supported points such as implied trilaminar pattern, emphasizing luteal support specifically because of prior ectopic, and suggesting PGT-A after a single failed transfer in a 30-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer strategy, monitoring, and future evaluation, though some suggestions are broader than necessary and not all are tightly evidence-based for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012861,
+  "judge_latency_ms": 5559.229791004327,
+  "judge_prompt_tokens": 2602,
+  "judge_completion_tokens": 337
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined morphology assessment because no image was provided to it and did not fabricate image features. However, it therefore provided no actual morphological analysis of the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, prior live birth, sperm parameters, endometrial thickness, and lifestyle factors into prognosis reasonably well, though some interactions are generalized and embryo-stage specifics are limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the probability estimate tied to age, DOR, prior live birth, and endometrium. Minor issues include somewhat optimistic weighting and uncertainty around the Day 4 embryo stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but recommendations such as ERA after a single failed transfer and adjuncts like intralipids/G-CSF/hCG wash are not guideline-supported for routine use; calling 7.6 mm borderline is reasonable but adding estrogen at transfer is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer support, counseling, and future planning, though some suggestions are generic and a few proposed interventions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01407,
+  "judge_latency_ms": 4837.676958006341,
+  "judge_prompt_tokens": 3125,
+  "judge_completion_tokens": 313
+}

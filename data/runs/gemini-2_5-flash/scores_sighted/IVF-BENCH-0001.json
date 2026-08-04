@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst consistent with 1DD and notes absent/poor ICM and TE, but it overstates features not clearly visible in the image such as extensive fragmentation, significant vacuolization, large TE gaps, and possible herniation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response does not meaningfully integrate the patient factors with embryo quality; it stops before discussing age, ovarian reserve, prior outcomes, tubal factor, sperm, or endometrium."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Within the morphology section the reasoning is internally consistent, linking poor ICM/TE to poor prognosis, but the conclusion of 'non-viable' and 'negligible developmental competence' is stronger than the image alone supports and the overall assessment is incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology is broadly appropriate, but describing the embryo as essentially non-viable based on morphology alone is somewhat overstated relative to standard IVF counseling, and no guideline-based transfer/future planning recommendations are provided in the visible text."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No practical recommendations for transfer management, counseling, or future cycle planning are present in the visible response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010221,
+  "judge_latency_ms": 4808.270833003917,
+  "judge_prompt_tokens": 1712,
+  "judge_completion_tokens": 339
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0115",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response only begins to address the Gardner score but misinterprets Grade 2 as 'Expanded Blastocyst' when it actually means 'full blastocyst' (not yet expanded). The response is truncated and fails to describe ICM, TE, zona pellucida, or any features visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The response is truncated after the first bullet point of morphological analysis and never integrates any clinical factors (age, AMH, BMI, diagnosis, previous outcomes, sperm parameters) with the embryo assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is incomplete and cut off, so no coherent reasoning chain is established. The single point made contains an inaccuracy about the expansion grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 1,
+      "justification": "The response mischaracterizes the Gardner Grade 2 as 'Expanded Blastocyst' when Grade 2 is a full blastocyst. No recommendations or guideline-aligned content is provided due to truncation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is truncated and provides no actionable recommendations whatsoever - no transfer advice, no future cycle planning, no probability estimate."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01466,
+  "judge_latency_ms": 6892.442167038098,
+  "judge_prompt_tokens": 1302,
+  "judge_completion_tokens": 326
+}

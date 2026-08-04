@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0404",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst: expanded cavity, visible ICM, somewhat loose TE, and thinning zona. However, it likely overcalls image-specific findings such as cytoplasmic granularity, vacuole, and precise TE borderline B/C from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometriosis, sperm parameters, BMI, first-cycle status, and endometrial thickness well with embryo quality and prognosis. Some links, such as strong emphasis on stress and alcohol, are weaker clinically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but the probability adjustment framework is somewhat arbitrary and may double-count factors such as unknown ploidy relative to age-based embryo prognosis. Some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable (SET, luteal support, attention to lining), but several are not guideline-driven for this scenario: ERA before failure, routine aspirin, assisted hatching, thrombophilia/MTHFR/NK testing, and strong recommendation for PGT-A at age 34 with no prior failures."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for transfer and contingency planning, including SET and follow-up options. Actionability is reduced by inclusion of several low-evidence or non-routine interventions that may not be appropriate in a first cycle."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.01482,
+  "judge_latency_ms": 6415.679166995687,
+  "judge_prompt_tokens": 3140,
+  "judge_completion_tokens": 360
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0144",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3BA label, but it overstates visible certainty: the blastocoel appears expanded rather than clearly 'fully expanded,' the ICM is not distinctly well visualized, and the TE does not look uniformly thick throughout the circumference."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor context, prior miscarriage, smoking, and embryo grade reasonably well, though it overinterprets AMH as implying egg quality and does not fully address BMI or the implications of a very thick endometrium."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a plausible probability estimate tied to embryo grade and patient age, but there are some overconfident claims (euploidy >90%, smoking effect magnitude, endometrium characterization) that weaken precision."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned on embryo grading and proceeding with transfer, but several recommendations are not well guideline-based: claiming 19 mm endometrium is ideal, suggesting benefit from stopping smoking only 24-48 hours before transfer, recommending increased exercise specifically for uterine perfusion, and proposing routine PGT-A in a 26-year-old mainly for one miscarriage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future evaluation, including smoking cessation and uterine assessment if failure occurs, but some advice is too generic or insufficiently nuanced and a few suggestions are weakly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013548,
+  "judge_latency_ms": 6167.999791010516,
+  "judge_prompt_tokens": 2556,
+  "judge_completion_tokens": 392
+}

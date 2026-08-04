@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific blastocyst morphology. It did not analyze visible features, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: age, ovarian reserve, BMI, tubal factor, semen parameters, endometrium, and prior cycle history, and linked them to prognosis. Some assumptions, such as presumed trilaminar lining and strong inference from oocyte maturity to embryo quality, reduce completeness."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with scenario-based estimates reflecting uncertainty from missing morphology. Minor issues include somewhat overconfident modifiers and broad probability adjustments not directly supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but several recommendations are not strongly guideline-based for this stage, including ERA after limited failure, immunologic/NK testing, routine thrombophilia workup, and embryo glue as a suggested adjunct. PGT-A is presented somewhat too readily for a 33-year-old with tubal factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including luteal support, lifestyle advice, and future investigations. However, some suggested tests/interventions may be premature or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013824,
+  "judge_latency_ms": 5064.156708991504,
+  "judge_prompt_tokens": 2753,
+  "judge_completion_tokens": 371
+}

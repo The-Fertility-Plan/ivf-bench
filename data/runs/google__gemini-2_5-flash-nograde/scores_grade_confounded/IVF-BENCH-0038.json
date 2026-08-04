@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls expansion/hatching by suggesting 5-6 stage and 5BB/6AB ranges, which conflicts with the provided laboratory grade of 2BA. It gives generally plausible ICM/TE comments but includes likely fabricated detail beyond what is supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, male factor, prior failed cycles, sperm parameters, and endometrium into prognosis reasonably well, though it overemphasizes aneuploidy risk in a 26-year-old and makes assumptions about AMH/ICSI."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: morphology assessment conflicts with the known Gardner score, prior failures are used to strongly infer aneuploidy despite young age, and the implantation estimate is somewhat pessimistic relative to the stated favorable factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general transfer counseling align with guidelines, but routine suggestions such as PGT-A after failure in a young patient, ERA, immunologic workup, and 'kitchen sink' adjuncts are not strongly guideline-supported for standard use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including review of prior cycles and uterine/sperm evaluation, though some recommendations are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015375,
+  "judge_latency_ms": 4389.518250005494,
+  "judge_prompt_tokens": 3270,
+  "judge_completion_tokens": 371
+}

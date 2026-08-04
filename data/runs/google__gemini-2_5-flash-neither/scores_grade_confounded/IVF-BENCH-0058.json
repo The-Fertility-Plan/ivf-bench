@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response did not use the provided Gardner score of 3BA and instead fabricated a hypothetical better-quality embryo (e.g., 4AA/5AA), so morphology was not accurately assessed from available data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, AMH/FSH, diagnosis, sperm, endometrium, prior cycle, and stress, though it links them to an assumed rather than actual embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is weakened by the unsupported assumption of a higher-quality embryo than the stated 3BA, which affects the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and standard luteal support are broadly guideline-consistent, but suggesting ERA/immunologic workup and PGT-A after limited failure is somewhat overreaching, and morphology handling is not aligned with Gardner grading use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, embryo prioritization, luteal support, and cycle review, though some suggestions are generic or not tightly tailored to the actual 3BA embryo."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013329,
+  "judge_latency_ms": 3931.773249998514,
+  "judge_prompt_tokens": 2843,
+  "judge_completion_tokens": 320
+}

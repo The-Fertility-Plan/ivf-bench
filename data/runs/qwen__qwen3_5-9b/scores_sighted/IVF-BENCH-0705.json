@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0705",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image findings by calling the embryo fully expanded/top-tier with clearly visible dense ICM and cohesive TE; the image does not convincingly show a large blastocoel, distinct cohesive TE, or a clearly compact ICM, so several described features appear inferred from the reported grade rather than visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including young age, ovarian reserve, BMI, endometrial thickness, male factor context, and first cycle status, and relates them to prognosis, though it misses some nuance such as uncertainty around male-factor subtype and the limited predictive value of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable overstatements: claiming >90% euploidy at age 29 and very high implantation based largely on morphology is too strong, and the probability estimate is somewhat optimistic given the image uncertainty and BMI-related effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including proceeding with transfer and counseling on BMI/obstetric risk, but calling 3AA the highest grade and suggesting very high euploidy likelihood are not fully aligned with standard Gardner interpretation and evidence-based counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable—proceed with transfer, consider PGT-A only selectively, optimize weight/nutrition, and plan obstetric surveillance—though they could be more specific about single embryo transfer and future cycle contingencies."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01305,
+  "judge_latency_ms": 6047.52683400875,
+  "judge_prompt_tokens": 2345,
+  "judge_completion_tokens": 401
+}

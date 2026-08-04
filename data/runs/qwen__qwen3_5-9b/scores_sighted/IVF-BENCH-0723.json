@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible morphology and includes inaccuracies: it says the blastocyst is hatched or hatching and that the zona is significantly thinned, which is not clearly supported by the image or by a Gardner 3 expansion stage. ICM/TE are described confidently despite limited clarity in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, oocyte yield, sperm parameters, prior biochemical pregnancy, and endometrial thickness with prognosis reasonably well, though AMH is unavailable and some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: calling a 3AA embryo 'top-tier' is acceptable, yet equating grade 3 with hatching is incorrect, and attributing biochemical pregnancy to luteal phase defect without supporting data is speculative. The implantation estimate is somewhat optimistic for an untested embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: recommending 'aggressive' luteal support based solely on prior biochemical pregnancy is not guideline-driven, suggesting transvaginal estrogen if lining drops below 7 mm is oversimplified, and the probability framing resembles euploid rather than untested blastocyst outcomes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, monitoring lining, ensuring luteal support, and considering PGT-A after recurrent loss. However, some recommendations lack nuance or specific thresholds/protocol context."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013584,
+  "judge_latency_ms": 5401.339667005232,
+  "judge_prompt_tokens": 2503,
+  "judge_completion_tokens": 405
+}

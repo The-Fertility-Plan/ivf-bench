@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0454",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and describes features not clearly visible in this partial, somewhat out-of-focus image, especially a large well-formed blastocoel and uniformly cohesive TE. It relies heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, including age, endometriosis, prior IVF outcomes, endometrial thickness, ovarian response, sperm parameters, BMI, and lifestyle, and connects them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it labels the embryo as top-tier despite limited image support and refers to recurrent implantation failure/recurrent pregnancy loss somewhat loosely from only two prior cycles. No probability estimate is actually provided despite the task asking for one."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology and broad prognostic factors is appropriate, but the response is incomplete relative to the requested clinical assessment and makes somewhat overstated conclusions from morphology and prior history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It provides risk/favorable factor discussion but offers few concrete transfer or future-cycle recommendations, lacking specific next steps, contingency planning, or management options for endometriosis/recurrent failure."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011745,
+  "judge_latency_ms": 5068.336165990331,
+  "judge_prompt_tokens": 2240,
+  "judge_completion_tokens": 335
+}

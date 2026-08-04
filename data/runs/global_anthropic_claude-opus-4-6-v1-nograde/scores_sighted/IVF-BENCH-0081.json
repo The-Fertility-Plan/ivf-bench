@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response reasonably identifies a blastocyst with a visible ICM-like cluster and somewhat sparse TE, but calling it a fully expanded 4BB is somewhat overconfident from this single image; TE detail and blastocoel assessment are limited, and comments like fragmentation/granularity are not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, unexplained infertility, endometrium, BMI, ovarian response, and sperm data into prognosis well, though it somewhat overstates recurrent implantation failure without knowing how many prior transfers occurred."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the probability estimate logically tied to embryo quality and prior failures; minor issues include strong assumptions about RIF and precise percentage adjustments without firm evidentiary basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are guideline-consistent (proceed with transfer, consider hysteroscopy/endometritis evaluation, discuss PGT-A cautiously), but endorsement of ERA, thrombophilia screening, NK/immunologic testing, intralipids, and prednisolone as RIF workup/adjuncts is not well supported by current ESHRE/ASRM guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for transfer management and future evaluation, but several proposed adjuncts are not evidence-based enough to merit the highest score."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014583,
+  "judge_latency_ms": 5130.640292001772,
+  "judge_prompt_tokens": 2976,
+  "judge_completion_tokens": 377
+}

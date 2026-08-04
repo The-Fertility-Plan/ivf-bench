@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0380",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonably identifies a poor-quality early/partial blastocyst with poorly defined ICM and sparse TE, but it speculates about stage inconsistency and does not clearly anchor observations to visible image features; some uncertainty around expansion/Gardner interpretation lowers confidence."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte yield, uterine factor, endometrial thickness, prior ectopic, sperm parameters, BMI, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent: poor embryo morphology is the main limiting factor despite favorable patient factors. Minor issues include some hedging and uncertainty around grading terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice and Gardner-based interpretation, appropriately cautious about poor DD-quality prognosis, single embryo transfer framing, uterine evaluation, and selective PGT-A discussion. Small deviations include overemphasis on morphology-based probability precision and some loose statements about grading inconsistency."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer, uterine workup, ectopic surveillance, future cycle review, and selective PGT-A/lab strategy. Useful and nuanced, though not highly specific to the exact uterine diagnosis or transfer context."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.017046,
+  "judge_latency_ms": 6523.555541993119,
+  "judge_prompt_tokens": 4007,
+  "judge_completion_tokens": 335
+}

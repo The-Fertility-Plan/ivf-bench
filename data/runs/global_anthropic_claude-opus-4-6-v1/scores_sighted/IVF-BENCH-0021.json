@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as a morula and states no blastocoel is visible, despite the provided lab grade of 0DD indicating an early blastocyst. It also infers ICM/TE cannot be assessed and describes fragmentation/vacuolation not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve markers, oocyte maturity, smoking, semen parameters, BMI, endometrium, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear link from poor embryo quality and smoking to low implantation odds. The main weakness is that the morphology interpretation conflicts with the stated Gardner score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are deviations: overinterpretation of a Day 4/0DD embryo as a morula, speculative trigger/ICSI recommendations without cycle details, and somewhat strong claims around supplements and smoking effect sizes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer counseling, luteal support, smoking cessation, and future protocol review. Some suggestions are speculative but overall clinically useful."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.0174,
+  "judge_latency_ms": 4856.675167000503,
+  "judge_prompt_tokens": 4105,
+  "judge_completion_tokens": 339
+}

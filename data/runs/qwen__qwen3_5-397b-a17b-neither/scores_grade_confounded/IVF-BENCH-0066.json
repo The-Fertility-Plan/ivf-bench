@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0066",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (4AA) and instead stated morphology could not be assessed without an image, omitting clear available features such as hatching status, strong ICM, and cohesive TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, prior live birth, BMI, endometrium, smoking, and sperm motility with prognosis reasonably well, though it does not connect these factors to the known 4AA morphology as directly as it could."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis framework; minor issues include unsupported quantitative adjustments and some overinterpretation of smoking and sperm motility effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting low-dose aspirin for smoking-related uterine blood flow is not standard guideline-based care, and strong endorsement of PGT-A is more assertive than guidelines typically support for all cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, smoking cessation, and future evaluation, though some recommendations are somewhat generic and not fully tailored to the known 4AA embryo quality."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013035,
+  "judge_latency_ms": 3662.7893330005463,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 341
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel expansion, ICM location and density, TE cohesiveness, and zona pellucida thinning. The observation that the embryo appears to border Stage 3 despite the Gardner Score of 2 shows good visual interpretation. Minor issue: the ICM localization at '10 to 12 o'clock' is a reasonable attempt but somewhat arbitrary given image orientation. Overall description is detailed and consistent with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, diagnosis (tubal factor as mechanical vs. biological infertility), paternal age, sperm parameters, endometrial thickness, and lifestyle factors well. It correctly identifies the low MII maturation rate as a concern and links paternal age to DNA fragmentation risk. Minor gap: AMH is listed as N/A but the response doesn't explicitly address the uncertainty this creates for ovarian reserve assessment, which would have been a useful addition given the low MII yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality to patient factors to probability estimate. The probability range of 50-60% is reasonably derived, acknowledging the AA grade boost while tempering for paternal age and lack of PGT-A. The reasoning is internally consistent. A minor tension exists: the response notes AA blastocysts in women <35 can reach 60-70% implantation rates, yet caps the estimate at 60% primarily due to paternal age, which is a reasonable but somewhat conservative adjustment that could have been better quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for young patients with good-quality blastocysts, appropriate endometrial thickness assessment, consideration of PGT-A for paternal age concerns, and sperm DNA fragmentation testing. The recommendation to 'proceed with fresh transfer' is appropriate given the clinical context. Minor note: ESHRE guidelines increasingly support elective freeze-all strategies in certain contexts, which was not discussed as an alternative, though fresh transfer is defensible here."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with clear rationale, investigation of maturation rate with specific protocol adjustment suggestions, sperm DNA fragmentation testing with named interventions (PICSI/IMSI, antioxidants), and conditional PGT-A recommendation. The response provides clear next steps for both this cycle and future planning. Could be slightly more specific about luteal phase support protocols or monitoring post-transfer, which would enhance clinical utility."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.018621,
+  "judge_latency_ms": 14576.990000001388,
+  "judge_prompt_tokens": 2957,
+  "judge_completion_tokens": 650
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0742",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with the Gardner Score 4AA (expansion grade 4 with hatching, grade A ICM as tightly packed with many cells, grade A TE as cohesive epithelium). However, the description relies heavily on the provided laboratory data rather than independent image analysis, with the model acknowledging the ICM is 'somewhat obscured.' Limited independent visual observations beyond confirming the provided score reduce the score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well, including age, AMH, FSH, oocyte yield, endometrial thickness, sperm parameters, endometriosis diagnosis, and smoking status. It explains how these factors interact with embryo quality and implantation potential. Minor gap: BMI is not discussed, and endometriosis staging/severity is noted as unknown but not explored in terms of how different stages might differentially affect outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The baseline probability is established, then adjusted downward for smoking and endometriosis with quantified deductions, leading to a coherent final range of 45-60%. The conclusions follow from the evidence. Minor issue: the model states smoking can reduce rates by '10-20% or more' and endometriosis by '5-15%', which when applied to a 60-70% baseline would mathematically suggest a lower floor than 45%, creating a slight inconsistency in the arithmetic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, luteal phase support, smoking cessation counseling, Day 5 transfer rationale, and consideration of PGT-A for future cycles. ERA test is appropriately deferred to after a failed transfer. The response correctly notes PGT-A is not standard first-line for a 34-year-old first cycle. No major guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: immediate smoking cessation with resource provision, SET with clear rationale, luteal phase support, endometriosis management, and a structured future cycle plan including PGT-A consideration, washout period, and ERA testing if needed. The prioritization of smoking cessation as the single most impactful intervention is clinically appropriate. Could be slightly more specific about endometriosis management options or smoking cessation pharmacotherapy."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020562,
+  "judge_latency_ms": 13170.001250000496,
+  "judge_prompt_tokens": 3744,
+  "judge_completion_tokens": 622
+}

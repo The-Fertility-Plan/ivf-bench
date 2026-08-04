@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0660",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone by calling the TE uniformly cohesive and the embryo 'top-tier/gold standard'; the image shows an expanded blastocyst with visible ICM and thinning zona, but fine grading details are less definitive."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, tubal factor, prior IVF outcomes, sperm quality, endometrial thickness, and lifestyle factors with embryo quality in a clinically meaningful way, though BMI and some nuances of prior cycle context are underemphasized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to embryo grade, age, and prior failures; minor issues include labeling this as recurrent implantation failure and some overconfident causal inferences about stress/alcohol and implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general emphasis on embryo quality are guideline-consistent, but calling PGT-A 'essential' and suggesting ERA relatively early are stronger than current evidence/guidelines support, especially in a low-yield patient with only one biochemical pregnancy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including SET, lifestyle modification, and consideration of further testing; however, recommendations could be more nuanced regarding when to use PGT-A/ERA and how to tailor stimulation strategy."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013305,
+  "judge_latency_ms": 5708.886665990576,
+  "judge_prompt_tokens": 2620,
+  "judge_completion_tokens": 363
+}

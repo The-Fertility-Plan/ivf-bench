@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0080",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states morphology cannot be assessed despite explicit Gardner data being provided (3AA expanded blastocyst with excellent ICM and TE), so it omits key available morphological features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm motility, endometrium, and first-cycle status well with prognosis, though it fails to connect these to the known 3AA morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but it is weakened by treating embryo morphology as unknown when it was actually provided, making the probability estimate less well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (SET, luteal support, review of cycle data), but suggesting ERA/endometrial scratch after a single failed transfer is not strongly guideline-supported, and omission of the provided Gardner grade reduces alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET and review of embryo development, though some suggestions are somewhat generic or premature."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013794,
+  "judge_latency_ms": 3958.7773750026827,
+  "judge_prompt_tokens": 3048,
+  "judge_completion_tokens": 310
+}

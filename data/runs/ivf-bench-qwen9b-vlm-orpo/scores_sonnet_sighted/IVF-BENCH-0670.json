@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0670",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description noting ICM compactness and TE appearance, but makes some inconsistencies - it describes the zona as 'not significantly thinned' and calls it 'early-to-intermediate blastocyst' when the Gardner score indicates a stage 3 expanded blastocyst with thinning zona. The image actually shows a well-expanded blastocyst with visible ICM and TE structures. The model appropriately caveats single-image limitations but mischaracterizes the expansion stage relative to the provided grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating most clinical factors - correctly identifies the endometrial thickness of 7mm as the primary concern, addresses the AMH/DOR discrepancy thoughtfully, considers partner age and sperm parameters, and contextualizes stress and BMI appropriately. Minor gap: does not deeply explore the contradiction between AMH 10.64 and DOR diagnosis or consider whether PCOS might be a differential, and sedentary lifestyle impact on endometrial receptivity could be explored more."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% logically follows from the identified positive factors (age 32, good embryo quality) tempered by the suboptimal endometrial thickness. The model correctly identifies 7mm as the primary modifiable risk factor. Minor inconsistency: labels the embryo as 'early-to-intermediate' morphologically but then uses the 3AB grade for probability estimation without reconciling this discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines - advocates for SET at age 32, appropriate luteal support, cautions against unproven add-ons, recommends cavity evaluation, and appropriately discusses FET strategy. The 8-12mm endometrial thickness threshold cited aligns with published literature. Correctly notes endometrial scratching is not standard for first-cycle patients. Minor gap: does not reference PGT-A considerations which ASRM guidelines address for this age group."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including β-hCG timing (9-12 days post-transfer), specific endometrial optimization strategies (estrogen priming, chronic endometritis workup, saline sonogram), luteal support considerations, and stress management approaches. Future cycle planning is detailed. Could be more specific about endometrial thickness intervention thresholds and concrete estrogen dosing strategies, but overall provides clinically useful guidance with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021852,
+  "judge_latency_ms": 14738.729666001745,
+  "judge_prompt_tokens": 3974,
+  "judge_completion_tokens": 662
+}

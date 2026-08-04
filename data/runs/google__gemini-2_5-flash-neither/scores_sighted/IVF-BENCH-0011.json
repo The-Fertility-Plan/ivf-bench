@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating detailed morphology. However, it repeatedly referred to a blastocyst despite the visible embryo appearing more consistent with a day-4 morula/early cavitating embryo, so accuracy is limited by omission and stage assumption."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated maternal age, ovarian reserve, low oocyte yield, tubal factor, sperm quality, endometrium, and lifestyle well, and linked these to prognosis and embryo selection limits. Some nuance was missing regarding how day-4 stage specifically interacts with prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with the implantation estimate logically tied to age, unknown morphology, and low oocyte yield. Minor issues include speculative interpretation of day-4 transfer and conflation of day-4 embryo with blastocyst terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including counseling, luteal support, and consideration of protocol adjustment. However, strong endorsement of PGT-A in a 39-year-old with very low embryo yield is more debatable, and suggesting a mock transfer for this situation is not routinely guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including counseling, luteal support, protocol review, and embryo accumulation strategies. It is useful clinically, though some recommendations are somewhat generic and not tightly tailored to the likely day-4 morula-stage embryo."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.015969,
+  "judge_latency_ms": 5452.627249993384,
+  "judge_prompt_tokens": 3313,
+  "judge_completion_tokens": 402
+}

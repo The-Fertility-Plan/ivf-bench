@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided grade. It correctly noted the nonstandard nature of 1DD and the severe implication of degenerative/absent ICM and TE, but it introduced some overconfident claims such as 'non-viable' and discussed a grading contradiction without image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age-related aneuploidy risk, ovarian response, prior cycle history, endometrial thickness, and strong semen parameters with embryo prognosis in a clinically meaningful way. It slightly overstates prior outcomes as RIF/RPL, which limits a perfect score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: poor embryo grade plus age/history leads to very low implantation potential. Minor issues include treating the embryo as definitively non-viable from ambiguous/nonstandard grading and inferring atypical Day 4 blastocyst transfer/arrest somewhat too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly aligned with IVF practice, including caution about poor morphology and age-related aneuploidy. However, strong endorsement of PGT-A as 'critical,' labeling the history as RIF/RPL, and suggesting ERA routinely are not fully guideline-concordant/evidence-based for this presentation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps such as confirming grading, reconsidering transfer if degeneration is confirmed, and planning future evaluation. Some recommendations are useful but a few are overly assertive or not strongly evidence-based, preventing a top score."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015396,
+  "judge_latency_ms": 5608.4602089977125,
+  "judge_prompt_tokens": 3037,
+  "judge_completion_tokens": 419
+}

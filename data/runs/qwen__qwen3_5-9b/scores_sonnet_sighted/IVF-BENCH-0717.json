@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0717",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the early blastocyst stage with limited cavitation and describes the disorganized cellular mass and poor TE differentiation consistent with DD grading. However, it misses notable observations visible in the image such as the zona pellucida appearance, the relatively large size of the embryo mass filling most of the zona, and the granular/fragmented appearance of cells. The description of 'small indentation or early cavity formation' somewhat undersells what appears to be a more developed but poorly organized cellular mass in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively connects AMH (0.71 ng/mL) with low oocyte yield and quality, links age 37 to aneuploidy risk, addresses former smoking history's impact on ovarian reserve, and correctly identifies excellent sperm parameters as a favorable factor isolating the issue to the oocyte side. The endometrial thickness integration is appropriate. Minor gap: tubal factor diagnosis and its irrelevance to embryo quality could have been explicitly noted, and the sedentary lifestyle factor was not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The <10-15% implantation probability is consistent with the evidence presented. The recommendation to proceed with transfer despite poor grade is well-justified given DOR context. Minor inconsistency: the response describes the embryo as 'hopeful at best' yet recommends transfer as standard of care, which could be better reconciled. The Day 5 transfer reasoning is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on Gardner grading interpretation and DOR management. The recommendation against PGT-A with limited oocytes aligns with guidelines. However, the suggestion to use 'mild stimulation or lower dose' for a DOR patient in future cycles somewhat contradicts standard practice which often recommends optimized stimulation protocols. The donor egg recommendation timing is appropriate per ASRM guidelines for DOR patients. The '0DD' Gardner score interpretation is accurate per standard criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, manage expectations, continue progesterone support, discuss donor eggs, avoid PGT-A. The future cycle planning section provides concrete alternatives. However, specific luteal phase support protocols are not mentioned, no specific follow-up timeline is suggested, and the recommendation for 'mild stimulation' for a DOR patient lacks sufficient nuance. The donor egg discussion is appropriately introduced without being overly prescriptive, respecting patient autonomy."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.018738,
+  "judge_latency_ms": 16006.795540990424,
+  "judge_prompt_tokens": 2966,
+  "judge_completion_tokens": 656
+}

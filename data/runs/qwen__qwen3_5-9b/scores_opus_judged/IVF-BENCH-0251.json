@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0251",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The description is largely consistent with the Gardner 3AA grading provided, but contains an error stating the embryo 'has successfully hatched or is in the process of hatching' — Grade 3 is expanded with thinning zona, not hatching (that would be Grade 4-5). The ICM and TE descriptions are reasonable but somewhat generic, appearing to rely heavily on the lab data rather than independent image analysis. The localization of ICM to 'the right side' and TE to 'left and center' shows some attempt at image-specific description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, AMH, BMI, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality. The discussion of how young age correlates with low aneuploidy risk and high embryo quality is appropriate. The mention of PCOS phenotype with AMH 17.52 is reasonable though speculative (the diagnosis is tubal factor). The connection between alcohol use and implantation/miscarriage risk is clinically relevant. Minor issue: BMI 18.6 is actually above the underweight cutoff of 18.5, and the model contradicts itself on this point."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally coherent reasoning but with some inconsistencies. The model states BMI < 18.5 is underweight then says the patient is 'just above the cutoff' but still treats her as underweight throughout. The hatching comment contradicts the Grade 3 definition. The probability estimate of 65-75% is reasonable but the reasoning for adjustments could be more rigorous. The suggestion that high AMH implies PCOS is speculative given the tubal factor diagnosis. The claim that 'standard implantation rates for 3AA are 60-70%' is somewhat high and not well-sourced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with clinical guidelines. The Gardner grading interpretation has the hatching error. The recommendation for alcohol cessation is strongly evidence-based. The suggestion of PGT-A for a 26-year-old after a single failed cycle is somewhat premature per ASRM guidelines, though it's framed as conditional. The antagonist protocol choice for high AMH is correctly noted as appropriate for OHSS risk reduction. Normal AMH ranges cited (< 4.0 ng/mL) are not standard — AMH norms vary by age and assay, and 17.52 is high but the stated normal range is misleading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear, specific recommendations including proceeding with transfer, alcohol cessation counseling, OHSS monitoring, nutritional support, and conditional PGT-A consideration. The recommendations are practical and relevant to this specific case. Could be improved with more specific guidance on luteal phase support, progesterone supplementation details, timing of follow-up, or specific dietary/nutritional recommendations. The stress management recommendation is mentioned but not elaborated."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.031285,
+  "judge_latency_ms": 17940.660291991662,
+  "judge_prompt_tokens": 2577,
+  "judge_completion_tokens": 736
+}

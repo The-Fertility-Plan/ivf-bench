@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided 2AA label rather than the image, includes contradictory self-assessment, and inaccurately states the embryo is hatched/about to hatch from expansion grade 2. Morphology description is only partially grounded in visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, endometrial thickness, sperm parameters, and ovarian response with embryo quality reasonably well, though AMH is unavailable and some interpretations (e.g., FSH implying DOR) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: conflicting image interpretations, overstatement that euploid embryos implant at >90%, and some probability reasoning is simplified and not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: overenthusiastic endorsement of PGT-A as highly indicated, questionable serial hCG timing specifics, and inaccurate linkage of grade 2 blastocyst with hatching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, ectopic surveillance, luteal support, and future-cycle considerations such as PGT-A and uterine evaluation, though some recommendations lack nuance."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.00936375,
+  "judge_latency_ms": 5512.107542017475,
+  "judge_prompt_tokens": 4651,
+  "judge_completion_tokens": 355
+}

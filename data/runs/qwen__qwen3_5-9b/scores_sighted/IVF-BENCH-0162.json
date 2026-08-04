@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0162",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality, minimally expanded embryo with absent/degenerate ICM and TE, but calling it a morula is somewhat inconsistent with the provided Gardner 0DD early blastocyst designation and the image suggests an early cavitating blastocyst rather than a pure morula."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, sperm parameters, and diagnosis reasonably well with the poor embryo grade, though some links are speculative and it does not fully address that male factor may still affect embryo development despite normal basic semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is clear and the low implantation estimate follows from the poor morphology despite favorable maternal factors; minor issues include overstatement about what clinics would do with a 0DD embryo and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis interpretation is broadly aligned, several recommendations are not guideline-consistent: suggesting a freeze-all strategy in a current transfer context without indication, implying PGT-A based on a single poor embryo in a young patient, and stating such embryos are often discarded/research-only is too strong."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and future considerations, but some recommendations are too generic or not well tailored, and the advice to 'proceed with transfer as planned' and 'freeze-all' is internally awkward for this specific case."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.013839,
+  "judge_latency_ms": 5866.711334005231,
+  "judge_prompt_tokens": 2713,
+  "judge_completion_tokens": 380
+}

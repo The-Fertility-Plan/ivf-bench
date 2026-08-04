@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 2BA and incorrectly stated morphology could not be assessed or assigned, despite explicit grading data being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, ovarian response, endometrium, BMI, prior failures, and male factor reasonably well, but does so around an assumed embryo quality rather than the actual provided 2BA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is weakened by the central error that embryo quality is unknown; it then builds prognosis on hypothetical grades, creating a mismatch with the available case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but suggesting a full RIF workup after only two failed cycles and emphasizing tests like ERA/immunologic screening/thrombophilia screening is more controversial and not uniformly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps and future planning, but key recommendations are misdirected by asking to obtain morphology already supplied and by not tailoring advice to the actual 2BA embryo."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014241,
+  "judge_latency_ms": 4097.985790998791,
+  "judge_prompt_tokens": 3317,
+  "judge_completion_tokens": 286
+}

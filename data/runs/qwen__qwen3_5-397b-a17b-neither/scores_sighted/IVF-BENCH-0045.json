@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not attempt a direct morphology read. However, it then inferred likely good-quality blastocyst features (e.g., at least stage 3, ICM/TE A or B), which are not justified by the actual image and could be inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, low oocyte yield, BMI, tubal factor, endometrial thickness, prior cycle history, and sperm parameters into prognosis reasonably well, though some links to embryo-specific quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is logically structured and the probability estimate broadly follows from the factors discussed. Minor issues include assuming the embryo was likely good quality because it was selected for Day 5 transfer and some speculative protocol-response interpretations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (eSET, BMI counseling, protocol review), but some recommendations are not strongly guideline-supported or are overstated, such as calling eSET 'mandatory,' suggesting assisted hatching routinely, and proposing TESE for DNA fragmentation concerns without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future cycles, including luteal support review, weight optimization, and stimulation reassessment. Some recommendations are useful but a few are overly prescriptive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01476,
+  "judge_latency_ms": 5019.614582997747,
+  "judge_prompt_tokens": 3050,
+  "judge_completion_tokens": 374
+}

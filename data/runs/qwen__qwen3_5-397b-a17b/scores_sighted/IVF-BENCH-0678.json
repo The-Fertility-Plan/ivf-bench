@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst showing a visible blastocoel and compact ICM, but it overstates certainty: calls it the highest possible grade, describes uniformly cohesive TE despite somewhat limited/uneven peripheral cells in the image, and labels stage 3 as 'expanded blastocyst' rather than full expansion terminology nuance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm parameters, BMI, diagnosis, endometrium, and prior cycle history reasonably well with embryo quality and prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is clear, but there are notable issues: it treats Day 4 transfer of a reported 3AA blastocyst as a likely fast-developing blastocyst with possible asynchrony without acknowledging that this is atypical and may reflect data inconsistency; probability estimate is plausible but somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation in a young patient with a good-quality blastocyst is guideline-concordant, but calling 3AA the highest possible grade is inaccurate, and suggesting PGT-A after a single failed transfer in a 27-year-old unexplained infertility patient is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with SET, luteal support, cryopreservation, and lifestyle optimization; however, recommendations could be more nuanced regarding the unusual Day 4/3AA timing and whether transfer timing should be verified."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01323,
+  "judge_latency_ms": 5011.595333999139,
+  "judge_prompt_tokens": 2520,
+  "judge_completion_tokens": 378
+}

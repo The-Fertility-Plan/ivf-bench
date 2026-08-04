@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate embryo morphology. It therefore avoids inaccuracies, but provides no actual image-based assessment despite the task asking for one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, BMI, ovarian reserve markers, prior live birth, endometrium, sperm, smoking, and prior cycle history, and relates them to prognosis. It misses some nuance around day-4 transfer versus blastocyst framing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured and internally consistent, but there is a notable mismatch in repeatedly discussing a blastocyst/Gardner grading despite the transfer day being day 4, and the implantation estimate is speculative given absent morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, SET consideration in a young patient, lifestyle optimization), but emphasis on urgent Gardner/blastocyst assessment and PGT-A suggestion is less well aligned for a 29-year-old/day-4 context and is somewhat overextended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer counseling and future planning, especially smoking cessation and review of diagnosis/protocol. Some recommendations are generic and limited by the absent morphology."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014607,
+  "judge_latency_ms": 4428.319165992434,
+  "judge_prompt_tokens": 3214,
+  "judge_completion_tokens": 331
+}

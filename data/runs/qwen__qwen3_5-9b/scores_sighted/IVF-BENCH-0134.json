@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0134",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a 3AB blastocyst with identifiable ICM and relatively sparse TE, but it overstates the blastocoel occupying the majority of the embryo and calls the zona significantly thinned/expanded more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, PCOS diagnosis, sperm quality, endometrium, and lifestyle with embryo prognosis reasonably well, though it overinterprets the ovarian response and diagnosis discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable overreaches: inferring DOR from AMH 2.29/FSH 8.7 and 8 MII, and suggesting sperm quality 'compensated' for oocyte issues. The implantation estimate is plausible but not tightly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation for a good-quality day-5 blastocyst is guideline-concordant, but routine strong endorsement of PGT-A based on age 36/FSH and especially mention of donor eggs after low response are more aggressive than standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with SET and outlines future considerations, though some advice is insufficiently nuanced and could be more individualized."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.012636,
+  "judge_latency_ms": 4328.033333003987,
+  "judge_prompt_tokens": 2542,
+  "judge_completion_tokens": 334
+}

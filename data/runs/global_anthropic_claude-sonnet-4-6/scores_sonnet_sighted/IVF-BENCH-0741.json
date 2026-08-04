@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion stage, ICM compactness, and TE cohesion consistent with 3AA grading. However, the image appears to show a partially collapsed or early-stage blastocyst with visible cellular architecture that doesn't clearly match a fully expanded Grade 3 blastocyst. The model notes 'mild granular cytoplasmic background' and 'asymmetric zona' which are reasonable observations, but the description of a 'cohesive epithelial layer visible at periphery' is somewhat generic. The model largely echoes the provided Gardner score rather than independently analyzing the image, which shows what appears to be a less-than-fully-expanded blastocyst with somewhat irregular ICM boundaries."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age-related aneuploidy risk, prior miscarriage implications, AMH/FSH interpretation, endometrial thickness, sperm parameters, and lifestyle factors. The interaction between age 37 and prior miscarriage suggesting possible recurrent aneuploidy is well-articulated. The connection between male factor diagnosis and ICSI utilization is noted. Minor gap: doesn't deeply explore how the unusually high AMH (5.8 at age 37) might suggest PCOS-like physiology or affect oocyte quality beyond just quantity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured, with clear additive/subtractive factors. The critical caveat about chromosomal status being the dominant uncertainty is well-reasoned and appropriately highlighted. The distinction between euploid (~65-70%) and aneuploid (<5%) outcomes as a probabilistic mixture is clinically sound. Minor inconsistency: the base rate of 52-58% for a 3AA blastocyst at age 37 is slightly optimistic compared to published literature, and the final adjusted range of 45-55% implantation with 35-45% live birth is reasonable but the derivation could be more explicitly tied to published data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: PGT-A discussion for age 37 with prior miscarriage, luteal phase support protocols, progesterone monitoring, RIF workup pathway if transfer fails. The ERA biopsy recommendation aligns with current practice though its evidence base is debated. LMWH recommendation for prior miscarriage is appropriate pending thrombophilia workup. Low-dose aspirin recommendation is somewhat controversial per current ASRM guidelines which don't strongly endorse it for routine use. NK cell testing mentioned in RIF workup is not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including luteal phase support details, monitoring timeline (βhCG day 12-14, ultrasound 6-7 weeks), lifestyle modifications with specific parameters (20-30 min walking), and a structured future cycle planning table. The PGT-A discussion recommendation is appropriately nuanced with ethical/cost counseling noted. The RIF workup pathway is comprehensive. Minor weakness: doesn't specify whether this is a fresh or frozen transfer, which would affect luteal support protocol specifics, and progesterone target ranges given are for FET only with a caveat."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.023067,
+  "judge_latency_ms": 19237.983167011407,
+  "judge_prompt_tokens": 3594,
+  "judge_completion_tokens": 819
+}

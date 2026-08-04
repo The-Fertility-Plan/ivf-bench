@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0058",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided assigning a specific morphology grade. It mentioned only general blastocyst concepts rather than fabricating visible features, so despite not analyzing the actual embryo image, it remained morphologically cautious and largely accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian response, AMH/FSH, tubal factor, endometrial thickness, prior IVF failure, BMI, stress, and sperm parameters into prognosis reasonably well, though some links to embryo-specific quality were somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but some probability adjustments are subjective and not strongly evidence-based, especially the quantified effects of stress, MII yield, and prior failure on implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but recommending PGT-A as 'strongly recommended' at age 33 after a single failed cycle, suggesting ERA after limited failure, and proposing aspirin/anxiolytics are more aggressive than guideline-based routine care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer support and contingency planning, including luteal support review and further workup if unsuccessful. Some recommendations are practical, though a few are not sufficiently individualized or evidence-anchored."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013596,
+  "judge_latency_ms": 5835.339583994937,
+  "judge_prompt_tokens": 2737,
+  "judge_completion_tokens": 359
+}

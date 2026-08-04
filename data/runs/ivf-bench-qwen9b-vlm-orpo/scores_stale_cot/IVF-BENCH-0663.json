@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a blastocyst with strong ICM and weaker TE, but shows uncertainty/confusion about Gardner expansion staging and gives some inconsistent TE characterization (B vs bordering C)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, BMI, semen parameters, endometrial thickness, and first-cycle status well, though some links to embryo-specific prognosis are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Contains notable internal inconsistencies: calls the embryo both good-quality and poor-quality, questions the reported grading, and the implantation estimate is lower than expected for a 30-year-old with a day-5 2AB embryo without fully reconciling why."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on single embryo transfer, avoiding routine add-ons, and selective PGT-A discussion, but the Gardner grading discussion is confused and some comments about fresh vs freeze-all and embryo quality are not tightly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical recommendations including single embryo transfer, luteal support, avoiding unnecessary add-ons, lifestyle optimization, and sensible future workup if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.018987,
+  "judge_latency_ms": 6827.833416056819,
+  "judge_prompt_tokens": 4719,
+  "judge_completion_tokens": 322
+}

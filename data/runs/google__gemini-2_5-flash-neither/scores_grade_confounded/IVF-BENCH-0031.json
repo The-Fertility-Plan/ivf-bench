@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was available and does not analyze the provided 2BB morphology; it substitutes hypothetical embryo grades instead."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian reserve markers, prior live birth, sperm parameters, endometrium, and smoking, though it fails to connect these to the actual provided 2BB embryo and day-4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by a major factual miss: the model claims morphology is unavailable despite the provided 2BB score, then bases prognosis on assumed high-grade blastocysts, making the implantation estimate poorly supported for this case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (smoking cessation, SET consideration, lifestyle counseling), but suggesting urgent morphology acquisition despite available grading and proposing PGT-A in a 29-year-old mainly for prior failed cycle are weaker or less evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical steps such as smoking cessation, counseling, and future planning, but key recommendations are misdirected by ignoring the known 2BB grade and therefore are only moderately useful for this specific transfer."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014058,
+  "judge_latency_ms": 4313.888500000758,
+  "judge_prompt_tokens": 2966,
+  "judge_completion_tokens": 344
+}

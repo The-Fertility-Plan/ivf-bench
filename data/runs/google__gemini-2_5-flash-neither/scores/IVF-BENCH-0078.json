@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "No image was available, and the response explicitly could not assess morphology but then assumed a good/excellent blastocyst (e.g., 4AA/5AA), which is effectively fabricated rather than image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and lifestyle, and connects them to prognosis, though some links to actual embryo quality are necessarily speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the implantation estimate clearly tied to the stated assumption of a good-quality Day 5 blastocyst; the main limitation is reliance on an unsupported morphology assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially SET in a young good-prognosis patient and cautious use of PGT-A; minor overreach includes suggesting ERA/immunologic testing, which are not routine and should be reserved carefully."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning, including SET, luteal support, cryopreservation, protocol review, and lifestyle advice, though some recommendations remain somewhat general."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013542,
+  "judge_latency_ms": 3924.7484169973177,
+  "judge_prompt_tokens": 2929,
+  "judge_completion_tokens": 317
+}

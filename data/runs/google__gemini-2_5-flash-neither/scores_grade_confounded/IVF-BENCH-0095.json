@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (2BB) and incorrectly stated that no morphology assessment or Gardner grading could be performed, despite explicit morphology data being available."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It discusses many relevant patient factors and prior outcomes, but integration is weakened by assuming a good-quality embryo instead of incorporating the actual 2BB grade, which is central to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by the core contradiction that morphology is unavailable when a 2BB grade was provided; probability estimates are therefore based on unsupported assumptions rather than the actual embryo data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard, but suggesting ERA, immunologic testing, NK-cell workup, and acupuncture as routine next steps is not strongly guideline-supported, especially without first integrating the known embryo grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers multiple practical next steps, but several are generic or weakly evidence-based, and it misses the most actionable point of counseling around transfer of a day-5 2BB blastocyst specifically."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013272,
+  "judge_latency_ms": 4202.064624994819,
+  "judge_prompt_tokens": 2944,
+  "judge_completion_tokens": 296
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fails to use the provided Gardner score of 1DD and instead claims no morphological grading can be performed, then assumes a transferable Day 4 embryo. It does not describe the known poor morphology (degenerative/absent ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, endometrium, sperm parameters, BMI, FSH, and cycle history reasonably well with prognosis, though it underweights the severe adverse impact of the reported 1DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weakened by a major premise error: it ignores the explicit 1DD grade and builds prognosis around an assumed acceptable Day 4 embryo. This leads to an overly optimistic implantation estimate inconsistent with the embryo data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points such as SET in a young good-prognosis patient and considering ovarian reserve testing are broadly aligned, but the handling of Gardner grading and prognosis for a 1DD embryo is not well aligned with standard embryo assessment principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and specific for transfer and future planning, including luteal support, SET, reserve workup, and culture strategy, though they are based on an inaccurately favorable interpretation of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01257,
+  "judge_latency_ms": 3977.0136250008363,
+  "judge_prompt_tokens": 2515,
+  "judge_completion_tokens": 335
+}

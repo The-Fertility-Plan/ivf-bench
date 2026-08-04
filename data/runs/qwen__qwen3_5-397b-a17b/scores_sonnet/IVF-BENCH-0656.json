@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable description noting compacted cellular mass, granular cytoplasm, and absence of clear blastocoel cavity. It correctly identifies the poor quality indicated by DD grading. However, it notes a contradiction between the Gardner score '1' (early blastocyst with cavity less than half) and the provided description ('at least half'), showing some confusion. The visual description of 'morula to early blastocyst transition' may or may not match the actual image, and the model's handling of the stage discrepancy, while intellectually honest, introduces some inaccuracy in the final morphological characterization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating multiple clinical factors: the paradox of young age/high AMH versus poor embryo quality, the potential over-suppression from Long Agonist protocol relative to AMH, the BMI impact on oocyte quality and implantation, and the discrepancy between 'Male Factor' diagnosis and normal semen parameters pointing toward possible DNA fragmentation. The endometrial thickness is appropriately noted as favorable. Minor gap: no discussion of how Day 4 transfer timing specifically interacts with the embryo's developmental stage."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of <1-5% follows coherently from the DD grading assessment. The model correctly identifies the contradiction in the Gardner score description and handles it transparently. The connection between poor embryo development and potential sperm DNA fragmentation is well-reasoned. Minor inconsistency: the model states '1DD' means early blastocyst but then visually describes something that looks pre-blastocyst, creating slight tension in the narrative without full resolution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: antagonist protocol consideration for potential over-suppression, sperm DNA fragmentation testing for unexplained poor embryo development with normal semen parameters, ICSI for male factor, blastocyst culture to Day 5/6, and weight management for BMI >30. The suggestion to transfer a 1DD embryo only if it's the sole option aligns with clinical practice. The protocol switch rationale is evidence-based. Minor gap: no mention of preimplantation genetic testing (PGT-A) consideration for future cycles given the poor development history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: protocol change to antagonist, sperm DNA fragmentation testing, ICSI, extended culture, weight management with quantified target (5-10% reduction), and clear counseling guidance for current transfer. The response provides clear next steps for both immediate and future planning. Could be improved with more specific dosing considerations, timeline recommendations for weight loss before next cycle, or specific DFI threshold cutoffs to guide clinical decisions."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.018396,
+  "judge_latency_ms": 15757.176792001701,
+  "judge_prompt_tokens": 2607,
+  "judge_completion_tokens": 705
+}

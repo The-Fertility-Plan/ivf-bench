@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was available and analyzes the case as a Day 4 morula transfer, ignoring the provided 1DD blastocyst grade. It fails to describe the actual morphology implied by 1DD: poor-quality early blastocyst with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant patient factors including age, ovarian response, prior ectopics, smoking, BMI, endometrium, and sperm data, and connects them to prognosis. However, integration is weakened by anchoring the embryo assessment to an incorrect developmental stage."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but a major internal flaw undermines the reasoning: it bases conclusions on the false premise that no Gardner score was available and that this is a morula-stage Day 4 embryo, despite explicit 1DD data. Probability estimates therefore rest on incorrect morphology assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable (early hCG/ultrasound after ectopic history, smoking cessation, tubal evaluation), but several are weakly supported or not guideline-based for this scenario, such as ERA, thrombophilia screening, growth hormone adjuncts, and routine PGT-A emphasis in a young patient with a very small cohort."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for monitoring this transfer and future planning, including serial hCGs, early ultrasound, lifestyle modification, and tubal assessment. Actionability is good, though some suggested interventions are not optimally prioritized or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.24,
+  "judge_cost_usd": 0.014292,
+  "judge_latency_ms": 5211.860333001823,
+  "judge_prompt_tokens": 2684,
+  "judge_completion_tokens": 416
+}

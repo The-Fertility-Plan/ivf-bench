@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion, thinning zona, ICM location and density, and TE characteristics consistent with 3AB grading. However, it incorrectly states the embryo 'has successfully hatched or is about to hatch' when Grade 3 indicates an expanded blastocyst but not yet hatching (Grade 4-6 indicate hatching/hatched). The image shows a clearly expanded blastocyst with visible ICM and TE, but the hatching claim is inaccurate per Gardner criteria. Some descriptions of left/right localization appear reasonable but may be speculative given image blur on the right side."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, FSH, BMI, endometrial thickness, sperm parameters, paternal age, and previous cycle outcome reasonably well. It correctly flags the discrepancy between 'Male Factor' diagnosis and normal sperm parameters, suggesting morphology or DNA fragmentation as possible explanations. It connects maternal age to aneuploidy risk and endometrial thickness to receptivity. Minor gap: AMH is listed as N/A but the response doesn't acknowledge this missing data point explicitly, and the moderate alcohol consumption (4-6 drinks/week) as a lifestyle risk factor is not addressed despite being clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 30-40% implantation probability estimate is reasonable and follows from the evidence presented. The response is internally consistent. Minor issue: the claim about progesterone support being needed due to Grade B TE is not well-supported by evidence and represents a logical stretch. The overall structure is coherent and conclusions are generally well-supported by the observations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines and correctly applies Gardner grading framework. However, the Grade 3 expansion description incorrectly implies hatching, which contradicts Gardner criteria. The FSH of 7.7 IU/L is described as 'slightly elevated' when it is actually within normal range per most guidelines (<10 IU/L). The suggestion that Grade B TE requires 'slightly more progesterone support' lacks evidence-based backing. PGT-A recommendation is appropriately nuanced. Overall mostly guideline-aligned but with notable inaccuracies."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, consider PGT-A for remaining embryos, cryopreservation guidance, progesterone support mention, and future RIF/sperm DNA fragmentation workup. The response provides clear next steps for both this transfer and future planning. The PGT-A recommendation is appropriately contextualized. Slight deduction for the unsupported progesterone recommendation and for not addressing the alcohol consumption lifestyle factor which has actionable implications for counseling."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.019311,
+  "judge_latency_ms": 15716.49887500098,
+  "judge_prompt_tokens": 2797,
+  "judge_completion_tokens": 728
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/early cavitating embryo, whereas the provided lab grade is a 3AB expanded blastocyst. It fabricates morula-specific features and does not accurately describe blastocoel expansion, ICM, or TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant patient factors including age, tubal factor, prior outcomes, sperm quality, BMI, endometrium, and stimulation context with prognosis, though some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured, but it is built on a fundamentally incorrect morphology assessment, which undermines the implantation estimate and downstream conclusions. There are also speculative causal claims and unsupported percentage adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (luteal support, early ultrasound after ectopic history), but several suggestions are not guideline-based or are controversial for routine use, including NK cell testing, MTHFR testing, ERA after a single failure, growth hormone, and broad PGT-A claims in a 32-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for monitoring, lifestyle modification, and future planning. However, some recommendations are overly aggressive or not evidence-based, limiting overall usefulness."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013968,
+  "judge_latency_ms": 4932.495834000292,
+  "judge_prompt_tokens": 2856,
+  "judge_completion_tokens": 360
+}

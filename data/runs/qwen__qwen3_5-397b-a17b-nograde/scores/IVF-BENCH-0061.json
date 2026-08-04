@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0061",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Reasonable blastocyst identification and plausible 3BB/4BB estimate, but several image-specific details such as exact ICM location, TE uniformity, and zona thinning are somewhat overinterpreted from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, endometrial thickness, prior biochemical pregnancy, sperm parameters, and smoking with embryo prognosis well, though AMH is unavailable and some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a probability estimate that broadly follows the stated factors; minor issues include strong claims about exceptional oocyte quality and smoking effect magnitude."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and counseling, but PGT-A suggestion in a 27-year-old with limited history is not strongly guideline-driven, and recommending TESE based on low count alone is premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, especially SET and smoking cessation, though some recommendations would benefit from more nuance before additional testing or invasive interventions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011295,
+  "judge_latency_ms": 4069.27941700269,
+  "judge_prompt_tokens": 2290,
+  "judge_completion_tokens": 295
+}

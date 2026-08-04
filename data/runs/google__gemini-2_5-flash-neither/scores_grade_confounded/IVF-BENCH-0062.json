@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0062",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score is available, despite the provided 3AA grade. It fails to analyze the known morphology and instead discusses hypothetical grades."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates many patient factors such as age, BMI, FSH, sperm parameters, diagnosis, and endometrium, but the integration is weakened by not using the actual embryo grade and by some overinterpretation of ovarian reserve from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by a central contradiction: it claims morphology is unavailable when 3AA is provided. It also bases prognosis on assumed alternative grades rather than the actual case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, including alcohol cessation and recognition of favorable endometrium, but recommending urgent morphology assessment despite an available 3AA grade and suggesting ERA early are not well aligned with standard first-transfer practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical suggestions on alcohol abstinence, lifestyle, and future planning, but key recommendations are misdirected because they ignore the provided embryo grade and therefore are less useful for this specific transfer."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 4111.552040994866,
+  "judge_prompt_tokens": 2899,
+  "judge_completion_tokens": 331
+}

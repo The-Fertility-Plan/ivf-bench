@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0442",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies a blastocyst with visible ICM and peripheral TE, but likely overstates expansion and TE/ICM quality from this single somewhat blurry image; calling it possibly early 4AA is not strongly supported visually."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age-related aneuploidy risk, low AMH/low oocyte yield, BMI, endometrium, male-factor context, and first-cycle status with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and internally consistent, with appropriate emphasis on morphology versus ploidy and reserve; only minor issue is confidence in image-based grading despite limited visual clarity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely consistent with Gardner grading concepts and standard IVF counseling, including caution that morphology does not determine ploidy; minor deviation is somewhat assertive interpretation of stage/quality from a single static image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides useful counseling points and future-cycle considerations, but concrete transfer-management recommendations and specific next-step planning are limited in the visible response."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013653,
+  "judge_latency_ms": 4646.558082997217,
+  "judge_prompt_tokens": 2976,
+  "judge_completion_tokens": 315
+}

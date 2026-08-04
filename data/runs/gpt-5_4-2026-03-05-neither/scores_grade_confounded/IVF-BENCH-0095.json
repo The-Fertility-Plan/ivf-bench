@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided and refuses morphology assessment, despite the case explicitly giving a 2BB grade with defined expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, prior IVF outcomes, ectopic history, endometrium, ovarian response, and semen data, though it fails to connect these to the known 2BB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured and mostly logical, but a major premise is wrong because embryo morphology was actually available; this weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are generally evidence-based and consistent with IVF practice, including SET at age 29, early ectopic surveillance, cavity/tubal evaluation, and caution with add-ons, but omission of the provided 2BB grading limits full alignment with Gardner-based assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer monitoring and future workup, especially regarding ectopic risk and uterine/tubal assessment, though it misses case-specific counseling based on the known 2BB embryo quality."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015783,
+  "judge_latency_ms": 4082.181040997966,
+  "judge_prompt_tokens": 3591,
+  "judge_completion_tokens": 334
+}

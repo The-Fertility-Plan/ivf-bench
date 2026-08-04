@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0431",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology: it calls the embryo 'fully expanded' and 'ready to hatch,' which is inconsistent with Gardner 2 (blastocoel fills embryo but not fully expanded/hatching). It also labels the embryo high quality/top-tier despite a loose/few-cell TE and image features that are not especially crisp. ICM/TE localization is plausible but somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/AMH, prior live birth, miscarriage history, sperm parameters, BMI, smoking, and endometrium with prognosis reasonably well. Some interactions are simplified, but most relevant factors are connected to embryo quality and transfer outlook."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: misinterpretation of expansion stage, overstating 2AB as 'top-tier,' and claiming prior live birth outweighs smoking risk without strong support. The probability estimate is plausible but somewhat optimistic given the embryo grade and lifestyle risks."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice (proceed with transfer, smoking cessation, luteal support), but there are deviations: incorrect Gardner stage interpretation, overcalling endometrial thickness of 16 mm as ideal/excellent, and suggesting thrombophilia workup after a single additional miscarriage/failed transfer without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle modification, and contingency planning. However, future-cycle recommendations are somewhat generic and include a few overreaching investigations, limiting maximal usefulness."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013281,
+  "judge_latency_ms": 6457.469708009739,
+  "judge_prompt_tokens": 2457,
+  "judge_completion_tokens": 394
+}

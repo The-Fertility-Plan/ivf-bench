@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0749",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description consistent with the Gardner score data, noting blastocoel expansion, ICM compactness, and TE cohesion. However, it raises an unnecessary and somewhat confusing point about a 'discrepancy' between Stage 2 and 'full blastocyst' labeling without resolving it clearly, and the ICM positional description (8-10 o'clock) appears speculative rather than image-grounded. The description largely echoes the provided lab data rather than independently analyzing the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating multiple clinical factors: low BMI and its hormonal implications, sperm motility concerns linked to possible DNA fragmentation, smoking's effect on endometrial receptivity, and the significance of the biochemical pregnancy history. The framing of 'high quality embryo vs. suboptimal environment' is clinically apt. Minor gap: AMH of 4.33 ng/mL is actually relatively modest (not strongly indicative of a 'good' reserve), and the response slightly overstates its positivity without nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 40-55% follows logically from the identified risk factors applied against a baseline of 60-65% for a top-grade blastocyst in a 34-year-old. The deductions for smoking (-10-15%) and low BMI are reasonable. The reasoning chain from biochemical pregnancy to sperm DNA fragmentation suspicion is coherent. Minor inconsistency: the response simultaneously notes the previous live birth as strongly positive but doesn't fully reconcile this with the lower probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: smoking cessation advice, BMI optimization, sperm DNA fragmentation testing for asthenozoospermia with biochemical pregnancy history, PGT-A consideration, and luteal phase support optimization. The Gardner grading interpretation is standard. The suggestion of dual-route progesterone support is evidence-informed though not universally mandated. The note about stimulation protocol review is appropriate given low yield relative to AMH."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: dietitian referral, DFI testing, dual-route luteal support, smoking cessation, PGT-A consideration with rationale, and stimulation protocol review. The response provides clear next steps for both this transfer and future cycles. Slight limitation: no specific antioxidant regimens, no mention of endometrial receptivity testing (ERA) given the biochemical pregnancy history, and no threshold guidance for when to escalate to more invasive interventions."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.018243,
+  "judge_latency_ms": 13665.008625001065,
+  "judge_prompt_tokens": 2716,
+  "judge_completion_tokens": 673
+}

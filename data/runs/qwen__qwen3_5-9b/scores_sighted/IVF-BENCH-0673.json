@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is largely consistent with a 3BB blastocyst: large blastocoel, loosely grouped ICM, and sparse/loose TE. Minor overstatement in calling it 'high-quality' and saying it is 'ready for hatching' from a grade 3 image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, oocyte yield, sperm parameters, and endometrial thickness with embryo quality well. It appropriately notes the discrepancy between DOR label and AMH/response, though it could better contextualize that diagnosis without assuming it is incorrect."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are some inconsistencies: calling 3BB 'high-quality'/'prime candidate,' suggesting aneuploidy risk <10-15% at age 29, and inferring high responder status/OHSS planning from 10 oocytes. Probability estimate is plausible but reasoning is somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice regarding morphology and proceeding with single blastocyst transfer, but there are deviations: optional PGT-A rationale is oversimplified, freeze-all/OHSS discussion is not strongly indicated here, and some prognostic statements are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, and future planning. Recommendations are generally useful, though some are generic and a few suggestions (PGT-A, freeze-all) are not tightly tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013755,
+  "judge_latency_ms": 5373.324791988125,
+  "judge_prompt_tokens": 2645,
+  "judge_completion_tokens": 388
+}

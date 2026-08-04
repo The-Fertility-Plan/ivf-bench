@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate visible embryo features. However, it did not provide any actual morphology assessment despite the task, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well: age, prior live birth, BMI, FSH, tubal factor, endometrium, sperm motility, and prior cycle history, and linked them to prognosis. It missed some nuance around day-4 embryo stage and overinterpreted endometrial receptivity from thickness alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with clear caveats about the missing morphology. There is some overconfidence in the implantation estimate given the absent embryo assessment and the assumption of a good-quality blastocyst on a stated day-4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly standard (embryo selection, luteal support, review of embryo development). However, suggesting PGT-A and ERA/receptivity testing after limited failure is not strongly guideline-supported in this profile, and calling an 11 mm lining 'highly receptive' is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including embryo selection, luteal support, and further workup if unsuccessful. Some items are generic and a few future-cycle suggestions are not tightly tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014838,
+  "judge_latency_ms": 6823.441582993837,
+  "judge_prompt_tokens": 3006,
+  "judge_completion_tokens": 388
+}

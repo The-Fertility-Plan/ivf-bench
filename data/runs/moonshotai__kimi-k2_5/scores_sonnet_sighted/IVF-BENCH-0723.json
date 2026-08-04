@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a structured morphological description consistent with the Gardner 3AA label, identifying thinned zona, expanded blastocoel, compact ICM, and cohesive TE. However, the image is quite grainy and low-resolution, making precise morphological features difficult to confirm. The description of 'no significant vacuolization' is questionable given the visible dark granular inclusions in the image that could represent vacuoles or degenerative changes. The ICM localization at '1-2 o'clock' appears to be fabricated detail not clearly discernible in this image quality. Overall the description largely echoes the provided Gardner score rather than independently analyzing the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors including maternal age, PCOS diagnosis, endometrial thickness, previous biochemical pregnancy, sperm parameters, and lifestyle factors. It correctly identifies the borderline endometrial thickness of 7mm as a concern and connects PCOS to potential oocyte quality issues and luteal phase defects. The integration of the previous biochemical pregnancy as a positive indicator for endometrial receptivity is clinically sound. Minor gap: AMH being N/A is not addressed, which could be relevant for PCOS assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 45-55% follows logically from the stated adjustments applied to the baseline rate, with clear directional reasoning for each modifier. The reasoning is internally consistent - the previous biochemical pregnancy is correctly used as both a risk factor context and a positive indicator. The conclusion to proceed with transfer is well-supported. Minor inconsistency: the response states 3AA has '50-60% live birth potential' in the favorable indicators table but uses '55-65%' as baseline in the probability section, creating slight numerical inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines. The antagonist protocol acknowledgment for PCOS, luteal support recommendations, and consideration of ERA for recurrent implantation failure are appropriate. The HCG luteal boost suggestion is evidence-based though somewhat controversial. The endometrial scratch recommendation aligns with some guidelines though evidence has become more mixed in recent years (SCRATCH trial). PGT-A discussion is appropriately nuanced for age 34. Low-dose aspirin recommendation has limited evidence base for routine use but is commonly practiced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering immediate transfer optimization (dual luteal support protocols with specific dosing, aspirin), lifestyle modifications with clear rationale, and a comprehensive future cycle planning pathway contingent on different outcomes. The inclusion of specific medications with doses (HCG 1500 IU, sildenafil 25mg TID, myo-inositol 4g/day), specific timing (luteal support until 10-11 weeks), and decision trees for different failure scenarios makes this exceptionally actionable for a clinician. The patient counseling script is a practical addition."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021018,
+  "judge_latency_ms": 16928.395833994728,
+  "judge_prompt_tokens": 3246,
+  "judge_completion_tokens": 752
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to assess morphology because no image was provided to it and did not fabricate embryo features. It omitted image-based analysis, but this is acceptable given the limitation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, low MII yield, prior biochemical pregnancy, smoking, endometrium, and male-factor context into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability range tied to stated positives and negatives. Minor issues include overinterpreting low maturation and prior biochemical pregnancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but there are notable deviations: strong recommendation for PGT-A at age 35 is more aggressive than guideline-based counseling, thrombophilia screening after a single biochemical is not routine, and 'aggressive' luteal support is not clearly justified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as reviewing trigger timing, considering SDF testing, smoking cessation, and future protocol adjustments. Some recommendations are useful but a few are not sufficiently nuanced for routine practice."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013758,
+  "judge_latency_ms": 4034.1885829984676,
+  "judge_prompt_tokens": 2941,
+  "judge_completion_tokens": 329
+}

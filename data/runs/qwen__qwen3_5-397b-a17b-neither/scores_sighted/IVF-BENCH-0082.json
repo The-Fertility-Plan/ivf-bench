@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess morphology because no image was provided to it, avoiding fabricated ICM/TE claims. However, it still inferred likely high grade and expansion 3-5, which is speculative and not supported by the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior cycle, semen data, diagnosis, and endometrial thickness into prognosis reasonably well, though some links to actual embryo morphology are necessarily indirect."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age, Day 5 development, BMI, and male-factor uncertainty. Minor issues include speculative assumptions about embryo quality and semen-related risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but ERA after two failures is not strongly guideline-supported, and routine PGT-A consideration at age 28 after limited failure is debatable. Overall mostly aligned but with some overreach."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including luteal support, beta timing, sperm DNA fragmentation testing, and lifestyle optimization. Some recommendations could be more individualized and less speculative."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013494,
+  "judge_latency_ms": 4593.216416993528,
+  "judge_prompt_tokens": 2793,
+  "judge_completion_tokens": 341
+}

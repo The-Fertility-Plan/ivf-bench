@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0171",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response incorrectly describes the embryo as a partially expanded grade 2 blastocyst, whereas the provided lab data defines 2AA here as a full blastocyst with blastocoel filling the embryo. It gives only limited morphology detail and does not adequately address ICM/TE features visible or expected from the grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response only addresses morphology and does not integrate age, ovarian reserve, BMI, unexplained infertility, sperm parameters, endometrium, or cycle history with embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weak because it anchors on an incorrect interpretation of the expansion stage, creating a mismatch between image/lab data and conclusions. No clear evidence-based prognosis chain is shown."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It references Gardner grading but misapplies the expansion-stage interpretation relative to the provided score definition, limiting alignment with standard embryo assessment conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No practical transfer recommendations, counseling points, or future cycle planning are present in the visible response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.008862,
+  "judge_latency_ms": 4426.935958006652,
+  "judge_prompt_tokens": 1424,
+  "judge_completion_tokens": 306
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the provided grade. Its comments on BB-grade ICM/TE are broadly consistent with the image and lab description, but it introduced a likely incorrect claim that Gardner expansion 2 means blastocoel fills <50% of embryo volume; the image itself looks compatible with an early/full blastocyst with loosely grouped ICM and sparse TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior live birth/biochemical loss, sperm motility, BMI, and especially thin endometrium into prognosis, with generally good linkage to embryo viability and implantation potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially highlighting the documentation discordance and thin lining as key limiting factors. Minor issues include overconfident quantitative deductions from limited data and the questionable expansion-stage definition."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned with IVF practice in emphasizing embryo grade, age, and endometrial thickness, but it contains a Gardner grading inaccuracy and some recommendations/probability adjustments are more heuristic than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical advice such as counseling about thin lining and ensuring luteal support, but the recommendations are incomplete and not very detailed for future cycle planning or alternatives such as reassessing transfer timing/endometrial optimization."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013515,
+  "judge_latency_ms": 4651.087000005646,
+  "judge_prompt_tokens": 2700,
+  "judge_completion_tokens": 361
+}

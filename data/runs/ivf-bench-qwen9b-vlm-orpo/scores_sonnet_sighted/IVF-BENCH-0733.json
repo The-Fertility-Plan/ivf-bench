@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocoel cavity, zona pellucida thinning, loosely organized ICM, and sparse/discontinuous TE consistent with BB grading. It correctly notes the expansion stage aligns with Gardner 3. Minor limitation: the description of ICM localization and the small vesicle/bubble visible in the lower-left quadrant of the image is not mentioned, and the blastocoel appears somewhat collapsed/irregular which isn't fully captured. Overall good morphological correlation with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects age-35 aneuploidy risk, male factor diagnosis with partner age 39 and sperm DNA concerns, prior cycle history (one live birth + two failures), AMH/FSH/oocyte yield, endometrial thickness, BMI, and lifestyle factors into a coherent prognostic picture. It correctly identifies how male factor and prior failures interact with embryo quality assessment and modifies the probability estimate accordingly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 30-40% implantation follows logically from the favorable factors (age 35, day-5 blastocyst, good endometrium) tempered by prior failures and aneuploidy risk. Minor inconsistency: the response notes the grading description is 'slightly internally inconsistent' but then proceeds without fully resolving this tension. The distinction between implantation probability and live birth probability is appropriately maintained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer at age 35, appropriate luteal support emphasis, cautious approach to add-ons (explicitly advising against empiric immunotherapy/steroids without indication), PGT-A discussion framed as optional rather than mandatory at age 35, and sperm DNA fragmentation testing suggestion for male factor with prior failures. The response correctly avoids recommending unproven interventions. Minor gap: no mention of freeze-all vs fresh transfer considerations or endometrial receptivity context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific next steps clearly delineated for both current transfer and future planning. Includes concrete recommendations: proceed with SET, robust luteal support with progesterone monitoring, avoid empiric add-ons, sperm DNA fragmentation testing, uterine cavity assessment if not recently done, PGT-A discussion framework, and protocol review criteria. The structured 'if this transfer fails' section with prioritized investigative steps is particularly practical for clinical use."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.022341,
+  "judge_latency_ms": 15023.570042001666,
+  "judge_prompt_tokens": 4137,
+  "judge_completion_tokens": 662
+}

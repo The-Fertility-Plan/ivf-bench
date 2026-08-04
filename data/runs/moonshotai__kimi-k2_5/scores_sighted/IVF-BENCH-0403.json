@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0403",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it inaccurately states blastocoel <50% despite the provided grade definition saying at least half the embryo, and adds features like developmental arrest/necrosis not directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian response, DOR diagnosis, prior failed cycle, sperm parameters, BMI, and endometrium well, though it somewhat overstates DOR severity and sperm DNA fragmentation risk without direct testing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the poor prognosis follows from the embryo grade and clinical context, but there are minor overreaches such as calling the embryo morphologically non-viable and inferring lab intent from Day 4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and the poor prognosis of a 1DD embryo, but statements like 'non-transferable in most IVF programs' and 'non-viable by standard criteria' are stronger than guideline-based morphology assessment alone supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins recommendations but the provided text is truncated before offering concrete management steps for the current transfer or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.012576,
+  "judge_latency_ms": 5293.187000002945,
+  "judge_prompt_tokens": 2437,
+  "judge_completion_tokens": 351
+}

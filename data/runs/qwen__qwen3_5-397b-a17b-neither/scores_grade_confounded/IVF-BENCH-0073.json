@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly states no image was available, but it fails to use the provided Gardner score of 4AA for the actual morphology and instead discusses a generic framework and assumes only a minimum transferable embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, endometrial thickness, ovarian response, prior cycle history, and sperm data with prognosis reasonably well, though some links to embryo quality are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it ignores the provided 4AA grade, infers possible sperm DNA fragmentation without evidence, and ties low MII yield to embryo competence somewhat speculatively."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but recommendations such as routine PGT-A consideration at age 33 and stress/acupuncture emphasis are not strongly guideline-driven, and the omission of the known 4AA grade weakens Gardner-based alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future cycles, including luteal support review, trigger timing assessment, and possible sperm DNA fragmentation testing, though some recommendations are more speculative than case-mandated."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.0132,
+  "judge_latency_ms": 3756.7422079955577,
+  "judge_prompt_tokens": 2700,
+  "judge_completion_tokens": 340
+}

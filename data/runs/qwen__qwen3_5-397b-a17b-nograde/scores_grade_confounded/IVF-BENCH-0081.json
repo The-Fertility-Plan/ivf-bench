@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grading of 3AA by reclassifying the embryo as 4BB and describing ICM/TE as grade B despite the case data stating tightly packed ICM and cohesive TE. Some general blastocyst features are reasonable, but the morphology assessment is notably inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, endometrial thickness, BMI, diagnosis, sperm parameters, and partner age with embryo prognosis in a clinically meaningful way, though it overemphasizes speculative causes such as immune factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the incorrect morphology reassignment, labeling prior failed cycles as RIF without transfer details, and making probability adjustments from assumptions that are not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but recommendations such as ERA, NK-cell/immune testing, MTHFR screening, and routine dual-pathway luteal support are not strongly guideline-supported for unexplained repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for proceeding with transfer and possible future workup, including PGT-A and sperm DNA fragmentation testing, though some suggested investigations are controversial and not universally recommended."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012663,
+  "judge_latency_ms": 7088.580458999786,
+  "judge_prompt_tokens": 2416,
+  "judge_completion_tokens": 361
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone, describes the TE as a distinct cohesive ring despite limited visualization, and says the embryo is ready for hatching when a grade 3 blastocyst is expanded but not yet hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, BMI, alcohol use, prior failed cycle, endometrial thickness, and sperm data with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: DOR is said not to affect per-embryo chance yet is used as a prognostic negative, sperm motility is called normal despite being borderline/suboptimal depending on context, and the implantation estimate rationale is somewhat loosely quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo assessment and lifestyle counseling, but recommending 'do not freeze this embryo' is too absolute, calling 3AA a 'gold standard/top 10%' is overstated, and suggesting PGT-A because DOR may raise aneuploidy risk in a 32-year-old is not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, counseling on alcohol and weight, luteal support consideration, and future-cycle planning, though some recommendations are overly directive and lack nuance about individualized clinic protocols."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013344,
+  "judge_latency_ms": 5145.987665993744,
+  "judge_prompt_tokens": 2573,
+  "judge_completion_tokens": 375
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a compacted morula/early blastocyst and states Gardner grading is not applicable, despite provided lab data of 2AB full blastocyst. It fabricates image-based details and does not accurately address ICM/TE consistent with 2AB."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, endometrial thickness, and prior miscarriage reasonably well with prognosis, though some links are generalized and not tightly tied to the actual embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The overall structure is logical, but the core reasoning is undermined by the incorrect embryo-stage assessment, leading to inconsistent conclusions about transfer timing, grading applicability, and implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is partial alignment on general IVF principles, but key deviations include disregarding the provided Gardner score and broadly recommending PGT-A after a single miscarriage in a 30-year-old, which is not standard guideline-based advice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical suggestions such as proceeding with transfer, luteal support, and considering blastocyst culture for surplus embryos, but recommendations are somewhat generic and weakened by the incorrect morphology interpretation."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.011937,
+  "judge_latency_ms": 3674.6289580041775,
+  "judge_prompt_tokens": 2254,
+  "judge_completion_tokens": 345
+}

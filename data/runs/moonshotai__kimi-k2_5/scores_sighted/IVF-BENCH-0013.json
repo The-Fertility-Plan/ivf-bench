@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a very poor-quality blastulating embryo with absent/degenerate ICM and TE, but it misstates the expansion finding: Gardner 1 means blastocoel at least half the embryo, not <50%, and some image-specific details (e.g., clear arrest, specific granularity claims) are overstated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR diagnosis, ovarian response, endometrium, BMI, sperm parameters, and first-cycle status reasonably well, though some inferences (e.g., hidden oocyte quality issue, no backup embryos) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the morphology, but there are inconsistencies such as calling it Day 4 blastulation, implying developmental arrest from a single image, and mixing a stated 0-5% estimate with a separate 5-10% euploid scenario."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the grading discussion is broadly aligned with Gardner concepts, but there are notable deviations: incorrect definition of expansion grade 1, strong recommendations for PGT-A/embryo banking and adjuncts like DHEA/GH despite limited guideline support, and an overly absolute 'do not freeze' statement."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear counseling points, transfer expectations, luteal support, beta-hCG timing, and future-cycle considerations, though some recommendations are more opinion-based than guideline-driven."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013512,
+  "judge_latency_ms": 5852.622583013726,
+  "judge_prompt_tokens": 2524,
+  "judge_completion_tokens": 396
+}

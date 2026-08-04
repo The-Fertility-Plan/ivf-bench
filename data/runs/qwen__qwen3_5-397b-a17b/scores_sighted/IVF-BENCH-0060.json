@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a good-quality blastocyst and comments on ICM/TE, but overstates image certainty, inconsistently labels 3AA versus 4AA, and describes features like a clearly defined large blastocoel and prominent ICM more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF history, ectopic history, sperm concentration, BMI, diagnosis, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and understandable, but there are notable issues: contradiction around stage 3 versus 4, calling the embryo 'perfect' despite uncertainty, and using arbitrary percentage adjustments without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on favorable prognosis and recommending single embryo transfer in a young patient with a good-quality day-5 blastocyst, but includes overconfident statements about BMI significance, ectopic recurrence risk framing, and implantation percentages that are not tightly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical advice such as SET and ultrasound-guided transfer, but future cycle planning is incomplete and lacks more nuanced next-step recommendations for recurrent failure/ectopic evaluation."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01209,
+  "judge_latency_ms": 5034.724750003079,
+  "judge_prompt_tokens": 2375,
+  "judge_completion_tokens": 331
+}

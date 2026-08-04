@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's expansion stage, ICM density, and TE cohesiveness consistent with a 2AA Gardner score. Notes zona pellucida thinning appropriately. Minor limitation is acknowledging ICM is 'slightly obscured' which introduces some uncertainty, but overall the description aligns well with the provided grading data and typical 2AA morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-specific euploidy rates, BMI impact on implantation, ectopic history significance, ovarian reserve markers, sperm parameters, and endometrial thickness. The live birth history is correctly identified as a strong positive predictor. Minor gap: the sedentary lifestyle and its interaction with BMI/metabolic factors could have been more explicitly connected, and the Day 4 transfer timing (unusual - typically Day 5/6 for blastocysts) was not flagged as potentially noteworthy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality to patient factors to probability estimate. The 45-60% range is reasonable and the adjustments for BMI are explained. The response correctly distinguishes between implantation probability and ectopic risk. Minor inconsistency: classifying BMI 31.2 as 'obese' when it is technically 'overweight' (obese threshold is ≥30 by some definitions but WHO defines Class I obesity as 30-34.9, so this is borderline acceptable). The euploidy estimate of >90% for a 2AA at age 32 is slightly optimistic but defensible."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: serial beta-hCG monitoring for ectopic risk, early ultrasound confirmation, progesterone support, weight management counseling, and PGT-A consideration. The suggestion to review tubal status is appropriate given dual ectopic history. PGT-A recommendation is nuanced and appropriately caveated. The response does not contradict any major guidelines, though it could have referenced single embryo transfer (SET) policy more explicitly per current ESHRE guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: serial beta-hCG every 48 hours, early TVU at 5.5-6 weeks, progesterone support with obesity rationale, BMI target (<30), HSG/HyCoSy consideration, and PGT-A for future cycles. The ectopic surveillance protocol is particularly well-specified. Could be improved by addressing luteal support dosing specifics, discussing endometrial receptivity testing given 4 prior failures, or considering ERA/EMMA/ALICE testing given the unexplained diagnosis and recurrent failures."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.018768,
+  "judge_latency_ms": 12909.916582997539,
+  "judge_prompt_tokens": 2731,
+  "judge_completion_tokens": 705
+}

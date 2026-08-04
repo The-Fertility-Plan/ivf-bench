@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly confirms the 3AA Gardner grade and notes zona thinning, ICM compaction, and TE cohesion. However, the image actually shows a somewhat irregular, possibly degenerating or hatching blastocyst with complex internal architecture that appears more concerning than described. The model notes 'minor caveats' but doesn't fully capture the apparent morphological irregularities visible in the image, including what appears to be an unusual ICM structure and possible collapse or hatching artifact. The description is plausible but somewhat generic rather than precisely image-matched."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically connects age, AMH, FSH, BMI, smoking status, sperm parameters, endometrial thickness, and lifestyle factors to the embryo quality assessment. The male factor discordance analysis (noting normal concentration/motility suggesting teratozoospermia or DFI as likely cause) is particularly insightful. The 100% MII rate caveat about cytoplasmic maturity lagging nuclear maturity demonstrates sophisticated clinical thinking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured, with clear base rates and modifiers. The final range of 40-58% follows reasonably from the adjustments applied. The reasoning chain from embryo quality through patient factors to recommendations is consistent. Minor issue: the base rate of 55-70% for a 3AA at age 24 is slightly optimistic compared to most published literature, and the modifier arithmetic could be more explicitly justified, but overall the logic is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Strong alignment with ESHRE/ASRM guidelines throughout. eSET recommendation for age 24 is correct and well-justified. Gardner grading criteria are properly applied. Smoking cessation counseling aligns with ESHRE guidelines on lifestyle factors. Endometrial thickness thresholds are accurate. The PGT-A discussion appropriately notes low yield at age 24. Minor deduction for not explicitly addressing OHSS risk management given AMH of 6.15 ng/mL (borderline high responder territory) more thoroughly, and freeze-all consideration could have been more prominently featured."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Exceptionally actionable response with specific, prioritized recommendations organized by timing (pre-transfer, transfer decision, lifestyle, future planning). The three-scenario future planning framework is clinically practical. Specific thresholds are provided (DFI >25%, BMI target <27, specific activity recommendations). The checklist format for pre-transfer steps is immediately usable. Patient counseling points are clearly delineated. The smoking cessation recommendation includes specific referral pathways (NRT/varenicline). Alternative strategies for failed cycles are comprehensively addressed."
+    }
+  ],
+  "extracted_probability": 0.49,
+  "judge_cost_usd": 0.02388,
+  "judge_latency_ms": 16421.418291996815,
+  "judge_prompt_tokens": 4450,
+  "judge_completion_tokens": 702
+}

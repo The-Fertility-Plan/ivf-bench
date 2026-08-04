@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Provides a plausible and detailed blastocyst assessment with expansion stage, ICM, TE, and zona thinning/hatching comments; however, certainty is limited from a single image and the exact 4BB grading may be somewhat overconfident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, prior live birth and failed cycles, sperm parameters, partner age, and endometrial thickness well, though it could better contextualize the missing AMH/diagnosis details and uncertainty around protocol."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with a probability estimate that follows from the stated factors; minor issue is speculative emphasis on paternal age/DNA fragmentation and the protocol discrepancy discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and standard IVF considerations, but recommending PGT-A as 'strongly considered' and sperm DNA fragmentation testing is somewhat stronger than guideline-based evidence would support routinely in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear next-step recommendations for proceeding with transfer, luteal support, and future evaluation, though some suggestions remain somewhat generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.011373,
+  "judge_latency_ms": 4526.6185000000405,
+  "judge_prompt_tokens": 2256,
+  "judge_completion_tokens": 307
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0708",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 0DD Gardner score: poorly defined blastocoel, disorganized cellular architecture, absent/degenerative ICM, and irregular TE boundary. The description aligns well with the grading criteria. Minor omission: no mention of zona pellucida status, which could provide additional clinical information. Overall the morphological narrative is coherent and matches the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: AMH indicating DOR, low oocyte yield, sperm parameters ruling out male factor, and endometrial thickness as a favorable indicator. It correctly connects low AMH to oocyte competence and poor embryo quality. Minor gaps include: not fully addressing the tubal factor diagnosis implications, not discussing the long agonist protocol's appropriateness given DOR, and limited discussion of how the previous failed cycle informs current management beyond noting it as a risk factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of <5-10% follows reasonably from the morphological and clinical evidence presented. The response correctly identifies that young age provides a small caveat to the otherwise poor prognosis. One minor inconsistency: the response states sperm motility of 14.7% is 'excellent,' when in fact 14.7% progressive motility is below WHO reference values (>32% progressive motility), which could represent a mild male factor contribution that was overlooked. This is a notable analytical error but doesn't derail the overall reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines regarding blastocyst grading and DOR management. However, there are deviations: (1) classifying 14.7% motility as 'excellent' contradicts WHO 2021 criteria; (2) recommending mild stimulation/antagonist protocol for DOR patients is reasonable but the suggestion of Clomiphene-based protocols is somewhat outdated compared to current ESHRE DOR guidelines favoring antagonist protocols with or without adjuvants; (3) the recommendation to freeze all embryos for PGT-A in a DOR patient with very few eggs may not align with guidelines that caution against routine PGT-A in poor prognosis patients due to biopsy attrition risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: proceeding with transfer given it's the only option, counseling on low success probability, discussing donor oocytes, considering protocol changes, and recommending PGT-A if more eggs are retrieved. The inclusion of emotional counseling as a clinical consideration adds nuance. Slight weaknesses: no mention of ERA (endometrial receptivity array) testing, no specific protocol adjustments for the long agonist protocol that may have been suboptimal for a DOR patient, and the freeze-all recommendation could be more precisely contextualized given the single poor-quality embryo scenario."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.019071,
+  "judge_latency_ms": 16217.625958997814,
+  "judge_prompt_tokens": 2642,
+  "judge_completion_tokens": 743
+}

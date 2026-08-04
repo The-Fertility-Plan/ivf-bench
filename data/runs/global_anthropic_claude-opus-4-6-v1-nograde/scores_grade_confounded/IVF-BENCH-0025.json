@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 partially compacted morula and ignores the provided Gardner score 1DD, fabricating morula-specific features instead of describing a poor-quality early blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, diagnosis, endometrium, sperm, and first-cycle status, and relates them to prognosis despite the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured and mostly logical, but it is built on a major morphological misread and includes some questionable assumptions, which weakens the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but the embryo staging/grading discussion is not aligned with Gardner criteria and some suggestions (e.g., routine stimulation increase, ICSI consideration without indication) are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including luteal support, follow-up testing, and contingency planning, though some recommendations are somewhat generic or not tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012273,
+  "judge_latency_ms": 3824.121917001321,
+  "judge_prompt_tokens": 2431,
+  "judge_completion_tokens": 332
+}

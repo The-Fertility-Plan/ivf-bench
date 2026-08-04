@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0114",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 2BB blastocyst, but it inaccurately calls expansion 'fully expanded' while Gardner 2 is an early/full cavity-filling blastocyst rather than a fully expanded stage, and it asserts features like a clearly visible ICM and thin zona with more confidence than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "It mentions age and unexplained infertility and begins linking prior IVF history to prognosis, but the response is incomplete and does not meaningfully integrate BMI, prior biochemical pregnancy/miscarriage, sperm parameters, endometrium, or transfer timing with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning presented is generally logical and internally consistent, but it is incomplete and includes a notable grading inconsistency regarding expansion stage, limiting the strength of the conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner-style descriptors is broadly appropriate, but the interpretation of expansion stage is off, and the truncated response does not provide enough evidence-based recommendations to demonstrate strong guideline-level alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response does not reach concrete recommendations for transfer management or future cycle planning, so it offers essentially no actionable guidance."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010314,
+  "judge_latency_ms": 4434.627082999214,
+  "judge_prompt_tokens": 1793,
+  "judge_completion_tokens": 329
+}

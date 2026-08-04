@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 1DD. It fails to analyze the known poor morphology (early blastocyst with degenerative/absent ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, ovarian response, endometrium, BMI, and semen parameters well, though it does not connect these to the actual 1DD embryo grade because it missed the provided morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally logical, but a major premise is wrong because it assumes morphology is unavailable. This weakens the implantation estimate and conclusions for this specific embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based and consistent with IVF practice, including caution about add-ons, SET preference, uterine reassessment, and discussion of PGT-A. Minor limitation is failure to apply Gardner grading already provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future planning, including luteal support, uterine evaluation, endometriosis review, and PGT-A discussion. It is useful but less tailored than it should be because it overlooked the 1DD grade."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01563,
+  "judge_latency_ms": 3621.7041250056354,
+  "judge_prompt_tokens": 3585,
+  "judge_completion_tokens": 325
+}

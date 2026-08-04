@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0496",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with poorly defined ICM and TE, but it inaccurately calls the embryo expanded and says the zona is thinning/ready to hatch; the image and given Gardner 1DD are more consistent with an early blastocyst with blastocoel about half the embryo and no clear hatching features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH/limited oocyte yield, BMI, prior IVF outcomes, tubal factor, sperm parameters, and endometrial thickness into prognosis reasonably well, though it somewhat over-attributes poor morphology directly to aneuploidy and does not fully nuance that tubal factor itself does not worsen embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate is directionally consistent with a 1DD embryo, but there are notable issues: it contradicts the provided expansion grade by describing an expanded blastocyst, labels FSH 6.4 as elevated, and makes a somewhat unsupported leap from morphology to chromosomal abnormality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly consistent with poor prognosis for a 1DD embryo and reasonable counseling, but it overstates support for routine PGT-A in this setting and introduces donor eggs somewhat prematurely for a 38-year-old without stronger individualized framing; some morphology statements also do not align well with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer counseling and future planning, including expectation management, protocol review, weight optimization, and discussion of options. However, recommendations remain somewhat generic and lack more specific cycle-planning details."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.014019,
+  "judge_latency_ms": 6462.509667006088,
+  "judge_prompt_tokens": 2513,
+  "judge_completion_tokens": 432
+}

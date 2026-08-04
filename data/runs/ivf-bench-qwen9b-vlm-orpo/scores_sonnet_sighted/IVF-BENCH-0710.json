@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description but notably contradicts the provided Gardner score (4AA - hatching blastocyst) by stating 'no obvious large gap or major herniation of embryonic tissue through the zona' and downgrading the expansion stage. The image does appear to show a hatching blastocyst with herniation visible, which the model partially misses. ICM and TE descriptions are generally consistent with the image, but the hesitation about the hatching stage represents a meaningful inaccuracy given what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, BMI, AMH, FSH, endometrial thickness, sperm parameters, and smoking status. It correctly identifies the apparent contradiction between the DOR diagnosis and the relatively favorable AMH/FSH values and oocyte yield. The interaction between smoking and endometrial receptivity is noted. Minor gap: does not deeply explore how the antagonist protocol choice relates to DOR management or discuss luteal phase progesterone monitoring specifics."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 50-65% is logically derived from the combination of embryo quality, maternal age, and lack of PGT-A testing. The distinction between morphologically-assessed and euploid embryo outcomes is appropriately made. Minor inconsistency: the model questions the hatching status morphologically yet still accepts the AA grade for probability calculations without fully reconciling this tension."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation, appropriate PGT-A discussion for age 34, smoking cessation advice, no mandatory bed rest, standard luteal support mention, and appropriate beta-hCG timing. The nuanced PGT-A discussion reflecting current evidence that it may reduce efficiency with limited embryo numbers is well-aligned with current guidelines. No major deviations from established practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including smoking cessation, vitamin D and TSH checks, luteal support continuation, beta-hCG timing (9-11 days), and future cycle planning considerations including DOR reassessment and PGT-A discussion. The future cycle optimization points are practical. Slight deduction for not specifying luteal support protocol details and not addressing whether a freeze-all strategy was considered given the DOR diagnosis context."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.021744,
+  "judge_latency_ms": 14876.914874999784,
+  "judge_prompt_tokens": 4118,
+  "judge_completion_tokens": 626
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a blastocyst with a visible ICM and weaker TE consistent with 3AB, but it overstates image certainty, incorrectly says the embryo has hatched or is near hatching, and describes TE visibility and zona thinning more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, ovarian response, endometrium, prior outcomes, and sperm data with embryo quality reasonably well, though it overemphasizes paternal age and does not fully discuss BMI or the limited predictive value of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable leaps: paternal age is treated as the primary explanation for prior biochemical loss and as a major determinant of current prognosis without sufficient support, and the implantation estimate is only loosely tied to the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but recommending PGT-A as the most critical step for this profile and implying strong paternal-age-driven aneuploidy risk goes beyond guideline-supported certainty; morphology interpretation also departs somewhat from Gardner stage definitions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support, beta-hCG follow-up, and future consideration of SDF testing and metabolic optimization, though some recommendations are somewhat generic and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013722,
+  "judge_latency_ms": 5557.114708004519,
+  "judge_prompt_tokens": 2694,
+  "judge_completion_tokens": 376
+}

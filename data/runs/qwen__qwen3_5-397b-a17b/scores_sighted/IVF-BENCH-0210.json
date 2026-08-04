@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0210",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes visible features: the blastocyst does not clearly appear as a well-expanded, turgid 3AA with a distinct tightly packed ICM and uniformly cohesive TE on this image. It relies heavily on the provided grade rather than the actual visual evidence."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian reserve, BMI, prior failed cycle, sperm parameters, and endometrial thickness with prognosis reasonably well, though some links (e.g., AMH to mosaicism) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: calling 3AA the highest possible score, equating morphology too strongly with viability/euploidy, and giving a somewhat optimistic implantation estimate based on limited evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and not delaying transfer for modest overweight are guideline-consistent, but suggesting high AMH may justify PGT-A because of mosaicism risk is not well supported by standard IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with SET, lifestyle advice, and future cryopreservation/PGT-A discussion. Useful clinically, though some recommendations are broader than necessary and not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012873,
+  "judge_latency_ms": 4691.141208997578,
+  "judge_prompt_tokens": 2596,
+  "judge_completion_tokens": 339
+}

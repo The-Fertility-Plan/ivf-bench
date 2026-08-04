@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacted morula/early blastocyst and does not reflect the provided Gardner 3AB expanded blastocyst grading, leading to major stage and feature inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It appropriately links age and tubal factor to prognosis and comments on ovarian response, but omits several important interactions such as prior ectopic/miscarriage history, BMI, endometrium, sperm quality implications, and Day 4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weakened by the central morphological misread, so downstream conclusions about embryo status and transfer rationale are based on an incorrect premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It departs from Gardner grading interpretation by describing a morula/early blastocyst despite a stated 3AB blastocyst, and the discussion does not clearly align recommendations with standard blastocyst assessment conventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The partial response offers only broad comments and lacks specific, practical transfer or future-cycle recommendations tailored to this case."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.009261,
+  "judge_latency_ms": 3987.277084001107,
+  "judge_prompt_tokens": 1527,
+  "judge_completion_tokens": 312
+}

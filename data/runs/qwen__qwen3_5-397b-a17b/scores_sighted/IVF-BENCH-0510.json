@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0510",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but overstates visible degeneration with terms like apoptosis, large vacuoles, and non-viability that are not definitively discernible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, low oocyte yield, prior failed cycle, endometrial thickness, and semen data reasonably well, though it overinterprets the low egg number as poor response without AMH or stimulation details and speculates about sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable overreaches and inconsistencies, including calling the embryo definitively non-transferable/non-viable and inferring protocol failure or trigger issues without sufficient evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned with IVF practice, but absolute recommendations such as 'do not transfer' and claims of effectively zero chance are stronger than guideline-based counseling would usually support; some adjunct suggestions (GH, testicular sperm) are not standard first-line recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for transfer decision-making and future cycle evaluation, including protocol review and sperm workup, though some recommendations are somewhat aggressive or speculative rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013305,
+  "judge_latency_ms": 5768.939624991617,
+  "judge_prompt_tokens": 2530,
+  "judge_completion_tokens": 381
+}

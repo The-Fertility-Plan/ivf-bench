@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's expansion stage, ICM location and density, and TE cohesion consistent with a 2AA Gardner score. The observation of zona pellucida thinning is reasonable though not definitively confirmed in the image. The ICM positional description (10-11 o'clock) adds specificity. Minor issue: the image appears to show a somewhat irregular blastocoel with possible early signs of complexity, which the response doesn't fully address, but overall morphological description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age, oocyte yield, sperm parameters, and endometrial thickness with embryo quality. Notably, it correctly identifies the 6mm endometrial thickness as the primary limiting factor and appropriately questions the male factor diagnosis given the normal sperm parameters. It connects the Mediterranean diet and smoking cessation to implantation potential. Minor gap: AMH is listed as N/A but the response doesn't address this missing data point or its implications for reserve assessment beyond the oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through clinical factors to probability estimation. The 15-20% downward adjustment for thin endometrium leading to a 45-55% range from a 60-70% baseline is internally consistent. The identification of endometrial thickness as the primary bottleneck while acknowledging embryo quality as a compensating factor is coherent. The BMI comment (25.8 described as 'slightly overweight') is a minor inaccuracy as 25.8 is within normal BMI range, representing a small logical inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines including ultrasound-guided transfer, luteal phase progesterone support, hysteroscopy for thin lining investigation, and freeze-all strategy consideration. The 7.5-8mm threshold cited for optimal endometrial thickness aligns with published literature. The suggestion of PICSI/IMSI for high DNA fragmentation aligns with current evidence. Minor deviation: the response suggests adding estrogen during luteal phase with appropriate caveat about mixed evidence, which is acceptable but slightly outside standard protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations covering immediate transfer decisions (proceed with transfer, robust luteal support, ultrasound guidance), investigation pathways for thin lining (hysteroscopy, protocol changes), sperm DNA fragmentation testing with specific treatment alternatives (PICSI, IMSI, antioxidants), and lifestyle continuation advice. The freeze-all strategy suggestion with natural cycle vs. HRT FET alternatives demonstrates nuanced clinical thinking. Each recommendation is tied to specific clinical findings, making this immediately actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019611,
+  "judge_latency_ms": 14241.9762500067,
+  "judge_prompt_tokens": 3037,
+  "judge_completion_tokens": 700
+}

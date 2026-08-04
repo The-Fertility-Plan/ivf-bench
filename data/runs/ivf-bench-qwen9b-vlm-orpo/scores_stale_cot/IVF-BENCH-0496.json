@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0496",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It recognizes a poor-quality blastocyst with indistinct ICM/TE, but it is inconsistent with the provided Gardner 1DD and adds uncertain image-specific claims such as compact ICM, collapse, and no fragmentation/granularity that may not be reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH/low oocyte yield, prior IVF failures/miscarriage, tubal factor, BMI, endometrium, and semen parameters into prognosis reasonably well, though some interactions are only loosely developed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are notable inconsistencies: probability estimates vary (5-10%, 5-8%, 2-5%), embryo morphology is described both as having a compact ICM and as lacking a clear ICM, and OHSS discussion is not very relevant to this low-response case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent (single embryo transfer, cavity assessment with tubal factor/hydrosalpinx concern, cautious prognosis), but some recommendations are weakly supported or misplaced here, such as DAFI, donor-oocyte discussion at this stage, and OHSS/GnRH agonist emphasis in a low-yield cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers some practical next steps—consider SET, assess uterine cavity/hydrosalpinx, review protocol, optimize lifestyle, discuss PGT-A cautiously—but recommendations are diffuse and not tightly prioritized for this specific transfer."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.020883,
+  "judge_latency_ms": 6788.5525829624385,
+  "judge_prompt_tokens": 5021,
+  "judge_completion_tokens": 388
+}

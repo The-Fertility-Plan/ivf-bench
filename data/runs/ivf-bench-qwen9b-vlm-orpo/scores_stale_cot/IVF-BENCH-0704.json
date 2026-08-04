@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a poorly expanded blastocyst with absent/unclear ICM and sparse TE, consistent with 0DD, but introduces uncertainty about stage and suggests it does not look severely degenerated despite the lab grade, which softens the morphology more than the provided grading supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, FSH, oocyte yield, endometrial thickness, prior IVF outcomes, male factor diagnosis, partner age, and semen parameters well, linking favorable background factors against poor embryo morphology; AMH absence is noted appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical: poor morphology drives prognosis despite favorable maternal/endometrial factors. There is minor inconsistency in discussing the embryo as possibly early-to-full stage and not clearly degenerated while still accepting 0DD, but overall conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF counseling: poor-quality Day 5 blastocyst has low implantation potential, proceed with cautious counseling, and consider uterine review and sperm DNA fragmentation in recurrent poor outcomes. Slight overreach on recommending PGT-A as potentially necessary at age 35 with low embryo numbers prevents a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for current transfer counseling and future planning, including embryo selection context, uterine cavity review, sperm DNA fragmentation testing, review of fertilization/culture details, luteal support, and nuanced discussion of PGT-A and transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.018195,
+  "judge_latency_ms": 7920.825292007066,
+  "judge_prompt_tokens": 4140,
+  "judge_completion_tokens": 385
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes a poor-quality very early blastulating/compacting embryo, but inaccurately calls the sperm parameters excellent, describes relatively uniform blastomeres, and gives limited image-based detail on absent/degenerate ICM/TE and zona features; also conflates Day 4 morphology with blastocyst grading somewhat loosely."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, BMI, ovarian response, endometrium, and male factor reasonably well with embryo prognosis, though it overstates sperm quality and does not address missing AMH or nuances of Day 4 transfer timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are notable issues: it says male factor is ruled out despite the diagnosis and only borderline semen values, and it inconsistently refers to this as both a Day 4 transfer and a cleavage-stage transfer while using blastocyst grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner terminology but applies it somewhat awkwardly to a Day 4 embryo, overstates the role of prior live birth as overriding prognosis, and recommends PGT-A with rationale that is not fully guideline-consistent; saying transfer should proceed is too absolute without clinic-specific context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and future considerations, but recommendations are somewhat generic and lack specifics such as whether to culture further if possible, discuss low expected viability, or tailor future lab/transfer strategy."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012846,
+  "judge_latency_ms": 5431.756332996883,
+  "judge_prompt_tokens": 2452,
+  "judge_completion_tokens": 366
+}

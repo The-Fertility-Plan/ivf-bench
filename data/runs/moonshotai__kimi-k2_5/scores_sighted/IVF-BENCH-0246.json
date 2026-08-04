@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0246",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a blastocyst and broadly matches the provided 2AA label, but it overstates visible detail: the ICM is not clearly well-defined, TE cohesion/uniformity is hard to confirm from this image, and claims of symmetric expansion, minimal fragmentation, and clear cell-cell junctions are not reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH/response, BMI, tubal factor, prior IVF outcomes, endometrial thickness, and sperm parameters with embryo quality in a clinically meaningful way, though some links (e.g., DOR implying markedly higher aneuploidy at age 33) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical and the prognosis estimate is explained, but there are notable issues: calling prior 2 failed cycles 'RIF' is questionable, invoking 'empty follicle syndrome' is unsupported, and some deductions from morphology and DOR are stronger than the evidence allows."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (single embryo transfer, lifestyle optimization), but several are not well aligned with current evidence/guidelines: routine luteal hCG supplementation, strong recommendation for ERA, and strong endorsement of PGT-A in a young low-yield patient are not broadly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer and future planning, including SET, luteal monitoring, lifestyle changes, and contingency planning, though some actions are too prescriptive despite limited evidence."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015246,
+  "judge_latency_ms": 4967.529457993805,
+  "judge_prompt_tokens": 3047,
+  "judge_completion_tokens": 407
+}

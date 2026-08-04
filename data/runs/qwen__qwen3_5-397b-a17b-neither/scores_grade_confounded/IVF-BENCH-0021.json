@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes no image was provided, but it incorrectly states Gardner scoring cannot be applied here despite the case supplying a 0DD score, and it does not analyze the provided morphology data (early blastocyst with absent/degenerative ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometrium, smoking, ovarian response, sperm parameters, and cycle history well, though some conclusions about diagnosis mismatch and embryo-stage implications are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but it contains notable inconsistencies: dismissing the provided Gardner score, conflating Day 4 transfer with inability to use blastocyst morphology, and giving a probability estimate that does not fully account for the very poor 0DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, luteal support, review stimulation), but the claim that Gardner scoring is not applicable here and some speculative recommendations (e.g., routine SDF, CoQ10) reduce alignment with standard IVF guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future cycles, including diagnosis review, trigger assessment, culture strategy, and lifestyle counseling, though some advice is based on speculative assumptions rather than the provided embryo grade."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013647,
+  "judge_latency_ms": 4347.400833001302,
+  "judge_prompt_tokens": 2734,
+  "judge_completion_tokens": 363
+}

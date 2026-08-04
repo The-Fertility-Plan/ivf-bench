@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was provided and avoided fabricating morphology. It only gave hypothetical examples rather than claiming visible features. Because it did not analyze the actual image, it cannot score a 5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: age, prior live birth, ectopic history, endometrium, sperm parameters, smoking, alcohol, and prior cycles. It missed some nuance around BMI and overinterpreted FSH as ovarian reserve without AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable issues: it assumes a good-quality embryo without basis, gives a fairly specific implantation range despite absent morphology, and includes a questionable statement about Day 4 having lower ectopic risk than Day 5/6."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (early hCG/ultrasound after ectopic history, smoking cessation, tubal evaluation), but there are deviations: routine PGT-A is not clearly guideline-supported for a 29-year-old with male factor, and some statements about transfer day/ectopic risk are not well aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for this transfer and future planning, including early monitoring, counseling, lifestyle changes, and tubal assessment. Recommendations are useful, though some are somewhat overreaching given the limited data."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01554,
+  "judge_latency_ms": 5913.116915995488,
+  "judge_prompt_tokens": 3275,
+  "judge_completion_tokens": 381
+}

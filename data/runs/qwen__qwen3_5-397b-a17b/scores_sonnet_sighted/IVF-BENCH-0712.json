@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA features consistent with the provided score (expanded blastocyst, thinning zona, cohesive TE, dense ICM). However, the image itself appears quite grainy and low-contrast, making definitive morphological assessment difficult. The model confidently describes features like ICM location ('lower-left quadrant') and TE cohesiveness that are not clearly discernible in this low-quality microscopy image. The description largely mirrors the provided Gardner score text rather than independently analyzing the image, and notes cytoplasmic granularity which is one genuine observable feature. Some fabrication of detail not clearly visible warrants a score reduction."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-related aneuploidy risk, endometriosis impact on implantation and receptivity, AMH/ovarian reserve correlation with retrieval outcomes, endometrial thickness adequacy, and paternal age/sperm DNA fragmentation concerns. It connects the previous failed cycle to potential implantation issues and discusses fresh vs. frozen transfer considerations in the context of high AMH. Minor gap: BMI (25.8, normal) is not explicitly discussed, and the interaction between endometriosis staging and the specific stimulation protocol could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and consistent. The probability estimate (45-55%) follows reasonably from the stated adjustments: baseline for 3AA, downward adjustment for age-related aneuploidy risk (~50-60% euploidy at 36), further reduction for endometriosis, partial offset for excellent endometrial thickness. The fresh vs. frozen discussion is coherent. One minor inconsistency: the model states euploidy rates are ~50-60% at age 36 but then applies a 10-15% endometriosis reduction, yet the final range of 45-55% seems slightly optimistic given these compounding deductions. Overall the logic is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: PGT-A recommendation for age 36 with prior failure is appropriate, freeze-all strategy for high AMH/OHSS risk aligns with current evidence, luteal support for endometriosis is standard, and sperm DNA fragmentation testing for paternal age >40 with prior failure is guideline-consistent. The suggestion of Lupron depot suppression pre-transfer for endometriosis is evidence-supported. The mention of immunomodulators (prednisone) is noted as clinic-dependent, which is appropriately cautious given limited evidence. Gardner grading criteria are correctly applied."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: proceed with transfer, robust luteal support, alcohol cessation, fresh vs. frozen consideration with OHSS monitoring, PGT-A for future cycles, endometriosis suppression protocol, and sperm DNA fragmentation testing. The response provides clear next steps for both this transfer and future planning. Minor limitations: specific progesterone dosing/route not mentioned, no discussion of ERA (Endometrial Receptivity Array) testing which could be relevant given prior failure and endometriosis, and the immunomodulator suggestion lacks specificity on evidence base."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021579,
+  "judge_latency_ms": 18639.21858300455,
+  "judge_prompt_tokens": 3083,
+  "judge_completion_tokens": 822
+}

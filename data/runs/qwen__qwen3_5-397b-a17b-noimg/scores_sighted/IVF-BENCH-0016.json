@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0016",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it had no image and based morphology on the provided Gardner score. Its description broadly matches a 3AB conceptually, but it repeated the prompt's inconsistent wording ('expanded blastocyst' for stage 3) and did not assess the actual image, which appears less clearly expanded with somewhat sparse TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated age, FSH, tubal factor, prior ectopic/miscarriage, endometrial thickness, BMI, lifestyle, and sperm parameters with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, including recognition of the day-4/day-5 discrepancy and how prior ectopic/miscarriage affect prognosis. Minor issue: it conflates implantation and live birth probabilities somewhat."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET, hydrosalpinx evaluation, and avoiding bed rest are guideline-consistent. Some suggestions (ERA, thrombophilia/immunologic workup, stronger luteal support because of prior miscarriage) are more conditional and less universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including SET, tubal assessment, luteal support review, and lifestyle optimization. Useful and practical, though some future testing recommendations could be more tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014472,
+  "judge_latency_ms": 4896.765833997051,
+  "judge_prompt_tokens": 2964,
+  "judge_completion_tokens": 372
+}

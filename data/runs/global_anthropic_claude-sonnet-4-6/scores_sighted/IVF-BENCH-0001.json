@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with poorly defined ICM and TE, broadly consistent with 1DD, but it inaccurately states blastocoel <50% despite the provided Gardner score indicating at least half the embryo volume, and includes some speculative details such as a peripheral bleb and cytoplasmic debris."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, tubal factor, sperm quality, and endometrial thickness with embryo quality and prognosis well, though some links are somewhat overstated and not all factors are equally evidence-based."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are notable issues: it treats Day 4 blastocyst transfer as highly atypical/problematic, applies additive probability penalties somewhat heuristically, and labels prior failures as a recurrent implantation failure pattern without sufficient support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable, including counseling, luteal support, and considering uterine/tubal evaluation and PGT-A discussion at age 39, but ERA, thrombophilia/immunologic workup, and strong claims about alcohol and Day 4 blastocyst atypicality are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer counseling, endometrial review, luteal support, hydrosalpinx assessment, and future cycle planning, though some suggested investigations are more controversial than standard."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.015363,
+  "judge_latency_ms": 5249.165041008382,
+  "judge_prompt_tokens": 3116,
+  "judge_completion_tokens": 401
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was supplied and does not analyze the provided 3AB morphology, so it fails the morphology task despite avoiding fabrication."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, prior IVF outcomes, semen parameters, endometrium, and diagnosis well, though it misses linking the known 3AB grade to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with probability estimates tied to age and transfer context, but weakened by the mistaken premise that morphology was unavailable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines, including SET counseling, luteal support, uterine evaluation, and discussion of PGT-A, though not fully optimized because the known embryo grade was ignored."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support review, cavity assessment, and PGT-A discussion, but lacks grade-specific transfer counseling."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.014142,
+  "judge_latency_ms": 3579.632708002464,
+  "judge_prompt_tokens": 3329,
+  "judge_completion_tokens": 277
+}

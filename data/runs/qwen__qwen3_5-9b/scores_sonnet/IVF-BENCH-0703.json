@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0703",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA Gardner score components - expansion stage with thinning zona, dense ICM, and cohesive TE epithelium. The description of zona thinning 'particularly in the upper right quadrant' adds specific visual detail, though this level of specificity about quadrant location cannot be verified without seeing the actual image. Overall morphological description is consistent with a 3AA blastocyst and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age, BMI, smoking, endometrial thickness, sperm parameters, and previous cycle failure. It correctly identifies the 'high-quality embryo in suboptimal environment' paradigm. Minor gap: AMH of 1.56 ng/mL is not discussed in context of ovarian reserve adequacy for a 30-year-old (borderline low), and the antagonist protocol choice is not analyzed. The 100% MII maturation rate observation is a nice addition."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the probability estimate (35-50%) follows coherently from the identified risk factors. The deductions from base rate (~60%) with stepwise reductions for smoking, BMI/endometrium, and male factor are transparent and reasonable. Minor inconsistency: the response recommends against freezing citing risk, yet later recommends FET strategy for future cycles with thicker lining - this slight tension is not fully resolved. The sperm DNA fragmentation inference from low motility is clinically sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading and transfer criteria. However, the recommendation to 'not freeze the embryo' and proceed with fresh transfer despite a 6.5mm endometrium is questionable - many guidelines suggest canceling fresh transfer and freezing when endometrial thickness is suboptimal, especially with BMI concerns and potential OHSS risk. The ERA recommendation for a thin lining case is also somewhat misaligned, as ERA addresses timing not thickness. Antioxidant recommendations lack strong evidence-based support per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: smoking cessation with timeline, progesterone support details, SDF testing, ERA consideration, FET with target lining >8mm, and weight management goals. The immediate vs. future planning structure is clinically useful. Could be improved by specifying progesterone dosing protocols, providing specific BMI targets with timeline, or discussing endometrial priming options for the thin lining. The antioxidant list is specific but evidence quality should be noted."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.018192,
+  "judge_latency_ms": 14863.557541000773,
+  "judge_prompt_tokens": 2739,
+  "judge_completion_tokens": 665
+}

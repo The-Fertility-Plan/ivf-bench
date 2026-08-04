@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0412",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a hatching blastocyst with zona thinning/disruption and generally matches the provided 4BA grade; however, it overstates that the image 'clearly' shows distinct ICM/TE detail and says the ICM is on the right side, which is not unequivocally discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, prior cycle outcome, sperm parameters, and endometrial thickness with embryo quality well. It appropriately emphasizes young age and embryo grade, though it somewhat overinterprets the DOR label and stimulation response without full clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall reasoning is structured and mostly logical, but there are notable overreaches: claiming the image aligns 'perfectly' with 4BA, inferring exceptional fertilization/cleavage efficiency without fertilization data, and suggesting low oocyte yield should dampen implantation probability for this embryo transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations for single embryo transfer and considering fresh transfer with an adequate endometrium are guideline-consistent. However, suggesting PGT-A because of DOR/one failed cycle and proposing adjuvants like growth hormone are not strongly evidence-based or routinely guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for this transfer and future planning, including SET, checking for contraindications to fresh transfer, and considering uterine evaluation if unsuccessful. Some future-cycle suggestions are less evidence-based, which limits maximal actionability."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014199,
+  "judge_latency_ms": 5541.718874999788,
+  "judge_prompt_tokens": 2713,
+  "judge_completion_tokens": 404
+}

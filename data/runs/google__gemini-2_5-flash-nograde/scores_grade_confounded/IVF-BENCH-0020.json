@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and does not reconcile this with the provided Gardner 2BA full blastocyst grading; it also infers ICM/TE indistinctness rather than describing the stated B/A quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, tubal factor, prior live birth, sperm motility, and endometrial thickness, though it overstates ovarian reserve interpretation without AMH and does not fully address the Day 4 vs Gardner-stage inconsistency."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a notable inconsistency between the morphology interpretation and the supplied Gardner score/transfer context, which weakens the implantation estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a favorable 32-year-old patient and standard luteal support are broadly guideline-consistent, though discussion of PGT-A and ERA is somewhat generic and not tightly indication-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, cryopreservation, and possible sperm workup, though some suggestions remain broad rather than cycle-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.0144,
+  "judge_latency_ms": 4043.019249998906,
+  "judge_prompt_tokens": 3045,
+  "judge_completion_tokens": 351
+}

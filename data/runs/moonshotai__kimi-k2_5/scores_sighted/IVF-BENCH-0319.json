@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0319",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA label appropriately, but overstates image-visible detail: the blastocyst does not clearly appear fully expanded with a complete uniform TE layer, and claims such as minimal debris, high nuclear-to-cytoplasmic ratio, and complete circumferential cohesive epithelium are not reliably discernible from this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, DOR, AMH/FSH, oocyte yield, sperm parameters, BMI, endometrial thickness, and first-cycle status with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, especially around morphology versus age-related aneuploidy risk and the probability estimate. Minor issues include somewhat assertive assumptions about euploidy rates and endometrial impact."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but several recommendations are not strongly guideline-supported or are controversial (embryo glue, routine aspirin, GH/DHEA/testosterone, ERA, and a firm recommendation against biopsy/PGT-A in this setting)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support, and future cycle planning, including contingency planning. Slightly reduced by inclusion of some speculative or nonstandard adjuncts."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01563,
+  "judge_latency_ms": 4810.61512499582,
+  "judge_prompt_tokens": 3375,
+  "judge_completion_tokens": 367
+}

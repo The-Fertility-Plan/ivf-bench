@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0695",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with a 4AA Gardner score - expanded blastocoel, tightly packed ICM, cohesive TE, and hatching status. However, the description is largely derived from the provided Gardner score text rather than independent image analysis. The description of ICM 'on the right side' and zona appearing 'slightly irregular or stretched' shows some attempt at image-based observation, but the analysis lacks precise detail about cell counts, symmetry, or specific hatching characteristics that would demonstrate true independent morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating the DOR diagnosis (AMH 0.12) with the exceptional embryo yield, correctly framing it as a 'poor responder with high quality embryo' scenario. It addresses male factor, paternal age, endometrial thickness, BMI, and female age in relation to prognosis. It correctly identifies sperm DNA fragmentation as a concern given male factor diagnosis and age 42. Minor gap: FSH of 7.5 is not discussed, and the interaction between DOR and egg quality at age 36 could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through clinical risk stratification to probability estimate. The downward adjustment from theoretical 50-60% to 30-50% based on aneuploidy risk and DOR is coherent. The response correctly notes that morphology alone cannot confirm euploidy. Minor inconsistency: the response characterizes sperm parameters as 'excellent' while simultaneously flagging male factor diagnosis as a significant risk - this tension is acknowledged but could be more clearly resolved."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response aligns with ESHRE/ASRM Gardner grading criteria and correctly applies blastocyst grading principles. The endometrial thickness range cited (7-14mm) is consistent with guidelines. However, the response is cut off before completing Section 5 recommendations, so full guideline alignment for clinical management cannot be assessed. The probability range of 30-50% is reasonable but slightly conservative compared to published data for 4AA blastocysts even in this demographic. PGT-A discussion is appropriate given the clinical context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is significantly incomplete - Section 5 (Recommendations) is cut off mid-sentence after 'Immediate Recommendations:' with no actual recommendations provided. This is a major deficiency as the actionability of the response depends heavily on this section. The earlier sections hint at considerations (PGT-A, sperm DNA fragmentation testing) but no concrete clinical action steps, transfer protocols, luteal support recommendations, or future cycle planning guidance is provided, severely limiting practical utility for a clinician."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.017313,
+  "judge_latency_ms": 13725.519207997422,
+  "judge_prompt_tokens": 2346,
+  "judge_completion_tokens": 685
+}

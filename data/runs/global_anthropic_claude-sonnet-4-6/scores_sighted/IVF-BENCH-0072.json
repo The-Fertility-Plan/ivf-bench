@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a blastocyst with moderate expansion and loose TE consistent with a 3-stage embryo, but it over-interprets image details by asserting vacuolization, ICM fragmentation/granularity, asymmetric zona thinning, and cellular debris that are not reliably discernible from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: very young age, good ovarian reserve, tubal factor, favorable sperm, endometrial thickness, and prior failed cycle, and relates them to prognosis. Some links are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is internally organized, but several deductions rest on uncertain image findings and speculative penalties, reducing the strength of the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic blastocyst grading discussion is aligned, but recommendations such as routine ERA after one failed cycle, aspirin without a clear indication, NK-cell testing, broad thrombophilia workup, EMMA/ALICE, and MTHFR testing are not well supported by major IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for proceeding with transfer, luteal support, follow-up testing, and contingency planning. However, some suggested investigations/interventions are not evidence-based enough to merit the highest score."
+    }
+  ],
+  "extracted_probability": 0.46,
+  "judge_cost_usd": 0.01524,
+  "judge_latency_ms": 5350.299957994139,
+  "judge_prompt_tokens": 3260,
+  "judge_completion_tokens": 364
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0510",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it inaccurately states the blastocoel is less than half the embryo despite the provided grade 1 definition, and it overcalls severe degeneration/arrest beyond what can be confidently seen from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior IVF failure, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it speculates somewhat about hidden male-factor issues and ovarian dysfunction without enough supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the poor prognosis follows from the 1DD grading, but there are minor inconsistencies such as calling sperm parameters 'excellent' while emphasizing male factor and labeling the embryo essentially non-viable based partly on stronger claims than the image alone supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are broadly aligned with IVF practice, but describing a 1DD embryo as definitively non-viable/unsalvageable is stronger than guideline-based morphology interpretation alone, and the transfer recommendations are incomplete."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins to counsel about the transfer and mentions future considerations, but the recommendations section is truncated and lacks concrete next-step planning for transfer decision-making, stimulation adjustment, or further workup."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013155,
+  "judge_latency_ms": 6081.4525409950875,
+  "judge_prompt_tokens": 2565,
+  "judge_completion_tokens": 364
+}

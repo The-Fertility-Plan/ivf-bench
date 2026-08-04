@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage (Grade 3), describes the thinning zona pellucida, correctly locates the ICM as a dense tightly packed cluster, and describes the TE as a cohesive epithelium visible along the right curvature. The description aligns well with the image. Minor limitation: the description of the ICM at '6 o'clock' is reasonable but the image shows it more centrally-lower, and the response could have noted the slightly granular appearance of the ICM more precisely. Overall good morphological correlation with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (29) linked to euploidy probability, AMH/oocyte yield connected to ovarian reserve, endometriosis discussed in context of both oocyte quality and endometrial receptivity, previous failed cycle interpreted as implantation rather than embryo development issue, endometrial thickness flagged as borderline, sperm parameters assessed for male factor contribution, paternal age linked to DNA fragmentation risk, and lifestyle factors (stress, alcohol, diet, sedentary) each connected to specific physiological mechanisms affecting outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and the probability estimate (55-65%) logically follows from the baseline adjustment framework presented. The deductions from endometriosis, prior failure, and lining thickness are coherent. Minor inconsistency: the response states euploidy likelihood >60% for a 29-year-old but literature typically cites higher rates (~70-80% for this age group), slightly undermining the baseline. The conclusion that embryo quality is the dominant variable is well-supported and consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: luteal phase support, RIF investigation criteria (2 failed transfers), ERA testing, chronic endometritis workup with CD138, hydrosalpinx evaluation, and GnRH agonist pre-treatment for endometriosis are all evidence-based. The 7.5mm endometrial threshold discussion aligns with current literature. Minor deviation: the suggestion of low-dose aspirin/heparin without confirmed thrombophilia is not standard first-line per ESHRE RIF guidelines. PGT-A recommendation for a 29-year-old with single prior failure is somewhat premature per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and clinically practical: immediate lifestyle modifications (alcohol cessation, stress management), specific luteal support considerations, clear criteria-based RIF investigation pathway with named tests (CD138, ERA, SDF testing), specific endometriosis suppression protocol (GnRH agonist 2-3 months pre-transfer), and conditional PGT-A recommendation. The response distinguishes between current cycle management and future cycle planning clearly, providing a logical decision tree that a clinician could directly act upon."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.020805,
+  "judge_latency_ms": 16780.959541996708,
+  "judge_prompt_tokens": 3235,
+  "judge_completion_tokens": 740
+}

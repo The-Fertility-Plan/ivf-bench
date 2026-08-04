@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a poor-quality/collapsed early blastocyst with indistinct ICM and poor TE, but it misinterprets the expansion stage by calling 1DD 'non-viable' and overstates findings like necrosis/arrest that cannot be concluded from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, AMH, endometrium, tubal factor, and sperm parameters reasonably well, though some links to embryo degeneration are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains notable overreach: equating 1DD with biological non-viability, treating a Day 4 embryo as if it should behave like a Day 5 blastocyst, and concluding transfer should be canceled with near certainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While poor morphology is appropriately recognized, recommending definite cancellation and stating essentially zero chance for a 1DD embryo is stronger than standard morphology-based guidance; the theoretical infection/immune-risk statement is not guideline-based, and routine PGT-A in a 27-year-old is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps such as reviewing other embryos, assessing hydrosalpinx, considering sperm DNA fragmentation, and reviewing protocol/lab factors, though the recommendation to categorically avoid transfer is overly absolute."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013218,
+  "judge_latency_ms": 5302.890125007252,
+  "judge_prompt_tokens": 2531,
+  "judge_completion_tokens": 375
+}

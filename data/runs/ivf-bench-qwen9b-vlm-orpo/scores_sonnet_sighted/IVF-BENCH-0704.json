@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the limited expansion, poorly defined ICM, and disorganized TE consistent with the Gardner 0DD score. It correctly notes the embryo resembles a fragmented late morula/very early blastocyst and acknowledges the lack of cohesive trophectoderm layer. Minor limitation is that it doesn't specifically comment on the zona pellucida appearance or provide more granular detail about the cellular texture visible in the image, but overall the morphological description aligns well with what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: female age 35, FSH, BMI, endometrial thickness, prior cycle outcomes (miscarriage + no pregnancy), male factor diagnosis, sperm parameters, and lifestyle factors. Notably, it correctly identifies the discrepancy between the 'male factor' diagnosis label and the actually favorable semen parameters, and raises the important point about paternal age 40 potentially contributing to sperm DNA fragmentation. The interaction between embryo quality and prior miscarriage history is well-explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 3-10% logically follows from the poor morphology tempered by favorable maternal factors. The response correctly identifies embryo quality as the dominant limiting factor while acknowledging favorable uterine and patient factors. Minor inconsistency: the response labels sperm parameters as 'male factor' concern while simultaneously noting they exceed WHO thresholds, creating slight tension, though this is ultimately addressed. The live birth estimate being lower than implantation rate is appropriately noted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines regarding Gardner grading interpretation, PGT-A indications for recurrent pregnancy loss at age 35, single embryo transfer principles, and sperm DNA fragmentation testing recommendations. The recommendation for hysteroscopy/saline sonogram after miscarriage aligns with recurrent pregnancy loss guidelines. The discussion of TESE for refractory cases is appropriately caveated as individualized. Minor gap: doesn't explicitly reference endometrial receptivity array (ERA) testing which some guidelines discuss for recurrent implantation failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: proceed with cautious counseling if only embryo available, sperm DNA fragmentation testing (with specific tests named: SCSA/Comet/DFI), PGT-A discussion with appropriate caveats about embryo numbers, uterine cavity assessment, review of fertilization method (IVF vs ICSI), luteal support review, and male antioxidant therapy with appropriate evidence caveats. The response provides clear decision trees and distinguishes between immediate transfer management and future cycle optimization with specific actionable steps at each stage."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.023784,
+  "judge_latency_ms": 16308.851333000348,
+  "judge_prompt_tokens": 4403,
+  "judge_completion_tokens": 705
+}

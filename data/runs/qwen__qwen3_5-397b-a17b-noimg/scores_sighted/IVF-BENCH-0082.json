@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner score. Its ICM/TE descriptions match the textual grade, but it repeated an inconsistency by calling grade 4 a hatching blastocyst; true hatching is usually stage 5, and the visible image appears more consistent with a hatching/herniating blastocyst than a classic stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, male factor, prior failed cycle, sperm parameters, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some inferences about blastulation yield are somewhat speculative because fertilization/blast count data are incomplete."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, embryo grade, lining, and risk modifiers. Minor issues include overinterpreting low blastocyst yield and overstating the benefit of the reported hatching status."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: mislabeling Gardner stage 4 as hatching, suggesting PGT-A after a single failed cycle in a 28-year-old with male factor, and implying routine protocol changes without enough cycle detail."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for transfer and contingency planning, including luteal support review, avoiding additional assisted hatching, and considering sperm DNA fragmentation testing. Some suggestions are useful but not fully individualized due to limited cycle details."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014667,
+  "judge_latency_ms": 6088.439332990674,
+  "judge_prompt_tokens": 2839,
+  "judge_completion_tokens": 410
+}

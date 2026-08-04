@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst as consistent with a 3AA grade, noting thinned zona, dense ICM, and cohesive TE. However, there is a notable error: the model states the blastocyst 'has hatched or is in the process of hatching,' which is inconsistent with a Grade 3 expansion (expanded blastocyst with thinning zona, not yet hatching — hatching would be Grade 4-5). The image itself appears to show a somewhat granular, complex internal structure that the model interprets generously. The TE description is vague ('slightly less distinct'), and the model does not comment on any visible fragmentation or vacuolation apparent in the image. Overall mostly accurate but with a meaningful grading error on expansion stage interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (34), PCOS diagnosis with high oocyte yield, sperm parameters, endometrial thickness, and prior biochemical pregnancy. It connects these factors to prognosis meaningfully. Minor gaps include not addressing the moderate alcohol consumption (4-6 drinks/week) as a risk factor for implantation and pregnancy outcomes, and AMH being N/A is not discussed. The sedentary lifestyle and its interaction with PCOS is also not addressed. Otherwise, integration is solid and clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but contains some inconsistencies. The model cites a base rate of >70-80% for euploid embryos but then estimates 60-75% — the downward adjustment for biochemical pregnancy history is reasonable, but the model conflates morphological grading with euploid status without PGT-A confirmation. The statement that Grade 3 indicates hatching contradicts standard Gardner criteria, creating an internal inconsistency. The probability estimate is plausible but the reasoning chain connecting all factors to the final number could be more rigorous. The conclusion to proceed with transfer is well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines. Recommendations for luteal phase support and PGT-A consideration after recurrent loss are appropriate. However, the misclassification of Grade 3 as 'hatching' deviates from standard Gardner criteria (hatching = Grade 4-5). The recommendation to monitor endometrial thickness and add estrogen if below 7mm is reasonable but the threshold cited (7mm) aligns with some but not all guidelines. The suggestion of FET for remaining embryos is appropriate. The alcohol consumption (4-6/week) should have been flagged per ASRM guidelines recommending abstinence during IVF. Overall mostly guideline-consistent with notable omissions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are largely specific and practical: proceed with transfer, aggressive luteal support, endometrial monitoring, PGT-A consideration for future cycles, PCOS metabolic optimization, and FET banking strategy. The response provides clear next steps for both immediate transfer and future planning. It could be improved by specifying progesterone dosing protocols, addressing alcohol cessation explicitly, and providing more detail on the metabolic workup for PCOS (e.g., fasting insulin, HOMA-IR). Nevertheless, a clinician could act on most of these recommendations directly."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020946,
+  "judge_latency_ms": 18118.8865419972,
+  "judge_prompt_tokens": 2842,
+  "judge_completion_tokens": 828
+}

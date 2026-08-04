@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided, despite the case giving 3BA with explicit expansion, ICM, and TE descriptors. It fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, sperm, BMI, endometrium, uterine factor, smoking, and oocyte maturity, though it misses linking these to the provided 3BA morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is undermined by the false premise that morphology was unavailable, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: single embryo transfer at age 33, smoking cessation, uterine cavity optimization, and not routinely requiring PGT-A. Minor limitation is failure to apply Gardner grading data that were provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future cycles, including uterine evaluation, luteal support, smoking cessation, and review of trigger timing/MII yield. It is useful, though less tailored than it could be because it ignored the known 3BA grade."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013947,
+  "judge_latency_ms": 3707.6222079995205,
+  "judge_prompt_tokens": 2949,
+  "judge_completion_tokens": 340
+}

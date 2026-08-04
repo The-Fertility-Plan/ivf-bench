@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology because no image was provided to it and did not fabricate embryo features. However, it therefore offered no actual image-based morphological analysis despite the embryo appearing assessable in the reference image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, oocyte yield, prior live birth, semen quality, endometrial thickness, BMI, prior failures, and unspecified diagnosis into prognosis reasonably well, though without linking these to actual observed embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability ranges tied to age, uterine factors, and unknown embryo quality. Minor limitation is that the estimate rests heavily on missing morphology data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: single embryo transfer, attention to luteal timing, avoidance of unsupported add-ons, and selective consideration of PGT-A. Slight deduction because some statements are generalized rather than tightly guideline-specific."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and failure workup, including cavity assessment, embryo data review, and selective adjunct testing. Useful and specific, though limited by inability to comment on the actual embryo."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.015348,
+  "judge_latency_ms": 5245.866124998429,
+  "judge_prompt_tokens": 3541,
+  "judge_completion_tokens": 315
+}

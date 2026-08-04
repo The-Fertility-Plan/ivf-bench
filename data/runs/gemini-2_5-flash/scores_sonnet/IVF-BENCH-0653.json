@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion grade 2, ICM grade B, TE grade A) and provides reasonable descriptions of each. However, the visual assessment of the actual image is vague and generic ('blastocoel is visible,' 'distinct cellular structures'), suggesting limited actual image analysis. No observations about zona pellucida, specific cell counts, or other visible morphological details are provided. The response largely restates the provided Gardner score rather than independently analyzing the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: young age, AMH/FSH values, sperm parameters, BMI concerns, and lifestyle factors are all connected to prognosis. The Day 4 transfer timing anomaly is appropriately flagged and discussed. The interaction between unexplained infertility and embryo quality is addressed. Minor gap: endometrial thickness listed as N/A is not discussed as a concern, and the 'COCs retrieved: None' discrepancy is noted but not fully resolved clinically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-65% is reasonably derived from the stated factors. The response correctly notes that Day 4 blastocyst development is a positive sign and appropriately qualifies the ICM B grade. One minor inconsistency: the response states implantation for euploid blastocysts in 26-year-olds 'often exceeds 60-70%' but then estimates 55-65%, which is slightly lower without fully explaining the downward adjustment beyond the B-grade ICM."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: single embryo transfer is appropriately recommended for a young patient, luteal phase support is mentioned, PGT-A is correctly positioned as not routinely indicated for a 26-year-old first cycle but considered after repeated failure. ERA and hysteroscopy recommendations for recurrent implantation failure are guideline-consistent. Gardner grading interpretation is accurate. Minor issue: the response doesn't clarify that Gardner grading is standardized for Day 5, and Day 4 blastocyst scoring nuances are not fully addressed per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET is clearly recommended with rationale, endometrial preparation targets (7-12mm, trilaminar) are specified, luteal phase support is mentioned, and a clear hierarchy of next steps for failed transfer is provided (PGT-A, ERA, hysteroscopy, protocol change, psychological support). The response could be more specific about progesterone type/dosing or timing considerations for a Day 4 transfer, and nutritional counseling for the low BMI patient could be more concrete."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021498,
+  "judge_latency_ms": 14506.109374997322,
+  "judge_prompt_tokens": 3666,
+  "judge_completion_tokens": 700
+}

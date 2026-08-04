@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted it could not see the image, but it then assumed a generic Day 4 morula/early cavitating stage and did not analyze the visible embryo, which appears blastocyst-like rather than a compact morula. No major fabricated image details, but morphology assessment is not accurate to the provided image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH, BMI, tubal factor, prior live birth, sperm quality, endometrium, and lifestyle into prognosis and distinguishes reserve from embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible probability estimate tied to stated factors. Minor issue: conclusions rely on a generic Day 4 assumption rather than the actual image morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: acknowledges Gardner scoring limits on Day 4, appropriate luteal support, no bed rest, cautious stance on PGT-A in a 27-year-old, and reserve counseling. Minor speculative points include growth hormone and protocol-switch suggestions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer follow-up and future planning, including luteal support, beta-hCG timing, reserve monitoring, culture strategy, and fertility preservation discussion. Some recommendations remain somewhat generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013224,
+  "judge_latency_ms": 4854.955667004106,
+  "judge_prompt_tokens": 2688,
+  "judge_completion_tokens": 344
+}

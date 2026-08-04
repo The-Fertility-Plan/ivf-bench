@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes features consistent with the Gardner 2AA score but makes a notable claim about the zona pellucida appearing thin, which is not typically characteristic of a Grade 2 (full blastocyst) — thinning is more associated with Grade 4-6 expanded/hatching blastocysts. The description of ICM and TE largely mirrors the provided lab data rather than demonstrating independent image analysis. The claim that this is a Day 4 blastocyst with accelerated development is interesting but the model over-emphasizes zona thinning for a Grade 2 embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors including female age, tubal factor diagnosis, ovarian response (13 COCs/11 MII), sperm parameters, endometrial thickness, BMI, FSH, lifestyle factors, and partner age. Each factor is meaningfully connected to embryo quality and prognosis. The model correctly identifies tubal factor as a mechanical issue suggesting unimpaired gamete quality, and appropriately contextualizes the partner's age against acceptable sperm parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The model correctly identifies the Day 4 blastocyst development as accelerated and uses this as a positive prognostic indicator. The probability estimate of 60-70% is well-reasoned and supported by the evidence presented. One minor issue: the model heavily emphasizes the accelerated Day 4 development as a strong euploidy predictor, which while plausible, is stated with more certainty than the evidence warrants. The overall logic chain from observations to conclusions is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for a young patient with good-quality embryo, appropriate luteal phase support, alcohol cessation counseling, and reasonable approach to PGT-A (not indicated for first cycle at age 33 but considered if repeated failures). The Gardner grading interpretation is mostly correct. Minor deviation: the response could have been more nuanced about the Day 4 transfer timing, which is somewhat unusual (most transfers are Day 3 or Day 5)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Clear, specific recommendations including SET, alcohol cessation, luteal phase support, lifestyle optimization, embryo banking consideration, and conditional PGT-A recommendation. The response provides practical next steps for both the current transfer and future planning. Could be improved with more specific progesterone dosing recommendations, follow-up timeline, and more detailed discussion of what to do if this transfer fails. The response was also cut off at the end, losing some potential recommendations."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.033325,
+  "judge_latency_ms": 14764.87495796755,
+  "judge_prompt_tokens": 3325,
+  "judge_completion_tokens": 668
+}

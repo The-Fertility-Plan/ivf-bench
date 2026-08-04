@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0293",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model acknowledges visual ambiguity and notes the image appears to show a compact cluster of cells, possibly morula or early blastocyst, with no clearly delineated blastocoel. It then appropriately defers to the laboratory-assigned Gardner score of 3AA and accurately interprets each component. However, for a 3AA expanded blastocyst, the description of the image itself is somewhat vague and doesn't fully reconcile the visual appearance with the assigned grade. The zona pellucida observation is minimal. There's an error stating the embryo 'has successfully hatched or is about to hatch' for Grade 3, when Grade 3 actually means expanded with thinning zona, not hatching (that would be Grade 4-5)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of multiple clinical factors including maternal age, previous live birth, BMI, partner age, sperm parameters, endometrial thickness, and lifestyle factors. The 'Quality over Quantity' framing is apt. The observation about the male factor diagnosis being potentially morphology-related given good count/motility is insightful. The integration of how these factors interact with embryo quality and prognosis is well done, though could have discussed AMH in more detail relative to ovarian reserve expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally coherent but has some issues. The response was cut off mid-sentence in the probability section, leaving the reasoning incomplete. The characterization of 6 COCs as 'poor yield' is debatable for a 37-year-old with AMH of 2.29 - this is actually a reasonable response. The statement that Grade 3 means the embryo 'has successfully hatched or is about to hatch' is incorrect and contradicts the provided definition. The probability range of 40-60% is reasonable but the justification is incomplete due to truncation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with guidelines. The Gardner grading interpretation is largely correct except for the hatching error for Grade 3. The age-related aneuploidy risk discussion is appropriate. However, calling 37 'Advanced Maternal Age' in IVF contexts is slightly imprecise (AMA is typically ≥35 in obstetrics, but in IVF the concern is more about diminished ovarian reserve and aneuploidy rates). The response doesn't mention PGT-A which would be a relevant guideline-based consideration. No mention of assisted hatching considerations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was truncated and never completed the recommendations section (Section 5). While risk factors and favorable indicators are identified, there are no specific transfer recommendations, no future cycle planning advice, no mention of PGT-A for future cycles, no luteal phase support recommendations, no lifestyle modification suggestions, and no discussion of cryopreservation strategy. The incomplete response significantly limits actionability."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.02936,
+  "judge_latency_ms": 16448.46200000029,
+  "judge_prompt_tokens": 2277,
+  "judge_completion_tokens": 719
+}

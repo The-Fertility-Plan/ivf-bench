@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocoel with thinning zona, compact ICM described as a solid cohesive mass, and sparse TE cells forming a loose epithelium. The spatial descriptions (ICM on left, TE on right/top) suggest genuine image engagement. Minor limitation: the description lacks more precise quantitative detail about cell counts or specific zona thickness measurements, and the characterization of ICM texture as 'granular' is slightly imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-aneuploidy risk correlation, AMH-yield discrepancy analysis, sperm quality assessment, endometrial thickness evaluation, and previous miscarriage context. The connection between high AMH and possible PCOS with potential egg quality implications is noted. Minor gap: the tubal factor diagnosis and its implications for transfer approach (e.g., ectopic risk considerations) are not addressed, and BMI of 26.2 is not discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-45% follows reasonably from the evidence: young age as positive, 3AB as good but not top-tier, TE grade B as slight negative. The recommendation to proceed with transfer is well-supported. Minor inconsistency: the response suggests PGT-A consideration but then recommends against it, which is handled adequately but could be cleaner. The PCOS inference from AMH alone without other diagnostic criteria is a slight logical leap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading, transfer decisions, and luteal support. However, the suggestion of 'Microdose Flare' protocol for a high-AMH patient is potentially misaligned - microdose flare is typically used for poor responders, not high-reserve patients. The PGT-A discussion is reasonable but the framing around aneuploidy rates (10-15% at age 29) is slightly conservative per current literature. The thrombophilia workup recommendation after one miscarriage aligns with some but not all current guidelines which typically require recurrent losses."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, review stimulation protocol with specific alternatives, metabolic workup for PCOS, thrombophilia screening if transfer fails. The future cycle planning section provides concrete action items. Slight weakness: the stimulation protocol recommendation incorrectly suggests microdose flare for a high-responder, and specific FSH dose adjustments or trigger considerations (e.g., dual trigger) for the low-yield issue are not mentioned. Overall still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.019089,
+  "judge_latency_ms": 14639.209291002771,
+  "judge_prompt_tokens": 2873,
+  "judge_completion_tokens": 698
+}

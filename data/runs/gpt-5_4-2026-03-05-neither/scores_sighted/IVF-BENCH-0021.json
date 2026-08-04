@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology because no image was provided to it, and it did not fabricate specific embryo features. However, it therefore did not analyze the visible embryo image, so accuracy against the actual morphology is limited rather than strong."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve markers, oocyte maturity, sperm parameters, endometrium, smoking, protocol, and cycle history into prognosis and transfer planning, including noting the discordance of the DOR label with AMH/retrieval data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is internally consistent, clearly structured, and the implantation estimate is logically tied to the uncertainty in morphology, favorable age, and modifiable risk factors such as smoking."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based and consistent with IVF practice: caution about applying Gardner grading to Day 4, preference for single embryo transfer at age 30, no routine PGT-A, and smoking cessation. Minor limitation is that some probability estimates are generalized rather than guideline-derived."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future cycles, including luteal support adherence, OHSS monitoring, smoking cessation, review of maturity yield, and consideration of Day 5/6 culture. Recommendations are useful, though some remain necessarily generic because morphology data were unavailable."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015933,
+  "judge_latency_ms": 4962.916208998649,
+  "judge_prompt_tokens": 3446,
+  "judge_completion_tokens": 373
+}

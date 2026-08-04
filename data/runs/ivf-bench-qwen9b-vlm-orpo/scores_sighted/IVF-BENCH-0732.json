@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally cautious and mostly consistent with a blastocyst image, but it overstates visible confidence in ICM and TE quality from a single frame and does not address that the image appears somewhat collapsed/irregular relative to the stated 2AA full blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates maternal age, BMI, FSH, tubal factor, endometrium, semen parameters, prior cycle history, and low MII yield with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with appropriate caveats about morphology limits and tubal disease; probability estimate is broadly supported, though somewhat optimistic given uncertainty in image-stage concordance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: reliance on lab grading, single embryo transfer at age 33 with a good-quality day-5 blastocyst, attention to hydrosalpinx, luteal support, and cautious use of PGT-A. Minor issue is accepting the provided grading label '2AA full blastocyst' without clarifying Gardner stage terminology inconsistency."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for current transfer and future cycles, including SET, hydrosalpinx evaluation, luteal support, follow-up hCG/ultrasound, and review of stimulation/trigger timing for low maturity yield."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014862,
+  "judge_latency_ms": 4530.199375003576,
+  "judge_prompt_tokens": 3164,
+  "judge_completion_tokens": 358
+}

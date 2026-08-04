@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly notes very poor-quality appearance and lack of clear ICM/TE, but overstates the image as resembling a degenerated oocyte or 1-cell zygote rather than a poor early blastocyst; also inaccurately describes no blastocoel cavity despite a small cavity being compatible with 1DD."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, oocyte yield, sperm factors, endometrial thickness, and lifestyle with prognosis reasonably well, though AMH is unavailable and FSH interpretation is somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic supports a very poor prognosis, but there are notable inconsistencies: calling sperm parameters good then normal morphology without morphology data, and suggesting freezing a 1DD embryo rather than transfer despite discussing Day 4 transfer ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Recognizes poor prognosis of a 1DD embryo, but several recommendations are not guideline-concordant, including suggesting cryopreservation of such a poor embryo and early donor egg discussion based largely on one poor embryo/FSH 8.5; transfer-day interpretation is also muddled."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical counseling and future-cycle suggestions, but recommendations are partly nonspecific and include questionable steps; lacks nuanced transfer decision-making tied to actual embryo availability and clinic policy."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013086,
+  "judge_latency_ms": 6026.691125007346,
+  "judge_prompt_tokens": 2522,
+  "judge_completion_tokens": 368
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0076",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates visible certainty from the image, incorrectly says the embryo has successfully hatched or is about to hatch, and describes a clear ICM/TE despite the image being somewhat indistinct."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve, endometrium, sperm data, and male factor diagnosis with embryo quality reasonably well, though some links (e.g., stress effects, implied hidden sperm defects) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The assessment is logically structured and the prognosis generally follows from the stated factors, but there are minor overreaches such as attributing substantial impact to stress and suggesting very high theoretical success rates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles and Gardner grading, but includes less evidence-based claims about stress/cortisol and suggests robust progesterone support specifically due to BMI/stress without clear guideline basis; the hatching statement is also not morphologically accurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, weight optimization, possible sperm DNA fragmentation testing, and early pregnancy monitoring, though recommendations are somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013056,
+  "judge_latency_ms": 4711.9914579961915,
+  "judge_prompt_tokens": 2622,
+  "judge_completion_tokens": 346
+}

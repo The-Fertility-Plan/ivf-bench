@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality hatching blastocyst, but it hedges between 4AA/4AB/5AA/5AB despite the provided 4AA grade and infers details from a single image that are not fully verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, BMI, diagnosis, sperm data, and first-cycle status well, though some links are somewhat generic and it overstates sperm quality despite a male-factor label."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly internally consistent, with a probability estimate that broadly follows from embryo quality and patient age; minor issues include speculative comments about male factor and PGT-A."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with IVF practice, especially recommending SET for a good-prognosis patient, but suggestions like assisted hatching, ERA, and relatively liberal PGT-A consideration are not strongly guideline-driven for this first-cycle good-prognosis case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer and contingency planning, though some are somewhat generic and a few future steps would usually depend on failure history or additional findings."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013893,
+  "judge_latency_ms": 4028.1950420030626,
+  "judge_prompt_tokens": 3061,
+  "judge_completion_tokens": 314
+}

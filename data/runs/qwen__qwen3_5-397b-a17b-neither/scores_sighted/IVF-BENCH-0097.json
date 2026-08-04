@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided inventing a Gardner grade or specific embryo features. It only discussed general blastocyst concepts, so there are no clear false morphological claims, but it did not analyze the visible embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, prior cycle, sperm factors, BMI, diagnosis, and endometrial thickness into prognosis reasonably well, though some links were somewhat generic and not tightly tied to actual embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible probability range based on age and Day 5 transfer. Minor issues include overinterpreting unexplained infertility and prior failure, but overall logic is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and luteal support are guideline-consistent, but recommending PGT-A as highly recommended at age 35 after one failed cycle is stronger than most evidence-based guidance, and ERA after 2 failures is not well supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, and possible further testing. Some recommendations are useful but a few are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01353,
+  "judge_latency_ms": 4812.015125004109,
+  "judge_prompt_tokens": 2795,
+  "judge_completion_tokens": 343
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel cavity, thinning zona pellucida, compact ICM in upper-right quadrant, and cohesive trophectoderm with visible intercellular junctions. The tabular format correlating reported vs. image findings is well-structured. Minor limitation is the acknowledgment that image resolution limits full assessment, and some descriptions (e.g., 'granularity in TE cells') may be inferred rather than clearly visible, preventing a perfect score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects AMH/FSH to ovarian reserve adequacy, flags the suboptimal MII maturation rate (53%), addresses paternal age 40 in context of sperm DNA fragmentation risk, links tubal factor diagnosis to expected normal uterine cavity, and incorporates lifestyle factors with nuanced impact assessments. The interaction between embryo quality and patient-specific factors (e.g., no PGT-A + aneuploidy risk at age 32) is explicitly modeled in the probability estimate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The base implantation rate is appropriately set for a 3AA blastocyst at age 32, with clearly justified upward and downward adjustments. The final probability range (52-62%) follows coherently from the evidence. The distinction between implantation rate, clinical pregnancy rate, and live birth rate is correctly applied. The note that PGT-A confirmation would shift the estimate to 55-65% live birth is internally consistent and well-reasoned."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommending single embryo transfer (SET) at age 32 with good-quality blastocyst, appropriate luteal phase support dosing, ultrasound-guided transfer, and evidence-based dismissal of post-transfer bed rest. Gardner grading criteria are correctly applied. Minor deviations include the optional aspirin recommendation (not universally guideline-supported for standard cases without thrombophilia) and progesterone dosing range (600-800mg vaginal) which is within but at the higher end of typical protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: a detailed transfer protocol checklist, specific luteal support agents with doses/routes/duration, a clear β-hCG testing timeline, and a well-structured future cycle planning section with conditional branches (if transfer fails vs. succeeds). The suggestion to consider dual trigger for MII optimization, SDF testing given paternal age, ERA timing guidance, and NIPT recommendation post-transfer (given no PGT-A) all demonstrate nuanced, case-specific actionability that a clinician could directly implement."
+    }
+  ],
+  "extracted_probability": 0.57,
+  "judge_cost_usd": 0.021345,
+  "judge_latency_ms": 14240.29624999821,
+  "judge_prompt_tokens": 3550,
+  "judge_completion_tokens": 713
+}

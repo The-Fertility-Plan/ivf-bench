@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0672",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the Gardner 0DD classification and describes the key features (small blastocoel, degenerative ICM and TE, granular appearance). However, the description of the blastocoel location as 'likely the upper right quadrant' suggests uncertainty, and the description of 'thick zona pellucida' and 'large cellular mass' may be fabricated details not clearly verifiable from the image. The morphological description is mostly consistent with the provided grade but lacks precision in image-specific observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, including female age, AMH, PCOS diagnosis, previous live birth, endometrial thickness, and male age as a risk factor for sperm DNA fragmentation. The connection between paternal age (48) and poor embryo quality is clinically relevant and well-articulated. However, the response does not fully address the PCOS implications for stimulation protocol, the moderate alcohol consumption (4-6/wk) as a meaningful risk factor, or the significance of the 3 previous cycles with mixed outcomes in depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is cut off before completing the full assessment, missing sections on risk factors/favorable indicators, implantation probability estimate, and recommendations. The reasoning presented is generally logical, particularly the link between paternal age and embryo quality. However, the truncated response creates significant gaps, and the 'good egg, bad sperm' framing is somewhat oversimplified. No probability estimate is provided, which is a major omission given the task requirements."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation aligns with established criteria. The mention of sperm DNA fragmentation in relation to paternal age is evidence-based. However, the response is incomplete and does not address whether transfer of a 0DD blastocyst is recommended per ESHRE/ASRM guidelines (which would generally advise against transferring such poor-quality embryos). No formal recommendations section is present due to truncation, limiting full assessment of guideline alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated and does not reach the recommendations section. No specific next steps for this transfer decision, future cycle planning, or alternative strategies (e.g., cycle cancellation, sperm DNA fragmentation testing, antioxidant supplementation, PGT-A considerations) are provided. The partial analysis, while informative, fails to deliver the actionable clinical guidance required by the task."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.014787,
+  "judge_latency_ms": 12085.835916004726,
+  "judge_prompt_tokens": 1829,
+  "judge_completion_tokens": 620
+}

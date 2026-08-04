@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0753",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label and image as an expanded blastocyst with visible ICM and thinned zona, but it overstates certainty and includes details not reliably discernible from this single image (e.g., exact cell counts, continuous cohesive TE all around, minimal fragmentation)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, PCOS, prior failed cycles, endometrial thickness, ovarian reserve, sperm parameters, and embryo quality into prognosis reasonably well, though some links (especially PCOS to higher aneuploidy and strong RIF framing) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but several conclusions are stronger than the evidence supports, including labeling this as a likely RIF pattern after only two failed cycles and assigning specific penalty percentages without clear basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Contains guideline-concordant elements such as favoring single embryo transfer and considering uterine evaluation after repeated failures, but deviates by endorsing aspirin, intensified progesterone, ERA, and PGT-A in ways that are not routinely supported for this scenario; PCOS-related aneuploidy claims are also questionable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning if unsuccessful, including eSET and possible hysteroscopy/workup, though some recommendations are more aggressive than standard evidence-based practice."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014334,
+  "judge_latency_ms": 5422.774291000678,
+  "judge_prompt_tokens": 2843,
+  "judge_completion_tokens": 387
+}

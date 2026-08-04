@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0105",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst assessment, but it overstates image certainty: the ICM is not clearly a dense compact A-grade cluster at 9 o'clock, TE cohesion/uniformity is not convincingly visible throughout, and calling it clearly 'expanded with thinned zona' relies heavily on the provided Gardner score rather than the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor diagnosis, ovarian response, endometrial thickness, prior cycle history, and sperm motility with prognosis reasonably well, though AMH is unavailable and some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent, with a plausible probability estimate tied to age and embryo grade; minor issues include overstating concern from a single failed cycle and inferring subtle implantation pathology too readily."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are guideline-concordant, but suggesting thrombophilia/immune testing after one failed cycle and lifestyle claims about exercise improving pelvic blood flow are not strongly evidence-based; assisted hatching suggestion is also weakly supported here."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including eSET and possible uterine evaluation if unsuccessful, though some future-workup suggestions are broader than typically indicated after only one failed cycle."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.0135,
+  "judge_latency_ms": 5007.139374996768,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 372
+}

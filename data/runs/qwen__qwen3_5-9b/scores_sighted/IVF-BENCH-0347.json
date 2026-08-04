@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0347",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes poor ICM/TE consistent with 1DD, but inaccurately calls it an expanded blastocyst with a large well-defined blastocoel and slightly thinned zona; the image/lab grade indicate an early blastocyst (stage 1) with only partial blastocoel expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm quality, BMI/lifestyle, tubal factor, and endometrial thickness with the poor embryo grade, appropriately identifying embryo quality as the main limiting factor, though some claims about egg quality/euploidy are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low implantation estimate fits the poor morphology, but there are notable inconsistencies such as describing grade 1 as expanded and stating transfer is better than waiting for a Day 6 embryo/canceling without sufficient basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are aligned (poor prognosis for 1DD, counseling, SET generally reasonable), but recommending PGT-A as highly recommended in a 33-year-old first cycle and suggesting freeze-all/claims about ideal lining and transfer superiority are not well supported by standard guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical counseling points and broad transfer/future-cycle suggestions, but recommendations are somewhat generic and include questionable advice rather than nuanced case-specific planning."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013038,
+  "judge_latency_ms": 5214.668207991053,
+  "judge_prompt_tokens": 2481,
+  "judge_completion_tokens": 373
+}

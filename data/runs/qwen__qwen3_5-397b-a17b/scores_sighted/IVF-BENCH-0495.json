@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0495",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a poor-quality early blastocyst with absent/degenerate ICM and TE, but it incorrectly states expansion 1 means less than half the embryo; Gardner 1 is blastocoel at least half the embryo. It also adds speculative features like vacuolization and severe fragmentation/arrest not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF failures, endometrial thickness, sperm data, and embryo grade reasonably well. It appropriately emphasizes maternal age and embryo quality, though some links (e.g., stress effects, RIF framing) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low prognosis estimate follows from the poor embryo grade, but there are notable issues: misinterpretation of expansion grade 1, calling prior failures '3 failed pregnancies and 1 biochemical pregnancy,' and assuming likely non-viability too categorically."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent in recognizing very poor prognosis for a 1DD day-5 blastocyst and suggesting counseling/consideration of PGT-A. However, recommending ERA and immunologic/thrombophilia workup for repeated failure is not strongly guideline-supported in routine practice, and some statements are more absolute than evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for counseling, embryo prioritization, protocol review, sperm DNA fragmentation testing, and future planning. Some suggestions are useful but a few are not sufficiently nuanced or guideline-driven."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.013938,
+  "judge_latency_ms": 7971.506458998192,
+  "judge_prompt_tokens": 2646,
+  "judge_completion_tokens": 400
+}

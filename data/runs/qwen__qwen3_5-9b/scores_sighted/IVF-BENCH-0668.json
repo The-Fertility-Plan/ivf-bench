@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3AC blastocyst and correctly identifies sparse TE and visible zona, but it overstates full expansion/readiness for hatching and describes some specific features (e.g., clearly thinned zona on one side, prominent ICM occupying significant cavity) more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior IVF failures, smoking, BMI, endometrium, ovarian reserve markers, and sperm parameters with embryo quality in a clinically meaningful way, though the DOR characterization is somewhat overstated and some interactions could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical: poor TE plus advanced age and repeated failures lowers prognosis despite good ICM and favorable endometrium. Minor issues include conflating TE grade with hatching difficulty and moving between implantation and live birth estimates without fully distinguishing them."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on transferability of a 3AC embryo, age-related aneuploidy risk, and smoking cessation, but recommendations for routine sperm DNA fragmentation testing, broad endorsement of PGT-A, and suggesting ICSI to reduce sperm DNA damage are more controversial and not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer counseling, smoking cessation, and future-cycle considerations such as discussing PGT-A and additional male-factor workup. Some suggestions are practical, though a few are not sufficiently individualized or evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.125,
+  "judge_cost_usd": 0.01431,
+  "judge_latency_ms": 6250.858875006088,
+  "judge_prompt_tokens": 2790,
+  "judge_completion_tokens": 396
+}

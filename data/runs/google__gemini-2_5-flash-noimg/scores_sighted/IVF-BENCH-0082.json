@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and relies on the supplied Gardner 4BB grade rather than inventing image-specific findings. However, it repeats the prompt's wording with a minor inconsistency by calling expansion 4 a 'hatching blastocyst, herniating through zona' rather than the standard expanded blastocyst description, so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, prior failed cycle, sperm parameters, endometrium, and lifestyle with embryo quality and prognosis. The interaction between prior failure and current favorable factors is discussed well, though some points are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to age, embryo grade, and endometrial thickness while tempering for prior failure. Minor issues include slightly overstating the significance of hatching/expansion and some speculative discussion around male factor and ERA."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly guideline-concordant, especially support for single embryo transfer in a young patient with a good-quality blastocyst. However, suggesting ERA after only one failed cycle and leaning toward PGT-A in a young patient after a single unsuccessful transfer are not strongly supported by current evidence/guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and contingency planning, including SET, luteal support, review of prior cycle details, uterine cavity assessment, and sperm workup. Some recommendations are useful but a few are not optimally prioritized for this specific case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016926,
+  "judge_latency_ms": 6519.102334001218,
+  "judge_prompt_tokens": 3532,
+  "judge_completion_tokens": 422
+}

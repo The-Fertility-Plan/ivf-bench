@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0546",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a blastocyst with a visible cavity and loosely defined ICM/TE, but it inaccurately calls it 'partially developed' and assigns TE as C-grade despite the provided lab grade being 2BB; zona and expansion comments are somewhat imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, especially maternal age, prior live births, endometrial thickness, BMI, and semen parameters, though it overreaches slightly on male-factor DNA integrity without supporting data and cannot address AMH because it is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with prognosis driven appropriately by age-related aneuploidy and moderate morphology; minor inconsistency arises from describing the embryo as 2BB while also implying C-grade TE."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice and Gardner-based interpretation, including cautious counseling about age, untested embryos, and selective discussion of PGT-A; however, some speculative add-ons and the morphology misclassification prevent a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, future cycle planning, possible sperm DNA fragmentation testing, and ectopic surveillance, though some suggestions remain somewhat general rather than tightly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.14,
+  "judge_cost_usd": 0.014283,
+  "judge_latency_ms": 5490.227708010934,
+  "judge_prompt_tokens": 3071,
+  "judge_completion_tokens": 338
+}

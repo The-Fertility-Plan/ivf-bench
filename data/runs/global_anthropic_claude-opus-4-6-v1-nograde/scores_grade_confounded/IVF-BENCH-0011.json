@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the embryo as a Day 4 partially compacting morula, while the provided laboratory grade is Gardner 1DD, i.e. an early blastocyst with degenerative/absent ICM and TE. It fabricates morula-specific features such as cell count, compaction status, excluded cells, and fragmentation rather than describing blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age-related aneuploidy risk, low AMH/small cohort, tubal factor, sperm parameters, endometrial thickness, and first-cycle context, and connects these to prognosis and transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured and the prognosis estimate is explained, but it is undermined by the incorrect foundational morphology and by treating the case as a morula transfer rather than a poor-quality early blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is substantial misalignment with Gardner grading interpretation and embryo-stage assessment. Some recommendations are reasonable, but suggestions such as ERA and thrombophilia screening after a single failure are not guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, luteal support, beta-hCG timing, and future cycle planning, though some future-workup suggestions are overly broad or premature."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.012963,
+  "judge_latency_ms": 4678.197125002043,
+  "judge_prompt_tokens": 2451,
+  "judge_completion_tokens": 374
+}

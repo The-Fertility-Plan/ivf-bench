@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0524",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The description is largely consistent with the Gardner 2AA grading provided, but there are some concerns. The model describes the blastocoel as 'completely filling the embryo' and cells 'pushed to the periphery creating a distinct ring,' which is more consistent with a higher expansion stage (3-4) than stage 2. A stage 2 blastocyst has the blastocoel filling the embryo but without significant thinning of the zona. The ICM and TE descriptions are reasonable and consistent with AA grading, though the specific localization ('lower-right quadrant') may or may not match the actual image. The zona pellucida observation is somewhat contradictory—described as intact but 'likely thinning,' which hedges without committing to what's actually visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model appropriately connects maternal age to oocyte quality, notes the somewhat low AMH relative to age but good response, correctly observes that the sperm parameters appear within normal WHO ranges and questions the male factor diagnosis (suggesting morphology or DNA fragmentation), integrates endometrial thickness as favorable, and considers BMI, stress, and lifestyle factors. The connection between the previous failed cycle and current prognosis is well-handled."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 50-60% is reasonable and well-justified with baseline rates, positive adjustments for embryo quality, and negative adjustments for prior failure. One minor issue: the model states 2AA is 'the highest possible morphological score,' which is technically incorrect—a more expanded blastocyst (e.g., 4AA, 5AA, 6AA) could be considered higher quality overall. Also, the model somewhat contradicts itself by calling the sperm parameters normal while still using 'Male Factor' as a risk modifier. However, overall the logic flows well."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with clinical guidelines. SET recommendation is appropriate per ASRM guidelines for this patient profile. The suggestion of PGT-A, ERA testing, and sperm DNA fragmentation testing for future cycles are all evidence-based. Luteal phase support recommendation is standard. The Gardner grading interpretation is mostly correct. Minor deviation: stating 2AA is the 'highest possible' grade is inaccurate per Gardner criteria. The probability estimate is reasonable and within published ranges for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical. SET is clearly recommended with rationale. Future cycle planning includes concrete next steps: sperm DNA fragmentation testing, PGT-A consideration, ERA testing, lifestyle modifications with specific targets (BMI toward 25, moderate exercise examples). Stress management suggestions are specific (mindfulness, acupuncture, counseling). Could be slightly more specific about progesterone support protocols or timing considerations, but overall very actionable."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.03171,
+  "judge_latency_ms": 23428.08654200053,
+  "judge_prompt_tokens": 2737,
+  "judge_completion_tokens": 721
+}

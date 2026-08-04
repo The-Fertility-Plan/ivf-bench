@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response is internally conflicted about the image and ultimately asserts specific blastocyst features (clear blastocoel, thin zona, cohesive TE, tightly packed ICM) that are not reliably supported by the visible image alone; it leans heavily on the provided Gardner grade rather than image-grounded morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including female age, BMI, tubal factor, prior failed cycle, endometrial thickness, and paternal age with sperm parameters, and relates them to prognosis, though some claims about FSH/ovarian reserve and paternal-age impact are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning contains major contradictions, especially repeated reversals on whether the image is a blastocyst or degenerating oocyte, and the final implantation estimate is not consistently justified from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly IVF-consistent, but there are notable deviations: incorrect/unclear Gardner expansion descriptions, overemphasis on paternal age as a major determinant of aneuploidy/implantation, and strong PGT-A recommendations that are more aggressive than guideline-based individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for current transfer and future planning, including proceeding with transfer, considering PGT-A in future cycles, nutritional counseling, and possible sperm DNA fragmentation testing, though some recommendations are not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014085,
+  "judge_latency_ms": 5819.782207952812,
+  "judge_prompt_tokens": 8332,
+  "judge_completion_tokens": 367
+}

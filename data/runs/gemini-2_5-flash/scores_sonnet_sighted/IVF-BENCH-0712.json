@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes expansion, ICM, and TE features consistent with the Gardner 3AA score provided in the lab data, but the actual image appears to show a somewhat granular, possibly degenerate or poor-quality blastocyst with significant cytoplasmic debris and vacuolation rather than a pristine 3AA. The model largely echoes the provided Gardner score rather than critically analyzing the image independently, missing visible signs of cytoplasmic fragmentation and granularity apparent in the microscopy image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors including age, AMH, FSH, endometriosis diagnosis, previous failed cycle, sperm parameters, and endometrial thickness. It correctly identifies endometriosis as a key risk factor affecting implantation and connects the previous failed cycle to potential endometrial receptivity issues. Minor gap: BMI and lifestyle factors are mentioned but their interactions with endometriosis and IVF outcomes could be more deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 35-50% follows reasonably from the baseline estimate adjusted downward for endometriosis and prior failure. The stepwise reasoning from favorable indicators to risk factors to final probability is coherent. Minor issue: the claim that endometriosis reduces implantation by '20-40% or more' is presented without nuance about severity staging, and the baseline 55-65% figure could be better justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations largely align with ESHRE and ASRM guidelines including ERA testing, hysteroscopy before repeat transfer, consideration of GnRH agonist downregulation for endometriosis, PGT-A discussion, and thrombophilia screening for recurrent implantation failure. The suggestion of laparoscopy for endometriosis management is evidence-based. Minor deviation: immunological workup recommendations (NK cell testing) remain controversial and not universally endorsed by ESHRE/ASRM guidelines without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations separated into current transfer and future cycle planning categories. Specific tests (ERA, hysteroscopy, thrombophilia screening, PGT-A) and treatments (GnRH agonist suppression, laparoscopy) are named with rationale. The recommendations are appropriately sequenced and nuanced. Slight weakness: timing recommendations for GnRH agonist use and specific protocols could be more precise, and the acknowledgment that ERA is 'too late for this transfer' is appropriately practical."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020646,
+  "judge_latency_ms": 15285.18812499533,
+  "judge_prompt_tokens": 3567,
+  "judge_completion_tokens": 663
+}

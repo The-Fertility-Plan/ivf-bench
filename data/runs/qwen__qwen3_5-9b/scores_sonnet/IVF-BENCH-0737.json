@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinned zona pellucida, tightly packed ICM in the lower-right quadrant, and cohesive TE cells. The spatial descriptions (ICM in lower-right, blastocoel in upper-left) suggest genuine image interpretation. Minor limitation is the acknowledgment that TE is 'slightly less distinct' without further elaboration, and the description lacks finer details like cell count estimates or zona thickness measurement."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age advantage, endometriosis impact on receptivity, recurrent failure history as RIF/RPL phenotype, sperm parameters, endometrial thickness, and lifestyle factors. It correctly identifies the disconnect between good embryo quality and poor outcomes. Minor gaps include not fully exploring the low oocyte yield relative to AMH (possible poor response or endometriosis-related follicular compromise) and not addressing the pattern of biochemical pregnancies suggesting possible implantation vs. early pregnancy loss distinction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability adjustment from >60% base rate down to 30-50% is coherent given the RIF history and endometriosis. The response correctly identifies that embryo quality alone doesn't explain repeated failures, pointing to uterine/systemic factors. Minor inconsistency: calling 3AA 'the highest quality grade available' is slightly inaccurate (4AA, 5AA, 6AA exist in Gardner system), and the sperm motility of 22.9% is below WHO reference values (>42%) but was characterized as 'within normal limits,' which is an error."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines regarding RIF workup, hysteroscopy recommendation, and PGT-A consideration. However, characterizing 22.9% motility as 'within normal limits' contradicts WHO 2021 criteria (reference value >42% total motility). The immune workup recommendation (NK cells, HLA) is presented without sufficient caveat about limited evidence base, which ESHRE guidelines explicitly caution against routine use. PGT-A recommendation for a 27-year-old with RIF is reasonable but could better reference ESHRE RIF guidelines (2023) more precisely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: proceed with transfer, RIF workup components (thrombophilia, immune, hysteroscopy), PGT-A for future cycles, lifestyle modifications, and endometriosis management. The response provides clear next steps for both current and future cycles. Could be improved by specifying ERA (Endometrial Receptivity Analysis) testing given RIF history, mentioning specific luteal phase support protocols, or addressing whether frozen vs. fresh transfer considerations apply. The lifestyle advice, while valid, lacks specific targets."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.019137,
+  "judge_latency_ms": 14939.252916999976,
+  "judge_prompt_tokens": 2664,
+  "judge_completion_tokens": 743
+}

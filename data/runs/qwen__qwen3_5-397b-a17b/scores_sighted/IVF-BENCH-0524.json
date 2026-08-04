@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0524",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AA label, but it overstates certainty from the image, calls it 'top-tier/highest possible' despite stage 2 not being top expansion, and localizes ICM/TE features somewhat more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, BMI, prior failed cycle, male factor context, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some points are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability estimate tied to age and embryo quality; minor issues include overstating embryo grade significance and some speculative links (stress, pelvic blood flow, hidden DNA fragmentation)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognostic framing are guideline-concordant, but suggesting PGT-A and especially ERA after a single failed transfer is more controversial/not routinely recommended, and calling 2AA the highest possible score is inaccurate relative to Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and contingency planning, including SET and follow-up considerations, though some recommendations are broader than necessary and a few are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.012876,
+  "judge_latency_ms": 4573.709375006729,
+  "judge_prompt_tokens": 2632,
+  "judge_completion_tokens": 332
+}

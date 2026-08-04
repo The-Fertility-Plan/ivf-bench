@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0353",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a blastocyst and notes good ICM/TE in line with the provided 2AA label, but the key expansion description is inaccurate: it says the blastocoel occupies less than 50% and calls it early-to-mid blastocyst/likely Day 5, which conflicts with Gardner 2 (blastocoel fills the embryo) and the stated transfer day 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, oocyte yield, BMI, endometrium, male factor, and paternal age with embryo quality reasonably well, though it does not discuss day-4 transfer implications or fully balance paternal-age effects with the actual semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there are notable inconsistencies between the morphology interpretation and the supplied Gardner score/day of transfer, and it emphasizes paternal-age-related aneuploidy somewhat more strongly than is typically supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned in recognizing morphology, maternal age, and endometrial factors, but misapplies Gardner expansion criteria and overstates the link between advanced paternal age and embryo aneuploidy/Down syndrome relative to standard guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated and does not provide clear transfer-specific or future-cycle recommendations, so practical next steps for clinicians are limited."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011625,
+  "judge_latency_ms": 5325.727959003416,
+  "judge_prompt_tokens": 1995,
+  "judge_completion_tokens": 376
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0136",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology and notes the grading inconsistency, but it overstates degeneration/non-viability and inaccurately says there is no clearly defined blastocoel; the image is more consistent with a very poor early blastocyst with scant/poor ICM and TE rather than definitively dead."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH/low oocyte yield, prior failed cycle, sperm parameters, BMI, and endometrium well, and appropriately links age/DOR to embryo competence, though the uterine factor is only partially explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but the conclusion that the embryo is essentially non-viable and transfer is medically futile is stronger than the image/grade alone supports; this overreach weakens the probability estimate and internal consistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and attention to age-related aneuploidy are appropriate, but statements such as PGT-A being 'mandatory' and recommending cancellation as medically sound for a poor-quality blastocyst are not guideline-based absolutes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for counseling, transfer decision-making, uterine reassessment, stimulation considerations, donor oocyte discussion, and sperm DNA fragmentation testing, though some recommendations are somewhat overly directive."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013254,
+  "judge_latency_ms": 5332.840582996141,
+  "judge_prompt_tokens": 2563,
+  "judge_completion_tokens": 371
+}

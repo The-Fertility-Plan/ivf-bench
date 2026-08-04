@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0076",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner 3AA label. Its description is broadly consistent with the lab grade, but it states the embryo is 'fully expanded' and gives detailed visual features not verified from the image; a stage 3 blastocyst is expanded rather than fully expanded/hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, BMI, AMH, male factor context, endometrial thickness, first-cycle status, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from embryo quality and patient factors to prognosis and recommendations. Minor issues include overstatement of morphology as the strongest predictor of euploidy and somewhat speculative comments about PCOS/ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and guideline-concordant, especially SET for a good-quality day-5 blastocyst. Small deviations include suggesting ERA relatively early and presenting PGT-A somewhat favorably in a 34-year-old without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including SET, luteal support review, metabolic optimization, and further male-factor workup. Some suggestions are a bit generic or speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014322,
+  "judge_latency_ms": 5126.491500006523,
+  "judge_prompt_tokens": 3009,
+  "judge_completion_tokens": 353
+}

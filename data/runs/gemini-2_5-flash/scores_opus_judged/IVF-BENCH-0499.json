@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0499",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes the embryo as correlating with a 2BA Gardner score, but there's a notable issue: a Grade 2 blastocyst is described as 'fully expanded' when Grade 2 actually means the blastocoel is greater than half the volume but not fully expanded (that would be Grade 3+). The model conflates Grade 2 with full expansion and even mentions thinning zona, which is more characteristic of higher expansion grades. The ICM and TE descriptions align with the provided lab data (B and A grades respectively) but seem to be largely derived from the text rather than independent image analysis. The description of TE as 'numerous, uniform, cohesive' and ICM as 'loosely grouped' mirrors the lab report rather than demonstrating independent morphological assessment from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model systematically connects maternal age to euploidy rates, links male factor diagnosis to likely intact female fertility, discusses endometrial thickness in context of receptivity, addresses the previous failed cycle appropriately, and considers lifestyle factors. The sperm parameters are noted as excellent despite male factor diagnosis, and AMH/FSH are properly contextualized for age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 55-70% follows from the evidence presented with clear upward and downward adjustments explained. One minor inconsistency: the model states the sperm parameters are 'excellent' while the diagnosis is male factor, which could have been explored more (perhaps the male factor was addressed via ICSI). The logic chain from morphology + patient factors to probability is clear and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading description contains an error - Grade 2 expansion is mischaracterized as 'fully expanded' when it should be described as blastocoel filling more than half the embryo volume. The recommendations for PGT-A, ERA, and hysteroscopy after recurrent failure are aligned with ESHRE/ASRM guidelines. The suggestion of assisted hatching is appropriately hedged. However, the expansion grade misinterpretation is a notable deviation from the standard Gardner classification system."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering both the current transfer (luteal phase support, optional assisted hatching, patient counseling) and future planning (PGT-A, ERA, hysteroscopy, review of previous cycle). The stepwise approach to investigation if failure recurs is well-structured. Could have been more specific about progesterone dosing/route or timing considerations, but overall provides clear clinical guidance with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.03349,
+  "judge_latency_ms": 15149.401708971709,
+  "judge_prompt_tokens": 3338,
+  "judge_completion_tokens": 672
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner score of 1DD and incorrectly reframes the embryo as a Day 4 morula with no blastocyst grading available, leading to a fundamentally wrong morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, endometrium, male factor, and cycle history, though these are linked to an incorrect embryo-stage interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but it is built on a major contradiction: the case provides a Gardner 1DD blastocyst grade, yet the response claims no Gardner score is available and analyzes a morula instead."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is misrepresented, prognosis is overly optimistic for a 1DD embryo, and recommendations such as routine PGT-A consideration at age 34 and acupuncture claims are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical suggestions for luteal support, lifestyle modification, beta-hCG timing, and future cycle planning, although some recommendations are based on the wrong embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013323,
+  "judge_latency_ms": 3707.1745839930372,
+  "judge_prompt_tokens": 2816,
+  "judge_completion_tokens": 325
+}

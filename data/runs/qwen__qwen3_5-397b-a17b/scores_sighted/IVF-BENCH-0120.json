@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0120",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 4AA label appropriately, but the image itself does not clearly support a confident claim of obvious hatching on the left, and TE/ICM detail is somewhat overcalled given the soft-focus single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, tubal factor, prior cycle history, endometrium, BMI/lifestyle, and male factors into prognosis well, though it somewhat overstates paternal-age implications and labels RIF/RPL too strongly from the history provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable adjustment of prognosis downward from embryo quality based on prior failures and miscarriage; minor issues include overinterpretation of morphology and broad assumptions about hidden pathology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general prognosis framing are guideline-consistent, but strong endorsement of PGT-A, thrombophilia testing, ERA, and combined luteal support is more aggressive than routine evidence-based recommendations for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps for transfer and future evaluation, including eSET and possible male-factor/endometrial workup, though some suggested tests are not well-prioritized or universally indicated."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013578,
+  "judge_latency_ms": 5830.955499986885,
+  "judge_prompt_tokens": 2801,
+  "judge_completion_tokens": 345
+}

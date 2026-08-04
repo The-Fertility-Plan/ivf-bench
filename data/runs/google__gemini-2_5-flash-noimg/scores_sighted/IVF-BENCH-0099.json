@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner 3AA grade rather than inventing image-specific details. However, it repeated an inaccurate definition of stage 3 as 'expanded blastocyst' (expanded is stage 4), so morphology discussion is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior live births/miscarriage, sperm parameters, endometrium, and lifestyle risks, and connects them to prognosis. Some interpretations are a bit overstated, especially around endometrial thickness and male factor significance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a probability estimate that broadly follows from embryo quality and patient factors. Minor issues include overconfident statements about endometrial receptivity and somewhat speculative deductions from prior miscarriage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While much of the counseling is reasonable, several recommendations are not well aligned with evidence-based IVF guidance: stage 3 was mislabeled as expanded, low-dose aspirin is suggested without clear indication, intralipids/IVIG and NK-cell testing are not guideline-supported in routine care, and a full RPL workup after a single clinical miscarriage is excessive."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for counseling, luteal support, and future evaluation. However, some suggested interventions are not appropriately nuanced or evidence-based, which limits clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.016131,
+  "judge_latency_ms": 5339.843624999048,
+  "judge_prompt_tokens": 3407,
+  "judge_completion_tokens": 394
+}

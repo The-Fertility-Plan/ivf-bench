@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0316",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a top-tier/full blastocyst and describes tightly packed ICM/cohesive TE that are not clearly discernible. It notes the embryo looks more like a morula/early cavitating embryo, which is closer to the image, but overall relies too heavily on the provided 2AA label rather than visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, low oocyte yield, BMI, sperm parameters, endometrial thickness, diagnosis, and lifestyle with prognosis reasonably well. Some links are somewhat overstated, but most relevant factors are considered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it calls Gardner 2 a full blastocyst, labels 2AA as the highest possible score, and treats a Day 4 '2AA blastocyst' as clearly favorable despite the image not matching that confidently. Probability reasoning is plausible but somewhat inflated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are important deviations from standard grading/guideline conventions: Gardner stage 2 is not a full blastocyst, and 2AA is not the highest possible expansion grade. Recommendations such as implying 15 mm is unequivocally ideal and suggesting protocol changes from a single cycle are somewhat overconfident."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, and future-cycle considerations including protocol review, weight optimization, and cautious PGT-A discussion. Some recommendations are generic or speculative, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01416,
+  "judge_latency_ms": 6489.3152500008,
+  "judge_prompt_tokens": 2635,
+  "judge_completion_tokens": 417
+}

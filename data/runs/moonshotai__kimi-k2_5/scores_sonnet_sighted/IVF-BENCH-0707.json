@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona, compact ICM, and cohesive TE consistent with 3AA grading. Notes the blastocyst has not yet initiated hatching (Grade 4), which is correct. However, looking at the image, there appear to be some vacuolization and granularity features in the ICM/TE that the model somewhat glosses over by stating 'no significant cytoplasmic granularity' - the image actually shows a somewhat granular, complex internal structure that could warrant more nuanced commentary. Overall description is solid but slightly idealized compared to what the image shows."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age 37 with aneuploidy risk, smoking impact on implantation, endometrial thickness concerns, borderline sperm motility, low oocyte yield suggesting DOR, and first cycle status. The interaction between smoking and uterine receptivity is well-articulated. Minor gap: AMH is N/A but the response doesn't fully address this missing data point's implications, and the 'Other' diagnosis is not explored. The stress factor integration is present but superficial."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 30-40% follows logically from the stated adjustments: baseline ~45-55%, reduced by aneuploidy risk, smoking penalty of 10-15%, and endometrial thickness concerns. The reasoning chain is transparent and consistent. Minor inconsistency: the response states euploid implantation potential ~60% then adjusts for undetected aneuploidy to ~45%, but the final 30-40% range implies larger cumulative deductions than explicitly calculated, creating a slight arithmetic gap. Overall logic is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for high-quality blastocyst, PGT-A consideration for age 37, luteal support emphasis, smoking cessation counseling, and ERA for recurrent implantation failure. The Gardner grading interpretation is accurate. The suggestion of long agonist protocol as alternative is reasonable though antagonist protocols are now equally recommended by ESHRE for most patients. The endometrial thickness threshold of 14mm as 'upper limit' is somewhat conservative - guidelines are less definitive on upper limits. SDF testing recommendation aligns with current evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: immediate smoking cessation with timeline context (1-2 weeks vs 3+ months benefit), specific endometrial assessment protocol with conditional decision tree (proceed vs postpone based on pattern), specific PGT-A trigger conditions, named sperm selection techniques (PICSI/IMSI), specific SDF threshold (>25%), cotinine testing suggestion, dual stimulation and GH/DHEA priming options, and ERA with hysteroscopy for failure scenario. The conditional logic ('if heterogeneous... consider postponing') makes recommendations directly applicable to clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.021543,
+  "judge_latency_ms": 18248.58879200474,
+  "judge_prompt_tokens": 3346,
+  "judge_completion_tokens": 767
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's key features including the blastocoel cavity, ICM compactness, and TE cohesiveness consistent with the Gardner 2AA score. The description of the ICM as a compact cluster and TE as a cohesive epithelial layer matches the image. Minor issue: the response hedges between grade 2-3 expansion when the provided score is clearly 2, and some described features (e.g., 'darkly stained') are interpretive rather than directly observable in this grayscale microscopy image. Overall solid morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects endometriosis to endometrial receptivity issues, links the 4 prior failed cycles to RIF considerations, addresses the biochemical/ectopic history meaningfully, considers oocyte maturation rate relative to ovarian reserve, integrates sperm parameters, BMI, and lifestyle factors. The interaction between age-related aneuploidy risk and morphological grade is well-articulated. The 'perfect storm' framing effectively synthesizes multiple converging risk factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate (20-30% clinical pregnancy, 15-25% live birth) follows coherently from the baseline adjustment for aneuploidy, RIF penalty, and endometriosis impact. The conditional euploid probability (45-55%) is internally consistent. Minor issue: the response notes FSH 7.4 as 'elevated' suggesting diminished reserve, but 7.4 IU/L is within normal range for most guidelines, representing a small logical inconsistency. The response was also cut off mid-sentence in the recommendations section."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation, ERA consideration for RIF with endometriosis, PGT-A discussion for age 37 with RIF history, and evidence-based adjunctive therapies. The Gardner grading interpretation is correct. The suggestion of ERA for endometriosis-associated RIF aligns with current ESHRE endometriosis guidelines. Minor concern: characterizing FSH 7.4 as elevated deviates from standard reference ranges. The response was truncated before completing LMWH recommendations, preventing full assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: eSET, ERA consideration, progesterone optimization, adjunctive therapies with evidence qualifications, and PGT-A for future cycles. The table format for risk/favorable factors aids clinical decision-making. The conditional probability framing (with vs. without PGT-A) is practically useful. Score limited to 4 because the response was cut off before completing the recommendations section, leaving LMWH and likely other future cycle planning recommendations incomplete, reducing overall actionability."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.020145,
+  "judge_latency_ms": 15958.865249995142,
+  "judge_prompt_tokens": 3020,
+  "judge_completion_tokens": 739
+}

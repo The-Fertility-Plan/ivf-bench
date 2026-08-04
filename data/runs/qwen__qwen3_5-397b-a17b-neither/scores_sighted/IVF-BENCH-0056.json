@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate specific ICM/TE/expansion findings. Minor deduction because it then assumed a good-quality blastocyst (e.g., 3BB or better), which is not supported by the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian reserve/response, sperm quality, BMI, smoking, and endometrial thickness into prognosis reasonably well. It misses some nuance about how morphology uncertainty limits these conclusions."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a clear link from baseline prognosis to downward adjustment for smoking and BMI. Small limitation: probability estimates rely on an unsupported assumption of good embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, smoking cessation, weight optimization, luteal support considerations), but stating SET is 'medically mandatory' is too strong, and suggesting PGT-A mainly because of BMI/smoking-related miscarriage risk is not well aligned with standard indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, progesterone considerations, smoking cessation, and weight management. Could be more specific about transfer-day embryo reassessment and counseling given morphology uncertainty."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013446,
+  "judge_latency_ms": 4356.776499989792,
+  "judge_prompt_tokens": 2782,
+  "judge_completion_tokens": 340
+}

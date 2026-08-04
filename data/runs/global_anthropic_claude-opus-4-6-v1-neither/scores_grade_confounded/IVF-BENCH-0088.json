@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no Gardner score was available, then assumed an average-quality 3BB-4BB embryo. This is a major factual error and misses the actual morphology (expanded blastocyst with excellent ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, DOR, BMI, endometrium, sperm motility, prior cycle, and lifestyle, and relates them to prognosis. However, integration is weakened by basing prognosis on an incorrect assumed embryo grade rather than the provided 3AA."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it has a major foundational flaw: it ignores the provided embryo grade and builds the probability estimate on an assumed average-quality blastocyst, which undermines the conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (weight, alcohol reduction, exercise, luteal support awareness), but some are weakly supported or overreaching for this scenario, such as routine consideration of PGT-A at age 32 with DOR, ERA after a single failed transfer, and specific claims about dual progesterone support without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, including lifestyle modification and follow-up strategies. It is useful clinically, though some recommendations are not ideally prioritized for this exact case."
+    }
+  ],
+  "extracted_probability": 0.36,
+  "judge_cost_usd": 0.012837,
+  "judge_latency_ms": 4195.844667003257,
+  "judge_prompt_tokens": 2414,
+  "judge_completion_tokens": 373
+}

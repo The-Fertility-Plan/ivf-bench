@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0230",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a full blastocyst with visible blastocoel, compact ICM, and looser TE, but it incorrectly labels expansion as 'Grade 2' while also calling it a full blastocyst, and overstates some positional/detail certainty from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, AMH, BMI, sperm, endometrium, and first-cycle status well with embryo quality, though some links (stress, sedentary lifestyle) are more speculative than embryo-specific."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and structured, with a plausible probability range tied to embryo and patient factors; minor issues include inconsistent blastocyst stage terminology and somewhat overstated quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Appropriately supports single embryo transfer and recognizes AMH as more predictive of quantity than quality, but recommendations such as routine higher progesterone dosing, strong endorsement of PGT-A after one failure, DHEA, and ERA are not strongly guideline-based for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including eSET and lifestyle optimization, but some suggestions are more aggressive than necessary and not all are evidence-based for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013455,
+  "judge_latency_ms": 5244.552832999034,
+  "judge_prompt_tokens": 2815,
+  "judge_completion_tokens": 334
+}

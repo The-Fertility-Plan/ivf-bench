@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the Gardner expansion stage: lab data define 2 as an early blastocyst, but it describes a partially/full blastocyst with thinning zona and a visible dense ICM that are not clearly supported by the image. TE description is broadly plausible, but several morphology details are overcalled."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve/response, BMI, tubal factor, prior cycle, sperm parameters, and endometrium with embryo quality in a generally relevant way. Some links are overstated, but overall the prognosis discussion is well connected to the clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable inconsistencies: it calls the embryo both 2AB and effectively a more expanded blastocyst, labels sperm as excellent despite borderline concentration, and links low AMH to luteal support efficacy without clear rationale. Probability reasoning is directionally sensible but somewhat loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly standard, but there are deviations: incorrect interpretation of Gardner stage 2, overenthusiastic recommendation for PGT-A after a single failed cycle in a 28-year-old, and unsupported emphasis on low AMH for luteal support. Overall mostly aligned but with meaningful caveats."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, luteal support, beta-hCG timing, and contingency planning. Recommendations are useful, though some are generic and a few are not ideally tailored to this specific low-risk young patient."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013872,
+  "judge_latency_ms": 6185.92274999537,
+  "judge_prompt_tokens": 2559,
+  "judge_completion_tokens": 413
+}

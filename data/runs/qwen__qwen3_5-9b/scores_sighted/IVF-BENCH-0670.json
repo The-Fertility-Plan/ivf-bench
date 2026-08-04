@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0670",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst, correctly identifying an expanded cavity and a compact ICM, but it overstates certainty ('aligns perfectly'), describes significant zona thinning/readiness to hatch that is not clearly evident, and gives somewhat confident TE detail despite limited visibility."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian response, AMH/FSH, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though it overinterprets the DOR label and does not fully contextualize BMI or the limited significance of some lifestyle factors for a single transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response contains notable logical issues, especially the strong claim that the patient likely has high reserve/PCOS rather than DOR, the incorrect statement that this changes management to 'lower risk of OHSS,' and an inflated euploidy assumption (~90% at age 32), which weakens the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the Gardner grading discussion is broadly acceptable, several clinical statements are not well aligned with evidence-based IVF practice, including equating AMH/oocyte yield with a likely PCOS diagnosis, overstating ideal endometrial thickness, and using an unrealistically high euploidy estimate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as proceeding with transfer and reviewing the diagnosis, but recommendations are incomplete/truncated and lack specific transfer-cycle management details or nuanced future planning."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013722,
+  "judge_latency_ms": 5572.182208998129,
+  "judge_prompt_tokens": 2599,
+  "judge_completion_tokens": 395
+}

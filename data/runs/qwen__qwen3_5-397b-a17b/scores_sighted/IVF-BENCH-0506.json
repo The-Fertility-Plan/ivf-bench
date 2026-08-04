@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0506",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and assigns specific visible features (distinct upper-left ICM, cohesive TE, clearly expanded cavity) that are not convincingly discernible in this blurry image. It relies heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor diagnosis, BMI, endometrial thickness, ovarian response, and sperm parameters, and connects them to prognosis, though AMH/FSH and fresh-vs-frozen context are not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with conclusions mostly supported by the data. Minor issues include somewhat confident claims about uterine receptivity and stress effects, and a relatively optimistic probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are mostly consistent with standard IVF practice, especially eSET for a good-quality Day 5 blastocyst in a 33-year-old. However, suggesting PGT-A partly because of paternal age and implying biopsy avoidance due to embryo damage are not strongly guideline-based, and acupuncture/stress claims are weakly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as eSET, luteal support, vitrification of surplus embryos, and contingency planning after failure. Some suggestions are somewhat generic or speculative, but overall the advice is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013194,
+  "judge_latency_ms": 5067.3425829882035,
+  "judge_prompt_tokens": 2608,
+  "judge_completion_tokens": 358
+}

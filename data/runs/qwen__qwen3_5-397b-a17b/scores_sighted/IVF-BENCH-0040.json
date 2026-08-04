@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes visible features: this image does not clearly show a tightly packed ICM in the upper-left, TE is not uniformly smooth/cohesive, and the zona is not obviously distended as described. It relies too heavily on the provided grade rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm parameters, endometrial thickness, and prior cycle history reasonably well with embryo prognosis, though AMH is unavailable and some claims about PCOS/aneuploidy are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it calls 2AA 'top-tier/highest possible' despite expansion stage 2 not being the highest stage, and the probability rationale is somewhat inflated relative to the morphology and unsupported by the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including proceeding with transfer and noting antagonist suitability in PCOS, but statements that 2AA is the highest possible grade and that PCOS may have higher aneuploidy risk are not well aligned with standard evidence/guideline framing; routine PGT-A suggestion after one failure is debatable in a 31-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including luteal support, metabolic optimization, and protocol considerations, though recommendations remain somewhat generic and lack nuanced alternatives based on fresh vs frozen transfer context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013749,
+  "judge_latency_ms": 5672.382250006194,
+  "judge_prompt_tokens": 2553,
+  "judge_completion_tokens": 406
+}

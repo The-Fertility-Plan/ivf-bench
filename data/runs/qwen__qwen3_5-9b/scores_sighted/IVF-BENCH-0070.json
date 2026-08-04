@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates certainty from a single image, describes the zona as clearly thin/stretched and TE as cohesive when these features are only partly appreciable, and calls it 'top-tier/excellent' despite 3AA being good but not the highest expansion stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometriosis, prior biochemical pregnancy, BMI, sperm data, and endometrial thickness with embryo quality in a clinically meaningful way, though some statements are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and generally logical, but there are notable issues: sperm motility is labeled excellent despite being borderline/low depending on metric, aneuploidy risk is likely understated, and the implantation estimate appears optimistic relative to the stated risk factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned with standard IVF practice in supporting transfer of a good-quality day-5 blastocyst and reserving further workup after recurrent loss/failure, but some recommendations are not tightly guideline-based (e.g., implying altered progesterone metabolism in endometriosis, suggesting hysteroscopy due to endometriosis/biochemical pregnancy without stronger indication, and overconfident success estimates)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, hCG follow-up, and contingency planning including possible uterine evaluation and discussion of PGT-A if recurrent losses occur, though recommendations could be more specific about when each intervention is indicated."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013911,
+  "judge_latency_ms": 5842.968166005448,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 395
+}

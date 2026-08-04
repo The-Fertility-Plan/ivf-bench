@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner grade 1DD and instead stated morphology could not be assessed, omitting the key poor-quality blastocyst features available from the data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF failures, sperm parameters, endometrium, BMI, and ovarian response reasonably well with prognosis, though it underuses the critical 1DD embryo grade and misinterprets transfer timing context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but it is weakened by ignoring the supplied embryo grade and giving an implantation estimate that is too optimistic for a 1DD embryo in this clinical context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but emphasis on ERA is not strongly guideline-supported for routine use, and the omission of the known poor Gardner morphology reduces alignment with standard embryo assessment principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, counseling, uterine evaluation, and future cycle planning including PGT-A discussion, though recommendations are somewhat generic and not fully tailored to the very poor 1DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013509,
+  "judge_latency_ms": 3681.040582996502,
+  "judge_prompt_tokens": 2988,
+  "judge_completion_tokens": 303
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst and correctly notes absent/degenerative ICM and TE, but it overstates visibility of a distinct blastocoel and specific cell clusters that are not clearly discernible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, PCOS, AMH, BMI, sperm quality, endometrium, prior failed cycle, and low MII yield with embryo prognosis in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and internally consistent, with the poor morphology appropriately driving the low implantation estimate; minor issues include strong causal inference from low MII count to this embryo's quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing 0DD as very poor prognosis and recommending counseling/protocol review, but statements like calling such embryos 'duds,' broadly recommending PGT-A for this profile, and implying chromosomal abnormalities are common in PCOS are not well guideline-grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer decision-making if this is the only embryo, luteal support review, stimulation/trigger reassessment, and metabolic/lifestyle optimization, though some recommendations are more speculative than case-specific."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013236,
+  "judge_latency_ms": 5869.610166002531,
+  "judge_prompt_tokens": 2642,
+  "judge_completion_tokens": 354
+}

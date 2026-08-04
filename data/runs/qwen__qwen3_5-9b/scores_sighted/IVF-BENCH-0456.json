@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0456",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 4AA label and image showing a blastocyst with visible zona and compact ICM, but it overstates certainty about clear hatching/herniation and gives limited image-grounded detail on TE across the full circumference."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, prior miscarriage, endometrial thickness, tubal factor, and sperm parameters with embryo quality in a clinically meaningful way, though some links such as AMH implying egg quality are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are notable issues: it conflates implantation and live birth rates, gives aneuploidy estimates that are somewhat imprecise, and claims euploid transfer success could be near 100%, which is not supportable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Much of the embryo grading discussion is standard, but several recommendations deviate from evidence-based practice: PGT-A cannot be performed on an embryo already being transferred in this cycle, routine thrombophilia testing after a single miscarriage is not guideline-based, and 'near 100%' success for euploid transfer is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, luteal support, beta-hCG follow-up, and future counseling on weight and possible genetic testing, though some recommendations are overconfident or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01341,
+  "judge_latency_ms": 4956.450208002934,
+  "judge_prompt_tokens": 2655,
+  "judge_completion_tokens": 363
+}

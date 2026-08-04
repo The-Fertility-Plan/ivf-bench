@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label, but it overstates visible certainty from the image alone, calling the embryo high-quality/excellent and describing a clearly dense ICM and thinned zona when the image is somewhat indistinct and TE appears limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, sperm factors, endometrium, and diagnosis reasonably well with embryo prognosis, though it overemphasizes paternal age and former smoking and misses that tubal factor is otherwise favorable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and identifies the day-4/blastocyst inconsistency, but there are notable issues: it says age 37 is not AMA, gives an arguably inflated euploid estimate, and makes some conclusions stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF guidance, especially strongly recommending PGT-A for a single available embryo and suggesting donor eggs prematurely in a 37-year-old with no prior IVF cycles; also overstates embryo quality as 'excellent.'"
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps and future planning ideas, but some advice is too categorical and insufficiently nuanced for this specific first-cycle, low-yield scenario."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013548,
+  "judge_latency_ms": 4900.092040988966,
+  "judge_prompt_tokens": 2751,
+  "judge_completion_tokens": 353
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with poorly defined ICM and TE, consistent with 1DD, but it misstates the expansion criterion ('less than half' rather than at least half) and adds some stronger visual claims such as dark fragmentation/collapse that are not clearly evident from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, endometriosis, prior IVF/miscarriage history, sperm parameters, endometrial thickness, BMI, and lifestyle with embryo prognosis in a clinically meaningful way, though it cannot fully assess ovarian reserve because AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent: severe embryo dysmorphology drives the poor prognosis, with age and endometriosis as contributing factors. The only notable issue is the overly absolute statement of 'non-viable,' which is stronger than morphology alone can prove."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are deviations: the Gardner expansion stage is described incorrectly, PGT-A is presented somewhat too strongly as a recommendation rather than individualized counseling, and advising strongly against transfer based solely on morphology may be more categorical than guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, documentation, future cycle planning, consideration of PGT-A, endometriosis review, protocol review, and psychosocial support. However, some recommendations are somewhat generic and not fully nuanced regarding transfer decisions when no better embryos exist."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015252,
+  "judge_latency_ms": 5560.696083004586,
+  "judge_prompt_tokens": 3059,
+  "judge_completion_tokens": 405
+}

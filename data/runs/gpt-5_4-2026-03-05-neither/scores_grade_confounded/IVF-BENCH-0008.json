@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately notes that no image was provided, but it fails to use the supplied Gardner score 0DD, which indicates a very poor-quality early blastocyst with absent/degenerate ICM and TE. Instead it discusses hypothetical favorable Day 4 morula features, so morphology assessment is not matched to the provided embryo data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, semen quality, endometrium, prior IVF outcomes, and OHSS risk well, and relates these to prognosis. It misses the key interaction that the documented 0DD embryo quality substantially worsens outlook despite excellent patient factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by dismissing the provided embryo grade and basing prognosis on unknown/hypothetical morphology. This leads to an implantation estimate that is likely too optimistic for a 0DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as preference for single embryo transfer in a young high-prognosis patient, caution about OHSS/fresh transfer, and limited role for PGT-A at age 24 are broadly guideline-consistent. However, not incorporating the supplied Gardner 0DD grade reduces alignment with standard embryo grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, OHSS monitoring, future culture strategy, and selective miscarriage workup. Recommendations are useful, though they would be more actionable if they directly addressed the poor 0DD embryo quality and whether transfer versus extended culture/freezing would be appropriate."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013977,
+  "judge_latency_ms": 4946.738041995559,
+  "judge_prompt_tokens": 2674,
+  "judge_completion_tokens": 397
+}

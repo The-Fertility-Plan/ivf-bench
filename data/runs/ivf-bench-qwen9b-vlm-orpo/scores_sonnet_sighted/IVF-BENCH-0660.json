@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0660",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion, thinned zona, and general blastocyst structure consistent with Gardner 3AA. However, the image actually shows some concerning features - the ICM appears somewhat irregular/fragmented with darker granular material, and there are visible irregularities in the TE that the model glosses over by stating 'no obvious heavy fragmentation' and 'no prominent adverse features.' The model largely defers to the provided Gardner score rather than critically analyzing what is visible in the image, missing potential discordance between the reported 3AA grade and the actual image appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a thorough job connecting AMH, age, prior cycle outcomes, tubal factor diagnosis, sperm parameters, endometrial thickness, BMI, and lifestyle factors to the overall prognosis. It correctly highlights the hydrosalpinx concern with tubal factor, the implications of low AMH for future cycles, and the biochemical pregnancy history as a potential recurrent implantation failure signal. Minor gap: doesn't explicitly discuss how the natural cycle protocol relates to the low AMH finding or whether it was appropriate given the reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate to recommendations. The probability range of 25-40% implantation and 20-30% live birth is internally consistent with the evidence presented. The model appropriately leans toward the lower end given prior failures. Minor inconsistency: describes the embryo as 'good quality' and 'favorable' throughout but then estimates a relatively modest probability, which could be better reconciled by more explicitly attributing the gap to prior failure history and aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer at age 35, luteal phase support, hydrosalpinx management before transfer, hysteroscopy for recurrent implantation failure workup, PGT-A discussion for repeated failures, and alcohol cessation. The response correctly notes PGT-A is not automatically indicated with few embryos. Minor gap: doesn't mention endometrial receptivity testing (ERA) which ESHRE guidelines discuss for recurrent implantation failure, and doesn't address whether freeze-all with FET might be preferable given the history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: confirms single ET, luteal progesterone support, alcohol cessation, hydrosalpinx verification, hysteroscopy if not recently done, reconsideration of stimulation protocol given low AMH, and selective PGT-A discussion. The tiered structure (this transfer vs. if it fails) is practical for clinical use. Could be more specific about alcohol cessation timing, stress intervention modalities, or specific workup for chronic endometritis (e.g., endometrial biopsy/CD138 staining), but overall highly actionable."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.021678,
+  "judge_latency_ms": 15409.778083005222,
+  "judge_prompt_tokens": 3561,
+  "judge_completion_tokens": 733
+}

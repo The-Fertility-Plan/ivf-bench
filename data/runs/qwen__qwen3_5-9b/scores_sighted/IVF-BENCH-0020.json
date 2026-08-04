@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 2BA label, but it overstates certainty about a well-defined large blastocoel and TE quality from a somewhat indistinct image, and calls stage 2 'full blastocyst,' which is imprecise in Gardner terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, endometrial thickness, diagnosis context, and sperm data with embryo quality reasonably well, though it overinterprets low oocyte yield as poor response and does not fully contextualize tubal factor or missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally structured and understandable, but contains notable issues: misclassification of sperm motility as normal, overcalling poor responder status from 4 MII/7 COCs, and some inconsistency around day-4 versus blastocyst staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned on embryo grading and proceeding with transfer, but includes questionable points such as suggesting PGT-A mainly because of low oocyte yield at age 32 and overstating stress effects; Gardner stage terminology is also not fully accurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, clarifying developmental day/stage discrepancy, reviewing stimulation strategy if needed, and lifestyle counseling, though some recommendations are somewhat generic or debatable."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013227,
+  "judge_latency_ms": 5276.502124994295,
+  "judge_prompt_tokens": 2664,
+  "judge_completion_tokens": 349
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0727",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with large blastocoel, thinned zona pellucida, compact ICM at approximately the correct position, and moderately cohesive TE. The description aligns well with the Gardner 3AB grading provided. Minor issue: the image shows a somewhat irregular/granular TE that could be described more precisely, and the ICM localization claim ('6-7 o'clock') adds specificity that is reasonable but slightly presumptuous given image resolution. Overall good morphological correlation with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical domains. The response systematically connects maternal age (24) to aneuploidy risk, tubal factor diagnosis to preserved uterine receptivity, endometrial thickness to implantation potential, male parameters to embryo quality, and lifestyle factors to uterine perfusion. The tabular format clearly maps each factor to clinical impact. The previous failed cycle is contextualized appropriately within statistical probability rather than pathological concern. AMH being N/A is not flagged as a gap, which is a very minor omission."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured. The probability estimate (45-55% implantation, 50-60% clinical pregnancy) follows coherently from the evidence presented with appropriate adjustments for age, morphology, endometrium, and prior failure. The distinction between implantation and live birth rates is appropriately made. Minor inconsistency: the response states Grade A ICM 'compensates' for Grade B TE, then later assigns only a -5% adjustment for prior failure while not clearly quantifying the TE downgrade, making the arithmetic slightly opaque. The cumulative >80% LBR claim in counseling section lacks explicit derivation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE and ASRM guidelines. eSET recommendation for a young patient with good-quality blastocyst is consistent with current guidelines. The recommendation against PGT-A at age 24 aligns with ASRM guidance on low aneuploidy risk. Luteal support recommendations are standard. The ERA recommendation threshold (after 2 failed transfers) is reasonable though ESHRE guidance is more nuanced. Gardner grading criteria are correctly applied. The response correctly avoids recommending endometrial scratch, consistent with recent RCT evidence. Minor: does not address potential hydrosalpinx management (relevant for tubal factor) which ESHRE guidelines recommend addressing pre-transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific recommendations for the current transfer (proceed with eSET, no PGT-A, standard luteal support, maintain exercise with modification post-transfer) and clear future planning (FET from frozen cohort, diagnostic workup threshold after 2 failures, no stimulation protocol changes). The counseling script provided is practically useful. Risk stratification is explicit. The response appropriately avoids over-investigation while providing clear escalation criteria. The prognostic counseling language is patient-friendly and clinically grounded."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021324,
+  "judge_latency_ms": 18454.43537500978,
+  "judge_prompt_tokens": 3263,
+  "judge_completion_tokens": 769
+}

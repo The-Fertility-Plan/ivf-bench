@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0138",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a single image, asserting a major discrepancy from the reported 3AA and describing diffuse ICM/irregular TE with confidence despite limited visibility and likely image-plane/artifact issues. Some comments on indistinct blastocoel/irregular outline are plausible, but overall it likely understates morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: young age, ovarian reserve, sperm quality, prior live birth, endometriosis, smoking, and endometrial thickness, and relates them to prognosis. It could better distinguish embryo competence from uterine factors and avoid over-weighting image concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is driven heavily by an uncertain visual downgrade of the embryo and somewhat strong claims about smoking effect size. Reasoning is generally coherent but not fully well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Smoking cessation counseling, proceeding with transfer, and progesterone support are guideline-consistent. However, confidently regrading the embryo from one image and suggesting adjunctive endometriosis-related measures without specifics/evidence weakens alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical steps for current transfer and future planning, especially smoking cessation counseling and expectation setting. Future-cycle planning is somewhat incomplete/truncated and lacks more specific evidence-based alternatives."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014637,
+  "judge_latency_ms": 5853.179540994461,
+  "judge_prompt_tokens": 3149,
+  "judge_completion_tokens": 346
+}

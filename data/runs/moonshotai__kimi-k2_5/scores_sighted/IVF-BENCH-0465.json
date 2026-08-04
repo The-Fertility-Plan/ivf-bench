@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the provided Gardner score by describing TE as grade B instead of the given loose/few-cell TE consistent with C, and it overcalls a dense A-grade ICM from an image where the ICM is not clearly well-defined. Expansion description is also somewhat inconsistent with a stage 2 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior cycle history, male factor, oocyte maturity, and endometrial thickness reasonably well with embryo prognosis, though it adds unsupported assumptions such as likely trilaminar lining and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: morphology interpretation conflicts with the stated lab grade, and the implantation estimate is adjusted using speculative factors without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly consistent with IVF practice in valuing age, blastocyst stage, and prior outcomes, but it does not accurately adhere to Gardner grading as supplied and introduces non-guideline inferences."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers risk framing and a probability estimate but provides limited concrete transfer or future-cycle recommendations, and the response appears truncated before actionable planning is fully developed."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.011622,
+  "judge_latency_ms": 5156.983916007448,
+  "judge_prompt_tokens": 2254,
+  "judge_completion_tokens": 324
+}

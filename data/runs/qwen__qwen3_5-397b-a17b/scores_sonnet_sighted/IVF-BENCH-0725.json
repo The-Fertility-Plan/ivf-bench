@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel expansion, ICM density, and TE cohesiveness consistent with a 2AA Gardner score. The zona pellucida thinning observation is appropriate. However, the ICM localization claim ('6-7 o'clock position') appears somewhat speculative given the image's grainy quality, and the description of the TE cell borders as 'distinct' may be slightly generous given the image resolution. Overall a solid morphological read with minor overconfidence in specific details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: maternal age (37) and its aneuploidy implications, endometriosis impact on endometrial receptivity, the 4-cycle failure history as RIF indicator, the ectopic pregnancy history informing tubal risk, sperm parameters with appropriate caveat about DNA fragmentation, BMI and lifestyle factors, and the optimal endometrial thickness. The contrast between excellent embryo quality and challenging uterine/systemic environment is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The 25-35% range is coherently derived with appropriate modifiers for embryo quality, age, and history. The euploid/aneuploid conditional probability discussion (50-60% if euploid, 0% if aneuploid) is sound. Minor issue: the Gardner stage 2 description says 'blastocoel fills the entire volume' which slightly contradicts stage 2 definition (full blastocyst but not yet expanded), though this is a minor inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation is appropriate, PGT-A suggestion for RIF at 37 is evidence-based, ERA testing for RIF is guideline-supported, sperm DNA fragmentation testing is recommended by ESHRE for RIF workup, and thrombophilia/APS screening for ectopic history is appropriate. The luteal support mention with optional aspirin/steroids is correctly flagged as clinic-dependent. Minor gap: no mention of hysteroscopy evaluation which ESHRE recommends in RIF workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practically organized into immediate transfer considerations and future cycle planning. Each recommendation (PGT-A, sperm DNA fragmentation, ERA, endometriosis management, immune screening) is justified by specific case factors. The SET recommendation is appropriately nuanced given ectopic history. The tiered approach distinguishing current cycle management from future planning is clinically useful and actionable for a treating physician."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.019062,
+  "judge_latency_ms": 16746.02054199204,
+  "judge_prompt_tokens": 2944,
+  "judge_completion_tokens": 682
+}

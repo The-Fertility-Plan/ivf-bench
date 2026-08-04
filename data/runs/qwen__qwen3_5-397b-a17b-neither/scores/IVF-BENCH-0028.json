@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It appropriately states that no image was provided and avoids inventing visible blastocyst features, but only gives a generic Day 4 stage expectation rather than true morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, protocol, endometrial thickness, sperm parameters, BMI, and cycle history into prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the probability estimate logically tied to age, endometrium, endometriosis, and Day 4 transfer; minor overreach exists around inferred embryo potential."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It correctly notes Gardner grading is not applicable without a blastocyst image and that Day 4 differs from Day 5/6, but recommendations such as aspirin/immunomodulators and combined progesterone are not strongly guideline-based for this case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future planning, including luteal support, lifestyle changes, and when to consider PGT-A or sperm DNA fragmentation, though some suggestions are not highly specific to standard protocols."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012579,
+  "judge_latency_ms": 4112.158290998195,
+  "judge_prompt_tokens": 2573,
+  "judge_completion_tokens": 324
+}

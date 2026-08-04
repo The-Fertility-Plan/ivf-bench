@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mischaracterizes key visible features: the embryo does not clearly show a large central blastocoel or a distinctly cohesive TE, and calling it a top-tier 2AA based on the image is not well supported. It relies heavily on the provided grade rather than the actual morphology seen."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior live birth, ectopic history, sperm parameters, and endometrial thickness with prognosis reasonably well. However, it misses the important inconsistency between a stated blastocyst Gardner score and a Day 4 transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but there are notable issues: it treats a 2AA embryo at age 32 as likely >90% euploid, which is too high, and it does not address the mismatch between Day 4 transfer and blastocyst grading. Probability reasoning is plausible but somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including early ectopic surveillance and luteal support. However, the euploidy claim is not evidence-based, PGT-A is suggested somewhat loosely for a 32-year-old with unexplained infertility, and the Day 4/blastocyst grading inconsistency is not recognized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, serial beta-hCGs, early ultrasound, luteal support review, weight counseling, and consideration of tubal evaluation. It is clinically useful, though not highly nuanced regarding transfer-day inconsistency or embryo-stage verification."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014094,
+  "judge_latency_ms": 5804.405749993748,
+  "judge_prompt_tokens": 2638,
+  "judge_completion_tokens": 412
+}

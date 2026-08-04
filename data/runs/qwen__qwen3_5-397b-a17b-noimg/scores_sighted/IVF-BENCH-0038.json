@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0038",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the reported 2BA grade rather than inventing image-specific findings. Its interpretation of ICM B and TE A is accurate, but it incorrectly describes stage 2 as the blastocoel filling the embryo; that description corresponds more to a full blastocyst, creating a grading inconsistency with the provided lab note."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior failed cycles, male-factor diagnosis, semen parameters, endometrial thickness, and ovarian response with embryo quality in a clinically meaningful way. It misses some nuance around the limited significance of absent AMH and overinterprets prior failures as possible RIF."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable issues: it calls the embryo 'high-quality' while also describing day-5 stage 2 as slightly delayed, treats two failed cycles as recurrent implantation failure, and makes speculative claims about sperm DNA fragmentation and luteal deficiency without supporting data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are not strongly guideline-based for this scenario: routine 'aggressive' dual-route luteal support, PGT-A in a 26-year-old after two failed cycles, ERA after failure, and immunologic/NK testing are all more controversial or not routinely recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for proceeding with transfer and outlines contingency planning if unsuccessful. However, some actions are overly assertive or speculative rather than tightly tailored to the available evidence."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.015246,
+  "judge_latency_ms": 6386.3774170022225,
+  "judge_prompt_tokens": 2962,
+  "judge_completion_tokens": 424
+}

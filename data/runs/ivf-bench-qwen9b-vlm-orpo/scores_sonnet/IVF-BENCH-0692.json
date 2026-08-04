@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0692",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes key morphological features (ICM, TE, zona pellucida, expansion) consistent with the Gardner 3AA score provided. However, the description contains some hedging language ('seems somewhat expanded/collapsed') and uncertainty that suggests the model may not be fully confident in what it sees in the image. The description of ICM location as 'upper-left to central portion' and TE as 'reasonably continuous but not perfectly uniform' adds some specificity but also introduces uncertainty. The analysis is mostly accurate but lacks the precision and confidence expected from direct image analysis, and some descriptions appear to be inferred from the Gardner score rather than independently observed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects female age 36 to aneuploidy risk, links AMH/FSH/oocyte yield to ovarian reserve adequacy, addresses the male factor diagnosis with sperm parameters in context, discusses endometrial thickness favorability, and considers lifestyle factors. The interaction between embryo morphology and age-related aneuploidy risk is explicitly addressed, and partner age is considered for sperm DNA integrity. The response correctly identifies that good morphology does not guarantee chromosomal competence at age 36."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 35-45% implantation follows coherently from the identified favorable and unfavorable factors. The response correctly distinguishes between implantation probability and live birth rate. Minor inconsistency: the response lists 'clinical pregnancy rate' as 38-48% while implantation is 35-45%, which is slightly unusual since clinical pregnancy typically follows implantation and should be similar or lower. The overall reasoning chain from morphology through clinical factors to probability estimate is clear and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer (eSET), advises against bed rest, cautions against unproven add-ons (steroids, intralipids without indication), appropriately discusses PGT-A considerations for age 36 with nuance about when it is most beneficial. Gardner grading criteria are correctly applied. The discussion of PGT-A is balanced and evidence-based. Minor gap: could have more explicitly referenced ESHRE blastocyst grading consensus or specific guideline thresholds for male factor workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with SET, maintain luteal support, avoid bed rest, avoid unproven add-ons. The failure pathway is well-structured with specific investigations to consider (sperm DNA fragmentation, fertilization rate review, PGT-A discussion). The PGT-A recommendation is appropriately nuanced with conditions specified. The response could be slightly more actionable by specifying luteal support protocols or timing of pregnancy test, but overall provides clear, clinically useful guidance for both this transfer and future planning."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.021114,
+  "judge_latency_ms": 16115.162917005364,
+  "judge_prompt_tokens": 3343,
+  "judge_completion_tokens": 739
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was provided and did not fabricate embryo morphology. It appropriately avoided unsupported visual claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, PCOS, BMI, sperm parameters, endometrium, and lifestyle factors into prognosis well, though some links to embryo-specific quality were necessarily generic without morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to stated assumptions. Minor weakness: the implantation estimate depends heavily on an assumed good-quality blastocyst despite absent morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting ERA and especially PGT-A after a first unsuccessful transfer in a 34-year-old without recurrent failure is more debatable and not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including alcohol cessation, luteal support, lifestyle optimization, and protocol review. Some suggestions are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013626,
+  "judge_latency_ms": 4203.708624991123,
+  "judge_prompt_tokens": 3162,
+  "judge_completion_tokens": 276
+}

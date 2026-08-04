@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel cavity, ICM as loosely grouped with visible intercellular spaces, and TE as cohesive and multi-cellular, consistent with the 2BA Gardner grade. Notes granularity and the small structure in lower right. Minor issue: the description of TE as 'Grade A' conflicts with the provided Gardner score of 2BA (where A refers to ICM and B to TE in some conventions, though Gardner's original system uses the order ICM then TE, making this 2BA = ICM:B, TE:A, which the model correctly interprets). Overall solid morphological analysis with appropriate caveats about image limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all clinical factors. The model correctly identifies the contradiction between the DOR diagnosis and the AMH/FSH values, flags the implausibility of 11 COCs from a natural cycle, addresses the Day 4 blastocyst timing inconsistency, and systematically connects BMI, age, endometrial thickness, sperm parameters, and lifestyle factors to implantation prognosis. Each factor is linked to its specific mechanism of impact on outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly structured and internally consistent. The probability estimate is derived transparently through a stepwise adjustment from a baseline, with each factor's contribution explicitly quantified. Contradictions in the clinical data are flagged rather than ignored. Conclusions about prognosis, recommendations, and future planning all follow logically from the evidence presented. The distinction between implantation probability, clinical pregnancy rate, and live birth rate is appropriately maintained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: Day 5 culture preference, FET strategy, PGT-A considerations at age 29, ERA for recurrent implantation failure, progesterone luteal support dosing, BMI thresholds for DOR diagnosis, WHO semen parameter references, and GnRH antagonist protocol recommendations. The model correctly applies Gardner grading criteria and cites appropriate AMH/FSH thresholds for DOR. GLP-1 agonist mention with washout period reflects current clinical practice awareness."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: exact progesterone dosing (200mg TID vaginal), β-hCG timing (10-12 days post-transfer), specific weight loss targets (5-10% body weight), gonadotropin dose range (225-300 IU), exercise targets (150 min/week moderate activity), folic acid dose adjustment for BMI, vitamin D screening, and a clear decision framework tree. Both immediate transfer management and future cycle planning are addressed with specific alternatives and rationale."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.028095,
+  "judge_latency_ms": 17298.69308299385,
+  "judge_prompt_tokens": 5915,
+  "judge_completion_tokens": 690
+}

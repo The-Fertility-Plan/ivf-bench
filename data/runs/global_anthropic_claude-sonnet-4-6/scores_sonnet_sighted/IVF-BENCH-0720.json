@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the Gardner 3AB score and notes zona thinning, ICM compactness, and TE characteristics consistent with the label. However, the image shows a fairly complex blastocyst with notable cytoplasmic heterogeneity and what appears to be significant internal complexity that the model only briefly acknowledges as 'mild concern.' The description of 'partial collapse artifact possible' is speculative. The model largely echoes the provided Gardner score rather than independently analyzing the image in depth, and misses some visible structural details like the degree of blastocoele expansion visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects AMH/COC yield discrepancy meaningfully, links tubal factor diagnosis to preserved uterine receptivity, addresses the prior miscarriage in context of aneuploidy risk, considers sperm parameters, endometrial thickness, lifestyle factors including former smoking, and BMI. The interaction matrix and strengths/risks table show genuine synthesis rather than mere listing of factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability modifiers are transparently presented and the final estimate logically follows from the evidence. The PGT-A discussion coherently weighs pros and cons given the small cohort. Minor issue: the base rate of 45-55% for a 3AB blastocyst in a 29-year-old is slightly optimistic compared to published literature, and the modifier framework, while transparent, is somewhat arbitrary. The prior miscarriage analysis tree is logical and well-reasoned."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: SET recommendation, luteal phase support, thrombophilia screening after recurrent loss, hysteroscopy consideration, and cautious PGT-A deferral given young age and small cohort. The CoQ10 recommendation is appropriately flagged as evidence-limited. The suggestion to defer PGT-A unless adequate cohort size aligns with current guidance. Minor deviation: NK cell assay recommendation is not standard ESHRE/ASRM first-line workup and is controversial."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering immediate pre-transfer checklist, luteal support protocol, post-transfer monitoring timeline with specific timepoints, future diagnostic workup with named tests, stimulation optimization strategies, and lifestyle modifications with rationale. The PGT-A decision framework with explicit criteria for when to reconsider is particularly useful. Recommendations are appropriately nuanced for the specific clinical scenario rather than generic."
+    }
+  ],
+  "extracted_probability": 0.46,
+  "judge_cost_usd": 0.021879,
+  "judge_latency_ms": 15014.410832998692,
+  "judge_prompt_tokens": 3978,
+  "judge_completion_tokens": 663
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3), thinning zona pellucida, ICM location and cohesiveness, and TE characteristics consistent with the Gardner 3AB score. The description of ICM on the left side and softer focus on the right is a reasonable interpretation of the image. Minor limitation: the image is quite blurry/low resolution making definitive morphological calls difficult, and the response could have acknowledged this imaging limitation. Overall description is consistent with what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age (39) with aneuploidy risk, connects male factor diagnosis and paternal age (42) to sperm DNA fragmentation concerns, addresses ovarian response relative to FSH and age, and highlights endometrial thickness as favorable. The interaction between morphological grade and genetic potential is well-articulated. Minor gap: AMH listed as N/A is not addressed, and the moderate alcohol consumption (4-6/week) risk is underemphasized given its potential impact on IVF outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probabilistic reasoning is transparent and well-structured, including the euploidy-adjusted calculation (~35% euploidy × ~60% euploid implantation ≈ 21%, adjusted to ~25%). The final estimate of 20-30% clinical pregnancy rate is internally consistent with the reasoning chain. The logic flows clearly from risk factors to probability estimate. Minor issue: the response conflates 'clinical pregnancy rate' and 'implantation probability' somewhat interchangeably, and the final 25% figure is presented as a slight upward adjustment without fully quantifying the endometrial/ICM contribution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for this age/profile is appropriate, PGT-A suggestion for age 39 with prior failure is guideline-concordant, sperm DNA fragmentation testing aligns with male factor workup guidelines, ERA recommendation is appropriately conditional. Luteal support mention is standard. Minor deviation: the response does not explicitly mention ESHRE's position on routine ERA use (which remains investigational/not universally recommended), presenting it somewhat uncritically."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: eSET with rationale, robust luteal support, PGT-A for future cycles, sperm DNA fragmentation testing, conditional ERA, and lifestyle modification. Each recommendation includes reasoning. The response provides a clear hierarchy of next steps. Could be improved by specifying progesterone protocol details, addressing the alcohol consumption more directly as a modifiable risk factor, and discussing freeze-all strategy considerations given the patient's age and prior failure."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.019395,
+  "judge_latency_ms": 15674.874999996973,
+  "judge_prompt_tokens": 3035,
+  "judge_completion_tokens": 686
+}

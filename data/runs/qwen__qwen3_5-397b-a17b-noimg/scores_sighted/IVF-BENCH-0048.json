@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 3AA grade, which avoids unsupported image-specific claims. However, it inaccurately said grade 3 means fully hatched or hatching; Gardner 3 is a full blastocyst with the cavity filling the embryo, not expanded/hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior miscarriage, ovarian response, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way. Some assumptions were added (e.g., trilaminar lining implied, poor responder phenotype) without direct data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with prognosis adjusted for favorable age/embryo quality and prior miscarriage. Minor issues include overcalling 3AA as the highest possible morphology and some speculative links, but overall logic is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, especially support for single embryo transfer in a 33-year-old with a high-grade blastocyst. Small deviations include somewhat casual discussion of PGT-A and stronger-than-evidence luteal support suggestions tied to miscarriage history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear next steps for transfer, counseling, and contingency planning, including SET, possible future protocol adjustments, AMH assessment, and RPL workup triggers. Recommendations are practical and tailored to the case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015186,
+  "judge_latency_ms": 6142.699707997963,
+  "judge_prompt_tokens": 3122,
+  "judge_completion_tokens": 388
+}

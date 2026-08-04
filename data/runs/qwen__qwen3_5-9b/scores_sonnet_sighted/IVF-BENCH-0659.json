@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst stage, thinning zona pellucida, and provides reasonable descriptions of ICM and TE consistent with 3AA grading. However, the image actually shows a somewhat irregular/collapsing or degenerating appearance with fragmented or disorganized internal structure that doesn't cleanly match a pristine 3AA description. The model describes the ICM as 'distinct, dark, and tightly packed' and TE as 'cohesive and well-formed,' which may be overly generous given the visible image shows considerable internal disorganization and possible degeneration. The model largely defers to the reported Gardner score rather than critically analyzing what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age (24), AMH discrepancy with low egg yield, BMI, smoking, endometrial thickness, and sperm parameters. It correctly identifies the paradox of high AMH with only 5 MII oocytes and connects male factor diagnosis to possible morphology/DNA fragmentation issues. Minor gap: does not deeply explore the sedentary lifestyle or stress factors, and the PCOS hypothesis from AMH alone is speculative without AFC or other criteria."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 45-60% follows reasonably from the identified dampening factors (smoking, BMI). The model correctly identifies that smoking reduces implantation rates and quantifies this reduction. The recommendation to proceed with transfer despite risks is coherent given the limited embryo availability. Minor inconsistency: the model calls the sperm parameters 'excellent' while the diagnosis is male factor, then speculates about morphology/DNA fragmentation—this is reasonable but slightly circular."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations align with ESHRE/ASRM guidelines: smoking cessation advice, luteal phase support, single embryo transfer consideration, and sperm DNA fragmentation testing are all evidence-based. However, the 'coasting' recommendation for future cycles is somewhat outdated and not standard first-line advice for poor responders with high AMH. The suggestion to consider PGT-A at age 24 without clear indication (recurrent loss, known chromosomal issues) is not strongly guideline-supported. The model also doesn't mention ERA (Endometrial Receptivity Array) or other receptivity testing options that might be relevant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: immediate smoking cessation, proceed with transfer, ensure luteal phase support, investigate low yield in future cycles, sperm DNA fragmentation testing, weight management targets. The future cycle planning section provides concrete investigative steps. Slight deductions for the somewhat vague 'dose adjustment' recommendation and the inclusion of 'coasting' which is not a standard modern protocol. Overall, a clinician could extract clear next steps from this response."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020037,
+  "judge_latency_ms": 15641.180749997147,
+  "judge_prompt_tokens": 3039,
+  "judge_completion_tokens": 728
+}

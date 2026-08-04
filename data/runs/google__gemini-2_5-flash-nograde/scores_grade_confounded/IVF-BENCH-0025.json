@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a good Day 4 morula/early cavitating morula and ignores the provided Gardner grade 1DD, which indicates a very poor-quality early blastocyst with absent/degenerative ICM and TE. It fabricates favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm parameters, endometrium, and first-cycle status, though it overweights these positives relative to the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good quality. This leads to an implausibly optimistic implantation estimate and conclusions inconsistent with the stated 1DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response does not align well with Gardner grading interpretation and overestimates prognosis for a 1DD embryo. While some general IVF recommendations are standard, the embryo-quality assessment and success estimate deviate from evidence-based expectations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps such as luteal support, beta-hCG timing, and future review of embryo development, but recommendations are fairly generic and insufficiently tailored to the poor-grade embryo."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013497,
+  "judge_latency_ms": 3719.2135000004782,
+  "judge_prompt_tokens": 2719,
+  "judge_completion_tokens": 356
+}

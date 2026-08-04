@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0406",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst and identifies ICM and hatching/herniation, but overstates certainty from the image, calls it 'perfectly' aligned with 4AA, and TE/cohesive epithelium are not clearly assessable in this single frame."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, low oocyte yield, endometriosis, prior live birth, sperm parameters, and endometrial thickness with embryo prognosis; however, it overinterprets FSH 6.7 as elevated/DOR without AMH and does not discuss BMI/lifestyle much."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, especially around morphology versus age-related aneuploidy risk; minor issues include inconsistent euploidy/implantation arithmetic and some overconfident statements."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice, including valuing morphology appropriately and favoring single embryo transfer; minor deviations include overstating paternal age impact and labeling FSH as elevated/DOR too strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides useful immediate advice to proceed with single embryo transfer, but the future-planning section is truncated and lacks fuller practical detail on counseling, luteal support, contingency planning, or options for subsequent cycles."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012648,
+  "judge_latency_ms": 5240.222041000379,
+  "judge_prompt_tokens": 2401,
+  "judge_completion_tokens": 363
+}

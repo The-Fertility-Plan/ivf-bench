@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0317",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets the image, asserting clear grade A ICM and TE, cohesive epithelium, fragments, granularity, and vacuolization that are not reliably discernible in this single image. Expansion as roughly grade 3 is plausible, but several described features appear fabricated or too certain."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior cycle history, male factor context, sperm parameters, endometrial thickness, and ovarian response with embryo quality reasonably well. However, some interpretations (e.g., low FSH concern, thick endometrium as a major negative) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis is tied to listed factors, but several deductions are weak or inconsistent, especially penalizing heavily for no PGT-A, treating one prior failed cycle as a major adverse factor, and inferring endometrial receptivity problems without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While eSET and general embryo-quality framing are appropriate, recommendations such as ERA after a single failed cycle, routine chronic endometritis/thrombophilia/NK-cell workup, and aspirin consideration are not well aligned with mainstream evidence-based IVF guidelines for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer management and future workup, including progesterone monitoring and single embryo transfer. However, some suggested actions are overly aggressive or not evidence-based for this case."
+    }
+  ],
+  "extracted_probability": 0.385,
+  "judge_cost_usd": 0.015762,
+  "judge_latency_ms": 5886.546459005331,
+  "judge_prompt_tokens": 3279,
+  "judge_completion_tokens": 395
+}

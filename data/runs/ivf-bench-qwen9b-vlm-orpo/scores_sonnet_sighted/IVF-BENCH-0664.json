@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model contradicts the provided Gardner Score of 3AA by suggesting the embryo is 'high 3s/low 4s' and questioning ICM quality. The image shows a clearly expanded blastocyst with thinning zona consistent with the 3AA grade. The model introduces unnecessary uncertainty about ICM compactness and TE cohesiveness that conflicts with both the lab data and what is visible in the image. The response appears to undergrade the embryo without strong justification."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response mentions key clinical factors including maternal age (33), ovarian reserve, non-smoking status, endometrial thickness, and male factor diagnosis. However, it does not deeply integrate the previous clinical miscarriage history, the implications of BMI 30.1 on implantation, or the interaction between sperm parameters and embryo quality in a male factor case. Integration is surface-level rather than analytical."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There is a notable internal contradiction: the model calls this a 'good-quality' embryo and 'reasonable transfer candidate' while simultaneously downgrading the morphology below the provided 3AA score without clear visual justification. No specific implantation probability range is provided in the visible response text, and the reasoning trail is incomplete as the response appears truncated. The logic between observations and conclusions is inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response does not clearly reference Gardner grading criteria or ESHRE/ASRM guidelines. It contradicts the provided Gardner 3AA score without methodological justification. No mention of PGT-A considerations, luteal support protocols, or evidence-based recommendations for patients with prior miscarriage are included. The truncated response limits full assessment but what is present shows limited guideline grounding."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is truncated and does not provide specific recommendations for this transfer or future cycle planning. No concrete next steps are offered regarding luteal support, endometrial preparation, miscarriage workup follow-up, or future cycle modifications. The 'overall impression' section is the only substantive content, making the response largely non-actionable for clinical decision-making."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.013755,
+  "judge_latency_ms": 12001.308958002483,
+  "judge_prompt_tokens": 1800,
+  "judge_completion_tokens": 557
+}

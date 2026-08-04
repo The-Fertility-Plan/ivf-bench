@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the poor ICM and TE consistent with the 1DD Gardner score, and notes the irregular/collapsed blastocoel. However, it relies heavily on the provided laboratory data rather than independent image analysis, and some descriptions (e.g., 'patchy, irregular, poorly cohesive' TE) appear inferred from the grade rather than clearly observed. The response appropriately acknowledges limitations of static image assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically addresses female age 38 as the dominant variable, AMH/FSH in context, sperm parameters, endometrial thickness, BMI, lifestyle factors, and diagnosis of unexplained infertility. It clearly explains how each factor interacts with embryo quality and overall prognosis, including the compounding effect of age-related aneuploidy on poor morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 2-8% logically follows from the combination of poor morphology and maternal age. The response correctly distinguishes implantation probability from ongoing pregnancy/live birth probability. Minor issue: the response could more explicitly quantify how much each factor contributes to the estimate, but overall the logic chain is clear and non-contradictory."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: recommends single embryo transfer, discusses PGT-A appropriately with balanced pros/cons, advises against unproven add-ons, recommends standard luteal support, and appropriately contextualizes Gardner grading. The caution around PGT-A in low-yield cycles aligns with current evidence. Minor gap: could reference specific ESHRE blastocyst grading consensus more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific recommendations for the current transfer (single ET, luteal support, monitoring protocol) and detailed future cycle planning (PGT-A discussion, stimulation protocol review, sperm DNA fragmentation testing criteria, avoiding unproven add-ons, psychological support). Recommendations are appropriately nuanced with conditions specified for when each intervention would be warranted, making this practically useful for a clinician."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.021636,
+  "judge_latency_ms": 12513.242708002508,
+  "judge_prompt_tokens": 4327,
+  "judge_completion_tokens": 577
+}

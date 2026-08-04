@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: expanded blastocoel with thinning zona, dense granular ICM cluster on the right side, and cohesive TE cells. The description of ICM as 'dark and granular' and located on the right is consistent with the image. Minor issue: the response states the zona is thinning 'particularly on the left periphery' which is a reasonable observation, but the overall blastocyst appears somewhat less perfectly expanded than a textbook 3AA, and the ICM granularity description could reflect a slightly lower quality than Grade A. The response does not critically evaluate whether the image fully supports the reported 3AA score, which would have added precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (28) linked to low aneuploidy risk, AMH/FSH and oocyte yield confirming good reserve, endometrial thickness of 12mm noted as optimal, and sperm parameters assessed as normal. The tubal factor diagnosis is acknowledged implicitly (first cycle, no uterine scarring mentioned) but not explicitly discussed in terms of its impact on implantation vs. ectopic risk, which is a notable omission given it is the primary diagnosis. Alcohol consumption is flagged appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the cited factors (young age, top-tier embryo, optimal endometrium). The aneuploidy rate cited (10-15% for this age group) is slightly underestimated (typically 20-30% for age 28 without PGT-A), which mildly inflates the probability estimate. The response correctly distinguishes between implantation rate and live birth rate but conflates them slightly in the conclusion. No major contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET is strongly recommended for a 28-year-old with a top-quality blastocyst, luteal phase progesterone support is mentioned, vitrification of surplus embryos is advised, and PGT-A is appropriately contextualized as optional rather than mandatory at this age. The alcohol counseling aligns with WHO/ASRM guidance. One gap: no mention of ectopic pregnancy risk monitoring given the tubal factor diagnosis, which ASRM guidelines specifically highlight for this population."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET clearly recommended, progesterone support mentioned, alcohol cessation advised, vitrification of remaining embryos suggested, beta-hCG at 14 days and early ultrasound at 6-7 weeks specified. However, the response misses a critical actionable point for tubal factor patients: the need for early ultrasound to rule out ectopic pregnancy should be emphasized more strongly, and the timing/monitoring protocol could be more detailed. PGT-A discussion is appropriately nuanced."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019887,
+  "judge_latency_ms": 17230.07725000207,
+  "judge_prompt_tokens": 2824,
+  "judge_completion_tokens": 761
+}

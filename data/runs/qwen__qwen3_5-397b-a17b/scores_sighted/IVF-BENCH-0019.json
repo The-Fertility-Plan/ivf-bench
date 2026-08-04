@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response captures poor-quality morphology and absent/degenerate ICM/TE reasonably, but it misstates the Gardner 1 expansion stage as blastocoel absent or less than half and describes the image more like a compacted morula than a blastocyst with some cavitation. It also adds features like dark degeneration not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, smoking, prior ectopics, endometrial thickness, prior live birth, low oocyte yield, and male-factor context with embryo prognosis well. However, it overinterprets low oocyte yield as suggesting DOR despite missing AMH/AFC and normal FSH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and the poor prognosis follows from the very poor embryo grade plus clinical history. Minor issues include overcalling futility and some unsupported inferences about DOR and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, tubal evaluation after ectopics, protocol review), but suggesting cancellation/no transfer as ethically necessary for a 1DD embryo and recommending testicular sperm/TESA based on speculative DNA fragmentation are stronger than guideline-supported in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, tubal assessment, ovarian reserve testing, stimulation review, sperm workup, and transfer technique. It is practical, though some recommendations are somewhat overreaching or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014295,
+  "judge_latency_ms": 6061.246166995261,
+  "judge_prompt_tokens": 2800,
+  "judge_completion_tokens": 393
+}

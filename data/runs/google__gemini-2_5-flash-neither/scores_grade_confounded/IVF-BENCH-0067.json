@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score can be assigned and no morphology assessed, despite the provided lab data explicitly giving a 3AA grade with expansion, ICM, and TE details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, AMH/FSH, prior miscarriage, sperm, endometrium, and diagnosis, though it fails to connect them to the actual provided 3AA embryo and instead reasons from an assumed embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it has a major logical flaw by ignoring the supplied embryo grade and basing prognosis on hypothetical embryo qualities, which weakens the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but recommending broad thrombophilia testing, routine parental karyotyping, ERA, and suggesting PGT-A mainly for a single prior miscarriage in a 27-year-old is not strongly guideline-based for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical counseling and follow-up suggestions, but key recommendations are misdirected by requesting morphology already provided and include several non-routine future tests without clear indication."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014364,
+  "judge_latency_ms": 4534.98008299357,
+  "judge_prompt_tokens": 3078,
+  "judge_completion_tokens": 342
+}

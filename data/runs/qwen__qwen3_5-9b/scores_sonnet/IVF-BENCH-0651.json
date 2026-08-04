@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0651",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model repeatedly vacillates between calling the embryo a morula and a blastocyst, never settling on a clear, confident morphological description. It notes a possible small cavity at the bottom but fails to provide a structured, definitive description of expansion stage, ICM, TE, or zona pellucida. The response is dominated by internal deliberation rather than clear morphological analysis, and the final description is inconsistent and incomplete."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The model does identify key clinical factors: age 26 as favorable, AMH 10.9 as high reserve, the live birth history as a major positive, normal sperm parameters despite male factor diagnosis, and good endometrial thickness. However, the integration is buried in stream-of-consciousness reasoning and lacks a coherent synthesis. It briefly notes the sperm DNA fragmentation possibility but doesn't develop it, and the lifestyle factors are not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is largely an unstructured internal monologue with repeated contradictions and reversals. The model cannot decide whether the embryo is a morula or blastocyst, whether to trust the image or the text data, and oscillates without resolution. The probability estimate is inconsistently stated (< 5%, 5-10%, < 1%) without a clear final conclusion. The reasoning does not flow logically to a coherent clinical conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The model correctly notes that Gardner scoring applies to blastocysts and that Day 4 transfers are typically cleavage-stage, showing some guideline awareness. However, it fails to properly apply Gardner criteria systematically, does not reference ESHRE/ASRM standards for poor-quality embryo transfer decisions, and the suggestion to consider PGT-A for a Day 4 embryo is not guideline-consistent. The response lacks structured evidence-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The recommendations are vague and conditional ('if there are other embryos, freeze them,' 'consider PGT-A'). The model suggests extending culture to Day 5 but then notes the transfer is already Day 4. No clear counseling framework, no specific next steps for cycle planning given the high AMH and 5-cycle history, and no concrete guidance on whether to proceed or cancel the transfer. The response does not provide a clinician with clear, actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.038925,
+  "judge_latency_ms": 13266.053290994023,
+  "judge_prompt_tokens": 9970,
+  "judge_completion_tokens": 601
+}

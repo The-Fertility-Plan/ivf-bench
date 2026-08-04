@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes a compacted cluster of cells consistent with a morula or early blastocyst, which aligns with the 1DD Gardner score indicating minimal expansion. The description of lacking a clearly defined blastocoel is reasonable for a Grade 1 expansion. However, the model could have provided more specific observations about the zona pellucida, fragmentation, or cell granularity visible in the image. The interpretation of DD grades as degenerative/absent ICM and TE is accurate per Gardner criteria. The description is generally consistent but lacks fine detail about what is actually visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The model effectively integrates multiple clinical factors: age 38 with FSH 8.5 suggesting diminished reserve, the discrepancy between male factor diagnosis and normal sperm parameters, the pattern of biochemical pregnancies suggesting aneuploidy, and the low BMI. The observation about the sperm parameters not matching the male factor diagnosis is insightful. The connection between age-related aneuploidy and the poor embryo quality is well-drawn. However, the characterization of FSH 8.5 as 'elevated' is slightly misleading—it's within normal range, though at age 38 it may be less reassuring. AMH being N/A limits the assessment but the model acknowledges this implicitly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of <5-10% follows from the poor embryo grade and patient history. The model correctly identifies the Day 4 transfer vs Gardner grading discrepancy, which is a thoughtful observation. The connection between biochemical pregnancies and aneuploidy is logical. One minor issue: FSH 8.5 is described as 'elevated' when it's actually within normal range (though the model's broader point about age-related decline is valid). The conclusion that this is primarily a maternal/embryonic issue rather than male factor is well-reasoned."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for recurrent failure at age 38, RPL workup including APS and thrombophilia screening, hysteroscopy for uterine evaluation, and the mention of donor eggs as an alternative. The Gardner grading interpretation is correct. The suggestion to proceed with transfer while counseling about low success is appropriate. The recommendation for nutritional optimization given low BMI is reasonable. Minor deviation: the model could have discussed extended culture to Day 5/6 as a strategy, and could have mentioned ICSI given the male factor diagnosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: PGT-A for future cycles, RPL workup with specific tests (APS, thrombophilia, hysteroscopy), nutritional counseling for low BMI, and donor egg discussion. The current transfer recommendation to proceed with realistic counseling is appropriate. The model provides a clear framework for future planning. Could be improved with more specific protocol modifications (e.g., stimulation protocol changes, consideration of natural cycle IVF, specific supplements like CoQ10/DHEA for egg quality, or discussion of endometrial receptivity testing like ERA)."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.03416,
+  "judge_latency_ms": 17434.220874973107,
+  "judge_prompt_tokens": 2877,
+  "judge_completion_tokens": 791
+}

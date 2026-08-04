@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0742",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description consistent with the Gardner 4AA label, identifying the blastocoel, ICM, and TE. However, the image actually shows a hatching/herniated blastocyst with cells visibly extruding through the zona, which is a key morphological feature of a Grade 4-5 expansion stage. The model describes the zona as 'intact without a large obvious gap,' which is inaccurate given the visible hatching in the image. This is a notable omission/error for a 4AA hatching blastocyst assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a thorough job integrating most clinical factors: age 34, AMH, FSH, BMI, endometriosis diagnosis, semen parameters, endometrial thickness, and lifestyle factors including smoking. It correctly identifies endometriosis and smoking as the primary moderating factors and connects them meaningfully to implantation risk. Minor gap: no explicit discussion of how endometriosis stage/severity interacts with the antagonist protocol choice or fresh vs. frozen transfer decision in this specific case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 45-55% follows coherently from the identified positive and negative factors. The distinction between untested vs. euploid-confirmed embryo probabilities is appropriate. Minor inconsistency: the model states live birth is 'lower high 30s to mid 40s%' which slightly contradicts the earlier stated 40-50% range, creating a small internal inconsistency. Overall the reasoning chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for age 34 with good-quality blastocyst, appropriate caution about add-ons (aspirin, steroids, intralipids) without specific indication, PGT-A discussion framed correctly as optional rather than mandatory at age 34, and smoking cessation advice. The mention of GnRH agonist pretreatment for endometriosis FET cycles reflects emerging evidence. Slight gap: no mention of ESHRE endometriosis guidelines specifically recommending consideration of freeze-all in endometriosis patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: immediate smoking cessation with specific pharmacological options named, eSET recommendation with rationale, luteal support optimization, explicit discouragement of unindicated add-ons, clear future cycle planning including PGT-A discussion triggers, endometriosis-specific FET strategy considerations, and male factor escalation criteria. The response also offers additional deliverables. This level of specificity and nuance is clinically useful for a treating physician."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.023031,
+  "judge_latency_ms": 15344.956417000503,
+  "judge_prompt_tokens": 4172,
+  "judge_completion_tokens": 701
+}

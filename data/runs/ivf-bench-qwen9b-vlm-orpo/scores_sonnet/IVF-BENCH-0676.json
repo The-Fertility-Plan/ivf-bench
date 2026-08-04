@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0676",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes ICM as compact and dense, TE as continuous and cohesive, and notes zona pellucida presence - all consistent with the Gardner 3AA grade. However, the model expresses uncertainty about expansion status, noting it doesn't see 'obvious full expansion or prominent hatching' which contradicts the provided Gardner score of 3AA (expanded blastocyst). The model hedges by suggesting the 'expanded' label may come from prior dynamic observation, which is a reasonable caveat but reflects limited confidence in reading the static image. Description is mostly accurate but lacks precision and contains some inconsistency with the provided grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: age 33 is correctly identified as a major positive prognostic factor, BMI 32.9 is discussed in terms of implantation and obstetric risks, DOR is appropriately contextualized as affecting cumulative outcomes rather than this specific transfer, endometrial thickness of 10mm is recognized as favorable, and semen parameters are assessed as adequate. The response also notes the missing AMH value and recommends obtaining it. Minor issue: sperm concentration is misquoted as '49.4 M/mL' instead of the stated 39.4 M/mL, showing a transcription error. Overall integration is good but not fully comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-60% implantation and 35-50% live birth follows reasonably from the factors presented. The model correctly distinguishes between factors affecting this specific transfer versus cumulative cycle outcomes. The reasoning around DOR is particularly coherent. Minor inconsistencies include the contradiction between expressing uncertainty about expansion stage while still accepting the AA grade, and the sperm concentration transcription error. The miscarriage risk estimate of 15-25% is reasonable and appropriately qualified. Overall the reasoning chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: single embryo transfer is correctly recommended for a 33-year-old with good quality blastocyst, PGT-A is appropriately framed as optional rather than mandatory at this age with limited embryo numbers, luteal support emphasis is appropriate, and bed rest avoidance aligns with current evidence. The discussion of PGT-A indications (repeated failure, recurrent miscarriage) aligns with guidelines. Weight optimization advice is evidence-based. The response correctly notes that routine uterine workup is not needed for a first cycle. Minor gap: no mention of endometrial receptivity testing considerations or specific progesterone monitoring protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for both the current transfer and future cycle planning. Immediate recommendations include single embryo transfer, luteal support adherence, lifestyle modifications, and activity guidance. Future planning includes obtaining AMH/AFC, protocol refinement considerations, PGT-A discussion framework, weight optimization targets (5-10% body weight reduction), and metabolic evaluation. The recommendations are appropriately nuanced and case-specific. The offer to provide patient-friendly counseling notes adds practical value. Slight deduction for lacking specific progesterone protocol details and not addressing timing of beta-hCG testing."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.023169,
+  "judge_latency_ms": 17231.05258400028,
+  "judge_prompt_tokens": 3698,
+  "judge_completion_tokens": 805
+}

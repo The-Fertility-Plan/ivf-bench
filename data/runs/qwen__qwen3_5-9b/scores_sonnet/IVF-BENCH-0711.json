@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 2AA Gardner score: full blastocoel expansion, tightly packed ICM on the right side, and cohesive TE epithelium. The description of the zona pellucida as thin is reasonable for a Grade 2 expansion. Minor issue: Grade 2 in Gardner scoring is 'full blastocyst' where blastocoel fills the embryo but is not yet expanded/hatching, yet the response describes it as 'fully expanded' which is more consistent with Grade 3-4, showing slight confusion between expansion grades. Overall description is detailed and mostly accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: female age (35), paternal age (48) and its implications for sperm DNA fragmentation and aneuploidy, low BMI (17.7) and its hormonal implications, FSH levels, endometrial thickness (9.5mm), and previous failed cycle. The tubal factor diagnosis is acknowledged implicitly through the IVF indication. AMH being N/A is not addressed. The interaction between paternal age and embryo aneuploidy risk is well-articulated. Minor gap: the response slightly overstates FSH 6.9 as 'higher end' when it is generally within normal range for most labs."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to clinical factor integration to probability estimation. The adjustment of implantation probability from morphological baseline (50-60%) down to 30-50% based on paternal age aneuploidy risk is coherent and well-explained. The recommendation to proceed with transfer while also recommending PGT-A for future cycles is internally consistent. Minor issue: the claim that euploid embryo success would be '>60%' then '~70%' is slightly inconsistent within the same response, and the aneuploidy risk estimate of '30-40%' for a 48-year-old male is somewhat overstated compared to evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines. Recommending transfer of a 2AA blastocyst with good endometrial thickness is appropriate. PGT-A recommendation for future cycles given paternal age and prior failure is reasonable. However, PGT-A is not universally recommended solely for advanced paternal age per current ASRM/ESHRE guidelines, which primarily focus on maternal age and recurrent failure. The Gardner grading description has a minor inaccuracy (Grade 2 expansion description). The BMI counseling recommendation aligns with guidelines. SDF testing recommendation is evidence-supported though not universally standardized in guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with current transfer, pursue PGT-A in future cycles, nutritional counseling for BMI, SDF testing for partner, and endometrial monitoring. Each recommendation is tied to a specific clinical rationale. The response provides clear next steps for both the current transfer and future cycle planning. Could be improved by specifying weight gain targets, specific SDF thresholds, or alternative stimulation protocol suggestions given the 'Other' protocol and low responder profile."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.019941,
+  "judge_latency_ms": 15885.202834004303,
+  "judge_prompt_tokens": 2647,
+  "judge_completion_tokens": 800
+}

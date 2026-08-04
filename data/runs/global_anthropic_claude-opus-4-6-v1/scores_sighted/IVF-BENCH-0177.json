@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0177",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a compacting morula despite the provided Gardner score of 0DD indicating an early blastocyst with very poor ICM/TE. It adds speculative details such as exact cell number and excluded blastomeres/fragments that are not reliably discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, BMI, prior cycle, sperm, and endometrium with embryo quality reasonably well, though some links (stress, underweight effects, protocol impact) are somewhat overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the low prognosis conclusion is consistent with poor embryo quality, but the reasoning is weakened by the initial stage misclassification and by building probability estimates on speculative morphology and nonstandard percentage adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many points are broadly consistent with IVF practice, but there are notable deviations: overinterpretation of Day 4 Gardner components, recommending DHEA/PGT-A in a 30-year-old with poor morphology without strong indication, and several adjuncts with limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical suggestions for counseling, luteal support, future protocol changes, culture strategy, and optimization steps. However, some recommendations are more speculative than standard-of-care."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.017499,
+  "judge_latency_ms": 5241.561000002548,
+  "judge_prompt_tokens": 4103,
+  "judge_completion_tokens": 346
+}

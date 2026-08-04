@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 1DD and instead stated morphology could not be assessed, incorrectly implying Gardner grading is only for day 5/6 and not analyzing the known poor-quality blastocyst features (degenerative/absent ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, BMI, sperm parameters, partner age, endometrium, and cycle history reasonably well with prognosis, though it underweights the major impact of the explicitly poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it ignores the supplied 1DD grade, treats embryo quality as unknown, and gives an implantation estimate that seems too optimistic for a 1DD embryo transferred on day 4."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but there are deviations: Gardner grading was mischaracterized, PGT-A was presented too strongly, and TESE for older paternal age/high DNA fragmentation is suggested more aggressively than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future cycles, including diagnostic reassessment and lab discussions, though some recommendations are somewhat generic and not sufficiently tailored to the very poor 1DD morphology."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01386,
+  "judge_latency_ms": 4256.590666998818,
+  "judge_prompt_tokens": 2815,
+  "judge_completion_tokens": 361
+}

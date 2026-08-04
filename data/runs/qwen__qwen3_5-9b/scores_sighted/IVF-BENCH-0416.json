@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0416",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image-specific morphology: the blastocoel/ICM/TE are not clearly delineated in this single frame, and it incorrectly equates Gardner 3 with an 'expanded' blastocyst and calls it 'optimal stage for Day 5 transfer.' Some comments loosely fit the provided grade, but several features are inferred rather than visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, PCOS, prior live birth, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overinterprets the oocyte yield for PCOS and implies a single available embryo without evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: misclassification of expansion stage, unsupported claims about stress affecting implantation, and an implantation estimate that is somewhat optimistic given age-related aneuploidy risk and a 3AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer is guideline-concordant, but the morphology discussion is not fully aligned with Gardner criteria (grade 3 is full blastocyst, not expanded), and some prognostic statements are more speculative than evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It gives one practical recommendation (proceed with SET) but the future planning section is truncated and lacks specific next steps on luteal support, counseling, PGT-A considerations, or contingency planning for subsequent cycles."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01278,
+  "judge_latency_ms": 5352.236125007039,
+  "judge_prompt_tokens": 2445,
+  "judge_completion_tokens": 363
+}

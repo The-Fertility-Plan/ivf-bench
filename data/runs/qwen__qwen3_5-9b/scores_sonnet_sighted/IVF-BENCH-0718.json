@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0718",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion stage, thinning zona, and general ICM/TE characteristics consistent with 3AA grading. However, the description of the ICM as 'slightly irregular in shape' and located 'at the bottom' is somewhat imprecise, and the claim of 'no obvious signs of fragmentation or vacuolization' may not fully reflect what is visible in the image, which shows some cytoplasmic heterogeneity. The TE description is adequate but not highly detailed. Overall mostly accurate but lacks the precision expected for a score of 4-5."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating PCOS diagnosis with the unexpected low ovarian response, flagging the AMH/FSH discrepancy and suggesting possible DOR overlap. It connects prior failure history, BMI, sperm parameters, and endometrial thickness to the overall prognosis. The 'PCOS paradox' framing is clinically insightful. Minor gap: does not deeply explore how PCOS-specific endometrial receptivity issues (e.g., hyperinsulinemia, progesterone rise) might independently affect implantation beyond just mentioning luteal support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 30-45% follows logically from the base rate reduction due to prior failures, age-related aneuploidy risk, and reserve concerns. The reasoning chain is clear and consistent. Minor issue: the response recommends proceeding with fresh transfer while also noting PCOS patients may have elevated progesterone warranting FET — this conditional recommendation is reasonable but could be more definitively structured. The aneuploidy argument for prior failures is speculative but appropriately caveated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM principles regarding blastocyst grading, luteal support, and PGT-A indications for recurrent implantation failure. However, recommending 'Microdose Flare' protocol for a PCOS patient is potentially problematic — flare protocols are typically reserved for poor responders without PCOS and carry OHSS risk in PCOS patients. The IVIG/immunology workup recommendation, while sometimes practiced, is not strongly supported by current ESHRE guidelines for recurrent implantation failure. CoQ10 recommendation lacks strong RCT evidence but is commonly used."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and cover immediate transfer decisions, luteal support, future protocol adjustments, PGT-A planning, lifestyle intervention, and psychological support. The conditional fresh vs. FET recommendation based on progesterone levels is practical. The BMI target (<28) and specific supplement mention (CoQ10/ubiquinol) add useful specificity. Slight deduction for the immunology workup recommendation lacking specificity on which tests to order and the protocol suggestion being potentially inappropriate for PCOS."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020178,
+  "judge_latency_ms": 16032.853959011845,
+  "judge_prompt_tokens": 3081,
+  "judge_completion_tokens": 729
+}

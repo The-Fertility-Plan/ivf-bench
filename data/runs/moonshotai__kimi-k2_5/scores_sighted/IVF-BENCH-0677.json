@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mislabels expansion: a Gardner 2 blastocyst is early/full cavity filling, not a fully expanded blastocyst with thinned zona. Claims of a distinct compact ICM at 1-2 o'clock, uniform AA trophectoderm, and no asymmetry are stronger than what is clearly visible in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, prior live birth, ectopic history, sperm parameters, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some assumptions (e.g., likely fertilization/blastulation performance) go beyond provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats a reported 2AA as 'top tier' and 'full expansion,' infers favorable day-4 blastulation without nuance, and gives probability adjustments that are somewhat assertive relative to the uncertain morphology and transfer context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET and early ectopic surveillance are guideline-consistent, but ERA and empiric low-dose aspirin are not routine evidence-based recommendations after a single failure, and progesterone dosing comments are somewhat speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and contingency planning, including eSET, early hCG/ultrasound follow-up, tubal evaluation, and lifestyle optimization. Some suggestions are less well-supported, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014316,
+  "judge_latency_ms": 5526.293709001038,
+  "judge_prompt_tokens": 2857,
+  "judge_completion_tokens": 383
+}

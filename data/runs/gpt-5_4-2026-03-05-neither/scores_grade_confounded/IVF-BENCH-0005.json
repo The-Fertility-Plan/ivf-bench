@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states there is no laboratory grade and refuses to use the provided Gardner 2AA data, instead discussing generic day-4 morphology. It does not analyze the given blastocyst features (full blastocyst, strong ICM, cohesive TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: age, ovarian reserve, BMI, endometriosis, prior failed cycles, semen parameters, endometrium, and protocol, and relates them to prognosis. It misses some interaction with the provided embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it has a major premise error by disregarding the provided 2AA grade and overemphasizing lack of image/grade data, which weakens downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice: cautious SET, review recurrent implantation failure factors, uterine assessment, selective PGT-A discussion, and skepticism toward unproven add-ons. Minor deviation comes from not incorporating the supplied Gardner grading appropriately."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer optimization and future-cycle review, including uterine workup, embryo development review, and endometriosis-specific planning. Slightly limited because it asks for missing morphology data that were actually provided."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.014763,
+  "judge_latency_ms": 4453.175125003327,
+  "judge_prompt_tokens": 3091,
+  "judge_completion_tokens": 366
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0080",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided Gardner 3AA label rather than the image, and it incorrectly states grade 3 means an expanded blastocyst with thinning zona. In Gardner grading, 3 is a full blastocyst; expanded/thinning zona is grade 4. It also infers top-tier visible ICM/TE features that are not clearly discernible in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It appropriately mentions age, AMH, FSH, oocyte yield, and sperm factors, but integration is incomplete and truncated. It does not meaningfully discuss endometrial thickness, tubal factor relevance, motility concerns in context, or how these interact with transfer prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but there is a notable logic issue from misinterpreting the expansion grade and overcalling morphology from the image. The response is also incomplete, limiting full assessment of its reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It departs from Gardner grading criteria by equating grade 3 with expanded blastocyst and thinning zona. While some general statements are standard, the grading error and unsupported claim that euploid likelihood is 'very high' reduce alignment with evidence-based IVF assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No concrete transfer recommendations, implantation probability range, or future cycle planning are actually provided in the visible response. It is largely descriptive rather than actionable."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011064,
+  "judge_latency_ms": 5261.109625003883,
+  "judge_prompt_tokens": 1763,
+  "judge_completion_tokens": 385
+}

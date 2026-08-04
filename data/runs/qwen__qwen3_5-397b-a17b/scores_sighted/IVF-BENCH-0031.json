@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as a compacting morula/Day 3-4 embryo and states there is no clear blastocoel, whereas the image and provided Gardner 2BB are more consistent with an early/full blastocyst with a visible cavity, loose ICM, and sparse TE. It notes some uncertainty but the core stage assessment is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrial thickness, sperm parameters, smoking, and prior cycle history with prognosis reasonably well. However, it overstates recurrent implantation failure from two prior cycles and overinterprets the DOR discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but key conclusions rest on the incorrect morphological staging. It also contains some questionable inferences, such as labeling two prior failed cycles as RIF and suggesting PCOS from AMH alone, which weakens the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General points such as smoking cessation, luteal support, and considering blastocyst culture are guideline-consistent. However, recommending PGT-A and especially ERA after this history is not strongly guideline-supported in a 29-year-old without clearer indications, and the embryo-stage interpretation conflicts with Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, smoking cessation, future culture strategy, and diagnostic review. Some recommendations are useful, though a few are insufficiently nuanced or not strongly indicated for this specific case."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013737,
+  "judge_latency_ms": 5542.371542003821,
+  "judge_prompt_tokens": 2689,
+  "judge_completion_tokens": 378
+}

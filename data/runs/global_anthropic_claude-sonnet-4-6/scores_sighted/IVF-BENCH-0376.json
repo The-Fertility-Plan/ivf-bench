@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0376",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a low-quality single image, confidently calling prominent vacuolization and downgrading ICM/TE despite the provided 3AA lab grade. Several claimed features are not clearly discernible, so morphology assessment includes likely fabricated or overstated findings."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, tubal factor, endometrium, sperm data, and cycle history reasonably well, and connects these to prognosis. Some links, especially between BMI and the specific image findings, are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is heavily driven by uncertain image-based claims and additive percentage adjustments that are not well validated. Hydrosalpinx is appropriately raised as conditional, though it is emphasized strongly without evidence it is present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice (consider hydrosalpinx, BMI counseling, proceed/freeze discussion), but some statements exceed guideline-supported evidence, including strong prognostic claims about blastocyst vacuolization, routine adjunct supplements, and suggesting PGT-A partly due to BMI/morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps and future planning considerations, including hydrosalpinx review, transfer decision framing, and metabolic optimization. Actionability is reduced by inclusion of speculative or weakly evidence-based interventions."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.016011,
+  "judge_latency_ms": 5883.652209013235,
+  "judge_prompt_tokens": 3527,
+  "judge_completion_tokens": 362
+}

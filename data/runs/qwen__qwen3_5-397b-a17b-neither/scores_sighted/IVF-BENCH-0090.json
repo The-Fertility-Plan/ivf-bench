@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0090",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate specific embryo morphology. It only gave generic examples of possible Gardner grades, so there are no major image-based errors, but also no actual morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well, including age, AMH/diagnosis discrepancy, prior failed cycle, BMI, sperm parameters, and missing endometrial data, and linked these to prognosis and planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, especially around data inconsistencies and prognosis. Minor issues include speculative assumptions about COCs and somewhat broad probability estimates without embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly guideline-consistent, such as favoring single embryo transfer in a young patient and noting limited routine role for PGT-A at age 28. However, calling eSET 'mandatory,' recommending stronger luteal support based on one failure, and suggesting PGT-A be strongly recommended after another failure are more assertive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer preparation and future cycle review, including checking endometrium, reviewing stimulation strategy, and clarifying ovarian reserve data. Some recommendations are somewhat generic or overconfident but still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014613,
+  "judge_latency_ms": 5280.8505419961875,
+  "judge_prompt_tokens": 3041,
+  "judge_completion_tokens": 366
+}

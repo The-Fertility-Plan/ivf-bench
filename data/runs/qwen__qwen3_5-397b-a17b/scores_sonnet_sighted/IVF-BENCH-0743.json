@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0743",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, identifies a dense ICM cluster, and describes a cohesive TE layer consistent with the 3AA grade. The ICM localization at '4 o'clock' is a reasonable attempt at spatial description. Minor deduction because the image is somewhat blurry/low resolution making precise ICM/TE distinction challenging, and the response may be partially anchored to the provided Gardner score rather than purely independent image analysis. Overall description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age (39) as the primary risk factor for aneuploidy, connects PCOS diagnosis with the lean phenotype and moderate response, addresses endometrial thickness favorably, and considers sperm parameters. The FSH interpretation in context of PCOS is nuanced. Minor gap: AMH is listed as N/A but not addressed, and the interaction between PCOS and potential endometrial receptivity issues could be explored more deeply. The 100% maturation rate observation is a good clinical integration point."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The 35-45% range is coherent given the age-adjusted baseline and morphology uplift. The conditional PGT-A recommendation (single embryo vs. multiple embryos) is internally consistent. The probability adjustment framework (baseline 25-30% → 35-45% for top morphology, >60% if euploid) is well-structured. Minor issue: the response states aneuploidy risk is 'roughly 50-60%' at age 39 which is slightly high for the lower end of that age range (typically ~40-50%), creating a minor tension with the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: Day 5 transfer timing, luteal support for PCOS patients, PGT-A discussion for age 39, single embryo transfer implied. The Gardner grading criteria are correctly applied. The recommendation to proceed without biopsy if only one blastocyst is available aligns with current guidelines balancing biopsy risk vs. benefit. The Metformin suggestion for insulin resistance in PCOS is evidence-based. Minor deduction: the response doesn't explicitly address single embryo transfer (SET) policy which is a key ESHRE guideline consideration for this age group."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, tiered recommendations: proceed with transfer, ensure luteal support, conditional PGT-A advice based on embryo cohort size, and specific future cycle planning including metabolic screening and protocol considerations. The branching logic for PGT-A (single vs. multiple embryos) adds practical nuance. The urgency message about time sensitivity at age 39 is clinically valuable. Could be slightly more specific about progesterone dosing protocols or ERA testing consideration given the PCOS diagnosis, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020694,
+  "judge_latency_ms": 17543.504999994184,
+  "judge_prompt_tokens": 3113,
+  "judge_completion_tokens": 757
+}

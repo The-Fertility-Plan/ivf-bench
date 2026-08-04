@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0397",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage, ICM as a tightly packed dense cluster, and TE as a cohesive epithelium consistent with the 3AA grading. The description of zona thinning and blastocoel cavity is appropriate. Minor issue: describing the ICM as 'fluffy' is somewhat contradictory to 'tightly packed,' and the localization to 'lower-left quadrant' may or may not match the actual image precisely. Overall a good morphological description that aligns with the Gardner score provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response frames the case as 'high-quality embryo, low-yield cycle' which is apt. It connects AMH 1.1 to diminished ovarian reserve and low oocyte yield, considers the impact of two prior failed cycles, appropriately weighs maternal age (32) as favorable, notes the ideal endometrial thickness, evaluates sperm parameters, and considers lifestyle factors including former smoking history. The interaction between embryo quality and patient history is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 40-60% is well-justified by balancing the excellent embryo morphology against the history of two prior failures. One minor inconsistency: the SET recommendation states 'the chance of twins is high' which doesn't make sense for a single embryo transfer - this appears to be a logical error. Also, the statement about aneuploidy risk being '5-10%' at age 32 is somewhat low; typical estimates are higher (~20-25%). Otherwise the reasoning chain is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with guidelines - recommends SET, mentions PGT-A for future cycles, and discusses luteal phase support. However, there are some issues: the aneuploidy rate cited for age 32 is too low (5-10% vs. actual ~20-25%), the comment about freeze-all to 'avoid luteal phase defects' is an oversimplification, and the twin risk comment in the SET section is confused. The FSH of 8.0 is described alongside AMH as indicating diminished reserve, but FSH 8.0 is actually normal. The response was also cut off before completing the PGT-A recommendation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful recommendations including SET, lifestyle advice, and begins discussing PGT-A for future cycles. However, the response is truncated and doesn't complete the future cycle planning section. Missing are specific recommendations about ERA testing for endometrial receptivity (relevant given RIF), immunological workup, specific protocol modifications for future cycles given low AMH, or consideration of adjunct therapies. The fresh vs. frozen discussion is somewhat vague rather than providing a clear recommendation."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.031315,
+  "judge_latency_ms": 15752.555416023824,
+  "judge_prompt_tokens": 2713,
+  "judge_completion_tokens": 710
+}

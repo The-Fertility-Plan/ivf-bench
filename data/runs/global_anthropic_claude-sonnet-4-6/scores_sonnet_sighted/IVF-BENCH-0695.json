@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0695",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst stage, thinned zona pellucida, large blastocoel, compact ICM in upper-right quadrant, and cohesive TE. Notes refractile bodies and absence of vacuolation. Minor caveat about TE irregularity is appropriately qualified. The description is concordant with the image, though some fine details (exact cell counts, precise herniation degree) are inferred from the Gardner score rather than purely image-based observation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all clinical factors. AMH 0.12 is correctly flagged as critically low with appropriate percentile context. Age-specific aneuploidy rates are provided with euploidy probability estimates. Male factor is analyzed with acknowledgment of missing DFI/morphology data. Endometrial thickness, BMI, lifestyle factors, partner age, and sperm parameters are all connected to implantation prognosis in a clinically meaningful way. The interaction between DOR and single embryo scenario is particularly well-handled."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability modeling is transparent and internally consistent, with explicit adjustments for each factor. The conditional probability breakdown (euploid vs. aneuploid scenarios) is logically sound. The PGT-A recommendation against biopsy is coherently argued given the single-embryo context. The summary dashboard is consistent with the detailed analysis. No contradictions identified between sections. The live birth estimate (32-44%) follows logically from the implantation estimate with appropriate attrition factors applied."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines on Gardner grading, SET recommendation, DOR management, and luteal phase support. DHEA recommendation includes appropriate supervision caveat. DuoStim mention is evidence-based for DOR. PGT-A recommendation against biopsy for single embryo aligns with current guidance. Minor issue: the low-dose aspirin recommendation lacks strong evidence base per current ASRM guidelines. Donor egg counseling timing recommendation is appropriately proactive per ESHRE DOR guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations covering immediate transfer decisions, PGT-A rationale, luteal support protocols, endometrial confirmation steps, future stimulation protocol modifications (DuoStim, LH supplementation), evidence-graded supplement table with doses, lifestyle modification targets, male factor workup priorities, and parallel donor oocyte counseling framing. Each recommendation is contextualized to this specific patient's situation rather than generic advice. Alternatives are considered throughout."
+    }
+  ],
+  "extracted_probability": 0.48,
+  "judge_cost_usd": 0.024657,
+  "judge_latency_ms": 15933.271707996028,
+  "judge_prompt_tokens": 4919,
+  "judge_completion_tokens": 660
+}

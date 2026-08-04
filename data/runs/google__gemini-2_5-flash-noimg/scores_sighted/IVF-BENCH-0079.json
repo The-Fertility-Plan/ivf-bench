@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately anchored morphology to the provided Gardner 3AB grade rather than inventing detailed image findings, which is acceptable given the model reportedly had no image. However, it repeats the prompt's inaccurate interpretation of stage 3 as 'expanded blastocyst with thinning zona' (more consistent with stage 4), and does not reflect the visibly somewhat loose/collapsed appearance and limited cohesive TE seen in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior failed cycle, male factor context, endometrial thickness, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way. Some points are slightly overstated, such as calling sperm parameters excellent despite a male-factor label and inferring protocol success from a single embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent: good morphology and lining improve prognosis, while age-related aneuploidy and limited cohort temper expectations. Minor issues include overconfidence in AMH/FSH implications and a somewhat optimistic implantation estimate for an untested 36-year-old 3AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good day-5 blastocyst, counseling on age-related aneuploidy, luteal support per protocol, and cautious consideration of PGT-A in future cycles. Small deviations include overstating the role of ERA/endometrial receptivity testing and presenting PGT-A somewhat strongly after only one prior failed cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, counseling, lifestyle modification, luteal support, and future protocol review. It is useful, though some recommendations remain generic rather than highly individualized to this exact cycle."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.016986,
+  "judge_latency_ms": 7143.121583998436,
+  "judge_prompt_tokens": 3382,
+  "judge_completion_tokens": 456
+}

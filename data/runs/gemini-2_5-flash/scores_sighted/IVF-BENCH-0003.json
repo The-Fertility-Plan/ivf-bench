@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mislabels key features: the image does not clearly show a tightly packed A-grade ICM or uniformly cohesive A-grade TE, and it incorrectly describes a thin zona and 'active expansion.' It relies too heavily on the provided 2AA label rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor diagnosis, ovarian response, sperm parameters, BMI, endometrium, and prior cycle history, and connects them to prognosis. Minor overinterpretation is present, especially linking embryo morphology too strongly to euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable reasoning issues: it treats a Day 4 '2AA' blastocyst as unequivocally exceptional, assumes accelerated development strongly predicts euploidy, and gives a relatively high implantation estimate based on overstated morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, and avoiding routine PGT-A in a good-prognosis first cycle is reasonable. However, the interpretation of Gardner grading/day of development is imprecise, and the strong claims about Day 4 superiority and alcohol effects are somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future planning, including SET, luteal support, lifestyle counseling, and conditional consideration of PGT-A. Some advice is generic and not highly nuanced, but it is still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015552,
+  "judge_latency_ms": 5966.284791997168,
+  "judge_prompt_tokens": 3144,
+  "judge_completion_tokens": 408
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0679",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner grade: expanded blastocoel, thinned zona pellucida, dense ICM, and cohesive TE epithelium. The ICM localization claim (7-8 o'clock) is a reasonable observation attempt. Minor issue: the image appears somewhat grainy and the TE cells show some irregularity that the model doesn't critically note, and the blastocyst appears to show some vacuolization or fragmentation within the ICM region that the model dismisses too quickly. Overall description is accurate but slightly over-idealized."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects AMH/oocyte yield to embryo quality, addresses the male factor diagnosis nuance by noting normal semen parameters and inferring possible morphology/DNA fragmentation issues, links endometrial thickness to receptivity, considers age-related aneuploidy risk, and addresses lifestyle factors including former smoking history. The interaction between these factors and the embryo's prognosis is clearly articulated throughout."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 50-60% is logically derived from baseline age-specific rates adjusted upward for embryo grade and lining quality, with appropriate caveats for aneuploidy risk. The OHSS risk mention is slightly misplaced since the transfer has already occurred (eggs retrieved), but the monitoring recommendation is still valid. The euploid/aneuploid probability framing is coherent and well-explained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: eSET recommendation for top-quality blastocyst, luteal support mention, PGT-A consideration for age 36 with failed cycles, sperm DNA fragmentation testing suggestion, and vitrification of surplus embryos. The AMH threshold discussion and antagonist protocol OHSS risk assessment are consistent with current evidence. Minor gap: no mention of ERA (Endometrial Receptivity Array) or other uterine evaluation tools that guidelines may suggest for future failed transfers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET is clearly justified, OHSS monitoring is flagged with a specific trigger (hCG/pregnancy), PGT-A is recommended with a clear conditional rationale, sperm DNA fragmentation testing is suggested with a specific clinical trigger, and cryopreservation is advised. Could be slightly more specific regarding luteal support protocol details or timing considerations, and could address ERA or hysteroscopy as future options, but overall provides strong clinical guidance."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.01884,
+  "judge_latency_ms": 16665.479832998244,
+  "judge_prompt_tokens": 2900,
+  "judge_completion_tokens": 676
+}

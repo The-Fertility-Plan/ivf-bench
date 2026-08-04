@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting zona pellucida thinning, ICM location, and TE continuity. However, it somewhat contradicts the reported 3AA Gardner score by suggesting the embryo is 'not top-tier' and questioning the expansion level. The image does show a blastocyst with reasonable features, but the model's hedging about whether it truly matches 3AA criteria introduces some inconsistency. The description of ICM as 'not extremely compact' and blastocoel as 'less crisply defined' are reasonable observations but lack precision about specific visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age 38 as the dominant limiting factor, AMH 0.96 indicating modest reserve, tubal factor diagnosis with appropriate hydrosalpinx caveat, endometrial thickness of 9mm as favorable, and semen parameters as acceptable. Partner age 42 is mentioned with appropriate context. Alcohol consumption is flagged. The interaction between morphology and aneuploidy risk at age 38 is well-articulated. Minor gap: BMI 28.2 impact could be more specifically quantified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 25-35% implantation probability is well-justified by age-related aneuploidy risk. The distinction between implantation probability and live birth probability (~20-28%) is clinically sound. The euploid scenario comparison (50-60%) is coherent. Minor inconsistency: the model questions the 3AA grade while still using it as a basis for recommendations, creating slight tension in the narrative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for age 38 with good blastocyst, hydrosalpinx management before transfer, luteal support, PGT-A discussion framed appropriately with nuance about cumulative live birth rates. The caution about PGT-A not universally improving outcomes per retrieval reflects current evidence. Gardner grading criteria are referenced correctly. The probability estimates are consistent with published literature for untested Day 5 blastocysts in 38-year-olds."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations covering immediate transfer decisions (SET, hydrosalpinx exclusion, luteal support), lifestyle modifications (alcohol cessation, activity level), monitoring timeline (β-hCG at 11 days), and comprehensive failure contingency planning (uterine reassessment, PGT-A discussion, DNA fragmentation testing, metabolic optimization). The structured separation of current cycle vs. future planning is clinically useful. The offer of a patient-friendly counseling note adds practical value."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.021339,
+  "judge_latency_ms": 15795.559792008135,
+  "judge_prompt_tokens": 3603,
+  "judge_completion_tokens": 702
+}

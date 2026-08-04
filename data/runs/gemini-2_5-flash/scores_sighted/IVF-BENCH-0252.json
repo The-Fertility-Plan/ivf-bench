@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0252",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates visible certainty from the image: the ICM is not clearly well-defined, TE detail is limited, and 'preparing to hatch or already begun hatching' is not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior live birth, BMI, endometrium, male factor context, and lifestyle with embryo quality in a clinically meaningful way, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with the implantation estimate tied to embryo grade, age, prior live birth, and endometrial factors; minor overconfidence is present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligns with Gardner grading concepts and standard IVF prognostic reasoning; however, it leans heavily on morphology and prior live birth without enough caution about morphology's limits as a predictor of euploidy/implantation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Recommendations are incomplete and mostly generic ('proceed with confidence'); there is little specific guidance on transfer management, luteal support, counseling, or future-cycle contingencies."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013167,
+  "judge_latency_ms": 4467.706707990146,
+  "judge_prompt_tokens": 2739,
+  "judge_completion_tokens": 330
+}

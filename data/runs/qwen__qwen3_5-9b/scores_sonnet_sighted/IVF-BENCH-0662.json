@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0662",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the disorganized internal architecture, lack of clear blastocoel, thin/irregular cellular layer, and correlates well with the 0DD Gardner score. It correctly identifies absence of distinct ICM and degenerative TE. Minor limitation: could have more precisely described the zona pellucida integrity and the specific texture of the degenerating cells visible in the image, but overall description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects endometriosis as the primary driver of poor embryo quality despite favorable inputs (young age, high AMH, excellent sperm). It addresses the paradox of good patient parameters yielding a 0DD embryo, identifies stress and BMI as secondary contributors, and correctly notes endometrial thickness as favorable. The 'perfect storm of inputs vs. bottleneck' framing is clinically insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically consistent throughout - the <5% probability estimate follows directly from the 0DD morphology assessment, and the explanation for why good patient factors cannot overcome poor embryo quality is coherent. The 'rescue transfer' caveat is appropriately nuanced. Minor issue: the response could have more explicitly addressed why 13/13 MII oocytes yielded only a 0DD blastocyst by Day 5, which would strengthen the causal reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: counseling before poor-quality transfer, freeze-all strategy for high AMH patients, GnRH agonist pre-treatment for endometriosis, and realistic expectation setting. The Gardner grading interpretation is accurate per standard criteria. Minor gap: does not explicitly mention PGT-A consideration for future cycles, which ESHRE guidelines increasingly support for endometriosis patients, and does not address the specific ESHRE endometriosis guidelines regarding surgical intervention timing relative to IVF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: surgical/medical endometriosis management, stress reduction referral, freeze-all strategy, target oocyte numbers (20+), and explicit consent counseling. The immediate vs. future planning structure is clinically useful. Slight deduction because the response doesn't address specific medication adjustments for the next stimulation protocol, doesn't mention antioxidant supplementation (relevant for endometriosis), and the '20+ oocytes' target recommendation could be seen as aggressive given OHSS risk with AMH 4.44."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.018501,
+  "judge_latency_ms": 15690.896625004825,
+  "judge_prompt_tokens": 2892,
+  "judge_completion_tokens": 655
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0748",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: expanded blastocoel cavity, thinned zona pellucida, tightly packed ICM, and cohesive TE epithelium consistent with 3AA grading. The description of 'optical noise' and microscopy type is reasonable. Minor limitation: the image shows what appears to be a herniation or early hatching at the bottom of the blastocyst which the model does not mention, and the expansion stage description could be more precise about whether hatching is occurring."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age, AMH, BMI, endometrial thickness, lifestyle, and male factor sperm parameters are all connected to prognosis. The 'Good vs Bad' framework is clinically useful. Minor gap: the response doesn't deeply explore the interaction between male factor (low motility) and fertilization outcomes given only 2 MII oocytes, nor does it address the implications of this being a first cycle with limited embryo cohort on overall cumulative success probability."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the stated factors. The model correctly identifies the tension between high embryo quality and poor ovarian response. Minor inconsistency: the model describes BMI 30.5 as 'obesity' when it is technically overweight (obesity begins at BMI ≥30, so 30.5 is borderline), and the impact magnitude of BMI on implantation is slightly overstated relative to the strong positive factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: SET recommendation for a top-grade blastocyst in a 30-year-old is correct per guidelines, lifestyle modification advice is evidence-based, and protocol change suggestions are clinically appropriate. The suggestion of 'Microdose Flare' is somewhat dated and less commonly recommended in current ESHRE poor responder guidelines (Bologna/POSEIDON criteria favor antagonist protocols). PGT-A mention is appropriate given limited embryo numbers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with SET, protocol change suggestions for future cycles, lifestyle targets (BMI <30, 30 min exercise 3-4x/week), male factor optimization. The structured table and clear separation of immediate vs future recommendations adds clinical utility. Could be improved by specifying gonadotropin dose adjustments, mentioning POSEIDON classification for poor responders, or discussing freeze-all strategy considerations given the single embryo situation."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01902,
+  "judge_latency_ms": 15130.574208000326,
+  "judge_prompt_tokens": 2975,
+  "judge_completion_tokens": 673
+}

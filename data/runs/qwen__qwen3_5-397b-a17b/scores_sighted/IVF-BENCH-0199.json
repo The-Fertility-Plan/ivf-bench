@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0199",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality blastocyst morphology with poorly defined ICM/TE, but it misinterprets Gardner expansion 1 as blastocoel less than half the embryo (that is stage 2, not 1), calls it early blastocyst/late morula despite the provided score, and adds features like vacuolation/arrest/degeneration that are not clearly demonstrable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, prior outcomes, sperm parameters, and endometrium with embryo prognosis reasonably well, though it overstates some links and labels the history as RIF/RPL somewhat imprecisely."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable issues: incorrect expansion-stage interpretation, overconfident declaration of non-viability from morphology alone, and some overreach in attributing cause to aneuploidy and recommending against transfer categorically."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations from guideline-level caution: PGT-A is presented as 'critical,' immune/thrombophilia testing is suggested too broadly, and a blanket 'do not transfer' recommendation for a poor embryo is stronger than standard evidence-based guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer counseling and future workup/planning, including protocol review and additional testing, though some recommendations are not sufficiently nuanced or selectively indicated."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014253,
+  "judge_latency_ms": 5636.448541990831,
+  "judge_prompt_tokens": 2691,
+  "judge_completion_tokens": 412
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided Gardner grade. Its comments on poor ICM/TE are consistent with 1DD, but it incorrectly states grade 1 means blastocoel less than half the embryo and overstates non-viability/arrest; the image/lab text is more consistent with a very poor early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, prior live birth, endometrial thickness, sperm parameters, BMI/lifestyle, tubal factor, and low AMH well, and clearly contrasts favorable patient factors with very poor embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the prognosis flowing from the poor embryo grade despite favorable patient factors. Minor issues include the expansion-stage interpretation error and somewhat absolute statements about non-viability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, including verifying discrepant grading and counseling on poor prognosis. However, calling a 1DD embryo essentially non-viable and suggesting PGT-A in a 27-year-old with likely low embryo numbers are somewhat overstated or not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear next steps: verify grading with the lab, counsel regarding prognosis, consider compassionate transfer only if no alternatives exist, and outlines concrete future-cycle considerations including protocol review and lab review."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014535,
+  "judge_latency_ms": 5045.320375007577,
+  "judge_prompt_tokens": 2915,
+  "judge_completion_tokens": 386
+}

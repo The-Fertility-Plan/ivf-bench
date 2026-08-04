@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner score (expansion, thinning zona, visible ICM, TE characteristics) but acknowledges limitations in image-based assessment. The description is largely derived from the provided Gardner score rather than independent image analysis, with hedging language ('appears to be,' 'might show') suggesting limited confidence in direct visual interpretation. No fabricated features, but the analysis leans heavily on the provided metadata rather than demonstrating independent morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: female age, BMI, AMH/FSH relationship, oocyte yield relative to AMH, diagnosis of unexplained infertility, stimulation protocol, previous cycle outcomes (including the significance of the biochemical pregnancy), partner age and sperm parameters, endometrial thickness, and lifestyle factors. It correctly identifies how these factors interact (e.g., low AMH but good oocyte yield, biochemical pregnancy implying uterine receptivity, RIF history as primary concern) and synthesizes them into a coherent prognostic picture."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-55% is coherently derived from a baseline of 55-65% adjusted downward for RIF history and TE grade B. The conclusion that RIF is the primary limiting factor is well-supported. Minor issue: the response slightly underweights the significance of 3 failed cycles in the probability estimate, and the baseline range cited (55-65%) may be slightly optimistic for a 3AB blastocyst. Overall, conclusions follow logically from the evidence presented with no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation is appropriate and guideline-aligned, PGT-A suggestion for RIF is evidence-based, ERA for RIF is consistent with current practice, hysteroscopy/SIS for RIF workup aligns with guidelines, and luteal phase support is standard. The thrombophilia screening recommendation is appropriately caveated as having limited evidence. The immunological workup recommendation is correctly flagged as controversial. EmbryoGlue mention is appropriately hedged. Minor deduction for including acupuncture without stronger caveats about limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering both immediate transfer considerations (SET, EmbryoGlue, luteal support) and future cycle planning (PGT-A, ERA, hysteroscopy, thrombophilia screening, immunological workup). Each recommendation includes reasoning and appropriate caveats. The response provides a clear hierarchy of next steps. Minor deduction because some recommendations (acupuncture, immunological workup) add noise without strong clinical utility, and the response could be more specific about timing and sequencing of the recommended investigations."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.022251,
+  "judge_latency_ms": 15543.653583001287,
+  "judge_prompt_tokens": 3807,
+  "judge_completion_tokens": 722
+}

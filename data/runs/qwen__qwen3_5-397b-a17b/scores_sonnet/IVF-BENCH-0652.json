@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the Gardner 2BA grading components - expansion stage 2 (full blastocyst), Grade B ICM (loosely grouped cells), and Grade A TE (many cells forming cohesive epithelium). The description of visual features like the rounded appearance, ICM location, and TE boundary is reasonable. Minor deduction because the description relies heavily on the provided Gardner score rather than independent image analysis, and some morphological observations (e.g., 'ICM on left/central aspect') seem speculative rather than clearly image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects maternal age (29) to aneuploidy risk, BMI (35.5) to implantation and obstetric risks, endometrial thickness (8.5mm) to receptivity, sperm parameters to male factor assessment, and Day 4 timing to embryo-endometrial synchrony. Critically, the model identifies and addresses the major clinical discrepancy between the DOR diagnosis and the high AMH/egg yield, suggesting PCOS phenotype - demonstrating sophisticated clinical reasoning that goes beyond surface-level factor listing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 40-55% follows reasonably from the identified factors, with explicit adjustments for BMI and timing. The identification of the DOR/AMH discrepancy is coherent and well-argued. Minor deduction: the baseline assumption of >60% for a euploid 2BA blastocyst is reasonable but the downward adjustments could be more precisely quantified. The Day 4 timing concern is valid but slightly overstated as a risk factor given that Day 4 blastocysts can still implant successfully."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for young patient with good-quality blastocyst, luteal phase support emphasis, weight management counseling, and PGT-A discussion. The metabolic workup recommendation for suspected PCOS aligns with clinical guidelines. Minor deduction: the response could more explicitly reference that Day 4 blastocyst transfers are less standard and discuss freeze-all strategy as an alternative, which current guidelines increasingly favor especially in potential PCOS/high responder patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with SET, ensure luteal support timing, weight management target (5-10% loss), diagnostic re-evaluation, PGT-A consideration for future cycles, and metabolic workup. The response provides clear rationale for each recommendation. Minor deduction: could have been more specific about luteal support protocol details for a Day 4 transfer, and could have more explicitly discussed freeze-all strategy as an option given the potential PCOS diagnosis and OHSS risk, which would be highly actionable for the clinical team."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.019701,
+  "judge_latency_ms": 15576.747041995986,
+  "judge_prompt_tokens": 2937,
+  "judge_completion_tokens": 726
+}

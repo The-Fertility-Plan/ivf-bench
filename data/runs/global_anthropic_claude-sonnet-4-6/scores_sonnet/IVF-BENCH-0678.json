@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: thinning zona pellucida, well-expanded blastocoel, dense cohesive ICM, and continuous trophectoderm epithelium. The table format is clear and well-organized. Minor limitation is that the description largely mirrors the provided Gardner score data rather than independently identifying additional image-specific features, making it difficult to assess true independent image analysis versus data recitation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically addresses ovarian response (COCs, MII, AMH, FSH), sperm parameters with WHO 2021 benchmarking, endometrial thickness with clinical thresholds, lifestyle factors, BMI, and patient age. Critically, it connects each factor to implantation prognosis and identifies interactions (e.g., Day 4 timing with endometrial synchrony, BMI with implantation rates, borderline sperm with fertilization quality). The probability matrix explicitly weights each factor's contribution."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 55-68% follows logically from the evidence presented, with appropriate upward adjustments for embryo quality/age and downward adjustments for BMI/endometrial thickness/sperm. The Day 4 blastulation concern is coherently flagged as a synchrony issue. Minor issue: the claim that Day 4 blastulation adds '5-8% improvement over Day 5 equivalent' is stated with more precision than the literature typically supports, and the response slightly overstates certainty in some numerical claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Strong alignment with ESHRE/ASRM guidelines: eSET recommendation for young patient with good quality embryo, Gardner grading system correctly applied, WHO 2021 sperm reference values used, luteal phase support monitoring recommended, and ERA consideration for failed cycles. The 7mm endometrial threshold and trilaminar pattern assessment align with current guidelines. Minor deduction: the characterization of 8mm as 'suboptimal' is slightly conservative as many guidelines consider 8mm acceptable, and the Day 4 blastocyst transfer framing could better acknowledge that some programs routinely perform Day 4 transfers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized checklists for immediate pre-transfer actions (progesterone levels with specific thresholds, endometrial pattern confirmation, synchrony verification), transfer protocol recommendations, and a comprehensive future cycle planning section. Lifestyle modifications include quantified targets (BMI range, specific alcohol cessation timing). The diagnostic workup for failed cycles is specific and appropriately sequenced. The summary dashboard provides a clear clinical verdict. Recommendations are nuanced and case-specific rather than generic."
+    }
+  ],
+  "extracted_probability": 0.615,
+  "judge_cost_usd": 0.02202,
+  "judge_latency_ms": 14735.36720899574,
+  "judge_prompt_tokens": 3800,
+  "judge_completion_tokens": 708
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no specific grading could be assigned, omitting clear available morphology data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, endometrium, sperm, prior cycles, BMI/lifestyle, and ovarian response with prognosis reasonably well, though it misses the key interaction of the known 3AA morphology with these factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a notable inconsistency in ignoring the provided embryo grade and inferring morphology only from Day 5 status; some risk framing also overstates concerns such as RIF after only two prior cycles."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but recommendations such as aspirin/thrombophilia workup after a single miscarriage, routine protocol switching, and broad PGT-A endorsement at age 33 are not strongly guideline-driven for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, ovarian reserve assessment, and future protocol review, though some suggestions are somewhat generic or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013161,
+  "judge_latency_ms": 3968.581124994671,
+  "judge_prompt_tokens": 2752,
+  "judge_completion_tokens": 327
+}

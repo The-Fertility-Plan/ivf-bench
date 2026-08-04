@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's key features: expanded blastocoel, thinned zona pellucida, compact ICM consistent with A-grade, and sparse/irregular TE consistent with B-grade. The observation about the image being somewhat out of focus adds appropriate epistemic humility. Minor issue: the model questions whether the grade should be 4AB rather than 3AB based on the thinning zona description, which shows good morphological knowledge but could be seen as contradicting the provided laboratory data without full justification."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 39 as the dominant prognostic factor, FSH 7.7 with absent AMH, ovarian response (10 COCs/7 MII), endometrial thickness 9mm, male factor diagnosis with actual sperm parameters, partner age 42 and DNA fragmentation risk, prior failed cycle, BMI, and lifestyle factors. The interactions between these factors and embryo quality are clearly articulated, particularly the age-aneuploidy relationship overriding morphological quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logically consistent throughout. The probability estimate of 20-30% follows coherently from the evidence: good morphology offset by age-related aneuploidy risk. The model correctly distinguishes between implantation probability for untested vs. euploid embryos, addresses miscarriage risk separately from implantation, and avoids contradictions. The caveat about morphology not predicting ploidy is well-integrated into the final probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommending single embryo transfer, discussing PGT-A appropriateness at age 39, standard luteal support, avoiding unproven add-ons, and evidence-based lifestyle modifications. The Gardner grading discussion is accurate. Minor deduction for the suggestion that some centers discuss transferring two embryos at 39, which is somewhat at odds with current strong eSET recommendations, though the caveat provided partially mitigates this."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: concrete peri-transfer instructions (luteal support, beta-hCG monitoring, lifestyle modifications), nuanced PGT-A discussion with appropriate caveats about limited embryo numbers, sperm DNA fragmentation testing if failures continue, specific investigations for recurrent failure (uterine cavity, TSH, prolactin), and partner-specific lifestyle advice. The response also offers further analysis options, demonstrating awareness of clinician needs."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.021891,
+  "judge_latency_ms": 13882.24212500063,
+  "judge_prompt_tokens": 4012,
+  "judge_completion_tokens": 657
+}

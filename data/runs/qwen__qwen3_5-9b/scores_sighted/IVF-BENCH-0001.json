@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Recognizes a poor-quality early blastocyst with weak ICM/TE, but incorrectly states the blastocoel is less than half the embryo despite the provided Gardner expansion 1 definition being at least half; also adds limited visual detail and some overinterpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, sperm quality, endometrium, prior outcomes, and diagnosis reasonably well with embryo prognosis, though some links (e.g., attributing morphology mainly to oocyte age) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low prognosis estimate follows from poor morphology and age, but there are notable issues: misinterpretation of expansion stage, overstatement that many clinics would discard 1DD, and an inaccurate miscarriage statement for euploid embryos."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with counseling that this is a poor-prognosis embryo and considering transfer if it is the only embryo, but contains deviations such as questionable statements about discarding 1DD embryos, strong endorsement of PGT-A without nuance, and some grading inaccuracies."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer if this is the only embryo, endometrial support consideration, and future-cycle planning including PGT-A discussion and lifestyle modification, though recommendations could be more nuanced and protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.065,
+  "judge_cost_usd": 0.013773,
+  "judge_latency_ms": 5250.7991249876795,
+  "judge_prompt_tokens": 2726,
+  "judge_completion_tokens": 373
+}

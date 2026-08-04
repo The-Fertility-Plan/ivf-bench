@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0161",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastulating embryo with absent/degenerate ICM and TE consistent with 0DD, but overstates certainty by calling it non-viable/arrested and describes features like severe cytoplasmic degeneration/anucleate debris that are not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR, BMI, thin endometrium, prior outcomes, and sperm parameters well with embryo prognosis, though some links (e.g., direct attribution of embryo quality to DOR or obesity) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the low implantation estimate follows from poor embryo grade plus very thin endometrium; however, the recommendation to cancel transfer is stronger than the evidence supports and rests on some overconfident assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner terminology is broadly appropriate, but several recommendations are not guideline-based or are overstated (e.g., 'mandatory' hysteroscopy, ERA for this scenario, categorical 'do not proceed' for transfer, routine adjuncts like sildenafil/aspirin/DHEA without clear indication)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear immediate and future-cycle steps, including counseling on prognosis and endometrial evaluation/optimization, but some recommendations lack nuance or evidence strength and may not be appropriate as routine practice."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.013959,
+  "judge_latency_ms": 5784.306083005504,
+  "judge_prompt_tokens": 2743,
+  "judge_completion_tokens": 382
+}

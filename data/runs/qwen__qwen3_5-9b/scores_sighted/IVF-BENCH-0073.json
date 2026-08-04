@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: the image does not clearly show a classic expanded/hatching blastocyst with a distinct blastocoel, obvious herniation, or a clearly identifiable cohesive TE and tightly packed ICM. It relies heavily on the provided Gardner grade rather than what is actually discernible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, endometrial thickness, BMI, and diagnosis with embryo quality reasonably well, though it overinterprets the low MII yield and does not fully nuance the male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: calling 4AA the 'highest possible grade,' inferring a low-responder phenotype from one cycle despite normal AMH, and suggesting very high euploid likelihood (>90%) at age 33 are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but several statements are not well aligned with evidence-based guidance, including describing 4AA as 'perfect,' recommending not to freeze unless contraindicated without discussing fresh-vs-frozen context, and overstating euploid probability."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, luteal support, counseling, and future protocol review. However, some recommendations are too assertive or insufficiently individualized, especially around fresh transfer and PGT-A."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013443,
+  "judge_latency_ms": 4981.92916699918,
+  "judge_prompt_tokens": 2536,
+  "judge_completion_tokens": 389
+}

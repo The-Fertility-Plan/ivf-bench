@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0149",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The description of ICM and TE grades aligns with the 2AA Gardner score provided. However, the model describes the ICM at the '1-2 o'clock position' which may or may not match the image precisely. The description of zona pellucida as 'thinned but intact' is reasonable for a Grade 2 (full blastocyst) but Grade 2 typically shows less thinning than higher expansion grades. The model correctly notes the blastocoel fills the embryo. Some details like 'no evidence of herniation' and specific positional claims may be embellished beyond what's clearly visible. The expansion description is adequate but a Grade 2 is a full blastocyst, not an 'expanded' blastocyst — the model conflates these terms, calling it an 'expanded blastocyst (Gardner Grade 2)' when Grade 2 is specifically a full blastocyst (expansion grades 3+ are expanded)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response thoughtfully connects low AMH with oocyte quality vs. quantity, appropriately contextualizes BMI 29.6 as a marginal risk factor, correctly identifies tubal factor as a favorable prognostic indicator, integrates endometrial thickness, male factor parameters, and maternal age into a cohesive assessment. The discussion of how limited embryo inventory from low AMH affects strategy is particularly well done."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate follows logically from the evidence with clear adjustments for each factor. One minor issue: the model states euploidy rate of '60-70%' for age 32 blastocysts, then later adjusts to '50-60%' due to low AMH — the relationship between AMH and euploidy is not strongly established in literature, which is a slight logical stretch. The net calculation is transparent and reasonable. Overall the reasoning chain is clear and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET for high-quality blastocyst, appropriate luteal support, ultrasound-guided transfer. The Gardner grading interpretation is mostly correct. The suggestion of PGT-A for future cycles given low reserve is reasonable. Minor deviations: suggesting 'mild stimulation or modified natural cycle IVF' for a patient with already low reserve is questionable; the recommendation for DHEA/CoQ10 is appropriately hedged. The suggestion to bank embryos before transfer is reasonable but may not be feasible given low AMH."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations. The response provides clear transfer technique guidance, specific luteal support duration, timing for pregnancy test, and detailed future cycle planning including protocol modifications, lifestyle changes with specific BMI targets, supplementation options, and a cumulative strategy. Alternatives are considered for different scenarios. The counseling point about future family-building capacity is clinically valuable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.032215,
+  "judge_latency_ms": 23519.86412500264,
+  "judge_prompt_tokens": 2698,
+  "judge_completion_tokens": 749
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not attempt a direct morphology read. However, it then inferred typical transfer-quality features (e.g., expansion >=3, ICM/TE A-B), which are not supported by the actual image and could be misleading, though not framed as definite observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, tubal factor, BMI, prior failed cycle, sperm quality, and endometrial thickness well into prognosis and transfer expectations. Some interactions are generalized rather than tightly linked to the actual embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis based on young age and favorable infertility diagnosis. Minor issues include assuming a Day 5 transfer implies a reasonably good blastocyst and extrapolating embryo quality without image-based evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including caution about OHSS risk and limited enthusiasm for routine PGT-A at age 25. However, suggesting thrombophilia screening after only one failed cycle and implying expected morphology thresholds for transfer are less guideline-grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for luteal support, beta-hCG timing, lifestyle optimization, and future evaluation if failure recurs. Some recommendations are somewhat generic, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014448,
+  "judge_latency_ms": 5124.274457994034,
+  "judge_prompt_tokens": 2936,
+  "judge_completion_tokens": 376
+}

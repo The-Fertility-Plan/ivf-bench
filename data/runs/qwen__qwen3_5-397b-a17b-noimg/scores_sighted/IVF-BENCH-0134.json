@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0134",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the provided 3AB score. Its description of expanded blastocyst, strong ICM, and B-grade TE is broadly consistent with the image/lab grade, though calling it 'one of the best' slightly overstates a 3AB and it did not note the somewhat sparse/irregular TE visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, PCOS context, AMH/response, BMI, endometrial thickness, sperm quality, and first-cycle status well, and connects these factors to prognosis and transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible probability estimate tied to age, morphology, and lining. Minor issues include some overconfidence in the predictive value of ICM grade and slight overstatement of embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, acknowledging morphology limits without PGT-A, and caution about OHSS in PCOS are consistent with standard IVF practice. Minor deviations include somewhat strong endorsement of PGT-A after a single failed cycle and speculative luteal defect framing in PCOS."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and contingency planning, including SET, OHSS monitoring if fresh, luteal support, and future considerations. It is useful, though some recommendations remain somewhat generic rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014586,
+  "judge_latency_ms": 5265.993583001546,
+  "judge_prompt_tokens": 2897,
+  "judge_completion_tokens": 393
+}

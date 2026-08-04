@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinning zona pellucida, loosely grouped ICM at the top right, and loose TE epithelium consistent with 3BB grading. The description of ICM location and TE appearance aligns well with the image. Minor deduction as the description of the ICM as 'top right' is reasonable but the image shows significant fragmentation/debris in the upper portion that could complicate ICM identification, and the response doesn't note any concerning morphological features like the apparent cellular debris visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates age, AMH, FSH, sperm parameters, and endometrial thickness with embryo quality. Notably identifies the discrepancy between the DOR diagnosis and the high AMH/good response, which is clinically important. Connects patient age to aneuploidy risk appropriately. Minor deduction for not addressing the long agonist protocol implications more deeply or the potential impact of the DOR diagnosis on embryo quality beyond aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability range of 30-40% is reasonable and well-justified. The identification of the AMH/DOR discrepancy is coherent and well-argued. Minor deduction as the response somewhat contradicts itself by calling the embryo 'high quality' while noting Grade B is not the best grade, and the aneuploidy risk estimate of <10-15% at age 29 is slightly optimistic without PGT-A data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines including single embryo transfer principles, luteal phase support for fresh cycles, and appropriate PGT-A counseling as optional rather than mandatory for young patients. Gardner grading criteria are correctly applied. The freeze-all strategy mention for OHSS risk is guideline-consistent. Minor deduction as the response doesn't explicitly address eSET (elective single embryo transfer) guidelines or discuss the clinical significance of the 8mm endometrium relative to the minimum threshold more precisely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, clarify DOR diagnosis, consider PGT-A as optional, and plan for future FET cycles. The response provides clear next steps and considers alternatives. Minor deduction as it lacks specificity on progesterone protocol type/dosing, doesn't address timing of beta-hCG testing, and the future cycle planning could be more detailed regarding stimulation protocol adjustments given the DOR diagnosis uncertainty."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.018978,
+  "judge_latency_ms": 14589.585624999017,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 674
+}

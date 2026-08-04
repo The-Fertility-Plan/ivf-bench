@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 4BB text. Its description of stage 4/hatching, B-grade ICM, and B-grade TE is consistent with the supplied Gardner score and broadly compatible with the image, though it repeated the prompt's slightly inconsistent wording ('hatching/herniating') rather than image-specific detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, tubal factor diagnosis, endometrial thickness, sperm parameters, lifestyle, and embryo grade into an overall prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the implantation estimate tied to age, morphology, and uterine factors. Minor issues include some overconfident assumptions (e.g., likely additional embryos, assuming ICSI) and a somewhat simplified aneuploidy estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including single embryo transfer and acknowledging morphology limits versus ploidy. Slight deviations include presenting PGT-A as a strong recommendation after one failed transfer and implying ICSI as standard for this sperm count without explicit indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management, luteal support, pregnancy testing, cryopreservation, and future planning. Useful overall, though some recommendations remain generic and would benefit from more individualized contingencies."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014562,
+  "judge_latency_ms": 4969.593000001623,
+  "judge_prompt_tokens": 2909,
+  "judge_completion_tokens": 389
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocoel expansion, thinning zona, ICM location and density, and TE cohesiveness consistent with 3AA grading. However, the description contains a minor error stating the embryo 'has successfully hatched or is on the verge of hatching' — Grade 3 is an expanded blastocyst but hatching corresponds to Grades 5-6, not Grade 3. The ICM description as 'dark, granular, and somewhat irregular' partially mischaracterizes a Grade A ICM which should be tightly packed and well-defined. Overall mostly accurate but with notable conceptual errors."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates DOR diagnosis with low oocyte yield, patient age with euploidy potential, sperm parameters with embryo development quality, and endometrial thickness with receptivity. The framing of 'high-quality embryo in a low-yield environment' is clinically apt. Minor gap: BMI of 22 and lifestyle factors (sedentary, light drinking, mild stress) are mentioned only superficially in recommendations rather than integrated into the implantation probability reasoning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability adjustment from 60-70% baseline down to 50-60% for DOR is coherent and well-explained. Minor inconsistency: the response simultaneously describes the embryo as potentially 'on the verge of hatching' (Grade 5-6 territory) while correctly scoring it as Grade 3, creating a slight internal contradiction. The PGT-A discussion is balanced and acknowledges the trade-off appropriately."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation aligns with ESHRE/ASRM guidelines for good-prognosis patients. Luteal support recommendation is appropriate. However, describing FSH of 6.1 as 'on the higher end of normal' is inaccurate — 6.1 IU/L is well within normal range per ASRM guidelines (concern typically >10 IU/L). The suggestion of donor eggs after a single failed cycle for a 34-year-old with AMH 1.3 is premature and not aligned with standard guidelines. The 'BET (BET) Testing' label appears to be a formatting error. Gardner Grade 3 expansion description conflating with hatching deviates from standard Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are largely specific and practical: proceed with SET, ensure luteal support, consider PGT-A with balanced pros/cons, and outline future cycle alternatives. The PGT-A discussion appropriately weighs biopsy risk against benefit for a single embryo. Future planning includes protocol alternatives and lifestyle modifications. Slight weakness: the donor egg recommendation after one cycle is premature and could cause unnecessary alarm; more nuanced staging of future options (repeat stimulation first, then donor) would be more clinically appropriate."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.020736,
+  "judge_latency_ms": 16897.70183400833,
+  "judge_prompt_tokens": 3152,
+  "judge_completion_tokens": 752
+}

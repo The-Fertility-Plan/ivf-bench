@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0415",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with absent/degenerative ICM and TE, but overstates certainty by calling it non-viable/arrested and adds features like necrosis/metabolic failure and fragmentation that are not directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, low mature oocyte yield, prior failed cycle, sperm quality, diagnosis, and endometrial thickness with embryo quality reasonably well, though some links (e.g., thick lining significance) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent, with the poor embryo quality appropriately driving prognosis; minor issues include equating 0DD with certain non-viability and making strong claims from limited morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on poor prognosis are aligned, but recommending definite cancellation, routine concern over 17 mm endometrium, ICSI for unexplained infertility with normal semen, and PGT-A at age 31 are more aggressive than guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for this cycle and future planning, including protocol review and uterine cavity assessment, but some recommendations are insufficiently nuanced and not all are strongly evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01314,
+  "judge_latency_ms": 5209.612917009508,
+  "judge_prompt_tokens": 2575,
+  "judge_completion_tokens": 361
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst with likely good ICM and looser TE, but it overstates image-specific detail (e.g., nuclear features, homogeneous cytoplasm) and introduces a stage inconsistency by calling it an early blastocyst while also discussing full blastocyst features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, prior miscarriage, sperm parameters, BMI, and endometrium with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and understandable, but there are notable inconsistencies: Day 4 blastocyst timing is treated as strongly favorable, the grading/stage discussion is internally mixed, and probability adjustments appear somewhat ad hoc."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF concepts and Gardner grading, but it blurs grade 2 versus full blastocyst terminology, overinterprets Day 4 blastulation advantage, and gives outcome estimates with more certainty than guidelines typically support from morphology alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides broad considerations but few concrete management steps for the current transfer or future cycles; recommendations are limited and not especially specific or operational."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.012222,
+  "judge_latency_ms": 4647.192666991032,
+  "judge_prompt_tokens": 2354,
+  "judge_completion_tokens": 344
+}

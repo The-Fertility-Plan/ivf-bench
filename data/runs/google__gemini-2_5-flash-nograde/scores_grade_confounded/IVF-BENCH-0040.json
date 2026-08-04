@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 2AA by reclassifying the embryo as 4BB/5BB/5BC and downgrading ICM/TE to B/C despite given AA morphology; some generic blastocyst features are reasonable, but the grading interpretation is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm quality, endometrium, and lifestyle well with prognosis, though it overstates some associations such as PCOS-related aneuploidy risk and does not fully leverage the known 2AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the prognosis is built partly on an internally inconsistent morphology assessment that contradicts the supplied Gardner score, weakening the support for the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a 31-year-old and cautious use of PGT-A are broadly guideline-consistent, but suggesting assisted hatching and ERA/immunologic/thrombophilia workup without clear indications is less aligned with evidence-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support review, cryopreservation, and future evaluation, though some suggestions are somewhat generic or not strongly indicated."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014334,
+  "judge_latency_ms": 4046.875958003511,
+  "judge_prompt_tokens": 3063,
+  "judge_completion_tokens": 343
+}

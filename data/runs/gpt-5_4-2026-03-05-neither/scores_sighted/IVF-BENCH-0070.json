@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to assess morphology because it stated no image was available, avoiding fabricated claims. However, it provided no actual image-based analysis despite the embryo appearing to be a blastocyst with visible ICM/TE features, so this is accurate but incomplete."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, endometriosis, BMI, semen motility, prior biochemical pregnancy, endometrial thickness, and Day-5 timing into prognosis and explains how these factors may influence embryo competence and implantation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logical, internally consistent, and appropriately conditional on missing morphology data. The implantation range is clearly tied to embryo quality assumptions and patient-specific modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: preference for SET at age 31, caution with routine PGT-A, attention to luteal support, and uterine/endometriosis evaluation if failures recur. Minor limitation is lack of embryo-specific grading due to unavailable image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for the current transfer and future planning, including SET, lifestyle advice, review of uterine cavity/endometriosis factors, and selective male-factor workup. Recommendations are useful, though somewhat generalized because morphology was not assessed."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.015021,
+  "judge_latency_ms": 5098.083958000643,
+  "judge_prompt_tokens": 3207,
+  "judge_completion_tokens": 360
+}

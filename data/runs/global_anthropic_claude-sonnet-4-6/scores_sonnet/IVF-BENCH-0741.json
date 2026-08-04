@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with the Gardner 3AA score (expanded blastocyst, thinning zona, compact ICM, cohesive TE). However, it adds speculative observations about 'mild granular cytoplasmic background' and 'cytoplasmic heterogeneity' that may not be clearly visible or relevant in the image, and notes 'regional variation in cell density' in the TE without strong basis. These additions, while cautious, risk fabricating concerns not clearly supported by the image data provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all relevant clinical factors: maternal age 37 with associated aneuploidy risk, the unusually high AMH for age, prior clinical miscarriage linked to possible recurrent aneuploidy, male factor diagnosis with sperm parameters, endometrial thickness, BMI, lifestyle factors (sedentary, former smoker, stress), and Day 5 transfer timing. Each factor is connected meaningfully to prognosis and embryo quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability modeling is transparent, showing base rate adjustments for each factor. The critical caveat about chromosomal status and its impact on the probability range is well-reasoned. Minor issue: the adjustment from a 52-58% base rate to 45-55% after applying both positive and negative modifiers is slightly inconsistent arithmetically, as the net adjustments should yield a lower range. The live birth estimate of 35-45% is appropriately derived from the implantation estimate with miscarriage risk factored in."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: PGT-A discussion for age 37 with prior miscarriage, luteal phase support, progesterone monitoring, RIF workup protocol if transfer fails (ERA, thrombophilia, hysteroscopy), and partner karyotyping. Low-dose aspirin recommendation is somewhat controversial as evidence is mixed per current guidelines. LMWH suggestion without confirmed thrombophilia is also slightly ahead of standard protocol. Overall well-aligned with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations covering immediate transfer cycle management (luteal support specifics, progesterone targets, aspirin, LMWH consideration), lifestyle modifications with concrete details (20-30 min walking), monitoring timeline (βhCG Day 12-14, ultrasound 6-7 weeks), and a structured future cycle planning pathway with a clear decision tree if transfer fails. The PGT-A discussion is appropriately nuanced with ethical/cost counseling noted."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020217,
+  "judge_latency_ms": 14291.709291996085,
+  "judge_prompt_tokens": 3324,
+  "judge_completion_tokens": 683
+}

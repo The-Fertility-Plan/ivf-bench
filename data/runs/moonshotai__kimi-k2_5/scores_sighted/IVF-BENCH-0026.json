@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label, but it overstates certainty from the image alone: the ICM is not clearly well-defined, TE appears sparse/loose rather than clearly cohesive, and zona thinning/grade 3 expansion are plausible but not precisely demonstrated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, tubal factor, sperm motility, BMI, and endometrium with embryo quality in a clinically meaningful way, though some points are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are issues: it calls the embryo good-to-excellent despite a modest TE, labels the patient as DOR somewhat strongly from AMH alone, and does not actually provide the requested implantation probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly compatible with standard IVF principles and Gardner grading concepts, but it does not address the notable inconsistency between a blastocyst-grade description and the stated transfer day 4, and some prognostic statements are broader than guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated before giving concrete transfer or future-cycle recommendations, so practical next steps are limited and incomplete."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011304,
+  "judge_latency_ms": 4889.256666996516,
+  "judge_prompt_tokens": 2088,
+  "judge_completion_tokens": 336
+}

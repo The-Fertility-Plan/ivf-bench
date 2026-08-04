@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BA label, but the image itself does not clearly support a confident TE A assessment or a clearly identifiable upper-left ICM; some features are inferred rather than plainly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "Incorporates age, BMI, sperm parameters, diagnosis, and ovarian response, but overemphasizes paternal age and incorrectly infers diminished ovarian reserve from limited data while not fully contextualizing tubal factor and absent AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but key conclusions are weakly supported: paternal age is overstated as the main aneuploidy driver, euploidy estimates are not evidence-based, and the final probability range appears derived from questionable assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic morphology language follows Gardner terminology, but several recommendations deviate from guideline-based practice, including overstating paternal-age-related aneuploidy risk, suggesting PGT-A based mainly on paternal age, and proposing donor gametes prematurely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and counseling on weight optimization, but future-cycle advice is somewhat generic and includes speculative protocol changes without enough case-specific justification."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012711,
+  "judge_latency_ms": 4556.247708998853,
+  "judge_prompt_tokens": 2622,
+  "judge_completion_tokens": 323
+}

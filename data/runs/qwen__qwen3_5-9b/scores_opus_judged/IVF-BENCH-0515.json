@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0515",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA grading features including expansion with thinning zona, tightly packed ICM, and cohesive TE epithelium. The descriptions align well with the Gardner score provided and the image. Minor limitation is that the description largely restates the provided lab data rather than offering independent image-based observations of specific features like blastocoele cavity size or any subtle irregularities."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response integrates several key factors (age, AMH, endometrial thickness, sperm parameters, BMI) with embryo quality. However, the claim that AMH 12.0 ng/mL indicates a 'super-responder' profile 'likely consistent with PCOS' is a significant overreach — AMH of 12 at age 38 is good but not necessarily indicative of PCOS. The diagnosis is tubal factor, not PCOS. The 100% fertilization rate claim is also inaccurate since 7 MII oocytes doesn't mean 7 fertilized. The response also misses discussing the tubal factor diagnosis and its implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical in connecting age-related aneuploidy risk to the probability estimate, and the 40-60% range is reasonable. However, there are inconsistencies: the PCOS assumption is unfounded given the tubal factor diagnosis, the fertilization rate claim is incorrect (7 MII doesn't equal 100% fertilization), and the response was cut off before completing the reasoning and recommendations sections. The logic connecting morphology to implantation potential is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is correct and aligned with established criteria. The age-adjusted probability estimate is reasonable. However, the response doesn't mention PGT-A which would be a standard consideration at age 38 per ASRM/ESHRE guidelines. The PCOS misattribution deviates from proper clinical assessment. The response was truncated so we cannot assess whether guideline-aligned recommendations were provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was cut off before completing the probability reasoning and before providing any recommendations for the transfer or future cycle planning. The sections that were completed provide some useful context but no specific actionable recommendations. There is no discussion of PGT-A, progesterone support, follow-up monitoring, or contingency planning for future cycles."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.026,
+  "judge_latency_ms": 13483.09254203923,
+  "judge_prompt_tokens": 2135,
+  "judge_completion_tokens": 613
+}

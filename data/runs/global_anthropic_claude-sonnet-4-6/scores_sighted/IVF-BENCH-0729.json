@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0729",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies an expanded blastocyst with thinning zona and a visible ICM, but it overstates confidence in ICM/TE grading from a single image and likely overcalls subtle TE irregularity and exact AA-vs-AB discordance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, diagnosis, sperm, endometrium, and cycle context well, though it somewhat overinterprets low AMH as affecting embryo competence/aneuploidy risk beyond what age predicts."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the estimate is explained, but several modifiers are weakly supported or overstated (e.g., low AMH increasing aneuploidy, lifestyle penalties, fresh-transfer deduction without cycle specifics)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard (SET, luteal support concepts), but some are not guideline-driven for this case or are overreaching, such as routine aspirin consideration, ERA mention without indication, DHEA/DuoStim suggestions, and strong claims about alcohol/stress effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, though some suggestions are more speculative than necessary for a first-cycle tubal-factor patient with a good-quality blastocyst."
+    }
+  ],
+  "extracted_probability": 0.43,
+  "judge_cost_usd": 0.015192,
+  "judge_latency_ms": 5645.213457988575,
+  "judge_prompt_tokens": 3279,
+  "judge_completion_tokens": 357
+}

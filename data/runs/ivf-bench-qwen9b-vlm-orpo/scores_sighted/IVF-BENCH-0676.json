@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0676",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst and appropriately notes limits of a single static image, but overcalls ICM/TE quality from this image and questions expansion despite provided 3AA grading; some described features are not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, DOR, endometrium, day of transfer, prior cycle history, and sperm factors well, with appropriate emphasis that DOR mainly affects embryo yield more than competence of an already formed blastocyst."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with a plausible prognosis range tied to age, morphology, and uterine factors; minor issues include slight inconsistency around morphology/expansion and one sperm concentration misstatement."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: single embryo transfer, caution about morphology not proving euploidy, optional PGT-A at age 33, and no bed rest. Minor deviations include some overconfidence in morphology-based grading from the image alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future planning, including SET, luteal support adherence, reserve clarification, and metabolic optimization; useful though not highly tailored beyond standard counseling."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015615,
+  "judge_latency_ms": 5317.80895900738,
+  "judge_prompt_tokens": 3465,
+  "judge_completion_tokens": 348
+}

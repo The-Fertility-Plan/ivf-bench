@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BA blastocyst: expanded blastocoel, thinned zona pellucida, loosely grouped ICM with moderate cellularity, and cohesive multicellular TE epithelium. The description aligns well with the Gardner grading criteria and the visible image features. Minor limitation: the image is somewhat low-contrast and grainy, making precise ICM/TE distinction challenging, yet the model confidently describes tight TE intercellular junctions and >50% circumference coverage which may be slightly over-interpreted from this image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 35 and its aneuploidy implications, BMI 33.6 and its multi-level impact on oocyte quality/endometrial receptivity/obstetric risk, tubal factor diagnosis, paternal age 44 with borderline sperm parameters and DNA fragmentation concerns, endometrial thickness 15mm, FSH 6.8, and lifestyle factors. The interactions between these factors and embryo quality are explicitly discussed, including how BMI may explain the Grade B ICM and how TE Grade A is reassuring despite paternal factor concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate (35-45% clinical pregnancy, 28-38% live birth) follows logically from the adjustments applied to baseline rates. The step-by-step probability adjustment methodology is transparent. Minor inconsistency: the response notes BMI causes '20-30% relative risk reduction' but then applies it as '10-15% absolute reduction,' which is mathematically inconsistent with the stated ~50-55% baseline. The caveat about aneuploidy potentially lowering estimates to 25-35% is appropriately hedged."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation for obesity/obstetric risk, ultrasound-guided transfer, adequate luteal support, early viability scan, NIPT offer at 35+, PGT-A consideration, and SDF testing for repeated implantation failure. The low-dose aspirin recommendation for preeclampsia prevention aligns with ACOG guidelines. The suggestion of mandatory weight loss delay before future cycles is evidence-based. Minor deviation: framing aspirin as potentially improving implantation is not strongly evidence-based per current guidelines, though its preeclampsia prevention role is well-established."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically organized into clear categories: current transfer, if successful, and if unsuccessful. Each recommendation includes specific parameters (81mg aspirin, 10-12 weeks progesterone, 6-7 week scan, 10-15% weight loss target, BMI <30 target, 3-6 month delay). The response addresses contingencies, provides alternatives (freeze-all strategy), and prioritizes interventions logically. The SDF testing recommendation with specific triggers and management options adds further clinical utility."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.022002,
+  "judge_latency_ms": 16549.73208399315,
+  "judge_prompt_tokens": 3474,
+  "judge_completion_tokens": 772
+}

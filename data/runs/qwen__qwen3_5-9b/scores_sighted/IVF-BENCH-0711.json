@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology by calling 2AA 'top tier' and 'perfect,' and incorrectly describes grade 2 as fully expanded with a thin zona ready to hatch. In Gardner grading, 2 is an early blastocyst rather than fully expanded/hatching. ICM/TE comments are broadly plausible but rely heavily on the provided label rather than careful image-grounded description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates female age, BMI, prior failed cycle, tubal factor, sperm parameters, endometrial thickness, and partner age with embryo prognosis reasonably well. However, it overemphasizes paternal age as a major determinant of aneuploidy and infers diminished ovarian reserve from limited data despite AMH being unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is clear and mostly logical, but there are notable issues: misclassification of blastocyst expansion, inconsistent statements about embryo quality, and an implantation estimate that appears reduced mainly due to paternal age without strong support. Some conclusions are stronger than the evidence warrants."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points are not well aligned with standard IVF guidance: incorrect Gardner stage interpretation, overstating 2AA as the highest/perfect grade, and 'strongly recommending' PGT-A primarily for paternal age/one failed cycle is not guideline-based. Other elements, such as proceeding with transfer and noting favorable endometrium, are reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, considering future PGT-A discussion, nutritional counseling, possible sperm DNA fragmentation testing, and monitoring luteal support. Recommendations are useful, though some are too assertive given the evidence."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014304,
+  "judge_latency_ms": 5669.142375001684,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 438
+}

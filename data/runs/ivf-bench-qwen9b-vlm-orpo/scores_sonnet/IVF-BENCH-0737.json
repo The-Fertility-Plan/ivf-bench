@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description but introduces some inconsistency by suggesting the image may represent a Gardner stage 4 while the lab data clearly states stage 3AA. The ICM description as 'compact' aligns with AA grading, but the TE is described as 'good to fair (roughly B)' which contradicts the provided 3AA score. The response acknowledges zona thinning appropriately but hedges excessively between grades rather than confirming the provided morphological data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, BMI, AMH, FSH, endometrial thickness, smoking status, and sperm parameters into a structured table format. It appropriately highlights the tension between favorable embryo/patient characteristics and the poor reproductive history. However, it incompletely addresses the endometriosis diagnosis and its specific mechanistic impact on implantation, and the sperm motility of only 22.9% (below normal threshold) is noted as 'reassuring' based only on concentration, which is a notable oversight."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning framework is sound - identifying positive factors against a backdrop of recurrent failure. However, the response appears truncated, cutting off mid-sentence in the clinical miscarriage section, leaving the reasoning incomplete. The morphological grading inconsistency (suggesting 4AB/4AA while lab data says 3AA) creates a minor contradiction. The response sets up well for a probability estimate and recommendations but the truncation prevents full evaluation of coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response demonstrates familiarity with Gardner grading criteria and general ESHRE/ASRM principles. It correctly notes that morphology cannot predict ploidy and appropriately considers PGT-A in the context of recurrent failure. However, the response is truncated before recommendations are fully presented, limiting assessment. The suggestion that the embryo might be stage 4 when lab data confirms stage 3 shows some deviation from standardized grading application."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is significantly truncated and does not complete its recommendations section. While it begins to identify risk factors and favorable indicators, it never delivers specific transfer recommendations, future cycle planning guidance, or a clear implantation probability estimate with reasoning. The setup is promising but the incomplete delivery severely limits clinical utility for the practitioner."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.015069,
+  "judge_latency_ms": 12402.954167002463,
+  "judge_prompt_tokens": 2033,
+  "judge_completion_tokens": 598
+}

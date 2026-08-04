@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0164",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates key morphology: it describes a transition morula/blastocyst and says grade 2 means ~50% cavity, whereas Gardner 2 is blastocoel >50% of embryo volume. It also infers distinct ICM/TE features more confidently than the image supports and does not address the mismatch between a Day 4 transfer and reported blastocyst grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR/AMH, oocyte yield, sperm quality, and endometrial thickness reasonably well with prognosis, though it overstates links between DOR and embryo aneuploidy independent of age and misses BMI/lifestyle nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: calling 2AA both a top-tier embryo and not yet fully expanded, treating Day 4 as if equivalent to standard Day 5 blastocyst statistics, and giving a high implantation estimate that is not well supported by the stated evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are important deviations from Gardner criteria and evidence-based prognosis. A 60-70% implantation estimate for a reported Day 4/grade 2 embryo is likely inflated, and the discussion does not adequately reconcile the unusual Day 4 blastocyst grading context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides little concrete management advice for the current transfer or future cycles beyond general optimism. It lacks specific next steps such as luteal support considerations, counseling on expectations, embryo culture/cryopreservation strategy, or future DOR planning."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013089,
+  "judge_latency_ms": 5963.918833003845,
+  "judge_prompt_tokens": 2268,
+  "judge_completion_tokens": 419
+}

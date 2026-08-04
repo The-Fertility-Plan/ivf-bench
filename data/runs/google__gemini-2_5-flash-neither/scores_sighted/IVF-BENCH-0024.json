@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated no image was available, but then fabricated an assumed good-quality blastocyst (e.g., 4AA/5AA) and implied Day 4 transfer suggested reasonable development. Since morphology was not actually assessed and the visible embryo does not support that specific grading, this lowers accuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: female age, ovarian reserve, prior IVF outcomes, smoking/alcohol, paternal age, sperm parameters, and endometrium, and links them to implantation and miscarriage risk. Some interactions are overstated or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but it contains notable issues: it assumes a good-quality blastocyst without evidence, refers to a Day 4 transfer as implying blastocyst quality, and derives a probability estimate from that unsupported assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking/alcohol cessation, luteal support, uterine cavity assessment when indicated), but there are deviations: strong endorsement of PGT-A in a 32-year-old based mainly on one miscarriage/APA is not clearly guideline-driven, thrombophilia screening is weakly indicated, and acupuncture is not guideline-supported as outcome-improving."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future cycles, including lifestyle modification, sperm DNA fragmentation testing, uterine assessment, and counseling. Some recommendations are somewhat generic or not tightly tailored to the actual embryo stage."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.016608,
+  "judge_latency_ms": 5533.792417001678,
+  "judge_prompt_tokens": 3516,
+  "judge_completion_tokens": 404
+}

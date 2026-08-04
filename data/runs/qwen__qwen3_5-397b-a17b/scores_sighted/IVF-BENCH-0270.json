@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0270",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a clearly high-quality expanded 3AA blastocyst with distinct dense ICM and cohesive TE, but the image appears less clearly expanded/collapsed with poorly defined ICM and limited visible TE detail; several features are inferred from the provided grade rather than directly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior live birth, prior failed cycle, sperm data, BMI, endometrium, and lifestyle with embryo prognosis in a clinically meaningful way, though some points (male factor explanation, AMH interpretation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, and the implantation estimate is explained. Minor issues include relying heavily on the assigned 3AA grade despite image ambiguity and some overstatement such as calling 6/6 MII 'exceptional'."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are some deviations/overstatements: morphology alone should not be treated as 'top tier' certainty from this image, routine PGT-A at age 36 with low embryo yield is nuanced, and advice such as immediate alcohol cessation/high-impact exercise avoidance is more conservative than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, and future planning including consideration of PGT-A and sperm DNA fragmentation testing, though some recommendations remain somewhat generic and not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013656,
+  "judge_latency_ms": 5989.849250006955,
+  "judge_prompt_tokens": 2672,
+  "judge_completion_tokens": 376
+}

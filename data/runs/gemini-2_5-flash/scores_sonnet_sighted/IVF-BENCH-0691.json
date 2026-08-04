@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description but shows some uncertainty and hedging about the expansion stage, noting it 'might represent a slightly earlier snapshot.' The image actually shows a blastocyst with significant compaction and visible cellular structure. The model correctly identifies ICM and TE components and notes absence of fragmentation, but the description of zona pellucida as 'normal thickness' is questionable given the image shows a fairly intact zona. The model appropriately acknowledges limitations in assessing TE from a single image. Overall mostly accurate but with some imprecision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age, BMI, AMH/FSH values, oocyte yield, endometrial thickness, lifestyle factors, sperm parameters, and tubal factor diagnosis are all connected to prognosis. The previous failed cycle is acknowledged as a risk factor. The AMH of 1.23 ng/mL is described as 'good ovarian reserve' which is slightly generous - it's actually borderline low for age 28, but this nuance is missed. Otherwise integration is thorough and well-connected."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from observations to conclusions. The 55-70% implantation probability estimate is well-supported by the cited factors (age, blastocyst quality, endometrial thickness, day 5 transfer). The model appropriately weighs favorable vs. risk factors. Minor inconsistency: AMH 1.23 ng/mL at age 28 is borderline low yet is framed as fully favorable without nuance. The probability range is reasonable and the reasoning chain supporting it is clear and consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for young patient with good quality blastocyst is appropriate, luteal phase support is mentioned, PGT-A consideration for recurrent failure is appropriate, ERA and hysteroscopy suggestions for recurrent implantation failure follow guidelines. Gardner grading interpretation is mostly correct. The recommendation to consider sperm DNA fragmentation is evidence-based. Minor gap: doesn't address the borderline AMH in context of POSEIDON criteria or discuss freeze-all strategy considerations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal support is mentioned, lifestyle counseling is included, and a structured future planning section covers ERA, hysteroscopy, PGT-A, and sperm DNA fragmentation testing with appropriate triggers for each. The response could be more specific about progesterone dosing protocols or timing, and could address whether to freeze remaining embryos. Overall provides clear, clinically useful next steps for both immediate transfer and contingency planning."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.021246,
+  "judge_latency_ms": 15683.025333011756,
+  "judge_prompt_tokens": 3607,
+  "judge_completion_tokens": 695
+}

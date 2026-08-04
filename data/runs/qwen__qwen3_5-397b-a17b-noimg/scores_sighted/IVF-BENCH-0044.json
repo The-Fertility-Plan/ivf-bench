@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but its morphology summary based on the provided score contains notable inaccuracies: it states grade 2 is a fully expanded blastocyst and says TE B corresponds to 'few cells forming a loose epithelium,' which is actually closer to TE C. It also labels 2AB as top-tier, overstating the morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, tubal factor, endometrial thickness, prior miscarriage, BMI, lifestyle, and paternal age with embryo prognosis in a generally thoughtful way, though some claims about AMH implying much younger oocyte quality are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are internal issues: it misinterprets the Gardner expansion stage, overcalls the embryo as top-tier, and includes a clear BMI typo ('2.5'). Probability adjustments are plausible but somewhat overconfident given age-related aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including SET discussion and consideration of PGT-A at age 40 with prior miscarriage. However, the morphology interpretation is not Gardner-accurate, and suggestions like aspirin/thrombophilia workup after a single miscarriage are not routinely guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future planning, including luteal support, SET, PGT-A discussion, sperm DNA fragmentation testing, and embryo banking. Some recommendations are more speculative than standard, but overall they are clinically usable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014868,
+  "judge_latency_ms": 5673.817999995663,
+  "judge_prompt_tokens": 2846,
+  "judge_completion_tokens": 422
+}

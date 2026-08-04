@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no formal embryo grade was given and refuses morphology assessment, despite explicit Gardner data being provided (2AB with ICM/TE descriptors). It therefore fails to describe the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, diagnosis, sperm parameters, endometrium, lifestyle, and prior cycle history well, though it does not connect these to the actual provided embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is undermined by the major premise error that morphology/grade were unavailable, leading to probability estimates based on an unnecessary uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET in a young good-prognosis patient, standard luteal support, and caution about routine PGT-A are broadly guideline-consistent, but the failure to apply the provided Gardner grading and confusion around Day 4 versus blastocyst grading reduce alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical recommendations for transfer, luteal support, OHSS monitoring, and future cycle review, though these would be stronger if tailored to the known 2AB embryo rather than treating morphology as unknown."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015195,
+  "judge_latency_ms": 4428.9663749950705,
+  "judge_prompt_tokens": 3360,
+  "judge_completion_tokens": 341
+}

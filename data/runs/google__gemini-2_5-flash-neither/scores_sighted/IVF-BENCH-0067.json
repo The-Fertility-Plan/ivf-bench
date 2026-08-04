@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was available and did not fabricate embryo morphology; therefore it avoided inaccurate morphological claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, AMH/FSH, ovarian response, sperm parameters, endometrium, diagnosis, and prior miscarriage into prognosis, though some links were conditional on assumed embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates clearly framed as dependent on assumed blastocyst quality; minor overreach remains because estimates were given without actual morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting routine PGT-A, thrombophilia screening, ERA, and broad miscarriage workup after a single prior clinical miscarriage is more aggressive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, luteal support, obtaining morphology, and contingency planning, though some future recommendations are somewhat generic or overinclusive."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.014091,
+  "judge_latency_ms": 4265.505207993556,
+  "judge_prompt_tokens": 3327,
+  "judge_completion_tokens": 274
+}

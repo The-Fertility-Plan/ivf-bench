@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0356",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 4AA Gardner score features including expansion stage, ICM tightly packed appearance, TE cohesive epithelium, and zona pellucida thinning/herniation. The descriptions are consistent with the provided grading data. Minor limitation is that the analysis largely restates the provided Gardner score rather than offering independent image-based observations of specific features like blastocoel cavity size, fragmentation, or subtle morphological nuances visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of multiple clinical factors including low AMH/DOR, BMI impact, ectopic history, tubal factor diagnosis, sperm parameters, endometrial thickness, and maternal age. The 'Quality vs. Quantity' framing is apt. The connection between ectopic history and tubal factor is well-made. However, the characterization of the embryo as a 'miracle' is somewhat hyperbolic—getting a 4AA from 5 MII oocytes at age 36 is not extraordinary. Also, FSH of 9.0 is described as 'high' when it's actually within normal range."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning flow is logical, but there are notable issues. The probability estimate of 25-35% seems overly conservative for a 4AA blastocyst at age 36 with 11mm endometrium. The ectopic risk adjustment is overweighted—IVF transfers place embryos directly in the uterus, and while ectopic risk exists, it doesn't reduce implantation probability by 20-30%. The model conflates ectopic pregnancy risk with failed implantation. Also, the recommendation section contradicts itself by saying 'do not freeze' then immediately saying 'freezing is a valid option.' The response was also cut off before completing recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is correct. However, the implantation probability of 25-35% is significantly below what literature supports for a 4AA blastocyst (typically 50-60% even with adjustments). The BMI adjustment of 5-10% reduction is reasonable but the ectopic history adjustment is excessive for IVF transfers. The recommendation to proceed with fresh transfer is reasonable but the response was truncated before completing guideline-aligned recommendations. PGT-A was mentioned but not formally recommended despite the clinical scenario warranting discussion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was truncated mid-sentence in the recommendations section, which severely limits actionability. The partial recommendation to proceed with fresh transfer is noted but incomplete. Future cycle planning was not addressed. No specific monitoring protocols for ectopic risk post-transfer were mentioned. No discussion of weight management, PGT-A for future cycles, or alternative protocols for DOR was completed. The incomplete response significantly reduces clinical utility."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.029595,
+  "judge_latency_ms": 16343.92754198052,
+  "judge_prompt_tokens": 2389,
+  "judge_completion_tokens": 706
+}

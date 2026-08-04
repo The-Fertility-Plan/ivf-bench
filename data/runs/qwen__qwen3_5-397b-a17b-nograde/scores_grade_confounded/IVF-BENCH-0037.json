@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response directly contradicts the provided Gardner grade 1DD by reclassifying the embryo as a Day 4 compacted morula and describing relatively uniform compaction rather than a very poor-quality early blastocyst with absent/degenerative ICM and TE. Some generic observations like intact zona may be reasonable, but the core stage assessment is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed/biochemical cycles, endometrial thickness, BMI, sperm data, and transfer timing with prognosis reasonably well. However, it overinterprets the male factor discrepancy and does not fully reconcile the supplied embryo grade with the clinical discussion."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and the prognosis estimate is explained, but there is a major internal issue: conclusions are built on a morphology assessment that conflicts with the stated laboratory grade. Some speculative claims, especially around sperm DNA fragmentation and ERA, weaken coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many points are broadly consistent with IVF practice, such as discussing age-related aneuploidy and possible value of blastocyst culture/PGT-A. However, calling PGT-A 'essential,' suggesting ERA relatively early, and proposing adjuvants like aspirin or sildenafil without clear indication are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer support and future planning, including PGT-A consideration, sperm DNA fragmentation testing, and blastocyst culture. Recommendations are usable, though some are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.012759,
+  "judge_latency_ms": 4582.828083002823,
+  "judge_prompt_tokens": 2303,
+  "judge_completion_tokens": 390
+}

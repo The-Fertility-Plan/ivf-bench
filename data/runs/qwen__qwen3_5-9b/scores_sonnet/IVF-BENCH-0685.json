@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocoel with thinning zona pellucida, compact ICM with high cellularity on one side, and a less robust TE layer. The description of the ICM as a 'distinct, dark, and compact cluster' and the TE as 'few cells forming a loose epithelium' aligns well with Grade A ICM and Grade B TE criteria. Minor issue: the response incorrectly states the embryo 'has successfully hatched or is on the verge of hatching' when Grade 3 indicates an expanded blastocyst but not yet hatching (that would be Grade 4-6), which is a notable inaccuracy in expansion stage interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: maternal age (34) linked to lower aneuploidy risk, PCOS connected to stimulation response and metabolic considerations, endometrial thickness (12.5mm) noted as optimal, paternal age (44) flagged as a key risk factor for SDF and aneuploidy, and prior biochemical pregnancy linked to potential genetic issues. Sperm parameters are acknowledged but the interaction between PCOS and endometrial receptivity could be explored more deeply. AMH and FSH values are not explicitly discussed in relation to ovarian reserve quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-50% follows reasonably from the evidence: good morphology offset by paternal age concerns and prior failures. The connection between biochemical pregnancy history and aneuploidy risk is coherent. However, there is a minor inconsistency in attributing the biochemical pregnancy primarily to paternal age without acknowledging that at 34, maternal aneuploidy is also a contributor. The base rate cited (50-60% for euploid embryos) is reasonable but the downward adjustment logic could be more precisely quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines: PGT-A recommendation for recurrent implantation failure with advanced paternal age is appropriate, SDF testing aligns with current guidance for unexplained failures, luteal support for PCOS patients is evidence-based, and metabolic screening for PCOS is guideline-concordant. The antagonist protocol choice for PCOS is correctly validated. Minor deviation: the response slightly overstates paternal age at 44 as a 'major' aneuploidy risk factor, as current guidelines primarily emphasize maternal age for aneuploidy risk; paternal contribution is secondary."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, maintain luteal support, monitor beta-hCG closely given biochemical pregnancy history, recommend PGT-A for future cycles, SDF testing, and metabolic screening. These are clearly actionable for a clinician. The response could be strengthened by specifying progesterone supplementation protocols, suggesting specific SDF thresholds, or discussing freeze-all strategy considerations given PCOS risk. Nevertheless, the recommendations provide clear next steps with appropriate clinical nuance."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020184,
+  "judge_latency_ms": 15245.040375004464,
+  "judge_prompt_tokens": 2803,
+  "judge_completion_tokens": 785
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (3AA) and incorrectly stated morphology could not be assessed without an image or score, omitting the known expanded blastocyst, strong ICM, and strong TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, PCOS, endometrium, sperm, smoking, and prior ectopic, though it does so based on an incorrect assumption about embryo quality rather than the provided 3AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it has a major flaw: it ignores the provided embryo grade and bases prognosis on hypothetical better-grade embryos, weakening the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, luteal support, single best embryo selection), but the discussion of implantation rates references euploid embryos without evidence of PGT-A and includes somewhat overstated claims about short-term smoking cessation benefits."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and future planning, especially around smoking cessation and lifestyle optimization, though recommendations are less tailored than they could be because the actual 3AA morphology was not incorporated."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.0138,
+  "judge_latency_ms": 3964.0680420052377,
+  "judge_prompt_tokens": 2865,
+  "judge_completion_tokens": 347
+}

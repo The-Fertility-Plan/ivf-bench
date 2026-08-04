@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0436",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a blastocyst with a dense left-sided ICM and generally good quality, but it overstates visible evidence of hatching/herniation and cohesive TE from this single image; the image is more consistent with an expanded blastocyst and limited TE detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, endometrial thickness, prior cycle history, sperm parameters, and antagonist protocol reasonably well, though some links (e.g., paternal age impact, stress effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: calling the embryo clearly hatching despite limited visual support, suggesting likely >90% euploidy at age 31, and inferring likely surplus embryos from 9 COCs are overconfident."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but recommending fresh transfer without fuller OHSS/context assessment in PCOS, endorsing PGT-A partly due to paternal age 40, and implying stress reduction meaningfully optimizes implantation are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, luteal support, metabolic assessment in PCOS, and considering future FET/PGT-A depending on outcome, though some recommendations are more generic than case-specific."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013467,
+  "judge_latency_ms": 5758.47287500801,
+  "judge_prompt_tokens": 2604,
+  "judge_completion_tokens": 377
+}

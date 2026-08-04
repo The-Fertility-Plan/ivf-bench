@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially overcalls the image, describing a well-expanded/hatching high-grade blastocyst with compact ICM and numerous uniform TE cells, none of which are clearly supported by the image; the embryo appears poorly expanded/collapsed with indistinct ICM and sparse poorly defined TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and cycle history into prognosis reasonably well, though some links are generic and it overstates the significance of favorable sperm data despite the male-factor label."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but the main conclusions rest on an inaccurate morphology assessment, leading to an inflated implantation estimate and recommendations based on a presumed high-grade blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as SET and luteal support are guideline-consistent, but suggesting assisted hatching and ERA in this context is not strongly evidence-based for a first cycle, and the Gardner grading inference is poorly grounded in the image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for transfer and contingency planning, though some actions are too generic and a few recommendations are not well tailored to the actual embryo morphology or first-cycle setting."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015009,
+  "judge_latency_ms": 4787.370334001025,
+  "judge_prompt_tokens": 3263,
+  "judge_completion_tokens": 348
+}

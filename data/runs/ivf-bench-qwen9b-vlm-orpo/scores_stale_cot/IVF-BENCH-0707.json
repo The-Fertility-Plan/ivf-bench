@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Gives a broadly plausible blastocyst description and acknowledges image limitations, but is inconsistent about stage (3 vs expanded/4), adds uncertain visual details, and does not tightly anchor morphology to the provided image/lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors including maternal age, smoking, BMI, first cycle status, sperm parameters, day-5 transfer, and endometrial thickness with embryo quality, though some factors are overemphasized or speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Contains multiple internal inconsistencies and repeated shifting estimates (25-40%, 30-45%, 35-50%, 60-70% if euploid), plus contradictory statements about morphology and semen interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles (single embryo transfer, smoking cessation, morphology not equal to ploidy), but includes questionable claims about thick endometrium, semen interpretation, and grading nuances."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical advice for transfer and future planning (SET, smoking cessation, cavity review if needed, consider PGT-A), but recommendations are somewhat generic and diluted by speculative points."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.019503,
+  "judge_latency_ms": 5373.871291056275,
+  "judge_prompt_tokens": 4931,
+  "judge_completion_tokens": 314
+}

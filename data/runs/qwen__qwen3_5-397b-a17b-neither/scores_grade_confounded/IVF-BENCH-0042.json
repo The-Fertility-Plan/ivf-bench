@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score can be assigned and does not analyze the provided 0DD morphology; it instead assumes a transferable-quality embryo (e.g., ≥3BB), which conflicts with the given poor-grade early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, AMH, BMI, sperm parameters, endometrium, prior cycle, and oocyte maturation reasonably well, though some links are overstated and not anchored to the actual 0DD embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but undermined by a major premise error: it ignores the provided 0DD grade and bases prognosis on an assumed good-quality blastocyst, making the implantation estimate inconsistent with the case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (review trigger, consider dual trigger, avoid bed rest), but assuming transferability of a 0DD embryo and suggesting PGT-A largely due to one failed cycle/low maturation in a 28-year-old are not well aligned with typical evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps for luteal support review, trigger assessment, possible dual trigger, weight optimization, and protocol reconsideration; however, recommendations are partly misdirected because they do not address the very poor 0DD embryo morphology appropriately."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012864,
+  "judge_latency_ms": 3950.871957997151,
+  "judge_prompt_tokens": 2543,
+  "judge_completion_tokens": 349
+}

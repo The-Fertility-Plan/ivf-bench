@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies compaction and possible early cavitation, but it misclassifies the image as a good Day 4 morula/early blastocyst and speculates about early hatching. The image does not show a clearly expanded blastocyst with definable ICM/TE, and the protrusion is overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, tubal factor, prior IVF outcomes, sperm quality, and endometrial thickness with prognosis in a clinically meaningful way, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and internally consistent, especially around age-related aneuploidy and prior losses lowering prognosis. Minor issues arise from overcalling morphology and using that as part of the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including counseling and consideration of blastocyst culture/PGT-A in AMA. However, ERA and thrombophilia screening are suggested somewhat too readily, and the morphology discussion is not tightly aligned with standard Gardner-stage interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, luteal support, and future-cycle planning, especially regarding PGT-A and uterine cavity assessment. Some recommendations are generic rather than tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015507,
+  "judge_latency_ms": 5191.462750008213,
+  "judge_prompt_tokens": 3349,
+  "judge_completion_tokens": 364
+}

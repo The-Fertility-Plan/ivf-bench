@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes a spherical embryo within the zona pellucida with a visible blastocoel, which is reasonable for a 1DD grade. However, the description of the blastocoel as 'less than half the volume' contradicts the Gardner Grade 1 definition provided in the case (blastocoel at least half the embryo). The model initially states the cavity occupies a small portion but the lab data says otherwise. The ICM and TE descriptions appropriately reflect the DD grading. The note about the Day 4 transfer discrepancy with blastocyst grading shows good observational awareness. Some descriptions like 'compacted and disorganized' cells are reasonable but somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response systematically connects maternal age to aneuploidy risk and poor embryo quality, correctly interprets AMH as reasonable for age while noting quality vs quantity distinction, appropriately evaluates sperm parameters to rule out male factor, addresses borderline endometrial thickness, and contextualizes the previous cycle history (no pregnancy, miscarriage, biochemical) as indicating a difficult case. The interaction between age-related oocyte quality and embryo morphology is well articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 5-8% follows logically from the poor embryo grade, maternal age, and previous cycle failures. One minor inconsistency: the model states Grade 1 means 'blastocoel is less than half the volume' which contradicts the case data definition. The miscarriage risk statement of '30-40% for euploid embryos' at age 39 is slightly overstated. The note about the Day 4 vs Day 5/6 discrepancy is a thoughtful observation that adds coherence. Overall conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with established guidelines. The Gardner grading interpretation is mostly correct (though the expansion grade definition was slightly misquoted). PGT-A recommendation for a 39-year-old with recurrent failures is appropriate per ASRM/ESHRE guidelines. The suggestion of donor eggs as a future option is clinically appropriate. The endometrial thickness assessment (7mm as borderline acceptable) aligns with current evidence. The recommendation to transfer if it's the only embryo available is pragmatic and guideline-consistent. Minor deviation: stating many clinics would 'discard' a 1DD is somewhat strong."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: transfer if only embryo available with proper counseling, PGT-A for future cycles, donor egg discussion, alcohol reduction from 4-6/week to <2/week, endometrial optimization with estrogen support. The response provides clear next steps for both the current transfer and future planning. Could have been more specific about protocol modifications for future stimulation cycles (e.g., antagonist protocol consideration, different dosing strategies, time-lapse monitoring) and could have mentioned ERA testing given the history of implantation issues."
+    }
+  ],
+  "extracted_probability": 0.065,
+  "judge_cost_usd": 0.033325,
+  "judge_latency_ms": 17351.265167002566,
+  "judge_prompt_tokens": 2815,
+  "judge_completion_tokens": 770
+}

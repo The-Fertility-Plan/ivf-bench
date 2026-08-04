@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AB Gardner score - expanded blastocyst, thinned zona, compact ICM, and loose TE. However, the description relies heavily on the provided Gardner score rather than independent image analysis. The model acknowledges limitations of 2D imaging but doesn't provide specific morphological details that would demonstrate genuine image analysis beyond what the lab data already states. Some descriptions are generic rather than image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically addresses female age, BMI, AMH/FSH, PCOS diagnosis, previous cycle outcomes, partner age/sperm parameters, endometrial thickness, and lifestyle factors. Crucially, it connects these factors to each other and to embryo quality - noting how PCOS is mitigated by good AMH/MII yield, how the biochemical pregnancy history informs implantation capacity, and how partner age relates to sperm quality. The interactions between factors are well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 55-65% follows reasonably from the evidence presented, balancing favorable factors (age, endometrial thickness, embryo quality) against risk factors (previous failures, possible aneuploidy). The acknowledgment that biochemical pregnancy both supports implantation capacity and raises concerns about sustained pregnancy is nuanced. Minor issue: the 55-65% range could be slightly high given two previous failures, but the reasoning for this range is clearly articulated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst in a 34-year-old, luteal phase support, ultrasound-guided transfer, PGT-A consideration for recurrent implantation failure, hysteroscopy for uterine evaluation, and ERA for displaced implantation window. The antagonist protocol endorsement for PCOS is appropriate. Minor gap: doesn't specifically mention OHSS risk monitoring given PCOS diagnosis, and ERA recommendation timing could be more precisely defined per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, covering both immediate transfer management and future cycle planning. The tiered approach (current transfer recommendations vs. future planning if unsuccessful) is clinically useful. Specific suggestions include luteal phase support optimization, ERA, hysteroscopy, PGT-A, sperm DNA fragmentation testing, and immunological workup. Could be improved by specifying progesterone dosing/route, specific timing for ERA, or threshold criteria for when to pursue each additional test, but overall provides clear actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.020592,
+  "judge_latency_ms": 13533.822999997938,
+  "judge_prompt_tokens": 3499,
+  "judge_completion_tokens": 673
+}

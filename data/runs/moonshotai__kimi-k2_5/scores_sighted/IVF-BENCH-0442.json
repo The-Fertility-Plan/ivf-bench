@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0442",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely restates the provided Gardner 3AA label rather than what is clearly visible in the image. The image appears somewhat suboptimal/partially collapsed with indistinct ICM and TE, so claims of a distinct tightly packed ICM at a specific clock position and a uniform cohesive TE are overconfident and not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, BMI, male factor diagnosis, first cycle status, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some inferences are stronger than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: it assumes unprovided outcomes such as 100% blastulation, mixes morphology with euploidy prediction somewhat aggressively, and the implantation probability derivation is only partially consistent with the stated assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as proceeding with single embryo transfer are guideline-concordant, but suggestions like routine low-dose aspirin, growth hormone, DHEA/CoQ10, embryo banking before first transfer, and ERA after failure are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer, luteal support, follow-up, and contingency planning. However, some recommendations are overly prescriptive or not sufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014847,
+  "judge_latency_ms": 5027.780083997641,
+  "judge_prompt_tokens": 3119,
+  "judge_completion_tokens": 366
+}

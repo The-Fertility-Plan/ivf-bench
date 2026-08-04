@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0698",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies thinned zona, expanded blastocyst stage, and attempts to describe ICM and TE. However, the image shows a somewhat granular, less-than-perfect blastocyst with some cytoplasmic irregularity and cavity distortion that the model partially acknowledges but doesn't fully characterize. The description of a 'compact, dense cellular cluster' for ICM is somewhat vague, and the TE description lacks precision about cell count and cohesiveness visible in the image. The model appropriately caveats focal plane limitations but doesn't note potential concerns about the somewhat irregular appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age, AMH, FSH, BMI, PCOS diagnosis, stimulation protocol, sperm parameters (correctly identifying asthenozoospermia), endometrial thickness, lifestyle factors, and first-cycle status. It correctly contextualizes how male factor becomes less relevant once a good blastocyst exists, addresses PCOS-specific concerns about progesterone elevation and fresh transfer receptivity, and weighs each factor's relative contribution to prognosis in a nuanced, interconnected manner."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 45-60% follows logically from the presented evidence. The model correctly reasons that existing blastocyst quality partially mitigates male factor concerns. Minor issue: the response simultaneously states 45-60% implantation probability and then separately states clinical pregnancy rate of 50-70% and live birth rate of 45-60%, which creates slight confusion as these metrics are conflated. The overall logic chain from observations to conclusions is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for young patient with good-quality blastocyst, appropriate caution against routine add-ons (steroids, intralipids, ERA, endometrial scratching) without indication, appropriate de-emphasis of PGT-A for 26-year-old first cycle, and correct identification of freeze-all consideration for PCOS patients. The Gardner grading interpretation is accurate. Minor gap: doesn't explicitly address OHSS risk monitoring given PCOS and high AMH, which ESHRE guidelines emphasize for this population."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET, luteal support optimization, beta-hCG timing (9-11 days), specific future workup triggers, metabolic optimization for PCOS, and conditional male factor follow-up. The response appropriately stratifies recommendations between current transfer and future planning. Slight deduction because some recommendations remain somewhat generic (e.g., 'stress reduction strategies') and the OHSS risk management plan for a PCOS patient with AMH 5.61 is absent, which would be a critical actionable item for this specific case."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022986,
+  "judge_latency_ms": 17171.487917003105,
+  "judge_prompt_tokens": 3982,
+  "judge_completion_tokens": 736
+}

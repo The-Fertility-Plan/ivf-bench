@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0300",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with indistinct ICM and poor TE, but it inaccurately states the embryo is expanded and that the blastocoel is clearly >50%; a Gardner 1 blastocyst is early, not expanded, and the image shows a poorly cavitating/partially collapsed embryo rather than an expanded one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates female age, ovarian reserve, endometriosis, sperm parameters, partner age, and endometrial thickness with embryo prognosis reasonably well, though it somewhat over-attributes poor morphology to paternal age and assumes oocyte quality from reserve markers."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate is directionally appropriate, but there is an internal contradiction between calling it Gardner 1 and also 'expanded,' and some causal claims (especially paternal age/aneuploidy from this single embryo) are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The poor-prognosis counseling and consideration of sperm DNA fragmentation/endometriosis management are broadly reasonable, but recommending PGT-A as 'highly recommended' mainly for paternal age 41 and one poor-quality embryo is stronger than guideline-based evidence supports, and calling many 1DD embryos untransferable is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, transfer expectations, future testing, and cycle planning, though some recommendations are somewhat generic and could better distinguish evidence-based options from optional adjuncts."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013632,
+  "judge_latency_ms": 5385.52462500229,
+  "judge_prompt_tokens": 2529,
+  "judge_completion_tokens": 403
+}

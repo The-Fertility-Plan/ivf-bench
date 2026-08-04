@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0172",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Includes some plausible comments on loose ICM and scant TE, but also over-interprets the image, questions the provided Gardner stage without strong basis, and describes possible debris/degeneration not clearly established from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, DOR, prior IVF failures, endometrial thickness, and semen parameters reasonably well with embryo quality, though AMH is unavailable and some interactions are only broadly framed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Final reasoning is mostly structured, but the overall response contains internal inconsistency around embryo stage/grade and probability estimates, with some speculative links such as morphology implying low-grade aneuploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with standard IVF counseling on morphology, transfer reasonableness, luteal support, and selective use of PGT-A, but departs from strict Gardner interpretation and includes some speculative recommendations not clearly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, lifestyle optimization, and future evaluation including uterine cavity review and sperm DNA fragmentation testing, though some suggestions remain somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.017859,
+  "judge_latency_ms": 6264.001208008267,
+  "judge_prompt_tokens": 4423,
+  "judge_completion_tokens": 306
+}

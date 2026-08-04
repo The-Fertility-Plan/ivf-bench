@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the key features of a 1DD blastocyst including degenerate ICM and TE, and notes the zona pellucida appearance. However, there is a notable contradiction: the model states expansion grade 1 means blastocoel <50% while the Gardner criteria parenthetical states ≥50%, showing confusion about the grading system. The image observations are plausible but generic, and the response was truncated before completing the full morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "The response begins integrating clinical factors (AMH, oocyte yield, age, maturation rate) but is cut off mid-sentence before completing the integration. The partial content shows awareness of relevant factors like age-quality relationship and ovarian reserve, but the truncation means sperm parameters, BMI, endometrial thickness, lifestyle factors, and diagnosis of unexplained infertility are never addressed. Integration is incomplete."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is truncated and incomplete, cutting off mid-sentence during the clinical integration section. No implantation probability estimate, risk factor analysis, or recommendations were provided. The partial reasoning present is generally logical but the internal contradiction about expansion grade 1 criteria undermines coherence. The incomplete nature makes it impossible to assess whether conclusions follow from evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The partial response shows some alignment with Gardner grading principles and correctly identifies D-grade ICM and TE as indicating non-viable lineages. However, the confusion about expansion grade 1 criteria (contradicting standard Gardner definitions) is a notable error. No recommendations were provided to assess guideline alignment for clinical management, and the response was cut off before addressing transfer decisions or future cycle planning per ESHRE/ASRM guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is severely truncated and provides no actionable recommendations whatsoever. Sections 3 (risk factors), 4 (implantation probability), and 5 (recommendations) are entirely absent. A clinician would receive no practical guidance on whether to proceed with transfer, how to counsel the patient, or how to plan future cycles. The response fails completely on actionability due to the incomplete output."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.0132,
+  "judge_latency_ms": 11695.198166999035,
+  "judge_prompt_tokens": 1630,
+  "judge_completion_tokens": 554
+}

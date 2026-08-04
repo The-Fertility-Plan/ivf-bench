@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0352",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a very early/poor-quality blastocyst or compacting embryo with minimal blastocoel, indistinct ICM and TE, granular/dense appearance, and intact zona. Minor issue: uses '0DD' with 'early blastocyst' terminology somewhat inconsistently and adds 'dead cells' language not directly inferable from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, PCOS, AMH, BMI, endometrium, and partner age/sperm data with embryo prognosis well. Slight overemphasis on paternal age/DNA fragmentation despite limited direct evidence from the provided semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: severely poor morphology drives very low implantation potential, with age-related aneuploidy as an added factor. Minor weakness is some overstatement that DD implies virtually no viability and attributing developmental failure specifically to sperm DNA damage without supporting testing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles regarding poor prognosis of a DD-quality embryo and counseling. However, recommending routine PGT-A and ICSI based mainly on age/one poor embryo is stronger than guideline-based evidence supports, and 'discard' language is somewhat blunt."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling points for the current transfer and concrete future-cycle considerations such as sperm DNA fragmentation testing, extended culture, and optimization. Some recommendations would benefit from more nuance about individualized indications for PGT-A/ICSI."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013485,
+  "judge_latency_ms": 5880.073499996797,
+  "judge_prompt_tokens": 2605,
+  "judge_completion_tokens": 378
+}

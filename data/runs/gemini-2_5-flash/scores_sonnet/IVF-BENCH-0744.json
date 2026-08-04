@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description consistent with the Gardner score data provided, covering ICM compactness, TE appearance, blastocoel expansion, and zona pellucida thinning. However, the model acknowledges limitations in what it can actually see in the image (e.g., 'the image itself doesn't clearly show the looseness,' 'doesn't provide a clear view of the zona pellucida's thickness'), suggesting it is largely relying on the provided Gardner score rather than independent image analysis. This limits the morphological accuracy score as it's not a fully independent visual assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, including maternal age (39) as the dominant risk factor for aneuploidy, BMI, FSH, endometrial thickness, previous failed cycle, sperm parameters, and lifestyle factors. It correctly identifies the interplay between morphological quality and age-related aneuploidy risk. Minor gap: AMH being unavailable is noted but not deeply explored in terms of its implications for ovarian reserve assessment. The male factor diagnosis is appropriately contextualized with the good sperm parameters provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and internally consistent. The probability estimate of 30-40% follows coherently from the identified risk factors, particularly maternal age and aneuploidy risk, balanced against favorable morphology and endometrial thickness. The model correctly reasons that age-related aneuploidy is the dominant limiting factor. The reference to euploidy rates of 30-40% at age 38-40 is used appropriately to anchor the probability estimate. Minor issue: the previous failed cycle's impact on probability could be more explicitly quantified in the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate and guideline-concordant, PGT-A recommendation for a 39-year-old with prior failure aligns with current evidence, luteal phase support is standard, hysteroscopy for recurrent implantation failure workup is guideline-supported, and the discussion of donor oocytes as a future option is appropriate. The mention of adjunctive therapies (intralipids, G-CSF) is appropriately caveated with limited evidence. No major deviations from established guidelines detected."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering immediate transfer considerations (SET, luteal support, thawing protocol) and future cycle planning (PGT-A, batching strategy, hysteroscopy, AMH testing, protocol review, donor oocyte discussion). The PGT-A recommendation includes both benefits and considerations (cost, biopsy risk, potential for no transferable embryos), showing nuance. The batching strategy suggestion is particularly practical for this age group. Could be slightly more specific regarding timing of hysteroscopy or specific progesterone protocols, but overall highly actionable."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.021939,
+  "judge_latency_ms": 14834.208000000217,
+  "judge_prompt_tokens": 3658,
+  "judge_completion_tokens": 731
+}

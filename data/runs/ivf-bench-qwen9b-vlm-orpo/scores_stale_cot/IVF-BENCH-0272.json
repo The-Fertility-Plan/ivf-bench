@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0272",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a blastocyst with suboptimal ICM/TE and thinned zona, but overcalls the image as 'good-quality' and introduces some uncertainty/confusion about expansion stage versus the provided Gardner description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, semen parameters, BMI, diagnosis, endometrium, and prior cycle history well, with appropriate emphasis on young age and moderate embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is mostly sound, but there are internal inconsistencies about grading terminology/stage and the implantation estimate appears somewhat optimistic for a 3BC embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines, including single embryo transfer in a young patient and avoiding unproven add-ons, though some morphology interpretation is imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, lifestyle optimization, and future-cycle review, though some suggestions remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.017649,
+  "judge_latency_ms": 5062.320082914084,
+  "judge_prompt_tokens": 4483,
+  "judge_completion_tokens": 280
+}

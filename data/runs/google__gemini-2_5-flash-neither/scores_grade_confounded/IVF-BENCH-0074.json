@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is not available and fails to analyze the provided 3AA morphology, omitting expansion, ICM, TE, and zona features entirely."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, male factor, endometrium, and lifestyle, though it misses linking the provided 3AA grade to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is weakened by the major contradiction of claiming morphology is unavailable despite the provided 3AA grade, which affects the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a good-prognosis 30-year-old, luteal support, and cryopreservation are broadly guideline-consistent, though the discussion of PGT-A and exercise/alcohol advice is somewhat generic."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, cryopreservation, and counseling, but lacks embryo-specific nuance because it ignored the known 3AA grade."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013533,
+  "judge_latency_ms": 3677.9557500049123,
+  "judge_prompt_tokens": 3016,
+  "judge_completion_tokens": 299
+}

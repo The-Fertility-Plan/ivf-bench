@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "gpt-5.4-2026-03-05-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the reported 2BB grade. It correctly noted that 'full blastocyst, blastocoel fills the embryo' is more consistent with expansion 3 than 2. It did not fabricate image-specific findings, though it missed that the provided image appears more like an early/full blastocyst with somewhat sparse TE and indistinct ICM."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated age, BMI, AMH/FSH, ovarian response, prior live birth, prior failed cycle, sperm parameters, endometrial thickness, smoking, and the questionable DOR label into the prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent overall, with probability estimates tied to embryo grade, age, and smoking. Minor uncertainty arises from discussing a day-4 blastocyst and possible 2BB vs 3BB inconsistency, but the model explicitly acknowledged these limitations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: transfer is reasonable, single embryo transfer is appropriate in a 29-year-old, smoking cessation is emphasized, and routine PGT-A/add-ons are not overused. Minor limitation is that implantation/live birth percentages are somewhat generalized rather than tightly benchmarked to validated clinic-specific outcomes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response gives clear practical next steps for the current transfer and future planning, including SET preference, smoking/alcohol advice, prenatal supplementation, record clarification, lab review, and when to consider further uterine evaluation or avoid unnecessary add-ons."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.016251,
+  "judge_latency_ms": 5445.799916007672,
+  "judge_prompt_tokens": 3317,
+  "judge_completion_tokens": 420
+}

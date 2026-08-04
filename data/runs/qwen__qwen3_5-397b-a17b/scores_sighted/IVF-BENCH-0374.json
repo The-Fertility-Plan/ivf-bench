@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0374",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misdescribes key visible features: it calls the embryo a high-quality/full blastocyst with thinning zona and clear dense ICM/continuous TE, but the image appears poorly expanded/collapsed and does not clearly show a classic tightly packed ICM or uniformly cohesive TE. It also incorrectly equates 2AA with top-tier quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major factors well, including maternal age, ovarian reserve, tubal factor, prior IVF outcomes, sperm parameters, BMI, and endometrial thickness, and relates these to prognosis. Minor overinterpretation is present, such as implying recurrent implantation failure and attributing biochemical pregnancy primarily to aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the probability estimate is tied to age-related aneuploidy and prior failures, but there are notable inconsistencies: it labels 2AA as the highest grade/top-tier, misstates blastocyst staging, and makes unsupported inferences from the image and prior biochemical pregnancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, especially emphasizing age-related aneuploidy and considering PGT-A in an older patient. However, calling PGT-A 'critical,' suggesting ERA relatively early, and proposing testicular sperm for DNA fragmentation are stronger than guideline-supported recommendations, and the Gardner grading interpretation is inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, luteal support, consideration of PGT-A, sperm DNA fragmentation testing, and lifestyle optimization. It is useful clinically, though some recommendations are not sufficiently nuanced or evidence-ranked."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014694,
+  "judge_latency_ms": 6367.019333993085,
+  "judge_prompt_tokens": 2658,
+  "judge_completion_tokens": 448
+}

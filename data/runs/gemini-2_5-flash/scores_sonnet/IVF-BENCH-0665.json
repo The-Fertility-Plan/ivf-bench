@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3BA score (expanded blastocyst, thinning zona, visible ICM and TE), but acknowledges limitations in image resolution rather than providing independent morphological observations. The description largely echoes the provided Gardner score data rather than demonstrating independent image analysis. Some attempt is made to locate the ICM ('on the left side'), but overall the morphological analysis is heavily dependent on the provided score rather than direct image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, BMI, AMH/FSH, previous cycle outcomes, endometrial thickness, sperm parameters, and lifestyle factors. It correctly identifies the previous live birth as a strong positive indicator and contextualizes the male factor diagnosis appropriately. The interaction between BMI and implantation risk is noted. Minor gap: doesn't deeply explore the interaction between the low oocyte yield (4 MII from 8 COCs, 50% maturation rate) and overall cycle prognosis or what it means for future cycles."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with conclusions following from the evidence. The probability estimate of 60-75% is reasonably justified by the cited factors. The response correctly weighs the previous live birth heavily and appropriately notes that PGT-A status would affect the upper bound. Minor inconsistency: the response mentions 'obese category' for BMI 31.8, which is technically overweight (25-29.9 is overweight, 30+ is obese), so this classification is borderline but not a major error. The overall reasoning chain is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation for a 31-year-old with good quality blastocyst is appropriate, luteal phase support is mentioned, PGT-A is suggested as optional rather than mandatory, and ERA/hysteroscopy is reserved for repeated implantation failure. The Gardner grading interpretation is accurate. The response appropriately avoids recommending double embryo transfer. Minor gap: could have mentioned freeze-all strategy considerations or endometrial receptivity optimization more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering the current transfer (SET, luteal support, monitoring) and future planning (PGT-A consideration, BMI management, uterine assessment if failures occur, embryo cryopreservation). The tiered approach to future planning based on outcomes is clinically useful. Could be more specific about luteal phase support protocols, specific BMI targets, or timing considerations. The recommendation to review the previous 'no pregnancy' cycle is practical. Overall provides clear next steps for a clinician."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020193,
+  "judge_latency_ms": 14157.31008300645,
+  "judge_prompt_tokens": 3241,
+  "judge_completion_tokens": 698
+}

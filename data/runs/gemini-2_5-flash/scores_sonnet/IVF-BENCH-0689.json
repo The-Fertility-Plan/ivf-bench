@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0689",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model accurately describes the 4AA Gardner score components (expansion grade 4, ICM grade A, TE grade A) and provides reasonable descriptions of blastocyst features. However, the morphological analysis is largely derived from the provided Gardner score rather than independent image analysis, with hedging language ('appears to be,' 'we can infer') suggesting limited direct image interpretation. The description of ICM location as 'top-center' and TE as 'outer ring' is generic rather than specific to the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all relevant clinical factors: age-related aneuploidy risk, BMI impact on endometrial receptivity and oocyte quality, tubal factor diagnosis and its IVF implications, previous cycle outcomes (miscarriage suggesting implantation capacity but failed maintenance), sperm parameters, endometrial thickness, and lifestyle factors. The interactions between these factors and embryo quality are clearly articulated, including how each modulates the baseline implantation probability."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical, with the probability estimate (35-50%) following coherently from the identified risk factors applied to the baseline 4AA potential. The stepwise adjustment approach (baseline 60-75%, reduced for age, further reduced for BMI) is transparent and consistent. Minor issue: the model could better quantify the cumulative aneuploidy risk at age 39 more precisely, and the interaction between BMI and endometrial thickness (which is good at 10.5mm) could be more nuanced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, PGT-A suggestion for age 39 with recurrent failure, thrombophilia screening after miscarriage, ERA consideration for recurrent implantation failure, and hysteroscopy for uterine evaluation. Luteal phase support mention is appropriate. The PGT-A recommendation is appropriately positioned as future planning rather than mandatory for current transfer, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, covering immediate transfer decisions (SET, luteal support, optional ERA), investigation (thrombophilia screening, hysteroscopy), and future planning (PGT-A, weight management, immunological workup). The prioritization of PGT-A as 'most critical' for future cycles is clinically sound. Some recommendations could be more specific (e.g., specific thrombophilia panel components, specific weight loss targets, specific ERA timing protocol), but overall the guidance is actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021309,
+  "judge_latency_ms": 13363.089041005878,
+  "judge_prompt_tokens": 3753,
+  "judge_completion_tokens": 670
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is unavailable and fails to use the provided 3AB morphology data, instead reasoning from hypothetical embryo grades."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm parameters, endometrium, and prior IVF history, though this is weakened by not tying them to the actual provided 3AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is built on a false premise that morphology is missing, leading to probability estimates based on assumed better-grade embryos rather than the actual 3AB."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but strong emphasis on PGT-A and ERA after only one failed cycle is more aggressive than standard evidence-based guidance, especially in a 33-year-old with tubal factor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps, but many are misdirected because it asks for morphology that was already provided and overemphasizes additional testing not clearly indicated in this case."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014544,
+  "judge_latency_ms": 3975.895292001951,
+  "judge_prompt_tokens": 3203,
+  "judge_completion_tokens": 329
+}

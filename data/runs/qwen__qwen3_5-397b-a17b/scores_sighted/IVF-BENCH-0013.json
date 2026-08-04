@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality early blastocyst/compacting embryo with absent-poor ICM/TE, but overstates non-viability and adds features like granular cytoplasm/disorganization not clearly assessable from the image; also notes the score-text discrepancy appropriately."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates young age, BMI, ovarian response, sperm parameters, endometrium, and DOR diagnosis with embryo quality reasonably well, though some inferences (e.g., hidden male factor/cytoplasmic maturity) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, with the low implantation estimate matching the poor morphology; minor issues include equating DD with near-certain non-viability and some speculative causal explanations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading concepts and standard counseling for poor-quality embryos, but calling the embryo non-viable/unsuitable for transfer is stronger than guideline-based morphology alone supports, and some recommendations (routine DNA fragmentation testing, protocol changes, supplements) are not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and practical future-cycle considerations, including reassessing reserve and considering extended culture, though several suggestions are somewhat generic or speculative rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.012852,
+  "judge_latency_ms": 4986.172750010155,
+  "judge_prompt_tokens": 2599,
+  "judge_completion_tokens": 337
+}

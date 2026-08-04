@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided assigning a specific Gardner grade or describing visible structures. It did not fabricate morphology, though it also did not analyze the actual embryo image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, FSH, diagnosis, sperm parameters, endometrial thickness, and cycle context into prognosis well, though some links to embryo competence were somewhat inferential and AMH was unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with a plausible prognosis estimate based on age and transfer stage. Minor issues include overinterpreting 100% MII rate and making quantitative adjustments without strong explicit support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and standard luteal support are guideline-concordant, but statements like 'mandatory' eSET, ERA after two failed transfers, and suggesting PGT-A after one failed transfer in a 28-year-old unexplained case are somewhat stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and contingency planning, including eSET, luteal support, and future investigations, though some recommendations are broader than necessary for this favorable first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013695,
+  "judge_latency_ms": 5085.881167004118,
+  "judge_prompt_tokens": 2820,
+  "judge_completion_tokens": 349
+}

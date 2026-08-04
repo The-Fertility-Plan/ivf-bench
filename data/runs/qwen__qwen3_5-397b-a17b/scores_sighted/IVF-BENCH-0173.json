@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0173",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a very poor-quality day-4 morula/early blastocyst with absent/degenerate ICM and TE and overall degenerative appearance. Minor issue: it references Gardner '1 equivalent' despite the provided score being 0DD and adds subtle features like dark/granular cytoplasm and extrusion that are somewhat interpretive."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, AMH, prior miscarriage, paternal age, semen parameters, and endometrium well with embryo prognosis. Slight overreach in attributing poor morphology directly to obesity/aneuploidy and in framing PCOS vs DOR discrepancy without more context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the poor prognosis estimate follows from the embryo grade and patient factors. Minor inconsistency in calling it morula-to-early-blastocyst while also invoking Gardner 1/0 terminology, but conclusions remain coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis counseling and consideration of age-related aneuploidy, but recommending PGT-A as strongly indicated and suggesting many clinics would not transfer may be stronger than guideline-based evidence supports; some statements are more opinionated than standardized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer counseling and future planning, including weight optimization, sperm DNA fragmentation testing, and protocol review. Could be more nuanced about whether to culture further vs transfer and about individualized use of PGT-A."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013995,
+  "judge_latency_ms": 6169.422416001908,
+  "judge_prompt_tokens": 2780,
+  "judge_completion_tokens": 377
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0413",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality, minimally expanded embryo with absent/degenerative ICM and TE consistent with 0DD, but it overstates certainty by calling it a morula and adds features like granular cytoplasm/dark degeneration that are not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, severe low AMH, prior failed/biochemical cycles, tubal factor, endometrial thickness, and sperm motility with embryo prognosis well. However, it leans too strongly toward aneuploidy as the primary explanation despite the patient's young age and limited direct evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor morphology plus repeated failures and low ovarian reserve support a very low prognosis. Minor issues include some overconfident causal claims (aneuploidy, non-viability) and tension between young age and donor egg counseling urgency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned, but several recommendations are less guideline-grounded or overstated: calling the embryo clinically non-viable, saying most clinics would not transfer it, strongly prioritizing PGT-A despite very low embryo numbers, and suggesting ERA despite limited evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, transfer expectations, freezing suitability, protocol reconsideration, and possible sperm DNA fragmentation testing. Still, some recommendations are too categorical and would benefit from more nuanced shared decision-making framing."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 5553.953541995725,
+  "judge_prompt_tokens": 2644,
+  "judge_completion_tokens": 382
+}

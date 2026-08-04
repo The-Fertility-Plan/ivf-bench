@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0148",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and thinning zona, but it overstates certainty from this single image: calls it clearly hatching/herniating and confidently assigns A-grade ICM/TE features that are not fully discernible here; also labels stage 4 as hatching despite Gardner 4 being expanded and 5 being hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, BMI, prior failed cycle, male-factor context, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH/FSH implications and some nuances around male factor are only briefly addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, linking embryo quality and patient age to prognosis while acknowledging prior failure and BMI. Minor issues include overstating the significance of hatching status and a somewhat optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general transfer considerations, but there are deviations: misclassification of Gardner stage 4 vs hatching, overemphasis on hatching as a prognostic marker, and recommending PGT-A after a single failed cycle in a 32-year-old is not standard guideline-driven practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, and evaluation if another failure occurs. Some suggestions are somewhat generic or premature, but overall clinically usable."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013953,
+  "judge_latency_ms": 6181.525624997448,
+  "judge_prompt_tokens": 2716,
+  "judge_completion_tokens": 387
+}

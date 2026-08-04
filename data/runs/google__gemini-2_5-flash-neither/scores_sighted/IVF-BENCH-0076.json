@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0076",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined morphology assessment because no image was available to it and did not fabricate embryo features. However, it provided no actual image-based morphological analysis despite the embryo appearing assessable on review."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, endometrium, sperm data, and first-cycle status, and links them to prognosis, though some links to embryo-specific quality are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with clear acknowledgment that prognosis is limited by missing morphology. Probability estimates are framed conditionally, though some assumptions (e.g., stress effects, euploid/live birth comparisons) are broader than the evidence provided."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including eSET consideration, luteal support, embryo freezing, and cautious use of PGT-A. Minor deviations include suggesting ERA relatively early and somewhat overstating stress/alcohol effects on implantation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including embryo selection priorities, lifestyle modification, and contingency planning. Some recommendations are generic rather than tightly tailored to this exact embryo/cycle."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015438,
+  "judge_latency_ms": 5329.858291996061,
+  "judge_prompt_tokens": 3526,
+  "judge_completion_tokens": 324
+}

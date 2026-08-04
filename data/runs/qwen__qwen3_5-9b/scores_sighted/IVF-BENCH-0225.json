@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0225",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, correctly identifies ICM and TE in general terms, but overstates visible expansion/hatching and zona thinning from this image alone; morphology description relies partly on the given grade rather than strictly image-visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including young age, ovarian reserve, endometriosis, prior ectopic, sperm parameters, and lining, and relates them to prognosis; however, some claims such as implying excellent sperm DNA integrity from basic semen parameters are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with probability estimate tied to embryo quality and patient factors; minor issues include calling 3AA the highest grade and some overconfident statements about euploidy likelihood and AMH implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice in recommending transfer and early ectopic surveillance, but there are deviations: 3AA is not the highest possible grade, routine PGT-A for reassurance in a 26-year-old is not guideline-driven, and laparoscopy after a single failed transfer is more aggressive than typical evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, serial beta-hCG, early ultrasound, and future-cycle considerations; recommendations are useful, though some are broader than necessary and not fully individualized regarding fresh vs FET decision-making."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013626,
+  "judge_latency_ms": 5248.341790997074,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 391
+}

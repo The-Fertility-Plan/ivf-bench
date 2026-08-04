@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls morphology versus the provided lab grade, estimating 4AA/4AB despite the known 3AB score, and describes TE as numerous/cohesive rather than the documented looser B-grade pattern. It gives a generally plausible blastocyst description but includes likely fabricated precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, uterine factor, prior failed cycles, sperm parameters, endometrium, and lifestyle reasonably well, though some links are somewhat generic and not tightly tailored to the specific uterine diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical and structured, with probability estimates tied to embryo quality, age, and prior failures. Minor issues include reliance on unprovided PGT-A status and some speculative discussion, but no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but recommending ERA and immunologic workup after failed cycles is more controversial and not routinely guideline-supported, and suggesting possible dual transfer is not ideal given current preference for single blastocyst transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response offers practical next steps such as reviewing uterine factor, confirming PGT-A status, ensuring luteal support, and planning further evaluation if unsuccessful. Some recommendations are useful but a few are overly broad or controversial."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.016701,
+  "judge_latency_ms": 4462.139499999466,
+  "judge_prompt_tokens": 3702,
+  "judge_completion_tokens": 373
+}

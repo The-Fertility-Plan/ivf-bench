@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA features (thinned zona, expanded blastocoel, dense ICM, cohesive TE) but largely echoes the provided laboratory data rather than independently analyzing the image. The image actually shows a somewhat irregular, possibly degenerating or hatching blastocyst with an ICM that appears disorganized and fragmented rather than tightly packed, and the TE appears irregular. The description does not critically engage with what is visually apparent in the image, which shows concerning morphological features inconsistent with a pristine 3AA grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: young age, AMH, FSH, 100% maturation rate, endometrial thickness, sperm parameters, BMI, and smoking are all discussed in relation to embryo quality and prognosis. The interaction between smoking and endometrial receptivity is noted. Minor gap: the male factor diagnosis context (why ICSI may have been used) is not explicitly addressed, and the relatively low oocyte yield (5 COCs) in context of high AMH is not explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the stated factors, with smoking appropriately identified as a downward modifier. The response correctly notes that without smoking the range would be higher. Minor inconsistency: the response states 3AA typically yields 55-65% implantation but then estimates 60-75%, slightly shifting upward without fully explaining the jump. Overall the chain of reasoning is clear and conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET is recommended for young patients with good-quality blastocysts, smoking cessation counseling is emphasized, progesterone support is mentioned, and PGT-A is appropriately contextualized as less critical at this age. Cryopreservation recommendation is appropriate. The response correctly applies Gardner grading criteria. Minor gap: no mention of luteal phase support specifics or endometrial receptivity assessment tools (ERA) which could be relevant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, smoking cessation is prioritized with acknowledgment of its impact, endometrial support is mentioned, and future cycle planning includes PGT-A consideration, weight management, and cryopreservation. Could be more actionable by specifying smoking cessation timeline before future cycles, referral pathways, or specific progesterone protocols. Overall provides clear, clinically useful next steps."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0213,
+  "judge_latency_ms": 16772.927291996893,
+  "judge_prompt_tokens": 3760,
+  "judge_completion_tokens": 668
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0183",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 1DD label in describing absent/degenerative ICM and TE and poor expansion, but it over-interprets image details (e.g., uneven zona thinning, collapse/handling artifact, possible day-3 appearance) that are not clearly verifiable from the prompt."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, endometrium, semen parameters, BMI, and prior miscarriage with embryo quality and prognosis; could be stronger by tying Day-4 transfer timing more explicitly to outcome expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent: poor morphology plus age 38 leads to low implantation and higher miscarriage risk. Minor issues include some hedging about stage classification and broad uncertainty ranges."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Largely aligned with Gardner grading concepts and standard IVF counseling: poor-quality blastocyst, single transfer, hydrosalpinx/cavity evaluation, selective PGT-A discussion. Slight deviations include speculative comments about transfer timing and some overstatement of prognosis precision."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycles, including cavity assessment, luteal optimization, hydrosalpinx exclusion, lifestyle changes, and PGT-A discussion. Recommendations are useful though some are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.08,
+  "judge_cost_usd": 0.018138,
+  "judge_latency_ms": 6458.180041052401,
+  "judge_prompt_tokens": 4211,
+  "judge_completion_tokens": 367
+}

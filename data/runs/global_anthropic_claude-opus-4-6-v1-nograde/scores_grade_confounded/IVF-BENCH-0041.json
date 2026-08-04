@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a 4BB expanded blastocyst despite the provided laboratory grade being 0DD early blastocyst with absent/degenerative ICM and TE. It fabricates favorable features such as full expansion, thinned zona, and identifiable B-grade ICM/TE that directly contradict the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, male factor diagnosis, prior cycle, sperm parameters, and endometrium, and relates them to prognosis. However, the integration is undermined by using an incorrect embryo quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but the core reasoning is built on an incorrect morphological premise. Probability estimates and recommendations follow from a presumed 4BB embryo rather than the actual 0DD embryo, creating a major internal validity problem."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard, but key elements are not well aligned with evidence-based practice for this specific case: the embryo grading contradicts Gardner criteria, ERA is suggested too early, routine addition of estradiol/acupuncture is not guideline-driven, and PGT-A is presented too favorably for a 28-year-old without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer technique, luteal support review, trigger optimization, and future evaluation. Still, actionability is limited because these recommendations are based on an inaccurately optimistic embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014061,
+  "judge_latency_ms": 4335.519416999887,
+  "judge_prompt_tokens": 2682,
+  "judge_completion_tokens": 401
+}

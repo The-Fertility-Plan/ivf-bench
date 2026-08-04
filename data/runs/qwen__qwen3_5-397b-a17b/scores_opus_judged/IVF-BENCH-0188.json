@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0188",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model provides a detailed and largely accurate morphological description consistent with a 3AA Gardner score: expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive TE. It appropriately validates the Gardner score against visual features. Minor limitation is that the ICM localization ('upper-left quadrant') is speculative and the description, while good, doesn't note any subtle features like minor fragmentation or vacuolization that might be present. The important observation about Day 4 timing being unusual for a 3AA blastocyst is a valuable morphological-temporal insight."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The model connects the high AMH to possible PCOS phenotype and its implications for oocyte quality and endometrial receptivity. It appropriately identifies the recurrent implantation failure (RIF) pattern from 5 previous cycles, notes the low BMI as a potential concern, integrates sperm parameters, and correctly flags the MII > COC data discrepancy. The interplay between excellent embryo morphology and poor reproductive history is well articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and well-structured. The probability estimate of 40-50% logically follows from starting with a baseline of 60-70% for a 3AA in a 33-year-old and adjusting downward for RIF history. The model clearly explains why each factor pushes the estimate up or down. The identification of the Day 4 transfer discrepancy and the MII/COC discrepancy shows careful analytical thinking. No contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines. PGT-A recommendation for RIF is appropriate, ERA testing is evidence-based for displaced implantation windows, hysteroscopy and chronic endometritis screening are standard workup for RIF. The suggestion of low-dose aspirin/heparin is appropriately caveated. One minor concern: the model could have been more cautious about recommending immunological screening, as this remains controversial in guidelines. The probability estimate is reasonable and within published ranges."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations organized clearly into 'this transfer' and 'future planning' categories. Specific tests are named (ERA, CD138 staining, HOMA-IR, hysteroscopy, PGT-A), specific conditions to screen for are identified (chronic endometritis, antiphospholipid syndrome, insulin resistance), and specific interventions are suggested (Metformin, progesterone support, aspirin/heparin). The recommendations are appropriately nuanced with caveats and conditional language where evidence is less certain."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.030985,
+  "judge_latency_ms": 15414.654957945459,
+  "judge_prompt_tokens": 2727,
+  "judge_completion_tokens": 694
+}

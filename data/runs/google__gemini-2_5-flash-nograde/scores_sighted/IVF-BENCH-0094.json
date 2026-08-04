@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0094",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality from a low-detail image, describing a reasonable ICM, numerous cohesive TE, and a fully expanded blastocoel consistent with 3BB/4BB, whereas the image appears more consistent with a poorly expanded/collapsed blastocyst with indistinct ICM and sparse/poorly defined TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, prior IVF outcomes, sperm quality, and endometrial thickness well, though it somewhat overweights morphology given the uncertain image quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, especially around age-driven aneuploidy risk and prognosis, though the implantation estimate is based on an optimistic morphology assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling, luteal support, consideration of PGT-A), but ERA and immunologic adjuncts are weakly supported and should not be emphasized routinely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including counseling, SET, luteal support, uterine cavity evaluation, and discussion of PGT-A/donor oocytes, though some suggestions are more speculative than guideline-driven."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015087,
+  "judge_latency_ms": 4608.475834000274,
+  "judge_prompt_tokens": 3269,
+  "judge_completion_tokens": 352
+}

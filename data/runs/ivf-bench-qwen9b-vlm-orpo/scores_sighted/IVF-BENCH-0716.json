@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets the image, describing a visible ICM in the upper-left quadrant and fairly continuous TE, which are not clearly discernible in this low-quality static image. It also incorrectly states that stage 3 is a fully hatched/expanded blastocyst; in Gardner grading, 3 is a full blastocyst, not expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, ovarian reserve, tubal factor, sperm parameters, endometrial thickness, BMI, smoking, and prior IVF history, and relates them appropriately to prognosis. Minor limitation is somewhat generic discussion without deeper interaction between morphology uncertainty and clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis estimate based on age, embryo quality, and diagnosis. Minor issues include the grading-stage confusion and some tension between calling the embryo 3AA while visually downgrading it."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: proceed with SET, optimize luteal support, avoid unnecessary add-ons, assess hydrosalpinx, and review uterine cavity if failure recurs. Small deviations include inaccurate Gardner stage wording and slightly overconfident morphology interpretation from a single image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, smoking cessation, prenatal vitamins, hydrosalpinx clarification, and uterine cavity review. It is useful clinically, though future-cycle planning is somewhat incomplete/truncated."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015276,
+  "judge_latency_ms": 5468.481499992777,
+  "judge_prompt_tokens": 3052,
+  "judge_completion_tokens": 408
+}

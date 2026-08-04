@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (3AA) and instead stated morphology could not be assessed, omitting accurate expansion, ICM, and TE features available from the data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, prior live births, male factor, endometrium, and lifestyle risks, though it misses linking the known 3AA embryo quality explicitly to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is weakened by treating morphology as unknown despite the provided 3AA grade and by giving a broad probability range based on that mistaken premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are evidence-based (smoking cessation, luteal support, uterine review when indicated), but suggestions such as routine PGT-A at age 31, ERA, immunologic workup, endometrial scratch, and aspirin/heparin without clear indication are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response offers clear practical steps for current transfer and future planning, especially around lifestyle modification and review of miscarriage history, though some recommendations are overly broad or not well-indicated."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013719,
+  "judge_latency_ms": 3963.034874999721,
+  "judge_prompt_tokens": 2888,
+  "judge_completion_tokens": 337
+}

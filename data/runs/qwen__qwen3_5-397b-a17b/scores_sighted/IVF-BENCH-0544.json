@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0544",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 4AA label, but the image itself does not clearly show a classic fully expanded/hatching blastocyst with a large blastocoel, and the claimed precise ICM location and uniformly cohesive TE are somewhat overcalled from this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian response, endometrial thickness, prior failed cycles, and semen data well with embryo quality, though it overstates ovarian reserve without AMH and assumes prior failures imply a stronger implantation issue than the data prove."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate that broadly follows from favorable age/morphology tempered by prior failures; minor issues include labeling two failed IVF cycles as recurrent implantation failure and some speculative male-factor explanations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are mostly reasonable (eSET, consider uterine evaluation after repeated failure), but ERA, immune-factor framing, and empiric low-dose aspirin are not strongly guideline-supported, and calling two failed cycles RIF is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for transfer and contingency planning, including eSET and possible further workup, though some recommendations are broader/speculative rather than tightly prioritized by evidence."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013086,
+  "judge_latency_ms": 4973.092625004938,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 354
+}

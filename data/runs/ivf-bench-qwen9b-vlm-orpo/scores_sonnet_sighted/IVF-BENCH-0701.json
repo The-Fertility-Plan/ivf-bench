@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0701",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting expanded blastocyst, compact ICM, and TE layer, consistent with the 3AA grade. However, the description is somewhat generic and hedged with many caveats. The image actually shows a somewhat irregular, loosely organized blastocyst with cells that appear less cohesive than a true AA grade would suggest, and the model largely defers to the lab-reported grade rather than critically analyzing what is visible. Some observations about granularity and partial collapse are noted but not deeply analyzed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: female age 31, FSH 7.2, missing AMH, BMI 26.7, male factor diagnosis with specific semen parameters (40.6M/mL, 39.5% motile), endometrial thickness 9.5mm, lifestyle factors, and cycle response (7 COCs, 6 MII). It explicitly connects each factor to prognosis and discusses how they interact with embryo quality, including nuanced discussion of male factor implications for sperm DNA integrity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 45-55% follows logically from the favorable factors presented. The response appropriately distinguishes implantation from clinical pregnancy from live birth rates. Minor issue: the response simultaneously praises the AA morphology strongly while noting morphology cannot confirm ploidy, which is handled well but creates slight tension. The differentiation table between implantation, clinical pregnancy, and live birth rates is coherent and well-reasoned."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommending eSET for a 31-year-old with good-quality blastocyst, appropriate luteal support discussion, not recommending routine PGT-A for first cycle at age 31, suggesting hysteroscopy only after repeated failures, and appropriate use of Gardner grading criteria. The recommendation against routine add-ons without evidence aligns with ESHRE guidelines. Minor gap: could have referenced specific ESHRE blastocyst grading consensus more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: eSET recommendation with clear rationale, specific luteal support options (vaginal vs IM progesterone), detailed future cycle planning with tiered escalation approach, specific investigations to consider after failure (saline sonogram, sperm DNA fragmentation), nuanced PGT-A discussion with clear indications, and a practical counseling summary. The response even offers patient-friendly and doctor-to-doctor formats, demonstrating strong clinical utility."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.022539,
+  "judge_latency_ms": 16650.219707997167,
+  "judge_prompt_tokens": 4133,
+  "judge_completion_tokens": 676
+}

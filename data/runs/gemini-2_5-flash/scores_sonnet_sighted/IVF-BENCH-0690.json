@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0690",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the ICM as compact and tightly packed, the TE as cohesive, and notes the thinned zona pellucida consistent with expansion. However, the description largely echoes the Gardner score data provided rather than offering independent morphological observations from the image itself. The blastocoel assessment is hedged ('not perfectly clear'), and no specific observations about hatching status, fragmentation, or granularity are made that would demonstrate true image-based analysis beyond the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting most clinical factors to prognosis: maternal age to aneuploidy risk, AMH/FSH to ovarian reserve adequacy, endometrial thickness to receptivity, tubal factor to non-uterine etiology, and sperm parameters to embryo quality. It also notes the significance of a first cycle. Minor gap: AMH of 1.59 ng/mL is actually on the lower end of normal for age 30 (borderline diminished ovarian reserve), which the response characterizes as simply 'normal' without nuance. This slight overstatement of reserve quality is a minor integration miss."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality through patient factors to probability estimate. The 60-75% range is reasonably supported by the cited factors. The response is internally consistent and conclusions follow from the evidence. Minor issue: the response doesn't fully reconcile that morphology-based implantation rates for 3AA in literature are typically 50-65%, making the upper bound of 75% slightly optimistic without PGT-A confirmation, though the young age justification partially supports this."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for young patients with good-quality blastocysts, luteal phase support, appropriate beta-hCG timing (9-11 days), cryopreservation of surplus embryos, and conditional PGT-A consideration. The response correctly notes PGT-A has less pronounced benefit in 30-year-olds with good morphology, consistent with current evidence. Minor gap: no mention of endometrial receptivity testing options (ERA) or specific progesterone monitoring protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal support is mentioned, beta-hCG timing is specified, cryopreservation is advised, and conditional future planning is outlined. The response provides clear next steps. It loses one point for lacking specificity on progesterone type/dosing, not addressing whether fresh vs. frozen transfer considerations were evaluated, and not specifying what 'review of protocol' would entail if failure occurs."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.021033,
+  "judge_latency_ms": 15219.792792006047,
+  "judge_prompt_tokens": 3531,
+  "judge_completion_tokens": 696
+}

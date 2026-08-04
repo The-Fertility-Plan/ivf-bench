@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a compacted morula/high-quality morula despite the provided laboratory grade being 1DD blastocyst, and it invents favorable ICM/TE potential rather than recognizing degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, prior IVF outcomes, endometrium, sperm parameters, and oocyte yield with prognosis reasonably well, though some links are speculative and not tightly anchored to the poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weakened by the core morphological misread, leading to an implantation estimate and recommendations based on a presumed good-quality morula rather than a very poor-quality 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is partial alignment on general IVF considerations, but key deviations include disregarding the Gardner 1DD grade, overcalling embryo quality, and making stronger-than-supported claims about stress effects and PGT-A recommendation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, protocol reconsideration, nutrition/stress review, and possible sperm DNA fragmentation testing, although these are somewhat compromised by the incorrect embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012606,
+  "judge_latency_ms": 3810.1565840042895,
+  "judge_prompt_tokens": 2512,
+  "judge_completion_tokens": 338
+}

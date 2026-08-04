@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0508",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed and largely accurate morphological description consistent with a 3AA blastocyst. It correctly identifies the expanded blastocoel, thinning zona pellucida, tightly packed ICM, and cohesive TE. The specific positional description of the ICM (10-11 o'clock) and observations about absence of multinucleation/vacuolization add good detail. Minor concern is that some descriptive elements (e.g., 'darkly stained,' 'apical junctions visible') may be over-interpreted from the image, but overall the description aligns well with the Gardner 3AA grading provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response thoughtfully connects maternal age with euploidy rates, interprets the reproductive history (2 live births + losses) in context of embryo quality, addresses the apparent discordance between 'male factor' diagnosis and normal semen parameters, considers endometrial thickness in relation to implantation, and incorporates lifestyle factors (stress, sedentary, former smoking) into the prognosis. The discussion of the 50% maturity rate and its implications is also well-considered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The Bayesian calculation is a nice touch, though there's a minor inconsistency: the Bayesian calculation yields ~47% biochemical pregnancy rate, then the model adjusts upward to ~55% for clinical pregnancy, which is counterintuitive since clinical pregnancy rates are typically lower than biochemical rates. The headline estimate of 55-65% clinical pregnancy rate doesn't perfectly reconcile with the Bayesian calculation. However, the overall logic flow from morphology to patient factors to probability is coherent and well-organized."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with established guidelines. Gardner grading criteria are correctly applied. The recommendation against PGT-A at age 33 for a high-quality embryo is reasonable. Luteal phase support recommendations are standard. The suggestion of ERA after failure of a 3AA transfer is appropriate. Minor deviations include the activity restriction recommendation (limited evidence acknowledged) and the somewhat aggressive monitoring plan. The low-dose aspirin recommendation is reasonable but not universally guideline-supported for this indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, including concrete luteal support strategies, timing for β-hCG (9 days post-transfer), early ultrasound scheduling, progesterone monitoring through 10-12 weeks, and contingency planning (ERA, DNA fragmentation testing, hysteroscopy) if the cycle fails. The stress management suggestions are practical. The response was cut off at the end (hysteroscopy recommendation incomplete), which slightly reduces the score. Could have been more specific about progesterone dosing and route."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.03293,
+  "judge_latency_ms": 18881.874082959257,
+  "judge_prompt_tokens": 3051,
+  "judge_completion_tokens": 707
+}

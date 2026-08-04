@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response downgrades the embryo to 3BB/4BB despite provided lab grading of 3AA, and describes ICM/TE as grade B without clear support. Some general blastocyst features are reasonable, but there is overinterpretation and mismatch with the stated reference grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, AMH, ovarian response, maturation rate, tubal factor, endometrium, lifestyle, and paternal age with embryo prognosis in a clinically meaningful way, though not fully comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but there are issues: it questions morphology against the provided grade, raises trigger timing/oocyte competence concerns without enough context, and the response is incomplete before probability/recommendations are fully developed."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner concepts and recognition of age-related aneuploidy and endometrial adequacy are broadly aligned, but the morphology reassessment conflicts with the supplied embryology grade and the response is truncated before guideline-consistent recommendations are completed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It offers some clinically relevant considerations (maturation issue, paternal age, possible hydrosalpinx concern), but lacks clear transfer recommendations, future cycle planning, and practical next steps due to the incomplete response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010584,
+  "judge_latency_ms": 4287.903707998339,
+  "judge_prompt_tokens": 1833,
+  "judge_completion_tokens": 339
+}

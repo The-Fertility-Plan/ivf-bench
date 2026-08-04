@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0066",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it had no image and based morphology on the provided 4AA grade. Its description is broadly consistent with the lab grade, but it repeats the prompt's inaccurate interpretation of stage 4 as hatching/herniating and adds unsupported claims such as no fragmentation/dissociation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, prior live birth, endometrial thickness, sperm parameters, and smoking status well, and relates these factors to embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with probability estimates tied to age, morphology, smoking, and prior success. Minor issues include overconfidence around immediate implantation readiness and some speculative quantitative adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is consistent with standard IVF practice, but there are notable deviations: Gardner stage 4 is expanded blastocyst rather than hatching, recommending fresh transfer solely because the embryo is 'hatching' is not guideline-based, and suggesting low-dose aspirin for smoking-related uterine blood flow is weakly supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for transfer, luteal support, smoking cessation, nutrition review, and future-cycle considerations such as PGT-A and embryo banking. Some recommendations are useful but a few are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014628,
+  "judge_latency_ms": 5109.015125010046,
+  "judge_prompt_tokens": 3016,
+  "judge_completion_tokens": 372
+}

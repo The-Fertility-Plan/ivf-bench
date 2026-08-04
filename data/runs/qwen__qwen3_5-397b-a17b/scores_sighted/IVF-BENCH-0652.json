@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 2BA label, but it overstates visible certainty from the image, calls stage 2 a 'full blastocyst,' and describes ICM/TE features and a smooth cohesive outer layer more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, ovarian response, sperm parameters, lining, and diagnosis discrepancy well, and relates them to prognosis, though some inferences (e.g., likely PCOS/high responder) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but there are notable inconsistencies: it labels 2BA as top-tier/excellent, treats Day 4 blastocyst as advanced with likely asynchrony, and builds prognosis on assumptions that are not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly reasonable (SET, attention to BMI, adequate luteal support), but there are deviations from standard terminology/timing and overemphasis on Day 4 blastocyst asynchrony; PGT-A suggestion at age 29 is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support review, weight management, diagnostic clarification, and metabolic screening, though some advice rests on uncertain assumptions."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01398,
+  "judge_latency_ms": 4920.539333994384,
+  "judge_prompt_tokens": 2835,
+  "judge_completion_tokens": 365
+}

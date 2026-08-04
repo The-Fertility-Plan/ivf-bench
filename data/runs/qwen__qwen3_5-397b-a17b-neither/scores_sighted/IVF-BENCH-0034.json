@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined direct image interpretation and correctly noted that Day 4 embryos are assessed as morula/early blastocyst rather than by standard full Gardner blastocyst grading. It did not fabricate visible features, but it also did not analyze the actual image, which appears consistent with an early cavitating/early blastocyst-stage embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, ovarian response, endometrial thickness, sperm concentration/motility, and partner age into prognosis reasonably well. It links age to aneuploidy risk and male factor to possible embryo development issues, though some interactions could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to age-related aneuploidy, male factor, and Day 4 transfer context. Minor issues include somewhat broad assumptions about why Day 4 transfer was chosen and confidence around sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is largely aligned with standard IVF practice: appropriate distinction between Day 4 and Day 5/6 grading, recognition of age-related aneuploidy, and reasonable discussion of ICSI/PGT-A considerations. Slight overreach includes presenting PGT-A as strongly recommended rather than individualized and mentioning testicular sperm relatively early."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are practical and case-relevant, including luteal support, beta-hCG timing, future consideration of blastocyst culture, ICSI/SDF workup, and lifestyle optimization. Some suggestions are somewhat generic and could be more tightly prioritized for this exact cycle."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014637,
+  "judge_latency_ms": 5328.215875008027,
+  "judge_prompt_tokens": 2839,
+  "judge_completion_tokens": 408
+}

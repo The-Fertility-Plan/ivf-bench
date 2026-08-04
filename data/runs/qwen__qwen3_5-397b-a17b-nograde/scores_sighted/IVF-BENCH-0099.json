@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible quality: the image appears to show a blastocyst with a poorly defined/indistinct ICM and sparse, uneven TE, yet it describes a prominent cohesive ICM and relatively uniform TE and assigns 3BB/4BB. Stage as blastocyst is reasonable, but key morphology is too optimistic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live births, endometrium, smoking, miscarriage history, and semen data into prognosis reasonably well. Some inferences (e.g., hidden male factor/DFI, trigger timing issue) are speculative rather than directly supported."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally structured and internally consistent, and the implantation estimate is tied to age and embryo quality with adjustment for smoking. Minor issues include speculative deductions and somewhat inflated morphology-based optimism."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (single embryo transfer candidate, smoking cessation, luteal support, review lab factors), but suggesting PGT-A mainly for a 31-year-old with prior miscarriage/male factor is not strongly guideline-driven, and morphology grading is not well aligned with Gardner criteria from the image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with transfer, luteal support, smoking cessation, possible sperm DNA fragmentation testing, and review of trigger timing. Recommendations are useful, though some are not highly specific to this exact embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013311,
+  "judge_latency_ms": 5074.845875002211,
+  "judge_prompt_tokens": 2557,
+  "judge_completion_tokens": 376
+}

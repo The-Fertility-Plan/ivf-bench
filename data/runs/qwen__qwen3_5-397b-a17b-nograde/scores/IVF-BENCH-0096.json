@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst-stage assessment and reasonable ICM/TE commentary, but some details appear overinterpreted from a single image (e.g., vacuoles/spaces, granular/ragged features), so accuracy is only moderate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, prior failed cycles, sperm parameters, and endometrium with embryo quality and prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, and the low implantation estimate follows from age plus suboptimal morphology; minor issues include equating prior failed cycles with implantation difficulty and some overstatement of morphology-aneuploidy correlation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice regarding morphology, age-related aneuploidy risk, and considering PGT-A, but recommendations such as GH, melatonin, PICSI/TESE based on limited data are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives practical next steps for proceeding with transfer, luteal support, considering PGT-A, sperm DNA fragmentation testing, and lifestyle optimization; useful overall, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.012462,
+  "judge_latency_ms": 4561.630792006326,
+  "judge_prompt_tokens": 2419,
+  "judge_completion_tokens": 347
+}

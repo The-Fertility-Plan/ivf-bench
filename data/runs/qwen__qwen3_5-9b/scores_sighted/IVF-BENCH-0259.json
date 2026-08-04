@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0259",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AA blastocyst, correctly noting an expanded cavity, visible ICM, and thinning zona, but it overstates confidence in TE grade A from this single image and adds specific regional detail not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian response, endometrium, sperm parameters, and embryo quality reasonably well, though it overemphasizes low BMI and labels the patient a poor responder somewhat strongly from one cycle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are some inconsistencies: calling age 37 'favorable' while also emphasizing age-related decline, and linking low BMI to luteal deficiency/endometrial receptivity with more certainty than warranted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on valuing a good-quality day-5 blastocyst and considering age-related aneuploidy, but recommendations such as donor egg discussion after limited poor yield and asserting BMI-driven luteal support needs are more aggressive than guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer, luteal support consideration, nutrition counseling, and future-cycle discussion, though some suggestions are not sufficiently individualized or evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012684,
+  "judge_latency_ms": 4846.8400000128895,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 327
+}

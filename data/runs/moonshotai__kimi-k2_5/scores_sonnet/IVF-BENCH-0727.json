@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0727",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a Gardner 3AB blastocyst: expanded blastocoel with thinned zona pellucida, compact Grade A ICM described at a specific position (6-7 o'clock), and Grade B TE with loose epithelial organization. The description aligns well with the provided Gardner score criteria. Minor limitation is that the model cannot truly verify image details independently, but the description is internally consistent and clinically appropriate for the grade given."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all available clinical factors. The response systematically connects maternal age (24), ovarian response (15 MII/20 COCs), tubal factor diagnosis, endometrial thickness (12.5mm), male parameters (age 20, good sperm), BMI, and lifestyle factors to embryo quality and implantation prognosis. The table format clearly maps each factor to clinical impact, and the narrative explains how these factors interact synergistically. The previous failed cycle is contextualized appropriately within statistical probability rather than pathology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate (45-55%) follows logically from the evidence presented, with clear adjustments for age, morphology, endometrium, and previous failure. The conclusion that the prior failure is likely stochastic is well-supported. Minor issue: the response states Grade A ICM adds +5% but the baseline range already seems to incorporate this, making the arithmetic slightly unclear. The live birth rate estimate (45-55%) being nearly identical to implantation rate slightly underestimates early pregnancy loss considerations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines: eSET recommendation for young patient with good-quality blastocyst, appropriate luteal support mention, no PGS recommendation at age 24 with low aneuploidy risk, and staged diagnostic workup only after repeated failures. The Gardner grading interpretation is accurate. Minor deviation: the response doesn't explicitly mention ESHRE's specific eSET guidelines or address whether fresh vs. frozen transfer considerations (endometrial receptivity in stimulated cycles) were evaluated, which is increasingly relevant in clinical practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations: proceed with eSET, no PGS, standard luteal support, maintain exercise with post-transfer modification, no additional uterine preparation. Future planning includes FET strategy, conditional diagnostic workup after second failure, and no stimulation protocol changes. The prognostic counseling script is a practical addition. Slight limitation: lacks specificity on luteal support protocol details (dosing, duration), doesn't address timing of embryo transfer (natural vs. programmed FET), and doesn't discuss potential hydrosalpinx management given tubal factor diagnosis, which could impact implantation."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019704,
+  "judge_latency_ms": 15621.001166000497,
+  "judge_prompt_tokens": 2993,
+  "judge_completion_tokens": 715
+}

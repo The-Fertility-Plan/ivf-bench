@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0422",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with weak ICM/TE, but it misstates expansion as clearly expanded with thinning zona and 'ready for hatching'; the provided Gardner 1 indicates an early blastocyst, and several described features are overstated from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, endometrium, sperm, prior biochemical pregnancy, and lifestyle with embryo quality reasonably well, though it overinterprets the significance of a single poor embryo and lacks nuance about missing AMH and cycle-level embryo cohort data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low prognosis follows from the poor morphology, but there are inconsistencies between calling it grade 1 and describing it as expanded/thinning/ready to hatch, and some conclusions rely on assumptions not supported by the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of 'D' for ICM/TE is nonstandard relative to classic Gardner A-C, and recommending cryopreservation of a 1DD/poor embryo or implying transfer prioritization this way is not well aligned; PGT-A discussion is somewhat reasonable but not strongly guideline-based for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical counseling points, transfer considerations if this is the only embryo, luteal support mention, and future-cycle suggestions such as reassessing sperm DNA fragmentation, though some recommendations are based on assumptions and not all are optimally evidence-based."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013878,
+  "judge_latency_ms": 7895.457749997149,
+  "judge_prompt_tokens": 2656,
+  "judge_completion_tokens": 394
+}

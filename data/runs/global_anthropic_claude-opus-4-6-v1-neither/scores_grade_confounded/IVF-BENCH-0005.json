@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner score of 2AA and incorrectly infers a Day 4 morula/unknown morphology, creating major factual errors about expansion stage and embryo quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including age, ovarian reserve, endometriosis, prior failures, sperm, and endometrium, though the embryo-quality integration is weakened by the incorrect morphology premise."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by a central contradiction: morphology was actually provided (2AA), yet the model treats it as unknown and bases prognosis on an incorrect Day 4 morula assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent, but several recommendations are weakly supported or controversial for routine use (ERA, NK testing, steroids, aspirin, intralipids/IVIG, broad thrombophilia workup), and the response mishandles Gardner grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It offers concrete next steps for transfer support and future workup/planning, but some suggestions are not well prioritized and include interventions with limited evidence."
+    }
+  ],
+  "extracted_probability": 0.17,
+  "judge_cost_usd": 0.012213,
+  "judge_latency_ms": 4026.338708004914,
+  "judge_prompt_tokens": 2421,
+  "judge_completion_tokens": 330
+}

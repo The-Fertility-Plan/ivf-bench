@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner score rather than inventing image-specific details. However, it repeated an inaccurate interpretation of stage 2 as a 'full blastocyst' and did not assess visible image features such as the large blastocoel, somewhat sparse TE, or non-prominent ICM."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, diagnosis, ovarian reserve markers, oocyte yield, sperm parameters, endometrium, BMI, lifestyle, and first-cycle status with embryo quality to frame prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with conclusions generally supported by the clinical data. Minor issue: the implantation estimate may be somewhat optimistic for an untested day-5 2AB embryo and is partly anchored to euploid-transfer outcomes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially favoring single embryo transfer in a young good-prognosis patient and standard luteal support. Small deviations include overstating embryo quality/prognosis and suggesting PGT-A somewhat loosely for future cycles in a very young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for the current transfer and future planning, including SET, luteal support, cryopreservation, and contingency planning. Recommendations are useful, though somewhat generic rather than highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.014766,
+  "judge_latency_ms": 5119.956374997855,
+  "judge_prompt_tokens": 3037,
+  "judge_completion_tokens": 377
+}

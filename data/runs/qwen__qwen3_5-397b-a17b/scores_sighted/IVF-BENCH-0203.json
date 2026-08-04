@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0203",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response correctly identifies a poor-quality blastocyst with absent/degenerate ICM and very poor TE, and notes the blastocoel cavity and overall degenerative appearance. Minor overstatements such as calling it a 'ghost' blastocyst and emphasizing necrosis/collapse are not fully certain from the single image, and the expansion-stage discussion is somewhat muddled by the prompt-score discrepancy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor diagnosis, endometrial thickness, stimulation response, and semen parameters with embryo prognosis in a clinically meaningful way. It could be stronger by more explicitly balancing that one poor embryo does not alone prove a broader gamete or lab issue."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, but there are some overreaches: equating this morphology with effectively zero viability, inferring likely aneuploidy from a single image, and suggesting low blastocyst yield despite not being told how many embryos developed. These introduce notable but not fatal logical gaps."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of DD morphology as very poor prognosis are aligned with standard practice. However, recommending PGT-A as 'strongly recommended' after a first cycle and implying transfer should generally not occur may be stronger than guideline-based evidence supports, especially without full embryo cohort context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for current transfer counseling and future planning, including alternatives if this is the only embryo. Some recommendations are somewhat aggressive or speculative, but overall they are specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014607,
+  "judge_latency_ms": 6982.7838339988375,
+  "judge_prompt_tokens": 2739,
+  "judge_completion_tokens": 426
+}

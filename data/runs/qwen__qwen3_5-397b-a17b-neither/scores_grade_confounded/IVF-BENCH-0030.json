@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignores the provided Gardner score 2AB and instead states no specific blastocyst assessment can be performed, then discusses Day 4 morula/early blast criteria. This is inconsistent with the supplied morphology data and fails to describe the embryo's actual expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, endometrial thickness, BMI, prior cycle history, and sperm data into prognosis reasonably well, though it overemphasizes speculative male-factor issues and does not reconcile the provided 2AB grade with transfer timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The main reasoning flaw is treating the case as lacking blastocyst morphology despite explicit 2AB data, creating a contradiction between morphology discussion and the rest of the assessment. Probability estimates are otherwise structured but rest partly on this incorrect premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but the handling of Gardner grading versus Day 4 transfer is not aligned with the provided case data, and suggestions such as routine SDF testing/testicular sperm and PGT-A at age 29 are more conditional than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support, clarification of male factor, and consideration of blastocyst culture/PGT-A. Recommendations are useful, though some are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013755,
+  "judge_latency_ms": 4512.497125004302,
+  "judge_prompt_tokens": 2750,
+  "judge_completion_tokens": 367
+}

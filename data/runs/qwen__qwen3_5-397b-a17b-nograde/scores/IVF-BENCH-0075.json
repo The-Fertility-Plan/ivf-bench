@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0075",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst-stage assessment with reasonable comments on expansion, ICM, TE, and zona thinning, but the grading is somewhat uncertain/speculative (3BB vs 4BB) and includes details like exact ICM position/granularity that may not be reliably supported from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well: young age, tubal factor, strong ovarian response, sperm parameters, prior failures/miscarriages, smoking, and especially very thin endometrium. Could be more nuanced about missing AMH and limits of inferring oocyte quality from yield alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent: decent embryo quality offset by major uterine/receptivity concerns and adverse history. Minor issue: labeling this definitively as both RIF and RPL may be somewhat overstated without transfer details and full miscarriage workup context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading framework, concern about 5 mm lining, and consideration of freeze-all/endometrial evaluation. However, recommendations such as sildenafil/aspirin are weakly evidence-based, and references to immunologic causes are less guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives practical next steps including counseling, considering freeze-all if fresh, smoking cessation, hysteroscopy/endometrial biopsy, and receptivity optimization. Useful clinically, though the plan is incomplete/truncated and could better distinguish evidence-based from experimental adjuncts."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.012579,
+  "judge_latency_ms": 5432.593457997427,
+  "judge_prompt_tokens": 2293,
+  "judge_completion_tokens": 380
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0693",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocyst, tightly packed ICM, cohesive TE epithelium) but largely echoes the provided laboratory data rather than independently analyzing the image. The description mentions 'crops' which is an odd artifact suggesting template-based writing. No independent observations about zona pellucida thinning degree, blastocoel cavity size, or specific cell counts beyond what was given in the lab data are provided. The image does show a somewhat irregular/granular ICM and TE that could warrant more nuanced commentary."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age, AMH/FSH, tubal factor diagnosis, endometrial thickness, sperm parameters, and prior IVF history are all connected to the embryo quality assessment. The prior live birth is correctly identified as a strong positive predictor. Partner age at 44 is noted as a mild risk factor. The interaction between tubal factor (bypassed by IVF) and uterine receptivity is appropriately addressed. Minor gap: alcohol consumption (4-6 drinks/week, classified as moderate-heavy) is not flagged as a potential concern despite evidence linking alcohol to reduced IVF success rates."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 60-75% implantation probability estimate is well-supported by the cited factors. Conclusions are consistent throughout. Minor issue: the response notes the 'no_pregnancy' cycle as a risk factor but then somewhat dismisses it without exploring potential causes (e.g., uterine receptivity issues, embryo quality differences), which could be clinically relevant. Overall the probability range is reasonable and the supporting logic is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET is appropriately recommended for a young patient with good prognosis, luteal phase support is mentioned, vitrification of surplus embryos is advised. PGT-A discussion is appropriately nuanced for a 30-year-old. The Gardner grading criteria are correctly applied. Minor gap: no mention of endometrial receptivity assessment tools (ERA) or consideration of freeze-all strategy given the antagonist protocol, which some guidelines now support. Alcohol counseling per ASRM guidelines is absent despite reported 4-6 drinks/week."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with rationale, standard luteal support, beta-hCG timing (9-11 days), cryopreservation of surplus embryos, conditional PGT-A consideration, and protocol review triggers. The response provides clear next steps for both current transfer and future planning. Could be improved by specifying progesterone type/route, addressing the alcohol consumption with specific counseling, and discussing whether a freeze-all approach might be considered. Overall clinically useful for a reproductive medicine specialist."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.021621,
+  "judge_latency_ms": 18253.984082999523,
+  "judge_prompt_tokens": 3467,
+  "judge_completion_tokens": 748
+}

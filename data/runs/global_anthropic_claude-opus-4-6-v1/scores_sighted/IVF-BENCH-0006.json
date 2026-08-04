@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response likely misclassifies the image as morula/early cavitating rather than a blastocyst consistent with the provided 2BA grade, and it infers visible blastomeres and fragmentation that are not clearly discernible from this single image. Some comments on intact zona and limited ICM/TE visibility are reasonable, but overall morphology interpretation is notably off."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, tubal factor diagnosis, prior IVF outcomes, sperm parameters, endometrium, and embryo grade into prognosis, with appropriate emphasis on recurrent miscarriage history as a major modifier."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally structured and internally consistent, with probability estimates tied to age, morphology, and prior losses. Minor issues include overcalling recurrent implantation failure and building downstream conclusions on a possibly incorrect morphology interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is guideline-concordant (RPL workup, parental karyotype, APS testing, uterine evaluation), but there are notable deviations: recommending thrombophilia/NK-cell testing and ERA more broadly than major guidelines support, and suggesting empiric aspirin/estradiol without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for monitoring, RPL evaluation, and future cycle planning. It is useful clinically, though some recommendations are more speculative or controversial than ideal."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.018798,
+  "judge_latency_ms": 5259.277417004341,
+  "judge_prompt_tokens": 4456,
+  "judge_completion_tokens": 362
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a blastocyst and loosely grouped ICM/TE consistent with BB quality, but it misstates expansion by calling grade 2 a full blastocyst with blastocoel occupying most of the embryo and implies Day 5/6 timing despite the case listing Day 4. It also overinterprets features such as a thin rim of cytoplasm and successful hatching readiness."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior outcomes, sperm parameters, and lining thickness with embryo quality reasonably well. However, it overstates sperm quality despite low motility and does not fully address the significance of Day 4 transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the probability estimate is tied to embryo quality and patient factors, but there are notable inconsistencies: grade 2 is described as full blastocyst, sperm is called excellent despite reduced motility, and recommendations about estrogen support/freezing are not fully grounded in the presented transfer context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF guidance: Gardner stage 2 is not a full blastocyst, routine thrombophilia/immune testing after limited failure history is not guideline-based, and recommending PGT-A at age 31 primarily because of endometriosis is weakly supported. Some general points, such as proceeding with transfer of a usable BB embryo, are aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as proceeding with transfer and considering luteal support and future evaluation, but some recommendations are too generic or not well tailored, and a few are questionable from an evidence-based standpoint."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014385,
+  "judge_latency_ms": 6047.924207989126,
+  "judge_prompt_tokens": 2615,
+  "judge_completion_tokens": 436
+}

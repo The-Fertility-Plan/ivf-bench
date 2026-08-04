@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly states no image was provided and avoids direct grading, but it still infers likely morphology such as minimum criteria around ≥3BB and viable blastocyst selection, which are not verifiable from the available data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, endometrium, first-cycle status, and sperm data well, and links these factors to prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear progression from available data to prognosis and recommendations; minor issues arise from speculative assumptions about morphology, trilaminar pattern, and low-BMI pharmacokinetics."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including caution about routine PGT-A in a young first-cycle patient, but several points are not strongly guideline-based or are overextended, such as assuming transfer implies ≥3BB quality and suggesting progesterone concerns specifically due to low BMI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for current transfer and future planning, including luteal support review, nutrition optimization, and possible sperm DNA fragmentation testing, though some recommendations are more general than case-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012876,
+  "judge_latency_ms": 4243.431041002623,
+  "judge_prompt_tokens": 2572,
+  "judge_completion_tokens": 344
+}

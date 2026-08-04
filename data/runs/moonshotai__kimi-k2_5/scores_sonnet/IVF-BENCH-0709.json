@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with the Gardner 2BC score: full blastocyst expansion with thinned zona pellucida, loosely cohesive ICM at a specific clock position (Grade B), and sparse large TE cells (Grade C). The description of <10 TE cells and the correlation with the laboratory scoring is appropriate. Minor limitation is that some positional/structural details may be inferred from the lab data rather than purely from image observation, but overall the morphological narrative is coherent and accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors: maternal age 41 with aneuploidy risk quantification, AMH/FSH interpretation, suboptimal MII rate analysis, male factor contextualization with sperm parameters, endometrial thickness as a favorable factor, previous failed cycle implications, and lifestyle factors. The interaction between TE grade C and age-related aneuploidy risk is explicitly connected, and the blastulation rate calculation (16%) adds meaningful clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is generally well-structured and internally consistent. The probability estimate (10-20% clinical pregnancy) logically follows from the combined effects of age, TE grade C, and aneuploidy probability. The recommendation to proceed with transfer despite poor quality is well-justified by the opportunity cost argument. Minor inconsistency: the response advises against PGT-A biopsy due to TE fragility but later recommends embryo banking with PGT-A for future cycles without fully reconciling this tension. The 'Hail Mary' framing is clinically appropriate but slightly undermines the nuanced probability discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: single embryo transfer consideration, assisted hatching for age >37 with zona concerns, luteal phase support protocols, and donor egg counseling at age 41 after failed cycles. The CoQ10 and DHEA recommendations are appropriately caveated as limited evidence. Growth hormone supplementation recommendation aligns with some but not all guidelines (evidence remains debated). The ERA recommendation after two failed transfers is guideline-consistent. The DuoStim protocol suggestion is evidence-based for poor responders."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, immediately actionable recommendations: proceed with transfer, assisted hatching rationale, specific luteal support protocol including low-dose aspirin, explicit reasoning against PGT-A biopsy for this cycle, specific supplement dosages (CoQ10 200mg 3x daily, DHEA 25mg 3x daily), named diagnostic tests (DFI, ERA), specific protocol alternatives (DuoStim, microdose flare, GH dosing), and a clear decision tree for future cycles including the donor egg transition threshold. The tiered approach (immediate vs. future cycle) makes this highly practical for clinical use."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.02004,
+  "judge_latency_ms": 15235.021000000415,
+  "judge_prompt_tokens": 3025,
+  "judge_completion_tokens": 731
+}

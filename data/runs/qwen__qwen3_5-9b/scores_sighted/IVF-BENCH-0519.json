@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0519",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and assigns features not clearly visible. The image appears somewhat blurred/collapsed, making confident identification of a dense ICM, cohesive TE, and thinned zona difficult. Calling it 'excellent' and visually confirming 3AA from this image is not well supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, ovarian reserve, first cycle, male factor context, BMI, and endometrial thickness, and relates them to prognosis. Some interpretations are overstated, especially regarding sperm and endometrium."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: it calls 3AA the 'highest possible grade,' treats 7.0 mm as 'ideal,' and bases a strong prognosis partly on morphology that is not clearly supported by the image. Probability reasoning is plausible but somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF practice, including proceeding with transfer and not routinely requiring PGT-A at age 28. However, stating 3AA is the highest possible grade is incorrect (higher expansion stages exist), and describing 7 mm as ideal is not guideline-precise; stress advice is supportive but not evidence-based for implantation improvement."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, stress management, and future embryo banking/PGT-A considerations. Recommendations are useful, though somewhat generic and lacking nuance about fresh vs frozen transfer decision-making and endometrial context."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013161,
+  "judge_latency_ms": 5568.392083994695,
+  "judge_prompt_tokens": 2457,
+  "judge_completion_tokens": 386
+}

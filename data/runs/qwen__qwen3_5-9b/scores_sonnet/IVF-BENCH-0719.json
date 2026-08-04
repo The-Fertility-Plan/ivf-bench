@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinned zona pellucida, well-defined tightly packed ICM on the left side, and cohesive TE layer. The description of the ICM as 'dark and granular' and the TE as 'slightly translucent in phase-contrast view' shows reasonable image interpretation. Minor limitation is that the description is somewhat generic and closely mirrors the Gardner score criteria provided in the lab data rather than offering independent morphological observations that go beyond the given score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating the key clinical factors: DOR context with low AMH and elevated FSH, maternal age 38 and aneuploidy risk, paternal age and sperm DNA fragmentation concern, endometrial thickness as favorable, and the 'quality over quantity' framing for DOR. It also flags the restricted diet as a potential micronutrient concern. Minor gaps include not discussing the long agonist protocol implications for DOR patients (which is somewhat controversial) or the significance of this being a first IVF cycle in terms of counseling expectations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 50-65% is reasonable and the adjustments from a base rate for age and DOR are coherent. The conclusion that this is likely the best embryo in the cohort is well-supported. One minor inconsistency: the response states DOR 'does not necessarily degrade the quality of the specific embryo transferred' while simultaneously citing DOR as a risk factor for aneuploidy, which creates a slight tension that could be better reconciled. The overall flow from evidence to conclusions is clear."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: proceeding with single embryo transfer of the top-grade blastocyst, luteal phase support for DOR patients, PGT-A counseling for age 38 with DOR, and donor egg discussion as a future option. The suggestion to consider PGT-A appropriately notes the statistical viability concern with low oocyte yield. The mention of donor eggs with a realistic success rate (~50-60%) is evidence-based. Minor issue: recommending 'Long Agonist' protocol for DOR is not standard (antagonist protocols are generally preferred per ESHRE for DOR), though this was the protocol used and the response doesn't critique it."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure luteal support, address nutritional gaps, consider PGT-A in future cycles with caveats about oocyte yield, and introduce donor egg counseling if this cycle fails. The stress management suggestion adds nuance. The response could be more actionable by specifying progesterone type/dosing, recommending sperm DNA fragmentation testing given paternal age concern, or providing a clearer decision tree for next steps based on outcome. Overall, a clinician would find this guidance useful and implementable."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.019578,
+  "judge_latency_ms": 15436.536166998849,
+  "judge_prompt_tokens": 2701,
+  "judge_completion_tokens": 765
+}

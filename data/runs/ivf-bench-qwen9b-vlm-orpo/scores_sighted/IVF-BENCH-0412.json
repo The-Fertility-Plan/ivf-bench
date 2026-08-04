@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0412",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response undercalls the documented morphology, stating the image is a compact blastocyst without clear hatching despite the provided Gardner score of 4BA and visible herniation through the zona. ICM and TE comments are broadly plausible but conservative and partly inconsistent with the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH/FSH, prior cycle, semen parameters, endometrium, and ovarian response well, and relates these to prognosis. It misses some nuance around the stated DOR diagnosis versus actual reserve markers but overall connects factors appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but there is a notable inconsistency between the supplied 4BA hatching grade and the model's own morphological interpretation. Probability estimates are plausible but partly based on that misread morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Most recommendations are consistent with standard IVF practice: single embryo transfer in a young patient, no routine immune/anticoagulation add-ons, and cautious approach to PGT-A. Minor deviations include some speculative protocol suggestions and overly specific lifestyle advice not central to guideline-based embryo assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management and contingency planning after failure, including luteal support review, uterine cavity assessment, and protocol reassessment. Recommendations are practical, though some are somewhat generic rather than tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015906,
+  "judge_latency_ms": 5997.9158750065835,
+  "judge_prompt_tokens": 3497,
+  "judge_completion_tokens": 361
+}

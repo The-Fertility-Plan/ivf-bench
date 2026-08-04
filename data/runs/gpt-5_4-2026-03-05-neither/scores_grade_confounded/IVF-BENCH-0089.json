@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 3AA with explicit expansion, ICM, and TE descriptors; it therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH/FSH, prior biochemical pregnancies, semen parameters, endometrium, and oocyte maturity reasonably well with prognosis, though it misses linking these to the actual known 3AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but a major premise is wrong because morphology data were available; this weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice (single embryo transfer, luteal support review, cavity/endocrine evaluation, cautious use of add-ons, discussion of PGT-A), with only minor overgeneralization."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle review, including luteal support, metabolic optimization, cavity workup, and stimulation review, though it is less tailored than it could be because it ignored the provided 3AA grade."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.014259,
+  "judge_latency_ms": 3703.0622500024037,
+  "judge_prompt_tokens": 3178,
+  "judge_completion_tokens": 315
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0730",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes key morphological features (blastocoel cavity, ICM compactness, TE cohesiveness, zona thinning) consistent with the reported 3AA grade. However, it notably flags a Gardner grading inconsistency (stage 3 vs expanded blastocyst = stage 4), which shows knowledge but also introduces uncertainty. The description is somewhat generic and hedged ('appears consistent with,' 'I do see'), suggesting limited confidence in direct image interpretation. No fabricated features, but lacks the precision of a thorough morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response systematically addresses all major clinical factors: maternal age 34, AMH 6.6, FSH 5.1, oocyte yield, semen parameters, endometrial thickness 12mm, BMI 27.3, unexplained infertility, and first IVF cycle. Each factor is connected to its prognostic implication for this transfer. Minor gap: motility at 38.3% is borderline per WHO 2021 criteria (≥42% total motility) and this nuance is not fully explored. Overall integration is good and contextually relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The probability range of 45-60% is internally consistent with the favorable profile described. The model appropriately distinguishes implantation from clinical pregnancy and live birth rates. The Gardner grading correction (3 vs 4) is handled transparently. Minor inconsistency: the response simultaneously calls it '3AA' and questions whether it should be '4AA' without fully resolving this, which could cause confusion. Overall the reasoning chain is clear and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET for age 34 with good-quality blastocyst, standard luteal support, no mandatory bed rest, appropriate beta-hCG timing, selective PGT-A discussion rather than routine recommendation. The Gardner grading correction reflects knowledge of standardized nomenclature. Minor issue: the response does not explicitly address ESHRE guidance on PGT-A utility at age 34 with unexplained infertility, and the motility borderline status per WHO 2021 is not flagged. Overall well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with eSET, optimize luteal support, standard post-transfer care, beta-hCG timing, and a structured future planning framework if transfer fails. Recommendations are appropriately tiered (immediate vs. future). The response avoids over-medicalizing a first cycle failure scenario. Could be more specific about luteal support protocols (e.g., specific progesterone dosing) and endometrial preparation type, but overall provides clinically useful guidance with appropriate nuance."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022764,
+  "judge_latency_ms": 16225.486125003954,
+  "judge_prompt_tokens": 3978,
+  "judge_completion_tokens": 722
+}

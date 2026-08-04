@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response avoids fabricating image details, but it fails to use the provided Gardner score 0DD, which explicitly indicates an early blastocyst with degenerative/absent ICM and TE. It instead states morphology cannot be assigned and discusses only generic Day 4 expectations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, low MII yield, tubal factor, prior biochemical pregnancy, sperm parameters, endometrial thickness, and lifestyle reasonably well with prognosis, though it underweights the severe adverse implication of the 0DD grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is overly optimistic given the provided 0DD morphology and the discussion is partly built on the mistaken premise that morphology cannot be assessed from the available data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but there are notable deviations: it overlooks the supplied Gardner grade, suggests ERA relatively early, and presents PGT-A somewhat strongly in a low-yield setting where benefit is less certain."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and specific, including review of trigger strategy, luteal support, extended culture considerations, and possible sperm DNA fragmentation testing, though some suggestions are not tightly prioritized to the poor 0DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.013074,
+  "judge_latency_ms": 4618.465624997043,
+  "judge_prompt_tokens": 2528,
+  "judge_completion_tokens": 366
+}

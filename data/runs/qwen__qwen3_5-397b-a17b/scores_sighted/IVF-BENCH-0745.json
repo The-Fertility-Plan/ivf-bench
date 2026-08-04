@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0745",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst, but it overstates certainty from the image: the zona is not clearly markedly thinned, hatching is not evident, and the ICM location/compactness is less distinct than described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, BMI, endometrium, oocyte yield, and sperm motility reasonably well with prognosis, though it overinterprets low oocyte number as diminished reserve without AMH and assumes likely ICSI."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and internally consistent, with a plausible probability range tied to age and morphology; minor issues include calling 3AB 'top-tier' and making a few unsupported inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on SET and proceeding with transfer, but recommending PGT-A broadly after a low-yield cycle is stronger than guideline-supported evidence, and adjuncts like acupuncture are not evidence-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET and possible protocol review, though some suggestions are somewhat generic or speculative."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012699,
+  "judge_latency_ms": 4387.881750008091,
+  "judge_prompt_tokens": 2703,
+  "judge_completion_tokens": 306
+}

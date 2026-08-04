@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0727",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocoel with thinning zona pellucida, a dense compact ICM located at the bottom-right, and a less cellular TE forming a loose epithelium. The description of zona thinning at the 'upper-left quadrant' adds spatial detail. Minor limitation is acknowledging image resolution constraints for precise cell counting, which is honest but slightly reduces precision. Overall a good, accurate morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (24) as the primary favorable factor, sperm parameters, endometrial thickness (12.5mm as optimal), oocyte yield analysis (75% maturity rate), and previous cycle failure context. The tubal factor diagnosis is acknowledged implicitly through the transfer recommendation. AMH being N/A is not addressed. FSH interpretation is slightly off (7.4 IU/L is within normal range for any age, not 'slightly high' for a 24-year-old). Overall good integration with minor gaps."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 40-60% probability range is reasonable and well-justified. The response correctly identifies the Grade B TE as the primary morphological concern while contextualizing it against the young maternal age. Minor inconsistency: the FSH comment about 7.4 being 'slightly high' for a 24-year-old is not well-supported clinically, but this doesn't significantly undermine the overall reasoning chain. Conclusions are generally well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/Gardner grading criteria and evidence-based recommendations. The advice against routine PGT-A in a young patient with limited embryos is consistent with current guidelines. The ERA testing caveat (not indicated without multiple failures) is guideline-appropriate. The FSH interpretation as 'slightly high' for a 24-year-old deviates slightly from standard reference ranges (normal <10 IU/L). The recommendation to proceed with transfer of a good-quality blastocyst in a young patient with receptive endometrium is fully guideline-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, rationale against PGT-A with clear reasoning, conditional future planning if transfer fails (ERA consideration, freeze-all strategy with conditions), and lifestyle maintenance advice. The response provides clear decision trees for both success and failure scenarios. Could be slightly more specific about luteal phase support protocols or monitoring post-transfer, but overall provides clinically useful, nuanced guidance with alternatives considered."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018063,
+  "judge_latency_ms": 13213.68004100077,
+  "judge_prompt_tokens": 2616,
+  "judge_completion_tokens": 681
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the reported 1DD score. Its interpretation of poor ICM/TE quality is broadly consistent with the image and lab grade, but it introduced unsupported claims such as definite developmental arrest/non-viability and stated stage 1 means blastocoel less than 50%, while the provided lab definition says at least half."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, tubal factor, prior biochemical pregnancy, endometrial thickness, sperm parameters, and stimulation response with embryo quality in a clinically meaningful way. It misses nuance around absent AMH data and overstates some conclusions from limited cycle history."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable overreaches and inconsistencies: it treats 1DD as essentially non-viable, infers developmental arrest from limited data, and frames day-4 transfer as asynchronous in a way that is not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion follows standard IVF concepts, but several recommendations are stronger than guideline-based evidence supports, especially recommending against transfer categorically, calling the embryo non-viable, and strongly recommending PGT-A at age 35 with low embryo numbers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for counseling, transfer decision-making, luteal support, protocol review, and further workup. However, some recommendations are too definitive and would benefit from more nuance and acknowledgment of clinic-specific practice."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015231,
+  "judge_latency_ms": 4744.34108400601,
+  "judge_prompt_tokens": 3027,
+  "judge_completion_tokens": 410
+}

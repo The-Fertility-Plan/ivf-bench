@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description of a full blastocyst with loosely grouped ICM and sparse/loose TE is broadly consistent with the image and the provided BB grading. Minor issue: it states 'Gardner grade 3' while the lab data says 2BB/full blastocyst, and zona assessment is somewhat overconfident from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian response, endometrium, lifestyle, AMH/FSH, and sperm parameters into prognosis reasonably well. Some claims are a bit overstated or speculative, but overall the embryo assessment is connected to the patient context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but there is an internal inconsistency around expansion grading ('2BB' vs 'full blastocyst' vs 'Gardner grade 3'), and the response appears truncated before completing risk assessment, probability, and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner concepts and emphasis on age/morphology are broadly aligned, but the grading interpretation is inconsistent and some statements (e.g., 'virgin endometrium' as favorable, subtle DOR from FSH alone) are not strongly guideline-based. No clearly inappropriate recommendation is shown."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response provides assessment but does not clearly deliver specific transfer recommendations, future cycle planning, or a concrete management pathway. It is only partially actionable."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011874,
+  "judge_latency_ms": 5136.796749997302,
+  "judge_prompt_tokens": 2138,
+  "judge_completion_tokens": 364
+}

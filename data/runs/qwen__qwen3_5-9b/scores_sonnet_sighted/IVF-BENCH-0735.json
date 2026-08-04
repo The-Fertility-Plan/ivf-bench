@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the ICM as densely packed and granular, the blastocoel cavity as fluid-filled, and the zona pellucida as thin and stretched consistent with Grade 3 expansion. The TE description is acknowledged as less distinct in the image but supported by the Gardner score. The description aligns well with what is visible in the image, though the TE cellular detail could have been more critically assessed given the image crop limitations rather than deferring entirely to the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates maternal age, AMH, oocyte yield, endometrial thickness, lifestyle factors, and sperm parameters effectively. It correctly contextualizes the male factor diagnosis against the actual sperm parameters and notes the successful embryo development as a positive indicator. Minor gap: it does not explore potential sperm DNA fragmentation implications more deeply despite the male factor diagnosis, nor does it address the previous cycle's outcome in terms of what embryo grade was transferred then."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The 60-75% range is reasonable and supported by the cited factors. The response correctly notes that the previous failure likely reflects lower embryo quality rather than a uterine factor. Minor inconsistency: the response states 3AA is the 'highest morphological grade possible' which is slightly inaccurate as Grade 4AA or 5AA/6AA (hatching/hatched) can also be top-tier, but this is a minor technical point that doesn't undermine the overall logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines including single embryo transfer principles, Day 5 transfer rationale, and appropriate endometrial thickness thresholds. The PGT-A discussion is appropriately nuanced and not over-recommended. The fresh transfer recommendation is reasonable given the clinical parameters. The response does not explicitly address ESHRE's elective single embryo transfer (eSET) policy, which would have strengthened guideline alignment, and the Gardner grading description contains a minor inaccuracy (Grade 3 is expanded but not necessarily 'ready for hatching' — that would be Grade 4-6)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with fresh Day 5 transfer, consider PGT-A for future cycles, maintain lifestyle, and provide psychological support. The response appropriately flags conditions under which freeze-all might be considered. It could be more actionable by specifying luteal phase support protocols, suggesting sperm DNA fragmentation testing given the male factor diagnosis, or recommending endometrial receptivity testing given the prior failed cycle, which would add clinical depth."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018606,
+  "judge_latency_ms": 14987.385332991835,
+  "judge_prompt_tokens": 2787,
+  "judge_completion_tokens": 683
+}

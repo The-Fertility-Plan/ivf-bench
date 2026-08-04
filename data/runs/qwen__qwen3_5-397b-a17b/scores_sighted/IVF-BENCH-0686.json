@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0686",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it overstates certainty with terms like non-viable and mentions features such as dark cytoplasm/necrosis and large irregular vacuoles that are not clearly established from the image alone. It also shows some inconsistency about expansion stage versus the provided Gardner score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, sperm parameters, and unexplained infertility reasonably well and relates them to the unexpectedly poor embryo quality. However, it overinterprets the cycle outcome from limited data and assumes a broader developmental failure than is explicitly provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but there are notable overreaches: it infers medical futility and effectively zero implantation from morphology alone, assumes this is the only embryo/cycle outcome, and recommends cancellation with stronger certainty than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concepts is broadly correct, but stating that a 1DD blastocyst will not result in pregnancy and recommending unequivocally not to transfer is stronger than guideline-based practice supports. Routine recommendation for PGT-A at age 33 and reflexive ICSI are also not fully guideline-aligned without additional indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps including lab review, sperm DNA fragmentation testing, consideration of insemination method, and lifestyle optimization. However, some recommendations are overly definitive and insufficiently nuanced for shared decision-making in a poor-prognosis transfer."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013935,
+  "judge_latency_ms": 6859.451790995081,
+  "judge_prompt_tokens": 2510,
+  "judge_completion_tokens": 427
+}

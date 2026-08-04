@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 0DD. It therefore fails to analyze the known morphology: early blastocyst with degenerative/absent ICM and TE, a very poor-quality embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, PCOS, BMI, ovarian reserve, sperm quality, endometrium, and prior IVF outcome, though it does not connect these to the actual known poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but a major premise is wrong because morphology was available. This leads to an inflated prognosis and recommendations based on hypothetical good-quality embryos rather than the actual 0DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (SET at age 28, luteal support, PCOS optimization, selective use of PGT-A), but failure to recognize and interpret a 0DD blastocyst meaningfully weakens alignment with Gardner grading-based embryo assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The transfer and future-cycle recommendations are practical and clinically useful, including SET, review of fresh-cycle hormonal milieu, luteal support, and PCOS protocol optimization, though they are less actionable for the actual poor-grade embryo because the morphology was missed."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015081,
+  "judge_latency_ms": 5019.207625002309,
+  "judge_prompt_tokens": 3207,
+  "judge_completion_tokens": 364
+}

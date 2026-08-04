@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating specific embryo features. It gave only generic expectations for a Day 4 embryo, so it is not inaccurate, but it does not assess the actual visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, tubal factor, semen parameters, endometrial thickness, and prior cycle history into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to age, transfer day, and prior outcomes. Minor issues include overcalling recurrent implantation failure risk and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but there are notable deviations: PGT-A is presented too strongly for age 35 with limited embryo numbers, ERA is suggested despite weak routine evidence, and stress/acupuncture claims are not guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future planning, including hydrosalpinx evaluation, luteal support review, blastocyst culture consideration, and sperm DNA fragmentation testing. Some recommendations would benefit from more nuance."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013074,
+  "judge_latency_ms": 4868.6478750023525,
+  "judge_prompt_tokens": 2748,
+  "judge_completion_tokens": 322
+}

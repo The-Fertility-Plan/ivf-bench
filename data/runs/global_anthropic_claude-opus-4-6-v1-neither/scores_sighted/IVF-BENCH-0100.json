@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology without the image and did not make direct false claims about visible embryo features. However, it speculated that the embryo might be in a favorable 4AA-3AB range, which is unsupported by the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte maturity, endometrium, diagnosis, sperm data, BMI, and lifestyle into prognosis reasonably well, though some assumptions (e.g., presumed normal female tract, trilaminar endometrium) are not directly provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age and transfer context. Minor issues include speculative numerical adjustments and assumptions about embryo quality despite acknowledging no image/Gardner score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET at age 33, luteal support, avoiding ERA in a first cycle, and reserving PGT-A for selected scenarios are broadly guideline-consistent. Small deviations include endorsing embryo glue and supplements with stronger confidence than guidelines typically support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including confirming grade, SET, transfer technique, luteal support, and future testing if failure occurs. Some items are somewhat generic or protocol-dependent."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013839,
+  "judge_latency_ms": 5107.53616700822,
+  "judge_prompt_tokens": 2793,
+  "judge_completion_tokens": 364
+}

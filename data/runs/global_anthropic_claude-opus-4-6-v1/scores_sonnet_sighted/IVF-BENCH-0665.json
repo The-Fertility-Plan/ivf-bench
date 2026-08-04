@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with zona thinning, well-expanded blastocoel, loosely organized ICM with distinguishable cell boundaries, and cohesive TE epithelium consistent with 3BA grading. The description of zona thinning on the left margin and eccentric ICM positioning aligns with the image. Minor limitation: the image is somewhat blurry/out of focus in areas making precise ICM characterization difficult, yet the model confidently describes features that are partially obscured. Overall description is consistent with the Gardner score provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical domains. The response systematically connects maternal age to aneuploidy risk, BMI to implantation reduction with specific odds ratios, prior live birth to uterine competence, the 50% maturity rate to protocol mismatch, male factor diagnosis to sperm DNA fragmentation considerations, and endometrial thickness to receptivity. The table format clearly shows how each factor contributes positively or negatively, and interactions between factors (e.g., BMI + sedentary lifestyle affecting uterine perfusion) are explicitly noted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 45-55% follows logically from the baseline adjustment framework presented. The reasoning chain from morphology to clinical factors to probability is well-structured. The distinction between clinical pregnancy rate (~50%) and live birth rate (~40-45%) accounting for BMI-related miscarriage risk shows nuanced thinking. Minor issue: the baseline of 50-60% for Day 5 blastocyst transfer is slightly optimistic for a 3BA (vs. higher grades), and the cumulative live birth rate projection of 75-80% across 2-3 cycles, while plausible, lacks explicit supporting calculation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: SET recommendation for young patient with good prognosis, standard luteal phase support, no bed rest advice, Day 5 transfer rationale, and PGT-A consideration for failed implantation. Protocol switch to antagonist and dual trigger suggestions align with current evidence. Low-dose aspirin recommendation is appropriately caveated as equivocal evidence. ERA recommendation after failed transfer aligns with ESHRE guidance. Minor deviation: IVM suggestion for immature oocytes is mentioned but remains experimental per current guidelines and could be better qualified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations for both immediate transfer management and future cycle planning. Includes concrete protocol modifications (antagonist switch, dual trigger, extended trigger interval), specific diagnostic follow-ups (DFI testing, hysteroscopy with CD138), quantified lifestyle targets (5-7% weight loss, BMI reduction), and conditional recommendations (ERA only if transfer fails, PGT-A if sufficient blastocysts). The prognosis summary provides a clear overall framework. Each recommendation is justified and practically implementable by a clinician."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020985,
+  "judge_latency_ms": 17280.22274999239,
+  "judge_prompt_tokens": 3240,
+  "judge_completion_tokens": 751
+}

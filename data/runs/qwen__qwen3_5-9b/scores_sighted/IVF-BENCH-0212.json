@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0212",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided Gardner 3AA label rather than the image itself and inaccurately calls grade 3 an 'expanded blastocyst'; true expanded is grade 4. It also asserts clear ICM/TE quality and zona thinning not convincingly visible in this low-resolution image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors including very young age, BMI, tubal factor, sperm parameters, endometrial thickness, and lifestyle with embryo prognosis. However, it overinterprets the significance of 6 MII oocytes as a poor responder phenotype without AMH/AFC context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: misclassification of blastocyst stage, unsupported concern about poor ovarian response, and an overconfident implantation estimate despite acknowledged adverse BMI/lifestyle factors and image uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from standard practice: suggesting fresh transfer as preferred without cycle context, implying routine progesterone because of antagonist protocol, and recommending PGT-A on an existing transfer embryo in a 20-year-old with no clear indication. The statement that aneuploidy risk is '<1%' is also inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps on transfer, counseling, luteal support, and future cycle review. Still, some actions are not sufficiently nuanced or are based on questionable assumptions, limiting maximal usefulness."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013716,
+  "judge_latency_ms": 5705.242666997947,
+  "judge_prompt_tokens": 2722,
+  "judge_completion_tokens": 370
+}

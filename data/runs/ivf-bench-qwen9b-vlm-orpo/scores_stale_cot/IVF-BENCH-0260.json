@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0260",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a transfer-quality Day 5 blastocyst and the provided 3AB label, but it relies heavily on the lab grade, contains some internal confusion about stage ('early-to-full expanded'), and infers details like absence of fragmentation/multinucleation that are not reliably assessable from a single blastocyst image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Strong integration of age, AMH, prior miscarriage, BMI, endometrium, sperm parameters, and smoking with embryo quality, correctly emphasizing maternal age/aneuploidy as the dominant prognostic factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly well supported, linking morphology and patient factors to prognosis; minor issues include slightly inconsistent probability framing and some overinterpretation of image-based morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines: single embryo transfer, caution with add-ons, lifestyle optimization, and nuanced discussion of PGT-A in low-yield cycles. Minor limitation is somewhat confident probability estimates without acknowledging center variability more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, smoking cessation, luteal support adherence, and when to consider further evaluation or PGT-A. Useful, though not highly tailored beyond standard management."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.017025,
+  "judge_latency_ms": 8187.008125009015,
+  "judge_prompt_tokens": 3865,
+  "judge_completion_tokens": 362
+}

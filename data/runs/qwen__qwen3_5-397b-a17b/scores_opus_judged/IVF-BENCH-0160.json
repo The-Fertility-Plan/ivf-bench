@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0160",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA grading features including expansion, tightly packed ICM, and cohesive TE. The description of zona pellucida thinning and blastocoel expansion is consistent with the Gardner score. Minor issue: the localization of ICM to 'central-left region' is a specific claim that may or may not match the image precisely, but overall the morphological description is detailed and consistent with the provided grading data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response thoughtfully addresses the tension between excellent embryo morphology and advanced maternal age, discusses the ovarian response relative to age, considers male factor (including paternal age contribution), evaluates endometrial thickness, addresses lifestyle factors (alcohol, stress), and contextualizes the first-cycle status. The 'Age Gap' concept is particularly well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is exemplary. The probability estimate is derived through a clear Bayesian-style calculation: estimating euploidy probability (~25%) multiplied by euploid implantation rate (~60%), yielding ~15%, then adjusting upward to 25% for morphology correlation and mosaicism. This is transparent, logical, and well-supported. No contradictions are present, and the contrast between morphological excellence and age-related aneuploidy risk is consistently maintained throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations align well with ASRM/ESHRE guidelines: single embryo transfer recommendation, PGT-A suggestion for advanced maternal age, freeze-all/banking strategy, lifestyle modification advice regarding alcohol. The SART data reference for age-specific live birth rates is appropriate. The Gardner grading interpretation is accurate. The suggestion for hysteroscopy if transfer fails is evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations: immediate alcohol cessation, SET for this transfer, PGT-A for future cycles, embryo banking strategy leveraging good ovarian response, endometrial evaluation with saline sonogram/hysteroscopy if failure occurs, stress management techniques. Recommendations are appropriately nuanced for both the current transfer and future planning, with clear rationale for each suggestion."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.028165,
+  "judge_latency_ms": 13561.166708008386,
+  "judge_prompt_tokens": 2788,
+  "judge_completion_tokens": 569
+}

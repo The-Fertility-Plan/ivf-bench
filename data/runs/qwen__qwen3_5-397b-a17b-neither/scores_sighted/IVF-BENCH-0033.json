@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific morphology. It correctly noted that Gardner grading is not ideal for a Day 4 embryo, but it did not analyze the visible embryo, which appears cavitating/early blastocyst-like rather than a pure morula."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, BMI, oocyte yield, male factor, smoking, and endometrial thickness into prognosis reasonably well, though some links (e.g., assuming Day 4 transfer may reflect developmental concern) were speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability adjustment from favorable age to lower transfer odds due to smoking and Day 4 timing. Minor issues include speculative interpretation of why Day 4 transfer occurred and somewhat strong emphasis on thick endometrium."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is largely aligned with IVF practice: caution about applying Gardner to Day 4, smoking cessation, no routine PGT-A at age 29, and consideration of male-factor workup. Some recommendations are more opinion-based than guideline-driven, such as broad endorsement of DNA fragmentation testing and testicular sperm use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical steps for current transfer and future planning, including luteal support review, smoking cessation, culture strategy, and male-factor evaluation. Recommendations are useful, though some are not highly individualized or may exceed what is routinely indicated."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014754,
+  "judge_latency_ms": 7111.838541997713,
+  "judge_prompt_tokens": 2938,
+  "judge_completion_tokens": 396
+}

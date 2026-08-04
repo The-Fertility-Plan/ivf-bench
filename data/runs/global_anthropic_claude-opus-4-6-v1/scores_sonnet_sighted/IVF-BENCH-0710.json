@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst stage, thinned/breached zona pellucida, compact ICM with numerous cells, and cohesive TE layer consistent with 4AA grading. Descriptions of herniation, ICM compaction, and TE uniformity align well with the image. Minor limitation: the image is somewhat blurry/low resolution making fine TE detail difficult to confirm, yet the model describes features with high confidence. No fabricated features, but some descriptions (e.g., 'clean herniation site without excessive fragmentation') may overstate what is clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all clinical parameters. The response critically identifies the AMH/FSH/COC incongruence with the DOR diagnosis, integrates endometrial thickness, sperm parameters, BMI, age-related aneuploidy risk, and smoking impact into a coherent prognostic picture. Each clinical factor is explicitly connected to embryo quality and implantation probability. The table-based synthesis and the smoking risk deep-dive demonstrate thorough multi-factor integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is exemplary: baseline probability established from literature, then systematically adjusted for each patient-specific factor with directional justification. The final probability range (40-55%) logically follows from the adjustments applied. The DOR diagnosis contradiction is flagged and resolved coherently. The distinction between implantation probability and live birth probability accounting for smoking-related miscarriage risk is methodologically sound and internally consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Fully aligned with ESHRE/ASRM guidelines: recommends elective single embryo transfer (eSET) for top-grade blastocyst in patient under 35, appropriate luteal phase support protocols cited, PGT-A discussion appropriately nuanced, Gardner grading criteria correctly applied, smoking cessation recommendations consistent with ASRM committee opinions, Mediterranean diet and antioxidant supplementation evidence-based. Correctly advises against DHEA without confirmed DOR. No guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations across all domains: immediate transfer decisions (SET, specific progesterone dosing regimens), smoking cessation with specific pharmacologic options (varenicline, bupropion, NRT), concrete future cycle planning (3-month cessation before next stimulation, AFC reassessment, PGT-A for frozen embryos), lifestyle specifics (150 min/week moderate exercise, Mediterranean diet, CoQ10 200-600mg dosing), and obstetric surveillance guidance. Recommendations are tiered by priority and include alternatives, making them immediately clinically usable."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.025335,
+  "judge_latency_ms": 15884.826583001995,
+  "judge_prompt_tokens": 5060,
+  "judge_completion_tokens": 677
+}

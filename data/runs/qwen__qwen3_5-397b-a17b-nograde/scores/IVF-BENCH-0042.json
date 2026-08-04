@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed morphology interpretation, but it appears overconfident and likely misclassifies the embryo as a Day 5 morula/1CC with poor ICM and TE despite limited visible differentiation; assigning C grades when ICM/TE are not clearly assessable is a notable inaccuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, AMH, BMI, prior failed cycle, sperm quality, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links (e.g., protocol causing low maturity) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor developmental stage lowers prognosis despite favorable age and uterine factors. Probability estimate is consistent with the narrative, though some causal inferences about trigger/protocol are not fully supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice and Gardner-based assessment principles, including counseling, luteal support, and considering antagonist/dual-trigger strategies in PCOS. Minor deviations include overinterpreting morphology and suggesting interventions like supplements/metformin without individualized metabolic data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future cycles, including counseling, protocol adjustment, lifestyle optimization, and trigger strategy considerations. Some recommendations are useful but not fully tailored to missing details such as fertilization method or metabolic workup."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.01269,
+  "judge_latency_ms": 4615.682000003289,
+  "judge_prompt_tokens": 2435,
+  "judge_completion_tokens": 359
+}

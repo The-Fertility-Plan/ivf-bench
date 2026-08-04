@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst stage and references the Gardner 1DD score, describing poor ICM and TE. However, there is a notable inconsistency: the expansion grade '1' in Gardner scoring means early blastocyst (blastocoel less than half the volume), yet the model describes it as 'large, taking up more than half the volume' — contradicting the Grade 1 expansion definition. The image actually appears to show a more expanded blastocyst visually, suggesting possible confusion between the grading system and visual interpretation. No mention of zona pellucida status or fragmentation details visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: AMH/FSH indicating DOR, endometriosis impact on oocyte quality and implantation, the significance of 5 failed cycles including ectopic and miscarriage, favorable endometrial thickness, and normal sperm parameters. The connection between DOR and poor embryo morphology is explicitly made. Minor gap: BMI (26.8, borderline) and lifestyle factors (sedentary, light drinker) are not meaningfully integrated into the prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is generally logical — poor morphology + DOR + recurrent failure = low probability. However, there is an internal contradiction in the expansion grade description (Grade 1 = early blastocyst with small blastocoel, yet described as 'large cavity taking up more than half'). The probability estimate (<10-15%) is reasonable and follows from the evidence, but the reasoning chain could more explicitly connect each factor to the probability estimate rather than treating them somewhat independently."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: PGT-A for recurrent implantation failure, freeze-all strategy, endometriosis management, and donor oocyte counseling for poor prognosis cases. The suggestion of PGT-A for a 1DD embryo is somewhat impractical since such poor-quality embryos often don't survive biopsy, which is a minor guideline nuance missed. FSH of 5.9 is described as 'elevated' when it is actually within normal range — a factual error."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: proceed with transfer with counseling, close beta-hCG monitoring, PGT-A for future cycles, donor oocyte discussion, endometriosis management, and freeze-all strategy. The response appropriately addresses both immediate transfer decisions and long-term planning. Could be improved by specifying luteal phase support protocols, ERA testing given recurrent implantation failure, or thrombophilia/immunological workup given the ectopic and miscarriage history."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.019392,
+  "judge_latency_ms": 16094.694917002926,
+  "judge_prompt_tokens": 2914,
+  "judge_completion_tokens": 710
+}

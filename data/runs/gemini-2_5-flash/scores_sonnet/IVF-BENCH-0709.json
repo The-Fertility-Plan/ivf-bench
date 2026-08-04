@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion grade 2, ICM grade B, TE grade C) and provides reasonable descriptions of each. However, since the model cannot actually see the image and is essentially restating the provided Gardner score data rather than independently analyzing visual features, it lacks observations about zona pellucida, actual blastocoel appearance, cell boundaries, or other visible morphological details that would come from true image analysis. The descriptions are consistent with the provided score but add little beyond what the lab data already states."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age-related aneuploidy risk, AMH/FSH interpretation relative to age, oocyte yield assessment, endometrial thickness favorability, male factor diagnosis with likely ICSI use, and previous cycle failure. It correctly identifies age as the dominant factor and connects it to aneuploidy risk. Minor gap: it doesn't deeply explore the interaction between sperm parameters and embryo quality beyond noting ICSI mitigation, and doesn't discuss BMI impact specifically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 15-25% follows reasonably from the stated risk factors (age 41, C-grade TE, previous failure) balanced against favorable factors (endometrial thickness, ovarian reserve). The conclusion to proceed with transfer despite challenges is coherent. Minor issue: the response states 2BC embryos might have 20-30% implantation in younger patients but then estimates 15-25% for this 41-year-old, which is a reasonable downward adjustment but could be more explicitly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: PGT-A recommendation for advanced maternal age with previous failure, consideration of accumulation cycles, discussion of donor oocytes as escalation, and luteal phase support. Gardner grading interpretation is consistent with standard criteria. The response correctly identifies TE grade as particularly important for implantation per current literature. Minor deviation: doesn't mention endometrial receptivity array (ERA) testing which some guidelines suggest for recurrent implantation failure cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, manage expectations, continue luteal support, recommend PGT-A for future cycles, consider accumulation strategy, review stimulation protocol, and discuss donor oocytes as escalation. The tiered approach (current cycle vs. future planning) is clinically useful. Could be more specific about luteal phase support protocols, timing of follow-up, or specific stimulation protocol adjustments to consider, but overall provides clear actionable guidance for a clinician."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.020454,
+  "judge_latency_ms": 13773.162792000221,
+  "judge_prompt_tokens": 3453,
+  "judge_completion_tokens": 673
+}

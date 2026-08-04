@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor ICM/TE quality consistent with 1DD, but it inaccurately describes expansion as 'expanded' and says the blastocoel occupies more than 50% while calling this Gardner grade 1; grade 1 is an early blastocyst, not expanded, so the morphology description is internally inconsistent and partly incorrect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, endometriosis, prior IVF history, sperm factors, BMI/lifestyle, and endometrial thickness with embryo prognosis reasonably well, though it overstates FSH 9.2 as clear DOR without AMH and makes some assumptions about embryo yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall conclusion of poor prognosis is logical, but there are notable inconsistencies: grade 1 is misinterpreted as expanded, the embryo is called both low probability and 'hopeful' without clear qualification, and some inferences (single blastocyst, poor responder profile) are not fully supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling about poor prognosis and cautious use of PGT-A is broadly aligned, but there are deviations from standard evidence-based practice, including inaccurate Gardner stage interpretation and recommendations such as DHEA/CoQ10 and laparoscopy-oriented endometriosis management that are not strongly guideline-based for this specific scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, discussing PGT-A limitations, and considering future workup/protocol review. However, some recommendations are somewhat generic or speculative rather than tightly tailored to the available case details."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.014235,
+  "judge_latency_ms": 6235.153000001446,
+  "judge_prompt_tokens": 2615,
+  "judge_completion_tokens": 426
+}

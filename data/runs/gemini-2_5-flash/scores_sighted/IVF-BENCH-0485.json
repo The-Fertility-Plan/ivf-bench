@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0485",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 2AA label, but it overstates certainty about ICM and TE quality from this single image and adds details like absence of vacuolization/uniform TE not clearly verifiable; calling the external round structure a polar body is speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR, prior failed cycle, endometrium, BMI, lifestyle, and sperm parameters with embryo quality in a clinically sensible way, though AMH is unavailable and some interactions are discussed somewhat generally."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible probability estimate tied to morphology and age; minor issue is some tension between describing the embryo as excellent and then emphasizing it as only an early/full blastocyst without fully reconciling image vs reported grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice: SET for a good-quality day-5 blastocyst, luteal support, and consideration of PGT-A in future planning. Slight overstatement of PGT-A benefit and some nonessential post-transfer advice prevent a perfect score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future cycles, including SET, luteal support, review of prior cycle, and possible protocol reassessment. Useful and practical, though some recommendations remain generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.015309,
+  "judge_latency_ms": 8063.2232499920065,
+  "judge_prompt_tokens": 3308,
+  "judge_completion_tokens": 359
+}

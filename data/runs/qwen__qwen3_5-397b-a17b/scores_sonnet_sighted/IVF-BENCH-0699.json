@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0699",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the embryo as a compacted morula/early blastocyst with no clearly defined blastocoel, granular cytoplasm, and poor cell boundary definition. It correctly interprets the 0DD grading as indicating degenerative ICM and TE. Minor limitation: does not specifically comment on zona pellucida integrity or attempt to distinguish individual trophectoderm cells, but overall description matches the image well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Strong integration of maternal age (39) with embryo quality, correctly identifying the quantity-quality mismatch. Addresses paternal age and borderline motility as contributing factors. Connects endometrial thickness and lifestyle favorably. Notes previous live birth as positive predictor. Minor gap: does not deeply explore the 'Other' diagnosis category or the significance of the previous failed cycle in context of this embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and consistent: poor morphology + maternal age + paternal factors = low implantation probability. The <5-10% estimate follows coherently from the evidence presented. The caveat about previous live birth is appropriately nuanced. Minor inconsistency: the response simultaneously suggests the embryo may not reach blastocyst stage while also discussing transfer, without fully resolving whether transfer should proceed at all given the grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: Day 5/6 culture preference, PGT-A recommendation for age 39, sperm DNA fragmentation testing for advanced paternal age, ICSI consideration for suboptimal motility. Gardner grading interpretation is accurate. CoQ10 recommendation is evidence-limited but not contraindicated. The Day 4 transfer critique is valid per current guidelines favoring blastocyst transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: counseling on expectations, luteal support, Day 5/6 culture, PGT-A, sperm DNA fragmentation testing, ICSI, and CoQ10. Each recommendation includes a rationale tied to this specific case. Could be improved by addressing whether to cancel/freeze-all vs. proceed with this transfer more decisively, and by providing specific progesterone protocol details or referral thresholds."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.017838,
+  "judge_latency_ms": 13439.405249999254,
+  "judge_prompt_tokens": 3001,
+  "judge_completion_tokens": 589
+}

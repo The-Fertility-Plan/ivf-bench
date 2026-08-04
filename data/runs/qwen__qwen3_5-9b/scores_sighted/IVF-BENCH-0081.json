@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and correctly identifies ICM and cavity, but overstates visible expansion/thinning and describes a clearly cohesive AA TE that is not fully evident from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior failures, sperm parameters, diagnosis, and endometrium with embryo quality reasonably well, though it overinterprets oocyte yield and lacks nuance about missing AMH and cycle-specific context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling age 35 strongly favorable while later emphasizing age-related egg quality, inferring poor responder status from inconsistent COC/MII counts, and linking low yield directly to implantation probability somewhat too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (proceed with transfer, consider further evaluation after repeated failure), but several are not well aligned: strong endorsement of PGT-A as likely solution, recommending ICSI for paternal age alone, suggesting immune/thrombophilia workup and ERA routinely, and early discussion of donor eggs at age 35 is excessive."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, but some suggested investigations/interventions are insufficiently selective and not well prioritized according to evidence."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013008,
+  "judge_latency_ms": 5544.636916994932,
+  "judge_prompt_tokens": 2646,
+  "judge_completion_tokens": 338
+}

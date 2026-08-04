@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0286",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response appropriately identifies a mismatch between the image and the stated Gardner 3AA grade, noting the image does not show clear blastocyst features such as blastocoel, ICM, or TE. It avoids overcalling morphology, though labeling it specifically as an MII oocyte is somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, oocyte maturity, endometrial thickness, male factor diagnosis, and paternal age with embryo prognosis. It misses some nuance around BMI being only mildly elevated and does not fully explore first-cycle context, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: it flags the image-data discrepancy, then bases prognosis on the lab-reported 3AA grade and patient factors. There is minor overemphasis on paternal age/aneuploidy risk and some inconsistency in calling 3AA 'highest' quality, but conclusions are mostly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on maternal age and endometrial adequacy are guideline-consistent. However, stating expansion 3 means 'expanded blastocyst with thinning zona' is inaccurate under standard Gardner criteria, and the paternal-age risk is somewhat overstated relative to guideline-based prognostication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides assessment and probability but limited concrete management recommendations for the current transfer or future cycles. Practical next steps, contingency planning, and specific transfer/follow-up guidance are largely absent in the provided text."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012405,
+  "judge_latency_ms": 5450.20750000549,
+  "judge_prompt_tokens": 2200,
+  "judge_completion_tokens": 387
+}

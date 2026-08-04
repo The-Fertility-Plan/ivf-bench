@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0671",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the hatching blastocyst (Stage 4), the loosely grouped ICM (Grade B), and the cohesive TE (Grade A), consistent with the Gardner 4BA score. The observation about cytoplasmic homogeneity adds useful detail. However, the image is quite low-resolution and grainy, making definitive ICM/TE distinction difficult; the model describes features with more confidence than the image quality warrants, and some described details (e.g., 'zona thinning significantly' and 'portion protruding outward') are partially inferred from the Gardner score rather than clearly visible in this particular image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, 100% maturation rate, male factor diagnosis with ICSI inference, endometrial thickness, and first-cycle status. It connects these factors meaningfully to prognosis. Minor gaps include not addressing the moderate alcohol consumption (4-6 drinks/week) as a more significant risk factor than BMI, and not discussing the implications of the antagonist protocol or the relatively small cohort size (7 oocytes) for future planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 55-65% follows reasonably from the evidence presented, with clear upward and downward adjustments explained. The baseline reference to national averages is appropriate. Minor inconsistency: the response states TE Grade A is 'particularly predictive of successful implantation' yet only adjusts probability modestly upward, and the euploidy estimate of 60-70% for age 31 is slightly optimistic compared to published data (~55-65%). Overall the chain of reasoning is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines: fresh Day 5 transfer for a non-OHSS-risk patient, luteal phase support, consideration of sperm DNA fragmentation testing for male factor cases, and nuanced PGT-A discussion. The endorsement of fresh transfer is reasonable given low OHSS risk. However, the response does not address the moderate alcohol consumption (4-6 drinks/week) with sufficient clinical weight per reproductive medicine guidelines, which recommend abstinence or minimal alcohol during IVF. The PGT-A discussion is appropriately nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with fresh transfer, ensure luteal support, consider sperm DNA fragmentation testing if cycle fails, lifestyle optimization, and conditional PGT-A discussion. These are clinically useful next steps. The response could be more actionable by specifying progesterone type/dosing considerations, addressing the alcohol consumption directly with a recommendation to reduce/abstain, and providing more detail on the sperm DNA fragmentation threshold that would change management."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019539,
+  "judge_latency_ms": 16082.802791002905,
+  "judge_prompt_tokens": 2898,
+  "judge_completion_tokens": 723
+}

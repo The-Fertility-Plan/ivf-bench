@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but its morphology discussion inferred non-viability, collapse, and degeneration from the text alone. The image appears more like a compacting/poor-quality cleavage-morula stage embryo rather than clearly demonstrating absent ICM/TE or a true blastocyst with visible degenerative structures, so several morphology claims are overstated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior live birth, male factor, endometrium, BMI/lifestyle, and sperm data with embryo prognosis in a clinically meaningful way, though some inferences about sperm DNA fragmentation and lab failure are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it overinterprets the 0DD label, treats the embryo as definitively non-viable, and recommends 'do not transfer' despite the stated transfer day being Day 4 and the grading notation itself being internally inconsistent. Probability reasoning is directionally sensible but somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points align with standard IVF practice (age-related aneuploidy risk, value of cohort review, possible role of ICSI in male factor), but declaring transfer medically contraindicated and strongly recommending PGT-A are not well supported by guidelines for this information set, especially given the ambiguous Day-4/0DD grading context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps including cohort review, consideration of sperm DNA fragmentation testing, ICSI, and future culture strategy. However, the immediate recommendation is too absolute for an ambiguous case, limiting appropriateness."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014661,
+  "judge_latency_ms": 5684.1883750021225,
+  "judge_prompt_tokens": 2852,
+  "judge_completion_tokens": 407
+}

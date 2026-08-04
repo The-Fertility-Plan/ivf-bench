@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It captures a loosely grouped ICM and developing TE reasonably, but it conflicts with the provided Gardner 2BA by calling the embryo a Day 4 blastocyst/late morula and projecting 2BB-3BB, and it adds likely unsupported features such as granularity/vacuolization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, endometrial thickness, oocyte maturity, sperm parameters, and cycle history into prognosis well, though AMH is unavailable and the inference of low reserve from 5 oocytes is somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable inconsistencies: it downgrades morphology relative to the stated lab grade, treats Day 4 blastocyst development as clearly favorable without nuance, and gives somewhat speculative quantitative effects for BMI/endometriosis/stress."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly IVF-consistent, but there are deviations: Gardner grading is already provided yet the response re-grades inconsistently, PGT-A is not routinely indicated at age 26 and endometriosis alone is not a standard reason, and stress/luteal defect claims are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support review, weight optimization, protocol review, and possible endometriosis management, though some recommendations are generic and not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013362,
+  "judge_latency_ms": 4830.865374999121,
+  "judge_prompt_tokens": 2494,
+  "judge_completion_tokens": 392
+}

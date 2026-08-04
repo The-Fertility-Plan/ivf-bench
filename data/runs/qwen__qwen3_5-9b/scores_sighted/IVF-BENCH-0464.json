@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0464",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a blastocyst with a loosely grouped ICM and reasonably cohesive TE, but it misstates the expansion stage as fully expanded/near hatching and describes a thin taut zona and successful hatching, which are not supported by the image or the provided Gardner 2 score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates age, AMH, BMI, PCOS, sperm parameters, and endometrium, but overstates favorable maternal age, labels AMH as robust despite being only modest, and overemphasizes paternal age effects relative to embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but several conclusions are weakly supported or inconsistent, including calling age 37 'prime/favorable,' claiming high euploidy at this age, and heavily discounting prognosis based on paternal age while citing inflated baseline implantation and euploidy assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner components is partly appropriate, but there are notable deviations from evidence-based counseling: paternal age is overstated as a major aneuploidy driver, PGT-A is presented too strongly, and the claim that euploid embryo implantation exceeds 90% is not guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps—proceed with transfer, maintain luteal support, discuss nutrition, and consider future PGT-A/freeze-all—though some recommendations are not sufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013827,
+  "judge_latency_ms": 5245.126875001006,
+  "judge_prompt_tokens": 2649,
+  "judge_completion_tokens": 392
+}

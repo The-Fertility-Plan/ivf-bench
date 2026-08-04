@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided 3AB score. Its descriptions broadly match the assigned grade, but it inaccurately equated stage 3 with an expanded blastocyst/thinning zona (more consistent with stage 4), so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve/response, semen data, endometrial thickness, and lifestyle factors with embryo quality and prognosis. Some links are speculative, especially around male factor etiology and fresh-cycle receptivity, preventing a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is well organized and generally logical, with the probability estimate tied to age, morphology, and patient modifiers. Minor issues include overstatement of ICM as the strongest predictor and some speculative assumptions, but overall reasoning remains coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-aligned, but there are notable deviations: misstatement of Gardner stage 3 vs expanded blastocyst, strong endorsement of routine PGT-A/freeze-all in this scenario, and suggestions like acupuncture/cortisol effects that are not guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer, luteal support, lifestyle advice, and future evaluation/planning. However, some recommendations are somewhat generic or speculative rather than tightly tailored to standard clinical decision pathways."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014643,
+  "judge_latency_ms": 5584.296667002491,
+  "judge_prompt_tokens": 2976,
+  "judge_completion_tokens": 381
+}

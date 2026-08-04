@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately describes the embryo as having indistinct cell boundaries, granular cytoplasm with dark inclusions, and lack of clear cavitation. It correctly identifies the absence of identifiable ICM and TE structures, consistent with the 1DD grading. The description of a compacted multi-cellular structure aligns with the image. The model also appropriately flags the discrepancy between Day 4 transfer and Gardner scoring system designed for Day 5-7. Minor deduction for not commenting more specifically on zona pellucida characteristics."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The model connects maternal age (38) to expected aneuploidy rates, links the 1DD morphology to the history of biochemical pregnancies (suggesting aneuploidy pattern), identifies the suboptimal endometrial thickness (7.6mm), flags the low BMI as a risk factor for implantation, considers paternal DNA fragmentation as a potential contributor to poor embryo quality, and contextualizes the ovarian response relative to age. The interaction between multiple factors is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logical throughout. The model correctly identifies that a 1DD embryo lacks viable ICM and TE lineages, making it biologically incapable of sustained development. It logically connects the history of biochemical pregnancies to likely aneuploidy, and the probability estimate of 0-5% (live birth <2%) follows directly from the severe morphological compromise. The conclusion that any implantation would likely result in biochemical pregnancy is consistent with the patient's history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The model correctly applies Gardner grading criteria and appropriately notes the discrepancy between Day 4 transfer and the Gardner system designed for later-stage blastocysts. The endometrial thickness threshold discussion aligns with clinical evidence. The assessment of BMI <18.5 as underweight and its implications is evidence-based. Minor deduction because the response was cut off before completing recommendations, and some clinicians might debate whether 7.6mm is truly suboptimal (some guidelines accept ≥7mm)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was truncated before completing the implantation probability reasoning and before reaching the recommendations section (Section 5). While the risk-benefit table and probability estimate provide some guidance, the actual clinical recommendations for this transfer and future cycle planning are missing entirely due to the cutoff. This significantly limits the actionability of the response."
+    }
+  ],
+  "extracted_probability": 0.025,
+  "judge_cost_usd": 0.02712,
+  "judge_latency_ms": 14021.10387495486,
+  "judge_prompt_tokens": 2284,
+  "judge_completion_tokens": 628
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score (expanded blastocoel, thinned zona, compact ICM, cohesive TE). However, the description largely mirrors the laboratory data provided rather than demonstrating independent image analysis. There is no mention of specific visual details that would only be apparent from the image itself, such as color, granularity, or specific cell count estimates, suggesting the description is primarily derived from the provided Gardner score rather than genuine image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, endometriosis diagnosis, previous cycle failure, sperm parameters, endometrial thickness, and lifestyle factors. It connects these to embryo quality and implantation potential in a meaningful way. Minor gap: BMI (22.1, normal) is not explicitly discussed, and the interaction between endometriosis stage/severity and outcomes could be more nuanced given the lack of staging information."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-60% follows reasonably from the baseline adjustment framework presented. The response correctly identifies the embryo quality as a strong positive while appropriately discounting for endometriosis, previous failure, borderline endometrial thickness, and lifestyle factors. Minor inconsistency: the response initially states endometrial thickness ≥7mm is acceptable but then later says optimal is ≥8mm, creating a slight contradiction in the threshold used."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for young patients with good quality blastocysts, ERA consideration for recurrent implantation failure, luteal phase support, hysteroscopy before transfer, chronic endometritis screening, and PGT-A as a future option. The endometrial scratch recommendation appropriately notes mixed evidence. The suggestion of GnRH agonist suppression for endometriosis prior to transfer aligns with current evidence. Minor issue: PGT-A is suggested somewhat prematurely given patient age and single prior failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and well-organized into immediate transfer recommendations and future cycle planning. Concrete steps are provided including ERA, hysteroscopy, CD138 biopsy, thrombophilia screening, and lifestyle modifications. The response provides clear rationale for each recommendation. Could be slightly more actionable by specifying timing of interventions, dosing considerations for luteal support, or specific endometriosis staging workup protocols, but overall provides strong clinical guidance."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020448,
+  "judge_latency_ms": 14317.563083001005,
+  "judge_prompt_tokens": 3541,
+  "judge_completion_tokens": 655
+}

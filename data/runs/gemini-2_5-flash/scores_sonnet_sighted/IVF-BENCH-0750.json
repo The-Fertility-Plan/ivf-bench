@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocoel, compact ICM, cohesive TE). However, the image actually appears to show a somewhat degenerate or poor-quality blastocyst with fragmented/dark cellular debris, irregular structures, and what appears to be a degenerating ICM rather than a pristine 3AA embryo. The model largely echoes the provided Gardner score rather than critically analyzing the image, missing visible abnormalities like the dark granular mass and irregular cellular structures visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: age 37 with aneuploidy risk, AMH/FSH indicating adequate ovarian reserve, good ovarian response (11 COCs/8 MII), normal sperm parameters, excellent endometrial thickness (13mm), unexplained infertility diagnosis, and healthy lifestyle. The interactions between these factors and embryo quality are clearly articulated. Minor gap: BMI of 26 is not specifically discussed in context of outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-75% implantation probability estimate is reasonably derived from the stated factors (high-quality blastocyst, good endometrial thickness, age-related aneuploidy risk). The response correctly identifies that PGT-A confirmation of euploidy would increase the estimate. The reasoning flows coherently from observations to conclusions without major contradictions, though the probability estimate may be slightly optimistic given the patient's age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation for a 37-year-old with a top-grade blastocyst is appropriate, luteal phase support is mentioned, PGT-A consideration for age 37 is guideline-consistent, cryopreservation of remaining embryos is standard practice. Beta-hCG timing (9-11 days post-transfer) is appropriate. The response correctly notes the aneuploidy risk at age 37 per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET recommendation with clear rationale, luteal phase support, specific beta-hCG timing, PGT-A consideration for future cycles, embryo cryopreservation, and conditional further workup if recurrent failure occurs. The response provides a clear decision tree for both current transfer and future planning. Could be slightly more specific about progesterone supplementation protocols or ERA testing thresholds, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020949,
+  "judge_latency_ms": 14008.099790997221,
+  "judge_prompt_tokens": 3663,
+  "judge_completion_tokens": 664
+}

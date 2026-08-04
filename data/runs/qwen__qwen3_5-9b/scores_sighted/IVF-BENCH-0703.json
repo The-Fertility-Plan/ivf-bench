@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0703",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as clearly confirming a 3AA with tightly packed ICM and cohesive numerous TE; in this image the ICM is not sharply defined, TE is not distinctly visualized as a uniform epithelium, and claims about thinning in a specific quadrant/ready to hatch are stronger than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, smoking, endometrial thickness, male factor, prior cycle, and ovarian response with embryo quality in a clinically meaningful way, though it somewhat overstates links such as motility implying DNA fragmentation and does not fully nuance the limited predictive value of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it starts from an arguably inflated base implantation rate for a 3AA, applies unsupported percentage deductions, and recommends proceeding fresh while simultaneously emphasizing a suboptimal endometrium without adequately reconciling that tradeoff."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF practice: 'do not freeze' because the embryo is too valuable is not guideline-based, ERA after a single failed transfer is not routinely recommended, and routine high-dose antioxidants/extra progesterone for thin lining are not strongly supported. Smoking cessation and weight optimization are appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current transfer and future planning, including smoking cessation, luteal support consideration, sperm DNA fragmentation testing, and weight management. However, some actions are too directive or insufficiently nuanced given the evidence."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013911,
+  "judge_latency_ms": 6159.194457999547,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 395
+}

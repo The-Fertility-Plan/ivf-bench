@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it overstates visible features: the embryo does not appear hatched, TE is not clearly well visualized as a distinct cohesive epithelium in this image, and the image alone supports only limited confidence beyond the provided 3AA label."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte maturity yield, male factor, prior biochemical pregnancy, smoking, and endometrial thickness with embryo quality in a clinically meaningful way, though it somewhat overinterprets AMH as suggesting PCOS without diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible implantation estimate tied to embryo grade and patient factors; minor issues include unsupported inference about PCOS and linking low MII yield directly to implantation potential of this specific embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles on morphology, smoking cessation, and single good-quality blastocyst transfer, but includes less-supported statements such as prior biochemical pregnancy proving uterine receptivity and suggesting luteal phase defect investigation from low MII yield."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, and future-cycle review, including smoking cessation and protocol reassessment; however, recommendations could be more specific regarding SET, lab review of maturation trigger/timing, and when PGT-A would or would not be indicated."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013479,
+  "judge_latency_ms": 5207.884333998663,
+  "judge_prompt_tokens": 2583,
+  "judge_completion_tokens": 382
+}

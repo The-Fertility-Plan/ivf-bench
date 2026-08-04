@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a poor-quality early blastocyst/1DD, noting poor expansion, absent/degenerate ICM, and poor TE. However, it over-interprets specific structures (e.g., calling the left spherical area a vacuole/degenerate ICM) and adds details like intercellular gaps and debris that are not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, prior IVF outcomes, sperm parameters, endometrial thickness, BMI, and ovarian response with embryo quality in a clinically meaningful way. Slightly overstates some links, but overall connects patient factors to prognosis well."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical: very poor morphology plus age/endometriosis leads to low prognosis. Minor issues include somewhat arbitrary numeric 'penalties' and strong causal claims about aneuploidy or arrest that are not fully supportable from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing very poor prognosis and emphasizing counseling, but recommendations such as ERA after two failures, routine PGT-A as 'strongly recommended,' LH supplementation benefit in endometriosis, and donor-oocyte discussion are more aggressive or less guideline-supported than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, transfer decision-making, luteal support review, and future workup/planning. Some suggestions are practical, though a few are speculative or not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.015117,
+  "judge_latency_ms": 5859.619417009526,
+  "judge_prompt_tokens": 3139,
+  "judge_completion_tokens": 380
+}

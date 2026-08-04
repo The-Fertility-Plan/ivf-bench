@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided describing specific embryo morphology. It did make a speculative assumption that a Day 5 transfer implies at least a full expansion/typically >=3BB, which is not guaranteed from the image alone, so not perfect."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, AMH, oocyte yield, diagnosis, endometrial thickness, sperm parameters, lifestyle, and first-cycle status into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age and cohort factors. Minor issues include speculative assumptions about ICSI use, expected blastocyst numbers, and minimum transfer grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, cryopreservation of viable embryos, and considering PGT-A after failure are broadly evidence-based. Slight overstatement around routine ICSI necessity and PGT-A benefit prevents a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for the current transfer and contingency planning, though some advice remains somewhat generic and based on assumptions rather than case-specific embryology details."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013479,
+  "judge_latency_ms": 5598.74120799941,
+  "judge_prompt_tokens": 2813,
+  "judge_completion_tokens": 336
+}

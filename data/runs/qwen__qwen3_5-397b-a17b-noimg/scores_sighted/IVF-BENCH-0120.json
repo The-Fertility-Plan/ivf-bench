@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0120",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model explicitly noted no image was available and based morphology on the provided Gardner 4AA grade rather than inventing unseen features. Its description of a hatching/expanded blastocyst with strong ICM and TE matches the lab grade and is broadly consistent with the image, though it did not independently assess image-specific details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, tubal factor diagnosis, endometrial thickness, prior failed cycles/miscarriage, partner age, and semen parameters with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear adjustment from strong embryo morphology to a moderated prognosis due to prior failures. Minor issues include labeling the history as RIF/RPL somewhat loosely and some speculative emphasis on paternal age/SDF."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (eSET, avoid empiric immunotherapy, consider uterine evaluation after repeated failure), but there are deviations: calling eSET 'mandatory,' suggesting ERA relatively early, and recommending inherited thrombophilia workup/PGT-A in a young patient more strongly than guidelines typically support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including luteal support review, selective thrombophilia-based adjuncts, sperm DNA fragmentation testing, and uterine evaluation. Some recommendations are useful but a few are more aggressive than standard practice."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014832,
+  "judge_latency_ms": 5076.5479170077015,
+  "judge_prompt_tokens": 3064,
+  "judge_completion_tokens": 376
+}

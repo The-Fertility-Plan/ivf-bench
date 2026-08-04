@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was provided and declined to describe morphology, avoiding fabrication. It made no incorrect morphological claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, ovarian reserve, prior failed cycles, sperm, endometrium, and lifestyle factors well, with appropriate emphasis on age-related aneuploidy, though some links were somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability ranges tied to assumed embryo quality and patient factors. Minor weakness: estimates are necessarily speculative without morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling, luteal support, consideration of PGT-A), but endorsing ERA after two failures is not strongly guideline-supported and the statement that sperm parameters are normal is questionable given concentration 9 M/mL."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, luteal support, counseling, PGT-A discussion, weight management, and further uterine evaluation, though some recommendations are broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.014316,
+  "judge_latency_ms": 4432.014207995962,
+  "judge_prompt_tokens": 3172,
+  "judge_completion_tokens": 320
+}

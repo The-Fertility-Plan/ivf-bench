@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and Stage 2 early blastocyst, which conflicts with the provided Gardner 2AA full blastocyst assessment; it also omits meaningful ICM/TE evaluation and ends incomplete."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The visible response does not integrate patient factors such as age, BMI, tubal factor diagnosis, ovarian response, sperm parameters, or endometrial thickness with embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The morphology reasoning is internally structured, but it is based on an incorrect stage assignment and the answer is truncated, preventing a complete and well-supported clinical conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of compaction/cavitation terminology is broadly embryology-consistent, but the staging conflicts with Gardner grading provided in the case and no evidence-based transfer recommendations are completed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No practical recommendations for transfer management or future cycle planning are provided in the visible response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.008289,
+  "judge_latency_ms": 3392.316083001788,
+  "judge_prompt_tokens": 1273,
+  "judge_completion_tokens": 298
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0077",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misstates the expansion stage by calling it a hatching blastocyst/Stage 4 when Gardner 4 is expanded and hatching would be Stage 5. It also overconfidently describes a clearly visible cohesive TE and distinct ICM despite the image being limited and somewhat indistinct. Some general observations are reasonable, but there are notable morphology inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior live birth, sperm parameters, BMI, PCOS, and endometrial thickness with embryo quality in a clinically meaningful way. However, it overinterprets PCOS as DOR/poor responder and makes some assumptions not fully supported by the data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are important inconsistencies: it equates Gardner 4 with hatching, treats morphology as a stronger surrogate for euploidy than warranted, and infers likely lack of embryos in reserve without evidence. Probability estimates are plausible but somewhat overstated relative to the uncertainties."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and no assisted hatching are broadly guideline-consistent, but there are deviations: incorrect Gardner stage interpretation, overly strong endorsement of PGT-A in a low-yield patient, and suggesting metformin/checking progesterone in a way that is more individualized than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for this transfer and future planning, including SET, avoiding assisted hatching, luteal support review, and discussing future protocol options. Some suggestions are useful but a few are speculative or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014376,
+  "judge_latency_ms": 5626.449458010029,
+  "judge_prompt_tokens": 2762,
+  "judge_completion_tokens": 406
+}

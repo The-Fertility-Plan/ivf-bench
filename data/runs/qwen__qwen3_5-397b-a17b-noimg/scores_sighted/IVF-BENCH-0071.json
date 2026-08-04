@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the provided Gardner score. Its comments are broadly consistent with the lab grade, but it repeated the prompt's inaccurate definition of stage 3 as 'expanded blastocyst' and called 3AA 'top-tier' without acknowledging the image appears more consistent with an early/full blastocyst rather than a clearly expanded one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH, ovarian response, maturation rate, tubal factor diagnosis, endometrial thickness, BMI/lifestyle, and paternal age with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, linking morphology, age-related aneuploidy risk, and uterine factors to prognosis. Minor issues include overconfidence in morphology and some speculative attribution of the low MII rate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including SET for a good-quality day-5 blastocyst and counseling about morphology versus euploidy. Small deviations include overstating 3AA as the highest possible score and somewhat speculative trigger-timing advice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support review, counseling, and future-cycle considerations such as trigger review and possible PGT-A/DFI testing. Some suggestions are useful but not fully individualized or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015054,
+  "judge_latency_ms": 6625.782749993959,
+  "judge_prompt_tokens": 3063,
+  "judge_completion_tokens": 391
+}

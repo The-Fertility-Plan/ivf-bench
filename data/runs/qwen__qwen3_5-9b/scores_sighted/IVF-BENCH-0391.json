@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0391",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a very poor-quality pre/early blastocyst with absent distinct ICM/TE, but overstates visibility of a blastocoel and gives questionable details like a small central clearing and visible cell count that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, smoking, prior IVF failures/miscarriages, endometrium, ovarian reserve markers, and sperm data with prognosis reasonably well, though some claims about paternal age effects are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the very low implantation estimate follows from the poor morphology and age/history, but there are some overreaches such as calling paternal age a primary driver and implying PGT-A would likely identify this embryo as aneuploid with near certainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with counseling a 0DD embryo as very poor prognosis and discussing smoking cessation and possible PGT-A, but it overstates evidence around paternal age/SDF, suggests PGT-A too strongly for this exact scenario, and implies certainty beyond morphology-based grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling on low prognosis, smoking cessation, consideration of PGT-A, sperm DNA fragmentation testing, and donor oocyte counseling, though recommendations could be more nuanced about whether transfer should proceed and limitations of testing."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013314,
+  "judge_latency_ms": 5477.785292008775,
+  "judge_prompt_tokens": 2678,
+  "judge_completion_tokens": 352
+}

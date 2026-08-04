@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score (expanded blastocyst, thinned zona, tightly packed ICM, cohesive TE epithelium). However, the description largely mirrors the laboratory data provided rather than demonstrating independent visual analysis of the image. The description of ICM as 'centrally located' may not be accurate for all blastocysts and appears assumed rather than observed. No unique morphological observations beyond what the Gardner score already conveys are offered, suggesting limited independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: female age, AMH, FSH, oocyte yield, endometrial thickness, lifestyle factors, male factor diagnosis, and previous cycle failure are all addressed and connected to prognosis. The interaction between male factor infertility and potential aneuploidy risk is noted. The previous failed cycle is acknowledged with appropriate nuance. Minor gap: sperm parameters (24.8 M/mL, 40.6% motile) are borderline oligoasthenozoospermia and could have been more critically analyzed in terms of ICSI necessity and DNA fragmentation risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 60-70% follows coherently from the evidence presented, with appropriate justification for both the lower and upper bounds. The response correctly identifies that morphology does not guarantee euploidy and that male factor introduces some aneuploidy risk. Minor inconsistency: the response simultaneously describes the 3AA grade as 'mitigating concern significantly' for aneuploidy while also noting it as a risk factor, which is slightly contradictory in emphasis though not logically wrong."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: SET recommendation for a 34-year-old with a top-quality blastocyst is appropriate, luteal phase support is mentioned, PGT-A is suggested as a future consideration rather than mandatory, and ERA is appropriately deferred to recurrent implantation failure scenarios. The Gardner grading criteria are correctly applied. Minor gap: no mention of freeze-all strategy considerations or specific progesterone supplementation protocols, and the response doesn't address whether this is a fresh or frozen transfer cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and practical: proceed with SET, continue luteal support, schedule beta-hCG and ultrasound monitoring, cryopreserve remaining embryos, consider PGT-A if needed, review previous cycle details if transfer fails, and consider ERA for recurrent failure. These are specific and clinically useful. However, some recommendations lack specificity (e.g., no mention of specific progesterone dosing, timing of beta-hCG testing, or specific thresholds for ERA consideration), and the recommendation to 'maintain healthy lifestyle' is generic."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.02094,
+  "judge_latency_ms": 14898.024292000628,
+  "judge_prompt_tokens": 3340,
+  "judge_completion_tokens": 728
+}

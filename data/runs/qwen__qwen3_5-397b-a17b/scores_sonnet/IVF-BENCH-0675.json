@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BB Gardner score: expanded blastocoel with thinning zona pellucida, loosely grouped ICM at approximately 7 o'clock position, and sparse TE forming a loose epithelium. The description aligns well with the provided grade. Minor limitation is that the response largely echoes the Gardner score description rather than providing independent visual observations that go beyond the label, but the characterization is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all major clinical factors: age (31) linked to euploidy risk, BMI 40.4 connected to follicular environment and implantation rates, smoking linked to oxidative stress and uterine blood flow, endometriosis tied to inflammatory environment, two prior failed cycles flagged as recurrent implantation failure concern, borderline sperm motility connected to DNA fragmentation risk, and optimal endometrial thickness noted as favorable. The interactions between these factors and embryo quality are explicitly discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 25-35% follows logically from the stepwise reasoning: baseline ~50-60% for age/day 5 blastocyst, adjusted down for 3BB grade, then further reduced for BMI, smoking, and prior failures. The reasoning is internally consistent and conclusions are supported by the evidence presented. Minor issue: the response ends abruptly at recommendation #5 suggesting incomplete output, and the quantitative adjustments for each risk factor are somewhat approximate without strong citation basis, but the overall logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation given high BMI and multiple pregnancy risk, robust luteal support for endometriosis patients, PGT-A discussion for recurrent implantation failure, ERA testing for displaced window of implantation in endometriosis, sperm DNA fragmentation testing for borderline motility. Weight management referral before transfer is consistent with ASRM obesity guidelines. The response correctly identifies asthenozoospermia threshold considerations. No major guideline contradictions noted."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with clear rationale, immediate smoking cessation, combination luteal support protocol, bariatric referral with specific weight loss targets (5-10%), PGT-A for future cycles, sperm DNA fragmentation testing, and ERA if this transfer fails. The response provides clear sequencing of next steps. Slight deduction because recommendation #5 is incomplete (truncated), and some recommendations lack specific dosing or protocol details that would further aid clinical implementation."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.018534,
+  "judge_latency_ms": 13672.669083003711,
+  "judge_prompt_tokens": 2848,
+  "judge_completion_tokens": 666
+}

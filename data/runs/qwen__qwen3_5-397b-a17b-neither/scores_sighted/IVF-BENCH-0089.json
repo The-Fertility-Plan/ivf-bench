@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific morphology. However, it did not analyze the visible embryo image, so morphology assessment is largely omitted rather than precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, prior biochemical pregnancies, endometrial thickness, oocyte maturity, and male factor into prognosis reasonably well, though some links (e.g., presumed sperm DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates broadly matching the discussed factors. Minor issues include speculative attribution of male factor and somewhat confident causal inferences from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but some suggestions are not strongly guideline-based or are overstated, such as ERA after limited failures, thrombophilia workup/aspirin for biochemical pregnancies, and calling PGT-A highly recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for luteal support, beta monitoring, protocol review, sperm DNA fragmentation testing, and future planning. Some recommendations are useful but a few are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014016,
+  "judge_latency_ms": 10038.894500001334,
+  "judge_prompt_tokens": 3012,
+  "judge_completion_tokens": 332
+}

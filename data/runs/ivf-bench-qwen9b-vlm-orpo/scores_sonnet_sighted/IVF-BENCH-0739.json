@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies key features like blastocoel cavity, thinned zona pellucida, and a denser cell cluster as ICM, and correlates with the 4AA grade. However, the description is somewhat hedged and imprecise - noting the ICM 'is not perfectly sharp' and the TE 'appears relatively cellular.' The image shows a large, granular mass that is somewhat atypical for a classic 4AA hatching blastocyst, with notable cytoplasmic debris and irregular texture that the model does not critically address. The model largely defers to the lab-reported grade rather than independently analyzing the image features in detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most relevant clinical factors: age 36 with aneuploidy risk, BMI 31.3 impact on implantation, male factor with reduced motility (32%) and partner age 42 raising sperm DNA fragmentation concerns, prior miscarriage as a risk signal, AMH/FSH as reassuring, endometrial thickness as adequate, and lifestyle factors. The interaction between male factor sperm parameters and embryo competence is specifically addressed. Minor gap: the response could more explicitly connect the prior miscarriage to possible embryo aneuploidy given the male factor context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The 40-55% implantation estimate is reasonably justified by the balance of favorable (high-grade blast, good lining, healthy lifestyle) and unfavorable factors (age, BMI, prior miscarriage, sperm quality). The outcome table is internally consistent. Minor issue: the response simultaneously expresses confidence in the embryo quality while heavily caveating with euploidy uncertainty, which is appropriate but occasionally feels slightly circular."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, no evidence-based bed rest, adequate luteal support, PGT-A discussion framed as optional rather than mandatory, sperm DNA fragmentation testing suggestion for male factor with reduced motility, and recurrent loss workup criteria appropriately deferred to repeated events. The Gardner grading system is correctly applied. The response appropriately avoids overpromising PGT-A benefits. Minor gap: could reference specific ESHRE guidelines on BMI thresholds or male factor workup more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: single embryo transfer, optimize luteal support, continue lifestyle habits, avoid post-transfer bed rest, sperm DNA fragmentation testing, PGT-A consideration for future cycles, and a structured recurrent loss workup pathway if needed. The long-term planning section adds practical value. The offer to create a counseling note or cycle forecast adds utility. Slight deduction because some recommendations (e.g., 'optimize progesterone support per clinic protocol') remain somewhat generic, and specific progesterone dosing or monitoring thresholds are not addressed."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.02253,
+  "judge_latency_ms": 17182.284542010166,
+  "judge_prompt_tokens": 3735,
+  "judge_completion_tokens": 755
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the embryo as being at a morula-to-early-blastocyst transition and notes disorganized cellular structure and granular cytoplasm. It appropriately flags the discrepancy between the Gardner score description and the numeric grade. However, it lacks specific observations about the zona pellucida, perivitelline space, and fragmentation patterns. The description of 'collapsing cavity' is speculative and not clearly supported. The DD grading interpretation as degenerative is accurate per Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model astutely identifies the paradox between the patient's young age and poor embryo quality, questions the DOR diagnosis given the robust ovarian response (12 COCs, 9 MII), highlights the disconnect between good sperm parameters and embryo degeneration, and raises the possibility of sperm DNA fragmentation or cytoplasmic maturity issues. The endometrial thickness, lifestyle factors, and BMI are all appropriately contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logically structured. The model builds a clear narrative from morphological assessment through clinical integration to probability estimation. The <1-2% implantation probability is well-justified by the DD grading. The identification of the DOR diagnosis as potentially questionable given the response is logically sound. No contradictions are present, and conclusions follow naturally from the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with established guidelines. The Gardner grading interpretation is accurate, the recommendation against transferring a DD embryo is consistent with standard practice, and the suggestion to culture to Day 5/6 in future cycles follows ESHRE/ASRM recommendations. The note about the expansion grade discrepancy shows knowledge of the grading system. Minor deviation: the model could have more explicitly referenced guidelines about minimum embryo quality thresholds for transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations covering both the current transfer and future planning. Specific suggestions include: sperm DNA fragmentation testing, re-evaluating DOR with AMH/AFC, considering ICSI, culturing to blastocyst stage, protocol alternatives (microdose flare, estrogen priming), and CoQ10 supplementation. The counseling recommendation about managing expectations is practical and appropriate. The decision framework for proceeding vs. waiting is clinically useful."
+    }
+  ],
+  "extracted_probability": 0.015,
+  "judge_cost_usd": 0.028605,
+  "judge_latency_ms": 13595.737292023841,
+  "judge_prompt_tokens": 2671,
+  "judge_completion_tokens": 610
+}

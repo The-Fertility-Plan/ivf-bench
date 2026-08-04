@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general blastocyst features consistent with the Gardner 2AA score, including ICM compactness and TE cohesiveness. However, there is a notable error: the model states 'The blastocoel occupies almost the entire embryo, leaving only a thin layer of cells' and suggests the embryo 'has successfully hatched or is about to hatch,' which is inconsistent with a Grade 2 expansion (full blastocyst, not hatching). Grade 5-6 would indicate hatching. The image actually shows a Grade 2 full blastocyst with visible zona pellucida intact. This is a meaningful inaccuracy in expansion stage interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo quality — linking age 37 and FSH 7.4 to aneuploidy risk, endometriosis to receptivity concerns, and prior ectopic to tubal pathology. It correctly identifies the tension between excellent morphology and challenging clinical history. Minor gap: AMH is listed as N/A but the model doesn't acknowledge this missing data point as a limitation in ovarian reserve assessment, and the low MII yield (6/13 COCs) could have been explored more deeply as a quality indicator."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability adjustment from morphological baseline (60-70%) down to 30-45% based on clinical factors is coherent and appropriately justified. The aneuploidy probability framing (~50-60% at age 37) is reasonable. Minor inconsistency: the model describes the expansion grade as suggesting near-hatching status, which contradicts the Grade 2 classification it also accepts, but this doesn't significantly undermine the overall clinical reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines. PGT-A recommendation for age 37 with RIF history is appropriate per current guidelines. Ectopic surveillance protocol is clinically sound. Luteal phase support recommendation is standard. Sperm DNA fragmentation testing for RIF is consistent with ESHRE RIF guidelines (2023). The suggestion of hysteroscopy to rule out uterine pathology in RIF is also guideline-supported. Minor issue: the model slightly overstates PGT-A euploid success rates ('>90%') which is higher than most published data (~60-70% per transfer for euploid embryos at this age)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: serial beta-hCG schedule, early TVU timing, PGT-A rationale, hysteroscopy, and sperm DNA fragmentation testing are all concrete next steps. The ectopic surveillance protocol is particularly well-specified. Could be improved by addressing endometriosis-specific interventions (e.g., ERA testing given RIF, or GnRH agonist downregulation before FET in endometriosis patients), and by discussing single vs. double embryo transfer policy given the ectopic history."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020937,
+  "judge_latency_ms": 17322.115250004572,
+  "judge_prompt_tokens": 3084,
+  "judge_completion_tokens": 779
+}

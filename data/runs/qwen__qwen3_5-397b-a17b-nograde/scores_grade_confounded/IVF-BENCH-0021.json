@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/compacted morula and states Gardner scoring is not applicable, despite the provided laboratory grade being 0DD (early blastocyst with absent/degenerative ICM and TE). It also describes positive features such as homogeneous cytoplasm and no fragmentation that are not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates several relevant factors well, including age, AMH, oocyte yield, smoking, sperm motility, endometrial thickness, and transfer timing, and relates them to prognosis. However, some interpretations are overextended and not tightly linked to the actual poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning has major internal issues because the embryo is treated as a viable morula rather than the documented 0DD early blastocyst with degenerative ICM/TE. The implantation estimate and recommendation to proceed are therefore based on a flawed morphological premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some recommendations are broadly evidence-based (smoking cessation, luteal support, considering blastocyst culture), the dismissal of Gardner grading and the prognosis assigned to a 0DD embryo are not well aligned with standard embryo assessment principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps such as proceeding with transfer, ensuring luteal support, smoking cessation, reviewing diagnosis, optimizing trigger timing, and considering extended culture. However, actionability is weakened by recommendations built on an incorrect embryo classification."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013182,
+  "judge_latency_ms": 4371.446375000232,
+  "judge_prompt_tokens": 2404,
+  "judge_completion_tokens": 398
+}

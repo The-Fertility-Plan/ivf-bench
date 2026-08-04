@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not view the image and avoided fabricating specific ICM/TE/zona findings. However, it incorrectly framed the embryo mainly as a Day 4 morula/early blast context despite the image showing a blastocyst-like embryo with visible cavity and cellular differentiation, so morphology was largely omitted and partly miscontextualized."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well, including maternal age, BMI, endometriosis, ovarian response, prior failed cycle, partner age, semen parameters, and endometrial thickness, and linked them to prognosis and embryo competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear chain from patient factors to prognosis and recommendations. Minor issues include overemphasis on Day 4 transfer as inherently inferior and some speculative statements about why Day 4 transfer occurred."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: PGT-A is presented as strongly recommended in a 35-year-old after only one failed cycle, and Day 4 transfer is characterized somewhat too negatively. The statement that Gardner scoring is only validated for Day 5/6 is also overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including luteal support review, possible sperm DNA fragmentation testing, blastocyst culture, weight optimization, and endometriosis suppression considerations. Some recommendations are somewhat generic or stronger than guideline support."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014835,
+  "judge_latency_ms": 5156.256957998266,
+  "judge_prompt_tokens": 2915,
+  "judge_completion_tokens": 406
+}

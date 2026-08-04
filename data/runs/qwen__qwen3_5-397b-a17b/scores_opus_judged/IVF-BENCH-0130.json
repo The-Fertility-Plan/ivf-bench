@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0130",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The morphological description is consistent with the Gardner 3AA grading provided. The model describes expansion, thinning zona, tightly packed ICM, and cohesive TE appropriately. It identifies the ICM location ('right side') which suggests engagement with the image. Minor limitation is that the description largely mirrors the lab data rather than providing independent image-based observations beyond what was already given, but no fabricated or contradictory features were noted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model astutely notes the contrast between quality and quantity, interprets FSH 9.1 as potentially concerning for a 28-year-old, highlights the previous live birth as a major positive prognostic factor, contextualizes the ectopic and biochemical pregnancy history, evaluates sperm parameters, and considers lifestyle factors. The 'Quality vs. Quantity' framing is particularly insightful. AMH being N/A is appropriately handled by inferring from other markers."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logical and well-structured throughout. The probability estimate of 55-65% is well-justified with clear positive and negative adjustments from a reasonable baseline. The acknowledgment that the live birth resolves absolute RIF but doesn't eliminate concern is nuanced. The conclusion that young age and excellent morphology drive probability up while mixed history tempers it is coherent. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET for a young patient with good-quality embryo, luteal phase support, early monitoring for ectopic risk, and PGT-A consideration for future cycles. The suggestion of low-dose aspirin/heparin is appropriately hedged. The mention of microdose flare protocol for potential DOR is reasonable. Minor note: the aneuploidy rate cited (30-40% at age 28) may be slightly high compared to some references, but is within a reasonable range."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations with clear specificity: eSET recommendation with rationale, early beta-hCG and 6-week ultrasound for ectopic monitoring, specific protocol alternatives (microdose flare) for future cycles, PGT-A consideration with reasoning, lifestyle modifications, and a contingency plan (RIF workup including hysteroscopy and thrombophilia screening) if the transfer fails. Recommendations are nuanced and case-specific rather than generic."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.029455,
+  "judge_latency_ms": 14682.291665987577,
+  "judge_prompt_tokens": 2726,
+  "judge_completion_tokens": 633
+}

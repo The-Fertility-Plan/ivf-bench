@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate embryo morphology. It therefore avoided inaccuracies, but provided no actual morphological assessment despite the visible image in the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well: young age, ovarian reserve, oocyte yield, male factor context, BMI, smoking, endometrium, and first-cycle status, and linked these to prognosis. It missed some nuance around how day-4 morphology would interact with these factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the probability range tied to favorable age/reserve and uncertainty from smoking and unknown embryo quality. Minor overstatement exists regarding the impact magnitude of smoking and the interpretation of endometrial thickness as unequivocally excellent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including smoking cessation, luteal support, and considering blastocyst culture. However, suggesting PGT-A in a 29-year-old first-cycle patient with male factor as a routine consideration is not strongly guideline-driven, and calling smoking cessation a strict requirement is stronger than standard guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including counseling, smoking cessation, embryo discussion, and possible further testing. Some recommendations are somewhat generic and not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014883,
+  "judge_latency_ms": 5495.729209011188,
+  "judge_prompt_tokens": 3101,
+  "judge_completion_tokens": 372
+}

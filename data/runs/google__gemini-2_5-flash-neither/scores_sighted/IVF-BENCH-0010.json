@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate embryo morphology; therefore it made no inaccurate visual claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, endometriosis, oocyte yield, sperm parameters, FSH, endometrium, and transfer timing into prognosis, though some links were somewhat generalized and morphology-specific integration was necessarily absent."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the probability estimate tied to favorable age and detractors like endometriosis/obesity; minor issues include speculative interpretation of Day 4 transfer and low oocyte yield significance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggestions such as ERA in this context, intralipids/corticosteroids, and relatively favorable implantation estimates without embryo morphology are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer support, lifestyle optimization, endometriosis management, and future cycle planning, though some recommendations are broad and a few are speculative rather than tightly protocol-driven."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015501,
+  "judge_latency_ms": 4280.37266600586,
+  "judge_prompt_tokens": 3682,
+  "judge_completion_tokens": 297
+}

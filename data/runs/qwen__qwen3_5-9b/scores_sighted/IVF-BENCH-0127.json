@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0127",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Mostly accurate description of an expanded blastocyst with visible blastocoel, left-sided ICM, cohesive TE, and thinning zona. Slight overstatement such as 'aligns perfectly' and some features are inferred more confidently than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, prior miscarriage, male factor, sperm parameters, endometrium, and oocyte yield with embryo quality. However, it overemphasizes paternal age and labels FSH 8.8 as suggesting DOR without AMH, which is not fully supported."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable reasoning issues: sperm parameters are normal despite 'male factor,' paternal age is treated as the dominant aneuploidy driver, and the probability estimate is asserted more strongly than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and proceeding with transfer of a good-quality day-5 blastocyst, but 'strongly recommend PGT-A' based mainly on paternal age/FSH is not clearly guideline-based, and routine ICSI for all future cycles is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, counseling, luteal support, and future-cycle considerations. Recommendations are useful, though some are too categorical and would benefit from more nuance."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013014,
+  "judge_latency_ms": 4922.833250006079,
+  "judge_prompt_tokens": 2563,
+  "judge_completion_tokens": 355
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to assign morphology because it stated no image was available, avoiding fabrication. It did not describe the visible blastocyst features in the provided image, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, tubal factor, BMI, FSH, prior live birth, endometrial thickness, oocyte maturity, sperm motility, and transfer timing into prognosis and embryo-context assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to favorable and unfavorable factors. Minor limitation: it repeatedly emphasizes lack of morphology, which broadens uncertainty but does not undermine logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: noting Gardner is mainly for Day 5/6 blastocysts, favoring SET at age 32, avoiding bed rest, and reserving PGT-A for selected cases. Slight limitation is broad rather than explicitly guideline-cited framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "It provides clear practical next steps for the current transfer and future cycles, including luteal support review, embryology report details, MII/trigger review, male-factor follow-up, culture strategy, reserve testing, and selective uterine workup."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.016083,
+  "judge_latency_ms": 4494.42945800547,
+  "judge_prompt_tokens": 3691,
+  "judge_completion_tokens": 334
+}

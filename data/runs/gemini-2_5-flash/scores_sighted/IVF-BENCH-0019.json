@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a cleavage-stage embryo rather than a very poor-quality early blastocyst/blastocyst consistent with the reported 1DD context, and it fabricates cleavage-stage features such as blastomere count and Grade 4 cleavage grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates several relevant patient factors (age, BMI, smoking, prior live birth, ectopics, endometrium, sperm), but some interpretations are overstated and the integration is weakened by the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major misreading of the image and repeatedly emphasizes a stage mismatch, leading to conclusions that are not well supported by the actual embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some comments reflect general IVF principles, the use of cleavage-stage grading on a blastocyst image and the strong assertion that it is definitively not a blastocyst are not aligned with Gardner-based assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The partial response offers only broad clinical observations and lacks clear, specific transfer recommendations, implantation probability counseling, or concrete future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011262,
+  "judge_latency_ms": 4952.47274999565,
+  "judge_prompt_tokens": 2119,
+  "judge_completion_tokens": 327
+}

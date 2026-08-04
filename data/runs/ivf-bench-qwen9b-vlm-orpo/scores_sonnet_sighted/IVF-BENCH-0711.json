@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description noting blastocoel filling, zona pellucida, ICM compactness, and TE cellularity. However, it somewhat contradicts the provided Gardner score of 2AA by downgrading the embryo to 'B-A transition range' without strong justification from the image. The description of granular/debris material and uncertainty about ICM identification are reasonable caveats, but the model's skepticism toward the lab's 2AA grading introduces inconsistency. The image does show a reasonably well-expanded blastocyst consistent with grade 2, and the model's hedging on morphology quality is partially justified but not fully precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 35 euploidy implications, FSH 6.9 as reassuring, BMI 17.7 flagged as mildly concerning, tubal factor diagnosis with appropriate hydrosalpinx warning, paternal age 48 and sperm DNA fragmentation risk, previous failed cycle context, and endometrial thickness of 9.5mm. The interaction between paternal age and embryo competence is specifically addressed. Minor gap: AMH is N/A and not discussed in terms of what that uncertainty means for ovarian reserve assessment alongside FSH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% follows logically from the factors presented. The model appropriately distinguishes implantation probability from live birth rate. One minor inconsistency: the model questions the 2AA grading yet still uses it as a basis for the probability estimate without fully reconciling this tension. The hydrosalpinx emphasis is repeated appropriately and consistently throughout. Conclusions are generally well-supported by the evidence chain presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation at age 35, appropriate luteal support mention, discouragement of unproven adjuvants (intralipids, steroids, endometrial scratch without indication), PGT-A discussion framed appropriately as optional rather than mandatory at 35, and hydrosalpinx management emphasis consistent with ESHRE guidelines. The bed rest discouragement aligns with current evidence. Minor issue: the model lists endometrial scratch among unproven therapies, which is accurate per current evidence, but could acknowledge the ongoing debate more nuancedly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: verify hydrosalpinx status, proceed with single embryo transfer if cavity is normal, ensure adequate luteal support, avoid unproven adjuvants, and outlines a structured follow-up plan if transfer fails including sperm DNA fragmentation testing and PGT-A consideration. The checklist format for immediate evaluation is practically useful. Could be slightly more specific about progesterone protocol timing and monitoring, and the 'stimulation protocol: Other' is not addressed in future cycle planning recommendations."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.023526,
+  "judge_latency_ms": 17320.52120800654,
+  "judge_prompt_tokens": 4052,
+  "judge_completion_tokens": 758
+}

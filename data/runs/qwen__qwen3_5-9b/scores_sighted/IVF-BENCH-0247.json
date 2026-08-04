@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0247",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3BA label, but it overstates visible certainty: the image does not clearly allow confident assessment that the blastocyst is 'ready for hatching,' and TE/ICM detail is only partially appreciable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, prior miscarriages, sperm parameters, endometrium, and embryo grade well, though it underexplores BMI and overinterprets the male-factor diagnosis from limited semen data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured, but there are notable issues: calling stage 3 'expanded' is imprecise in Gardner terms, saying transfer should proceed because PGT-A would 'consume the only embryo' is speculative, and the probability estimate is somewhat inconsistently justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned on valuing age, morphology, and considering recurrent pregnancy loss workup, but includes weaker points such as implying stress/cortisol materially affects implantation, recommending thrombophilia screening broadly, and suggesting donor eggs prematurely for a 29-year-old with DOR."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future evaluation, including proceeding with transfer and considering miscarriage workup, though some recommendations lack nuance or prioritization."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013134,
+  "judge_latency_ms": 4780.367500003194,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 357
+}

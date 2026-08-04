@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case giving 2AC, and therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm, BMI, smoking, and endometrium, though it does not connect them to the actual provided embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally structured and logical, but it is undermined by the major omission of the provided Gardner score and by estimating implantation based on an assumed good-quality embryo rather than the actual 2AC embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but the failure to use the Gardner grade and the overly strong framing of smoking cessation as a non-negotiable treatment condition reduce alignment with standard IVF assessment practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for current transfer and future planning, including smoking cessation, weight management, exercise, and eSET discussion, though advice is less tailored because the actual embryo grade was ignored."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013578,
+  "judge_latency_ms": 3310.1226669969037,
+  "judge_prompt_tokens": 2946,
+  "judge_completion_tokens": 316
+}

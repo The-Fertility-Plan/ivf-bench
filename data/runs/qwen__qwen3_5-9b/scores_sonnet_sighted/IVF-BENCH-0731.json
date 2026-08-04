@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst and references the Gardner 2AA score, but contains a notable inconsistency: it describes the expansion as 'Grade 1' while a Gardner score of 2 indicates a full blastocyst (Grade 2). The ICM description is somewhat contradictory, acknowledging the 'tightly packed' descriptor but then hedging with 'moderate number of cells.' The TE description is adequate but lacks detail about the zona pellucida thinning or specific cell count observations visible in the image. Overall morphological description is functional but imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, oocyte yield, sperm parameters, endometrial thickness, and lifestyle factors are all connected to prognosis. The analysis of the 'Male Factor' diagnosis is thoughtful, noting the discrepancy between the diagnosis and the good sperm parameters and raising DNA fragmentation as a possibility. The endometrial thickness concern is appropriately flagged. Minor gap: AMH being N/A is not addressed, which is clinically relevant for a complete reserve assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is generally logical, but there are notable inconsistencies. The model describes the expansion as 'Grade 1' but the Gardner score is 2AA, which is a factual error that undermines credibility. The probability estimate of 50-60% is reasonable but the caveat reducing it to 45-50% for endometrial thickness creates slight confusion. The claim that euploid rate is 'approx. 80-90%' at age 33 is somewhat optimistic compared to published data (~60-70%). The recommendation to not freeze unless PGT-A is planned is slightly contradictory to standard practice."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines but has some deviations. The Gardner grading description contains an error (Grade 1 vs Grade 2 expansion). The endometrial threshold discussion is reasonable but the 7mm cutoff cited is debated in literature. The PGT-A recommendation is generally appropriate but the stated euploid rate of 80-90% at age 33 is higher than most published data suggests. The recommendation to proceed with transfer is appropriate and guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are largely specific and practical: proceed with transfer, monitor endometrial thickness with a specific threshold (5mm), consider PGT-A with appropriate nuance for this patient's situation, maintain lifestyle factors, and schedule beta-hCG follow-up. The response provides clear decision points and alternatives. Minor weakness: no specific recommendation about luteal phase support protocol details or whether this is a fresh vs. frozen transfer, which would affect management significantly given the 6mm endometrium."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.019446,
+  "judge_latency_ms": 15495.268041995587,
+  "judge_prompt_tokens": 2907,
+  "judge_completion_tokens": 715
+}

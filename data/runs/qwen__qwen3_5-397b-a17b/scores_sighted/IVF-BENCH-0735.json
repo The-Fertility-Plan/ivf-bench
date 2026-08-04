@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the ICM is not sharply distinct, TE cohesion/uniformity is difficult to confirm, and calling the zona clearly thinned/expanded is partly inferred from the supplied grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, response to stimulation, endometrial thickness, prior IVF history, male factor, BMI, and lifestyle with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, and the implantation estimate is tied to age, morphology, and prior failure; minor issues include speculative assumptions about ICSI, implantation effects of exercise, and uterine/immunologic concerns after only one failed cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, prognosis, and proceeding with transfer, but recommendations such as ERA after limited failure, immunologic/NK-cell workup, acupuncture for blood flow, and strong exercise restrictions are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including luteal support and possible future testing, though some suggestions are more aggressive than standard practice after only one prior unsuccessful cycle."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013392,
+  "judge_latency_ms": 5229.282416999922,
+  "judge_prompt_tokens": 2659,
+  "judge_completion_tokens": 361
+}

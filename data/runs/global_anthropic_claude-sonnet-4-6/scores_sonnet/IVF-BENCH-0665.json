@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3BA blastocyst features including expansion grade 3, ICM grade B (loosely cohesive), TE grade A (cohesive epithelium), zona thinning, and blastocoel occupying >70% of volume. The description aligns well with the Gardner score provided. Minor deduction for noting image focus issues and TE folding artifact which may or may not be visible, and the slight discrepancy in describing TE as grade A in the image analysis while the Gardner score states TE as grade A - these are consistent but the model's observation of 'some folding artifact' adds unverifiable detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects BMI to endometrial receptivity impairment, identifies the unexplained male factor diagnosis gap (missing morphology/DFI data), flags the suboptimal 50% MII rate relative to AMH/FSH values, incorporates previous cycle outcomes (live birth + failure) into prognosis, and links sedentary lifestyle to BMI risk compounding. The probability modifiers explicitly tie each clinical factor to the implantation estimate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is highly coherent. The base rate is established, modifiers are systematically applied with directional justification, and the final probability range (35-48%) logically follows from the adjustments. The identification that untested embryo status is the largest uncertainty source is well-reasoned. No contradictions detected between sections. The male factor analysis (normal concentration/motility suggesting morphology or DFI as likely etiology) is logically sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: recommends SET for age 31 with good-quality blastocyst, appropriate luteal phase support discussion, PGT-A recommendation framed correctly as optional rather than mandatory, Gardner grading applied correctly. ERA/EMMA/ALICE recommendation is evidence-based though somewhat controversial in routine use. The antagonist protocol suggestion and dual trigger recommendation align with current evidence. Minor deduction as the progesterone threshold of ≥10 ng/mL cited is a reasonable but not universally standardized cutoff."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable across all domains: specific protocol change recommendations (antagonist + dual trigger), concrete sperm testing (DFI with threshold >25% and specific interventions like TESE-ICSI, MACS, PICSI), quantified lifestyle targets (150 min/wk exercise, BMI <29), specific post-transfer monitoring timeline (hCG at 10-12 days, ultrasound at 6-7 weeks), and consideration of embryo glue. The table format for lifestyle interventions with timeframes adds practical utility. Future cycle planning is comprehensive and prioritized."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.021333,
+  "judge_latency_ms": 16084.223666999605,
+  "judge_prompt_tokens": 3526,
+  "judge_completion_tokens": 717
+}

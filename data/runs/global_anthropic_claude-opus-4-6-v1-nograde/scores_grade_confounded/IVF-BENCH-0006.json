@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the embryo as a Day 4 partially compacting morula, whereas the provided laboratory grade is a blastocyst (2BA). It fabricates morula-specific features like blastomere count, compaction status, and fragmentation instead of describing blastocoel expansion, ICM, and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including age, ovarian reserve, tubal factor, sperm quality, endometrium, and prior pregnancy losses, and relates them to prognosis. However, some conclusions are overextended from the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by the fundamental contradiction between the stated embryo morphology and the known Gardner 2BA grade. Probability estimates and downstream conclusions are therefore built on an incorrect premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are guideline-consistent, such as considering RPL workup and parental karyotypes, but several recommendations are not well aligned with current evidence or are too strong, including routine PGT-A recommendation in a 28-year-old, ERA, thrombophilia testing beyond APS, and empiric aspirin/LMWH without indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer monitoring and future workup/planning. However, some actions are based on weak evidence or inappropriate assumptions, limiting overall clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013944,
+  "judge_latency_ms": 4532.435166998766,
+  "judge_prompt_tokens": 2728,
+  "judge_completion_tokens": 384
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response repeatedly states the image is a degenerating oocyte/poor-quality non-blastocyst and describes features not reliably supported by the case context, directly conflicting with the provided blastocyst grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm quality, endometrial thickness, BMI, uterine factor, and cycle history into prognosis reasonably well, though some links are overstated and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by major internal contradiction between rejecting the image as non-blastocyst and then estimating prognosis based on 3AA; probability logic is inconsistent and heavily caveated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Some recommendations are broadly guideline-consistent (consider uterine cavity evaluation, avoid routine PGT-A at age 31), but others are weakly supported or overstated, such as implying hysteroscopy is highly recommended without specific uterine details and overemphasizing diet/stress effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as verifying embryo grading, evaluating the uterine factor, and considering future FET/PGT-A, though several recommendations are generic and not tightly tailored to the specific uterine diagnosis."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.010625,
+  "judge_latency_ms": 4992.464167065918,
+  "judge_prompt_tokens": 5884,
+  "judge_completion_tokens": 327
+}

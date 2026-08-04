@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0182",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AB label, but it overstates certainty from the image alone, describes TE as more cohesive than appears visible, and claims absence of granularity/degeneration that cannot be confidently excluded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian response, BMI, sperm motility, prior cycle history, and endometrial thickness with embryo quality in a clinically meaningful way, though some assumptions were added."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but there are notable issues: it calls 3AB 'high-quality/top-tier,' assumes accelerated day-4 blastulation as favorable without caution, and gives somewhat overconfident euploidy/implantation estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard (SET, luteal support, ultrasound-guided transfer), but several points are weakly aligned or speculative, including assumed trilaminar endometrium, ERA/EMMA/ALICE/NK-cell workup, GH supplementation, and strong endorsement of PGT-A after a single failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, timing verification, luteal support, and follow-up testing, though some future-cycle suggestions are more speculative than necessary."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015429,
+  "judge_latency_ms": 5288.918666992686,
+  "judge_prompt_tokens": 3293,
+  "judge_completion_tokens": 370
+}

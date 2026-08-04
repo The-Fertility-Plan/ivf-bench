@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel cavity, thinning zona pellucida, compact ICM cluster, and cohesive TE layer consistent with a 3AA Gardner score. The description of the ICM as 'darker, clustered group of cells visible near the bottom center' matches the image. Minor deduction for acknowledging 'slightly soft' image resolution as a caveat rather than providing more definitive morphological detail, and the TE description could be more specific about cell count/cohesion visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates maternal age, AMH, stimulation response, sperm parameters, endometriosis diagnosis, previous cycle failure, endometrial thickness, and lifestyle factors with embryo quality assessment. It correctly identifies endometriosis as the primary confounder and connects lifestyle factors to endometrial receptivity. Minor gap: does not explicitly address the interaction between endometriosis staging/severity and implantation, nor does it discuss the 'restricted diet' in context of nutritional deficiencies affecting embryo development or endometrial function."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 55-70% follows logically from the stated adjustments (baseline >70%, reduced by endometriosis and prior failure). The reasoning chain from morphology to patient factors to risk stratification is well-structured and internally consistent. Minor issue: the response states baseline live birth rate is 'often >70%' for this profile but then applies reductions to arrive at 55-70%, which is reasonable but the quantification of the endometriosis penalty (10-15%) lacks cited evidence basis, slightly weakening the coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: single embryo transfer implied, ERA testing for recurrent implantation failure, chronic endometritis workup, PGT-A consideration, and laparoscopic evaluation for refractory cases. The 7.5mm endometrial thickness assessment aligns with current literature. Minor deduction: ASRM/ESHRE guidelines suggest PGT-A is generally not recommended as routine for young patients with good prognosis, and the response could more explicitly state this rather than framing it as a reasonable option after one failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, tiered recommendations: immediate transfer with endometrial optimization, lifestyle counseling, and a structured future planning pathway including ERA, endometritis biopsy, PGT-A, and laparoscopy. Recommendations are case-specific and practically useful. Minor deduction: lacks specificity on estrogen supplementation dosing/protocol adjustments, does not address whether a freeze-all strategy with deferred transfer might optimize endometrial conditions given the 7.5mm thickness and endometriosis, and stress management suggestions are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.019539,
+  "judge_latency_ms": 17744.443791991216,
+  "judge_prompt_tokens": 2918,
+  "judge_completion_tokens": 719
+}

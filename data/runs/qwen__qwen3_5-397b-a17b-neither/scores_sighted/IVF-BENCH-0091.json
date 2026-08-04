@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate specific embryo morphology. It only discussed general blastocyst assessment criteria. While it missed the chance to describe the actual image, it remained accurate relative to its constraints."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, semen data, endometrial thickness, and first-cycle status into prognosis reasonably well. Some links are somewhat speculative, especially around PCOS phenotype and male-factor explanation, but overall the case factors are connected to embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with a plausible probability estimate tied to age, blastocyst stage, BMI, and possible male-factor concerns. Minor issues include overinterpreting transfer scheduling as evidence of embryo quality and some speculative assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: strong recommendation for PGT-A at age 36/male factor is more aggressive than guideline-based individualized counseling, and stress/acupuncture claims are not strongly evidence-based. Freeze-all based on elevated progesterone is reasonable but conditional."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including luteal support review, consideration of freeze-all if progesterone is elevated, weight optimization, and uterine cavity evaluation after failure. Some recommendations are somewhat generic or speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014679,
+  "judge_latency_ms": 5433.827375003602,
+  "judge_prompt_tokens": 2953,
+  "judge_completion_tokens": 388
+}

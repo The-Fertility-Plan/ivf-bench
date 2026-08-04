@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0122",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and based morphology on the reported 3AA grade. Its description is broadly consistent with the lab grade, but it overstates this as 'highest quality available' and does not reflect image-specific ambiguities such as a less clearly compact ICM/TE appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, oocyte maturity, endometrial thickness, BMI, smoking, prior cycle history, and semen data well, and links these factors to implantation potential and miscarriage risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to embryo quality and patient modifiers. Minor overstatements (e.g., 'perfect' embryo, 'maximal' potential) slightly weaken precision."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: eSET in a young patient with a good-quality blastocyst, smoking cessation, standard luteal support, and no routine PGT-A at age 26. Slight deviations include somewhat strong endorsement of revisiting PGT-A after failure/miscarriage and speculative sperm DNA fragmentation testing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear, practical next steps for transfer and future planning, including eSET, smoking cessation, lifestyle counseling, luteal support considerations, and contingency planning if transfer fails."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01437,
+  "judge_latency_ms": 4666.85595799936,
+  "judge_prompt_tokens": 2920,
+  "judge_completion_tokens": 374
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0135",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible general blastocyst description, but it explicitly reclassifies the embryo as ~4BB-5BB rather than the provided Gardner 3AB and makes image-based claims (e.g., ICM not dense, TE discontinuous, zona thinning) that may not be reliably supported from a single static image. This creates notable mismatch with the supplied lab grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age 33, BMI 32.6, male factor, prior failed IVF, endometrial thickness, ovarian response, sperm parameters, and lifestyle. It appropriately links these to prognosis, though AMH is unavailable and some interactions are discussed only broadly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: favorable age and lining improve prognosis, weaker TE and elevated BMI temper expectations, and morphology is not equated with euploidy. Minor issues include overinterpreting morphology and introducing assumptions such as trilaminar lining not provided in the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice: proceed with transfer, avoid unsupported add-ons, individualize PGT-A at age 33 with low embryo numbers, and review uterine/luteal factors if failure recurs. Small deviations include speculative ancillary testing and the unsupported morphologic regrading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support review, uterine cavity/hydrosalpinx assessment, metabolic optimization, and cycle review after failure. Useful and nuanced, though some suggestions remain somewhat generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016686,
+  "judge_latency_ms": 7970.741708064452,
+  "judge_prompt_tokens": 3492,
+  "judge_completion_tokens": 414
+}

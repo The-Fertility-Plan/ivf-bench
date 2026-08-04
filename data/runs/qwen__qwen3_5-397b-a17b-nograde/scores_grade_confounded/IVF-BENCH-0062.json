@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0062",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a morula/early blastocyst despite the provided laboratory grade of 3AA expanded blastocyst, and incorrectly states that ICM/TE are not apparent."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, BMI, endometrium, oocyte yield, and sperm data with prognosis, but overreaches by inferring DOR and sperm DNA fragmentation without supporting data and anchors the integration to an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but major conclusions flow from an incorrect embryo-stage interpretation, leading to a substantially distorted prognosis and recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner concepts is inconsistent with the provided 3AA grading, and recommendations such as routine PGT-A at age 35 and suggesting testicular sperm based on speculation are not well aligned with evidence-based standard practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives concrete next steps such as luteal support, AMH testing, and lifestyle modification, but several recommendations are based on speculative assumptions and therefore only moderately useful."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.011997,
+  "judge_latency_ms": 3914.287041996431,
+  "judge_prompt_tokens": 2399,
+  "judge_completion_tokens": 320
+}

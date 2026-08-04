@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies morphology relative to the provided lab grade 2AC, downgrading it to possible 3BC/4BC/CC and describing an indistinct/loose ICM despite the stated ICM A. It also expresses uncertainty about expansion despite known full blastocyst status."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, sperm quality, BMI, smoking, and endometrium, and relates them to prognosis, though some links to embryo quality are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the prognosis is built on an incorrect morphological downgrade, and claims about smoking-driven aneuploidy/morphology are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on SET, smoking cessation, weight optimization, and luteal support is guideline-consistent, but the morphology interpretation conflicts with Gardner grading provided, and recommending PGT-A strongly in a 32-year-old first cycle with tubal factor is not clearly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, lifestyle modification, and future planning, though some recommendations are somewhat generic and influenced by the incorrect embryo grading."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015093,
+  "judge_latency_ms": 4352.55733300437,
+  "judge_prompt_tokens": 3261,
+  "judge_completion_tokens": 354
+}

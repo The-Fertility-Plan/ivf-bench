@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fails to use the provided Gardner score 2BA for morphology and instead states no specific blastocyst grading can be performed, then reframes the embryo as likely Day 4 morula/early blastocyst. This ignores available morphology data and introduces likely inaccuracies about stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, endometrial thickness, sperm parameters, prior IVF history, and lifestyle factors into prognosis reasonably well, though some links are overstated and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is weakened by a core inconsistency: it disregards the provided 2BA blastocyst grade because transfer was on Day 4, then bases prognosis on a presumed Day 4 morula/early blastocyst instead of the stated embryo quality. Probability adjustments therefore rest on a questionable premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are several deviations from standard evidence-based practice, including implying Gardner grading is not applicable despite a provided 2BA score, suggesting endometriosis-specific uterine hostility as rationale for Day 4 transfer, and recommending combined vaginal plus IM progesterone and luteal defect assumptions without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for current transfer and future planning, including luteal support review, transfer technique, weight optimization, extended culture, possible GnRH suppression before FET, and selective PGT-A considerations. Some recommendations are useful but not always appropriately evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013743,
+  "judge_latency_ms": 4396.568500000285,
+  "judge_prompt_tokens": 2671,
+  "judge_completion_tokens": 382
+}

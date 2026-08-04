@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0314",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a poor-quality, minimally cavitating embryo with absent discernible ICM/TE, consistent with 0DD, but overstates certainty about degeneration/apoptosis and calls it a compacted morula/very early blastocyst despite the provided Gardner designation and image suggesting an early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, endometrium, prior outcomes, and paternal age/sperm data with embryo quality reasonably well, though some links (stress effects, sperm DNA fragmentation inference) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly consistent: very poor morphology drives a very low implantation estimate, moderated by favorable maternal age/endometrium. Minor issues include overcalling developmental delay on Day 4 and inferring specific mechanisms without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned in recognizing poor prognosis for a 0DD embryo and emphasizing counseling, but recommendations such as strongly recommending PGT-A at age 34 and a full RPL/thrombophilia/immune workup after one biochemical and one clinical miscarriage go beyond standard guideline-supported indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and future-cycle options (consider sperm DNA fragmentation testing, culture to Day 5/6, review insemination method, lifestyle optimization), though some recommendations are not sufficiently prioritized or guideline-nuanced."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013761,
+  "judge_latency_ms": 5985.858291998738,
+  "judge_prompt_tokens": 2792,
+  "judge_completion_tokens": 359
+}

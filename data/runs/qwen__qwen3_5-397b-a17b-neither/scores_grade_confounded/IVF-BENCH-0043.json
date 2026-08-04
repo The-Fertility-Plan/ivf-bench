@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score can be assigned and ignores the provided 3AA morphology data, so it fails to describe the known expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, ovarian reserve, BMI, endometrium, prior ectopic, and sperm parameters reasonably well with prognosis, though it does not fully connect these factors to the known 3AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the major premise error of overlooking the provided morphology and by some speculative points such as sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (early ectopic surveillance, smoking cessation, luteal support, lifestyle optimization), but the omission of the provided Gardner grade and somewhat overstated PGT-A rationale reduce alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including beta-hCG timing, repeat testing, early ultrasound, smoking cessation, exercise, and future-cycle considerations, though recommendations are less tailored than they could be given the known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012492,
+  "judge_latency_ms": 3718.934457996511,
+  "judge_prompt_tokens": 2519,
+  "judge_completion_tokens": 329
+}

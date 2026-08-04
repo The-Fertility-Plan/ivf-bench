@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0051",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided Gardner score. Its summary of 3AB is broadly consistent with the lab data, but it repeated the prompt's inconsistent wording ('expanded blastocyst' for stage 3) and added favorable interpretations without image-based verification."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, tubal factor diagnosis, ovarian response, prior failed cycles, endometrial thickness, semen parameters, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality and prior failures. Minor issues include somewhat overstating recurrent implantation failure concerns after two failed cycles and asserting baseline rates that may be optimistic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but several recommendations are not strongly guideline-supported or are overstated, including routine assisted hatching, ERA/thrombophilia workup after this history, and recommending PGT-A largely because of prior failures at age 30."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and contingency planning, including luteal support review and possible further evaluation. However, some actions are more aggressive than standard practice and would benefit from stronger prioritization."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014553,
+  "judge_latency_ms": 5596.179250002024,
+  "judge_prompt_tokens": 3036,
+  "judge_completion_tokens": 363
+}

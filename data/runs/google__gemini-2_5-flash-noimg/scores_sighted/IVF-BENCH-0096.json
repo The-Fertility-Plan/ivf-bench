@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model explicitly noted that no image was provided and based morphology on the supplied Gardner 3AA grade rather than inventing image-specific findings. Its description is consistent with the provided grading, though it repeats the prompt's wording and adds a slightly overstated implication that stage 3 is actively preparing to hatch."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, BMI, ovarian reserve, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, especially around morphology versus age-related aneuploidy risk. Minor issues include somewhat broad statements about unexplained infertility and a probability estimate that may be a bit optimistic for age 40."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling, luteal support, consideration of PGT-A in future cycles), but ERA is suggested too readily and PGT-A is framed too strongly as the 'strongest recommendation,' which is more aggressive than guideline-supported routine use in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including SET, counseling, luteal support, and contingency planning. Some recommendations are practical, though a few are somewhat generic or overinclusive."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01575,
+  "judge_latency_ms": 5102.534791993094,
+  "judge_prompt_tokens": 3520,
+  "judge_completion_tokens": 346
+}

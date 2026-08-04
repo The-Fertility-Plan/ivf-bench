@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mislabels key features: a 3AA is not the highest possible grade, grade 3 is expanded rather than fully expanded, and the TE is not clearly seen as uniformly cohesive in this focal plane. It broadly identifies blastocoel and ICM but includes fabricated certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates major factors well, including young age, endometriosis, prior IVF failures, endometrial thickness, and sperm motility, and relates them to prognosis. Some interpretations are overstated, such as calling 5 MII from 6 COCs a concerning low yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: it calls the embryo top-tier/highest quality while also misclassifying the grade, and the implantation estimate is somewhat loosely justified. Some conclusions, such as poor responder concern, are not well supported by the data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence-based IVF practice: routine immune workup and NK/HLA testing for RIF are not guideline-supported, thrombophilia screening is not universally indicated, and PGT-A is overstated for a 27-year-old without clearer indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps, including proceeding with transfer and considering cavity assessment and future-cycle planning. However, some suggested investigations are insufficiently evidence-based, which limits the usefulness of the action plan."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013386,
+  "judge_latency_ms": 5663.369457994122,
+  "judge_prompt_tokens": 2582,
+  "judge_completion_tokens": 376
+}

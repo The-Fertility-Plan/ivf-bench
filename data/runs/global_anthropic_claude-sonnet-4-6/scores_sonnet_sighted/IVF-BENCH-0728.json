@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies poor ICM and TE quality consistent with DD grading, and notes granular cytoplasm and dark inclusions. However, the expansion assessment is somewhat inconsistent - the image actually shows a reasonably expanded blastocyst with a visible blastocoel cavity that appears to occupy more than minimal volume, yet the model describes it as 'early/minimal blastocoel expansion occupying <50%' which partially contradicts the Grade 1 assignment. The zona pellucida observation is reasonable. Overall description captures the degenerative quality but has some inaccuracies in expansion characterization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model connects AMH, age, COC yield, and morphology coherently. It correctly identifies the POSEIDON poor responder classification, links former smoking to mitochondrial oocyte damage, integrates sperm parameters to exclude male factor, and connects endometrial thickness to receptivity. The aneuploidy probability estimate is appropriately age-adjusted and tied to morphology. The interaction between unexplained infertility and oocyte quality is noted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain from morphology to probability estimate is logical and well-structured. The probability framework with base rate adjustments is transparent and internally consistent. The recommendation to proceed with transfer despite poor prognosis is well-justified given it being the only embryo. Minor issue: the expansion grade description slightly contradicts the image appearance, but this doesn't undermine the overall clinical logic. Conclusions about future planning follow coherently from the assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE and Gardner grading criteria. POSEIDON classification is correctly applied. Luteal phase support recommendations are standard. PGT-A recommendations are appropriately conditional on blastocyst yield. DHEA and CoQ10 recommendations are evidence-supported for DOR. The decision tree for donor oocytes is appropriately timed. Minor deviation: testosterone priming evidence base is still emerging and could be noted as experimental. Transfer technique specifications align with ESHRE guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations. Transfer optimization includes concrete checklist items with specific measurements (1.5-2.0cm from fundus, progesterone thresholds). Future cycle planning includes specific doses (FSH ≥300 IU, DHEA 75mg, CoQ10 400-600mg), a clear decision tree with three distinct options, and specific lifestyle modifications with quantified targets (150 min/week exercise). The structured priority decision tree is particularly useful for clinical decision-making. Counseling guidance is appropriately included."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.020883,
+  "judge_latency_ms": 16237.812833001954,
+  "judge_prompt_tokens": 3571,
+  "judge_completion_tokens": 678
+}

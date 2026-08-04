@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3BB blastocyst and correctly identifies a loose ICM and sparse TE, but it overstates thinning of the zona and incorrectly suggests the embryo has hatched or is hatching, which is not supported by the image or the reported expansion grade 3."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well, including age, ovarian reserve, BMI, smoking, endometriosis, prior failed cycles, sperm parameters, and lining, and relates them to prognosis, though some links to embryo quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and the probability estimate follows from the stated positives and negatives, but there are minor issues such as conflating grade 3 expansion with hatching and implying morphology may reflect endometriosis without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligned with standard IVF practice in supporting transfer of a viable 3BB embryo and addressing modifiable risks, but it inaccurately describes Gardner stage 3 as hatched/in process of hatching and leans toward PGT-A in a 31-year-old without clearly established indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, counseling on smoking cessation and weight, and considering further evaluation after failure, though recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013248,
+  "judge_latency_ms": 5147.533332987223,
+  "judge_prompt_tokens": 2686,
+  "judge_completion_tokens": 346
+}

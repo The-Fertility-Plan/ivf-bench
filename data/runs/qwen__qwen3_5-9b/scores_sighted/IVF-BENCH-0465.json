@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0465",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and misreads key visible features: it calls the embryo fully expanded/ready to hatch with a thin taut zona, which does not match a stage 2 blastocyst image, and assigns ICM location/quality with more confidence than the image supports. TE as relatively loose is reasonable, but overall there are several inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometrium, prior outcomes, and sperm factors with embryo quality in a clinically meaningful way. AMH is unavailable and not discussed, and some links (e.g., male factor implications) are somewhat speculative, but overall integration is good."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is tied to age, morphology, and prior failures, but there are notable issues: it inconsistently describes grade 2 as fully expanded/hatched-ready, and claims euploid success would be >90%, which is not well supported and weakens the reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (proceed with transfer, consider sperm DNA fragmentation in selected cases), but there are important deviations: inaccurate Gardner stage interpretation, strong endorsement of PGT-A in a young patient with male factor and prior failures without nuance, mention of ERA despite limited evidence, and an exaggerated claim of >90% success for euploid embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including proceeding with transfer, luteal support, and possible further workup. However, recommendations are not highly nuanced and some suggested interventions are controversial or overstated."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014241,
+  "judge_latency_ms": 6042.340542000602,
+  "judge_prompt_tokens": 2617,
+  "judge_completion_tokens": 426
+}

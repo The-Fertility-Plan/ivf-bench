@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0715",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion grade, thinning zona pellucida, compact ICM, and loose TE epithelium consistent with Gardner 3AB. The description aligns well with the laboratory data and visible image features. Minor limitation: the image is quite blurry/low resolution making precise morphological verification difficult, yet the model confidently describes features that largely match the provided Gardner score rather than noting image quality limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors: age 36 aneuploidy risk, PCOS implications for egg quality and miscarriage, borderline sperm parameters linked to TE grade B, AMH/FSH interpretation, endometrial thickness assessment, previous biochemical pregnancy contextualized as both risk and reassurance, BMI considerations, and lifestyle factors including alcohol use flagged specifically for luteal phase. The interactions between factors are explicitly drawn rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is transparent and mathematically structured (morphology baseline adjusted for aneuploidy risk, then modified by compensatory and detractor factors). The 35-50% implantation range with 25-35% live birth estimate is internally consistent. Minor issue: the claim that PCOS patients may have 'slightly higher aneuploidy rates' is somewhat contradicted later by suggesting PCOS patients may have 'younger oocyte biological age,' creating a slight tension. Overall reasoning chain is well-constructed."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: eSET recommendation, Day 5 transfer, luteal phase support protocols, PGT-A suggestion for recurrent failure, SDF testing for borderline male factor, and ERA only after second failure. The specific progesterone dosing (800mg vaginal + oral dydrogesterone or IM 50mg) reflects current evidence. Assisted hatching recommendation for PCOS is reasonable though evidence base is moderate. The aneuploidy rate estimate of ~40-50% at age 36 is consistent with published data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations covering immediate transfer decisions (eSET, assisted hatching rationale, specific luteal support regimens with doses), monitoring timeline (beta-hCG 9dp5dt, viability scan at 6 weeks), and a detailed future cycle planning pathway contingent on outcome. Sperm DNA fragmentation testing with specific threshold (>25%) and remediation options (PICSI, ZyMōt) demonstrate clinical depth. Patient counseling points are concrete and address the alcohol use finding directly."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020463,
+  "judge_latency_ms": 16303.446499994607,
+  "judge_prompt_tokens": 3501,
+  "judge_completion_tokens": 664
+}

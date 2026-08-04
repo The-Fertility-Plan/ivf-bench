@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality blastocyst with poorly defined/degenerative ICM and TE, broadly consistent with 1DD. However, it overstates precision from the image, describes TE sparsity/cohesion and blastocoel percentage somewhat speculatively, and calls it an 'early expanded blastocyst' while grade 1 is better described as an early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, AMH, oocyte yield, infertility diagnosis, prior cycle history, sperm parameters, BMI, and endometrial thickness with embryo quality in a clinically meaningful way. It misses some nuance, such as not overinterpreting AMH 1.13 at age 31 and making stronger claims about embryonic etiology than the data support."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and mostly consistent, and the low implantation estimate follows from the poor morphology. However, there are notable issues: it labels prior history as 'biochemical + clinical miscarriage' despite the provided history being no pregnancy plus clinical miscarriage, and it makes unsupported leaps to repetitive implantation failure, sperm DNA fragmentation, and donor-oocyte planning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are reasonable, such as guarded counseling and considering further evaluation after repeated failure. But several recommendations are weakly evidence-based or not guideline-supported as routine care, including assisted hatching specifically for this morphology, embryo glue, ERA, cortisol testing, growth hormone/DHEA, and early donor-oocyte counseling in a 31-year-old with only mildly reduced reserve."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer and future workup, including counseling, luteal support review, and possible additional testing. Practical value is good, though some actions are overly aggressive or insufficiently evidence-based for this exact case."
+    }
+  ],
+  "extracted_probability": 0.085,
+  "judge_cost_usd": 0.015465,
+  "judge_latency_ms": 6848.2832919980865,
+  "judge_prompt_tokens": 2800,
+  "judge_completion_tokens": 471
+}

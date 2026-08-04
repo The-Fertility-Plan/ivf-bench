@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0184",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst showing a visible ICM and relatively loose TE, but it overstates precision, calls the zona thin despite limited certainty, and introduces some stage ambiguity (\"Stage 2/3\") rather than cleanly matching the provided Gardner 2AB/full blastocyst context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior IVF outcomes, BMI, ovarian reserve, tubal factor, sperm factors, and endometrium with embryo quality in a clinically meaningful way, though some links (e.g., recurrent implantation failure framing) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally logical and structured, but there are notable issues: confusion around Day 4 versus blastocyst timing, inconsistent interpretation of Gardner expansion, and a probability estimate that mixes implantation and live birth benchmarks somewhat imprecisely."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (SET preference, lifestyle counseling, hydrosalpinx consideration), but ERA is not routinely recommended, PGT-A is presented too strongly as highest priority, and suggesting DET at age 37 with a good-quality blastocyst is not strongly guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future planning, including SET, hydrosalpinx assessment, alcohol cessation, and possible further testing, though some recommendations would benefit from more nuance on indications."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014136,
+  "judge_latency_ms": 6288.717792005627,
+  "judge_prompt_tokens": 2887,
+  "judge_completion_tokens": 365
+}

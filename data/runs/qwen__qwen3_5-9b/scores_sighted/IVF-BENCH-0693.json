@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0693",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the blastocoel does not look clearly 'fully expanded,' the zona thinning is not striking, and TE cohesion/ICM compactness are harder to confirm precisely from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most relevant factors well, including female age, ovarian reserve, prior live birth, tubal factor, endometrium, and semen parameters, though it overemphasizes paternal age as a major determinant of embryo aneuploidy and does not fully contextualize tubal factor as favorable for uterine implantation prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is organized and mostly logical, but there are notable issues: it calls 3AA 'the highest grade possible,' implies very high euploidy certainty from morphology, and attributes a substantial implantation penalty to paternal age without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard IVF practice: suggesting biopsy/PGT-A for this embryo 'for this cycle' is impractical if transfer is planned, and stating PGT-A is strongly recommended mainly because the partner is 44 overstates guideline support. Morphology-based claims about euploidy are also too strong."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides usable next steps such as proceeding with transfer and maintaining luteal support, but some advice is generic and the PGT-A recommendation is not well tailored operationally to an intended Day-5 transfer."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013299,
+  "judge_latency_ms": 6033.051792008337,
+  "judge_prompt_tokens": 2378,
+  "judge_completion_tokens": 411
+}

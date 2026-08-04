@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a high-quality Day 4 compacted morula and ignores the provided Gardner score 0DD, which indicates an early/poor-quality blastocyst with absent or degenerative ICM and TE. It also fabricates favorable features such as symmetry and negligible fragmentation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It incorporates age, prior live birth, endometrial thickness, ovarian response, and male factor, but the integration is built on an incorrect embryo-quality assessment and includes assumptions such as likely ICSI and 'excellent' morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by the central contradiction between the supplied 0DD grade and the claim of a high-quality morula. The implantation estimate is therefore not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response departs from Gardner grading by dismissing the provided blastocyst score and reclassifying the embryo as high-quality. Recommendations like considering blastocyst culture and luteal support are broadly reasonable, but the overall interpretation is not well aligned with standard embryo grading principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer, luteal support, considering PGT-A, and sperm DNA fragmentation testing, but these recommendations are only moderately useful because they are based on an inaccurate embryo assessment and lack nuance about the poor 0DD prognosis."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012471,
+  "judge_latency_ms": 5289.212749994476,
+  "judge_prompt_tokens": 2242,
+  "judge_completion_tokens": 383
+}

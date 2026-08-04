@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes the lack of image, but it fails to use the provided Gardner score 1DD, which itself gives morphology information indicating a very poor-quality early blastocyst with absent/degenerate ICM and TE. It instead reframes the case as morphology-unknown and discusses generic Day-4 possibilities."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior biochemical pregnancies, ovarian response, sperm parameters, endometrial thickness, BMI, and prior IVF history well, linking them to embryo competence and prognosis. It misses stronger integration of the explicitly poor 1DD grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and structured, but there is a key inconsistency: it says morphology is unavailable despite a provided 1DD grade, leading to broader and more optimistic scenario-based estimates than the supplied embryo grade would support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: cautious prognosis at age 38, consideration of blastocyst culture, PGT-A discussion, uterine cavity review, and avoiding bed rest. Minor deviation comes from underutilizing the Gardner score and overemphasizing Day-4 incompatibility rather than interpreting 1DD as a poor early blastocyst."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle planning, including embryology review, uterine evaluation, endocrine checks, sperm DNA fragmentation consideration, and protocol review. It is useful, though less tailored than it could be because it does not act directly on the poor 1DD morphology."
+    }
+  ],
+  "extracted_probability": 0.13,
+  "judge_cost_usd": 0.017409,
+  "judge_latency_ms": 6859.937417000765,
+  "judge_prompt_tokens": 3733,
+  "judge_completion_tokens": 414
+}

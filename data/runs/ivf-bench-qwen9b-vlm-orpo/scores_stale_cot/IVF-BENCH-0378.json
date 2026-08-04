@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0378",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a good-quality blastocyst and correctly discusses ICM/TE quality, but it introduces uncertainty/confusion about expansion stage (3 vs 4, full vs early expanded) and mentions features like lower-left ICM location and absence of degeneration that may be hard to verify from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior IVF history, diagnosis, endometrial thickness, ovarian response, sperm parameters, and lifestyle with embryo quality in a clinically meaningful way, though AMH is unavailable and some interactions are discussed only generally."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and generally well supported, with a plausible prognosis tied to age, morphology, and lining; minor issues include some imprecision around implantation vs clinical pregnancy/live birth rates and grading terminology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice guidelines, especially support for single embryo transfer in a 30-year-old with a high-quality day-5 blastocyst and avoidance of unnecessary add-ons; minor deviations include speculative comments about freeze-all thresholds and grading terminology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for current transfer management and contingency planning after failure, including SET, luteal support, activity guidance, and future evaluation steps, though some advice remains somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016503,
+  "judge_latency_ms": 7371.081000077538,
+  "judge_prompt_tokens": 3766,
+  "judge_completion_tokens": 347
+}

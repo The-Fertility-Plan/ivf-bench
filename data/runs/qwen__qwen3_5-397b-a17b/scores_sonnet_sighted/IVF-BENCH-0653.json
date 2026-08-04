@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocoel cavity, ICM, and TE consistent with the 2BA Gardner score. However, the ICM localization ('lower-left to central region') is imprecise given the image, and the response does not comment on the zona pellucida (which appears thinned/partially hatching in the image), nor does it note the somewhat irregular blastocoel shape or the presence of what appears to be cellular debris or fragmentation visible at the periphery. The description is serviceable but misses notable morphological details visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH/FSH, sperm parameters, BMI, and unexplained diagnosis are all connected to the embryo assessment and prognosis. The note about BMI 18.0 and potential endometrial implications is a good catch. Minor gap: the 'COCs: None' anomaly is flagged but not deeply explored, and the sedentary lifestyle/stress factors are mentioned but their clinical relevance to IVF outcomes is overstated relative to evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The 45-55% range is reasonably justified. One minor inconsistency: the response praises Day 4 full blastocyst as 'accelerated development' and a positive sign, but also flags it as a risk factor for asynchrony — these points are somewhat in tension and could be reconciled more clearly. The PGT-A discussion is coherent and appropriately nuanced."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation aligns with ESHRE/ASRM guidelines for young patients with good-quality embryos. Luteal phase support and endometrial thickness thresholds (≥7mm) are consistent with guidelines. However, describing a Day 4 full blastocyst as 'accelerated' and equating it developmentally to a Day 5 embryo is not fully aligned with standard Gardner grading conventions, where Day 4 blastocysts are typically early/cavitating blastocysts (Stage 1-2) and a 'full blastocyst' on Day 4 is unusual enough to warrant more scrutiny. The PGT-A guidance is broadly aligned with ASRM recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET, luteal phase monitoring given low BMI, endometrial thickness confirmation, freeze-all strategy for future cycles, lifestyle modifications with specific targets (BMI 20-21, light activity), and conditional PGT-A guidance. The response could be more actionable by specifying progesterone monitoring thresholds or timing, and by addressing what to do if endometrial thickness is suboptimal (N/A in data). Overall, a clinician would find clear next steps here."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020382,
+  "judge_latency_ms": 15543.451165998704,
+  "judge_prompt_tokens": 3139,
+  "judge_completion_tokens": 731
+}

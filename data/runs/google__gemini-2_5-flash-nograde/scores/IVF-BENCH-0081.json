@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible general blastocyst description and appropriately hedges uncertainty, but it is nonspecific and somewhat overconfident in assigning 3BB/4BB-or-higher without clearly image-grounded detail such as zona thinning/hatching status or more precise ICM/TE characterization."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, endometrial thickness, semen parameters, diagnosis, and lifestyle reasonably well with embryo prognosis, though AMH is unavailable and some interactions are discussed only broadly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is mostly logical: good-appearing blastocyst and favorable lining are balanced against repeated failed cycles and possible aneuploidy. Minor issues include calling morphology 'excellent' after only estimating BB quality and the unusual COC/MII discrepancy handling."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (consider uterine cavity assessment, possible PGT-A discussion after repeated failures), but ERA, thrombophilia, immunologic testing, and acupuncture are not strongly guideline-supported for routine use, lowering alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for proceeding with transfer and outlines future evaluations if unsuccessful. However, several suggestions are somewhat generic or controversial rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 4652.514749999682,
+  "judge_prompt_tokens": 2864,
+  "judge_completion_tokens": 338
+}

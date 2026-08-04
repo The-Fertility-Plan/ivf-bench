@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided detailed visual claims. However, it still inferred a high likelihood of Grade A/B morphology from age and maturity, which is not justified by the actual image and is a mild fabrication by inference."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve/response, tubal factor diagnosis, prior live birth, endometrial thickness, BMI, and sperm parameters into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a plausible prognosis estimate tied to patient factors. Minor weakness is the unsupported assumption that the embryo is likely high grade despite absent morphology data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET in a good-prognosis young patient, routine luteal support, no routine PGT-A at age 28, and counseling on BMI/alcohol. Slight overreach appears in suggesting morphology quality from demographics alone."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, luteal support, prenatal supplementation, alcohol cessation, and weight optimization. Useful, though not highly tailored to the actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013275,
+  "judge_latency_ms": 5533.175707998453,
+  "judge_prompt_tokens": 2725,
+  "judge_completion_tokens": 340
+}

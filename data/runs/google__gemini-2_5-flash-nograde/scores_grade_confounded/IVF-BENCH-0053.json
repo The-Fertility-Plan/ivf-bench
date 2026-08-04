@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response directly contradicts the provided Gardner score of 1DD by describing visible ICM and TE of average quality and suggesting grades like 3BB/4BB/3BC/4BC. This is a major morphological misclassification."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, ovarian response, sperm parameters, BMI, and endometrial thickness into prognosis reasonably well, though this is built on an incorrect embryo-quality premise."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is logical, but the core reasoning is undermined by a major contradiction: it treats the embryo as morphologically good despite the stated 1DD grade. The implantation estimate therefore does not follow well from the actual embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General counseling, luteal support, and consideration of PGT-A are broadly aligned, but the embryo grading discussion is inconsistent with Gardner criteria and recommendations such as ERA/immunologic adjuncts are not strongly guideline-supported in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for counseling, luteal support, uterine evaluation, endometriosis management, and future PGT-A planning. However, actionability is limited by the inaccurate assessment of embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014529,
+  "judge_latency_ms": 4482.299415998568,
+  "judge_prompt_tokens": 3088,
+  "judge_completion_tokens": 351
+}

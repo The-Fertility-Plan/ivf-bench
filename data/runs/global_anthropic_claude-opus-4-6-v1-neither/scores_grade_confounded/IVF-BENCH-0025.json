@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score is available and does not analyze the provided 1DD morphology. It also focuses on Day 4 timing rather than the supplied blastocyst grade, missing the key finding of a very poor-quality blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm, BMI, and endometrium, and notes the COC/MII discrepancy. However, it fails to connect these factors to the actual poor embryo grade because it ignores the provided 1DD score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by a major premise error: it claims morphology is unavailable despite the provided 1DD grade. This leads to an implausibly optimistic implantation estimate for a 1DD embryo and weakens the conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard, but the response misapplies Gardner grading by implying it is unavailable and treats Day 4 transfer as the main issue rather than the poor 1DD morphology. The implantation estimate and prognosis are not well aligned with evidence for such a low-grade embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical recommendations for luteal support, lifestyle, documentation, future culture strategy, stimulation adjustment, and follow-up planning. However, the advice is less useful because it is based on an incorrect understanding of the embryo quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013137,
+  "judge_latency_ms": 4230.788875000144,
+  "judge_prompt_tokens": 2479,
+  "judge_completion_tokens": 380
+}

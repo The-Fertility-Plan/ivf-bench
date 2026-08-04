@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score - expanded blastocyst, visible ICM as compact cluster, TE forming outer layer, and thinning zona pellucida. However, the description lacks precision about what is actually visible in the image. The image shows a somewhat irregular, granular ICM with visible vacuolation and cellular heterogeneity that the model doesn't specifically address. The description is somewhat generic and template-like rather than image-specific, missing some visible features like the granular texture and irregular cell boundaries visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors - age 37 with aneuploidy risk, FSH indicating ovarian reserve, endometrial thickness assessment, sperm parameters, and lifestyle factors including smoking and stress. It connects these factors to implantation probability in a meaningful way. Minor gap: AMH is listed as N/A but this limitation isn't fully explored, and the 'Other' diagnosis receives only superficial treatment. The interaction between smoking and endometrial receptivity is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 45-60% range is reasonably justified with smoking reducing from a baseline 60-70%. The model correctly identifies aneuploidy risk at age 37 as a key uncertainty. Minor inconsistency: the model describes endometrial thickness of 16.5mm as 'excellent' and 'ideal' while noting the optimal range is 7-14mm - 16.5mm is actually above the typical optimal range and could indicate potential concerns, which the model doesn't address."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines - smoking cessation advice, PGT-A discussion for age 37, ERA consideration for recurrent implantation failure, luteal phase support, and folic acid supplementation. The Gardner grading interpretation is accurate. The model correctly notes PGT-A risks and limitations. Minor issue: the claim that 16.5mm endometrial thickness is 'optimal' deviates slightly from guidelines which suggest >14mm may be associated with reduced outcomes in some studies, though evidence is mixed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for both current transfer and future cycle planning. Smoking cessation is appropriately prioritized as the most critical modifiable factor. PGT-A discussion, ERA consideration, stress management, and lifestyle modifications are all practical. The recommendation to discuss PGT-A for an already-developed embryo ready for transfer is noted as future-oriented. Could be more specific about progesterone supplementation protocols, timing of transfer, or specific stress reduction referrals, but overall provides good clinical guidance."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.02136,
+  "judge_latency_ms": 17077.18812499661,
+  "judge_prompt_tokens": 3590,
+  "judge_completion_tokens": 706
+}

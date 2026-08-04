@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 1DD and instead stated no embryology grade was available, discussing generic Day 4 morphology rather than the actual very poor blastocyst features (degenerative/absent ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant patient factors well, including age, ovarian reserve, BMI, tubal factor, semen, endometrium, and prior IVF history, though it did not connect these specifically to the known 1DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but it is based on a major premise error: ignoring the supplied 1DD grade and treating embryo quality as unknown. This undermines the probability estimates and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a 25-year-old, caution about hydrosalpinx, and not routinely recommending PGT-A are broadly guideline-consistent, but the handling of Gardner grading and Day 4/blastocyst interpretation is not well aligned with the provided embryology data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management, hydrosalpinx review, luteal support, lifestyle, and future cycle planning, though these recommendations are less useful because they are not tailored to the known poor-quality 1DD embryo."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014781,
+  "judge_latency_ms": 3592.3132919997443,
+  "judge_prompt_tokens": 3177,
+  "judge_completion_tokens": 350
+}

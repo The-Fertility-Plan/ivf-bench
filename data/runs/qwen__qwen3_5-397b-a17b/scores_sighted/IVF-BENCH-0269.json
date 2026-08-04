@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0269",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 2AB blastocyst, but it overstates certainty from the image: calls it a full blastocyst while the provided score is 2, describes a clearly visible dense ICM and slightly thinned zona that are not unequivocally evident, and TE assessment is somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, endometrium, sperm parameters, and first-cycle status with embryo quality in a clinically meaningful way, though some links (e.g., first-time IVF as prognostic) are weaker."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and generally logical, with probability estimates tied to morphology and age-related aneuploidy risk; minor issues include some overconfident morphology interpretation and broad success-rate assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: SET for a single good-quality day-5 blastocyst, attention to luteal support, and caution about PGT-A on a lone embryo. Some future-cycle suggestions (e.g., DuoStim, microdose flare) are more individualized and less guideline-standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, and future stimulation considerations. Useful overall, though some recommendations remain somewhat broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013188,
+  "judge_latency_ms": 5056.606124999234,
+  "judge_prompt_tokens": 2626,
+  "judge_completion_tokens": 354
+}

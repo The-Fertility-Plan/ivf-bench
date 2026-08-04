@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocyst stage, thinning zona, dense ICM cluster, and cohesive TE layer. It correctly notes image limitations (soft focus) and appropriately flags the Gardner 3 vs 4 nomenclature discrepancy. Minor deduction because the image actually shows some granularity and debris-like features within the blastocoel that the response does not specifically address, and the ICM/TE distinction could be more precisely described given what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects maternal age to aneuploidy risk, sperm parameters to embryo development confidence, endometrial thickness to receptivity, and critically identifies the uterine factor diagnosis as the dominant variable that could override embryo quality. BMI, lifestyle, FSH, and missing AMH are all addressed in context of their clinical relevance to this specific case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and internally consistent. The probability estimate logically flows from the morphological assessment, is then appropriately adjusted downward for the uterine factor, and is further stratified based on whether the uterine pathology is corrected or not. Conclusions about recommendations follow directly from the identified risk factors. No contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Response aligns well with ESHRE and ASRM guidelines: recommends SET for a good-quality blastocyst, correctly applies Gardner grading criteria (and notes the discrepancy), advises against unproven adjuncts without specific indication, appropriately positions PGT-A as non-routine at age 31 in a first cycle, and recommends hysteroscopy/cavity assessment consistent with standard uterine factor workup protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: confirms SET recommendation, lists specific uterine investigations (SIS, hysteroscopy, MRI), advises obtaining AMH and AFC for reserve characterization, discusses freeze-all strategy for future cycles if uterine factor unresolved, and provides conditional probability estimates based on uterine status. The tiered approach to future planning (if pregnancy occurs vs. if transfer fails) adds significant clinical utility."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020949,
+  "judge_latency_ms": 13923.58799999056,
+  "judge_prompt_tokens": 4123,
+  "judge_completion_tokens": 572
+}

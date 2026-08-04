@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0139",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a hatching blastocyst with zona breach/herniation and broadly appropriate B-grade ICM/TE descriptions. Minor overconfidence in localizing the ICM and in calling hatching a particularly favorable dynamic sign from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, uterine factor, prior failed cycle, sperm parameters, and endometrial thickness well with embryo quality. Could better distinguish embryo-intrinsic prognosis from uterine receptivity issues and avoid overinterpreting alcohol effects on this immediate transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and internally consistent, with a plausible probability range tied to embryo grade and patient factors. Minor issues include mixing implantation and live birth benchmarks and somewhat speculative weighting of hatching status and alcohol/BMI effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice regarding morphology, transfer suitability, and uterine reassessment, but PGT-A after a single failed cycle at age 32 and ERA recommendations are more controversial/not routinely guideline-supported. Also conflates Gardner stage 4 with hatching despite the provided lab descriptor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer, counseling on alcohol cessation, supplementation, weight optimization, and uterine reevaluation if unsuccessful. Some recommendations are somewhat generic and could be more tailored to the specific uterine diagnosis."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013521,
+  "judge_latency_ms": 5416.980041991337,
+  "judge_prompt_tokens": 2717,
+  "judge_completion_tokens": 358
+}

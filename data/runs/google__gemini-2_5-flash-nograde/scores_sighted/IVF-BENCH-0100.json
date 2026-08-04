@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a blastocyst and notes suboptimal ICM/TE, but it overstates expansion as 'well-formed and expanded' and assigns 3BC/3CB despite the image appearing more like an early/partially expanded blastocyst with poorly defined ICM and sparse TE. It also mentions features like cellular debris and TE irregularities that are not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, male factor, and first-cycle status well with embryo quality, though it somewhat overinterprets the sperm data and does not fully address that morphology alone is an imperfect predictor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: favorable patient factors are balanced against weaker embryo morphology, and the implantation estimate follows from that framework. Minor issues stem from the questionable morphology grading and some speculative statements."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The overall structure is broadly consistent with IVF practice, but the Gardner grading application is somewhat inaccurate for the image, and the recommendation to 'strongly recommend PGT-A' in a 33-year-old first cycle with male factor and no recurrent failure is more aggressive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer counseling, luteal support, embryo prioritization, review of cohort development, and consideration of ICSI/PGT-A. Recommendations are useful, though some are generic and not tightly tailored to the uncertainty in morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.015981,
+  "judge_latency_ms": 5295.576290998724,
+  "judge_prompt_tokens": 3412,
+  "judge_completion_tokens": 383
+}

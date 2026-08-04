@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a detailed morphology description, but it appears to misclassify the embryo as a morula/early compaction stage and fabricates features such as exact blastomere count and fragmentation pattern that are not reliably assessable from a blastocyst image. It also does not appropriately describe ICM/TE if this is in fact a blastocyst-stage embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, prior IVF outcomes, sperm parameters, endometrial thickness, and lifestyle factors with prognosis reasonably well, though some links are speculative and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally mostly consistent, with the implantation estimate logically tied to the model's morphology assessment and prior history. The main weakness is that the chain depends on a likely incorrect morphology classification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly IVF-consistent, but several are not strongly guideline-supported as routine steps (e.g., ERA, immunologic testing, thrombophilia screening, routine PGT-A in a 29-year-old). The morphology framing also does not align well with standard Gardner blastocyst assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for transfer monitoring and future workup, including early hCG/ultrasound and uterine evaluation. However, some recommendations are overly broad or not sufficiently prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013521,
+  "judge_latency_ms": 4691.785584000172,
+  "judge_prompt_tokens": 2587,
+  "judge_completion_tokens": 384
+}

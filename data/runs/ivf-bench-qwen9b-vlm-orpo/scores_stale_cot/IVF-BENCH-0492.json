@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0492",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Gives a broadly plausible blastocyst description and correctly notes uncertainty from a single static image, but introduces inconsistency around Gardner staging (3 vs expanded/4) and comments on ICM/TE visibility without strong image-grounded precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF history, male factor, sperm parameters, BMI, smoking, and endometrial thickness with embryo quality reasonably well, though some links are speculative (e.g., sperm DNA fragmentation) and not fully balanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are internal inconsistencies in morphology interpretation, shifting implantation estimates, and mixed statements about embryo quality and transfer strategy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice in recommending single embryo transfer and cautious interpretation of morphology, but includes some less guideline-grounded suggestions (e.g., leaning toward PGT-A/sperm DNA fragmentation after limited failure history, discussion of double transfer) and muddles Gardner grading definitions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future evaluation, including SET, luteal/endometrial review, lifestyle advice, and possible further workup if failure recurs; however, some recommendations are somewhat generic or contingent."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.019833,
+  "judge_latency_ms": 6642.83087500371,
+  "judge_prompt_tokens": 4946,
+  "judge_completion_tokens": 333
+}

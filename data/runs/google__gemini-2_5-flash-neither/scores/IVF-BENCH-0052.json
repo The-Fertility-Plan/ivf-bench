@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly states that no image was provided and avoids fabricating morphology, but therefore offers no actual blastocyst feature assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, oocyte maturity, diagnosis, endometrium, sperm parameters, lifestyle, and first-cycle status well, though some links to embryo quality are assumed rather than demonstrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with prognosis appropriately conditioned on missing morphology, though probability estimates rely on assumed good-quality blastocyst status."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognosis are guideline-consistent, but suggesting routine hysteroscopy/SIS before transfer and considering PGT-A after one failed transfer in a 28-year-old is somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, but some recommendations are generic and a few are not tightly tailored to this low-risk first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.01197,
+  "judge_latency_ms": 3852.987583995855,
+  "judge_prompt_tokens": 2645,
+  "judge_completion_tokens": 269
+}

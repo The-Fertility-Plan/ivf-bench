@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst-stage assessment and reasonable ICM/TE grading estimate, but it is somewhat overconfident about specific positional and cellular details that may not be clearly verifiable from a single image, and it does not discuss zona pellucida or image limitations in depth."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live births, endometrial thickness, smoking, miscarriage history, and semen data with embryo prognosis well, though some inferences about hidden male factor causes are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with the implantation estimate tied to embryo quality and patient factors; minor issues include speculative deductions about DNA fragmentation and the magnitude of smoking-related probability reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is broadly consistent with Gardner grading concepts and standard IVF counseling, including attention to smoking cessation and luteal support, though recommending PGT-A in a 31-year-old mainly due to prior cycles/miscarriage is more debatable than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear practical next steps for transfer and future planning, including smoking cessation, review of trigger timing, consideration of sperm DNA fragmentation testing, and counseling; however, some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012378,
+  "judge_latency_ms": 4545.273417003045,
+  "judge_prompt_tokens": 2326,
+  "judge_completion_tokens": 360
+}

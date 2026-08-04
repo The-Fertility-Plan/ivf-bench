@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 2BA scoring components (expansion grade 2, ICM B, TE A) consistent with the provided laboratory data. However, the claim that this is a 'Day 4 blastocyst' indicating 'rapid, high-competence development' is somewhat overstated and potentially misleading - Day 4 blastocysts are not universally superior to Day 5, and the model cannot truly assess developmental timing from the image alone. The description of zona pellucida and blastocoel is reasonable but generic. The morphological narrative largely echoes the provided Gardner score rather than demonstrating independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 26 with euploidy rate estimates, BMI 18.0 with specific impact on endometrial receptivity, AMH 1.91 contextualized against age expectations, sperm parameters, and lifestyle factors. The interaction between low BMI and endometrial receptivity is well-articulated. Minor gap: the 'unexplained' diagnosis could have been explored more deeply in relation to potential undetected endometrial or immunological factors, and the sedentary lifestyle connection to uterine blood flow is mentioned but underdeveloped."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 35-45% is derived through a transparent stepwise adjustment from a base rate, with clear directional reasoning for each modifier. The logic is generally consistent - TE A compensating for ICM B, BMI penalty, Day 4 bonus. Minor inconsistency: the model states Day 4 blastulation confers +5% advantage but this claim lacks strong evidence basis and slightly contradicts standard literature where Day 5 is the reference. The final summary aligns with the calculated range. Overall the reasoning chain is clear and mostly self-consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations for elective SET align with ESHRE/ASRM guidelines for good-prognosis patients. Gardner grading is applied correctly. However, the claim that Day 4 blastocysts are superior to Day 5 equivalents is not well-supported by current guidelines. The suggestion of both vaginal and IM progesterone based solely on BMI is not standard protocol guidance. PGT-A recommendation for a first cycle in a 26-year-old with unexplained infertility is somewhat aggressive per current ASRM guidelines which reserve PGT-A for specific indications. ERA recommendation after a single failed cycle is premature per ESHRE guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with rationale, progesterone optimization details, specific beta-hCG timing (9dp4dt), weight gain target (3-5 kg to BMI 20-21), and conditional recommendations for PGT-A and ERA. The future cycle planning section provides a clear priority hierarchy. Minor weakness: the progesterone dosing suggestion lacks specificity, and the ERA recommendation timing (after one failure) is earlier than most guidelines suggest, potentially leading to unnecessary testing. Overall, a clinician could act on most of these recommendations directly."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020214,
+  "judge_latency_ms": 15815.71837500087,
+  "judge_prompt_tokens": 2838,
+  "judge_completion_tokens": 780
+}

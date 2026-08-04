@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The case provided a Gardner score of 2AA, but the response ignored it and instead stated no specific grading was possible, then incorrectly reframed the embryo as a Day 4 morula/early blastocyst rather than analyzing the reported full blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior outcomes, sperm factors, smoking, and endometrium reasonably well, though some links are speculative and it fails to connect them to the known 2AA morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but undermined by a major contradiction: it treats the embryo as ungraded/Day 4 rather than using the provided 2AA blastocyst data, leading to a questionable probability estimate and downstream recommendations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based (smoking cessation, luteal support review, sperm DNA fragmentation consideration), but strong endorsement of PGT-A and ERA in this scenario is more debatable and not clearly guideline-driven, especially given the incorrect handling of embryo stage/grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future cycles, including smoking cessation, progesterone monitoring, SDF testing, and culture strategy, though some recommendations are based on an incorrect premise about embryo stage."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013818,
+  "judge_latency_ms": 4205.822249998164,
+  "judge_prompt_tokens": 2776,
+  "judge_completion_tokens": 366
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no formal embryo grade was provided and declines morphology assessment, despite the supplied Gardner score of 1DD. It fails to describe the known poor-quality blastocyst features: stage 1 expansion with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including young age, tubal factor, endometrium, sperm parameters, ovarian response, and lifestyle, and relates them to prognosis. However, it does not connect these factors to the actual provided poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but a major premise is flawed because it ignores the provided 1DD grade and treats embryo quality as unknown. This weakens the implantation estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (SET in a young patient, caution about hydrosalpinx, no routine PGT-A), but the failure to use the Gardner score and the optimistic implantation estimate for a 1DD embryo reduce alignment with standard embryo grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical recommendations on proceeding with transfer, luteal support, hydrosalpinx review, SET, documentation, extended culture, and future evaluation. Actionability is good, though less tailored than it should be because the poor 1DD morphology was missed."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.016044,
+  "judge_latency_ms": 4604.845792004198,
+  "judge_prompt_tokens": 3458,
+  "judge_completion_tokens": 378
+}

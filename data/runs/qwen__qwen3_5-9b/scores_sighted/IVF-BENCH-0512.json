@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0512",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AA and identifies ICM and TE appropriately, but it overstates what is clearly visible in this single image, especially claiming the embryo is 'ready for hatching' and describing TE cohesion with more certainty than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well: young age, BMI, endometriosis, ovarian reserve, sperm parameters, endometrium, and prior failed cycle. It connects these to prognosis, though some interactions are simplified and prior cycle context is not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but the implantation estimate is somewhat inflated for an untested day-5 3AA embryo and some deductions (e.g., >70% baseline, exact BMI penalty) are asserted without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several departures from evidence-based practice: ERA after a single failed transfer is not guideline-supported, 'freeze remaining embryos if fresh transfer fails' is illogical timing, and banking sperm is not relevant here. Fresh transfer recommendation is reasonable, but overall alignment is mixed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and addressing weight/lifestyle, but some recommendations are vague or poorly targeted, and future planning includes questionable suggestions that reduce clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012903,
+  "judge_latency_ms": 5156.840041992837,
+  "judge_prompt_tokens": 2571,
+  "judge_completion_tokens": 346
+}

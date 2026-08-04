@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0326",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and thinning zona, but it overstates certainty from the image, calls it 'fully expanded' despite the provided stage 3 expanded designation, and localizes/grades ICM and TE more confidently than the image alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian response, endometrium, prior live birth/failures, and sperm factors well, though it overlabels the history as RIF without transfer details and gives limited attention to missing AMH and cycle-specific context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible adjustment of prognosis based on prior failures; minor issues include calling the embryo 'top-tier/highest potential' while also using a moderate implantation estimate and inferring causes not evidenced in the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, single good-quality blastocyst transfer, and considering uterine evaluation after repeated failures, but recommendations such as ERA, assisted hatching, aspirin/heparin, and strong endorsement of PGT-A are more controversial/not routinely guideline-supported for all such cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and contingency planning, including uterine evaluation and sperm DNA fragmentation testing, though some suggestions are not sufficiently prioritized by evidence strength and could be more tailored to whether prior transfers actually occurred."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013917,
+  "judge_latency_ms": 5616.74562501139,
+  "judge_prompt_tokens": 2834,
+  "judge_completion_tokens": 361
+}

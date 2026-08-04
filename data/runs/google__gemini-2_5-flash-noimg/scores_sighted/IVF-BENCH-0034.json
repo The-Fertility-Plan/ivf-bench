@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes the embryo as very poor quality consistent with DD grading, but it invents/overstates image-based detail despite not seeing the image and mishandles the Gardner expansion stage by treating '1' as contradictory to the description rather than acknowledging likely data inconsistency. Little accurate visual description beyond the supplied grade is provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, ovarian response, sperm parameters, endometrium, BMI, and lifestyle with embryo prognosis in a clinically sensible way, though some links are somewhat generic and AMH absence is only briefly handled."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from a 1DD embryo, but there is a notable inconsistency around the expansion-stage interpretation and some overconfident statements such as sperm parameters being 'within normal range' despite low concentration."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-aligned (counseling, poor prognosis, consideration of future embryo selection), but strong endorsement of PGT-A and suggestions like CoQ10 and routine sperm DNA fragmentation testing are more conditional than presented, and advising transfer cancellation is not a standard blanket recommendation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, proceeding versus not proceeding with transfer, and future-cycle considerations, though some recommendations are somewhat broad and not fully prioritized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.015441,
+  "judge_latency_ms": 5122.448082998744,
+  "judge_prompt_tokens": 3377,
+  "judge_completion_tokens": 354
+}

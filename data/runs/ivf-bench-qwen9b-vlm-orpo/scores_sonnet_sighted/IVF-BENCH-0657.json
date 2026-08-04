@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0657",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage as consistent with a 3-4 range, correctly describes the ICM as loosely cellular (B-grade), and notes the TE as cohesive and dense (A-grade). The description aligns well with the Gardner 3BA score provided. Minor issue: the response slightly underestimates expansion, suggesting 'lower half of expanded spectrum' when the image shows a reasonably well-expanded blastocyst. No fabricated features, and zona thinning is implicitly acknowledged."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response connects maternal age 37 to aneuploidy risk, links AMH/FSH/oocyte yield to limited embryo availability, interprets the pattern of biochemical pregnancies and clinical miscarriage as suggesting implantation capacity but recurrent loss concern, addresses tubal factor favorably, notes endometrial thickness as reassuring, and contextualizes partner age and sperm parameters appropriately. All factors are woven into a coherent prognostic picture."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 25-35% follows logically from the stated factors (age, morphology, prior history). The response correctly distinguishes implantation probability from live birth rate. Minor inconsistency: the response states 'live birth chance per transfer often somewhat lower than implantation' without quantifying, and the section on live birth odds is slightly circular. The caveat about euploid status appropriately modifies the estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: single embryo transfer is recommended, PGT-A is discussed with appropriate nuance regarding embryo availability, recurrent pregnancy loss workup (antiphospholipid antibodies, thyroid, cavity assessment) is consistent with guidelines, and empiric immune therapies are appropriately discouraged without specific indication. The response correctly avoids recommending unproven adjuncts. Minor gap: does not explicitly reference ERA or receptivity testing despite 4 prior failures, which some guidelines would suggest considering."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific next steps: proceed with single embryo transfer, confirm uterine cavity with SIS or hysteroscopy given prior losses, counsel on realistic expectations, outline post-failure workup including antiphospholipid testing/TSH/prolactin/HbA1c, discuss PGT-A contingent on embryo yield, and explicitly advise against empiric adjuncts without indication. Recommendations are nuanced, case-specific, and practically implementable by a clinician."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.022422,
+  "judge_latency_ms": 15993.508708008449,
+  "judge_prompt_tokens": 4104,
+  "judge_completion_tokens": 674
+}

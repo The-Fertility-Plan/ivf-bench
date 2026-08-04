@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately identifies key visible features including cytoplasmic granularity, vacuolation, dark inclusions, and disorganized cellular structure. It correctly flags the discrepancy between the reported 3AA grade and the image appearance. The description of poor ICM definition and absent cohesive TE layer aligns with what is visible. Minor deduction for not more precisely characterizing the expansion stage or zona pellucida thinning pattern."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects PCOS to oocyte cytoplasmic immaturity and granularity, links the 7mm endometrial thickness to implantation risk, contextualizes the biochemical pregnancy history, addresses sperm parameters, and discusses lifestyle factors (alcohol, sedentary behavior) with quantified impact estimates. The interaction between PCOS and mitochondrial dysfunction is specifically tied to the observed morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability adjustment framework is transparent and follows from the evidence. The dual-scenario approach (true 3AA vs. image-accurate poor quality) is coherent. Minor issue: the baseline implantation rate of 55-65% for a true 3AA at age 34 is slightly optimistic compared to published literature (~45-55%), and the additive deduction model for probability adjustments, while intuitive, is not strictly statistically valid. Overall conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations largely align with ESHRE and ASRM guidelines. ERA testing after biochemical pregnancy, PGT-A consideration, hysteroscopy, thrombophilia screening, and endometrial thickness thresholds (≥8mm) are all guideline-consistent. Inositol for PCOS and CoQ10 recommendations reflect current evidence. Slight deduction as the response recommends assisted hatching based on PCOS granularity, which lacks strong guideline support for this specific indication, and the alcohol impact percentages cited are at the higher end of published estimates."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with immediate pre-transfer steps clearly delineated (embryologist re-evaluation, endometrial optimization options including Sildenafil and L-Arginine), a decision framework with conditional branches, a comprehensive checklist of future investigations, and specific lifestyle modification recommendations with evidence levels. The tiered scenario approach gives clinicians clear guidance under different conditions. Recommendations are specific, nuanced, and practically implementable."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.020916,
+  "judge_latency_ms": 13592.513499999768,
+  "judge_prompt_tokens": 3777,
+  "judge_completion_tokens": 639
+}

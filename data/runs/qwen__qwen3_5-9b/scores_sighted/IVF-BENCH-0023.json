@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly identifies very poor-quality morphology with poorly defined ICM/TE, but misstates the expansion relative to the provided Gardner 1 score by saying the blastocoel is not at least half the embryo and describes features more like a morula/transition stage than a grade 1 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, tubal factor, prior cycle history, sperm parameters, endometrium, and low oocyte yield with prognosis reasonably well, though it overinterprets low oocyte number as likely DOR without AMH/AFC and is somewhat simplistic about attributing embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it conflicts with the supplied Gardner definition, overstates certainty that male factor is excluded, and gives an extremely low implantation estimate that may be harsher than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent in recognizing poor prognosis for a 1DD embryo and recommending counseling, but some recommendations are not well aligned or are overstated, including strong early suggestion of donor eggs, attributing poor response without reserve data, and mentioning thrombophilia/immune testing without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for counseling, transfer expectations, ovarian reserve workup, and future cycle considerations, though some advice is broad and not sufficiently nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013632,
+  "judge_latency_ms": 5051.676540999324,
+  "judge_prompt_tokens": 2734,
+  "judge_completion_tokens": 362
+}

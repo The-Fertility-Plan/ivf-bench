@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0295",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a good-quality blastocyst with blastocoel, zona, and cohesive TE, but is somewhat inconsistent about stage (3AA vs early 4/5-like) and speculates about collapse/ICM location beyond what a single image firmly supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, endometrium, semen parameters, unexplained infertility, and prior failed cycle well, though some links to embryo competence and prognosis could be tighter."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Structure is clear, but the implantation estimate is internally inconsistent with the otherwise favorable profile and markedly lower than expected for a young patient with a Day 5 3AA embryo, weakening the logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligns with standard IVF principles on morphology, single-image limitations, luteal support, and avoiding bed rest, but the prognosis estimate is not well aligned with typical counseling benchmarks and PGT-A discussion is somewhat overemphasized for age 25 after one failed cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer optimization, lifestyle, and structured evaluation after failure; recommendations are useful though some are generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.16,
+  "judge_cost_usd": 0.01611,
+  "judge_latency_ms": 5672.246415982954,
+  "judge_prompt_tokens": 3770,
+  "judge_completion_tokens": 320
+}

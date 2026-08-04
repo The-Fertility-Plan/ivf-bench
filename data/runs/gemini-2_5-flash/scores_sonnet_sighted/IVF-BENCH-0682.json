@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the 3AA Gardner score components and provides reasonable descriptions of ICM and TE. However, the image appears to show a blastocyst that may not be fully consistent with a classic 3AA - the image is somewhat grainy and low contrast, making precise morphological assessment challenging. The response largely echoes the provided Gardner score rather than independently analyzing the image, and misses specific observations about the zona pellucida thinning visible in the image or any notable features like cell granularity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most clinical factors including age, AMH, FSH, endometriosis diagnosis, smoking status, BMI, endometrial thickness, sperm parameters, and previous IVF failure. It connects these factors to implantation probability and discusses how endometriosis and smoking interact with embryo quality and endometrial receptivity. Minor gap: does not discuss the potential interaction between endometriosis and the antagonist protocol specifically, or the significance of the 22 COC/16 MII ratio."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from baseline probability adjustment downward due to risk factors. The 40-55% estimate follows reasonably from the stated baseline of 55-65% with deductions for smoking and endometriosis. The response is internally consistent and conclusions are supported by the evidence presented. Minor issue: the quantification of smoking's impact (10-20% reduction) is presented with confidence but actual evidence for this specific magnitude is variable in literature."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines including PGT-A consideration for age 36 with prior failure, ERA consideration for recurrent implantation failure, GnRH agonist down-regulation for endometriosis FET, and smoking cessation counseling. The suggestion of laparoscopy for endometriomas aligns with ESHRE endometriosis guidelines. Thrombophilia screening recommendation is appropriate for recurrent implantation failure context. No major guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, including immediate smoking cessation, ERA consideration, PGT-A for future cycles, endometriosis staging review, GnRH agonist down-regulation protocol, and thrombophilia screening triggers. The response distinguishes between current transfer recommendations and future cycle planning. Could be improved by specifying luteal phase support protocols, providing specific smoking cessation resources or timelines, and giving more concrete guidance on when to proceed vs. delay transfer given current smoking status."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020982,
+  "judge_latency_ms": 13968.079291997128,
+  "judge_prompt_tokens": 3734,
+  "judge_completion_tokens": 652
+}

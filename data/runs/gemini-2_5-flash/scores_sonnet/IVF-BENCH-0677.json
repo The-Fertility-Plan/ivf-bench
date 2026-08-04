@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the blastocyst's expansion, ICM, and TE consistent with the Gardner 2AA score, and notes absence of fragmentation. However, it heavily relies on the provided Gardner score rather than independent image analysis, acknowledges image resolution limitations, and does not comment on zona pellucida status or provide truly independent morphological observations beyond what the score already states."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: patient age, AMH, FSH, BMI, diagnosis of unexplained infertility, detailed previous cycle history (ectopics, no pregnancies, live birth), sperm parameters, endometrial thickness, and lifestyle factors. It clearly connects each factor to prognosis and explains how they interact with embryo quality, particularly highlighting the ectopic history as a major modulating factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 35-50% follows reasonably from the baseline adjustment for BMI and recurrent failure history. The response correctly identifies that ectopic risk complicates the definition of 'successful implantation.' Minor issue: the baseline of 50-65% for a 2AA blastocyst is slightly optimistic, and the downward adjustments could be more precisely quantified, but overall the logic chain is sound and consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation, early hCG monitoring, ERA consideration, PGT-A discussion, thrombophilia screening, hysteroscopy for RIF workup, and salpingectomy consideration for recurrent ectopics. The response appropriately flags immunological testing as controversial. Minor gap: does not explicitly mention endometrial scratch or progesterone supplementation protocols, and Day 4 transfer timing is not critically evaluated against standard Day 5 blastocyst transfer guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: immediate ectopic counseling with specific symptom education, serial beta-hCG and early TVS monitoring protocol, explicit SET recommendation with cryopreservation of remaining embryos, specific diagnostic workup (hysteroscopy, laparoscopy, thrombophilia screen, ERA), PGT-A for future cycles, quantified weight loss target (5-10%), and psychological support referral. Each recommendation is clearly tied to a specific clinical concern in this case."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020814,
+  "judge_latency_ms": 12748.299375001807,
+  "judge_prompt_tokens": 3803,
+  "judge_completion_tokens": 627
+}

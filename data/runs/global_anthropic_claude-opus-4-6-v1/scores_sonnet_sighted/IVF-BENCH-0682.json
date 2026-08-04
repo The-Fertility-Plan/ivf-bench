@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: compact ICM, cohesive TE epithelium, expanded blastocoel with zona thinning consistent with stage 3, and notes minor granularity/vacuolation in TE cells. The description aligns well with the Gardner 3AA score. Minor limitation is that the image appears somewhat grainy and low-contrast, making definitive ICM/TE distinction challenging, yet the model confidently confirms all Grade A features without acknowledging image quality limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects AMH/FSH/oocyte yield to ovarian reserve, links endometriosis to endometrial receptivity mechanisms (progesterone receptors, immune microenvironment, implantation markers), identifies the synergistic risk interaction between endometriosis+smoking+age 36, addresses the 72.7% maturation rate in context of endometriosis, and integrates sperm parameters to exclude male factor. The interaction table and risk constellation analysis demonstrate sophisticated multi-factor reasoning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The probability estimate of 30-42% follows logically from a well-structured adjustment model starting from an evidence-based baseline of 45-55% for age 36 with 3AA blastocyst, with clearly quantified deductions for each risk factor. The reasoning is internally consistent throughout - the summary dashboard grades align with the narrative, the central estimate of ~35% is coherent with the adjustments applied, and the conditional euploid probability (45-55%) is appropriately distinguished. No contradictions identified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: appropriate luteal phase support protocols, PGT-A recommendation for age 36 with failed cycle, ERA consideration for recurrent implantation failure, GnRH agonist pretreatment for endometriosis (citing Sallam Cochrane review), freeze-all strategy rationale, and smoking cessation emphasis. Minor issue: recommending estradiol valerate addition to luteal support is not universally guideline-supported and the specific dosing recommendation could be more nuanced. The aneuploidy rate cited (35-45%) is slightly inconsistent with the euploid probability discussion elsewhere."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific drug names, doses, and timing (progesterone 200mg TID vaginal or 50mg IM, estradiol valerate 2mg BID, CoQ10 600mg/d). Clear sequential decision tree for both success and failure scenarios. Specific monitoring milestones (βhCG at days 10 and 12, viability scan at 6-7 weeks). Prioritized intervention list with expected impact quantification. Future cycle planning covers PGT-A, ERA, hysteroscopy, GnRH agonist pretreatment, and freeze-all strategy with clinical rationale for each. The smoking cessation urgency is appropriately emphasized as the single most impactful modifiable factor."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.025833,
+  "judge_latency_ms": 17591.632582989405,
+  "judge_prompt_tokens": 4736,
+  "judge_completion_tokens": 775
+}

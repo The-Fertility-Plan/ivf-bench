@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was provided and reframes the case as a Day 4 morula transfer, ignoring the supplied 3AA blastocyst grade. It therefore fails to describe the known expanded blastocyst, ICM, TE, or zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, FSH, endometriosis, sperm parameters, endometrium, protocol, and cycle history, though this integration is built around an incorrect embryo-stage assumption."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major contradiction: the case provides a 3AA blastocyst grade, yet the response assumes no grade and analyzes a morula. This undermines the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard, but key elements are misaligned with the provided embryo grading data, and suggestions such as ERA and prolonged GnRH agonist pretreatment are presented too readily for a first cycle without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps on luteal support, follow-up testing, and future planning, but actionability is limited by the incorrect assumption about embryo stage and transfer context."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013962,
+  "judge_latency_ms": 3725.7182910034317,
+  "judge_prompt_tokens": 2899,
+  "judge_completion_tokens": 351
+}

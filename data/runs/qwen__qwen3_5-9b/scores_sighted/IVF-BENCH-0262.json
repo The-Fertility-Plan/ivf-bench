@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0262",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response notes visual ambiguity, but it incorrectly interprets Gardner stage 2 as an expanded blastocyst and even states it is superior to stage 3/4. It gives little image-based detail on ICM/TE and relies heavily on the provided grade rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, uterine factor, prior live birth, BMI, and sperm parameters with embryo prognosis reasonably well, though it overstates AMH implications and does not discuss missing endometrial data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are important inconsistencies: it calls the image morula/early blastocyst while also labeling 2AA as top-tier expanded blastocyst, and it misstates Gardner expansion hierarchy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is a notable deviation from Gardner grading criteria: stage 2 is blastocoel filling the embryo, not expanded blastocyst, and it is not superior to stage 3/4 by definition. The rest is broadly conventional but these grading errors are significant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is truncated before providing concrete transfer or future-cycle recommendations, so practical next steps are limited and insufficiently specific."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011574,
+  "judge_latency_ms": 4556.6485000017565,
+  "judge_prompt_tokens": 2113,
+  "judge_completion_tokens": 349
+}

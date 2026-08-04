@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0012",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but it then overinterpreted the lab grade by calling the embryo non-viable/arrested and implying absent blastocoel. The image is more consistent with a poor-quality cleavage/morula-stage embryo rather than a confidently assessed degenerative blastocyst, so several morphology claims are stronger than the visible findings support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH/PCOS, BMI, prior miscarriage, sperm parameters, and endometrium with the poor embryo assessment in a clinically meaningful way. Some links are overstated, but overall the patient-factor synthesis is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is structured and internally consistent, and the low implantation estimate follows from its interpretation of the embryo grade. Minor issues include overconfidence about non-viability and some speculative inferences from the grading/protocol discrepancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and future planning is broadly evidence-based, but there are notable deviations: overcalling 0DD as definitively non-viable, recommending cancellation too strongly, and stating PCOS increases aneuploidy/strongly recommending PGT-A, which is not standard solely for young age with PCOS and one miscarriage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including counseling, record/lab review, protocol optimization, metabolic optimization, and possible additional testing. Recommendations are practical, though some are more assertive than warranted by the available evidence."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014814,
+  "judge_latency_ms": 5587.67920799437,
+  "judge_prompt_tokens": 2913,
+  "judge_completion_tokens": 405
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0075",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided 3AA grade rather than inventing image-specific findings. However, it repeated the prompt's incorrect interpretation of stage 3 as 'expanded blastocyst with thinning zona' (more consistent with stage 4), so morphology is only moderately accurate relative to the actual image and Gardner criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, tubal factor, prior IVF failures/miscarriages, sperm parameters, oocyte yield, smoking, and especially the thin endometrium. It connects these factors to prognosis, though some points are somewhat overextended."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and internally mostly consistent, but it overstates the impact of a 5 mm lining by concluding a 0-5% implantation chance and near-certain futility, which is stronger than the evidence supports. It also treats repeated failure as RIF/RPL without nuance and leans heavily on speculative causes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard and reasonable (consider deferring transfer with very thin lining, hysteroscopy/uterine evaluation, smoking cessation). However, endorsement of ERA, immune testing, thrombophilia screening broadly, G-CSF/PRP/sildenafil, and PGT-A in a 26-year-old with morphology alone goes beyond or is weakly supported by major guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The plan is clear and practical, with specific next steps for this transfer and future workup. It provides concrete options for endometrial optimization and recurrent failure evaluation, though some suggested interventions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01821,
+  "judge_latency_ms": 5769.162291995599,
+  "judge_prompt_tokens": 3885,
+  "judge_completion_tokens": 437
+}

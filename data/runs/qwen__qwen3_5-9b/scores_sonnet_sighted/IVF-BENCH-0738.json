@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocoel expansion, ICM location and compactness, and TE cohesion consistent with a 2AA grade. The description of ICM on the left and TE on the right/bottom is reasonable. However, the image actually shows some irregularity and fragmentation that could question the strict 2AA designation - the response notes 'slightly irregular' ICM but doesn't critically evaluate whether the image fully supports the reported grade. No mention of zona pellucida thinning or hatching status, which is visible and relevant."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 35, sperm parameters, endometrial thickness, BMI concern, and the uterine factor diagnosis. It correctly identifies the uterine factor as the primary limiting variable and connects endometrial thickness to receptivity. Minor gap: AMH is N/A and this is not addressed; the sedentary lifestyle is mentioned in data but not discussed; the first-cycle status is not leveraged in prognosis discussion."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from embryo quality to patient factors to probability estimate. The downward adjustment from >70% to 50-70% due to uterine factor is coherent and well-explained. Minor inconsistency: the response states FSH 7.7 is 'on the higher side of normal' suggesting 'mild ovarian reserve decline,' yet the retrieval of 17 COCs/14 MII clearly contradicts this concern - the response partially addresses this but the FSH interpretation is slightly overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: hysteroscopy recommendation for uterine factor, luteal phase support, appropriate Gardner grading interpretation, and PGT-A discussion with appropriate caveats for age 35. The recommendation to 'not freeze unless specific reason' aligns with single embryo transfer guidelines. Minor issue: the response doesn't explicitly address eSET (elective single embryo transfer) policy which is guideline-recommended at this age/quality combination."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: hysteroscopy confirmation, luteal support emphasis, nutritional consultation for low BMI, PGT-A consideration with appropriate nuance, and post-transfer monitoring protocol. The beta-hCG and early ultrasound recommendation for ectopic risk given uterine factor is a valuable specific point. Could be improved by specifying progesterone dosing considerations or timing of hysteroscopy relative to transfer cycle."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.018765,
+  "judge_latency_ms": 14301.503415990737,
+  "judge_prompt_tokens": 2945,
+  "judge_completion_tokens": 662
+}

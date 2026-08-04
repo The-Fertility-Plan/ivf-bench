@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BB Gardner score: expanded blastocoel with thinning zona pellucida, loosely grouped ICM in the upper-right quadrant, and sparse TE forming a loose epithelium. The spatial descriptions (left/upper margins for zona thinning, upper-right for ICM) suggest genuine image interpretation. Minor limitation is that the description could be more precise about cell counts and the degree of expansion, but overall it is accurate and well-detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, FSH, maturation rate, endometrial thickness, sperm parameters, BMI, and lifestyle. It correctly identifies the discrepancy between the DOR diagnosis and the apparently robust ovarian reserve markers. The interaction between embryo grade and maternal age on euploidy probability is explicitly addressed. Minor gap: does not deeply explore the long agonist protocol implications or the significance of this being a first cycle with no prior data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate is derived through a transparent calculation (euploidy probability × implantation if euploid), which is methodologically sound. The 40-55% range is consistent with the evidence presented. Minor inconsistency: the model notes AMH 4.51 may be associated with PCOS but then dismisses it without further exploration, and the upper bound justification (pushing to 55% based on endometrial thickness and BMI) is somewhat loosely argued. Overall the chain of reasoning is clear and conclusions follow from observations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for young patients, standard luteal support, vitrification of surplus embryos, and conditional PGT-A consideration. The Gardner grading interpretation is accurate. The recommendation to re-evaluate the DOR diagnosis based on AMH and retrieval numbers is clinically appropriate. Minor gap: does not mention specific progesterone protocols or timing windows, and PGT-A discussion could reference current ASRM guidance more explicitly regarding its use in young patients with good morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET is clearly recommended with rationale, luteal support is mentioned, cryopreservation of surplus embryos is advised, and PGT-A is framed conditionally with clear triggers (failed transfer or desire for multiple children). The suggestion to re-evaluate the DOR diagnosis is clinically useful. The response could be more actionable by specifying progesterone type/dosage, suggesting AFC measurement to clarify the DOR diagnosis, or providing a freeze-all consideration given the diagnostic uncertainty."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.018537,
+  "judge_latency_ms": 14952.520416998595,
+  "judge_prompt_tokens": 2739,
+  "judge_completion_tokens": 688
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0335",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image-based morphology by describing a well-defined blastocoel, a dense ICM in a specific region, and robust TE, none of which are clearly discernible in this low-quality close-up. It also introduces collapse/re-expansion artifact without strong visual support. It does acknowledge image-quality limitations, but several features appear inferred from the provided Gardner grade rather than reliably visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, tubal factor, prior ectopic/live birth/miscarriage, sperm parameters, endometrial thickness, and lifestyle factors into prognosis in a clinically meaningful way, including the key caveat about hydrosalpinx."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the implantation estimate generally follows from embryo grade, age, and uterine factors. Minor weakness is that morphology-specific conclusions are stronger than the image supports, but the overall prognostic logic remains sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice: caution about untreated hydrosalpinx, standard luteal support, avoidance of unproven add-ons, and conservative use of PGT-A. Slight overreach appears in some lifestyle/BMI optimization framing, but no major guideline conflicts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for this transfer and contingency planning after failure, including hydrosalpinx assessment, early hCG/ultrasound monitoring due to ectopic history, and sensible future-cycle considerations without excessive add-ons."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.017013,
+  "judge_latency_ms": 5542.135417010286,
+  "judge_prompt_tokens": 3611,
+  "judge_completion_tokens": 412
+}

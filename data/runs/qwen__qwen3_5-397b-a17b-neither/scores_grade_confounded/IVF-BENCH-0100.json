@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score 2AB and instead stated no specific score could be assigned, then assumed a likely score of at least 3BB. This contradicts the supplied morphology data and omits accurate ICM/TE interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, maturity rate, endometrial thickness, BMI, lifestyle, and sperm data reasonably well with prognosis, though some links are speculative and not tightly anchored to the actual 2AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there is a major inconsistency in ignoring the provided embryo grade and substituting an assumed better-quality embryo, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but the morphology discussion is not aligned with Gardner grading because the provided 2AB score was ignored. The suggestion to move to PGT-A after a single failed transfer at age 33 is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, beta-hCG timing, and future male-factor workup/lifestyle optimization, though some recommendations are generic and not fully tailored to the actual embryo grade."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013602,
+  "judge_latency_ms": 3607.679041000665,
+  "judge_prompt_tokens": 2764,
+  "judge_completion_tokens": 354
+}

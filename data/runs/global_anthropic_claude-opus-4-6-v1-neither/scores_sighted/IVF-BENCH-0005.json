@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately states no image was available to the model, but it then infers a Day 4 morula-stage embryo from transfer timing. The actual image shows a blastocyst/cavitating embryo rather than a compact morula, so this staging inference is inaccurate and no true morphology from the image is described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometriosis, prior failed cycles, sperm parameters, protocol, and endometrial thickness into prognosis reasonably well, though some links to embryo-specific quality are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the chain is weakened by the incorrect assumption that Day 4 implies morula and by treating three failed cycles as definitive recurrent implantation failure without nuance about embryo stage/quality and transfer history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard (hysteroscopy consideration, chronic endometritis assessment, blastocyst culture discussion), but ERA, NK-cell testing, routine thrombophilia workup, aspirin/prednisolone, IVIG/intralipids, and broad endorsement of PGT-A after failures are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for current transfer support and future evaluation/planning, though some recommendations are more speculative than evidence-based and would need careful clinician-specific tailoring."
+    }
+  ],
+  "extracted_probability": 0.17,
+  "judge_cost_usd": 0.013767,
+  "judge_latency_ms": 5453.110749993357,
+  "judge_prompt_tokens": 2669,
+  "judge_completion_tokens": 384
+}

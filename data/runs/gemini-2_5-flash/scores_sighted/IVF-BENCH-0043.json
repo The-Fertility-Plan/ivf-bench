@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely mirrors the provided 3AA label rather than the image itself. The image appears somewhat collapsed/poorly defined, with no clearly distinct compact ICM or uniformly cohesive TE visible, so statements about a clearly visible tight ICM, cohesive TE, and thin zona are overconfident and partly fabricated from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, PCOS, smoking, prior ectopic, sperm parameters, BMI, and endometrium, and relates them to prognosis. It could be stronger on distinguishing embryo morphology from euploidy and on not overstating smoking effects quantitatively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the probability adjustment is somewhat inconsistent and likely overly punitive, especially attributing a large implantation reduction to smoking without clear calibration. Morphology claims are also stronger than what the image supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as smoking cessation, eSET, and early monitoring after prior ectopic are broadly guideline-consistent. However, suggesting uterine cavity assessment specifically because of prior ectopic is not tightly linked to standard ectopic-risk evaluation, and some statements about smoking and morphology are stronger than evidence-based guidance would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical steps including smoking cessation counseling, eSET, ectopic-risk counseling, and luteal support. It is useful clinically, though future-cycle planning is only partially developed and could include more specific contingency steps such as tubal review, metabolic optimization in PCOS, and embryo banking/PGT discussion where appropriate."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015264,
+  "judge_latency_ms": 6230.57491700456,
+  "judge_prompt_tokens": 2968,
+  "judge_completion_tokens": 424
+}

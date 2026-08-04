@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The image appears more consistent with an early blastocyst/blastocyst rather than a morula; the response incorrectly states absence of blastocoel and does not assess ICM/TE despite the task asking for blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, sperm, endometrium, smoking, and cycle history with prognosis, though it overinterprets the AMH/DOR discrepancy and does not fully relate Day 4 developmental stage to transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the core morphology misclassification weakens downstream conclusions, and the implantation estimate is not well anchored to Day 4 embryo-specific outcomes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as smoking cessation, luteal support, and considering SET are broadly guideline-consistent, but morphology assessment does not follow Gardner-style blastocyst evaluation and some statements are overly definitive."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, luteal support, SET consideration, cryopreservation, and future planning, though recommendations would be stronger with more embryo-stage-specific transfer guidance."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014211,
+  "judge_latency_ms": 4771.204499993473,
+  "judge_prompt_tokens": 3092,
+  "judge_completion_tokens": 329
+}

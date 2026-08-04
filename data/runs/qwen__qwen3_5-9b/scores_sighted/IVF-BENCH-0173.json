@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0173",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response correctly identifies a very poor-quality early blastocyst with poorly defined/degenerative ICM and TE, consistent with 0DD. It reasonably describes limited blastocoel expansion, though calling expansion 'Grade 0' is imprecise in standard Gardner terminology and zona/overall structural details are limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, obesity, low AMH, prior miscarriage, sperm parameters, and partner age with embryo quality and prognosis. However, it somewhat overstates links such as low AMH directly implying poor egg quality and frames the PCOS/AMH discrepancy too strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is clear and the poor prognosis follows from the embryo grade plus patient factors, but there are notable issues: saying age 37 is not advanced maternal age is incorrect, partner age is arguably over-weighted for aneuploidy risk, and recommending freezing this embryo for later PGT-A is not internally practical for a day-4/poor-quality embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Much is broadly evidence-based, but there are several deviations: age 37 should be considered AMA in reproductive medicine, PGT-A is presented too strongly as recommended rather than individualized, and suggesting freeze-all/PGT-A for a poor-quality day-4 early blastocyst is not well aligned with routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical counseling points, transfer framing, and future-cycle suggestions including weight optimization and sperm DNA fragmentation testing. Still, some recommendations are not optimally tailored or feasible for this specific embryo stage/quality."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014727,
+  "judge_latency_ms": 6537.640082999133,
+  "judge_prompt_tokens": 2789,
+  "judge_completion_tokens": 424
+}

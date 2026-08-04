@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately identifies key morphological features consistent with a 3BA Gardner score: reasonable expansion with thinning zona, strong TE with multiple well-distributed peripheral cells, and a moderately cohesive but somewhat granular ICM fitting B-grade. The description aligns well with what is visible in the image. Minor limitation is the caveat about static imaging, which is appropriate but slightly hedges the analysis. Overall good detail without fabricating features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: age 35 and its impact on euploidy rates, tubal factor prognosis, endometrial thickness adequacy, sperm parameters, BMI considerations, and lifestyle factors. It connects these to implantation probability in a meaningful way. Minor gap: AMH is listed as N/A and the model doesn't flag this as a limitation for ovarian reserve assessment, and the relatively low MII yield (4/7) could have been more deeply integrated with the stimulation protocol discussion."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-55% follows reasonably from the evidence: untested embryo, age 35, good TE, B-grade ICM, favorable uterine environment. The distinction between implantation probability and live birth rate is appropriately made. One minor inconsistency: the model states 15mm endometrium is 'favorable' but then notes optimal is 7-10mm, which slightly contradicts the favorable framing without fully resolving the tension around whether 15mm is truly optimal or just acceptable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation at age 35, appropriate luteal phase support mention, caution against non-evidence-based add-ons (ERA, intralipids, steroids without indication), nuanced PGT-A discussion acknowledging limited embryo cohort concerns, and hydrosalpinx screening recommendation. The Gardner grading interpretation is accurate. Minor issue: the characterization of 15mm endometrium as 'adequate to good' is slightly at odds with some guidelines suggesting >14mm may warrant investigation, though this is a debated area."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with eSET, optimize luteal support, avoid unproven add-ons, confirm absence of hydrosalpinx, consider PGT-A conditionally, discuss stimulation adjustments if needed, and lifestyle optimization. Recommendations are well-structured and clinically practical. Could be slightly more specific on stimulation protocol adjustments (e.g., specific dose ranges or trigger type recommendations) and the weight reduction advice, while appropriate, is generic. Overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.021423,
+  "judge_latency_ms": 17110.803458010196,
+  "judge_prompt_tokens": 3661,
+  "judge_completion_tokens": 696
+}

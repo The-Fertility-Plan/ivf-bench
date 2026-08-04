@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0398",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst and correctly identifies a B-grade ICM and strong TE, but it overstates visible certainty (e.g., 'fully expanded' and clearly thinned zona) from a single image and describes some features more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, oocyte yield, endometrium, BMI/lifestyle, and male factor reasonably well with embryo quality, though it somewhat overinterprets morphology as suggesting likely euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly logical, but there are notable issues: calling 4 MII from 5 COCs a 'very low yield'/'poor responder' is somewhat overstated without more stimulation details, and suggesting morphology implies likely euploidy is a weak inference. The response is also truncated before completing risk discussion and probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading concepts and standard IVF considerations, but it overemphasizes TE as the primary predictor and implies morphology can indicate euploidy, which is not guideline-level evidence. No clearly inappropriate recommendation is shown, but the response is incomplete."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides general interpretation but lacks concrete transfer recommendations and future cycle planning; the response is truncated and does not deliver specific next steps or contingency planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011604,
+  "judge_latency_ms": 5338.552667002659,
+  "judge_prompt_tokens": 2108,
+  "judge_completion_tokens": 352
+}

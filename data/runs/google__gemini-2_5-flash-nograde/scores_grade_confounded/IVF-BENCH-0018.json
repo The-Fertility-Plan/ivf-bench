@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and states a Gardner score cannot be assigned, despite provided lab grading of 2BB. It omits accurate ICM/TE interpretation and substitutes fabricated stage-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, sperm quality, endometrium, BMI, and lifestyle risks, and connects them to prognosis, though some links to the actual embryo grade are weakened by the morphology error."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but the reasoning is undermined by the central contradiction between the supplied 2BB blastocyst grade and the model's claim that the embryo is only a morula/early blastocyst. The implantation estimate is therefore only partially supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on smoking cessation, alcohol reduction, luteal support, and prognosis is broadly evidence-based, but the embryo staging/grading discussion is not aligned with Gardner criteria, and the implantation estimate may be somewhat optimistic for a 2BB/day-4 context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including proceeding with transfer, lifestyle modification, luteal support, and future cycle considerations. However, they are less tailored than ideal because they are based on an incorrect morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01521,
+  "judge_latency_ms": 4167.897333005385,
+  "judge_prompt_tokens": 3170,
+  "judge_completion_tokens": 380
+}

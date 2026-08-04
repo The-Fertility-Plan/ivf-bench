@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description consistent with a 1DD grade, noting sparse TE, poorly defined ICM, and intact zona pellucida. However, it questions the expansion grade (suggesting Grade 2 rather than 1), which may or may not be accurate from the image. The description of degenerative changes in ICM and TE is consistent with the DD grading. Some details like 'cytoplasmic blebbing' and '12-1 o'clock position' may be fabricated or imprecise given the image quality. The observation about Day 4 blastulation is noteworthy but the expansion assessment discrepancy introduces uncertainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model connects male factor diagnosis with poor embryo morphology, suggests sperm DNA fragmentation as a potential cause, appropriately considers the patient's age (34) as favorable, notes the good ovarian reserve (AMH 3.68, FSH 7.9), recognizes the optimal endometrial thickness (11mm), and discusses how the oocyte yield (7 MII from 8 COCs) suggests competent oocytes with the problem likely on the sperm side. The lifestyle factors including high stress are also integrated meaningfully."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 5-15% follows logically from the DD morphology tempered by the young maternal age. The connection between male factor infertility and poor blastocyst quality is well-reasoned. One minor issue: the model notes Day 4 transfer but interprets this as 'Day 4 blastulation' suggesting accelerated development, when a 1DD on Day 4 could also simply represent a very early/poor blastocyst being transferred early. The suggestion that rapid development could indicate 'accelerated senescence' is speculative but not unreasonable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with current guidelines. Gardner grading criteria are correctly applied. The suggestion for PGT-A in future cycles, sperm DNA fragmentation testing, single embryo transfer, and luteal phase support are all evidence-based. The progesterone dosing recommendations are specific and appropriate. The dual trigger suggestion is reasonable. Minor deviation: recommending low-dose aspirin for endometrial perfusion has mixed evidence. The recommendation for TESE if DFI >25% is somewhat aggressive but within clinical consideration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations with specific dosages (progesterone 200mg TID or 50mg IM daily, aspirin 81mg), specific tests to order (DFI with TUNEL or SCD), specific thresholds (DFI >25%), and clear future cycle modifications (dual trigger, extended culture, PGT-A). The response provides alternatives (embryo pooling), addresses lifestyle modifications (stress reduction via MBSR/acupuncture), and includes realistic patient counseling guidance. The structured approach to both immediate transfer and future planning is clinically practical."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.03451,
+  "judge_latency_ms": 17721.397874993272,
+  "judge_prompt_tokens": 3097,
+  "judge_completion_tokens": 761
+}

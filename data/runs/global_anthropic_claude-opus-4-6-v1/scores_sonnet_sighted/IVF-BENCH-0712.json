@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable description consistent with the Gardner 3AA grade reported in the lab data, noting expanded blastocoel, thinning zona, cohesive ICM, and TE epithelium. However, the actual image appears quite grainy and difficult to interpret clearly - it shows significant granularity, dark debris, and vesicles that could suggest lower quality than 3AA. The model largely echoes the provided Gardner score rather than independently critically analyzing the image, and notes some limitations in image resolution. The description of ICM location as 'left-to-center' and TE as 'continuous' may not fully reflect what is visible in this somewhat ambiguous image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects AMH, FSH, age, endometriosis diagnosis, prior failed cycle, sperm parameters, endometrial thickness, BMI, and lifestyle factors to the embryo assessment. It uses a structured matrix approach and explicitly discusses how each factor modifies the prognosis, including endometriosis effects on HOXA10/HOXA11 expression, age-related aneuploidy rates, and paternal age effects on sperm DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The Bayesian reasoning framework is explicitly laid out with step-by-step probability adjustments, each with clear rationale. The final probability range (38-48%) logically follows from the sequential modifiers applied. The distinction between implantation probability and live birth probability is appropriately made. Conclusions about recommendations are consistently supported by the risk/benefit analysis presented. No contradictions identified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines including Gardner grading criteria, appropriate luteal phase support protocols, ERA testing for endometriosis patients, PGT-A considerations, and GnRH agonist pretreatment for endometriosis. The suggestion of ultra-long protocol for endometriosis is evidence-based. Minor issue: the response mentions 'fresh transfer' but the case involves Day 5 transfer without clearly specifying fresh vs. frozen context. Sperm DNA fragmentation recommendation for age 40 with normal parameters is slightly aggressive but defensible."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations covering immediate transfer support (specific progesterone dosing regimens), endometriosis-specific luteal support, lifestyle modifications, and a comprehensive failure workup including ERA, hysteroscopy, CD138 staining, thrombophilia screening, and sperm DNA fragmentation. Future cycle strategy includes specific protocol modifications (depot GnRH agonist timing), embryo banking strategy, and PGT-A rationale. Long-term reproductive planning advice is appropriately nuanced given patient age and endometriosis progression risk."
+    }
+  ],
+  "extracted_probability": 0.43,
+  "judge_cost_usd": 0.025011,
+  "judge_latency_ms": 16303.29625000013,
+  "judge_prompt_tokens": 4812,
+  "judge_completion_tokens": 705
+}

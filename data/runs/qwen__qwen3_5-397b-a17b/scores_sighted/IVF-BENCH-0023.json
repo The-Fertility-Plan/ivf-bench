@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response captures that this is a poor-quality embryo with poorly defined ICM/TE, but it misstates the Gardner expansion definition (1 = blastocoel at least half the embryo, not less than half) and overcalls features like degeneration/'mushy' appearance beyond what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, prior cycle outcomes, endometrial thickness, ovarian response, and semen data reasonably well, though it overinterprets absent AMH and makes speculative links such as sperm DNA fragmentation without sufficient case-specific evidence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis follows from the embryo grade, but there are notable issues: confusion around Day 4 versus blastocyst timing, incorrect expansion-stage interpretation, and an overly absolute claim that the embryo is 'essentially non-viable.'"
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard (counseling, protocol review, consider sperm DNA fragmentation testing), but advising cancellation of transfer to 'preserve the endometrium' and recommending PGT-A broadly at age 35/history of biochemical pregnancy are not well aligned with evidence-based guideline nuance; adjuvants like GH are also weakly supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for counseling, protocol reconsideration, sperm testing, and lifestyle review, though some recommendations are too definitive or insufficiently nuanced for a poor-quality Day 4 transfer scenario."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013698,
+  "judge_latency_ms": 5427.822958998149,
+  "judge_prompt_tokens": 2681,
+  "judge_completion_tokens": 377
+}

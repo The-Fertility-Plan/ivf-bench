@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score (expanded blastocoel, thinning zona, cohesive TE, prominent ICM). However, the image actually shows a somewhat granular, darkened ICM with visible vacuolation and what appears to be cellular debris or fragmentation within the blastocoel - features that suggest the embryo may not be as pristine as a true 3AA. The model uncritically accepts the provided Gardner score without noting any discordant visual features visible in the image, such as the dark granular mass and multiple vesicle-like structures that could indicate cytoplasmic abnormalities or early degeneration. The ICM localization at '9 o'clock' is a reasonable observation but the description of 'no fragmentation or degeneration' appears inconsistent with what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating the key clinical factors: maternal age (31), uterine factor diagnosis, endometrial thickness (9.5mm), sperm parameters, oocyte yield/maturity rate, BMI, and lifestyle factors. It correctly frames the case as a high-quality embryo vs. uterine environment scenario. The integration of AMH being N/A is not addressed, and the specific nature of the uterine factor (which could critically alter prognosis) is appropriately flagged as unknown. Minor gap: the short agonist protocol implications could have been explored more deeply in relation to endometrial receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 55-65% is reasonably derived from the baseline data with appropriate downward adjustment for the uterine factor. The conditional reasoning ('if corrected vs. untreated') is sound. One minor inconsistency: the model states euploidy rates are likely >60% for a 31-year-old but then gives a probability range that doesn't fully capitalize on this, though the uterine factor justifies the moderation. The overall flow from evidence to conclusion is coherent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for a 31-year-old with a top-grade blastocyst is appropriate per current guidelines, luteal phase support recommendation is standard, and the suggestion of hysteroscopy/SIS for uterine evaluation aligns with ESHRE guidelines for recurrent implantation failure workup. PGT-A recommendation is appropriately conservative (not indicated at this stage). The endometrial thickness threshold cited (>7mm) is consistent with current literature. Minor issue: the response could have mentioned ERA (Endometrial Receptivity Analysis) given the uterine factor diagnosis, which is increasingly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and clinically useful: eSET is clearly justified, luteal phase support is mentioned with specific routes (vaginal/IM), and future planning includes concrete diagnostic steps (hysteroscopy, SIS) and conditional PGT-A consideration. Lifestyle recommendations are practical. The response could be more actionable by specifying progesterone dosing protocols, timing of transfer, or addressing whether a freeze-all strategy should be considered given the uterine factor. The conditional framing of the uterine factor (treated vs. untreated) is clinically valuable but the response doesn't recommend clarifying this before proceeding with transfer."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021513,
+  "judge_latency_ms": 19023.544458003016,
+  "judge_prompt_tokens": 2876,
+  "judge_completion_tokens": 859
+}

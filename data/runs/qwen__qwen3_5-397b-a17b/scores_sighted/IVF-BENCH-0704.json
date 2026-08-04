@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a very poor-quality early blastocyst/degenerating embryo and correctly notes absent clear ICM/TE and poor expansion, but it overstates some image-specific details such as distinct vacuoles/cytoplasmic extrusion and labels it non-viable with more certainty than morphology alone supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, endometrium, prior miscarriage/failure, male factor, and partner age well, though it somewhat overemphasizes speculative sperm DNA fragmentation and mentions AMH only by omission."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with prognosis appropriately driven by the 0DD grade; minor issues include strong conclusions like 'hopeless' and some speculative causal links without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing extremely poor prognosis for a 0DD embryo and suggesting counseling, but recommendations such as routine PGT-A at age 35, PICSI/MACS/TESE, and broad antioxidant use are more controversial or not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer counseling and future workup/planning, though some suggestions are not sufficiently prioritized or nuanced by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013029,
+  "judge_latency_ms": 4992.882708000252,
+  "judge_prompt_tokens": 2593,
+  "judge_completion_tokens": 350
+}

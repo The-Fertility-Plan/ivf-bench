@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially overcalls embryo quality. The image does not show a fully expanded stage-4 blastocyst with a blastocoel filling the embryo or a clearly thinning zona. ICM and TE are not well-defined as described, and assigning 4AB/4BB appears fabricated from limited/poor morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior miscarriage, ovarian yield, sperm parameters, endometrial thickness, and lifestyle reasonably well with prognosis, though some conclusions are overly optimistic because the embryo morphology was misclassified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and internally mostly consistent, but the probability estimate and favorable prognosis rely heavily on an inaccurate morphology assessment, weakening the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer are broadly guideline-consistent, but the morphology grading is not aligned with Gardner criteria as visible in the image, and suggesting PGT-A after a single miscarriage/low oocyte yield is more debatable than standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including eSET and protocol review, though some advice is generic and partly based on an overestimated embryo grade."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012714,
+  "judge_latency_ms": 4867.92770800821,
+  "judge_prompt_tokens": 2523,
+  "judge_completion_tokens": 343
+}

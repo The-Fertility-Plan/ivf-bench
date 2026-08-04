@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0686",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the poor ICM definition, sparse/poorly cohesive trophectoderm, irregular blastocoel borders, and coarse cell morphology consistent with the 1DD Gardner grade. It correctly notes the absence of a compact ICM cluster and uneven TE distribution. Minor limitation is the acknowledgment that a single still frame limits assessment, which is appropriate but slightly hedges the analysis. Overall description matches the visible image features well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 33 (euploidy implications), AMH 4.5/FSH 5.8 (reserve), 14 MII oocytes (response quality), endometrial thickness 10mm, normal semen parameters, BMI 28, alcohol use, activity level, and first-cycle status. Critically, it correctly identifies the embryo morphology as the dominant negative factor overriding otherwise favorable patient characteristics, and explains how age modifies the interpretation of poor morphology (more concerning as embryo-specific issue rather than age-related aneuploidy)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is internally consistent throughout. The probability estimate of 1-8% (center ~2-5%) logically follows from the poor morphology assessment combined with favorable patient factors. The response correctly explains why good patient factors cannot overcome poor embryo quality, and the recommendations (proceed if only embryo available, honest counseling, single ET) are all consistent with the stated prognosis. No contradictions detected between sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/Gardner grading criteria for blastocyst assessment, appropriately recommends single embryo transfer, correctly positions PGT-A as non-mandatory at age 33 in a first cycle per ASRM guidelines, and appropriately suggests sperm DNA fragmentation testing only if recurrent poor quality occurs. The recommendation to consider hysteroscopy only after failed transfer aligns with evidence-based practice. Minor gap: could have referenced specific ESHRE consensus on poor-quality blastocyst transfer thresholds more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: clear transfer decision framework (proceed if only embryo available), explicit counseling points about low implantation probability and miscarriage risk, specific luteal phase support adherence guidance, concrete lifestyle modifications (alcohol cessation timing, activity), and a structured future cycle planning pathway including sperm DNA testing triggers, PGT-A discussion criteria, and uterine reassessment indications. The offer of patient-friendly and physician-note formats adds additional practical value."
+    }
+  ],
+  "extracted_probability": 0.035,
+  "judge_cost_usd": 0.021516,
+  "judge_latency_ms": 17049.694375004037,
+  "judge_prompt_tokens": 3872,
+  "judge_completion_tokens": 660
+}

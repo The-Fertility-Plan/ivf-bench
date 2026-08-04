@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0654",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the expansion stage, ICM, and TE consistent with the Gardner 2AA score. However, the image actually shows a somewhat irregular, less-than-perfect blastocyst with what appears to be some cellular irregularities and a less cohesive TE than a true AA grade would suggest. The model largely defers to the provided Gardner score rather than critically analyzing the image independently, missing potential discrepancies between the stated grade and visual appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, PCOS diagnosis, previous biochemical pregnancy, endometrial thickness, sperm parameters, and lifestyle factors. It correctly notes the antagonist protocol's relevance to PCOS management and connects the biochemical pregnancy history to uterine receptivity. Minor gap: the moderate alcohol consumption (4-6 drinks/week) is noted but not adequately flagged as a meaningful risk factor that could affect outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented. The response correctly identifies favorable and risk factors and builds a coherent argument. Minor inconsistency: the response mentions monitoring for OHSS during a transfer cycle without clearly distinguishing whether this is a fresh or frozen transfer, which affects the OHSS risk discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for young patient with good quality embryo, luteal phase support, cryopreservation of remaining embryos, and conditional PGT-A consideration. The Gardner grading interpretation is correct. The response appropriately notes PGT-A is not first-line for this age group with good morphology, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET, luteal phase support, OHSS monitoring, cryopreservation, and conditional PGT-A. Future cycle planning is addressed. However, the response could be more specific about alcohol reduction counseling given the 4-6 drinks/week intake, specific progesterone protocols, or trigger type considerations for PCOS. The recommendations are clinically useful but could benefit from more nuanced specificity."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019611,
+  "judge_latency_ms": 11984.996915998636,
+  "judge_prompt_tokens": 3627,
+  "judge_completion_tokens": 582
+}

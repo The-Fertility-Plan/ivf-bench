@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to describe morphology because no image was available to it, avoiding fabrication. However, it provided no actual image-based assessment despite the embryo appearing to be a day-4 compacting/early cavitating embryo rather than a blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, male factor, prior cycle history, and lifestyle reasonably well with prognosis, though some links to embryo-stage-specific implications are limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it makes unsupported assumptions (e.g., assuming a good-quality blastocyst, likely ICSI, and successful fertilization) and gives a probability estimate despite lacking embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: ERA is not recommended routinely, PGT-A at age 34/first cycle is not standard, and advice such as avoiding routine activity/sex/hot baths post-transfer is more customary than evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response offers practical next steps for transfer and future planning, including embryo reassessment, stress support, and contingency options, though some recommendations are somewhat generic and not tightly tailored to a day-4 embryo."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014943,
+  "judge_latency_ms": 5130.407125005149,
+  "judge_prompt_tokens": 3196,
+  "judge_completion_tokens": 357
+}

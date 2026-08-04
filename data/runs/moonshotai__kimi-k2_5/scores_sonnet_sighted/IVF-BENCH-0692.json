@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0692",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinning zona pellucida, describes a compact ICM at the 1-2 o'clock position, and notes cohesive TE with distinct cell boundaries. The description aligns well with the image showing an expanded blastocyst with visible ICM and TE. Minor issue: the image actually shows some irregularity and possible fragmentation at the periphery (bottom right area) that the model dismisses entirely, stating 'no visible fragmentation.' The cytoplasm description as 'homogeneous' may be slightly optimistic given the grainy texture visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects AMH/FSH to ovarian reserve adequacy, links the 80% MII maturity rate to stimulation quality, contextualizes the male factor sperm parameters (correctly identifying mild oligospermia with good motility), addresses endometrial thickness optimality, and integrates age-related aneuploidy risk with morphological grade. The interaction between male factor and blastocyst quality is thoughtfully addressed, and lifestyle factors are incorporated into the prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is generally well-structured and internally consistent. The probability estimates are logically derived from morphology, age-adjusted aneuploidy rates, and endometrial factors. The blended probability calculation (60-65% euploidy × implantation if euploid) is sound. Minor inconsistency: the response states implantation rate of 50-60% but clinical pregnancy rate of 55-65%, which is slightly illogical as clinical pregnancy rate should not exceed implantation rate significantly in this context. The euploidy rate cited (60-70% for AA-grade) is slightly optimistic for age 36."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Response aligns well with ESHRE/ASRM guidelines: recommends eSET for high-quality blastocyst, appropriate luteal support mention, Day 5 transfer timing, ultrasound-guided transfer placement. Gardner grading criteria are correctly applied. The recommendation for ERA only after second failure aligns with current evidence. PGT-A recommendation for age 36 is consistent with ASRM guidance. Minor deviation: the response doesn't mention ASRM's nuanced position on PGT-A for all patients at 36 (still somewhat debated), and the cumulative LBR estimate of 75-85% may be slightly optimistic per published SART data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific recommendations covering immediate transfer strategy (eSET, placement coordinates, luteal support), cryopreservation planning, contingency plans for both negative beta-hCG and biochemical loss scenarios, specific diagnostic tests to consider (ERA, SDF, PGT-A with clinical rationale), and lifestyle modifications. The tiered Plan A/Plan B structure is particularly useful for clinical decision-making. Recommendations are appropriately nuanced and case-specific rather than generic."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.022002,
+  "judge_latency_ms": 18185.7283749996,
+  "judge_prompt_tokens": 3504,
+  "judge_completion_tokens": 766
+}

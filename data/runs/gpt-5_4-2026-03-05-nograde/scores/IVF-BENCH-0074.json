@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "gpt-5.4-2026-03-05-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment with appropriate caveat about single-image uncertainty, but the specific 3BC/3CB call and detailed ICM/TE localization cannot be verified confidently without the image context here and may overstate precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, BMI, ovarian reserve markers, ovarian response, diagnosis, semen data, endometrium, and lifestyle factors with embryo morphology and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: favorable patient factors offset by fair-poor morphology, leading to a moderate implantation estimate. Minor uncertainty remains because morphology-based probability is inherently approximate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET at age 30, no routine PGT-A after one cycle, avoid overinterpreting one failed transfer, and standard luteal support. Slight deduction because some probability framing and lifestyle advice are more expert-opinion than guideline-specific."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Gives clear next-step recommendations for current transfer, embryo selection if alternatives exist, lifestyle modifications, and structured future-cycle review points if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013449,
+  "judge_latency_ms": 3691.215041006217,
+  "judge_prompt_tokens": 2948,
+  "judge_completion_tokens": 307
+}

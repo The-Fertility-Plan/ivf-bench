@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model incorrectly describes the expansion grade as 'blastocoel less than half the volume' for Grade 1, but the lab data states Grade 1 means 'blastocoel at least half the embryo.' More critically, looking at the image, the embryo actually appears to be a well-expanded blastocyst (likely Grade 4-5 expansion) with a large blastocoel cavity and multiple visible cells, contradicting the Grade 1 description. The model accepted the Gardner score uncritically without noting the discrepancy between the image appearance and the reported score. The image shows what appears to be a significantly expanded blastocyst, not an early-stage one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age-related aneuploidy risk, AMH/FSH indicating good ovarian reserve, excellent sperm parameters ruling out male factor, good endometrial thickness, and lifestyle factors. It correctly identifies age 38 as the primary risk factor and connects unexplained infertility with potential oocyte quality issues. Minor gap: doesn't deeply explore the implications of being a first-time IVF patient or the significance of 100% MII maturation rate in context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally coherent and the probability estimate (0-5%) logically follows from the poor morphology assessment. However, there is a notable inconsistency: the model accepts the Gardner 1DD score and builds its entire analysis on it without questioning the apparent discrepancy with the image, which shows a well-expanded blastocyst. The conclusion that this is a 'very low quality embryo' is internally consistent with the reported score but may not reflect the actual image. The recommendation against PGT-A is reasonable but could be better justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations align with ESHRE/ASRM guidelines: counseling before transfer, discussing PGT-A for age 38, considering donor oocytes after repeated failures, and evidence-based supplementation discussion. However, the Gardner grading description contains an error (Grade 1 expansion definition is mischaracterized). The recommendation to potentially cancel transfer of a 1DD embryo is clinically reasonable but some guidelines suggest offering transfer of all viable embryos regardless of quality when it's the patient's only option."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: clear counseling approach, two concrete transfer options (proceed vs. cancel) with rationale, future cycle planning including PGT-A consideration, protocol review, supplementation discussion, and donor oocyte pathway. The response provides a logical decision tree for the clinician. Minor weakness: could be more specific about timing of next cycle, specific supplementation protocols, or referral pathways for psychological support."
+    }
+  ],
+  "extracted_probability": 0.025,
+  "judge_cost_usd": 0.021753,
+  "judge_latency_ms": 15099.710458001937,
+  "judge_prompt_tokens": 3741,
+  "judge_completion_tokens": 702
+}

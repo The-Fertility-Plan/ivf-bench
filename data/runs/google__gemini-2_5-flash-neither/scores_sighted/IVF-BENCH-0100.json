@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate visible embryo features. However, it provided no actual morphology assessment despite the embryo image showing a blastocyst with non-top-quality features, so accuracy is limited by omission."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, lifestyle, prior cycle history, and male factor reasonably well with expected prognosis, though some links to actual embryo quality remain speculative because morphology was not assessed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with clear caveats about missing morphology. The implantation estimate is logically framed as conditional on embryo quality, though the assumed range may be somewhat optimistic without image-based grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a young patient, luteal support, cryopreservation, and selective consideration of PGT-A are broadly consistent with IVF practice guidelines. Minor overreach includes implying PGT-A for male factor without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including SET, luteal support, counseling, cryopreservation, and male-factor workup. It is useful clinically, though limited by lack of morphology-specific recommendations."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015003,
+  "judge_latency_ms": 5114.67958400317,
+  "judge_prompt_tokens": 3246,
+  "judge_completion_tokens": 351
+}

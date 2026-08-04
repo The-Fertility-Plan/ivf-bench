@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0532",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as an advanced/expanded blastocyst with a well-developed blastocoel occupying most of the embryo and a thinned zona, which is not clearly supported by the image. ICM and TE are not well delineated visually, so calling it top-quality from the image is too confident despite noting limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, diagnosis, semen parameters, endometrium, and lack of prior IVF failures with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to embryo grade and patient factors. Minor weakness is that the probability estimate leans on the reported grade more than the actual image, which was less convincing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including single embryo transfer, luteal support, and avoiding unproven add-ons. Slight deduction because morphology interpretation stretches beyond what is visible and PGT-A discussion is somewhat broad for this first-cycle young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, follow-up, and contingency planning after failure, though some advice remains general rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015,
+  "judge_latency_ms": 4721.432249993086,
+  "judge_prompt_tokens": 3365,
+  "judge_completion_tokens": 327
+}

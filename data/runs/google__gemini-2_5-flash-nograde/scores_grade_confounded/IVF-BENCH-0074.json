@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response undercalls the known laboratory grade 3AA, speculating B/C-quality ICM and TE and possible 3BB/4BB/BC despite provided data indicating expanded blastocyst with A-grade ICM and TE. Some generic blastocyst features are described correctly, but the morphology assessment is notably inaccurate relative to the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young age, BMI, ovarian reserve, endometrium, first cycle, and sperm parameters, and relates them to prognosis. It misses some nuance around male factor despite normal count/motility and overemphasizes minor lifestyle issues."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the mismatch between the embryo's provided 3AA grade and the model's lower visual estimate, while still giving a relatively strong implantation estimate. Some recommendations also extend beyond the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general prognosis are guideline-concordant, but suggesting ERA/mock cycle based on this presentation and thrombophilia screening after implantation failure is not strongly guideline-supported. PGT-A discussion is somewhat overextended for a good-prognosis 30-year-old first cycle."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and contingency planning, including SET, luteal support, and review of embryo development if unsuccessful. However, some suggestions are broader than necessary for this straightforward good-prognosis case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015423,
+  "judge_latency_ms": 4919.480500000645,
+  "judge_prompt_tokens": 3246,
+  "judge_completion_tokens": 379
+}

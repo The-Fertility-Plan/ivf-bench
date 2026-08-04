@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0193",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 0DD, but overstates certainty on features like exact ICM location, collapse, and dark/granular degeneration that are not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, BMI, unexplained infertility, first-cycle status, and semen parameters well, though it somewhat overinterprets the significance of 6 oocytes and attributes embryo failure to speculative causes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate follows from the poor morphology, but there are inconsistencies such as calling it both Day 4-appropriate and delayed, and labeling it 'functionally non-viable' while still recommending transfer as diagnostic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic grading interpretation is aligned, but several recommendations are weakly evidence-based or not guideline-supported for routine use (reproductive immunology panels, NK/Th1-Th2 testing, growth hormone, EmbryoGlue, donor sperm trial framing, broad karyotyping without indication)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step options for transfer versus extended culture and future workup/planning, but some suggested interventions are overly aggressive or insufficiently evidence-based for this specific first-cycle case."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015672,
+  "judge_latency_ms": 5335.249374998966,
+  "judge_prompt_tokens": 3349,
+  "judge_completion_tokens": 375
+}

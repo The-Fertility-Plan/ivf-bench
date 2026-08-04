@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0655",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the ICM location, describes it as compact and cellular consistent with A-grade, notes the TE as granular and less uniformly compact fitting B-grade, and observes blastocoel expansion with thinning zona. The description aligns well with the image. Minor deduction for acknowledging image softness as a limitation while still making confident assessments, and the ICM localization description ('upper-left to central/left-central') is reasonably accurate but could be more precise given the visible large ICM mass on the right side of the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including maternal age, AMH, FSH, BMI, endometrial thickness, lifestyle factors, male factor diagnosis, sperm parameters, and cycle history. It uses structured tables to organize factors by impact level, explains how male factor specifically interacts with embryo quality at this stage, and correctly identifies maternal age as the dominant prognostic factor. The interaction between day-4 transfer timing and grading standardization is also addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 45-55% implantation is logically derived from the combination of favorable factors (age 31, good morphology, optimal endometrium) tempered by male factor uncertainty and aneuploidy risk. The response correctly notes that reaching blastocyst stage already mitigates some male factor concerns. Minor deduction for slight inconsistency in describing the TE as 'granular and less uniformly compact' yet still rating overall morphology as 'favorable overall' without fully reconciling this tension."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommends SET at age 31, appropriately defers routine PGT-A for first cycle in a young patient, correctly applies Gardner grading criteria, recommends luteal support confirmation, and appropriately reserves sperm DNA fragmentation testing for cases of repeated failure. The discussion of day-4 vs day-5 transfer considerations is clinically sound. Minor deduction as the response could more explicitly reference the evidence base for day-4 blastocyst transfer outcomes versus day-5."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with rationale, luteal support confirmation, lifestyle continuation, realistic expectation-setting with specific timeline (10-12 days for pregnancy test), and a clear decision tree for future planning including when to consider PGT-A, sperm DNA fragmentation testing, and extended culture. The offer of alternative formats (clinic note, patient counseling version) adds practical value. Minor deduction as progesterone dosing specifics and transfer technique optimization could be more detailed."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.021801,
+  "judge_latency_ms": 16206.887874999666,
+  "judge_prompt_tokens": 3812,
+  "judge_completion_tokens": 691
+}

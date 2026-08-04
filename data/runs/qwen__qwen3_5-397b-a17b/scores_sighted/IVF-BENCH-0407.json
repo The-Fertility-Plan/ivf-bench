@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0407",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label and notes expanded blastocyst/thinning zona, but it overstates certainty from the image, mislabels possible ICM locations, and describes a clearly cohesive TE despite the image being somewhat indistinct."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior miscarriage, tubal factor, sperm quality, BMI, endometrial thickness, and low oocyte yield with embryo quality in a clinically meaningful way, though AMH is unavailable and DOR is inferred rather than established."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent, especially around morphology versus age-related aneuploidy risk; minor issues include equating implantation with 'positive heartbeat' and some overconfident causal inferences from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are broadly in line with IVF practice (SET, counseling, protocol review), but the strong endorsement of PGT-A and suggestion of aspirin/thrombophilia workup after a single miscarriage are more aggressive than guideline-based routine recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including SET, luteal support review, counseling, and possible protocol adjustments; however, some suggestions are somewhat generic and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.013104,
+  "judge_latency_ms": 4900.45979199931,
+  "judge_prompt_tokens": 2693,
+  "judge_completion_tokens": 335
+}

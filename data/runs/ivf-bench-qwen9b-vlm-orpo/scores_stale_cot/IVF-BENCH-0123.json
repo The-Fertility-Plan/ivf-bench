@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0123",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a good-quality expanded blastocyst with compact ICM and cohesive TE, but introduces uncertainty and inconsistency by calling it stage 3-4 and even '5AA,' and comments on features like granularity/not elite-tier that are not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, ovarian reserve markers, male-factor context, semen parameters, first-cycle status, and endometrial thickness into prognosis reasonably well, though some interactions are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and mostly consistent, but there are notable internal inconsistencies in grading terminology (3AA vs 4AA vs 5AA) and some overinterpretation of the 15 mm lining as potentially concerning without stronger support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with IVF practice: appropriate emphasis on embryo quality, age, single-transfer prognosis, luteal support, and avoiding extensive testing after one failure. Minor deviations include overcalling concern about thick endometrium and some imprecise Gardner grading discussion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, lifestyle optimization, and future evaluation if needed. Recommendations are useful, though some are broad rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015993,
+  "judge_latency_ms": 5714.497500099242,
+  "judge_prompt_tokens": 3681,
+  "judge_completion_tokens": 330
+}

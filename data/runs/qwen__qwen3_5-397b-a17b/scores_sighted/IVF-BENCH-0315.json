@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0315",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mislabels key morphology: it calls the embryo a full blastocyst and describes clear A-grade ICM/TE features that are not convincingly visible in the image. The image appears more consistent with an early/poorly expanded blastocyst with indistinct ICM and nonuniform TE rather than a confidently identifiable 2AA."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, BMI, and prior cycle history reasonably well with prognosis, though some links are overstated and it does not sufficiently address the inconsistency between stated transfer day and blastocyst-stage grading."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats 2AA as 'highest possible,' assumes a Day 4 full blastocyst is simply advanced rather than questioning data consistency, and introduces speculative claims about fast development and aneuploidy/asynchrony."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Some recommendations are guideline-concordant, such as single embryo transfer in a favorable prognosis patient, but several points are weakly supported or not guideline-based, including strong emphasis on Day 4 blastocyst-endometrium asynchrony, recommending PGT-A after one failure in a 34-year-old, and suggesting adjuncts like aspirin/vitamin E/sildenafil for lining optimization."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer strategy, luteal support considerations, alcohol cessation, and future planning. However, some recommendations are based on questionable assumptions and would benefit from more caution around the discordant staging data."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014997,
+  "judge_latency_ms": 6082.908625001437,
+  "judge_prompt_tokens": 2844,
+  "judge_completion_tokens": 431
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0679",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response fabricates confident 3AA features from an image it repeatedly recognized as discrepant/ambiguous, asserting dense ICM, cohesive TE, and thinning zona that are not clearly supported by the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, sperm parameters, diagnosis, and cycle history reasonably well with embryo quality, though some links are somewhat generic and overstate certain factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by major internal contradictions about whether the image is a blastocyst versus a vacuolated/degenerating oocyte, then defaulting to the lab grade despite visual conflict."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly IVF-consistent, but there are notable deviations such as calling 3AA the highest possible grade/gold standard and overstating routine PGT-A recommendation at age 36 with a single embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, counseling, and future workup, including discussion of PGT-A and sperm DNA fragmentation, though some advice remains somewhat broad."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01239625,
+  "judge_latency_ms": 5941.099832998589,
+  "judge_prompt_tokens": 7325,
+  "judge_completion_tokens": 324
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It appropriately notes that no image was provided, but it fails to directly interpret the supplied Gardner score 0DD, which indicates a very poor-quality early blastocyst with absent/degenerate ICM and TE. Instead it gives generic Day 4 discussion and suggests a likely morula/early blastocyst without addressing the severe D/D morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian reserve, prior outcomes, endometrial thickness, sperm parameters, and responder status into prognosis reasonably well. However, it overemphasizes speculative PCOS and receptivity issues relative to the clearly poor embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats the Day 4/Gardner combination as a major discrepancy despite early blastocyst grading being possible, and the implantation estimate seems too optimistic for a 0DD embryo. Some conclusions rely on speculation beyond the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence-based practice: ERA is not routinely recommended for implantation failure workup, NK-cell testing is not guideline-supported, and broad thrombophilia/immunologic testing is overextended here. Freeze-all and luteal support are reasonable, but overall alignment is mixed to poor."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides concrete next steps for transfer management and future planning, including luteal support review, culture strategy, and further evaluation. However, some suggested investigations are not appropriately prioritized or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.01437,
+  "judge_latency_ms": 4816.8728340024245,
+  "judge_prompt_tokens": 2765,
+  "judge_completion_tokens": 405
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0684",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst stage and attempts to describe ICM and TE features. However, it hedges excessively on the expansion stage, suggesting the embryo appears 'unexpanded to early expanded' when the image actually shows a clearly expanded blastocyst with visible zona thinning consistent with Gardner 3. The TE description as 'variable in cellular definition' and 'moderately cohesive' somewhat contradicts the AA grading. The response acknowledges the ICM but describes it tentatively. Overall mostly accurate but with notable uncertainty and some mischaracterization of the expansion stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 34, PCOS diagnosis, BMI 28.4, AMH 1.1, prior 3 failed cycles with clinical miscarriages and biochemical pregnancy, endometrial thickness 14mm, sperm parameters, and lifestyle factors. It explicitly connects each factor to prognosis, discusses interactions between PCOS and metabolic function, endometrial receptivity, and embryo quality, and correctly identifies the recurrent failure history as the dominant prognostic concern overriding good morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 50-65% implantation and 40-50% live birth follows coherently from the balance of favorable factors (age, morphology) against risk factors (recurrent failure, unknown ploidy). Minor inconsistency exists in simultaneously grading the embryo as 'good quality' while questioning whether it truly meets AA criteria, and the initial expansion stage mischaracterization creates slight internal tension. Overall the conclusions are well-supported by the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommending SET at age 34 with good-quality blastocyst, advising against unproven add-ons (endometrial scratching, intralipids, empiric steroids), suggesting hysteroscopy after recurrent failure, recommending RPL workup including antiphospholipid antibodies, and considering PGT-A for recurrent implantation failure. The caution around PGT-A at age 34 with only 3 cycles is appropriately nuanced. Minor gap: does not explicitly reference ERA or personalized embryo transfer timing which some guidelines now consider in RIF cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically organized into immediate transfer decisions and future cycle planning. Clear guidance is given on SET, luteal support optimization, avoiding unproven add-ons, and a prioritized diagnostic workup if transfer fails (hysteroscopy, sperm DNA fragmentation, metabolic evaluation, RPL panel, parental karyotype). Lifestyle modifications are specific. The response also addresses stimulation protocol alternatives for future cycles and freeze-all considerations, providing a comprehensive roadmap for the treating clinician."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.024264,
+  "judge_latency_ms": 18028.390708001098,
+  "judge_prompt_tokens": 4388,
+  "judge_completion_tokens": 740
+}

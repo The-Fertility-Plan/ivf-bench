@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not inspect the image and based morphology on the provided Gardner score. Its summary of 3AB is broadly consistent with the text label, but it repeated the prompt's inaccurate wording that stage 3 is 'expanded blastocyst' with thinning zona; under standard Gardner criteria stage 3 is full blastocyst, while expanded/thinning zona is stage 4. It did not fabricate image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, unexplained infertility, first cycle status, sperm parameters, endometrial thickness, and oocyte maturity with embryo quality and prognosis in a clinically meaningful way. Minor overreach includes inferring euploid likelihood from 9/9 MII and discussing AMH-related implications despite AMH being unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, linking embryo grade and favorable patient factors to a good prognosis and eSET recommendation. Small issues include overstatement that ICM 'compensates' for TE and some speculative claims about sedentary behavior, aspirin, and ERA/PGT-A after a single failed transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core recommendations such as single embryo transfer in a 28-year-old with a good-quality day-5 blastocyst are guideline-concordant. However, suggesting low-dose aspirin/extra estrogen without indication, and strongly considering PGT-A or ERA after one failed transfer, is not well supported by current ASRM/ESHRE guidance for a young first-cycle unexplained infertility patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for this transfer and contingency planning, including eSET, luteal support, and possible further evaluation if unsuccessful. It is useful, though some recommendations are not sufficiently nuanced or evidence-based for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01581,
+  "judge_latency_ms": 6522.512000010465,
+  "judge_prompt_tokens": 2940,
+  "judge_completion_tokens": 466
+}

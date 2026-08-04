@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to fabricate image-specific morphology because no image was provided to it. It correctly noted that Day 4 embryos are often morula/early blastocyst and that Gardner ICM/TE grading is less applicable, but it did not assess the visible embryo itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, BMI, endometrial thickness, male factor, paternal age, and prior cycle history into prognosis reasonably well, though some assumptions about sperm DNA fragmentation and protocol implications are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, transfer day, and embryo-selection limitations. Minor issues include speculative interpretation of the male factor diagnosis and broad assumptions about Day 4 transfer rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is largely aligned with IVF practice: it avoids inappropriate Gardner grading for a Day 4 embryo, recognizes age-related aneuploidy risk, supports standard luteal support and beta-hCG timing, and reasonably discusses PGT-A and extended culture. Some recommendations, such as TESE based on possible DNA fragmentation, are more conditional than presented."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for the current transfer and future planning, including luteal support, follow-up testing, consideration of PGT-A, extended culture, and sperm DNA fragmentation testing. Recommendations are practical, though some are somewhat generic and not tightly tailored to the actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.014568,
+  "judge_latency_ms": 6345.637250007712,
+  "judge_prompt_tokens": 2871,
+  "judge_completion_tokens": 397
+}

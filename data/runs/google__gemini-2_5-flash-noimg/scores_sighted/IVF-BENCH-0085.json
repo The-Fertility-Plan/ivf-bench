@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and relied on the supplied Gardner 4BB grade rather than inventing image-specific details. Its description of expansion and overall 4BB quality is broadly consistent with the case data, though it repeats the prompt's wording that grade 4 is 'hatching/herniating,' which is not standard Gardner staging and is not a true image-based analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, tubal factor diagnosis, endometrial thickness, sperm parameters, lifestyle, and first-cycle status with embryo quality in a clinically meaningful way. Some interactions are simplified and it slightly overstates how ovarian reserve predicts egg quality/euploidy at age 38."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is organized and mostly logical, but the implantation estimate is somewhat optimistic for an untested 4BB embryo in a 38-year-old. It also suggests embryo morphology and ovarian reserve mitigate age-related aneuploidy more than is justified, creating a mild mismatch between evidence and conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, and considering PGT-A in future planning are broadly consistent with IVF practice and guideline-based counseling. Minor issues include the nonstandard interpretation of expansion grade 4 as hatching and somewhat overstated prognostic confidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable: proceed with SET, continue luteal support, maintain healthy habits, cryopreserve remaining embryos, and consider PGT-A for future planning. They are somewhat generic and could be more nuanced about fresh vs frozen transfer context and counseling around age-specific success rates."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016176,
+  "judge_latency_ms": 6558.762291999301,
+  "judge_prompt_tokens": 3172,
+  "judge_completion_tokens": 444
+}

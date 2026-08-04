@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no specific Gardner grade is available and fails to use the provided 3AB morphology data; it substitutes inferred features rather than analyzing the known expansion, ICM, and TE grades."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, sperm parameters, endometrial thickness, diagnosis, and cycle history into prognosis reasonably well, though it misses the key interaction between the actual 3AB grade and patient factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the false premise that morphology is unavailable and by overinterpreting 100% MII and Day 5 development as proxies for embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and standard luteal support are broadly guideline-consistent, but suggesting PGT-A after one failed transfer and ERA after two failed transfers is more aggressive than typical evidence-based guidance for a 28-year-old unexplained infertility case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including eSET, luteal support, and future testing considerations, though these would be stronger if anchored to the actual 3AB embryo grade."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012888,
+  "judge_latency_ms": 4240.191125005367,
+  "judge_prompt_tokens": 2571,
+  "judge_completion_tokens": 345
+}

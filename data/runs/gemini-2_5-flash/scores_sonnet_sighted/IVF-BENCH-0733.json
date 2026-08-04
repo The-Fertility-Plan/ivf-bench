@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst state and thinning zona consistent with Gardner 3BB. It notes the loosely grouped ICM and loose TE epithelium. However, it notably identifies the small circular structure (likely a collapsed vacuole or degenerative body) as possibly an 'artifact or cellular debris' without more precise characterization. The description is somewhat generic and relies heavily on the provided Gardner score rather than independent image analysis. The image actually shows a somewhat irregular/collapsed blastocoel morphology that isn't fully addressed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 35, AMH/FSH values, male factor diagnosis with good sperm parameters, previous live birth as a strong positive indicator, and optimal endometrial thickness. It correctly contextualizes the 3BB grade within the patient's favorable profile. Minor gap: doesn't deeply explore the significance of the two failed cycles following the live birth or consider whether the male factor diagnosis might still play a subtle role despite good parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-70% probability estimate is reasonably justified by combining the base rate for 3BB embryos with the favorable patient factors. The prior live birth is appropriately weighted as a strong positive indicator. The reasoning flows coherently from observations to conclusions. Minor issue: the jump from typical 40-60% base rate to 60-70% with patient factors could be more explicitly quantified, and the two prior failed cycles slightly underweighted in the probability adjustment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: appropriate luteal phase support, consideration of PGT-A at age 35 with recurrent failure, ERA testing for recurrent implantation failure, hysteroscopy consideration, and freeze-all strategy with PGT-A. The Gardner grading interpretation aligns with standard criteria. Minor deviation: PGT-A recommendation at age 35 is somewhat aggressive per current ASRM guidelines which don't universally recommend it at this age without more clear recurrent failure criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for both the current transfer (proceed, luteal support, monitoring) and future planning (PGT-A, ERA, hysteroscopy, immunological workup, freeze-all strategy). Recommendations are appropriately tiered and conditional. Could be more specific about luteal support protocols, timing of beta-hCG testing, or specific stress management interventions. The future planning section is well-structured with logical progression of investigations."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.02079,
+  "judge_latency_ms": 15235.60116700537,
+  "judge_prompt_tokens": 3635,
+  "judge_completion_tokens": 659
+}

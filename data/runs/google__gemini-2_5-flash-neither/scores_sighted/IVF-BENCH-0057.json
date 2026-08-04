@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate embryo morphology. It appropriately declined to assign Gardner features rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, prior biochemical pregnancy, sperm parameters, smoking, BMI, endometrium, and day-5 development into prognosis well, though some links (e.g., male factor interpretation, endometrial thickness as 'highly receptive') were somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to known positives and negatives. Minor issues include overemphasis on smoking effect size and drawing strong conclusions from low MII proportion and thick endometrium."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, counseling, lifestyle optimization), but routine strong endorsement of PGT-A at age 35 after one biochemical pregnancy and calling 15 mm endometrium 'exceptionally receptive' are not fully guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future cycles, including smoking cessation, counseling, review of embryo data, and lifestyle measures. Some suggestions are less specific or not strongly evidence-based, but overall clinically useful."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.015393,
+  "judge_latency_ms": 4561.5600000019185,
+  "judge_prompt_tokens": 3481,
+  "judge_completion_tokens": 330
+}

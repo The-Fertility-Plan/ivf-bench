@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label and image, correctly identifying a compact ICM and looser TE, but it overstates certainty about a large blastocoel and zona thinning/imminent hatching given the image quality and stage 3 designation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometriosis, sperm parameters, partner age, and thin endometrium with embryo quality reasonably well, though it somewhat overemphasizes paternal age and does not fully nuance the impact of endometriosis phenotype or transfer context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and understandable, but there are notable issues: calling 3AB 'top-tier/excellent,' attributing aneuploidy risk heavily to paternal age 40, and linking receptivity confirmation to biopsy/progesterone in a way that is not well supported for this scenario."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned on embryo grading and acknowledging thin endometrium as a concern, but recommendations such as routine receptivity biopsy implication, strong emphasis on PGT-A due to paternal age alone, and specific estrogen suggestions without cycle context are not fully guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step suggestions for proceeding with transfer, monitoring/optimizing the lining, and considering FET or discussion of PGT-A in future planning, though some recommendations are somewhat generic or insufficiently tailored to the exact transfer protocol."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013419,
+  "judge_latency_ms": 5856.252999990829,
+  "judge_prompt_tokens": 2513,
+  "judge_completion_tokens": 392
+}

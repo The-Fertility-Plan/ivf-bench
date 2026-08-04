@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0083",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner 4AB grade rather than inventing image-specific findings. Its interpretation of expansion and ICM is accurate to the provided grade, but it incorrectly paraphrased TE as 'few cells forming a loose epithelium' rather than the standard B-grade meaning of several/few cells forming a loose epithelium, and it did not analyze visible image details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, ovarian reserve markers, tubal factor, prior miscarriage, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality, correctly emphasizing age-related aneuploidy as the dominant modifier of prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with prognosis driven mainly by age despite good morphology. Minor issues include calling 4AB 'high-quality/excellent' somewhat strongly for a TE-B embryo and a slightly broad implantation estimate, but overall conclusions are well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: recognition of morphology limits at age 42, counseling about aneuploidy/miscarriage risk, luteal support, and consideration of PGT-A in future cycles. Minor overstatement appears in saying PGT-A would 'significantly improve' chances/live birth, which is more nuanced in guidelines, especially with low embryo numbers."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for the current transfer and future planning, including counseling, SET, luteal support, lifestyle optimization, and discussion of PGT-A/donor oocytes. It is useful, though some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.016686,
+  "judge_latency_ms": 6085.331207999843,
+  "judge_prompt_tokens": 3327,
+  "judge_completion_tokens": 447
+}

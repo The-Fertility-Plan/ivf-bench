@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0106",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but the image is limited and the response infers TE cohesion, blastocoel, and zona thinning more confidently than can be directly verified from this single focal view."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, PCOS, prior ectopic/biochemical outcomes, endometrial thickness, BMI/lifestyle, and sperm parameters with embryo quality in a clinically meaningful way, though AMH is unavailable and some factors are weighted somewhat strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible probability adjustment from morphology to patient-specific prognosis; minor issues include overattribution of prior failures and paternal age effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, single high-quality blastocyst transfer, and early ectopic surveillance, but recommendations such as routine ERA, thrombophilia/immune framing, and strong endorsement of PGT-A are more controversial or not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including luteal support review, serial hCG/early ultrasound, and possible further testing, though some suggestions would benefit from tighter indication-based nuance."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013191,
+  "judge_latency_ms": 4809.278499989887,
+  "judge_prompt_tokens": 2677,
+  "judge_completion_tokens": 344
+}

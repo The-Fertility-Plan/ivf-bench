@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misinterprets Gardner notation, repeatedly treating the '2' in 2AA as an ICM grade rather than expansion stage, and gives an inconsistent expansion assessment. It does identify a blastocyst with visible ICM and cohesive TE, but the morphology discussion contains notable grading errors and unsupported detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian response, sperm parameters, diagnosis context, lifestyle, and thin endometrium, and relates them to prognosis. AMH is unavailable and not overinterpreted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by internal contradictions about Gardner grading and by overconfident conclusions such as 'very likely' positive pregnancy test. Probability reasoning is only partly supported, especially given the 6 mm lining and grading confusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is partial alignment on favorable age and concern for thin endometrium, but key deviations include incorrect Gardner grading interpretation, questionable statements about euploidy likelihood, and non-guideline-based recommendations such as 'do not freeze it unless...' and specific estrogen advice without cycle context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps such as proceeding with transfer, monitoring the lining, and considering future PGT-A selectively, but recommendations are somewhat generic and some are not sufficiently nuanced or context-specific."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.00987625,
+  "judge_latency_ms": 6022.070582956076,
+  "judge_prompt_tokens": 5085,
+  "judge_completion_tokens": 352
+}

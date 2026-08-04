@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: blastocoel cavity, ICM as dense and well-defined, TE as circumferential cellular arrangement, and intact zona pellucida. The observation of slight blastocoel asymmetry adds nuance. The Grade 2 expansion assessment is consistent with the image showing a full but not fully expanded blastocyst. Minor limitation: the ICM location described as 'upper-left quadrant' is a reasonable approximation but the image shows a more centrally positioned mass. Overall description is accurate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: BMI 35.1 is correctly flagged as a significant risk with quantified impact on implantation, alcohol use is connected to IVF outcomes, age 34 is contextualized relative to aneuploidy risk thresholds, AMH/FSH are interpreted together with oocyte yield, endometrial thickness is evaluated against optimal ranges, and sperm parameters are assessed against WHO criteria. The interaction between multiple risk factors and embryo quality is explicitly modeled in the probability estimate, demonstrating strong integrative reasoning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate logically follows from the base rate with clearly enumerated modifiers. The decision to proceed with transfer is coherent given the good embryo quality. One minor inconsistency: the response flags Grade 2 expansion as a moderate risk factor reducing implantation by 5-10%, yet the Gardner score provided in the lab data is 2AA which by definition includes full blastocyst expansion - the model slightly overpenalizes this. The modifier calculations are reasonable though not formally validated. Overall the logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: progesterone luteal support, endometrial pattern confirmation, lifestyle counseling, consideration of PGT-A, sperm DNA fragmentation testing for older male partners, and ERA for unexplained implantation failure. The alcohol cessation advice aligns with ASRM lifestyle guidance. BMI management recommendations are evidence-based. The suggestion of low-dose aspirin for BMI>35 is somewhat speculative as evidence is mixed. The recommendation to target Grade 3-5 expansion before biopsy slightly misrepresents PGT-A timing guidelines. Otherwise well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically organized into immediate actions and future planning with clear conditional logic (if cycle fails). Specific interventions include luteal phase support type, alcohol cessation with quantified benefit, BMI target (<30), specific diagnostic workup (ERA, SDF testing, hysteroscopy, thrombophilia panel), protocol adjustments (dual trigger, freeze-all strategy), and supplement recommendations. The tiered approach with decision trees makes this immediately usable by a clinician. The summary dashboard provides a quick-reference overview. Nuance is shown by distinguishing first-line from contingency recommendations."
+    }
+  ],
+  "extracted_probability": 0.415,
+  "judge_cost_usd": 0.022692,
+  "judge_latency_ms": 17477.68566700688,
+  "judge_prompt_tokens": 3759,
+  "judge_completion_tokens": 761
+}

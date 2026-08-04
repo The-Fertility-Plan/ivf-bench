@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0681",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a full blastocyst and loose TE, but it misstates the reported grade by implying B TE despite the provided 2AB meaning A ICM and B TE, and it adds some image-based confidence beyond what is clearly visible in a single static frame."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, sperm, lining, smoking, endometriosis, and first-cycle status well, with appropriate discussion of how these modify prognosis alongside embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with probability estimates tied to favorable and unfavorable factors; only minor issues arise from the morphology/grading inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Overall aligned with standard IVF counseling and Gardner-based interpretation, including caution about morphology limits and smoking cessation, though the grading discussion is somewhat imprecise and not fully faithful to the provided 2AB definition."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for proceeding with transfer, luteal support, smoking cessation, alcohol avoidance, and future planning, though recommendations remain somewhat general rather than highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013563,
+  "judge_latency_ms": 4323.618084003101,
+  "judge_prompt_tokens": 2996,
+  "judge_completion_tokens": 305
+}

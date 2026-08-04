@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0126",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and recognizes ICM/TE, but overstates visual certainty: the image does not clearly show a distinctly cohesive TE layer or obvious hatching, and calling it 'fully expanded'/'about to hatch' goes beyond what is securely visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, prior IVF history, sperm parameters, endometrium, and lifestyle with embryo quality in a clinically meaningful way, though it could better distinguish prognosis driven by embryo ploidy versus maternal/endometrial factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to morphology and age-related aneuploidy risk; minor issues include some overconfident statements about sperm diagnosis resolution and morphology-ploidy implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-quality day-5 blastocyst, luteal support, and discussion of PGT-A at age 37 after prior failure. Small deviations include overstating predictive value of morphology and implying ideal lining alone strongly boosts success."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, beta-hCG timing, and consideration of PGT-A. Useful but somewhat generic and lacking protocol-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013008,
+  "judge_latency_ms": 4925.279582996154,
+  "judge_prompt_tokens": 2581,
+  "judge_completion_tokens": 351
+}

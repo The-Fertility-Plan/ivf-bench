@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0496",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it inaccurately states the blastocoel is <50% despite the provided Gardner 1 definition here being at least half the embryo, and it adds some inferred features not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, BMI, prior IVF outcomes, tubal factor, sperm parameters, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the low implantation estimate follows from the poor morphology and patient factors, but there are minor issues such as overinterpreting recurrent implantation failure and making strong causal claims from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the poor prognosis assessment is broadly appropriate, recommendations such as 'aggressive' luteal support, low-dose aspirin for this scenario, and framing donor oocytes as a strong immediate recommendation are not well supported by standard evidence-based IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for counseling, proceeding with transfer if this is the only embryo, and future planning, but some recommendations lack nuance or evidence support."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.013272,
+  "judge_latency_ms": 4828.04666699667,
+  "judge_prompt_tokens": 2639,
+  "judge_completion_tokens": 357
+}

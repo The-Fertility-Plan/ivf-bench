@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0132",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model explicitly noted it could not see the image and based morphology on the provided Gardner 3BB description, which largely matches the image and grading. Minor overreach includes suggesting the embryo is preparing to hatch/early hatching, which is not clearly supported for a stage 3 blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH, BMI, endometrium, prior biochemical pregnancy, sperm parameters, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates broadly following the case features. Some claims are a bit speculative, such as linking TE grade to slower beta-hCG rise and inferring uterine receptivity from a prior biochemical pregnancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: strong endorsement of PGT-A in a 32-year-old after only one biochemical pregnancy is more aggressive than guideline-based routine practice, and metabolic screening/Metformin suggestions are somewhat speculative without a PCOS diagnosis."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, luteal support monitoring, beta-hCG follow-up, and contingency planning. Some recommendations are useful but slightly overprescriptive or not universally indicated."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.01455,
+  "judge_latency_ms": 4824.747459002538,
+  "judge_prompt_tokens": 3055,
+  "judge_completion_tokens": 359
+}

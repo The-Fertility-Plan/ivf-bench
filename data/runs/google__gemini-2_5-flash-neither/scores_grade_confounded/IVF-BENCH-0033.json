@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is not available and fails to use the provided 2BB morphology data; it also mischaracterizes the transfer as Day 4 morula-focused despite the supplied blastocyst grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key patient factors well, including age, ovarian reserve, BMI, smoking, male factor, sperm parameters, and endometrium, though it does not properly connect these to the known 2BB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it has a major inconsistency by claiming embryo morphology is unavailable when a 2BB grade is provided, which weakens the probability estimate and transfer interpretation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, luteal support, lifestyle optimization), but suggesting PGT-A in a 29-year-old first-cycle male-factor case is not routinely guideline-supported, and the handling of Day 4/2BB data is off."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including smoking cessation, counseling, luteal support, and possible extended culture, though some advice is less tailored because it ignores the provided embryo grade."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013869,
+  "judge_latency_ms": 3939.988957994501,
+  "judge_prompt_tokens": 2853,
+  "judge_completion_tokens": 354
+}

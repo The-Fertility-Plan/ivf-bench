@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expansion stage, ICM, and TE consistent with the 3BA Gardner score. However, there is a notable error: the response assigns Grade A to the TE and Grade B to the ICM, but the Gardner score 3BA means ICM=B and TE=A, which the model gets right in labeling but then confusingly describes the TE as 'the remaining inner lining' rather than the outer cellular layer, and misidentifies spatial locations. The description of the zona pellucida as 'thinned' is appropriate for Grade 3 expansion. Some anatomical descriptions are imprecise (e.g., describing TE as 'inner lining' when it is actually the outer epithelial layer of the blastocyst), and the image-specific observations are somewhat generic rather than clearly tied to visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: patient age (31), previous live birth, BMI, sperm parameters, endometrial thickness, and ovarian reserve markers (AMH, FSH). It correctly notes the paradox of 'Male Factor' diagnosis with excellent sperm parameters and connects these to prognosis. The previous cycle history (live birth + no pregnancy) is partially addressed but the 'no pregnancy' outcome from the second cycle is not explored as a potential concern. The interaction between BMI and endometrial receptivity is mentioned but could be more detailed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-45% follows reasonably from the evidence, with appropriate upward adjustments for age and prior live birth and downward adjustments for BMI and B-grade ICM. The conclusion leaning toward 40% is coherent. One minor inconsistency: the response states sperm parameters are 'exceptional' and above WHO limits, yet the Male Factor diagnosis is not fully reconciled (possibly morphology-related, which is not addressed). Overall the reasoning chain is clear and conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied. Luteal support recommendation is appropriate. PGT-A recommendation at age 31 is presented cautiously and appropriately. However, the response does not address single embryo transfer (SET) guidelines, which are strongly recommended by ESHRE/ASRM for good-prognosis patients like this one. The BMI classification as 'Class I obesity' is slightly inaccurate (BMI 31.8 is Class I obesity, which is correct, but the clinical threshold discussion could be more precise). Weight management advice aligns with guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are reasonably specific and practical: proceed with transfer, ensure luteal support, monitor beta-hCG, address BMI, consider PGT-A in future cycles, and address sedentary lifestyle. These are clinically useful. However, the response lacks specificity on luteal support protocols, does not address whether fresh vs. frozen transfer is optimal given the stimulation context, and does not discuss the sperm factor more specifically (e.g., ICSI vs. conventional IVF, sperm DNA fragmentation testing). Future cycle planning could be more detailed regarding stimulation protocol optimization."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.020028,
+  "judge_latency_ms": 16694.428416994924,
+  "judge_prompt_tokens": 2611,
+  "judge_completion_tokens": 813
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0160",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image: it calls the embryo fully expanded and even hatching/in the process of hatching, whereas the provided grade is 3AA (expanded, not hatching) and the image does not clearly show herniation. It also describes a distinctly cohesive TE and tightly packed ICM with more certainty than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, especially maternal age/aneuploidy risk, ovarian reserve, sperm quality, BMI, alcohol use, stress, and endometrial thickness, and relates them to prognosis. Some points are oversimplified, such as treating 16 mm as unequivocally excellent and limited discussion of tubal factor relevance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: it says baseline success at age 41 is often <10% yet estimates 15-25% after adjustments, and it labels 3AA as 'the best morphological grade possible' despite higher expansion stages existing. The morphology-to-prognosis reasoning is somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: recommending PGT-A as 'highly recommended' and implying it would 'drastically increase' success to 50-60% per transfer is too strong and not guideline-neutral; freeze-all as often preferred due to age alone is also not standard. Morphology grading interpretation is partly inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, lifestyle modification, stress management, and future-cycle discussion including PGT-A counseling. However, recommendations are somewhat generic and lack nuance about individualized decision-making, fresh vs frozen indications, and counseling around alcohol cessation timing."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.015012,
+  "judge_latency_ms": 6668.175792001421,
+  "judge_prompt_tokens": 2684,
+  "judge_completion_tokens": 464
+}

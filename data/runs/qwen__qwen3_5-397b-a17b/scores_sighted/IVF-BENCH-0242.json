@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0242",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AB label, but it overstates visible features: the image does not clearly show a dense Grade A ICM, TE appears relatively sparse/irregular, and calling the zona thinning or early hatching is not well supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor diagnosis, sperm quality, ovarian reserve, BMI, and especially thin endometrium with embryo prognosis in a clinically meaningful way, though some points (e.g., AMH interpretation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent: good embryo and favorable age offset by thin lining leading to a moderated implantation estimate. Minor issues include calling 2AB 'top-tier' and making stronger claims about fresh-cycle hostility than the data alone support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles regarding age, morphology, and concern for a 6 mm lining, but there are deviations: Gardner stage 2 is mislabeled as 'full blastocyst,' freeze-all is presented too strongly from limited data, aspirin/ERA are weakly evidence-based, and routine PGT-A at age 32 is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for transfer versus freeze-all and future planning, with clear attention to endometrial thickness and counseling. However, some suggestions are not sufficiently evidence-anchored or individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013515,
+  "judge_latency_ms": 5479.5989580015885,
+  "judge_prompt_tokens": 2650,
+  "judge_completion_tokens": 371
+}

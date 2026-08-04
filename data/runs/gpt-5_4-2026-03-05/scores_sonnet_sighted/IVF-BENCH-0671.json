@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0671",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies blastocoel expansion, thinned zona, and attempts to describe ICM and TE. However, the image is quite blurry and the model appropriately acknowledges this limitation. The description of ICM as 'not sharply defined' and TE as having 'multiple cells and reasonable continuity' is reasonable but not highly precise. The model correctly flags the 4BA vs 5BA nomenclature discrepancy. Some fabrication risk given image quality, but overall mostly accurate with appropriate caveats."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically addresses female age, AMH, FSH, oocyte maturity rate (7/7 MII noted as excellent), male factor sperm parameters, endometrial thickness, BMI, and lifestyle factors. Crucially, it connects each factor to the embryo quality and transfer prognosis, including nuanced discussion of how male factor becomes less relevant once a good blastocyst is achieved, and how sperm DNA fragmentation could still be a concern."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate (45-60% implantation) follows logically from the evidence presented, with clear explanation of factors pushing toward higher or lower ends. The distinction between implantation rate, clinical pregnancy rate, and live birth rate is appropriately made. Minor issue: the live birth estimate (40-50%) seems slightly optimistic for an untested BA embryo at 31, but is within plausible range. No major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Recommends single embryo transfer appropriately for a 31-year-old with good prognosis. Correctly notes PGT-A is not mandatory at this age in a first cycle. Gardner grading discussion is accurate. Alcohol cessation advice aligns with guidelines. The recommendation against bed rest is evidence-based. Minor gap: does not explicitly mention endometrial receptivity assessment or ERA considerations, though these are not standard first-line recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific recommendations for the current transfer (single ET, luteal support adherence, lifestyle modifications including stopping alcohol, specific caffeine limit of 200mg/day, prenatal vitamins with folate, vitamin D). Future planning is well-structured with clear decision tree for failed transfer, including when to investigate further, sperm DNA fragmentation testing criteria, and PGT-A discussion. The offer of additional clinic-style summaries adds practical value."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.021336,
+  "judge_latency_ms": 15439.12850000197,
+  "judge_prompt_tokens": 3857,
+  "judge_completion_tokens": 651
+}

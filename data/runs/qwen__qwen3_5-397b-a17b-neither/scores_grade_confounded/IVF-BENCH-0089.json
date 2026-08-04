@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0089",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner grade/image-based morphology was available, despite explicit provided morphology of a 3AA blastocyst. It fails to describe the known expansion stage, ICM, TE, or thinning zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, prior biochemical pregnancies, male factor, endometrium, and oocyte maturity reasonably well with prognosis, though some links are speculative and it misses integrating the favorable 3AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there is a key inconsistency in ignoring the provided 3AA morphology and then deriving prognosis from incomplete assumptions. Some causal inferences, especially around male factor/SDF and biochemical losses, are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but there are deviations: ERA is overemphasized, thrombophilia/aspirin suggestions are not strongly guideline-supported for this scenario, and PGT-A is presented too strongly. Failure to use the provided Gardner grade also weakens alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps for luteal support monitoring, beta timing, sperm DNA fragmentation testing, protocol review, and future planning. However, some recommendations are not ideally prioritized and are based on speculative assumptions."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013359,
+  "judge_latency_ms": 4678.558166000585,
+  "judge_prompt_tokens": 2763,
+  "judge_completion_tokens": 338
+}

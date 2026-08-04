@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst's key features including the expanded blastocoel, thinned zona pellucida, compact ICM with numerous cells, and cohesive trophectoderm layer. The description correlates well with the Gardner 3AA score. Minor limitation: the image appears somewhat grainy/low resolution and the model could have noted some granularity or vacuolation visible in the ICM region, and the TE cells appear somewhat difficult to fully characterize. Overall description is accurate and detailed without fabricating features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo quality and prognosis. It correctly identifies tubal factor as a favorable diagnosis for IVF, notes the significance of young maternal age for euploidy rates, links endometrial thickness to receptivity, and integrates sperm parameters. Minor gap: does not discuss the moderate alcohol consumption (4-6 drinks/week) in sufficient clinical depth - this is actually a notable concern per ASRM guidelines and warrants stronger counseling. Also doesn't address whether PGT-A testing was considered given the good prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 60-75% implantation probability range is well-supported by the cited evidence and patient profile. The response is internally consistent with no contradictions. Minor issue: the response was cut off before completing the reasoning section, leaving the probability justification incomplete. The alcohol risk factor is mentioned but then minimized without strong justification, creating a slight inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading and transfer criteria. However, the response does not mention ASRM guidelines recommending alcohol abstinence during IVF treatment (4-6 drinks/week is above recommended limits and should be flagged more strongly). No mention of elective single embryo transfer (eSET) policy considerations per current guidelines. PGT-A discussion absent despite being relevant for this favorable case. The Gardner grading interpretation is accurate and consistent with established criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides some useful clinical context but the recommendations section appears to be cut off or incomplete - there is no explicit 'Recommendations' section as requested in the original prompt. The assessment identifies risk factors and favorable indicators but doesn't provide specific next steps such as: luteal phase support protocol, progesterone monitoring, follow-up beta-hCG timing, what to do with remaining embryos, or specific lifestyle modification counseling. The alcohol consumption counseling recommendation is present but vague. Future cycle planning is not addressed."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019428,
+  "judge_latency_ms": 15991.651874996023,
+  "judge_prompt_tokens": 3091,
+  "judge_completion_tokens": 677
+}

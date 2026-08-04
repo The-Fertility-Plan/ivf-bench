@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0661",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes general features consistent with the Gardner 3AA score (expanded blastocyst, thinning zona, tightly packed ICM, cohesive TE). However, the image actually shows a somewhat irregular, asymmetric blastocyst with what appears to be a partially collapsed or irregularly shaped blastocoel, and the ICM appears somewhat loosely organized rather than tightly packed. The response largely echoes the provided Gardner score rather than critically analyzing the image independently, missing some visible morphological nuances such as the irregular cell boundaries and potential signs of stress in the TE layer."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo quality and prognosis. It addresses female age, AMH, FSH, oocyte yield, endometrial thickness, lifestyle, and male factor diagnosis with reasonable depth. It correctly notes that the sperm parameters suggest mild male factor successfully managed by IVF. Minor gap: it doesn't explicitly discuss BMI (26.8, borderline normal/overweight) or explore whether ICSI was used given the male factor diagnosis, which would be clinically relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the cited evidence (age, embryo quality, endometrial thickness). The response correctly distinguishes between implantation rate and clinical pregnancy/live birth rates. Minor issue: the response somewhat contradicts itself by listing 'Male Factor' as both a risk factor and then immediately minimizing it, without fully reconciling this tension. Overall the conclusions are well-supported by the observations presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends SET for a good-quality blastocyst in a young patient, advocates luteal phase support, mentions PGT-A as optional rather than mandatory for a 33-year-old, and appropriately discusses cryopreservation of remaining embryos. The beta-hCG timing recommendation (9-11 days post-transfer) is appropriate. The response correctly frames PGT-A as not a primary recommendation for this age group with good morphology, consistent with current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and specific: SET is recommended with justification, luteal phase support is mentioned, beta-hCG timing is specified, cryopreservation of remaining embryos is advised, and conditional PGT-A consideration is outlined. The response provides a logical decision tree for future cycle planning. Minor weakness: it doesn't specify progesterone type/dosage or route of administration, doesn't address whether this is a fresh or frozen transfer cycle (which affects luteal support protocol), and doesn't mention specific follow-up ultrasound timing."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.021135,
+  "judge_latency_ms": 15170.04183298559,
+  "judge_prompt_tokens": 3540,
+  "judge_completion_tokens": 701
+}

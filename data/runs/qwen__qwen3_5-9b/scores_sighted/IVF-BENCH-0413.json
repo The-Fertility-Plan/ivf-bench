@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0413",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a poorly expanded/early blastocyst with absent or degenerative ICM and TE, intact zona, and overall very poor-quality appearance consistent with 0DD. Minor issue: calling it 'solid' or a degenerating morula is somewhat speculative from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well: very low AMH/low oocyte yield, young age, recurrent biochemical losses, favorable endometrium, tubal factor, BMI, and reassuring sperm. Slight overstatement that low AMH itself implies poor egg quality/aneuploidy at age 30."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and consistent: poor embryo morphology is the dominant negative factor, partially offset by young age and good endometrium. Probability estimate is directionally appropriate, though some causal links (AMH to aneuploidy) are a bit simplified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on embryo morphology are appropriate, and the low prognosis for a 0DD embryo is guideline-consistent. However, the response is truncated before full recommendations, and it somewhat overinterprets DOR as directly indicating poor egg quality."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides prognostic framing but limited concrete management advice for this transfer or future cycles in the visible response. Recommendations are incomplete/truncated and lack specific next steps."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.011943,
+  "judge_latency_ms": 5223.326916995575,
+  "judge_prompt_tokens": 2176,
+  "judge_completion_tokens": 361
+}

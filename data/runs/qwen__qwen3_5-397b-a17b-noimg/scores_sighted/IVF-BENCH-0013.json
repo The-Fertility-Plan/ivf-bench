@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided 1DD grade. Its description of very poor ICM/TE is broadly consistent with the assigned grade and image, but it overstates non-viability and developmental arrest, and comments on stage-definition discrepancy rather than image-based morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, sperm parameters, endometrium, cycle history, and ovarian response well, and correctly notes that patient factors are favorable relative to embryo quality. It misses nuance around DOR despite normal response and lacks AMH/AFC context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it makes overly absolute claims such as 'biological impossibility' and 'non-viable' from morphology alone, and infers developmental arrest/lab issues too strongly from a single poor embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements align with standard IVF practice, but several recommendations are not well guideline-based: declaring the embryo non-viable from morphology alone, recommending against transfer categorically, suggesting routine PGT-A in a 28-year-old, and proposing ICSI/DHEA/CoQ10 without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step recommendations for counseling, reassessing reserve, reviewing lab/fertilization factors, and future planning. However, some actions are too categorical or insufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014892,
+  "judge_latency_ms": 5667.7067919954425,
+  "judge_prompt_tokens": 2984,
+  "judge_completion_tokens": 396
+}

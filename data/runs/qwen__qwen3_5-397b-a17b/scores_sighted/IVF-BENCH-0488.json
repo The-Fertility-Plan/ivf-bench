@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0488",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst, but it overstates certainty: the ICM is not clearly dense/tightly packed in this image, TE appears sparse/irregular, and calling it 'fully expanded' is somewhat imprecise for stage 3 expanded rather than stage 4."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, tubal factor diagnosis, sperm parameters, endometrial thickness, and cycle history with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible prognosis estimate, though some claims are slightly overstated (e.g., 'perfectly calibrated' stimulation, 'top-tier' embryo, and strong certainty from morphology alone)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: SET, no routine PGT-A at age 33, luteal support, and no obvious freeze-all indication. Minor issue is confidently recommending fresh transfer without discussing clinic-specific OHSS/endocrine context or transfer strategy nuances."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including SET, luteal support, vitrification, and when to consider PGT-A, though recommendations could be more nuanced regarding fresh vs frozen transfer decision-making."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01311,
+  "judge_latency_ms": 4750.929625006393,
+  "judge_prompt_tokens": 2675,
+  "judge_completion_tokens": 339
+}

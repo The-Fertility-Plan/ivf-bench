@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided Gardner score 2BA by calling the embryo a late morula/early blastocyst and stating a Gardner score cannot be assigned. It gives plausible generic morphology but likely undercalls expansion stage and adds features not securely supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, BMI, endometriosis, sperm parameters, endometrial thickness, and first cycle status, and relates them to implantation potential. AMH is appropriately noted as unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a notable inconsistency between the supplied 2BA grading and the model's claim that this is not a fully expanded blastocyst. Probability reasoning is broadly plausible but partly based on that staging mismatch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is reasonable, but there are deviations: suggesting laparoscopy for endometriosis as a future IVF optimization step is not routinely guideline-supported, and implying PGT-A due to endometriosis/obesity in a 26-year-old is weakly supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, luteal support, lifestyle optimization, and future cycle considerations. Some recommendations are somewhat generic, but overall clinically usable."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014043,
+  "judge_latency_ms": 4663.071125003626,
+  "judge_prompt_tokens": 2896,
+  "judge_completion_tokens": 357
+}

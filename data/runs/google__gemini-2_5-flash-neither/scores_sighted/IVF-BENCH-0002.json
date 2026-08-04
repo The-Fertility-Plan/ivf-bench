@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to describe morphology because it stated no image was available, avoiding fabricated visual claims. However, it provided no actual image-based assessment despite the embryo appearing assessable, so this is accurate but incomplete."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, ovarian response, tubal factor, sperm parameters, endometrium, and prior miscarriage well, and relates these to prognosis and embryo potential. Some interactions specific to a day-4 transfer versus blastocyst-stage assessment were missed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with appropriate caution about missing morphology. Minor issues include discussing blastocyst/Gardner grading despite the transfer day being day 4 and giving broad hypothetical probabilities based on assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET in a young good-prognosis patient, luteal support, and reserving further uterine workup after repeated failures are broadly guideline-consistent. Slight overreach includes suggesting urgent morphology before transfer and relatively strong endorsement of PGT-A after a single miscarriage in a 30-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including SET, counseling, luteal support, review of embryo cohort, and future investigations if unsuccessful. It is useful, though somewhat generic and limited by not tailoring recommendations to the visible embryo or day-4 context."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.015033,
+  "judge_latency_ms": 5793.066790996818,
+  "judge_prompt_tokens": 3116,
+  "judge_completion_tokens": 379
+}

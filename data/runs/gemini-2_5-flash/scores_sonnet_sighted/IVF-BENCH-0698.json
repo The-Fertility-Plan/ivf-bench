@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0698",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expansion, ICM compactness, TE cohesiveness) but largely echoes the provided laboratory data rather than independently analyzing the image. The description of the image as 'somewhat diffuse' is noted but the analysis doesn't critically engage with visible image quality limitations or specific morphological nuances visible in the blastocyst image, such as the somewhat irregular blastocoel or the granular appearance of the cells."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including maternal age, AMH, FSH, PCOS diagnosis, endometrial thickness, sperm parameters, and lifestyle factors. It connects these to embryo quality and implantation prognosis. Minor gap: the sperm motility of 23.8% is below WHO reference values (>42% progressive motility) and this is not adequately flagged as a potential concern, instead being described as 'within normal limits.'"
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with the probability estimate (60-75%) following reasonably from the evidence presented. The conclusion that favorable factors outweigh risk factors is coherent. Minor inconsistency: the response notes PCOS may be associated with higher aneuploidy rates but then doesn't fully reconcile this with the high probability estimate, and the sperm motility misclassification slightly undermines the overall coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines, correctly recommending single embryo transfer for a young patient with a high-quality blastocyst, appropriate luteal phase support, and cryopreservation of remaining embryos. The nuanced discussion of PGT-A is appropriate. The long agonist protocol discussion for PCOS is reasonable, though current guidelines increasingly favor antagonist protocols for PCOS to reduce OHSS risk, which is not mentioned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, including SET, luteal phase support, stress management, lifestyle optimization, cryopreservation, and conditional PGT-A consideration. Future cycle planning is addressed. Could be more specific about progesterone dosing protocols, OHSS monitoring given PCOS and high AMH, or specific stress reduction referrals, but overall provides clear clinical next steps."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.019665,
+  "judge_latency_ms": 13714.040874998318,
+  "judge_prompt_tokens": 3495,
+  "judge_completion_tokens": 612
+}

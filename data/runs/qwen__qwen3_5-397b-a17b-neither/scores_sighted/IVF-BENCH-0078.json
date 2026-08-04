@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated that no image was available and did not directly describe visible morphology, but it then inferred likely favorable morphology and possible Gardner grades from age/day alone, which is speculative and not image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, BMI, diagnosis, sperm parameters, and endometrial thickness into prognosis reasonably well, though some links to embryo quality are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but there are notable logical leaps, especially inferring likely good morphology/euploidy from limited data and using stress/oocyte yield in ways that are not strongly evidence-based for single-transfer implantation prediction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but ERA is suggested too readily, PGT-A is discussed somewhat loosely for a 28-year-old first cycle, and lifestyle/stress claims are stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, counseling, and future protocol considerations, though some suggestions are generic and a few are not tightly tailored to first-cycle unexplained infertility."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013767,
+  "judge_latency_ms": 4855.675540995435,
+  "judge_prompt_tokens": 2904,
+  "judge_completion_tokens": 337
+}

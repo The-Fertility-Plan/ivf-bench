@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0078",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response fails to use the provided Gardner grade 0DD and instead says morphology cannot be assessed, while speculating about compaction/early blastulation and no obvious fragmentation. It misses the key poor-quality features: early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, BMI, sperm quality, endometrium, and first-cycle status, and relates them to prognosis. However, it underweights the dominant negative impact of the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is inconsistent with the known 0DD embryo grade. The reasoning leans heavily on favorable patient factors despite a severely poor embryo, leading to an overly optimistic conclusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET, luteal support, and cautious use of PGT-A are broadly guideline-consistent. However, not incorporating the supplied Gardner 0DD grade and suggesting relatively high implantation chances for a potentially poor embryo weakens alignment with standard embryo selection principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer counseling, SET, lifestyle optimization, and future cycle review. It is useful overall, though less actionable than it could be because it does not directly address management implications of a 0DD embryo."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015066,
+  "judge_latency_ms": 4284.935875002702,
+  "judge_prompt_tokens": 3142,
+  "judge_completion_tokens": 376
+}

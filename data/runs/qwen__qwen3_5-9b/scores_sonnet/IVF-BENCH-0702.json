@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0702",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocyst with thinning zona pellucida, tightly packed cellular ICM, and cohesive TE epithelium. Descriptions are detailed and clinically appropriate. Minor limitation is that the description largely mirrors the provided Gardner score data rather than offering independent visual observations that go beyond the label, but overall the morphological narrative is accurate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, AMH, sperm parameters, endometrial thickness, BMI, lifestyle, and previous cycle failure are all connected to the embryo assessment. The AMH/retrieval discrepancy is highlighted as a critical observation, which is clinically astute. Minor gap: the tubal factor diagnosis and its implications for implantation (e.g., hydrosalpinx risk) are not addressed, and the previous cycle failure is mentioned but not deeply analyzed in terms of what might have differed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the evidence presented (high-grade blastocyst, favorable age, good endometrial thickness). The caveat about previous cycle failure is appropriately noted. The AMH/retrieval discrepancy analysis is coherent. Minor issue: the response assumes only one blastocyst was obtained without explicitly confirming this from the data, and the fertilization rate calculation (33%) contains a slight logical leap since fertilization rate and blastocyst development rate are conflated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer is implicitly supported, PGT-A is appropriately discouraged given single embryo and age 33, endometrial thickness assessment aligns with standard thresholds, and protocol adjustment considerations are evidence-based. The suggestion to consider antagonist protocol for future cycles is guideline-consistent. Minor gap: no mention of OHSS risk assessment per guidelines despite high AMH, and the tubal factor management (e.g., salpingectomy consideration if hydrosalpinx present) per ESHRE guidelines is absent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, counsel on single embryo stakes, investigate low yield anomaly, consider protocol change for future cycles, and defer PGT-A. These provide clear next steps. The response could be more actionable by specifying gonadotropin dose adjustments, recommending specific investigations for the AMH/retrieval discrepancy (e.g., antral follicle count review, LH surge monitoring), or addressing whether endometrial receptivity testing should be considered given the previous failure."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018582,
+  "judge_latency_ms": 13797.615709001548,
+  "judge_prompt_tokens": 2729,
+  "judge_completion_tokens": 693
+}

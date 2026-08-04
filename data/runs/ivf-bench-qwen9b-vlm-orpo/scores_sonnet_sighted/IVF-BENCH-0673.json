@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst stage, loosely grouped ICM, and sparse TE consistent with 3BB grading. However, it contains a notable error in Gardner grading nomenclature, stating '3BB usually denotes a full blastocyst' and '4BB denotes a clearly expanded blastocyst,' when in standard Gardner terminology, stage 3 IS the full blastocyst and stage 4 IS the expanded blastocyst - these are not errors in labeling but the model seems confused about what '3BB' means, then partially corrects itself. The zona thinning visible in the image is not specifically commented upon despite being a notable feature. Overall morphological description is reasonable but the grading confusion and missed zona observation reduce the score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does an excellent job integrating most clinical factors - age 29 as a strong positive, BMI, lifestyle factors, sperm parameters, endometrial thickness concerns, and the paradox of DOR diagnosis with reassuring AMH/FSH values. The questioning of the DOR diagnosis given AMH 4.51 and FSH 5.5 shows good clinical thinking. Minor gap: does not deeply explore how the long agonist protocol interacts with the DOR diagnosis or discuss whether the 10/10 MII yield is consistent or inconsistent with DOR."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 50-65% follows logically from the presented evidence. The model appropriately identifies the endometrium as the main modifiable limiting factor and correctly notes that morphology cannot confirm euploidy. Minor inconsistency: the model calls this a 'good but not exceptional prognosis' while simultaneously noting most favorable factors align, which could be better reconciled. The Gardner grading confusion noted earlier slightly undermines coherence but doesn't derail the overall clinical logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines. The cautious approach to PGT-A at age 29 in a first cycle aligns with current evidence. The 8mm endometrial threshold discussion is consistent with published literature. The advice against routine add-ons without indication is evidence-based. The suggestion to consider freeze-all strategy for better endometrial preparation is guideline-supported. Minor issue: the live birth estimate of 45-55% may be slightly optimistic even for a 29-year-old with a 3BB, where published data typically shows 40-50% clinical pregnancy rates per transfer for good-quality blastocysts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including proceeding with transfer, optimizing luteal support, early pregnancy surveillance protocols, and detailed future cycle planning. The structured approach to failed transfer investigation (uterine cavity, hydrosalpinx, endometritis) is practically useful. The advice on reassessing the DOR diagnosis with specific tests (AMH, FSH, AFC) is actionable. Could be improved by specifying concrete endometrial optimization strategies (e.g., extended estrogen priming, Viagra, sildenafil) and providing more specific progesterone monitoring thresholds."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.025149,
+  "judge_latency_ms": 18189.92145800439,
+  "judge_prompt_tokens": 4413,
+  "judge_completion_tokens": 794
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0703",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinning zona pellucida, compact ICM at a specific position, and cohesive TE layer. The description aligns well with the image. Minor issue: calling the TE a 'syncytium' is technically incorrect (TE is epithelial, not syncytial), and the ICM positional claim (12-1 o'clock) is reasonable but the image shows a somewhat centrally-distributed cell mass making precise localization uncertain."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors: BMI impact on decidualization, smoking effects on uterine perfusion, suboptimal endometrial thickness, previous failed cycle, male factor diagnosis, AMH level, oocyte maturity rate, and sperm parameters. The response explicitly connects each factor to implantation biology and embryo-environment interaction, including the synergistic negative effect of smoking combined with obesity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate logically follows from the additive risk factor analysis. The baseline of 50-60% for a 3AA at age 30 is reasonable. However, the additive deduction model (-15%, -20%, -10%, -5%) is somewhat simplistic and these factors likely have multiplicative rather than additive effects. The final 30-40% estimate is clinically plausible but the arithmetic doesn't perfectly reconcile (50% baseline minus 50% deductions would yield 0-10%, not 30-40%), suggesting the model applied judgment rather than strict arithmetic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation, low-dose aspirin consideration, smoking cessation advice, ERA for recurrent implantation failure, PGT-A consideration, and sperm DNA fragmentation testing. Minor deviations: 'strict bed rest not indicated' is correctly stated but the framing is slightly awkward; sildenafil for endometrial thickening has limited evidence base and is not a standard first-line recommendation per current guidelines. The 7-8mm endometrial threshold cited is consistent with literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific recommendations for the current transfer (eSET, aspirin 81mg, progesterone optimization) and detailed future cycle planning (smoking cessation timeline, BMI targets, ERA timing, saline sonohysterography, PGT-A, sperm DNA fragmentation). Recommendations are tiered appropriately between immediate and future actions, with specific thresholds (BMI <28, 3-month cessation) and alternatives considered (tamoxifen protocol, extended estrogen priming)."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.019428,
+  "judge_latency_ms": 15091.599166000378,
+  "judge_prompt_tokens": 3011,
+  "judge_completion_tokens": 693
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was available to it and avoided detailed fabricated morphology. However, it still inferred expected Day 4 stage/quality from oocyte maturity, which is not image-based and does not match the visible embryo-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, tubal factor, sperm parameters, endometrium, BMI, smoking, and transfer timing into prognosis reasonably well, though some links to embryo quality are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is structured and internally consistent, with a logical prognosis estimate based on favorable and unfavorable factors. Minor issues include overinterpreting 100% MII as evidence of embryo quality and calling the patient a high responder from 9 oocytes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "It correctly notes Gardner scoring is not ideal for a Day 4 transfer and gives generally evidence-based recommendations on smoking cessation, luteal support, and counseling. Slight deviations include somewhat strong endorsement of PGT-A at age 33 and broad claims about Day 4 vs Day 5 transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and clinically usable, including proceeding with transfer, ensuring luteal support, stopping smoking/alcohol, BMI optimization, and considering extended culture in future cycles. More embryo-specific transfer planning would have improved it."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013578,
+  "judge_latency_ms": 5128.461749991402,
+  "judge_prompt_tokens": 2791,
+  "judge_completion_tokens": 347
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0391",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality day-5 embryo with absent/degenerate ICM and TE consistent with the provided 0DD grade, but it overstates certainty by calling it non-viable/arrested and inaccurately equates score 0 with no blastocoel despite the case label stating early blastocyst. It also adds features like dark granular cytoplasm not strongly established from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, recurrent failed cycles/miscarriages, smoking, paternal age, sperm motility, ovarian reserve, and endometrial thickness with prognosis reasonably well. Some links, such as attributing the miscarriages primarily to aneuploidy and embryo arrest to sperm DNA fragmentation, are plausible but somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: very poor embryo morphology plus adverse age/history leads to extremely low implantation potential. However, there is some overreach in declaring the embryo definitively non-viable and transfer futile based on morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, including counseling on prognosis and smoking cessation, but recommending categorically not to transfer and calling PGT-A 'critical' goes beyond guideline-level certainty. Suggestions like PICSI/TESA for presumed DNA fragmentation are not standard first-line guideline recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for prognosis counseling, smoking cessation, consideration of PGT-A, sperm DNA fragmentation testing, and donor-oocyte counseling. It is practical, though some recommendations are too absolute and would benefit from more nuance around patient preferences and clinic policy."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014127,
+  "judge_latency_ms": 6505.901249998715,
+  "judge_prompt_tokens": 2539,
+  "judge_completion_tokens": 434
+}

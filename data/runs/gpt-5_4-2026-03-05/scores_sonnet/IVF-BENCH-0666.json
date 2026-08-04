@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0666",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description noting blastocoel expansion, ICM compactness, and TE characteristics, but appropriately caveats image limitations. It correctly identifies the embryo as not hatching and notes some TE heterogeneity. However, it raises a Gardner terminology inconsistency (Stage 2 vs 'full blastocyst') that may be unnecessary pedantry, and the description lacks the precision of a trained embryologist's direct assessment. The description is mostly accurate but somewhat generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 34 with euploidy probability context, BMI 35.1 as the primary negative modifier, AMH/FSH/oocyte yield for reserve assessment, sperm parameters, endometrial thickness, alcohol use, first cycle status, and the unspecified diagnosis. It explicitly connects each factor to implantation prognosis and explains the interactions between embryo quality and patient characteristics in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 40-55% follows logically from the favorable factors (age 34, Day-5, good morphology, good lining) moderated by BMI and untested status. The model appropriately distinguishes implantation from live birth rates. Minor issue: the Gardner grading critique slightly undermines confidence in the lab data without strong justification, creating a small inconsistency with later accepting the AA grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer at age 34, adequate luteal support in antagonist cycles, lifestyle modifications (alcohol cessation, folate supplementation), no bed rest recommendation, and conditional PGT-A discussion. The euploidy rate estimate (~50-60% at age 34) is consistent with published data. The response correctly avoids recommending routine PGT-A for a first cycle. Minor gap: no mention of progesterone monitoring thresholds or specific luteal support protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations covering immediate pre-transfer lifestyle changes, luteal support considerations, post-transfer counseling points, and a detailed stepwise plan for cycle failure including specific questions to review. Future cycle planning addresses protocol optimization, PGT-A indications, weight management with quantified targets (5-10% reduction), and specific investigations to consider after repeated failure. Recommendations are appropriately nuanced for a first-cycle patient."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020487,
+  "judge_latency_ms": 14357.545124999888,
+  "judge_prompt_tokens": 3609,
+  "judge_completion_tokens": 644
+}

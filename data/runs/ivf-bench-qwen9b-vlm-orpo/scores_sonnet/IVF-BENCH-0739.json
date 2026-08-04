@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes key features including blastocoel cavity, thinned zona pellucida, ICM cell cluster, and trophectoderm layer, and correctly correlates with the 4AA Gardner grade. However, the description is somewhat hedged and vague ('cell cluster in one region appears somewhat denser,' 'not perfectly sharp'), suggesting limited confidence in image interpretation. The response appropriately acknowledges limitations of static image analysis but doesn't provide the precise morphological detail expected for a 4AA hatching blastocyst (e.g., specific herniation through zona, tight ICM packing, cohesive TE epithelium characteristics)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response systematically addresses female age (36) and aneuploidy risk, BMI impact on implantation, male factor with specific attention to 32% motility and sperm DNA fragmentation risk, partner age 42, prior clinical miscarriage implications, AMH/FSH values, endometrial thickness adequacy, lifestyle factors, and oocyte yield. Crucially, it connects these factors to each other and to embryo quality in a clinically meaningful way, noting how male factor combined with partner age compounds sperm DNA concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 40-55% follows logically from the presented evidence, with clear explanations for both the upper and lower bounds. The outcome table (implantation to live birth) shows appropriate stepwise reduction. Minor issue: the response could more explicitly quantify how each risk factor modifies the base rate, and the transition from morphological uncertainty to clinical confidence could be smoother. Overall the logic chain is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: recommends single embryo transfer appropriately, correctly applies Gardner grading criteria, advises against routine bed rest (evidence-based), recommends PGT-A selectively rather than universally, suggests sperm DNA fragmentation testing per male factor guidelines, and outlines appropriate recurrent loss workup triggers. The recommendation to consider PGT-A given prior miscarriage and age 36 aligns with current ASRM guidance. Minor gap: could reference specific ESHRE blastocyst grading consensus more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations. For current transfer: single ET, luteal support optimization, lifestyle guidance, no bed rest. For failed transfer: sperm DNA fragmentation testing, male lifestyle modifications, PGT-A discussion with clear rationale, recurrent loss workup criteria specified. Long-term planning addresses timing urgency given age. The response even offers to generate a counseling note or cycle-by-cycle forecast, demonstrating practical clinical utility. Recommendations are appropriately nuanced with conditions specified for when each intervention becomes relevant."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.021285,
+  "judge_latency_ms": 15098.690082995745,
+  "judge_prompt_tokens": 3465,
+  "judge_completion_tokens": 726
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately flags a discrepancy between the reported 3AA Gardner score and the visual image, noting absence of clear blastocoel cavity, granular/vacuolated cytoplasm, and lack of distinct TE epithelium. However, the description of the image as resembling a 'degenerating oocyte or highly fragmented cell' may be an overinterpretation, and the model ultimately defers to the lab data rather than providing a confident independent morphological assessment. The dual-scenario approach is reasonable but limits precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (31) and its implications for aneuploidy risk, ovarian response quality (87.5% MII maturity), sperm parameters, endometrial thickness (9.5mm as favorable), and the uterine factor diagnosis as the primary risk modifier. Lifestyle factors including restricted diet, former smoking, and BMI are addressed. AMH being N/A is not discussed, which is a minor omission. The interaction between uterine factor and implantation probability is clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The dual-scenario framework (Scenario A vs B) is logically structured but creates internal tension. The model flags a serious image discrepancy yet proceeds to give recommendations primarily based on the 3AA designation, which is somewhat inconsistent. The probability estimate of 30-50% for a 3AA with uterine factor is reasonable, but the reasoning for the reduction from baseline 60-70% could be more explicitly tied to specific uterine pathology types. The logic is generally sound but the hedging weakens overall coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: hysteroscopy prior to transfer for uterine factor, consideration of PGT-A, FET advantages for endometrial preparation, and lifestyle counseling. The suggestion of PGT-A at age 31 is appropriately caveated as lower priority given age. Baseline implantation rates cited (60-70% for 3AA in young patients) are within published ranges. No major guideline contradictions are present, though the recommendation to verify embryo grade before transfer is somewhat impractical in a clinical workflow context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: hysteroscopy for uterine factor evaluation, dietary counseling, stress reduction, PGT-A consideration for future cycles, and FET planning. The recommendation to 'verify embryo grade before transfer' is clinically impractical as a pre-transfer step but reflects appropriate concern. Future cycle planning is well-structured. Recommendations could be more specific regarding uterine factor management (e.g., specifying which pathologies to rule out and treatment options), but overall actionability is strong."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0189,
+  "judge_latency_ms": 15002.092916001857,
+  "judge_prompt_tokens": 2745,
+  "judge_completion_tokens": 711
+}

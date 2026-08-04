@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0055",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided inventing specific embryo morphology. Minor deduction because it inferred likely transferability and suggested a typical >=3BB assumption, which is not image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve/response, BMI, endometriosis, sperm quality, endometrial thickness, and prior cycle history into prognosis reasonably well, though some links were somewhat generic and stage of endometriosis was assumed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age and diagnosis. Small issues include overinterpreting 100% MII as evidence of high oocyte quality and attributing a clinically meaningful implantation effect to stress."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but several recommendations are weakly evidence-based or not guideline-standard for this scenario, including routine dual progesterone support, ERA after failures, low-dose aspirin/omega-3 for endometriosis-related implantation, and recommending PGT-A after a single failed transfer at age 31."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for current transfer and contingency planning, but some recommendations are not sufficiently individualized or evidence-anchored for this exact case."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013923,
+  "judge_latency_ms": 5143.5173750069225,
+  "judge_prompt_tokens": 2841,
+  "judge_completion_tokens": 360
+}

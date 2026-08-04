@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0654",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel expansion, ICM density and location, and TE cohesiveness consistent with a 2AA grade. The description of the ICM at '2 o'clock position' and the continuous TE epithelium aligns with the image. Minor issue: the model describes Stage 2 as 'blastocoel fills the entire volume' but the Gardner Stage 2 is technically a 'full blastocyst' where the blastocoel fills the embryo but hasn't expanded beyond the zona, which is correct. The description is detailed and largely accurate without fabricating features, though it could have noted the zona pellucida thinning or specific cellular texture more precisely."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-quality relationship, PCOS context with high oocyte yield, endometrial thickness adequacy, previous biochemical pregnancy implications, sperm motility concerns, and BMI/activity considerations. It correctly contextualizes PCOS as a quantity-vs-quality scenario resolved by patient age. Minor gap: AMH is N/A but not addressed; the alcohol consumption (moderate, 4-6/wk) is not flagged as a meaningful risk factor for implantation and embryo development, which is a notable omission given evidence linking alcohol to IVF outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality to patient factors to probability estimate. The 65-75% range is reasonably derived from baseline rates plus embryo quality adjustment minus history penalty. The conclusions are internally consistent and well-supported. Minor issue: the model states biochemical pregnancy 'confirms ability to implant' and then uses it as a risk factor, which is coherent but could be more precisely articulated regarding the distinction between implantation failure and early pregnancy loss. The probability derivation methodology is transparent and logical."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for a 31-year-old with a top-grade blastocyst is strongly guideline-concordant, luteal support emphasis is appropriate, PGT-A suggestion after recurrent loss is evidence-based, and ERA consideration after repeated implantation failure follows current protocols. The Gardner grading interpretation is accurate. Minor deviation: the response doesn't explicitly address PCOS-specific considerations like OHSS risk monitoring or frozen embryo transfer preference in PCOS patients, which ESHRE guidelines specifically recommend to reduce OHSS risk."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: SET with clear rationale, progesterone monitoring with specific trigger (low BMI/activity), activity modification post-transfer, staged future planning with PGT-A and ERA thresholds clearly defined, and nutritional consult suggestion. The tiered approach (this cycle vs. future planning) is practical. Could be more actionable by specifying progesterone threshold values, recommending specific luteal support protocols, or addressing the alcohol consumption with a concrete recommendation to abstain during the transfer cycle, which is a missed practical intervention."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.020271,
+  "judge_latency_ms": 17861.703749993467,
+  "judge_prompt_tokens": 2907,
+  "judge_completion_tokens": 770
+}

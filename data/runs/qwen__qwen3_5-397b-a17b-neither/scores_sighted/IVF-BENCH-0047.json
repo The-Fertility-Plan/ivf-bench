@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided direct morphological claims. However, it still inferred transferable quality and suggested a typical threshold of ≥3BB without visual evidence, which is speculative rather than image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior live birth, prior failed cycles, BMI, partner age, semen parameters, endometrial thickness, and oocyte maturity with prognosis in a clinically meaningful way, though diagnosis-specific implications are limited and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible implantation estimate tied to age, endometrium, and reproductive history. Minor issues include speculative assumptions about embryo quality and labeling two failed cycles as possible RIF."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but strong endorsement of PGT-A and ERA is more aggressive than guideline-supported routine use in this exact scenario, and the statement that clinics typically transfer only ≥3BB embryos is not universally standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for luteal support, transfer timing, and future evaluation including sperm DNA fragmentation and protocol review. Some suggestions are somewhat generic or contingent on assumptions, but overall they are useful and specific."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013332,
+  "judge_latency_ms": 5274.96270800475,
+  "judge_prompt_tokens": 2674,
+  "judge_completion_tokens": 354
+}

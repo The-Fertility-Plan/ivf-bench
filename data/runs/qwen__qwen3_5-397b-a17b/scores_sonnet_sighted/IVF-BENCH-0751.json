@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0751",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BA Gardner score: expanded blastocoel with thinning zona, loosely grouped ICM (Grade B), and cohesive multi-cellular TE (Grade A). The description aligns well with what is visible in the image showing a fully expanded blastocyst with distinct cell layers. Minor limitation is that the description largely echoes the provided Gardner score rather than independently identifying subtle image-specific features, but no fabricated or incorrect features are described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (32), tubal factor diagnosis, excellent sperm parameters, endometrial thickness (8mm), and smoking status are all connected to embryo quality and prognosis. The AMH of 2.52 and FSH of 7.2 are not explicitly discussed in relation to ovarian reserve adequacy, and BMI is not addressed. The interaction between smoking and endometrial receptivity is well-handled. Overall good but not fully comprehensive integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The 45-60% range is reasonably derived with smoking as the primary downward modifier from a baseline >60%. The response is internally consistent with no contradictions. Minor issue: the 30-50% relative reduction from smoking applied to a >60% baseline would mathematically suggest a lower floor than 45%, creating a slight inconsistency in the quantitative reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: Gardner grading criteria are correctly applied, luteal phase support is recommended, vitrification of surplus embryos is advised, and PGT-A discussion is appropriately nuanced for age 32. The 8mm endometrial threshold discussion is reasonable though some guidelines cite 7mm as minimum. The recommendation to proceed with fresh transfer is appropriate. PGT-A framing is consistent with current evidence-based practice for first cycles in younger patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with fresh transfer, smoking cessation counseling, luteal support, activity modification, cryopreservation of surplus embryos, and conditional PGT-A consideration. The smoking cessation advice is appropriately emphasized as the highest priority modifiable factor. Recommendations could be further enhanced by specifying progesterone type/dosing, suggesting ERA testing given borderline endometrial thickness, or providing specific exercise restrictions, but overall the guidance is clinically useful and case-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.018744,
+  "judge_latency_ms": 14931.396665997454,
+  "judge_prompt_tokens": 2988,
+  "judge_completion_tokens": 652
+}

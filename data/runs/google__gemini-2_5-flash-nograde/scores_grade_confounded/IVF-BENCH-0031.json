@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/compacting morula and states Gardner grading is not applicable, directly conflicting with the provided 2BB blastocyst grading and likely image context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian response, prior live birth, endometrium, sperm, and smoking, though it overstates the contradiction with the DOR diagnosis and bases prognosis partly on an incorrect morphology read."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally organized but undermined by a major foundational error: treating the embryo as a morula while also discussing blastocyst-related prognosis. This creates a significant inconsistency in the assessment and probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Smoking cessation, alcohol avoidance, and luteal support are guideline-consistent, but rejecting the provided Gardner score as inapplicable and reclassifying the embryo stage is not aligned with standard IVF morphology assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including transfer counseling, smoking cessation, alcohol avoidance, luteal support, and future-cycle considerations, though some are built on an incorrect embryo-stage interpretation."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013752,
+  "judge_latency_ms": 3768.2247499978985,
+  "judge_prompt_tokens": 2879,
+  "judge_completion_tokens": 341
+}

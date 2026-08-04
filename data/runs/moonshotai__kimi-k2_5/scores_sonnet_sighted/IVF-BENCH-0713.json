@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0713",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona, identifies the ICM at the 10-11 o'clock position as compact and well-defined, and notes cohesive TE epithelium consistent with the Gardner 3AA score. The description of cytoplasmic texture as lacking significant granularity is reasonable. Minor limitation: the image appears somewhat grainy and low-contrast, making precise ICM/TE delineation challenging, yet the model describes features with high confidence without acknowledging image quality limitations. Overall description aligns well with visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including maternal age (29), AMH (4.3), FSH, BMI, endometrial thickness (8mm), previous cycle outcomes (biochemical pregnancy + live birth), sperm parameters (borderline motility at 40%), lifestyle factors (former smoker, light drinker), and stimulation protocol. The table format clearly maps each factor to its clinical impact, and the narrative synthesizes how these factors interact with embryo quality to produce a net prognosis. The previous live birth is correctly weighted as a strong positive predictor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured, moving from morphology to patient factors to risk stratification to probability estimates. The 60-70% implantation probability estimate is consistent with cited literature for 3AA blastocysts in women under 35. Minor inconsistency: the response flags BMI 25.3 as a risk factor but this is within normal range (18.5-24.9 is normal; 25-29.9 is overweight), and calling it 'mild elevation' is technically correct but the clinical significance is overstated. The confidence interval reasoning is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation for young patient with good prognosis embryo is appropriate, luteal support protocol is standard, ultrasound-guided transfer is guideline-recommended. The suggestion of assisted hatching for Grade 3 blastocyst is debatable as current evidence does not strongly support routine AH for expanded blastocysts with already-thinned zona. PGT-A, ERA, and SDF testing recommendations for contingency planning are appropriately tiered and evidence-based. Gardner grading criteria are correctly applied."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations covering immediate transfer decisions (eSET, AH consideration, luteal support specifics with dosing, transfer technique), contingency planning with clearly tiered investigations (SDF before ERA before immunology workup), and lifestyle optimization targets (specific BMI range). The prognosis statement is clear and clinician-ready. Future cycle planning is nuanced, acknowledging that PGT-A is less critical at age 29 while still offering it as an option. The response is structured for direct clinical utility."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.020364,
+  "judge_latency_ms": 16418.71800000081,
+  "judge_prompt_tokens": 3073,
+  "judge_completion_tokens": 743
+}

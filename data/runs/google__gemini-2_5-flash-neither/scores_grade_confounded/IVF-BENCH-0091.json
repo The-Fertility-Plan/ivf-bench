@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was available and fails to use the provided 3AB morphology data; it therefore omits the key morphological assessment entirely."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It discusses age, ovarian reserve, BMI, male factor, endometrium, and lifestyle reasonably well, but integration is weakened because it ignores the actual embryo grade and instead assumes a different high-quality embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is undermined by a major factual error: the model says morphology is unavailable despite the provided 3AB score, then bases prognosis on an assumed better-grade embryo, making the probability estimate poorly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (single best embryo selection, luteal support, lifestyle optimization, consider PGT-A), but the interpretation of embryo quality and implantation estimate are not well aligned with the actual provided Gardner grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including lifestyle changes, luteal support, embryo selection, and contingency planning, though it lacks specificity tied to the actual 3AB embryo."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01359,
+  "judge_latency_ms": 3544.2305830001715,
+  "judge_prompt_tokens": 2990,
+  "judge_completion_tokens": 308
+}

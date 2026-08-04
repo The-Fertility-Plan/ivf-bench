@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0751",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinned zona, cohesive TE with visible cell boundaries, and loosely grouped ICM consistent with B grading. The description of the blastocoel occupying majority of volume and TE forming a cohesive epithelial monolayer matches the image well. Minor limitation: the description of 'distinct cell boundaries' in TE is somewhat contradictory to Grade A TE which typically shows tight junctions with less distinct boundaries, but overall morphological reading is accurate and well-correlated with the Gardner 3BA score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects tubal factor etiology to prognosis category, links AMH/FSH to oocyte quality expectations, correlates sperm parameters with fertilization potential, addresses endometrial thickness adequacy, and critically identifies smoking as the dominant modifiable variable affecting implantation. The interaction between embryo quality and patient factors is systematically analyzed, including the MII/COC ratio and its implications for lab performance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning chain is logical and well-structured: base rate established from age/diagnosis/embryo grade, then adjusted for TE premium, ICM discount, and smoking penalty. The final 30-40% estimate follows coherently from the presented evidence. Minor inconsistency: the response states TE grade is 'most predictive' and gives it a +5% premium, but then allows smoking to reduce probability by ~30%, which is internally consistent but the magnitude of smoking's effect (described as 30-50% reduction) applied to the base rate could mathematically yield lower than 30%, creating slight tension in the final estimate presentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines: eSET recommendation for good-quality blastocyst in young patient, standard luteal support protocol, appropriate Day 5 transfer timing, evidence-based smoking cessation counseling, and correct deferral of ERA and PGT-A to later cycles. The hydrosalpinx counseling recommendation is particularly guideline-appropriate for tubal factor patients. Minor deviation: recommending 24-48 hours relative rest post-transfer is not strongly supported by current evidence (ESHRE guidelines do not recommend bed rest), though the response correctly avoids recommending strict bed rest."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations: immediate eSET with specific luteal support dosing (800-900mg vaginal progesterone or PIO), prioritized smoking cessation with specific alternatives (NRT patches), exercise modification with specific intensity guidance (avoid >80% max HR), clear future cycle decision tree based on outcome, specific thresholds for when to consider ERA or PGT-A, and hydrosalpinx management reminder. The response provides both immediate transfer-day guidance and long-term cycle planning with conditional branching, making it practically useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.020784,
+  "judge_latency_ms": 16525.326165996375,
+  "judge_prompt_tokens": 3213,
+  "judge_completion_tokens": 743
+}

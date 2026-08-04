@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided and fails to analyze the known 2AB morphology; it omits the supplied expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometrium, BMI, lifestyle, male factor, and cycle history reasonably well, though it does not connect these specifically to the actual 2AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is weakened by a major factual error about missing morphology and by estimating implantation based on assumed good/excellent embryos rather than the provided 2AB, creating a mismatch between evidence and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET at age 33 and luteal support are broadly guideline-consistent, but the morphology interpretation is not aligned with Gardner grading and the implantation estimate is overly optimistic for a 2AB embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, cryopreservation, and possible future male-factor workup, though recommendations would be stronger if tailored to the actual 2AB blastocyst."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013509,
+  "judge_latency_ms": 3571.684542002913,
+  "judge_prompt_tokens": 2998,
+  "judge_completion_tokens": 301
+}

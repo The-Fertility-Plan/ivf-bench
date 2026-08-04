@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0680",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the blastocyst features consistent with the Gardner 3AA score provided, noting expansion, ICM compactness, and TE cohesion. However, the image actually appears to show a somewhat irregular, less-than-perfect blastocyst with somewhat disorganized cellular architecture that doesn't perfectly match the 'excellent' description given. The model largely echoes the provided Gardner score rather than independently analyzing the image, which shows some granularity and less distinct ICM boundaries than described. The description is mostly accurate but relies heavily on the provided score rather than critical image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including maternal age (38), BMI (31.5), AMH, FSH, tubal factor diagnosis, previous failed cycle, endometrial thickness, sperm parameters, and lifestyle factors. It clearly explains how each factor interacts with embryo quality and prognosis, noting both synergistic and opposing effects on implantation probability."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability range of 50-65% is coherently derived from balancing excellent morphology against age-related aneuploidy risk and previous failure. The distinction between morphologically-based and PGT-A-confirmed probability estimates is appropriate. Minor issue: the lower bound of 50% may be slightly conservative given the excellent morphology and endometrial conditions, but the reasoning supporting it is internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: single embryo transfer recommendation, luteal phase support, PGT-A consideration for age 38 with prior failure, ERA and hysteroscopy for recurrent implantation failure workup. The response correctly identifies BMI >30 as a risk factor per guidelines. Minor gap: doesn't specifically mention ASRM/ESHRE thresholds for BMI intervention or specific progesterone supplementation protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, covering immediate transfer considerations (SET, luteal support, stress reduction), counseling points, and a structured future planning pathway including PGT-A, lifestyle modification, ERA, endometrial biopsy, hysteroscopy, and immunological testing. The tiered approach to future investigations is clinically useful. Could be slightly more specific regarding timing, dosing, or specific stress-reduction referral pathways, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.021471,
+  "judge_latency_ms": 13881.194749992574,
+  "judge_prompt_tokens": 3997,
+  "judge_completion_tokens": 632
+}

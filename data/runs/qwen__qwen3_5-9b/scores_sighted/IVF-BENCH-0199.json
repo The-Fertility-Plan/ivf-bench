@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0199",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a poor-quality blastocyst with absent/degenerative ICM and TE, but it inaccurately describes a large central blastocoel and calls Grade 1 'expanded'; Gardner 1 indicates an early blastocyst with blastocoel at least half the embryo, not expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, prior outcomes, sperm, and lining with embryo quality and prognosis reasonably well, though it overstates DOR and causally links poor morphology too directly to ovarian reserve."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the low implantation estimate is directionally consistent, but there are notable issues: misinterpretation of blastocyst stage, labeling sperm as normal despite borderline motility, and some overconfident causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are deviations: incorrect Gardner stage terminology, strong endorsement of PGT-A despite low embryo numbers and mixed guideline support, and suggesting thrombophilia testing in RPL workup beyond standard indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling for this transfer and concrete future steps such as expectation setting, weight management, and further evaluation, though recommendations could be more nuanced regarding whether to transfer versus culture/discard and the limits of PGT-A in low-yield cycles."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013107,
+  "judge_latency_ms": 5619.805290989461,
+  "judge_prompt_tokens": 2509,
+  "judge_completion_tokens": 372
+}

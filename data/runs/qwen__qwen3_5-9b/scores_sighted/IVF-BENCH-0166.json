@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0166",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Captures a blastocyst with prominent ICM and relatively sparse TE, but incorrectly states there is a significant opening in the zona and mislabels stage 3 as 'expanded'; image/labelling are more consistent with a full blastocyst with thinning zona rather than hatching."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, and endometrial thickness with embryo quality reasonably well, though it overcalls diminished ovarian reserve without AMH and infers a single blastocyst without explicit data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable inconsistencies: calling a Gardner 3 embryo 'expanded,' interpreting Day 4 as possible arrested blastocyst, and linking FSH 6.6 to DOR too strongly. Probability reasoning is directionally plausible but partly based on flawed premises."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are standard (SET, age-related aneuploidy counseling), but several recommendations are not guideline-consistent: PGT-A is presented as highly recommended despite only one embryo and uncertain benefit, and 'freeze-all' is suggested broadly without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as clarifying transfer timing, counseling on prognosis, and discussing SET/PGT-A/FET options, though some recommendations are overly assertive or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013389,
+  "judge_latency_ms": 19935.73333400127,
+  "judge_prompt_tokens": 2678,
+  "judge_completion_tokens": 357
+}

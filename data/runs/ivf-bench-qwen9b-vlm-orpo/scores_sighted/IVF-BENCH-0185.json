@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0185",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a poor-quality early blastocyst with absent/degenerate ICM and sparse irregular TE, consistent with 1DD; notes possible partial collapse. Minor issue: calls it Day-4 blastocyst and comments on collapse/expansion somewhat speculatively from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, PCOS, semen parameters, endometrium, and first-cycle status well, and appropriately frames embryo quality as the dominant limiting factor. Could more explicitly address the implications of Day-4 transfer timing and PCOS heterogeneity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor morphology drives low prognosis despite favorable patient factors. Probability estimate is conservative but broadly follows the stated evidence; slight overconfidence in attributing poor quality to embryo biology rather than lab/culture factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with Gardner grading interpretation and evidence-based IVF practice, including avoiding unsupported add-ons and not overcalling uterine factors after one poor embryo. Minor deviation: implantation/live birth estimates may be somewhat pessimistic and some comments on culture conditions are speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical recommendations for current transfer, counseling, luteal support adherence, and future-cycle review including lab assessment and selective further testing. Useful and nuanced, though not highly specific on transfer-day decision-making or alternative cycle strategies."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.014397,
+  "judge_latency_ms": 10893.472333002137,
+  "judge_prompt_tokens": 2984,
+  "judge_completion_tokens": 363
+}

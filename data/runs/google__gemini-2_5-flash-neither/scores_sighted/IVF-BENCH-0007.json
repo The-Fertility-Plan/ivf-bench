@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate embryo morphology. Minor issue: it repeatedly referred to a blastocyst despite the visible image being more consistent with a day-4 morula/early cavitating embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, FSH, prior live birth, male factor, sperm parameters, oocyte yield, endometrium, and lifestyle into prognosis well, though some links to embryo-stage uncertainty could have been tighter."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, especially around uncertainty from missing morphology. Slight weakness: the implantation estimate is somewhat optimistic and partly based on an assumed good-quality blastocyst despite acknowledging stage ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: luteal support, clarify embryo stage, consider blastocyst culture and discuss PGT-A at age 37. Minor deviations include overemphasis on FSH as ovarian reserve and mentioning ERA in a way that is not routinely guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future planning, including confirming embryo stage, standard monitoring, and discussing PGT-A. Some recommendations are generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.015357,
+  "judge_latency_ms": 4822.803957998985,
+  "judge_prompt_tokens": 3354,
+  "judge_completion_tokens": 353
+}

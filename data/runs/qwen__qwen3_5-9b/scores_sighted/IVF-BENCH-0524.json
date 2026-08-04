@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0524",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image findings and contains grading inaccuracies: Gardner 2 is an early/full blastocyst rather than an expanded blastocyst, and calling 2AA the 'highest quality category' is incorrect. It also claims a clearly central dense ICM and robust cohesive TE from an image where these features are not distinctly demonstrable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, prior IVF outcome, sperm parameters, and endometrial thickness with embryo prognosis reasonably well. However, it overlabels AMH 1.39/FSH 6.5 as diminished ovarian reserve and makes some speculative links."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: it first says the image resembles a morula/early blastocyst yet accepts 2AA as expanded; it misinterprets the Gardner expansion grade; and some conclusions (e.g., donor eggs after one failed cycle in a 30-year-old) are not well supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer and caution about routine PGT-A in a 30-year-old are aligned with guidelines, but recommending donor eggs after one failed cycle with a good-quality embryo and this age/reserve profile is not guideline-concordant. The Gardner grading explanation is also inaccurate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical steps such as proceeding with Day 5 SET and lifestyle optimization, but future planning is insufficiently nuanced and includes an overly aggressive donor egg suggestion. Recommendations lack detail on transfer protocol considerations or more appropriate next-step evaluation if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.014223,
+  "judge_latency_ms": 5465.072999999393,
+  "judge_prompt_tokens": 2726,
+  "judge_completion_tokens": 403
+}

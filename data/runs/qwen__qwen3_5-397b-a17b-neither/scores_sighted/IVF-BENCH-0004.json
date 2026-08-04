@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating specific blastocyst features. However, it did not analyze the visible embryo, and its generic Day 4/morula-early blastocyst discussion does not match the actual image, which appears blastocyst-stage rather than a simple Day 4 proxy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, BMI, sperm quality, and endometrial thickness into prognosis reasonably well, though some links to embryo competence are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates broadly following the stated favorable and unfavorable factors. Minor issues include speculative assumptions about embryo selection and endometrial pattern."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including caution about Day 4 transfer, discussion of Day 5/6 culture, and optional PGT-A counseling at age 36. Small deviations include somewhat overconfident assumptions and nonessential lifestyle restrictions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for luteal support, beta-hCG timing, future culture strategy, PGT-A discussion, and weight optimization. Recommendations are useful, though not highly individualized beyond standard care."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013728,
+  "judge_latency_ms": 4997.526540988474,
+  "judge_prompt_tokens": 2811,
+  "judge_completion_tokens": 353
+}

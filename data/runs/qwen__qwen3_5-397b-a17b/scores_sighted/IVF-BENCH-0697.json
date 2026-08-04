@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0697",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality: the blastocoel is not clearly expanded, the zona does not appear obviously thinned, and TE is not well visualized as a cohesive many-celled epithelium. It relies heavily on the provided 3AA label rather than the actual image, though identifying an ICM-like cluster is reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, BMI, prior miscarriage, sperm parameters, and endometrial thickness with prognosis in a generally appropriate way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible prognosis based on young age and favorable infertility diagnosis. Minor issues include overconfidence in morphology as a proxy for euploidy and attributing prior miscarriage likely to sporadic aneuploidy without sufficient caution."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but calling 3AA the highest possible score is inaccurate, and suggesting PGT-A mainly because of a single prior miscarriage in a 28-year-old is not strongly guideline-based. Morphology should not be presented as a strong proxy for chromosomal normality."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for proceeding with transfer, luteal support, counseling, and future lifestyle optimization. However, some suggestions remain generic and future planning lacks more nuanced alternatives."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012918,
+  "judge_latency_ms": 4971.955540997442,
+  "judge_prompt_tokens": 2471,
+  "judge_completion_tokens": 367
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0683",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AB label and identifies ICM and TE appropriately, but it overstates visible certainty from a single image (e.g., 'appropriate cavitation,' 'no significant granularity/vacuolization') and the TE/zona assessment is somewhat more confident than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, endometrium, oocyte maturity, sperm parameters, and cycle history with embryo quality in a clinically meaningful way, though some links are speculative (e.g., attributing TE grade to sperm motility)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The overall logic is structured and the prognosis estimate follows the stated factors, but some quantitative adjustments are not strongly evidence-based and a few causal inferences are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice, especially recommending single embryo transfer in a good-prognosis 32-year-old, but suggestions such as assisted hatching, ERA after failure, routine prolonged luteal support wording, and acupuncture are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer and contingency planning, including eSET and lifestyle optimization, though some recommendations are broader than necessary and a few are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013047,
+  "judge_latency_ms": 4692.722749998211,
+  "judge_prompt_tokens": 2589,
+  "judge_completion_tokens": 352
+}

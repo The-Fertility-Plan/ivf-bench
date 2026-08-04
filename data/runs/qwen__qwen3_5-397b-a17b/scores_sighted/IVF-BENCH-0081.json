@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the blastocoel does not appear clearly fully expanded throughout the frame, TE cohesion is difficult to verify, and calling it 'top-tier' from this single image is somewhat stronger than the visible morphology supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, FSH, prior failed cycles, sperm parameters, endometrial thickness, and lifestyle reasonably well with embryo quality. It appropriately highlights prior failures as prognostically important, though it somewhat overlabels this as RIF and does not address the missing AMH or the COC/MII inconsistency carefully."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality, age-related aneuploidy risk, and prior failures. Minor issues include treating morphology as near-perfect despite image limitations and applying a somewhat strong 'RIF penalty' without clarifying prior transfer details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on general points such as proceeding with transfer and considering embryo genetics in future planning, but ERA is not routinely recommended by major guidelines, aspirin/heparin without a defined indication is weakly supported, and PGT-A is presented more strongly than guidelines typically support for unexplained repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future workup, including luteal support, consideration of sperm DNA fragmentation testing, and lifestyle optimization. However, some recommendations lack nuance on indications and evidence strength."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014181,
+  "judge_latency_ms": 5685.502000007546,
+  "judge_prompt_tokens": 2627,
+  "judge_completion_tokens": 420
+}

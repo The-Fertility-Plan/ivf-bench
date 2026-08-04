@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0543",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but it overstates visible certainty from the image: the blastocoel does not appear prominently expanded in this frame, and TE/ICM quality are inferred more from the given grade than clearly demonstrated morphologically."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrial thickness, BMI, prior cycle history, and sperm factors with embryo quality reasonably well, though it somewhat overinterprets AMH and sperm parameters and does not deeply discuss the nonspecific diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, linking embryo grade and patient age to prognosis. Minor issues include calling this a 'perfect storm' and assigning a somewhat optimistic implantation range without enough caution about morphology-vs-euploidy limits."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF practice, but there are notable deviations: 3AA is not the highest possible blastocyst grade overall, sperm parameters labeled 'normal' are questionable, and routine PGT-A suggestion at age 34 is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, and contingency planning. Recommendations are useful, though some are generic and not highly individualized beyond standard counseling."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.012699,
+  "judge_latency_ms": 4808.639625000069,
+  "judge_prompt_tokens": 2448,
+  "judge_completion_tokens": 357
+}

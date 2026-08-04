@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies the key grading inconsistency, but its image-based morphology is not very accurate: it calls the embryo a compacting morula/early blastocyst and states no clear blastocoel is visible, while the image and provided grade are more consistent with an early/full blastocyst appearance with discernible cavitation. ICM/TE comments are partly inferred from the supplied grade rather than clearly visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, endometrial thickness, prior miscarriage, and transfer timing into prognosis reasonably well. Some links are somewhat speculative, but overall the patient factors are connected to embryo quality and expected outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: it treats the embryo as Day 4 morphology while also discussing Gardner blastocyst grading, overinterprets alcohol and miscarriage as direct implantation penalties, and gives a probability estimate based on somewhat inconsistent premises."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, including noting the Gardner grading discrepancy and recommending luteal support and counseling. However, suggesting PGT-A mainly because of a single prior miscarriage in a 30-year-old is not strongly guideline-based, and some statements about Day 4 transfer and implantation rates are oversimplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future planning, including proceeding with transfer, luteal support, alcohol cessation, and considering extended culture. It is useful clinically, though some recommendations could be more nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014697,
+  "judge_latency_ms": 6587.391833003494,
+  "judge_prompt_tokens": 2789,
+  "judge_completion_tokens": 422
+}

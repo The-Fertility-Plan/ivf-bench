@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0361",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a hatching blastocyst and visible zona breach/herniation, but overstates certainty about ICM/TE quality and claims features like no granulation/vacuolization that cannot be reliably confirmed from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH/diagnosis discrepancy, oocyte maturity, sperm factors, BMI, endometrium, and first-cycle context with embryo quality in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly logical, but there are inconsistencies: it labels the embryo as Gardner Stage 4 while also describing hatching through the zona (more consistent with stage 5), and the probability section is truncated, limiting full support for conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF concepts and Gardner grading principles, but the stage/hatching terminology is imprecise and some claims (e.g., specific advantage of stage 4 hatching, likely trilaminar endometrium from thickness alone) are overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides prognostic discussion but the visible response lacks clear, specific transfer recommendations or future cycle planning steps; the answer appears incomplete."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.011985,
+  "judge_latency_ms": 6122.171750001144,
+  "judge_prompt_tokens": 2400,
+  "judge_completion_tokens": 319
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response questions whether the embryo is even a blastocyst and describes it as not clearly expanded, which conflicts with the provided lab grade of 3AA expanded blastocyst. It gives some plausible comments on TE and zona thinning, but overall undercalls morphology and introduces uncertainty not well supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: maternal age, AMH, BMI, tubal factor, endometrial thickness, semen parameters, partner age, and first-cycle status, and links these to prognosis and aneuploidy risk. Minor overemphasis on speculative hydrosalpinx limits a perfect score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, especially around age-related aneuploidy limiting prognosis despite decent morphology. However, there is internal inconsistency between calling the embryo potentially morula/early blastocyst and later accepting it as a reasonable 3AA transfer embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-quality day-5 embryo, caution about age-related aneuploidy, confirmation/management of hydrosalpinx, and individualized discussion of PGT-A. Slight deviations come from overinterpreting image morphology against the reported Gardner grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support adherence, lifestyle modification, beta-hCG follow-up, uterine reassessment if unsuccessful, and future-cycle considerations including PGT-A and sperm DNA fragmentation if recurrent failure occurs. Useful, though some advice remains somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.01794,
+  "judge_latency_ms": 7796.983666019514,
+  "judge_prompt_tokens": 3885,
+  "judge_completion_tokens": 419
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0269",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and misinterprets grading details: Gardner 2 is early blastocyst rather than full blastocyst, TE was labeled B despite lab data stating few loose cells consistent with C, and visible morphology appears somewhat collapsed/irregular rather than clearly high-quality 2AB."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, sperm parameters, diagnosis, and endometrium with prognosis reasonably well, though it overinterprets low AMH as directly lowering embryo competence beyond age-related effects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: calling the embryo 'excellent/high-quality' despite a modest stage and likely weaker TE, and linking low ovarian reserve too strongly to implantation probability independent of embryo age-related aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with standard practice: suggesting biopsy/PGT-A for this embryo at transfer stage is impractical, implying strong recommendation for PGT-A in a low-yield first cycle is debatable, and donor eggs are introduced prematurely. There is also inaccurate Gardner grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical next steps such as proceeding with SET and considering protocol review if unsuccessful, but several suggestions are too generic or poorly tailored, and some are not actionable for the current embryo (e.g., biopsy this embryo now for PGT-A)."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013689,
+  "judge_latency_ms": 6330.258500005584,
+  "judge_prompt_tokens": 2603,
+  "judge_completion_tokens": 392
+}

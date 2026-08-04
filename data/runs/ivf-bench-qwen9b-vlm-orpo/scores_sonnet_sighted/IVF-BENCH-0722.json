@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies key blastocyst features (zona pellucida, ICM, TE) and notes the expanded state consistent with 3AA grading. However, the image is quite blurry and the description of ICM location as 'upper-left' and TE as 'continuous peripheral rim' is somewhat generic. The response appropriately acknowledges focal plane limitations but doesn't provide highly specific morphological detail that would distinguish this from a generic blastocyst description. No fabricated features, but limited precision given image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically connects maternal age (28) to ploidy probability, AMH/FSH to ovarian reserve adequacy, tubal factor diagnosis to implantation considerations (specifically flagging hydrosalpinx risk), semen parameters to fertilization potential, endometrial thickness to receptivity, and lifestyle factors (alcohol, BMI, activity) to outcome modifiers. Interactions between factors are explicitly discussed rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The 40-55% implantation estimate is logically derived from the combination of favorable factors (age, morphology, lining) tempered by ploidy uncertainty. The response correctly distinguishes implantation rate from live birth rate. Minor issue: the maturity calculation commentary (12 MII 'rather than ~13-15') is slightly confused since 12/15 = 80% which is stated correctly. Overall the probability estimate follows coherently from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for young patient with good-quality blastocyst, appropriate caution about hydrosalpinx treatment before transfer, measured approach to PGT-A (not routinely recommended at 28 in first cycle), discouraging bed rest, recommending cavity assessment for tubal factor patients. The alcohol guidance aligns with current evidence. Minor gap: doesn't explicitly reference progesterone level monitoring in fresh transfer context per current protocols."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized recommendations: SET decision with rationale, explicit hydrosalpinx investigation prompt, luteal support reminder, alcohol cessation timing, activity guidance, and a clear decision tree for if transfer fails. Future cycle planning is nuanced with conditional recommendations (PGT-A only if specific criteria met, male workup only if failure occurs). The offer to provide a one-page consult note adds practical clinical utility. Recommendations are appropriately case-specific rather than generic."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022746,
+  "judge_latency_ms": 15149.235707998741,
+  "judge_prompt_tokens": 4292,
+  "judge_completion_tokens": 658
+}

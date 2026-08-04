@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0505",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology and misinterprets the Gardner stage: it calls 2AA 'the highest morphological grade' and describes grade 2 as 'fully expanded,' which is incorrect. The image/lab label are somewhat discordant, and the description of a clear, robust ICM/TE is more confident than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm factors, BMI, endometrium, smoking, and diagnosis with embryo prognosis reasonably well, though some claims about male factor and DNA fragmentation are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: incorrect grading interpretation, unsupported assumptions about sperm DNA fragmentation, and a probability framework built on debatable base rates and euploidy assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several statements are not well aligned with standard IVF guidance: 2AA is not the highest possible grade, grade 2 is not a full blastocyst, and recommending freezing a single available embryo for PGT-A/strongly recommending PGT-A in this context is not clearly guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps such as proceeding with transfer, smoking cessation, discussing sperm DNA fragmentation testing/ICSI, and future planning, though some recommendations are too strong or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014175,
+  "judge_latency_ms": 4972.4894579994725,
+  "judge_prompt_tokens": 2870,
+  "judge_completion_tokens": 371
+}

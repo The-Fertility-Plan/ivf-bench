@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0713",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocyst, thinned zona, tightly packed ICM, cohesive TE). However, the image is quite grainy and low-resolution, making definitive morphological assessment difficult. The model appropriately acknowledges image resolution limitations but largely echoes the provided Gardner score rather than independently analyzing visible features. Some descriptions of the TE as 'without significant fragmentation or vacuolization' are difficult to confirm from the image. The analysis is competent but heavily reliant on the provided score rather than independent image interpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors - age, AMH, FSH, BMI, previous outcomes, sperm parameters, and endometrial thickness are all connected to the embryo assessment and prognosis. The previous live birth is correctly identified as a strong positive predictor. The 'Other' diagnosis uncertainty is acknowledged. Minor gap: the relatively modest oocyte yield (6 MII from 10 COCs, 60% maturation rate) and the fact that only one blastocyst is mentioned for transfer could have been explored more critically in terms of overall cycle efficiency."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from observations to conclusions. The probability estimate of 60-75% is well-supported by the cited factors (young age, high-grade blastocyst, previous live birth, good endometrial thickness). The recommendation for SET follows coherently from the risk-benefit analysis. Minor inconsistency: the response mentions PGT-A as not necessary for this transfer but then suggests it for future cycles without clearly delineating the threshold for when it would become appropriate, creating slight ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines - recommending SET for a young patient with a high-quality blastocyst is consistent with current guidelines to minimize multiple pregnancy risk. Luteal phase support recommendation is standard. The Gardner grading interpretation is accurate. The cautious approach to PGT-A for a 29-year-old is appropriate per current guidelines. Minor gap: no mention of endometrial receptivity assessment considerations or specific progesterone monitoring protocols that current guidelines increasingly emphasize."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are generally specific and practical: SET is clearly recommended with rationale, luteal phase support is mentioned, cryopreservation of remaining embryos is advised, and lifestyle modifications are suggested. The future cycle planning section provides useful guidance. However, some recommendations lack specificity - e.g., 'adequate luteal phase support' without specifying route/dose, no mention of specific timing protocols (fresh vs. frozen transfer considerations), and stress reduction advice is generic. Overall clinically useful but could be more operationally specific."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.02145,
+  "judge_latency_ms": 15936.696916993242,
+  "judge_prompt_tokens": 3600,
+  "judge_completion_tokens": 710
+}

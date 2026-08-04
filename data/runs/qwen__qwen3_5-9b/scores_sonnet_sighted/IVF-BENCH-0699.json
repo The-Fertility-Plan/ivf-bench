@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0699",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly vacillates between calling the embryo a morula and a blastocyst without reaching a clear conclusion. While it correctly identifies the compact appearance and lack of clear blastocoel, it fails to provide a definitive, structured morphological description. The analysis is buried in internal deliberation rather than presenting clear observations about zona pellucida integrity, cell texture, or specific degenerative features visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response does identify key clinical factors including age 39 (AMA), partner age 45, AMH 2.31, prior live birth, and endometrial thickness. It connects these to prognosis in a general way. However, the integration is fragmented and inconsistent due to the excessive internal deliberation, and it misses deeper interactions such as how AMA combined with poor embryo quality compounds aneuploidy risk, or how the sperm parameters interact with embryo development."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is essentially an unedited stream of internal deliberation with massive contradictions and circular reasoning. It repeatedly reaches conclusions and then reverses them, never settling on a coherent clinical narrative. The final assessment is incomplete and cut off mid-sentence. The reasoning is not presented as a structured clinical argument but as confused internal monologue, making it clinically unusable."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While the response correctly notes that Gardner scores apply to blastocysts and that Day 4 transfers are for cleavage-stage embryos (showing some guideline awareness), it fails to apply ESHRE/ASRM grading criteria systematically. It does not properly address the clinical threshold for transferring D-grade embryos per guidelines, nor does it reference standard protocols for AMA patients or PGT-A indications in a guideline-consistent manner."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response mentions PGT-A and clarifying the transfer day as potential recommendations, but these are buried in repetitive deliberation and never presented as clear, actionable clinical steps. The final recommendations section is incomplete (cut off mid-sentence). A clinician would find little practical guidance here. No clear decision tree or prioritized next steps are provided."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.038901,
+  "judge_latency_ms": 12796.441665996099,
+  "judge_prompt_tokens": 10177,
+  "judge_completion_tokens": 558
+}

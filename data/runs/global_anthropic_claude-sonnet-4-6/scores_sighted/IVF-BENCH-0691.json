@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a low-expansion blastocyst with sparse TE, but it overstates confidence in ICM quality and adds likely fabricated features such as micro-fragmentation, vacuolation, debris, and cytoplasmic abnormalities that are not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, tubal factor, prior cycle, endometrium, and semen parameters well with embryo prognosis, though some links are overstated, especially implying low AMH meaningfully reduces oocyte quality at age 28."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is internally explained, but several deductions are weakly supported by the image or data, and the numerical adjustments appear somewhat arbitrary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core recommendations such as proceeding with SET are guideline-consistent, but ERA after a single failed transfer, EMMA/ALICE, DHEA, melatonin, and some adjunct testing are not strongly guideline-supported for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and contingency planning, though some suggested add-ons may not be necessary or evidence-based in this patient after only one failed cycle."
+    }
+  ],
+  "extracted_probability": 0.34,
+  "judge_cost_usd": 0.014598,
+  "judge_latency_ms": 5934.795749999466,
+  "judge_prompt_tokens": 3231,
+  "judge_completion_tokens": 327
+}

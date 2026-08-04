@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the key morphological features visible in the image: thinning zona pellucida, well-formed blastocoel, dense tightly cohesive ICM, and multiple trophectoderm cells forming a continuous epithelial ring. The structured table format clearly maps observations to quality grades consistent with Gardner 3AA. Minor limitation: does not comment on any visible fragmentation or specific cell count estimates, and the blastocoel expansion description could be more precise given the image shows a moderately expanded cavity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: patient age, AMH, FSH, BMI, sperm parameters (flagging borderline concentration against WHO 2021 thresholds), endometrial thickness, lifestyle factors, and diagnosis. It explicitly connects each factor to implantation prognosis with directional weighting, creates a probability matrix showing how factors interact, and identifies the Day 4 timing as a critical synchrony concern requiring verification before transfer. The interaction between embryo quality and patient-level factors is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 55-68% follows logically from the evidence presented, with appropriate upward adjustments for embryo quality/age and downward adjustments for BMI, endometrial thickness, and sperm parameters. The Day 4 blastulation concern is coherently flagged as a synchrony issue. Minor issue: claiming Day 4 blastulation adds '5-8% improvement' over Day 5 equivalent is not well-supported in literature and slightly contradicts the synchrony concern raised elsewhere."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: eSET recommendation for young patient with good quality embryo, Gardner grading criteria application, WHO 2021 sperm reference values, luteal phase support monitoring, and appropriate threshold for endometrial thickness. The recommendation for ERA, PGT-A consideration, and sperm DNA fragmentation testing aligns with current evidence-based practice. Minor deviation: the claim that Day 4 blastulation is an 'independent positive prognostic marker' is somewhat overstated relative to current literature consensus."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: concrete checklist items before transfer (progesterone levels with specific thresholds, trilaminar pattern verification, uterine artery PI/RI), clear eSET rationale, specific lifestyle modification targets (BMI range, alcohol cessation timing), and a structured diagnostic workup pathway if the cycle fails. The tiered approach distinguishing immediate actions from future cycle planning, combined with the conditional transfer recommendation pending synchrony confirmation, provides a clinician with clear, implementable next steps."
+    }
+  ],
+  "extracted_probability": 0.615,
+  "judge_cost_usd": 0.02268,
+  "judge_latency_ms": 14716.176917005214,
+  "judge_prompt_tokens": 4070,
+  "judge_completion_tokens": 698
+}

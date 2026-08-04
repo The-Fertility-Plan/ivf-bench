@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image/Gardner score was available to it and avoided fabricating detailed morphology. It did not analyze visible features, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, AMH, prior IVF outcomes, ectopic history, sperm parameters, and endometrial thickness into prognosis reasonably well, though some links to embryo quality were somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but several deductions are overstated (e.g., repeated implantation failure after only two prior cycles, strong BMI effect, assuming transfer implies acceptable quality) and some recommendations exceed the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While some points are standard (need for Gardner grading, early scan after ectopic, hysteroscopy consideration), several recommendations are not guideline-supported or are overused in this context, including ERA, immunologic testing/NK cells, MTHFR testing, routine thrombophilia workup, and PGT-A in a 25-year-old for this history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for monitoring this transfer and outlines future investigations and planning. However, some suggested tests/interventions are not well justified, which reduces practical value."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014196,
+  "judge_latency_ms": 5284.917500001029,
+  "judge_prompt_tokens": 3032,
+  "judge_completion_tokens": 340
+}

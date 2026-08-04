@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0076",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and incorrectly stated that specific morphology could not be assigned; it omitted the known expanded blastocyst, strong ICM, cohesive TE, and thinning zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, AMH, sperm parameters, diagnosis, endometrium, and lifestyle reasonably well with prognosis, though some links were speculative and it underused the known embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a key inconsistency in ignoring the supplied 3AA morphology and relying on inferred quality instead; some deductions (e.g., hidden male factor, stress effects) are speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly IVF-consistent, but the omission of the provided Gardner grade, speculative endorsement of acupuncture/stress effects, and somewhat liberal PGT-A suggestion at age 34 reduce alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer support, alcohol cessation, weight management, sperm DNA fragmentation testing, and protocol review, though some advice is not tightly tailored to the actual known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012828,
+  "judge_latency_ms": 3870.9185419938876,
+  "judge_prompt_tokens": 2606,
+  "judge_completion_tokens": 334
+}

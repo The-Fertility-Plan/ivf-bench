@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0671",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 4BA Gardner score: hatching blastocyst with zona pellucida thinning and herniation, loosely grouped ICM (Grade B), and cohesive multicellular trophectoderm (Grade A). The description aligns well with the provided grading criteria. Minor limitation is that the description largely echoes the provided Gardner score text rather than adding independent morphological observations from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: maternal age, AMH, FSH, endometrial thickness, sperm parameters, BMI, and male factor diagnosis are all connected to prognosis. It correctly identifies the mild nature of the male factor and links TE grade to implantation potential. Minor gaps include insufficient discussion of the moderate alcohol consumption (4-6 drinks/week) as a meaningful risk factor and limited integration of the antagonist protocol outcome with ovarian reserve markers."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and consistent, correctly identifying favorable and risk factors. However, the response is notably truncated - the implantation probability estimate section (Section 4) is cut off mid-sentence, and Section 5 (recommendations) appears entirely absent. This represents a significant coherence failure as the conclusions and probability estimate are never fully presented, making it impossible to assess whether the final probability follows logically from the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response demonstrates good alignment with Gardner grading criteria and standard IVF assessment frameworks. WHO sperm parameter references are correctly applied (40% motility threshold). The assessment of endometrial thickness as optimal at 12mm aligns with ESHRE guidelines. The mention of ICSI for male factor is appropriate. The response correctly notes TE as the strongest morphological predictor per current literature. No major guideline contradictions are present, though the truncation prevents full evaluation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Due to the truncated response, Sections 4 and 5 - which would contain the implantation probability estimate and clinical recommendations - are missing or incomplete. The response provides no specific transfer recommendations, no guidance on luteal phase support, no discussion of PGT-A considerations, no lifestyle modification advice (particularly regarding alcohol consumption), and no future cycle planning. What is present is descriptive rather than actionable, significantly limiting clinical utility."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.015078,
+  "judge_latency_ms": 12005.289125001582,
+  "judge_prompt_tokens": 2046,
+  "judge_completion_tokens": 596
+}

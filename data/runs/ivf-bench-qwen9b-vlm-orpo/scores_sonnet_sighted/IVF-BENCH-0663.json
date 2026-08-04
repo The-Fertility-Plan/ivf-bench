@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the blastocoel expansion, compact ICM consistent with A-grade, and sparse/loose TE consistent with B-grade, aligning well with the Gardner 2AB score. It notes the absence of gross degeneration and comments on symmetry. Minor limitation: does not comment on zona pellucida status or potential collapse artifacts in detail, and the expansion stage description (calling it 'full-to-good') slightly undersells the stated Grade 2 expansion. Overall solid morphological read consistent with the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response systematically integrates all major clinical factors including female age, AMH, FSH, oocyte yield, PCOS diagnosis, BMI, endometrial thickness, sperm parameters, partner age, lifestyle factors (alcohol, sedentary behavior, stress), and first-cycle status. It uses structured tables to show how each factor modifies prognosis and explicitly discusses interactions (e.g., PCOS effect on oocyte quality vs. favorable reserve, untested embryo aneuploidy risk at age 30, BMI effect on implantation). The integration is thorough and nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 18-28% implantation follows logically from the intermediate embryo quality and favorable patient factors. The distinction between implantation and live birth probability is appropriately made. Minor issue: the response initially frames the embryo as 'below the elite AA/AB group' but the Gardner score given is 2AB, which is actually a reasonably good grade—the reasoning around this could be slightly tighter. The live birth estimate of 12-18% is coherent but on the conservative side given age 30."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: recommends elective single embryo transfer at age 30, appropriately defers PGT-A as non-mandatory at this age, avoids recommending non-evidence-based add-ons (ERA, routine anticoagulation, immune therapies), supports standard luteal phase supplementation, and correctly applies Gardner grading criteria. The discussion of OHSS risk in PCOS patients with high AMH and the antagonist protocol recommendation are guideline-consistent. Lifestyle counseling (alcohol cessation, folate) aligns with standard preconception guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: proceed with eSET, stop alcohol now, specific lifestyle modifications listed, clear criteria for when to consider PGT-A (repeated failure/miscarriage), specific follow-up labs if cycle fails (TSH, prolactin, vitamin D, HbA1c), review of stimulation strategy for future cycles with mention of dual trigger consideration, and guidance on freezing surplus embryos. The response also provides a patient-facing counseling summary, making it useful at multiple clinical levels. Future cycle planning is detailed and case-specific."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.02385,
+  "judge_latency_ms": 18569.609958998626,
+  "judge_prompt_tokens": 4210,
+  "judge_completion_tokens": 748
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0065",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to invent morphology because the prompt stated no image was provided to it. It made no false morphological claims, but also did not analyze visible features such as likely expanded blastocyst stage, ICM, or TE, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates maternal age, ovarian reserve, prior live birth, tubal factor, endometrial thickness, BMI/lifestyle, sperm parameters, and paternal age, and correctly emphasizes age-related aneuploidy as the dominant prognostic factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is internally consistent, clearly structured, and the implantation estimate logically follows from the combination of favorable uterine/background factors and the major negative effect of maternal age with unknown ploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based and consistent with standard IVF practice, including caution about hydrosalpinx, realistic counseling, luteal support, and selective consideration of PGT-A. Minor limitation is that some probability figures and trigger suggestions are somewhat generalized rather than tightly guideline-specific."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future cycles, including hydrosalpinx assessment, transfer technique, luteal support, and possible PGT-A or sperm DNA fragmentation testing. It is useful clinically, though some advice remains somewhat general because morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.13,
+  "judge_cost_usd": 0.015078,
+  "judge_latency_ms": 6583.8292080006795,
+  "judge_prompt_tokens": 3116,
+  "judge_completion_tokens": 382
+}

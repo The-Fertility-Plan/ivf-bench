@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0730",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a top-tier 3AA with a large blastocoel and cohesive TE. Visually, the blastocoel does not clearly occupy most of the embryo, the ICM is not distinctly tight/prominent, and the TE appears sparse/irregular rather than uniformly cohesive. Zona thinning is plausible but the detailed claims exceed what is visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and first-cycle status reasonably well with prognosis, though some links are somewhat generic and it overstates the prognostic weight of morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are inconsistencies: it labels the embryo top-tier despite image limitations, gives a 55-65% estimate while also presenting a rough calculation closer to 45%, and somewhat conflates morphology with euploidy probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET are broadly guideline-consistent, but calling assisted hatching a consideration here is weakly supported, and suggesting PGT-A to rule out chromosomal causes in a 34-year-old first unexplained cycle is more debatable than standard. Overall mostly aligned with some deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including eSET, lifestyle optimization, and discussion points for PGT-A and sperm optimization. Some recommendations could be more nuanced and less speculative."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 5369.283833002555,
+  "judge_prompt_tokens": 2660,
+  "judge_completion_tokens": 376
+}

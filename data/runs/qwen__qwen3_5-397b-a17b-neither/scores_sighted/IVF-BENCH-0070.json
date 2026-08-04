@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0070",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately states it cannot visually assess the image, but then infers/assumes a good-quality blastocyst such as 3AA/4AB/4BB without image support. The actual image appears to show a blastocyst with visible blastocoel and ICM but not enough basis for the assumed high grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, BMI, prior biochemical pregnancy, sperm motility, and endometrial thickness into prognosis reasonably well, though some links (e.g., sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to patient factors. Minor issues include unsupported assumptions about embryo morphology and some overinterpretation of sperm motility."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but recommendations such as intralipids, low-dose aspirin for endometriosis, routine ERA after limited failure, and strong consideration of PGT-A at age 31 are not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step suggestions for current transfer and contingency planning, including luteal support review, lifestyle advice, SDF testing, and uterine/tubal evaluation. Some recommendations would benefit from stronger prioritization by evidence level."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014469,
+  "judge_latency_ms": 4744.26074999792,
+  "judge_prompt_tokens": 2968,
+  "judge_completion_tokens": 371
+}

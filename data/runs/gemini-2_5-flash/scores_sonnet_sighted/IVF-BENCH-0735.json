@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score (expanded blastocyst, thinned zona, well-formed blastocoel, tightly packed ICM, cohesive TE). However, the description largely echoes the provided Gardner score metadata rather than demonstrating independent image analysis. The image actually shows some irregularity in the TE (jagged/scalloped appearance on the right side) and the ICM appears somewhat granular/heterogeneous, which the response does not mention. The description is competent but not fully independent from the provided labels."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: female age, AMH/FSH, endometrial thickness, lifestyle factors, male factor diagnosis, and previous cycle failure. It correctly notes that successful blastocyst development suggests effective fertilization (likely ICSI) despite male factor. It appropriately connects sperm parameters to potential aneuploidy risk. Minor gap: does not explicitly address the antagonist protocol's implications or the 10 COC/8 MII yield ratio in context of the stimulation outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-70% implantation probability estimate is well-supported by the cited factors and is consistent with published literature for 3AA blastocysts in women under 35. The lower bound appropriately accounts for aneuploidy risk and previous failure. The response avoids contradictions and conclusions follow from the evidence. Minor issue: the previous failed cycle is noted as a risk factor but its weight in the probability calculation is not fully quantified or explained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patients, luteal phase support, standard monitoring protocols, consideration of PGT-A for male factor cases, and ERA for recurrent implantation failure. Gardner grading criteria are correctly applied. The response appropriately defers PGT-A as optional rather than mandatory. Minor gap: does not mention ESHRE guidance on the specific threshold for considering PGT-A in male factor cases or the debate around its routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are clear and practical: proceed with SET, maintain luteal support, schedule beta-hCG and ultrasound monitoring, cryopreserve remaining embryos, consider PGT-A if transfer fails, review previous cycle details, and consider ERA for recurrent failure. These are specific and clinically useful. Slight limitation: does not specify progesterone type/dosage, timing of beta-hCG testing, or specific criteria for when to escalate to ERA or PGT-A, which would enhance actionability for the treating clinician."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.02127,
+  "judge_latency_ms": 15619.60462499701,
+  "judge_prompt_tokens": 3610,
+  "judge_completion_tokens": 696
+}

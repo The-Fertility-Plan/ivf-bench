@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0282",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a blastocyst with some collapse/re-expansion and difficulty assessing ICM/TE from a single image, but it overstates poor quality, claims disorganized TE, fragmentation, vacuolization, and severe compromise that are not clearly visible, and does not fairly account for transient collapse."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, endometrial thickness, BMI, diagnosis, and sperm parameters into prognosis reasonably well, though some links are overstated and not all factors are weighed with appropriate nuance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the conclusion is driven heavily by an arguably overcalled morphological interpretation from a single image, leading to a probability estimate that may be lower than justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It shows familiarity with Gardner grading and relevant prognostic factors, but it overinterprets a static image, treats 7 mm endometrium as a major adverse factor somewhat too strongly, and implies urgent discrepancy resolution without sufficient caution about post-warming collapse."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides risk framing and suggests clarifying the grading discrepancy, but the practical recommendations for immediate transfer management and future cycle planning are limited and incomplete."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013716,
+  "judge_latency_ms": 5581.401207993622,
+  "judge_prompt_tokens": 2827,
+  "judge_completion_tokens": 349
+}

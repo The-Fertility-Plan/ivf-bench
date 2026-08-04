@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with poorly defined ICM/TE, but it misstates expansion grade 1 as blastocoel <50% rather than at least half the embryo, overinterprets Day-4 blastulation as accelerated, and adds features not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, tubal factor, endometrium, BMI, AMH, oocyte yield, and sperm parameters with embryo quality in a clinically meaningful way, though some inferences about oocyte/sperm pathology are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and mostly consistent, but there are notable issues: incorrect interpretation of expansion grade 1, calling Day-4 blastulation favorable/accelerated, and some tension between quoted probability ranges and categorical statements about very low viability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in recognizing poor prognosis for a 1DD embryo and emphasizing counseling, but it contains Gardner grading inaccuracies and includes recommendations with limited guideline support (routine DHEA/CoQ10, estradiol addition based on a threshold, specific transfer technique claims)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, luteal support, beta-hCG timing, and future evaluation, though some suggestions are more opinion-based than evidence-based and the future-cycle plan is incomplete/truncated."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013569,
+  "judge_latency_ms": 5346.749207994435,
+  "judge_prompt_tokens": 2558,
+  "judge_completion_tokens": 393
+}

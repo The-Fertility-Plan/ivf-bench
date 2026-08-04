@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AB and instead stated no specific grading could be assigned, then inferred generic features and transfer standards rather than describing the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, AMH, tubal factor, BMI, prior failed cycle, sperm quality, and endometrial thickness, and connects them to prognosis, though it misses direct integration with the actual 3AB grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis estimate based on age and clinical context, though weakened by ignoring the provided embryo grade and making assumptions about morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are some deviations or overreaches, such as suggesting thrombophilia screening after limited failure history and discussing RIF workup too early; omission of the provided Gardner grade also reduces alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for luteal support, pregnancy testing, lifestyle optimization, and future-cycle considerations, though some recommendations are somewhat generic and not fully tailored to the known 3AB embryo."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013116,
+  "judge_latency_ms": 3861.817000004521,
+  "judge_prompt_tokens": 2687,
+  "judge_completion_tokens": 337
+}

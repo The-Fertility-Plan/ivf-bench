@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0401",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable blastocyst description, but it overstates quality as 'high-quality' and suggests stage 3/4 despite the image and provided grade being more consistent with an early/full blastocyst around stage 2-3; TE/ICM assessment relies heavily on supplied grading rather than clear image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, BMI, ovarian reserve, male factor, paternal age, prior failed cycle, and endometrial thickness with embryo prognosis in a clinically meaningful way, though some links (e.g., paternal age effects) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and structured, with a plausible probability estimate tied to embryo quality and patient factors; minor issues include overemphasis on paternal age/DNA fragmentation without direct testing data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with standard IVF concepts, but the Gardner staging explanation is imperfect and the statement that paternal age >40 is 'strongly associated' with DNA fragmentation is stronger than guideline-based evidence would support in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides risk-benefit framing and prognosis but offers limited concrete transfer or future-cycle management steps; recommendations are incomplete and not very specific for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012402,
+  "judge_latency_ms": 4987.403040999197,
+  "judge_prompt_tokens": 2369,
+  "judge_completion_tokens": 353
+}

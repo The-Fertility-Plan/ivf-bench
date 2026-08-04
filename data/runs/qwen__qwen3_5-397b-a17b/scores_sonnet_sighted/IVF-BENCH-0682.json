@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0682",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes general blastocyst features consistent with the Gardner score provided, including blastocoel expansion, ICM prominence, and TE cohesiveness. However, it notes a discrepancy between Stage 3 and Stage 4 labeling without fully resolving it, and the image itself shows a somewhat granular, less-than-pristine ICM that the model describes as 'prominent and tightly packed' without acknowledging any textural irregularities visible in the image. The description is largely template-driven rather than image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-related aneuploidy risk, endometriosis impact on receptivity, previous failed cycle, excellent sperm parameters, and endometrial thickness. It correctly connects AMH and oocyte yield to ovarian reserve quality. Minor gap: it does not deeply explore the interaction between endometriosis staging/severity and the specific implantation risk, nor does it address the antagonist protocol choice in context of endometriosis management."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimation. The probability range of 40-55% is reasonably derived with explicit upward and downward adjustments. The 'genetic lottery' framing for aneuploidy is coherent and well-explained. Minor inconsistency: the model states baseline rates of 50-60% for a 36-year-old with 3AA but then adjusts downward to 40-55%, which is internally consistent, though the baseline figure cited may be slightly optimistic without PGT-A context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: SET recommendation, PGT-A suggestion for age 36, luteal support emphasis, endometriosis-specific FET strategy with GnRH agonist downregulation. Smoking cessation advice is evidence-based. The aspirin/heparin mention is appropriately caveated as case-dependent. Minor deviation: ASRM guidelines do not universally recommend routine aspirin for IVF without specific indications, and this nuance could have been stated more carefully."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: SET, smoking cessation, dual-route progesterone for endometriosis, PGT-A for remaining embryos, GnRH agonist downregulation before FET if transfer fails. Future cycle planning is well-structured. Could be improved by specifying progesterone dosing protocols, timing of smoking cessation relative to transfer, or referencing endometrial receptivity array (ERA) testing given the previous failed cycle and endometriosis diagnosis."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.019863,
+  "judge_latency_ms": 15293.091209008708,
+  "judge_prompt_tokens": 3151,
+  "judge_completion_tokens": 694
+}

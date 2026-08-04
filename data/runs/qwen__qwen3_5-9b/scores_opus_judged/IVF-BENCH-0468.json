@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0468",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes morphological features consistent with the Gardner 4AA grading provided in the lab data, including expansion, ICM density, and TE cohesion. However, the descriptions appear to lean heavily on the provided Gardner score rather than independent image analysis. Claims about 'good refractility' and absence of fragmentation/vacuolization are generic statements that may or may not precisely match the image. The description of hatching is appropriate for a grade 4 blastocyst, but the level of detail from actual image observation is moderate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating multiple clinical factors including BMI, smoking, endometriosis, AMH, previous live birth, endometrial thickness, partner sperm parameters, and maternal age. The 'high-quality embryo in a complex patient' framing is clinically appropriate. The connection between diminished ovarian reserve and egg quality stress is reasonable. One minor issue: stating AMH 1.36 indicates 'diminished ovarian reserve' at age 35 is borderline—it's on the lower end of normal but the characterization is defensible. The integration of previous live birth as a strong positive predictor is well done."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimation follows a clear additive/subtractive framework from a base rate, which is transparent. The adjustments are reasonable and the final range of 45-60% is coherent with the factors discussed. One minor issue: the claim that AMH 1.36 means 'eggs were under significant stress' is a logical stretch—low reserve doesn't necessarily mean poor egg quality, especially when a 4AA embryo was produced. The reasoning about previous live birth proving uterine receptivity is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is correct and aligned with established criteria. The base implantation rate of 60-70% for a 4AA is reasonable per literature. The recognition of smoking and BMI as negative factors aligns with ASRM guidelines. However, the response doesn't mention PGT-A considerations, which would be relevant given the patient's age and history. The endometriosis management considerations could be more specific (e.g., GnRH agonist suppression before transfer). The response was cut off before completing recommendations, which limits assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was truncated and the recommendations section (Section 5) was not completed. While the risk factor analysis implicitly suggests actionable items (smoking cessation, weight management), no explicit, specific recommendations were provided for this transfer or future cycle planning. The assessment identifies modifiable risk factors but doesn't provide concrete next steps, timelines, or alternative strategies."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.02903,
+  "judge_latency_ms": 21111.915749963373,
+  "judge_prompt_tokens": 2386,
+  "judge_completion_tokens": 684
+}

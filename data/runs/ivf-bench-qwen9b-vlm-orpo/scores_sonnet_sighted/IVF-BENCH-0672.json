@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0672",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies poor expansion, absent/degenerative ICM and TE consistent with the 0DD Gardner grade, and notes irregular cell borders and sparse cellular organization. It appropriately acknowledges limitations of a single static image. Minor issue: describes the embryo as 'compacted/compact-mesomorphic' which is somewhat imprecise terminology, and the image actually shows some blastocoel formation that could be described more precisely. Overall the description aligns well with the visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 34, AMH, FSH, PCOS diagnosis, antagonist protocol, BMI, alcohol use, partner age 48, sperm parameters, endometrial thickness, and prior cycle history including the live birth. It explicitly connects each factor to prognosis and correctly identifies embryo morphology as the dominant limiting factor while contextualizing the patient's overall favorable profile for future cycles."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The low implantation probability (1-4%) logically follows from the 0DD grade and morphological findings. The response correctly distinguishes between this specific transfer's poor prognosis and the patient's overall favorable long-term outlook. Minor inconsistency: recommends single embryo transfer for a poor-quality embryo without fully addressing whether transfer should even proceed given the near-zero prognosis, though it does acknowledge this."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, luteal support, sperm DNA fragmentation testing for advanced paternal age, metabolic optimization for PCOS, and appropriate caution about PGT-A when embryo numbers are low. The Gardner grading interpretation is correct. Slight deviation: the response doesn't explicitly address whether a 0DD embryo meets minimum transfer criteria per most clinic protocols, which is a relevant guideline consideration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with single transfer with realistic counseling, sperm DNA fragmentation testing, metabolic workup (HbA1c, TSH, vitamin D), lifestyle modifications, review of fertilization method (IVF vs ICSI), and conditional PGT-A consideration. Future cycle planning is well-structured. Could be slightly more specific about timing of interventions or threshold criteria for proceeding vs. canceling transfer of such a poor-quality embryo."
+    }
+  ],
+  "extracted_probability": 0.025,
+  "judge_cost_usd": 0.0201,
+  "judge_latency_ms": 14279.222500001197,
+  "judge_prompt_tokens": 3560,
+  "judge_completion_tokens": 628
+}

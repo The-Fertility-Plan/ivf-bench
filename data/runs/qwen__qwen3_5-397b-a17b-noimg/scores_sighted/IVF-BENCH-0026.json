@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly assess the image and relied on the reported 3AB grade. Its discussion of Gardner grading was mostly accurate, but it introduced a stage inconsistency discussion and described zona thinning/expanded features from the text rather than the image; it did not fabricate detailed image findings."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, BMI, tubal factor, endometrial thickness, prior cycle history, and paternal factors with embryo quality and prognosis in a clinically meaningful way, though some links (e.g., former smoking impact, paternal age effect magnitude) were somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure was logical and the probability estimate was tied to age and morphology, but there were notable issues: calling 3AB 'top-tier,' treating Day 4 blastocyst transfer as a major synchrony concern, and making unsupported assumptions such as triple-line endometrium and need for 'aggressive' luteal support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the response was broadly consistent with IVF practice, but several recommendations were not strongly guideline-based or were overstated, including highly recommending PGT-A in a low-yield patient, suggesting TESE for possible DNA fragmentation, DuoStim/embryo banking as priority strategies, and assuming specific endometrial pattern data not provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gave clear next-step recommendations for transfer and future planning, including proceeding with transfer, luteal support, and consideration of further testing/strategy changes. However, some suggestions lacked nuance or evidence strength for this exact case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01515,
+  "judge_latency_ms": 5932.106792010018,
+  "judge_prompt_tokens": 2930,
+  "judge_completion_tokens": 424
+}

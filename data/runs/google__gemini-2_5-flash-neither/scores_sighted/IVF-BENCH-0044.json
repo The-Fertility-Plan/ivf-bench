@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate embryo morphology. However, it provided no image-based assessment despite morphology being inferable from the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated maternal age, ovarian reserve, diagnosis, prior IVF outcomes, sperm parameters, endometrium, and lifestyle with expected embryo competence and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, especially around age-related aneuploidy as the dominant factor. Minor overreach includes implying miscarriage strongly suggests aneuploidy and giving a somewhat broad implantation estimate without embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including counseling on age-related aneuploidy, SET, and consideration of PGT-A. Slight downgrades for suggesting ERA/ReceptivaDx and thrombophilia screening somewhat broadly, which are not routine first-line recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer counseling and future planning, including morphology review, SET, PGT-A consideration, and lifestyle optimization. It is useful clinically, though some recommendations are somewhat generic rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.014994,
+  "judge_latency_ms": 4422.337875002995,
+  "judge_prompt_tokens": 3303,
+  "judge_completion_tokens": 339
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0222",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BB blastocyst and correctly notes loose ICM/TE, but it overstates visible detail (e.g., specific ICM location, TE 'emerging' on the right) that is not clearly discernible in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve markers, prior live birth, smoking, BMI, endometrium, and sperm parameters reasonably well with prognosis, though it overinterprets AMH/oocyte yield and does not fully nuance unexplained infertility."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Mostly logical, but there are notable issues: calling this a 'super-responder' from 13 MII with AMH 0.96 is overstated, and the implantation estimate is pushed high mainly on prior live birth despite average morphology and smoking."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice, including recommending fresh transfer as preferred without cycle-specific context, implying a 3BB is 'high-quality,' and suggesting FET to maximize twin pregnancy, which is not guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical steps such as smoking cessation and lifestyle counseling, but recommendations are only moderately specific and include questionable advice about fresh transfer preference and future FET framing."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012588,
+  "judge_latency_ms": 4310.974000007263,
+  "judge_prompt_tokens": 2516,
+  "judge_completion_tokens": 336
+}

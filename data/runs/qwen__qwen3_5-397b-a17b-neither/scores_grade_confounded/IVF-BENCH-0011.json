@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was available, but it fails to use the provided Gardner grade 1DD for morphology and instead argues Gardner scoring is not applicable because transfer was on Day 4. This misses key supplied morphological information and introduces stage-related confusion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, ovarian response, endometrial thickness, tubal factor, sperm parameters, and lifestyle reasonably well with prognosis, though some links to the specific poor embryo grade are underdeveloped."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there is a notable inconsistency: the case provides a 1DD blastocyst grade, yet the response treats the embryo mainly as a Day 4 morula/early blast and bases prognosis on that assumption rather than the explicitly poor 1DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but there are deviations: dismissing the provided Gardner score due to Day 4 timing is questionable, PGT-A is presented too strongly for a low-yield 39-year-old without nuance, and some recommendations are more speculative than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including hydrosalpinx assessment, luteal support, protocol discussion, and counseling. However, recommendations would be stronger if they directly addressed the very poor 1DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 4473.539166006958,
+  "judge_prompt_tokens": 2700,
+  "judge_completion_tokens": 368
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with poorly defined ICM/TE, but it misstates Gardner expansion 1 as <50% rather than at least half the embryo, calls it a delayed-cleavage embryo, and adds speculative features like apoptotic bodies, collapse, and zona thickening that are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, prior biochemical pregnancy, endometrial thickness, oocyte yield, and sperm parameters reasonably well with embryo quality, though it overinterprets low oocyte yield as DOR despite missing AMH and makes some speculative links."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis follows from the embryo grade, but there are notable inconsistencies such as describing Day 4 blastocyst formation as accelerated while also calling the embryo delayed, and some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic grading interpretation is partly aligned, but several recommendations are not strongly guideline-based or are overstated, including mandatory aggressive protocol changes, very high gonadotropin dosing, routine GH/DHEA use, and donor-oocyte counseling after limited data in a 35-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides concrete next steps for transfer counseling, luteal support, beta-hCG timing, and future cycle considerations, though some suggestions are overly prescriptive and not sufficiently evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014724,
+  "judge_latency_ms": 5158.502916005091,
+  "judge_prompt_tokens": 2938,
+  "judge_completion_tokens": 394
+}

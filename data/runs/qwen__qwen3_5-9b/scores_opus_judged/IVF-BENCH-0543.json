@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0543",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA blastocyst features including expanded zona pellucida, tightly packed ICM, and cohesive TE. The descriptions are consistent with the Gardner grading provided. The model appropriately acknowledges image resolution limitations. Minor issue: stating 3AA is the 'highest morphological grade' is slightly inaccurate since grades 4AA, 5AA, 6AA exist for more expanded/hatching blastocysts, though 3AA is indeed top-tier for its expansion stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, AMH, endometrial thickness, BMI, lifestyle factors, and sperm parameters with embryo quality. The response connects ovarian reserve to retrieval outcomes and discusses how each factor modifies prognosis. However, the 'Other' diagnosis is not explored in depth, and sperm parameters are described as 'normal' when 13.5 M/mL concentration and 23.1% motility are actually below WHO reference values (oligoasthenozoospermia), which is a notable clinical oversight."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Generally coherent reasoning flow from morphology to clinical factors to probability estimate. However, there are inconsistencies: describing sperm as 'normal' when parameters are clearly subnormal is a logical error. Stating 3AA is the 'highest morphological grade' contradicts Gardner grading knowledge. The probability estimate of 60-75% is reasonable but the reasoning cites 'women under 35' literature while the patient is 34 (borderline). The 'perfect storm' characterization may be slightly overstated given the lifestyle risk factors and suboptimal sperm."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with clinical guidelines. The Gardner grading interpretation is appropriate. PGT-A recommendation for future cycles is reasonable. However, mischaracterizing the sperm parameters as normal is a significant deviation from WHO 2021 reference values (16 M/mL concentration, 42% total motility). The recommendation for alcohol cessation and lifestyle modification is appropriate. Luteal phase support recommendation is standard. The suggestion that 'age approaching 35' warrants PGT-A is somewhat arbitrary per current ASRM guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear, specific recommendations including proceeding with transfer, luteal phase support, lifestyle modifications (stress management, alcohol cessation, activity level), and future cycle planning with SDF testing and PGT-A consideration. The recommendations are practical and organized into immediate and future categories. Could be improved with more specific progesterone dosing guidance, timing details, and addressing the suboptimal sperm parameters with potential ICSI recommendation for future cycles."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.02953,
+  "judge_latency_ms": 24495.756999996956,
+  "judge_prompt_tokens": 2511,
+  "judge_completion_tokens": 679
+}

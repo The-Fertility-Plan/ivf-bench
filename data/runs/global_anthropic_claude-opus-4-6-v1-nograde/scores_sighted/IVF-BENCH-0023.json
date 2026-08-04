@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the image as a Day 4 compacting morula/pre-cavitation embryo. The image is consistent with a blastocyst with a visible blastocoel, so the analysis of compaction, lack of cavitation, and morula grading is fundamentally inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, diagnosis, ovarian response, prior cycle history, sperm parameters, BMI, and endometrial thickness into prognosis reasonably well, though some links are speculative and influenced by the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis estimate is internally explained, but the reasoning is weakened by the core morphological misread and by some speculative inferences such as attributing Day 4 transfer to lab concern."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are several deviations from evidence-based IVF practice, including speculative use of adjuncts (hCG booster, immunologic workup, NK/cytokine testing, ERA timing, empiric add-ons) and unsupported assumptions. Some standard elements are appropriate, but overall alignment is only partial."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for luteal support, monitoring, and future-cycle evaluation, making it clinically usable, although some recommendations are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.014715,
+  "judge_latency_ms": 10013.30816699192,
+  "judge_prompt_tokens": 3120,
+  "judge_completion_tokens": 357
+}

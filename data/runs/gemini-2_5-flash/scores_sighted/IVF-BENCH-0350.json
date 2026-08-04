@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0350",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label, but the image itself does not clearly support all claimed details. The ICM is plausibly seen at the upper right, yet TE uniformity and a clearly thin zona are overstated from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, PCOS, prior live birth and failures, sperm quality, endometrium, and oocyte maturity reasonably well with embryo quality, though AMH is unavailable and some factors are weighted somewhat strongly."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is mostly clear and internally consistent: strong embryo and age-related prognosis tempered by BMI, prior failures, and lifestyle factors. Probability estimate is plausible, though the negative impact of BMI/alcohol may be somewhat overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles and Gardner grading, but it overinterprets morphology from the image and treats underweight BMI and moderate alcohol as major implantation modifiers more strongly than guideline-based evidence typically supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Recommendations are incomplete in the provided response and only begin with alcohol abstinence, so practical next steps for transfer management and future cycle planning are not fully developed."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012504,
+  "judge_latency_ms": 4833.759499990265,
+  "judge_prompt_tokens": 2473,
+  "judge_completion_tokens": 339
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0181",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3BA blastocyst, but it overstates certainty from the image (e.g., 'aligns perfectly') and likely overcalls the zona as significantly thinned/ready for hatching; morphology description is generally reasonable but not especially precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, PCOS, ovarian reserve, sperm quality, and endometrial thickness with embryo prognosis in a clinically meaningful way, though it somewhat overinterprets AMH/PCOS as implying better egg quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable issues: it treats a day-4/blastocyst discrepancy awkwardly, overstates sperm quality as boosting implantation, and gives an arguably optimistic implantation estimate for age 39 with an untested 3BA embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows Gardner terminology and reasonable IVF principles, but contains deviations such as questionable statements about PCOS/AMH predicting oocyte quality and an inaccurate aneuploidy estimate for age 39; PGT-A discussion is broadly acceptable but not nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, clarifying the transfer day discrepancy, and considering metabolic/lifestyle optimization and future PGT-A discussion; recommendations are useful though not highly detailed."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013272,
+  "judge_latency_ms": 4667.955500000971,
+  "judge_prompt_tokens": 2679,
+  "judge_completion_tokens": 349
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0492",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a thinned zona and generally fair ICM/TE quality consistent with 3BA, but it overcalls the embryo as partially expanded/collapsed and fabricates 'cytoplasmic vacuolation/SEA' from structures that are more plausibly normal blastocyst cells; this is a significant image-based overinterpretation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, ovarian reserve, prior cycle, sperm parameters, endometrium, and lifestyle with embryo quality reasonably well, though some links are overstated and not all factors materially alter embryo-level prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate is driven by unsupported penalty adjustments for speculative vacuolation, alcohol use, and a single prior failed cycle, reducing internal robustness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with routine evidence-based IVF practice: ERA after only one failed cycle is not standard, PGT-A is presented too strongly as 'highest priority,' and alcohol/exercise claims are overstated relative to guideline-level evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for proceeding with transfer and future planning, including endometrial review and luteal support considerations, though some suggested add-ons are more aggressive than typically indicated."
+    }
+  ],
+  "extracted_probability": 0.26,
+  "judge_cost_usd": 0.014685,
+  "judge_latency_ms": 8416.630291001638,
+  "judge_prompt_tokens": 3100,
+  "judge_completion_tokens": 359
+}

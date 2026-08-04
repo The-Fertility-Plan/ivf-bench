@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0520",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Description is largely consistent with a 2BA full blastocyst: visible blastocoel, loosely grouped ICM, and cohesive TE. Minor issue: it labels grade 2 as 'full blastocyst' and says it has not begun to hatch as grade 3, whereas Gardner full blastocyst is typically stage 3 and stage 2 is blastocoel filling most/all of embryo; image-based certainty on exact ICM location is limited."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, tubal factor diagnosis, endometrial thickness, sperm parameters, and paternal age with embryo quality and prognosis. Slight overreach in inferring trigger timing/oocyte maturation issues from 6/10 MII and in emphasizing paternal age effects without direct DNA fragmentation data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, and the implantation estimate is tied to embryo grade and patient factors. Minor weaknesses include some overstatement of paternal-age-related aneuploidy risk and a few assumptions not directly supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly evidence-based: recognizes favorable tubal factor prognosis, importance of hydrosalpinx exclusion, and standard luteal support. However, recommending routine PGT-A largely because paternal age is 42 and suggesting testicular sperm/TESA based on age alone are not strongly guideline-based; there is also a Gardner staging imprecision."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and contingency planning, including hydrosalpinx assessment, luteal support, and future testing considerations. Some recommendations are somewhat aggressive/speculative, but overall they are specific and clinically usable."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014376,
+  "judge_latency_ms": 6182.860041997628,
+  "judge_prompt_tokens": 2692,
+  "judge_completion_tokens": 420
+}

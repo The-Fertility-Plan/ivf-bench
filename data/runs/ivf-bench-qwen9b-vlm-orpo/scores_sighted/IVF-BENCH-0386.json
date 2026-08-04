@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0386",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response questions the lab grade, inconsistently calls the embryo 3AA and 4AA, and describes features such as vacuoles/granular irregular cells that are not clearly supported by the image. It does note expansion and zona thinning, but overall morphology interpretation is only partly accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior IVF outcomes, male factor context, semen parameters, and endometrial thickness with prognosis in a clinically meaningful way, though some points are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There are notable internal contradictions: it downgrades the embryo visually, then upgrades stage to 4AA, while also calling it not elite-tier AA. The probability estimate is plausible but the morphology-based reasoning is inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (single embryo transfer, avoid routine add-ons, individualized PGT-A discussion), but the Gardner staging discussion is muddled and some speculative suggestions go beyond what is clearly indicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future evaluation, including SET, luteal support review, uterine assessment, and male-factor refinement. Recommendations are useful, though somewhat broad rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.017502,
+  "judge_latency_ms": 5230.1196250045905,
+  "judge_prompt_tokens": 4174,
+  "judge_completion_tokens": 332
+}

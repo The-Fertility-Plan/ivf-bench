@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided direct morphological claims. It did not fabricate embryo features, though it inferred transferable quality and likely multiple blastocysts from cycle data rather than image morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, tubal factor, ovarian reserve, oocyte maturity, endometrial thickness, sperm parameters, BMI, and first-cycle status into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with probability estimates tied to prognosis factors. Minor overreach exists in inferring embryo cohort quality and selected embryo grade from oocyte maturity and cycle performance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including SET in a good-prognosis young patient, routine luteal support, and avoiding unnecessary add-ons. Slight deviations include speculative use framing for ERA/PGT-A and assuming trilaminar endometrium when only thickness was provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for current transfer and contingency planning, including SET, luteal support, and future FET strategy. Some recommendations remain somewhat generic and depend on assumptions not directly documented."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013092,
+  "judge_latency_ms": 5073.4066250006435,
+  "judge_prompt_tokens": 2664,
+  "judge_completion_tokens": 340
+}

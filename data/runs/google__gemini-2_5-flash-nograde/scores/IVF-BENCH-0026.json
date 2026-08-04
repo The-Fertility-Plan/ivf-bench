@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcommits to a blastocyst interpretation and assigns a likely 3BB/4BB despite the case being Day 4 and the image details being limited; ICM/TE characterization appears speculative rather than firmly image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, endometrium, and embryo development reasonably well, though some links to prognosis are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly logical, but there are notable issues such as calling age 37 'not advanced maternal age' while simultaneously emphasizing age-related aneuploidy, and deriving a fairly confident implantation estimate from uncertain morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but the morphology/grading confidence on a Day 4 image is not well aligned with strict Gardner usage, and PGT-A is presented somewhat strongly despite limited embryo yield."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, luteal support, and future-cycle considerations, though some suggestions are generic and not tightly prioritized for this specific low-yield first cycle."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013749,
+  "judge_latency_ms": 4008.388666996325,
+  "judge_prompt_tokens": 3028,
+  "judge_completion_tokens": 311
+}

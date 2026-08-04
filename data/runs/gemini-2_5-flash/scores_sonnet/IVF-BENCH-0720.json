@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expansion stage with thinning zona pellucida, tightly packed ICM graded A, and loose TE epithelium graded B. The description aligns well with the provided Gardner score criteria. Minor limitation is acknowledging image resolution constraints rather than providing fully independent morphological assessment, but overall the description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (29), AMH (12.55), FSH (7.1), BMI, tubal factor diagnosis, previous clinical miscarriage, sperm parameters, endometrial thickness (9.5mm), lifestyle factors (former smoker, stress, activity), and stimulation protocol. Crucially, it connects these factors to embryo quality and implantation prognosis, explaining how each factor modifies the overall probability estimate. The interaction between previous miscarriage and aneuploidy risk is well-addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The 60-70% probability estimate is logically derived from the cited factors, with clear upper and lower bound justifications. The response correctly identifies that tubal factor diagnosis is favorable for IVF outcomes and appropriately contextualizes the previous miscarriage. Minor issue: the probability range of 60-70% is slightly optimistic for a 3AB (not 4AA/5AA) blastocyst even in a young patient, but the reasoning chain itself is internally consistent and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: single embryo transfer recommendation for young patient with good quality blastocyst, luteal phase support, consideration of PGT-A after miscarriage history, hysteroscopy/ERA for recurrent failure workup, and cryopreservation of surplus embryos. The Gardner grading interpretation is consistent with established criteria. PGT-A recommendation is appropriately nuanced (suggested rather than mandated for a 29-year-old). Minor gap: no mention of thrombophilia screening or immunological workup given the clinical miscarriage history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal phase support is mentioned, PGT-A is suggested for future cycles with clear reasoning, uterine receptivity evaluation (hysteroscopy, ERA) is proposed for failure scenarios, and psychological support is included. Patient counseling points are concrete. Slight limitation: luteal phase support protocol specifics are not detailed, and the recommendation lacks specificity on timing of ERA or specific thrombophilia/immunological workup that would be clinically relevant given the miscarriage history."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.020235,
+  "judge_latency_ms": 12820.759542002634,
+  "judge_prompt_tokens": 3265,
+  "judge_completion_tokens": 696
+}

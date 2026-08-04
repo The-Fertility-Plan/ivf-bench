@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0011",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided to it and avoided fabricating specific visible features. However, it did not analyze the actual embryo image, so morphology assessment is limited and omits visible stage/quality details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, FSH, diagnosis, sperm, endometrium, BMI, and lifestyle well, and connects these to prognosis and embryo cohort limitations. Some interactions are somewhat generalized rather than tightly embryo-specific."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with a clear link from patient factors to prognosis and transfer strategy. Minor issues include somewhat speculative deductions about why Day 4 transfer was chosen and quantitative adjustments that are not strongly evidence-anchored."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but several recommendations are not strongly guideline-based or are overstated (e.g., routine extended progesterone to 10–12 weeks, growth hormone/DHEA suggestions, ERA after only one failed transfer, confidence about long agonist being suboptimal)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations for current transfer follow-up and future cycle planning, including protocol alternatives and counseling points. Some suggestions are useful but a few are speculative or not clearly prioritized by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013899,
+  "judge_latency_ms": 5118.727124994621,
+  "judge_prompt_tokens": 2913,
+  "judge_completion_tokens": 344
+}

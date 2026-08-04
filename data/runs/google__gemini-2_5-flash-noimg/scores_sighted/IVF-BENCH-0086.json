@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0086",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and bases morphology on the supplied Gardner 3AB grade rather than inventing image-specific findings. However, it repeats the prompt's grading descriptors and includes a slightly inaccurate explanation of stage 3 as 'expanded blastocyst' with thinning zona, which is closer to stage 4 terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, diagnosis, prior IVF outcomes, sperm data, endometrial thickness, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, and the implantation estimate generally follows from the favorable age/embryo factors tempered by smoking and other risks. Minor issue: it somewhat overstates the impact of stress/sedentary lifestyle and treats the male-factor label as potentially significant despite reassuring semen parameters."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, especially regarding smoking cessation, luteal support, and transfer technique. Small deviations include mentioning ERA relatively readily and using a somewhat imprecise Gardner stage description."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and future planning, including smoking cessation, nutrition, activity, stress management, and possible further testing. It is useful, though some suggestions are broad rather than tightly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.016107,
+  "judge_latency_ms": 5717.128832999151,
+  "judge_prompt_tokens": 3514,
+  "judge_completion_tokens": 371
+}

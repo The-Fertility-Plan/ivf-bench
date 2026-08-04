@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expanded blastocyst stage, compact ICM, and trophectoderm presence, broadly consistent with 3AB grading. However, it notes the embryo may appear 'collapsing' which is not clearly supported by the image, and the description of TE as 'variable density' is vague. The response acknowledges limitations of single static image assessment, which is appropriate, but some descriptions lack precision regarding what is actually visible versus inferred from lab data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically addresses maternal age, AMH, FSH, BMI, tubal factor diagnosis, prior miscarriage, sperm parameters, endometrial thickness, and lifestyle factors, connecting each to implantation prognosis. Notably raises the critical hydrosalpinx concern for tubal factor patients, discusses the discrepancy between high AMH and low oocyte yield, and contextualizes the prior miscarriage appropriately without over-weighting it."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The 40-50% probability estimate follows logically from the positive and negative factors enumerated. The response correctly balances favorable indicators against risk factors. Minor issue: the response slightly contradicts itself by describing the embryo as 'good-prognosis' while also noting it appears 'slightly below textbook top-tier,' but this is a minor inconsistency. The miscarriage risk contextualization (10-15%) is appropriately separated from implantation probability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Response aligns well with ESHRE/ASRM guidelines: correctly applies Gardner grading criteria, appropriately questions PGT-A utility at age 29 with limited embryo numbers (consistent with current evidence), recommends against bed rest, supports standard luteal phase supplementation, and appropriately defers extensive recurrent loss workup after single miscarriage. The hydrosalpinx salpingectomy recommendation aligns with ESHRE guidelines. Minor gap: does not explicitly mention single embryo transfer (SET) recommendation per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: hydrosalpinx exclusion, luteal support details, beta-hCG timing, early ultrasound planning, and future cycle review points. The structured approach to 'if transfer fails' planning is practical. Some recommendations could be more specific (e.g., exact progesterone dosing protocols, specific trigger optimization strategies). The offer of additional analysis formats adds value. Missing explicit mention of eSET recommendation and ERA/receptivity testing consideration given prior miscarriage."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.022407,
+  "judge_latency_ms": 15646.36050000263,
+  "judge_prompt_tokens": 4129,
+  "judge_completion_tokens": 668
+}

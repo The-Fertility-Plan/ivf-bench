@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies a discrepancy between the image and the Gardner score, noting the image appears to show a degenerating or early-stage cell rather than a blastocyst. However, the morphological description of the image itself is somewhat imprecise - the image actually shows what could be interpreted as a hatching or expanded blastocyst with a collapsing/degenerating blastocoel, not necessarily a zygote or oocyte. The model's binary framing (either degenerating oocyte OR 3AA blastocyst) misses nuanced intermediate interpretations. Credit is given for flagging the discrepancy, but the actual image description lacks precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (38) linked to aneuploidy risk, AMH (0.96) correctly identified as diminished ovarian reserve, paternal age (42) noted as risk factor, endometrial thickness (9.0mm) correctly assessed as favorable, sperm parameters evaluated positively, and tubal factor diagnosis contextualized appropriately. BMI is mentioned though its impact is slightly overstated. The interaction between DOR and embryo quality is well-articulated. Minor gap: alcohol consumption (moderate 4-6/wk) is not addressed despite being a modifiable risk factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The three-scenario framework (3AA euploid, 3AA aneuploid, poor quality image) is logically structured and the probability ranges for each scenario are internally consistent. The final conservative estimate of 30-50% reasonably synthesizes the scenarios. The reasoning chain from patient factors to recommendations is clear. Minor inconsistency: the model recommends PGT-A but then says 'if PGT-A is not an option, proceed with Day 5 transfer' - yet the embryo is already at Day 5, making biopsy and freeze-all the actual workflow, not a fresh transfer decision, which slightly muddles the clinical logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: PGT-A recommendation for age 38 with DOR is appropriate, donor egg discussion aligns with guidelines for poor prognosis patients, endometrial thickness assessment follows standard criteria. The Gardner grading interpretation is accurate. Minor deviations: the suggestion of 'mild stimulation' for future cycles in a DOR patient is somewhat controversial and not strongly evidence-based; ASRM guidelines would more likely recommend standard antagonist or flare protocols. The alcohol consumption (4-6 drinks/week) should have triggered a guideline-based counseling recommendation per ASRM/ESHRE lifestyle guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including PGT-A recommendation with rationale, transfer decision pathway if PGT-A unavailable, lifestyle counseling, and future cycle planning including donor egg discussion. The scenario-based probability framework is clinically useful. Deductions for: not addressing the alcohol consumption despite it being a modifiable factor at 4-6 drinks/week (above recommended limits); not specifying freeze-all strategy if PGT-A is pursued; and the mild stimulation recommendation lacking specificity. Overall the recommendations are practical and would guide clinical decision-making effectively."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.021558,
+  "judge_latency_ms": 18215.33904199896,
+  "judge_prompt_tokens": 3071,
+  "judge_completion_tokens": 823
+}

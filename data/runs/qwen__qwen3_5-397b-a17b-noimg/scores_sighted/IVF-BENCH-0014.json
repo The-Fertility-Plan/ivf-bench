@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately states it could not inspect the image and bases morphology on the provided 0DD score. Its general interpretation of very poor ICM/TE quality is reasonable, but calling the embryo definitively non-viable/arrested and stating implantation is impossible overreaches, especially since the provided descriptor says early blastocyst with blastocoel less than half rather than no blastocoel."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, BMI, endometriosis, prior failed cycle, paternal age, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way. Some links, especially severe stress and paternal DNA fragmentation as explanations for this specific embryo, are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable overstatements and a contradiction around Gardner 0 versus the supplied description of an early blastocyst. The conclusion that transfer is medically futile and implantation effectively zero is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but several recommendations are stronger than guideline-level support: routine PGT-A is not universally indicated at age 35 after one failed cycle, TESE for presumed high SDF is not standard first-line, and advising unequivocally not to transfer based solely on this grading is more absolute than typical guideline framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for current-cycle counseling and future planning, including sperm DNA fragmentation testing, endometriosis management, culture strategy, and lifestyle optimization. However, some recommendations lack nuance and may be too prescriptive for a single poor-quality embryo."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.015444,
+  "judge_latency_ms": 5778.66429099231,
+  "judge_prompt_tokens": 2953,
+  "judge_completion_tokens": 439
+}

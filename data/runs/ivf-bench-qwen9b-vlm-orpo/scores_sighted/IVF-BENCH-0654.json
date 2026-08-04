@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0654",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst and notes caveats of single-image assessment, but overcalls it as a strong expanded/good-quality blastocyst consistent with 2AA despite the image appearing somewhat collapsed/irregular with limited clearly visible cohesive TE and not obviously pristine ICM detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, PCOS, prior biochemical pregnancy, endometrium, BMI, and sperm motility into prognosis appropriately, though some points are somewhat generic and AMH is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with probability estimates tied to age and embryo quality; minor tension exists between calling morphology strong and giving a somewhat conservative implantation range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET for a good-prognosis 31-year-old, caution about morphology not excluding aneuploidy, and selective rather than routine PGT-A. Minor issue is accepting the provided 2AA label without reconciling image-stage ambiguity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, failure review, and future planning, including luteal support adherence and targeted workup after repeated failure; could be more specific on fresh-vs-frozen considerations in PCOS and exact thresholds for further testing."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013356,
+  "judge_latency_ms": 5886.134874992422,
+  "judge_prompt_tokens": 2737,
+  "judge_completion_tokens": 343
+}

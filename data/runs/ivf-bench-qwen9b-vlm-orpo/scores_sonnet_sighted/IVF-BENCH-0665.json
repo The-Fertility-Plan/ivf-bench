@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0665",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst stage with thinned zona, describes the ICM as loosely grouped/less compact consistent with B-grade, and notes cohesive TE epithelium. Correctly identifies no hatching. Minor limitation: the image is partially out of focus and cropped, making precise morphological assessment challenging, but the model appropriately acknowledges uncertainty rather than fabricating details. The description aligns well with the Gardner 3BA scoring provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response connects BMI 31.8 to implantation and miscarriage risk, links age 31 to euploidy rates, interprets the prior live birth as a positive prognostic indicator, addresses the male factor diagnosis in context of the seemingly normal sperm parameters (raising the possibility of morphology or DNA fragmentation issues), and contextualizes the 4/8 MII yield. The interaction between multiple factors and embryo quality is thoughtfully explored throughout."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 35-50% implantation follows logically from the identified favorable and adverse factors. The distinction between implantation probability and live birth probability is appropriately made. Minor issue: the response occasionally hedges extensively which slightly dilutes the clarity of conclusions, but there are no contradictions. The recommendation to proceed with transfer is well-supported by the preceding analysis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer, appropriate luteal support options listed (vaginal progesterone, dydrogesterone, IM progesterone), selective rather than routine PGT-A at age 31, hysteroscopy/SIS for recurrent failure workup, and sperm DNA fragmentation testing in appropriate context. Gardner grading criteria are correctly applied. The nuanced discussion of PGT-A indications at age 31 reflects current evidence-based thinking. Minor gap: no explicit mention of endometrial receptivity testing (ERA) which some guidelines now address."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific recommendations organized by timing (pre-transfer, transfer, post-failure). Includes concrete next steps: luteal support protocol options, specific lab checks (TSH, prolactin, vitamin D, HbA1c), lifestyle modifications, BMI targets (5-10% reduction, BMI <30), specific diagnostic workup if failure occurs (SIS vs hysteroscopy, DFI testing), stimulation optimization suggestions (dual trigger consideration), and selective PGT-A discussion criteria. Recommendations are appropriately nuanced for the specific clinical scenario rather than generic."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.022989,
+  "judge_latency_ms": 15984.923125011846,
+  "judge_prompt_tokens": 4248,
+  "judge_completion_tokens": 683
+}

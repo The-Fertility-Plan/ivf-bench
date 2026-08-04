@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0421",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes poor ICM/TE quality consistent with DD, but it misinterprets Gardner expansion: a score of 1 is an early blastocyst, not fully expanded, and the image does not support claims about a significantly expanded cavity or hatching readiness."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior IVF outcomes, sperm parameters, and endometrial thickness reasonably well with embryo quality, though it overstates the significance of stress and labels AMH/FSH as diminished reserve somewhat strongly for age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate is directionally consistent with a DD embryo, but there are notable inconsistencies such as calling a grade 1 blastocyst fully expanded and linking stress/cortisol to implantation in an overstated way."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are important deviations from standard Gardner grading interpretation, and recommendations such as avoiding cryopreservation because 1DD embryos are generally not recommended for freezing and suggesting PGT-A as highly beneficial at age 31 are not well aligned with evidence-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps and counseling points, but several recommendations are generic or insufficiently tailored, and some are based on questionable premises (e.g., freezing recommendation, broad stress emphasis, nonspecific stimulation changes)."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013296,
+  "judge_latency_ms": 5061.387958994601,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 374
+}

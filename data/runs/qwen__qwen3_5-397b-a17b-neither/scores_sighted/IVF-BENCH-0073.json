@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0073",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not view the image and avoided assigning a specific morphology. It only gave a general grading framework, with a mild unsupported assumption that the embryo was likely at least transferable (e.g., ≥3BB), so no major fabricated visual claims were made."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, BMI, endometrial thickness, prior cycle history, and semen data reasonably well with prognosis, highlighting favorable age/reserve and concerns about low MII yield and unclear male-factor diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to age and cycle factors. Minor issues include speculative links between low MII yield and sperm DNA fragmentation, and assuming transferability without image confirmation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (blastocyst grading framework, luteal support, review of trigger timing). However, suggesting routine ICSI confirmation and PGT-A at age 33 based mainly on low MII/male-factor ambiguity is somewhat more speculative than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for the current transfer and future cycles, including proceeding with transfer, reviewing trigger strategy, considering SDF testing, and discussing luteal support. Recommendations are useful, though some are based on speculative assumptions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014109,
+  "judge_latency_ms": 5342.891209002119,
+  "judge_prompt_tokens": 2948,
+  "judge_completion_tokens": 351
+}

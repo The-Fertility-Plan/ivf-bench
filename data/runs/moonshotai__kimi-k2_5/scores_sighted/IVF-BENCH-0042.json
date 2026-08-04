@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerative ICM and TE consistent with 0DD, but adds some image-specific details that are not clearly discernible (e.g., exact ICM location, granular TE/cytoplasm) and overstates certainty of non-viability from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, prior failed cycle, sperm parameters, and endometrium with embryo quality reasonably well, though some links (e.g., protocol mismatch and recurrent oocyte quality issues) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it makes strong causal inferences from limited data and shifts from poor morphology to likely aneuploidy/non-viability with more certainty than warranted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned with standard IVF practice, but calling the embryo essentially non-viable and implying likely aneuploidy from morphology alone is stronger than guideline-based interpretation supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides limited practical next steps; it comments on prognosis and possible causes but does not clearly outline transfer counseling, whether to proceed, or concrete future cycle modifications."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010521,
+  "judge_latency_ms": 5511.183083988726,
+  "judge_prompt_tokens": 1842,
+  "judge_completion_tokens": 333
+}

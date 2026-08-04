@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0511",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, confidently identifying a clear blastocoel, ICM location, cohesive TE, and thinning zona consistent with 3AA, whereas the image itself is poorly defined and does not clearly support such precise morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, smoking, BMI, AMH, male factor, paternal age, endometrium, and first-cycle status with embryo prognosis reasonably well, though some inferences (e.g., likely PCOS phenotype, likely additional embryos) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking embryo grade and patient factors to prognosis; however, the implantation estimate relies heavily on morphology despite uncertain image interpretation and uses somewhat broad assumptions about smoking impact and aneuploidy risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, considering sperm DNA fragmentation in male factor), but calling 3AA 'the highest morphological score' is inaccurate, and recommending PGT-A based mainly on age 35/partner age 40 is stronger than standard guideline support for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including smoking cessation, proceeding with transfer, considering DFI testing, and cryopreservation, though some advice is somewhat generic and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013092,
+  "judge_latency_ms": 4904.995124990819,
+  "judge_prompt_tokens": 2584,
+  "judge_completion_tokens": 356
+}

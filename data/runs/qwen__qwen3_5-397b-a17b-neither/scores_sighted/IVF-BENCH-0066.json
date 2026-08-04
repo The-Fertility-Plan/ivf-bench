@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0066",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available and avoided fabricating specific morphology. It only made cautious inferences from Day 5 transfer status; the unsupported suggestion of typically >=3BB transfer eligibility prevents a perfect score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve, tubal factor, prior live birth, BMI, endometrium, smoking, and sperm motility into prognosis and transfer considerations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates generally matching the discussed factors. Minor issues include somewhat speculative numerical adjustments and assumptions about transfer eligibility and likely ICSI use."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including attention to age-related aneuploidy, smoking cessation, and consideration of sperm DNA fragmentation after failure. Slight downgrades for overstatement of PGT-A as highly recommended and suggesting aspirin despite limited routine guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for transfer, luteal support, smoking cessation, and future planning. However, some recommendations remain somewhat generic and the aspirin suggestion is not strongly actionable without more context."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013689,
+  "judge_latency_ms": 7213.031334002153,
+  "judge_prompt_tokens": 2888,
+  "judge_completion_tokens": 335
+}

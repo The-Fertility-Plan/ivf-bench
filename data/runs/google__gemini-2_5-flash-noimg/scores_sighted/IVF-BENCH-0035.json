@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and relies on the supplied Gardner 2AA grade rather than inventing image-specific details. However, it inaccurately interprets expansion 2 as a 'full blastocyst where the blastocoel completely fills the embryo'; in Gardner grading, stage 2 is an early blastocyst with blastocoel occupying more than half the embryo, not a full blastocyst. It also does not reconcile this with the actual image or day-4 context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: maternal age, ovarian response, FSH, male factor context, endometrial thickness, prior cycle history, and lifestyle. It correctly emphasizes age-related aneuploidy as the main limiter despite good morphology. Minor issues include overcalling FSH as confirming ovarian reserve and some overinterpretation of BMI/sedentary status."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is structured and mostly logical, but there are notable inconsistencies: it says age 37 is not yet advanced maternal age 'typically 38+' (not standard), misstates the Gardner expansion stage, and conflates implantation rate with live birth probability ('40-55%' then says this is realistic for live birth per transfer). The day-4/2AA discussion is also somewhat confused."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (single transfer proceeding, luteal support, counseling, consideration of PGT-A discussion at age 37), but there are deviations from standard grading definitions and some less guideline-grounded recommendations (routine embryo banking suggestion, overemphasis on AMH for prognosis in this immediate transfer, and nonstandard age threshold comments)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future planning, including proceeding with transfer, luteal support, counseling, and discussing PGT-A if needed. Recommendations are generally useful, though some are generic lifestyle advice and not highly tailored to this exact case."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.017475,
+  "judge_latency_ms": 6400.902332999976,
+  "judge_prompt_tokens": 3410,
+  "judge_completion_tokens": 483
+}

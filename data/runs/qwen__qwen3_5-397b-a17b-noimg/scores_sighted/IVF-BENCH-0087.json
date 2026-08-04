@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0087",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly inspect the image and based morphology on the provided Gardner 3AA grade. Its textual description is broadly consistent with the lab grade, but it repeats a likely overstatement ('fully expanded with thinning zona') and calls 3AA 'highest morphological score available,' which is not strictly correct; it does not verify image-visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, male-factor context, endometrial thickness, BMI, lifestyle, and prior cycle history with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from embryo grade and patient age to prognosis and recommendations. Minor issues include slight overinterpretation of morphology and somewhat speculative emphasis on low BMI/luteal insufficiency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, especially support for single embryo transfer in a young patient with a good-quality day-5 blastocyst. Small deviations include overstating the need for progesterone monitoring based on BMI and some speculative male-factor follow-up."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management and future planning, including SET, luteal support, nutrition review, cryopreservation, and possible sperm DNA fragmentation testing if unsuccessful. Some suggestions are useful but not all are strongly evidence-based for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.015045,
+  "judge_latency_ms": 5184.366834000684,
+  "judge_prompt_tokens": 3085,
+  "judge_completion_tokens": 386
+}

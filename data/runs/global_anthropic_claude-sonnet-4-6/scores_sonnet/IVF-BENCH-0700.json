@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the Gardner 3AB features (expansion, ICM compactness, TE looseness, zona thinning) and presents them in a structured table. However, it then adds several speculative morphological concerns (cytoplasmic fragmentation, asymmetric expansion, possible multinucleation, vacuolation, anisocytosis) that appear to be fabricated or over-interpreted beyond what a 3AB score would typically indicate, and without clear image-based justification. This pattern of adding unverified 'critical observations' reduces accuracy, though the base description is reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a strong job integrating multiple clinical factors: endometriosis effects on oocyte quality and endometrial receptivity, partner age and sperm DNA fragmentation risk, endometrial thickness as a critical concern, lifestyle factors (stress, former smoking, alcohol, exercise), and AMH/FSH in context of ovarian reserve. The interaction between endometriosis and endometrial receptivity is well-articulated. Minor gap: the maturation rate and blastulation context could be more deeply connected to the endometriosis diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured, with modifiers clearly listed and a baseline established. The recommendation to freeze-all follows coherently from the endometrial thickness concern. Minor inconsistency: the response labels the embryo as 'LOW-MODERATE quality' based on speculative image findings, yet the baseline probability uses 3AB as favorable — this tension is not fully resolved. Overall the reasoning chain is clear and conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: freeze-all for suboptimal endometrium, HRT FET protocol with P+5 timing for Day 5 blastocyst, ERA consideration, GnRH agonist pre-treatment for endometriosis, PGT-A discussion, and sperm DFI testing. The 7-8mm endometrial threshold cited is evidence-based. Sildenafil and G-CSF recommendations are mentioned as options, which is appropriate given their investigational but used status. Minor issue: some medication dosages given without full clinical context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, practical recommendations across multiple domains: a detailed freeze-all rationale with specific FET protocol (estradiol dosing, progesterone timing), endometriosis management options, sperm testing recommendations, PGT-A discussion with expected euploid rates, and prioritized lifestyle modifications. Alternatives are considered (if patient elects fresh transfer, specific adjuncts are listed). The summary dashboard effectively synthesizes key decision points for clinical use."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.022863,
+  "judge_latency_ms": 15871.801291999873,
+  "judge_prompt_tokens": 4161,
+  "judge_completion_tokens": 692
+}

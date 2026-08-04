@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0055",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states that no image was provided and bases morphology on the supplied Gardner 3AB grade rather than inventing image-specific findings. However, it repeats the prompt's inaccurate interpretation of stage 3 as 'expanded blastocyst with thinning zona' and gives no true image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, oocyte maturity, sperm quality, BMI, endometrial thickness, endometriosis, lifestyle, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to embryo grade and patient factors. Minor issue: the implantation estimate leans somewhat optimistic and partly rests on the stage-3/expanded wording."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, standard luteal support, and cautious use of further testing are broadly guideline-consistent. Small deductions for mentioning ERA and immune testing, which are not routine evidence-based first-line recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and contingency planning after failure, including SET, luteal support, and selective further workup. Slightly less strong because some suggested add-ons are optional/controversial rather than tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016002,
+  "judge_latency_ms": 4832.091457996285,
+  "judge_prompt_tokens": 3564,
+  "judge_completion_tokens": 354
+}

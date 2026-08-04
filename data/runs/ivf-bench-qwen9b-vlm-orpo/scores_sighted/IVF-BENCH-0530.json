@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a poorly expanded blastocyst with indistinct/absent ICM and sparse disorganized TE, consistent with 1DD. Minor issue: it says the blastocoel is not sharply defined and implies limited expansion, whereas the provided Gardner stage 1 already defines early blastocyst and the image interpretation of cavity extent is somewhat uncertain."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR/AMH, prior miscarriage, oocyte yield, sperm parameters, BMI, smoking history, and endometrium with embryo quality in a clinically sensible way. Could be stronger on distinguishing reserve from oocyte quality and on not over-attributing miscarriage risk beyond likely aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor morphology plus age-related aneuploidy risk drives low prognosis, while adequate endometrium prevents a zero estimate. Minor issue: implantation and clinical pregnancy ranges are slightly overlapping/inconsistently framed."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligns with Gardner grading interpretation and standard IVF counseling that DD embryos have low but nonzero potential and that endometrial thickness of 8 mm is acceptable. Slight deviation in overconfident statements about protocol suitability and prognostic precision without caveats."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical counseling and transfer framing, but the recommendations section is truncated and lacks fully developed next steps for luteal support, follow-up, or future cycle strategy such as PGT-A discussion, stimulation adjustments, or miscarriage workup thresholds."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.014049,
+  "judge_latency_ms": 5902.799791991129,
+  "judge_prompt_tokens": 2728,
+  "judge_completion_tokens": 391
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description noting ICM density, TE cohesiveness, and zona pellucida presence. However, the image shows a somewhat collapsed or degenerating blastocyst with significant granularity and debris that appears inconsistent with a true AA-grade embryo. The model acknowledges some granularity but largely defers to the reported Gardner score rather than critically analyzing the visible discrepancy between the image appearance and the reported 3AA grade. The blastocoel cavity appears poorly defined and the overall image quality suggests possible collapse or degeneration that the model underweights."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors including age-related aneuploidy risk, endometriosis impact on implantation and oocyte quality, AMH/FSH indicating ovarian reserve, semen parameters, endometrial thickness, BMI, lifestyle factors, and prior cycle failure. It correctly identifies endometriosis as the primary negative modifier and explains mechanistic interactions between each factor and expected outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% implantation follows logically from the identified risk and favorable factors. The model appropriately stratifies the range based on endometriosis severity and transfer type. Minor issue: the model notes a possible discrepancy between Gardner 3 vs 4 expansion stage but then proceeds without fully resolving this, and the morphological concerns visible in the image are not fully reconciled with the optimistic AA-grade assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE and ASRM guidelines: SET recommendation for good-quality blastocyst, appropriate luteal support emphasis, selective use of PGT-A at age 36, staged approach to investigation after failed cycles, consideration of freeze-all for endometriosis patients, and appropriate caution against premature immune/thrombophilia testing. The Gardner grading clarification (3 vs 4) reflects knowledge of the scoring system. Minor gap: no mention of endometrial receptivity array timing considerations per current ESHRE guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering the immediate transfer (SET, luteal support, activity restrictions, supplementation) and a detailed conditional plan if the transfer fails (endometriosis reassessment, cavity evaluation, fresh vs frozen strategy, selective PGT-A discussion, sperm DNA fragmentation testing criteria). Recommendations are appropriately nuanced with clear decision triggers and avoid over-investigation, making them practically useful for a clinician."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.021849,
+  "judge_latency_ms": 15590.33512500173,
+  "judge_prompt_tokens": 4003,
+  "judge_completion_tokens": 656
+}

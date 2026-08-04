@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0446",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Uses the provided 3AA grade appropriately and correctly identifies a visible ICM and zona, but overstates what can be confidently seen in this single cropped image, especially TE cohesion and precise expansion details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm parameters, endometrium, diagnosis, and lifestyle reasonably well, though it overinterprets some factors and does not fully address the lack of AMH or the limited prognostic value of morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: calling 3AA the highest grade, claiming it is statistically rare at 38, suggesting morphology lowers aneuploidy risk substantially, and giving an arguably inflated implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer is guideline-consistent, but recommending PGT-A on this existing transfer as if it could still be applied, stating euploid success approaches 90%+, and implying FSH 7.1 indicates DOR are not well aligned with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future planning, including SET and discussion of PGT-A/embryo banking, though some advice is not sufficiently nuanced for this exact cycle context."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012951,
+  "judge_latency_ms": 4965.279750002082,
+  "judge_prompt_tokens": 2542,
+  "judge_completion_tokens": 355
+}

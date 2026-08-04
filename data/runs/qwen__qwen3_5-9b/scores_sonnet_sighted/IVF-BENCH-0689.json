@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0689",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst stage, correctly describes the ICM as tightly packed at the 12 o'clock position, and notes the cohesive TE. The zona pellucida thinning and herniation are well described. Minor limitation: does not comment on the fluid-filled blastocoele cavity appearance or the degree of herniation visible in the image in more granular detail, but overall matches the Gardner 4AA description well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates age-related aneuploidy risk, BMI impact on endometrial receptivity, previous cycle failures, sperm parameters, and endometrial thickness. It frames the case well as 'high-quality embryo in a high-risk patient.' Minor gap: AMH listed as N/A is not addressed, and the tubal factor diagnosis and its implications for natural conception vs. IVF dependency are not discussed. FSH of 5.8 is favorable but not explicitly integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "There is a notable internal contradiction: the response recommends proceeding with fresh transfer rather than freezing for PGT-A, yet simultaneously states the embryo 'is likely aneuploid' — this is logically inconsistent and potentially misleading. The probability estimate of 45-60% is reasonable given the adjustments described, but the reasoning around the PGT-A recommendation is contradictory between the immediate and future planning sections."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM principles regarding luteal support, endometrial thickness thresholds, and PGT-A indications for advanced maternal age. However, the recommendation to avoid PGT-A for this cycle while stating the embryo is 'likely aneuploid' is not fully consistent with ASRM guidelines that recommend PGT-A for women ≥38 with recurrent pregnancy loss. The statement that cryosurvival risk justifies skipping PGT-A oversimplifies current vitrification success rates (>95% survival in most centers)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, ensure luteal support, lifestyle counseling, hysteroscopy if failure occurs, PGT-A for future cycles, smoking cessation. The response provides clear next steps for both immediate and future planning. Slight deduction for not specifying progesterone protocol details, not addressing ERA (endometrial receptivity array) given two prior failures, and not discussing single vs. double embryo transfer policy."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.018384,
+  "judge_latency_ms": 13155.768042008276,
+  "judge_prompt_tokens": 2863,
+  "judge_completion_tokens": 653
+}

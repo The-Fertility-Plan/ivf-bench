@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0690",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description that aligns well with the Gardner 3AA score, correctly identifying blastocoel expansion, zona thinning, compact ICM, and cohesive TE. Notably, the model self-corrects by pointing out that the description of 'expanded with zona thinning' technically corresponds to Grade 4 rather than Grade 3, showing good critical awareness. Minor deduction for not more precisely distinguishing Grade 3 vs 4 expansion from the image itself, and for some generic descriptors that may not be directly image-derived."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically connects maternal age, AMH, tubal factor diagnosis, sperm parameters, endometrial thickness, and lifestyle factors to embryo quality and prognosis. The tabular format clearly maps each factor to its prognostic impact. The insight about AMH reflecting quantitative rather than qualitative reserve depletion given the high-quality blastocyst outcome is particularly astute. The hydrosalpinx risk consideration for tubal factor patients is clinically important and appropriately flagged."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with a clear probabilistic framework combining morphology-based rates, age-adjusted aneuploidy estimates, and diagnosis-specific adjustments. The calculation (0.70 × 0.80 = 56%) is transparent and coherent. Minor inconsistency: the response is cut off before completing the final probability adjustment, and the initial probability range (55-65% implantation) is stated before the full reasoning chain is presented. The Gardner grade 3 vs 4 ambiguity is noted but not fully resolved."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response demonstrates solid knowledge of Gardner grading criteria, ESHRE/ASRM blastocyst assessment standards, and published implantation rate data. Appropriate reference to aneuploidy rates by age, hydrosalpinx embryotoxicity, and endometrial thickness thresholds aligns with current guidelines. The recommendation framework for tubal factor patients and antagonist protocol considerations are evidence-based. Minor deduction as the response is incomplete (cut off) and some cited statistics, while plausible, lack specific guideline citations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides useful probability estimates and risk stratification but is notably incomplete - it is cut off mid-sentence in Section 4 and Section 5 (recommendations for transfer and future cycle planning) appears to be entirely missing. While the existing content is clinically valuable, the absence of explicit transfer recommendations (e.g., single vs. double embryo transfer, luteal support protocol, hydrosalpinx workup recommendation) and future cycle planning significantly limits actionability. The hydrosalpinx concern is raised but not followed with a specific recommendation."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019086,
+  "judge_latency_ms": 13299.132542000734,
+  "judge_prompt_tokens": 2817,
+  "judge_completion_tokens": 709
+}

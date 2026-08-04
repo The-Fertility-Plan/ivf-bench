@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches the provided 3AA label and notes expansion/thinning zona, but the image itself is suboptimal and the response overstates confidence, localizes ICM/TE somewhat speculatively, and introduces vacuolization interpretation not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, endometriosis, prior failed cycle, sperm parameters, endometrial thickness, and lifestyle with embryo quality reasonably well, though some claims about ovarian response and euploidy correlation are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but there are notable issues: calling age 36 'prime/optimal,' labeling 3AA as the highest grade, and implying PGT-A would eliminate miscarriage risk are overstatements that weaken the logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several departures from guideline-consistent counseling: 3AA is not the highest possible blastocyst grade, morphology does not strongly predict euploidy, routine PGT-A is not 'highly recommended' solely for paternal age 40/endometriosis, and biopsy cannot be assumed appropriate around a transfer-ready embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next-step recommendations on proceeding with transfer, considering fresh vs FET context, lifestyle, and monitoring, but some advice is too generic and the PGT-A recommendation is not well tailored to evidence-based practice."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012885,
+  "judge_latency_ms": 5468.255917003262,
+  "judge_prompt_tokens": 2475,
+  "judge_completion_tokens": 364
+}

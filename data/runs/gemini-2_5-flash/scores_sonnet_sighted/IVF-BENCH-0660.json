@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0660",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocoel, thinning zona, visible ICM, cohesive TE). However, the image actually shows some concerning features not mentioned: the ICM appears somewhat irregular/fragmented with darker granular appearance, and there are visible irregularities in the TE that might warrant a lower grade than 3AA. The response largely echoes the provided Gardner score rather than independently analyzing the image, missing potentially discordant visual features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a thorough job integrating most clinical factors: AMH with ovarian reserve implications, age with aneuploidy risk, tubal factor diagnosis with IVF appropriateness, endometrial thickness, sperm parameters, and lifestyle factors. The interaction between previous biochemical pregnancy and current embryo quality is addressed. Minor gap: BMI of 28.2 is not discussed in relation to outcomes, and the natural cycle protocol's implications for luteal phase support are not fully explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate. The downward adjustment from baseline 50-65% to 40-55% due to alcohol consumption and prior failures is well-justified. The probability estimate is internally consistent with the risk/benefit analysis presented. Minor inconsistency: the response calls the embryo 'excellent' and 'top-tier' but then applies a relatively conservative probability adjustment, which could be better reconciled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: luteal phase support, PGT-A consideration for age 35 with recurrent failure, hysteroscopy for recurrent implantation failure, lifestyle modification emphasis. The PGT-A recommendation appropriately notes limitations including mosaicism concerns. Acupuncture recommendation is evidence-weak but acknowledged as supplementary. The response correctly identifies alcohol cessation as critical per reproductive medicine guidelines. No major guideline contradictions present."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and clinically useful: immediate alcohol cessation as non-negotiable, luteal phase support, stress management techniques named specifically, hysteroscopy/SIS for uterine evaluation, PGT-A with nuanced caveats, and stimulation protocol reconsideration. The tiered approach (current transfer vs. future planning) is practical. Could be more specific about progesterone supplementation protocols, timing of hysteroscopy, or specific immunological tests to consider, but overall provides clear actionable guidance."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022287,
+  "judge_latency_ms": 15143.428958996083,
+  "judge_prompt_tokens": 4159,
+  "judge_completion_tokens": 654
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the reported 3AA label, but it overstates certainty from the image alone: the ICM location/quality is not very clearly defined, TE cohesion is difficult to confirm throughout, and the statement about thinning specifically in the lower-left quadrant is somewhat overinterpreted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, AMH, BMI, tubal factor, endometrium, sperm parameters, and partner age with embryo quality in a clinically meaningful way, though it somewhat overemphasizes paternal age/SDF and links low AMH too directly to embryo aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally logical, with a plausible prognosis balancing strong morphology against age-related aneuploidy risk. Minor issues include some overconfident morphology claims and broad assumptions about low reserve and luteal insufficiency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recommending transfer of a good-quality day-5 blastocyst, but several points are less guideline-grounded: routine SDF testing based mainly on paternal age, implying low responders need stronger luteal support, and suggesting PGT-A in low-yield cycles without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for proceeding with transfer and future planning, including protocol reconsideration and counseling points. However, some suggestions are generic or speculative rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013725,
+  "judge_latency_ms": 6712.726208992535,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 387
+}

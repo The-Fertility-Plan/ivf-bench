@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0191",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but overstates non-viability and adds speculative features such as a large vacuole/cytoplasmic separation not clearly established from the image; also notes the stage-definition discrepancy appropriately."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, male factor, endometrial thickness, lifestyle, and cycle context with embryo prognosis well, though some inferences about fertilization failure/arrest and protocol inconsistency are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis estimate follows the embryo grade, but there are notable overreaches: calling the embryo definitively non-viable, inferring day-4 rescue transfer, and treating the expansion stage as clinically irrelevant despite uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and common IVF practice regarding poor prognosis, but recommendations such as routine PGT-A and donor egg discussion after a first cycle are somewhat stronger than guideline-based individualized counseling would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for counseling, transfer decision-making, sperm DNA fragmentation consideration, ICSI, and future stimulation planning, though some recommendations are more assertive than warranted for a first cycle."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013476,
+  "judge_latency_ms": 4972.900832988671,
+  "judge_prompt_tokens": 2777,
+  "judge_completion_tokens": 343
+}

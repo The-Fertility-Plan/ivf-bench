@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0211",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 2AB label and image, but it overstates TE cohesion and adds features not clearly assessable from the image alone (e.g., no dysmorphisms, normal ZP, high cellularity details)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, prior IVF outcomes, male factor, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some inferences are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with a plausible probability adjustment framework, but some deductions (e.g., implied blastulation efficiency, low AMH meaning compromised oocyte quality, ERA emphasis) are not fully supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core points such as eSET and considering further evaluation after repeated failures are reasonable, but several recommendations are not strongly guideline-based or are overstated (aggressive luteal support, aspirin/hCG/LMWH, ERA, calling PGT-A mandatory)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and future workup, including sperm DNA fragmentation testing and cavity assessment, though some suggested adjuncts are controversial and may reduce appropriateness."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014307,
+  "judge_latency_ms": 5827.555875002872,
+  "judge_prompt_tokens": 3044,
+  "judge_completion_tokens": 345
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but overstates some image-specific details such as clear vacuolization and says the blastocoel is less than 50% despite the provided grade indicating at least half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, BMI, sperm parameters, endometrium, and first-cycle status well with the poor embryo quality, though it overinterprets 6/6 MII as confirming oocyte quality and speculates beyond the available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking severe embryo dysmorphology to very low implantation potential; however, some conclusions such as 'non-viable' and lab failure implications are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing 1DD as extremely poor prognosis, but recommending not to transfer a poor-quality embryo and suggesting lab review or protocol changes from a single embryo outcome goes beyond standard guideline-based caution; Day 3 transfer and ICSI recommendations are somewhat speculative."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for counseling, transfer decision-making, and future workup, but some suggestions are not sufficiently nuanced for a first cycle with limited embryo-level data."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013269,
+  "judge_latency_ms": 5669.340833002934,
+  "judge_prompt_tokens": 2558,
+  "judge_completion_tokens": 373
+}

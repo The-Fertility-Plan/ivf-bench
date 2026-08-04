@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0131",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but inaccurately calls it clearly expanded and states the blastocoel is well-developed; a Gardner 1 blastocyst is early with blastocoel only at least half the embryo, and the image does not support a robust expanded appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior outcomes, endometrial thickness, BMI, ovarian reserve, and partner factors with embryo quality reasonably well, though some links are overstated and diagnosis/context are not deeply explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the low prognosis estimate follows from the poor morphology, but there are inconsistencies such as describing the embryo as expanded despite grade 1, and some causal claims (e.g., morphology strongly correlating with age-related aneuploidy, 'biological memory') are weakly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent in recognizing 1DD as poor prognosis and in counseling about low success, but there are deviations: misinterpretation of Gardner expansion stage, overstatement of PGT-A benefit as strongest recommendation, and suggesting hysteroscopy/FET without clear indication from the provided case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, expectation setting, consideration of PGT-A, uterine evaluation, sperm DNA fragmentation testing, and lifestyle optimization, though some recommendations are broader than strictly case-driven."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013986,
+  "judge_latency_ms": 5674.271500000032,
+  "judge_prompt_tokens": 2692,
+  "judge_completion_tokens": 394
+}

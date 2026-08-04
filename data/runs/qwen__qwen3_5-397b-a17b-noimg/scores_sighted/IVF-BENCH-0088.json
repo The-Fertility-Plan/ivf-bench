@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model explicitly stated no image was available and based morphology on the provided 3AA lab grade. Its description of expansion, ICM, and TE is consistent with Gardner 3AA and does not fabricate image-specific findings, though it overstates this as the 'highest potential' and says 'fully expanded' rather than simply expanded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, DOR/AMH, ovarian response, BMI, prior failed cycle, sperm motility, endometrial thickness, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a plausible probability adjustment from embryo quality to patient-specific prognosis. Minor issues include somewhat strong claims about morphology and the exact impact of obesity/alcohol without much nuance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: proceed with transfer, optimize lifestyle, consider PGT-A selectively, and reserve ERA for repeated failures. Slight deviations include stronger-than-guideline emphasis on ERA and dual-route luteal support without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for the current transfer and contingency planning for future cycles, including lifestyle modification, luteal support considerations, sperm DNA fragmentation testing if failure recurs, and nuanced discussion of PGT-A."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014862,
+  "judge_latency_ms": 4793.654458000674,
+  "judge_prompt_tokens": 3119,
+  "judge_completion_tokens": 367
+}

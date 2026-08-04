@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst with zona pellucida breach, the dense ICM cluster on the right side, and the cohesive TE along the periphery, consistent with the 4AA Gardner score. The description of the ICM as 'dark and densely packed' and TE as 'cohesive and continuous' matches the image well. Minor deduction for not noting the degree of herniation more precisely or commenting on blastocoel cavity characteristics visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating most clinical factors: age, sperm parameters, endometrial thickness, smoking, and the DOR diagnosis. The AMH/DOR discrepancy is thoughtfully flagged. However, the response somewhat misinterprets the AMH of 6.88 ng/mL as 'quite high' suggesting PCOS territory, when in context with 11 COCs retrieved and the DOR diagnosis, this may reflect a different clinical picture. BMI and lifestyle factors beyond smoking are underweighted. The first IVF cycle context is noted implicitly but not explicitly leveraged."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 60-75% follows logically from the base rate adjustment for smoking and DOR context. The reasoning chain from morphology to patient factors to probability is clear and consistent. Minor inconsistency in flagging AMH as 'very high/PCOS-like' while simultaneously accepting the DOR diagnosis without fully resolving the contradiction. The conclusion appropriately balances favorable and unfavorable factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: proceeding with fresh transfer of a top-grade blastocyst, luteal phase support, smoking cessation counseling, and PGT-A consideration for future cycles. The suggestion to consider PGT-A for a 34-year-old is reasonable though not universally mandated by guidelines at this age. The protocol adjustment advice for future cycles is sensible. No major guideline contradictions identified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, immediate smoking cessation, ensure luteal support, and plan for further workup if cycle fails. The future cycle planning section addresses protocol adjustment and PGT-A. Could be more actionable by specifying progesterone supplementation type/dose, recommending a smoking cessation program referral, or addressing whether ERA testing might be warranted given the DOR diagnosis. Overall provides clear next steps for the clinician."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018678,
+  "judge_latency_ms": 14748.74091600941,
+  "judge_prompt_tokens": 2986,
+  "judge_completion_tokens": 648
+}

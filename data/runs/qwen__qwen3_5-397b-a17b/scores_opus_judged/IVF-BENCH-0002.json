@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the embryo as appearing to be at a compacting morula/early blastocyst stage and appropriately flags the discrepancy between the Gardner score description and the numeric stage. It notes the ICM and TE grades from the lab data and attempts to correlate with visual appearance. However, describing it as a 'compacting morula transitioning into an early blastocyst' for a Day 4 transfer with a 2AB grade is reasonable but the image interpretation could be more precise. The mention of minor fragmentation/debris is a reasonable observation but not strongly substantiated. The grading discrepancy discussion is insightful and accurate regarding Gardner terminology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: age, AMH, ovarian response, tubal factor diagnosis, endometrial thickness, sperm parameters, and previous miscarriage history. The connection between tubal factor and IVF success is appropriate. The mention of AMH suggesting 'physiology similar to PCOS' is a stretch and slightly inaccurate—high AMH doesn't necessarily imply PCOS-like physiology. The alcohol consumption flag is clinically relevant. The Day 4 transfer timing discussion and embryo-uterine synchrony consideration show good integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-55% follows from the evidence presented with clear adjustments explained. The grading discrepancy discussion is logically sound. Minor issue: the -5% adjustments for each risk factor are somewhat arbitrary but the overall reasoning chain is coherent. The conclusion that the embryo is viable and transfer should proceed is well-supported. The slight contradiction between calling it a 'good quality embryo' while noting it's only Stage 2 is handled reasonably."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with established guidelines. Gardner grading criteria discussion is accurate. Recommendations for PGT-A given miscarriage history, progesterone luteal support, and blastocyst culture to Day 5/6 are all guideline-consistent. The alcohol cessation recommendation is appropriate. The freeze-all strategy discussion is evidence-based. The suggestion that Day 4 transfers have slightly lower success than Day 5 is generally supported by literature. Minor deviation: the PCOS comparison for high AMH is not standard guideline language."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure luteal support, cease alcohol, consider PGT-A for future cycles, culture to Day 5/6 in future, consider freeze-all strategy. The stress management suggestion with mindfulness/yoga is practical. The recommendations are well-organized into 'this transfer' and 'future planning' categories. Could be slightly more specific about progesterone dosing/route or specific PGT-A timing, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.032655,
+  "judge_latency_ms": 15819.916792039294,
+  "judge_prompt_tokens": 2896,
+  "judge_completion_tokens": 727
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0417",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes a discrepancy between the image and the stated 3AA label and reasonably questions whether the image is a blastocyst, but it overcalls the image as an MII oocyte and then relies on the provided grade rather than the visible morphology. It also incorrectly equates Gardner 3 with 'expanded' and describes idealized 3AA features not actually assessable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, sperm parameters, diagnosis, and endometrial thickness with embryo prognosis in a generally clinically meaningful way. Some points are overstated, but most relevant factors are connected to expected outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: calling FSH 6.4 'elevated,' saying this may be a 'last chance' cycle, misclassifying Gardner stage 3 as expanded, and giving a relatively high implantation estimate despite emphasizing image-data mismatch and thin endometrium."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from standard evidence-based framing: Gardner stage interpretation is incorrect, AMH is overstated as implying near-terminal fertility, and the statement that PGT-A requires 3-4 blastocysts to be 'statistically valid' is not guideline-based. Proceeding with transfer and noting thin lining concern are reasonable, but overall alignment is mixed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including counseling about thin endometrium, luteal support, and future-cycle considerations. Some suggestions are somewhat generic or not strongly evidence-based, but they are still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014928,
+  "judge_latency_ms": 6343.717583004036,
+  "judge_prompt_tokens": 2786,
+  "judge_completion_tokens": 438
+}

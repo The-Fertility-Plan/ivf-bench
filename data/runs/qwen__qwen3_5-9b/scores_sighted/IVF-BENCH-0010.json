@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates morphology by calling the embryo a full/high-quality blastocyst and saying the blastocoel occupies most of the embryo; the image looks more like an early/partially expanded blastocyst with a relatively small/irregular cavity and indistinct ICM. TE cohesion is not clearly A-grade from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometriosis, sperm parameters, endometrial thickness, and oocyte yield with prognosis reasonably well, though it overinterprets low oocyte number as poor responder status without AMH/AFC and does not address the inconsistency of a day-4 transfer with blastocyst grading."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable issues: it accepts the provided 2BA while describing it inconsistently, labels 5 oocytes as a significant concern/poor responder without enough reserve data, and gives a probability estimate that is only loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF principles, but there are deviations: calling expansion grade 2 'fully expanded' is incorrect by Gardner criteria, and the response does not acknowledge the unusual day-4 transfer/blastocyst grading mismatch. Prognostic statements about endometriosis and miscarriage are somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It provides risk/favorable factors and a probability range, but offers few concrete transfer or future-cycle recommendations. There is no specific management advice on luteal support, single embryo transfer, handling endometriosis, weight optimization, or stimulation adjustments."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012843,
+  "judge_latency_ms": 7437.272166993353,
+  "judge_prompt_tokens": 2261,
+  "judge_completion_tokens": 404
+}

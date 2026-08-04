@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the ICM as Grade B (loosely grouped) and TE as Grade A (cohesive epithelium), consistent with the Gardner 2BA score provided. However, the expansion grade description is inconsistent - it states 'Gardner expansion grade 2-3' when the data clearly indicates Grade 2 (full blastocyst). The claim about 'tight cell-cell junctions visible at the periphery' and specific zona pellucida observations may be fabricated details not clearly discernible from a standard embryo image. The Day 4 blastocyst observation is noted but the morphological description relies heavily on the provided Gardner score rather than independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response integrates maternal age (29), endometrial thickness (8.5mm), and sperm parameters reasonably well. However, it critically mishandles the diagnosis: the patient is labeled as 'Diminished Ovarian Reserve' yet has AMH of 6.46 ng/mL (which is actually above normal range for age 29, not DOR), and the response does not flag this contradiction. BMI of 35.5 (obese) is mentioned but its impact on implantation, endometrial receptivity, and pregnancy outcomes is not adequately explored. The Natural Cycle protocol with 11 COCs retrieved is also contradictory and not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There are significant logical inconsistencies. The response praises 'accelerated cleavage kinetics' for Day 4 blastocyst development without questioning whether this is truly early or simply reflects the transfer day labeling. The DOR diagnosis contradicts the AMH value of 6.46 ng/mL, and the response accepts both without reconciliation. The response is cut off mid-sentence, preventing evaluation of the probability estimate and full reasoning chain. The claim that Day 4 blastocysts show '15-20% higher implant[ation]' is stated without the sentence completing, undermining coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is mostly consistent with established criteria. The response correctly identifies TE quality as the strongest morphological predictor per current literature. However, the response does not address PGT-A considerations which ASRM/ESHRE guidelines would suggest discussing for blastocyst transfers, nor does it address the contradictory DOR diagnosis with normal AMH. The euploidy rate estimate of >70% for age 29 is reasonable per ASRM data. The response is incomplete, limiting full guideline alignment assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is cut off before completing recommendations for transfer and future cycle planning, which were explicitly requested. What is provided focuses on favorable factors without offering specific clinical actions such as luteal support protocols, PGT-A recommendations, endometrial preparation adjustments given BMI, or addressing the DOR diagnosis discrepancy. No specific implantation probability range is provided in the visible text. The incomplete response significantly limits its practical utility for a clinician."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.016317,
+  "judge_latency_ms": 14624.014000000898,
+  "judge_prompt_tokens": 1679,
+  "judge_completion_tokens": 752
+}

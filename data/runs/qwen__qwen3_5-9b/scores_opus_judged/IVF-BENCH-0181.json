@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0181",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological description consistent with the Gardner 3BA grading, including expansion, thinning zona pellucida, loosely grouped ICM (Grade B), and cohesive TE (Grade A). The descriptions align well with the provided grading data. Minor concern is that the model largely restates the provided Gardner score descriptors rather than independently identifying features from the image, but the descriptions are accurate and well-articulated."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of multiple clinical factors including maternal age, BMI, PCOS diagnosis, AMH, sperm parameters, and endometrial thickness. The model correctly identifies how each factor interacts with prognosis. One inaccuracy: the claim that PCOS is associated with higher risk of aneuploidy due to age conflates two separate risk factors. Also, the statement that high AMH 'often correlates with better egg quality than chronological age alone would predict' is somewhat misleading for PCOS patients where oocyte quality can be variable. The moderate alcohol consumption (4-6/wk) was not addressed, which is a notable omission."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 40-55% is reasoned through with boosters and dampeners. The model appropriately flags the Day 4 transfer discrepancy with a blastocyst-stage embryo. However, the statement that aneuploidy risk at age 39 is ~15-20% significantly underestimates the actual rate (typically 40-60% at age 39), which is a notable error in the reasoning chain. The conclusion that the embryo is 'top-tier' may be slightly overstated for a 3BA."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is correct and aligned with established criteria. The recommendation for PGT-A at age 39 is appropriate. However, the aneuploidy rate cited (~15-20%) is significantly below established figures for age 39. The Day 4 transfer flag is appropriate. The statement 'If the plan is strictly a Day 4 transfer, this embryo is too advanced and cannot be transferred' is incorrect—early blastocysts can be transferred on Day 4 in some protocols. The moderate alcohol intake (4-6 drinks/week) should have been flagged as a concern per ASRM guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides specific, practical recommendations including proceeding with transfer, clarifying transfer day, lifestyle optimization, PGT-A consideration, and metabolic management. The recommendations are well-tailored to this specific case. Could have been more specific about progesterone support, OHSS risk monitoring given PCOS, or specific dietary/exercise recommendations. The alcohol consumption should have been addressed with a specific recommendation to reduce intake."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.03152,
+  "judge_latency_ms": 16522.49133400619,
+  "judge_prompt_tokens": 2769,
+  "judge_completion_tokens": 707
+}

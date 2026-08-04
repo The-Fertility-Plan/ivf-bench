@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0718",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst stage, thinning zona pellucida, prominent ICM at the lower portion of the embryo, and cohesive TE layer. The description aligns well with the visible image features. Minor issue: describing the zona as thinning 'particularly on the left side' is a reasonable observation but slightly speculative given image resolution. Overall the morphological narrative is consistent with a 3AA Gardner grade and what is visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response meaningfully connects PCOS diagnosis with the atypically low AMH (1.23 ng/mL), flags the RIF history as the dominant prognostic concern, addresses BMI impact on endometrial receptivity, notes the adequate endometrial thickness as favorable, evaluates sperm parameters, and considers the biochemical pregnancy history as a clue toward aneuploidy or immunological issues. The interaction between factors is well-articulated rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is logically consistent throughout. The probability estimate of 30-45% is well-derived: starting from a baseline for a 3AA embryo at age 35, applying a downward adjustment for RIF history, and incorporating the aneuploidy probability with conditional estimates for euploid vs aneuploid scenarios. The biochemical pregnancy interpretation as a potential aneuploidy signal is clinically sound. No contradictions are present between the risk assessment and the final probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE RIF guidelines (2023) and ASRM standards: PGT-A for RIF with age-related aneuploidy risk, hysteroscopy, chronic endometritis workup (CD138), ERA testing, and sperm DNA fragmentation testing are all guideline-supported investigations for RIF. The mention of low-dose aspirin and heparin is appropriately caveated as having mixed evidence. Metformin/metabolic optimization for PCOS is evidence-based. Minor deduction: ERA recommendation is somewhat controversial in current literature with recent RCT data (e.g., STAR trial) questioning its utility, which could have been acknowledged."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and well-prioritized. The response clearly separates immediate transfer cycle management from future cycle planning, provides specific tests (CD138 biopsy, ERA, TUNEL/SCSA, HbA1c, fasting insulin), names specific interventions (metformin, low-dose aspirin, heparin), and explains the rationale for each recommendation in the context of this patient's history. The PGT-A recommendation is correctly identified as highest priority. Stress reduction suggestions, while less evidence-based, are appropriately framed as adjunctive."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020598,
+  "judge_latency_ms": 15298.002584007918,
+  "judge_prompt_tokens": 3266,
+  "judge_completion_tokens": 720
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0485",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst showing a visible cavity and identifiable ICM/TE, but it overstates image quality as 'high-quality' and calls expansion 'full' despite Gardner 2 being early blastocyst rather than full blastocyst; some features are inferred more confidently than visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, DOR, ovarian response, sperm parameters, endometrium, and prior cycle reasonably well with embryo quality, though it incorrectly implies low AMH from unavailable data and does not fully discuss prior failed cycle implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it labels 2AA as top-tier/'gold standard,' overestimates implantation rates, and suggests DOR itself raises aneuploidy risk independent of age, which weakens the reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from standard IVF guidance: misstates Gardner stage 2 as full blastocyst, gives overly optimistic implantation/euploid transfer rates, and recommends considering biopsy/PGT-A of a single embryo with discussion of biopsy loss risk in a way that is not well aligned with current evidence-based counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next-step suggestions such as proceeding with transfer and discussing future protocols, but recommendations are somewhat generic and include questionable advice (mild/natural stimulation, donor eggs early, PGT-A framing) without enough case-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013656,
+  "judge_latency_ms": 4818.760041991482,
+  "judge_prompt_tokens": 2692,
+  "judge_completion_tokens": 372
+}

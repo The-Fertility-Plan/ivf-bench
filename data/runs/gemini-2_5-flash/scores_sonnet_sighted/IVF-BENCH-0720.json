@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AB score (expansion, thinning zona, compact ICM, loose TE epithelium). However, the image is quite complex and shows what appears to be a partially hatching or degenerating blastocyst with irregular cell masses. The model's description is largely derived from the Gardner score label rather than independent image analysis, missing some visible morphological details like potential hatching or cytoplasmic irregularities visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age, AMH, FSH, oocyte yield, sperm parameters, endometrial thickness, tubal factor diagnosis, and previous miscarriage history. It correctly identifies how these factors interact with embryo quality and prognosis. Minor gap: BMI of 26.2 is mentioned in the profile but not discussed in the integration, and the lifestyle factors (former smoker, stress) are addressed but somewhat superficially."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-70% implantation probability estimate is reasonably supported by the cited factors. The response correctly identifies that previous miscarriage doesn't necessarily predict future failure if aneuploidy was the cause. The reasoning flows well from observations to conclusions. Minor issue: the probability range may be slightly optimistic given the 3AB grade (not 4AA/5AA) and miscarriage history, but the logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommending SET for a young patient with good quality blastocyst, appropriate luteal phase support mention, PGT-A consideration after miscarriage, hysteroscopy/ERA for recurrent failure workup, and cryopreservation recommendations. Gardner grading criteria are correctly applied. The recommendation for psychological support aligns with ESHRE guidelines. No major deviations from established guidelines detected."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with clear rationale, luteal phase support, patient counseling points, PGT-A for future cycles, uterine receptivity evaluation if failure occurs, lifestyle optimization, and cryopreservation. The response provides clear next steps for both current transfer and future planning. Could be slightly more specific about luteal phase support protocols or timing considerations, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.01998,
+  "judge_latency_ms": 13232.743707994814,
+  "judge_prompt_tokens": 3535,
+  "judge_completion_tokens": 625
+}

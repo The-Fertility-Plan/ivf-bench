@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no image or Gardner score was provided, despite explicit data showing a 3AA Day-5 blastocyst. It fails to describe the known morphology (expanded blastocyst, strong ICM and TE) and bases assessment on missing-data assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, AMH-response discordance, prior miscarriage, sperm parameters, endometrium, BMI, and lifestyle, and connects them to prognosis, though it misses how the actual 3AA grade should strengthen the assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but a major flaw is that conclusions are built on the false premise that embryo grading is unavailable. This weakens the probability estimate and creates inconsistency with the provided case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (proceed with transfer, avoid bed rest, consider RPL workup after recurrent loss), but recommending PGT-A and aspirin/thrombophilia considerations after a single miscarriage in a 27-year-old is more debatable and not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including luteal support, activity guidance, AMH follow-up, and contingency planning after another miscarriage. However, actionability is limited by failure to use the actual 3AA morphology in recommendations."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013899,
+  "judge_latency_ms": 4310.836249998829,
+  "judge_prompt_tokens": 2693,
+  "judge_completion_tokens": 388
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0039",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a morula/early blastocyst and states no clear blastocoel, ICM, or TE are visible, directly conflicting with the provided Gardner score of 3AB (expanded blastocyst with good ICM and fair TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, tubal factor, prior live birth, sperm quality, BMI, and endometrium, and relates them to prognosis, though this is built on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured and the probability estimate follows its own premises, but the core premise about embryo stage is incorrect, which weakens the overall logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General counseling and luteal support recommendations are reasonable, but the morphology interpretation is not aligned with Gardner grading provided in the case, and some suggestions such as PGT-A/freeze-all are presented somewhat broadly for a young good-prognosis patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, counseling, luteal support, pregnancy testing, and future cycle considerations, though some recommendations are less tailored because of the incorrect embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015135,
+  "judge_latency_ms": 3918.4033339988673,
+  "judge_prompt_tokens": 3305,
+  "judge_completion_tokens": 348
+}

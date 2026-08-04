@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst with visible cavity and peripheral TE, but likely overstates quality/expansion for the image and relies heavily on the provided 3AA label; ICM and TE are less clearly textbook AA on the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, prior IVF outcomes, ectopic history, sperm parameters, endometrium, and unexplained infertility into prognosis and management."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable prognosis range and sensible caveats; minor overinterpretation of morphology and BMI impact prevents a perfect score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice: SET, luteal support, early ectopic surveillance, and selective rather than routine PGT-A/add-ons. Small deviations include somewhat speculative emphasis on occult factors and BMI effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for current transfer and future planning, including SET, monitoring, uterine/tubal reassessment, selective male-factor workup, and avoiding unnecessary add-ons."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.015486,
+  "judge_latency_ms": 5101.304958996479,
+  "judge_prompt_tokens": 3567,
+  "judge_completion_tokens": 319
+}

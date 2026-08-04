@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it overstates certainty from the image: the blastocoel does not look clearly fully expanded, TE cells are not distinctly visualized as 'many cells forming a cohesive epithelium,' and the ICM is somewhat diffuse rather than unequivocally tightly packed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, smoking, AMH, sperm parameters, diagnosis, and endometrium with embryo quality reasonably well. However, it overinterprets the AMH/oocyte yield discrepancy and assumes only one embryo is available."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: calling this a 'perfect' embryo and suggesting >70% implantation is overstated, the low oocyte yield is used as a prognostic dampener for this transfer without clear justification, and some conclusions rely on assumptions not in the case."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several deviations from evidence-based IVF practice: recommends not delaying transfer with questionable rationale, implies smoking-related progesterone metabolism concerns without standard basis, suggests PGT-A partly for male factor in a 24-year-old, and proposes coasting/future protocol changes from limited data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical steps such as smoking cessation, proceeding with transfer, and considering future evaluation, but several recommendations are insufficiently nuanced or based on unsupported assumptions, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013542,
+  "judge_latency_ms": 6149.087165991659,
+  "judge_prompt_tokens": 2679,
+  "judge_completion_tokens": 367
+}

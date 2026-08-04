@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0312",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly identifies a blastocyst and notes a visible ICM-like cluster, but it misstates the expansion stage and overcalls image quality. Gardner 2 is an early blastocyst, not a full blastocyst, and the image does not clearly support a pristine cohesive AA TE/ICM assessment from morphology alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, BMI, prior biochemical pregnancy, sperm parameters, and endometrial thickness with embryo prognosis in a generally relevant way, though some interpretations are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable reasoning issues: conflating Gardner stage 2 with full blastocyst, treating Day 4 blastulation as strongly favorable without nuance, and deriving a relatively high implantation estimate from uncertain premises."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF conventions: Gardner 2AA is not a full blastocyst, Day 4 blastocyst transfer interpretation is not handled carefully, and suggestions such as aspirin/thrombophilia workup or PGT-A after a single biochemical pregnancy are not routinely guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next-step recommendations for transfer, luteal support, testing, lifestyle, and future cycle considerations, but some suggestions are insufficiently evidence-based or too assertive for this specific history."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.013521,
+  "judge_latency_ms": 5232.156082987785,
+  "judge_prompt_tokens": 2612,
+  "judge_completion_tokens": 379
+}

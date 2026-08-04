@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0713",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage, ICM compactness, TE cohesion, and zona thinning consistent with 3AA grading. Notably identifies granular debris and dark bodies visible in the image, and appropriately notes this places the embryo at the lower end of the AA spectrum. Minor limitation: the image is quite grainy and low-resolution, making precise ICM/TE boundary assessment difficult, yet the model describes features with reasonable confidence. The observation about scattered dark granular bodies is a genuine and clinically relevant morphological note that adds value."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical domains. The response creates a structured table linking each factor to its impact, identifies the key prognostic triad (age + embryo grade + prior live birth), flags the biochemical pregnancy as a specific concern requiring investigation, notes the suboptimal oocyte maturity rate (60% vs expected 75-80%), and connects endometrial thickness to potential receptivity concerns. The interaction between prior biochemical pregnancy and current transfer risk is well-articulated, and the sperm parameters are correctly contextualized as non-contributory to risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 55-65% is logically derived with a transparent component-based breakdown. The reasoning flows consistently from morphological assessment through clinical factors to final estimate. The distinction between euploid and aneuploid scenarios adds appropriate nuance. Minor issue: the base rate cited (~55-60% for 3AA) is somewhat optimistic compared to published literature (typically 45-55% for clinical pregnancy), and the additive probability adjustments, while intuitive, are not strictly statistically valid. The live birth rate adjustment (50-58%) is appropriately conservative relative to clinical pregnancy rate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: SET recommendation for high-quality blastocyst, standard luteal phase support protocols, appropriate β-hCG monitoring timeline, and evidence-based caution around endometrial scratching. Low-dose aspirin recommendation for prior biochemical pregnancy is reasonable though evidence is mixed. ERA suggestion is appropriate for potential receptivity investigation. PGT-A recommendation is correctly framed as not age-indicated but conditionally useful. The heparin recommendation is appropriately gated on thrombophilia workup. Minor deviation: dual trigger suggestion without more specific indication criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific drug names, doses, and timing (progesterone 200mg TID vaginal or 50mg IM daily, aspirin 75-81mg). Clear monitoring protocol with specific timepoints (β-hCG day 11-12, serial 48h, viability scan 6-7 weeks). Future cycle planning includes specific investigative workup (named thrombophilia panel, NK cells, ERA), protocol modification rationale (antagonist + dual trigger for maturity improvement), and endometrial optimization strategies. Each recommendation is contextualized to this specific patient's history rather than generic advice. Alternatives are presented where evidence is uncertain."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021948,
+  "judge_latency_ms": 17453.28558300389,
+  "judge_prompt_tokens": 3476,
+  "judge_completion_tokens": 768
+}

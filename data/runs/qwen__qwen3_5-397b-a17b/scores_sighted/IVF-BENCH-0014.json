@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality, minimally expanded embryo with absent/poor ICM and TE, but it overcalls specific visible features such as multiple large vacuoles, dark refractile degeneration, and perivitelline debris, and it inconsistently describes the embryo as compacted morula versus early blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, BMI, endometriosis, prior failed cycle, ovarian reserve, endometrial thickness, and paternal age, though some links to embryo morphology are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall conclusion of poor prognosis is logical, but there are notable issues: it cites a Day 4 transfer yet compares expected development to Day 5-style blastocyst expansion, and some causal claims about vacuolization and paternal age are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling about low prognosis and consideration of further evaluation is reasonable, but statements that endometriosis is strongly associated with higher aneuploidy, that PGT-A should be used, and that testicular sperm should be considered based on age/DFI concerns are stronger than guideline-supported evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for counseling, transfer selection, sperm DNA fragmentation testing, protocol considerations, and future cycle planning, though some recommendations are more assertive than the evidence base warrants."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013914,
+  "judge_latency_ms": 5286.52329101169,
+  "judge_prompt_tokens": 2708,
+  "judge_completion_tokens": 386
+}

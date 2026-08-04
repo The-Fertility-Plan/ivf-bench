@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "Major mismatch with the provided lab grading: the model calls the embryo a Day 4 compacting morula with no blastocoel and says Gardner scoring is not applicable, whereas the case explicitly identifies a 1DD blastocyst with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, oocyte yield, endometrial thickness, male factor, and stress with prognosis reasonably well, though some links are speculative and based on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but it is built on a fundamentally incorrect embryo-stage interpretation and includes unsupported inferences such as sperm DNA fragmentation and stress materially affecting implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It conflicts with Gardner grading by rejecting the supplied blastocyst score, overstates stress effects, and recommends ICSI and DNA fragmentation testing without sufficient case-specific indication; overall only partially aligned with evidence-based IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical suggestions for transfer support and future planning, but several recommendations are generic or insufficiently justified for this specific case, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012027,
+  "judge_latency_ms": 3768.1620419971296,
+  "judge_prompt_tokens": 2374,
+  "judge_completion_tokens": 327
+}

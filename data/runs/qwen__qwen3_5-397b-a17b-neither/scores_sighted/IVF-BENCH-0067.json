@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image/Gardner score was available to it and avoided fabricating embryo morphology. However, it did not analyze the visible blastocyst image, so morphology assessment is largely omitted rather than accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, ovarian response, prior miscarriage, endometrium, sperm parameters, diagnosis, and lifestyle into prognosis reasonably well, though some interactions with actual embryo morphology are necessarily limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a clear link from young age and good response to favorable prognosis. Minor issues include assuming average/good morphology because the embryo was selected and a somewhat broad probability rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceed with transfer, avoid bed rest, consider RPL workup after recurrent loss), but suggesting PGT-A for a 27-year-old with only one prior miscarriage and mentioning aspirin/thrombophilia testing without stronger indication are somewhat less guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including luteal support, activity advice, AMH follow-up, and contingency planning after another miscarriage. It is useful, though some recommendations are more generic than case-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013986,
+  "judge_latency_ms": 5977.851832998567,
+  "judge_prompt_tokens": 2942,
+  "judge_completion_tokens": 344
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 3AB by reclassifying the embryo as 4BB/4BC, downgrading the ICM from A to B and upgrading TE from B to B/C uncertainty; it also infers early hatching not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH/low oocyte yield, BMI, prior failed cycle, sperm data, and endometrial thickness with embryo prognosis reasonably well, though it somewhat overstates DOR and speculates about unprovided sperm defects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are inconsistencies between the morphology assessment and the supplied Gardner score, and the implantation estimate is framed partly with live birth language before switching to clinical pregnancy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many points are broadly evidence-based, but recommending embryo banking/freeze-all and strongly advising PGT-A after only one failed cycle and low-yield response is more assertive than guideline-based individualized practice; suggestions like walking for pelvic blood flow are weakly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support, considering protocol changes, discussing PGT-A, and male-factor workup, though some recommendations are somewhat generic or overly prescriptive."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012738,
+  "judge_latency_ms": 4562.640374999319,
+  "judge_prompt_tokens": 2426,
+  "judge_completion_tokens": 364
+}

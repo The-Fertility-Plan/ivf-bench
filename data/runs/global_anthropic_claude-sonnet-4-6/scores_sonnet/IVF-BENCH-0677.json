@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model identifies a discrepancy between the reported Gardner 2AA score and what it observes in the image (early/partial cavitation, loosely organized TE, indistinct ICM), which shows some image-based analysis. However, the description remains vague and uncertain, with hedged language throughout. The model cannot confidently describe specific morphological features and relies heavily on flagging inconsistencies rather than providing a precise morphological analysis. The zona pellucida observation is noted but superficial."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors. It connects AMH/FSH to ovarian reserve adequacy, BMI to oocyte quality and implantation, the ectopic history to tubal pathology risk, prior live birth as proof of implantation capacity, sperm parameters to fertilization potential, endometrial thickness to receptivity, and lifestyle factors to outcomes. The interaction between multiple factors and their combined effect on prognosis is well-articulated, with the ectopic history correctly identified as the dominant clinical variable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability adjustment framework is transparent and the tiered probability estimates (with/without workup, with PGT-A) follow coherently from the evidence. The identification of the Day 4/2AA discrepancy is clinically sound. Minor issue: the base rate of 45-55% for a Day 5 blastocyst is applied somewhat loosely given the Day 4 transfer context, and some adjustment magnitudes (e.g., -15 to -18% for no PGT-A) are presented with more precision than evidence supports, but overall the logic chain is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: salpingectomy before transfer in cases of hydrosalpinx, RIF workup after multiple failures, hysteroscopy recommendation, ERA consideration, PGT-A for recurrent failure, and Day 5 preference over Day 4 transfer. The thrombophilia panel, CD138 endometritis testing, and sperm DNA fragmentation recommendations align with current RIF guidelines. Minor deduction for recommending uNK biopsy which has less robust evidence base, and the CoQ10 600mg recommendation exceeds typical evidence-supported dosing ranges."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practically organized with clear priority levels. The response provides concrete next steps (bilateral salpingectomy confirmation, SIS/HSG, diagnostic hysteroscopy, CD138 biopsy, thrombophilia panel, sperm DFI), specific lifestyle targets (150 min/week exercise, BMI 25-27 target), specific supplement dosing, and a conditional transfer decision framework. The tiered probability estimates based on different workup scenarios give clinicians a clear decision-making framework. Psychological support referral is appropriately included."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.023004,
+  "judge_latency_ms": 18330.544124997687,
+  "judge_prompt_tokens": 3988,
+  "judge_completion_tokens": 736
+}

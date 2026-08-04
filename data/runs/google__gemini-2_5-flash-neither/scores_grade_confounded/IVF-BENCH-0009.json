@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states the Gardner score cannot be assessed, despite provided data of 1DD, and fails to analyze the known poor morphology (early blastocyst with absent/degenerative ICM and TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It discusses age, ovarian reserve, BMI, endometrium, male factor, and cycle history, but integrates them against an assumed good-quality embryo rather than the actual 1DD embryo, missing the key interaction that embryo quality is severely poor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is internally structured but based on a major false premise: it assumes a good-quality blastocyst and gives a high implantation estimate despite the actual 1DD grade and Day 4 transfer context."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some general IVF recommendations are reasonable, but the response misapplies Gardner grading, overestimates prognosis for a 1DD embryo, and includes weakly supported suggestions such as ERA and broad PGT-A use in this first-cycle 34-year-old patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps and future considerations, but recommendations are generic and not sufficiently tailored to the actual poor-grade 1DD embryo or the unusual Day 4/Gardner score discrepancy."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014064,
+  "judge_latency_ms": 4245.060834000469,
+  "judge_prompt_tokens": 2943,
+  "judge_completion_tokens": 349
+}

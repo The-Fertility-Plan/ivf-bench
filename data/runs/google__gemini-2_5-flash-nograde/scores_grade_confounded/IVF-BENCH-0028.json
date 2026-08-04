@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and does not describe the stated 3AA blastocyst features (expanded cavity, high-quality ICM, cohesive TE), making major morphology errors."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including young age, ovarian response, sperm parameters, endometrial thickness, first cycle status, and endometriosis, though it is built partly on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is weakened by the central contradiction between the provided Gardner 3AA score and the model's claim that this is not a blastocyst."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There is partial alignment on general IVF counseling and luteal support, but the morphology interpretation conflicts with Gardner grading, and suggestions like ERA/PGT-A are somewhat overextended for this first-cycle young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable for transfer counseling and contingency planning, although some future-testing suggestions are broader than necessary for this case."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013791,
+  "judge_latency_ms": 3550.650334000238,
+  "judge_prompt_tokens": 2972,
+  "judge_completion_tokens": 325
+}

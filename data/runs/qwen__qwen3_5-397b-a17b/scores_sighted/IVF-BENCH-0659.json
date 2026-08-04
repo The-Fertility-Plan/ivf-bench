@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it overstates certainty from the image: the blastocoel does not clearly occupy most of the embryo, the ICM is not distinctly obvious as a dense upper-left cluster, and TE cohesion/cell number are harder to confirm visually."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, smoking, endometrium, prior cycle history, and sperm data well with prognosis, though some inferences (e.g., euploidy rate, PCOS suspicion, 'gold standard') are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The logic is structured and mostly consistent, with a plausible probability adjustment based on favorable and unfavorable factors; minor issues include overconfident morphology interpretation and speculative assumptions about male factor and PCOS."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly in line with IVF practice: proceed with transfer if clinically appropriate, provide luteal support, counsel smoking cessation, and consider further male-factor workup after failure. Slight deviations include overcalling fresh transfer as definitively 'perfect' and implying embryo banking is clearly advantageous without discussing individualized goals."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including smoking cessation, weight optimization, luteal support, and possible sperm DNA fragmentation testing. Could be more nuanced about timing, counseling specifics, and contingency planning."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.013092,
+  "judge_latency_ms": 5159.900915998151,
+  "judge_prompt_tokens": 2574,
+  "judge_completion_tokens": 358
+}

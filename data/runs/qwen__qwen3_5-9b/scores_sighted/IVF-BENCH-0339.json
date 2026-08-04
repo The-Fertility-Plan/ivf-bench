@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0339",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates visible features by calling it hatching and describing distinctly grade-A TE/ICM from the image alone; the image appears more expanded than 'bulging' and morphology details are somewhat inferred from the lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, sperm parameters, endometrium, BMI, and prior IVF outcomes with embryo quality in a clinically meaningful way, though some claims are a bit overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure, but there are notable overreaches: euploidy is overstated, morphology is treated as near-guarantee of euploidy, and the implantation estimate is somewhat optimistic relative to the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with standard IVF principles, but contains deviations such as calling this the optimal stage for biopsy/transfer without nuance, overstating predictive value of morphology, and suggesting beta-hCG 14 days post-transfer rather than the more typical clinic-specific earlier window after day-5 transfer."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps on proceeding with transfer, luteal monitoring, optional PGT-A discussion, lifestyle continuation, and follow-up testing, though future cycle planning is somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013539,
+  "judge_latency_ms": 5008.159208999132,
+  "judge_prompt_tokens": 2678,
+  "judge_completion_tokens": 367
+}

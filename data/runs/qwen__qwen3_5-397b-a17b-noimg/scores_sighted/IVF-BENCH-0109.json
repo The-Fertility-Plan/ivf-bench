@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0109",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not directly review the image and based morphology on the reported 3AA grade. Its comments on expanded blastocyst, thinning zona, strong ICM and TE are broadly consistent with the lab grade, but it also asserted absent fragmentation/asymmetry/degeneration and called it 'top tier'/'morphologically perfect,' which are stronger claims than can be supported by the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age-related aneuploidy risk, endometriosis, AMH, oocyte yield, BMI, sperm parameters, endometrial thickness, and first-cycle status with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to embryo grade, age, and endometriosis. Minor issues include overstatement of Day 5 as 'gold standard' and somewhat confident claims about AMH interpretation and endometriosis effect size."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based: SET for a good-quality Day 5 blastocyst, standard luteal support, and discussion of PGT-A pros/cons are guideline-concordant. Some suggestions such as aspirin, routine chronic endometritis workup, exercise restriction, and embryo banking are more individualized and less universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and contingency planning for future cycles, including SET, progesterone timing, lifestyle advice, and evaluation pathways if implantation fails. It is useful, though a few recommendations are somewhat broad or speculative."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015177,
+  "judge_latency_ms": 5802.449957991485,
+  "judge_prompt_tokens": 2929,
+  "judge_completion_tokens": 426
+}

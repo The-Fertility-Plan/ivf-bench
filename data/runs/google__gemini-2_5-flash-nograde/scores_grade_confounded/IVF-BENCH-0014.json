@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0014",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 3/4 cleavage-stage embryo rather than addressing the provided Gardner 0DD early blastocyst grading, and it fabricates cleavage-stage features such as blastomere count, fragmentation, and compaction instead of analyzing ICM/TE/blastocoel morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian reserve, endometriosis, prior IVF failure, sperm parameters, and endometrial thickness, and connects them to prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but it is built on a major morphological misread of the embryo stage, making the implantation estimate and downstream conclusions poorly supported by the actual case data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly standard (counseling, luteal support, consideration of PGT-A/FET), but there are notable deviations and overstatements, including speculative morphology-based claims, routine laparoscopy suggestion, and adjunctive therapies with limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for counseling, transfer support, and future planning, but several recommendations are not sufficiently tailored to the actual 0DD early blastocyst context and include some low-evidence options."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.015288,
+  "judge_latency_ms": 4261.562291998416,
+  "judge_prompt_tokens": 3241,
+  "judge_completion_tokens": 371
+}

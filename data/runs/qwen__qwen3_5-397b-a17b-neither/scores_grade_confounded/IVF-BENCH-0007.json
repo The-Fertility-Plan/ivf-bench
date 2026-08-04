@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The case provided a Gardner score of 0DD, indicating an early blastocyst with absent/degenerative ICM and TE, but the response ignored this and instead discussed generic Day 4 morphology, even stating no specific Gardner score could be assigned."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, BMI, endometrium, ovarian response, male factor, and lifestyle reasonably well, though it fails to connect these to the very poor 0DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally organized, but it is built on a major omission: the known 0DD grade. This leads to overly optimistic conclusions and probability estimates inconsistent with the embryo data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly guideline-consistent, but the response misapplies Gardner grading by saying Day 4 is too early for ICM/TE grading despite the provided 0DD score, and it overstates prognosis for a degenerative-quality embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical suggestions on luteal support, SET, PGT-A, sperm DNA fragmentation testing, and future culture strategy, but these are insufficiently tailored to the poor-quality 0DD embryo and current transfer decision."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013287,
+  "judge_latency_ms": 3706.257290999929,
+  "judge_prompt_tokens": 2679,
+  "judge_completion_tokens": 350
+}

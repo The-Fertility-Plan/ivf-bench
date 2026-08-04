@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided and does not analyze the known 3AA morphology (expanded blastocyst with A-grade ICM and TE), so it fails the morphology task for the available data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian reserve, PCOS, smoking, prior ectopic, semen parameters, and endometrium, though it misses linking prognosis to the provided 3AA grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is undermined by the false premise that embryo grade is unknown, which weakens the probability estimate and morphology-dependent conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support adherence, smoking cessation, ectopic surveillance, and selective use of PGT-A are broadly guideline-consistent, with only minor limitations from not using the provided grade."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including SET, early hCG/ultrasound monitoring, smoking cessation, and tubal evaluation, though advice would be stronger if tailored to the known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013272,
+  "judge_latency_ms": 3856.646375003038,
+  "judge_prompt_tokens": 2739,
+  "judge_completion_tokens": 337
+}

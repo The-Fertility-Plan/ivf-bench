@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0466",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst with poorly defined ICM/TE and disorganized cells, but overstates certainty by calling it non-viable and adds details like severe degeneration not fully confirmable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, endometrium, prior biochemical pregnancies, oocyte yield, and sperm parameters reasonably well, though it overinterprets the embryo-quality mismatch and does not address missing AMH or limits of single-embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are notable logical leaps such as inferring systemic gamete incompetence and declaring the embryo non-viable solely from morphology without acknowledging uncertainty."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned with IVF practice, but stating DD embryos are typically for discard and that viable TE/ICM are absent is stronger than guideline-based morphology alone supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion offers limited practical next steps for transfer management or future cycle planning; recommendations are incomplete and not sufficiently specific."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.010308,
+  "judge_latency_ms": 5792.934083001455,
+  "judge_prompt_tokens": 1806,
+  "judge_completion_tokens": 326
+}

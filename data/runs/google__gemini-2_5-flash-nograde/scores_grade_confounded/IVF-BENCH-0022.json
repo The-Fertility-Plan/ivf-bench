@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good Day 4 morula and dismisses the provided Gardner 1DD blastocyst grade, fabricating favorable compaction/minimal fragmentation rather than describing a very poor-quality early blastocyst with absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, ovarian reserve, prior live birth, sperm, diagnosis, and endometrium, though the integration is undermined by the incorrect embryo-quality assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise that the embryo is good quality; therefore the high implantation estimate is not supported by the actual 1DD grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It conflicts with Gardner grading usage by claiming the score is not applicable despite a provided blastocyst grade, and it overstates prognosis for a 1DD embryo; SET is reasonable, but overall alignment is weakened by misinterpretation of embryo stage/quality."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Recommendations are practical but generic—proceed/SET/luteal support/counseling/future monitoring—without nuanced discussion of the poor embryo grade, limited prognosis, or alternatives if no better embryos exist."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.013074,
+  "judge_latency_ms": 3977.685042002122,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 356
+}

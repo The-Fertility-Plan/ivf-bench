@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0719",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the ICM position, density, and cohesion, and correctly notes the thinning zona pellucida and expanded blastocoel consistent with Stage 3. TE description as cohesive and multi-cellular is appropriate. Minor issue: the image appears somewhat blurry/out of focus in parts making precise TE cell counting difficult, yet the model confidently describes uniform TE distribution without acknowledging image quality limitations. Overall concordance with Gardner 3AA is well-supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all relevant clinical dimensions. The response systematically connects maternal age 38 to aneuploidy risk, AMH 0.59 to limited future opportunities, FSH 9.5 to DOR concordance, endometrial thickness to receptivity, and lifestyle factors to implantation support. The table format clearly maps each factor to its clinical impact. The interaction between high morphological grade and unknown ploidy status at age 38 is well-articulated, and the tension between embryo quality and patient prognosis is appropriately nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probabilistic reasoning framework is transparent and mathematically coherent — the weighted average calculation (0.45 × 62% + 0.55 × 7% ≈ 32%) is explicitly shown and logically sound. The final estimate of 35-45% is slightly higher than the calculated ~32%, with the gap attributed to favorable modifiers, which is reasonable but could be more explicitly justified. The distinction between implantation probability, clinical pregnancy rate, and live birth rate is appropriately maintained. Minor inconsistency in the euploidy rate assumption (45%) which is slightly optimistic for age 38."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: SET recommendation for high-quality blastocyst, standard luteal support, Day 5 transfer timing, and PGT-A discussion for age 38 with DOR. The suggestion to switch from Long Agonist to Antagonist protocol for DOR aligns with current evidence. DHEA/CoQ10 recommendations are evidence-limited but acknowledged as such. Growth hormone adjunct mention is appropriate for poor responders per some guidelines. Low-dose aspirin recommendation lacks strong guideline support for routine use and could be flagged as adjunct-only."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable across both immediate transfer management and future cycle planning. Specific recommendations include SET rationale, luteal phase support details, monitoring timelines (βhCG, 6-7 week scan), and a comprehensive future planning table with rationale for each intervention. Protocol switch recommendation is specific (antagonist vs long agonist). Donor oocyte counseling trigger is defined (2-3 failed cycles). Embryo banking strategy is outlined. The urgency framing around declining AMH adds important time-sensitivity context. Recommendations are appropriately individualized rather than generic."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.021357,
+  "judge_latency_ms": 16742.328333013575,
+  "judge_prompt_tokens": 3399,
+  "judge_completion_tokens": 744
+}

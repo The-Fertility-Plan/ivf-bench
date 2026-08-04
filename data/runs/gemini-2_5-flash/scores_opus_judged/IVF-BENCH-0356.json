@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0356",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the expansion stage as consistent with Grade 4 (hatching blastocyst). However, it challenges the AA grading by describing vacuolation, granularity, and irregular TE. Without being able to independently verify the image, the model's willingness to critically assess the reported grade against visual findings shows analytical rigor, though some of the described features (e.g., 'highly vacuolated' ICM, 'patchy' TE) may be overstated or misinterpreted. The description is detailed but potentially inaccurate in downgrading what was graded as AA by the embryology lab."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model systematically addresses age, AMH/FSH indicating DOR, BMI impact on oocyte quality and implantation, tubal factor diagnosis, ectopic history, sperm parameters, endometrial thickness, and lifestyle factors. It clearly connects how each factor interacts with embryo quality and implantation potential, and provides a coherent summary of how these factors collectively influence prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The model builds a coherent argument from morphological assessment through clinical integration to probability estimation. The probability estimate of 20-30% follows logically from the presented evidence, though the significant downgrading from the lab's AA grade introduces some tension. The reasoning chain is clear: visual concerns + patient risk factors = lower probability than a textbook 4AA would suggest. Minor issue: the model's confidence in overriding the lab's grading could be seen as somewhat presumptuous without stronger justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with established guidelines. Gardner grading criteria are correctly described. PGT-A recommendation for recurrent implantation failure is appropriate per ASRM/ESHRE guidelines. SET recommendation is appropriate given the history. Luteal phase support emphasis is standard. The mention of intralipid infusions and corticosteroids is appropriately hedged as not universally accepted. The response was cut off before completing the PGT-A recommendation section, which is a minor limitation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET recommendation with clear rationale, robust luteal phase support, honest patient counseling about morphological concerns, and PGT-A for future cycles. The response provides clear next steps for both the current transfer and future planning. However, the response was truncated before completing all future cycle recommendations, and some recommendations (e.g., adjunctive therapies) could be more specific. Weight management counseling for BMI optimization was not explicitly mentioned."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.03383,
+  "judge_latency_ms": 24490.133459039498,
+  "judge_prompt_tokens": 3411,
+  "judge_completion_tokens": 671
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0042",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality, developmentally delayed embryo with absent/poorly defined ICM and TE, broadly consistent with the provided 0DD/early blastocyst context. However, it regrades the embryo as 1CC or morula rather than aligning with the stated 0DD and adds image-specific details that may be uncertain."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS, AMH, BMI, prior failed cycle, sperm quality, and endometrial thickness well, and links these factors to embryo competence and prognosis. Some inferences, such as trigger timing issues, are plausible but somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical: poor embryo morphology is treated as the dominant negative factor, moderated by young age and favorable uterine/sperm factors. The implantation estimate is consistent with the narrative, though some causal claims about protocol effects are not fully supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is largely consistent with Gardner grading principles and common IVF practice, including counseling on poor prognosis and considering antagonist/dual-trigger strategies in PCOS. Minor deviations include overinterpreting protocol causality and suggesting luteal defects in PCOS somewhat broadly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear recommendations for proceeding with transfer if this is the only embryo, expectation setting, luteal support, and future-cycle optimization with protocol and lifestyle changes. Recommendations are practical, though some are generalized rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.01308,
+  "judge_latency_ms": 4912.84341699793,
+  "judge_prompt_tokens": 2460,
+  "judge_completion_tokens": 380
+}

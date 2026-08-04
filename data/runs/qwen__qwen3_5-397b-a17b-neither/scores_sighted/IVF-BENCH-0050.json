@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0050",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not assign a definite grade. However, it speculated about likely expansion and ICM/TE quality from patient factors, which is not image-based morphology. Because it avoided concrete false visual claims, this is better than inaccurate description but not a true morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian response, tubal factor diagnosis, endometrial thickness, sperm parameters, BMI, and cycle context into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with a plausible prognosis estimate tied to age and cycle factors. Minor weakness: it infers likely embryo morphology from demographics and response, which is not strictly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as elective single embryo transfer in a very young patient, luteal support, and not routinely recommending PGT-A in a first cycle at age 24 are broadly guideline-consistent. Minor overreach includes speculative hydrosalpinx emphasis without confirming its presence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including eSET, luteal support, hydrosalpinx consideration, cryopreservation, and PGT-A counseling. It is useful, though some advice is somewhat generic due to lack of actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014199,
+  "judge_latency_ms": 4736.391708996962,
+  "judge_prompt_tokens": 2873,
+  "judge_completion_tokens": 372
+}

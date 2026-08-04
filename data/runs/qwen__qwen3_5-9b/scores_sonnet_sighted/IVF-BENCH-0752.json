@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0752",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage (Grade 3), describes the ICM as large and tightly packed on the left side, and notes the TE as forming a loose epithelium on the right. The zona pellucida thinning is correctly noted. The description aligns well with the Gardner 3AB score and visible image features. Minor limitation: the blastocoel cavity description could be more precise regarding the fluid accumulation pattern visible in the image, and the TE cell count assessment is somewhat generic rather than image-specific."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating most clinical factors: age, AMH, FSH, BMI, sperm parameters, endometrial thickness, and lifestyle are all connected to prognosis. The notable discrepancy between high AMH (4.72) and low oocyte yield (4 COCs) is correctly flagged as clinically significant. The tubal factor diagnosis is acknowledged implicitly through the IVF indication. Minor gap: the response doesn't explicitly address how tubal factor specifically affects implantation risk versus other diagnoses, and doesn't discuss the first-cycle status as a favorable prognostic factor in more depth."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to patient factors to probability estimate. The 50-60% range is reasonably supported by the Grade A ICM and patient age. The identification of the AMH-yield discrepancy as a key concern is coherent. Minor inconsistency: the response suggests both fresh transfer and discusses freezing considerations somewhat ambiguously, and the probability estimate could be more explicitly tied to published literature benchmarks for 3AB blastocysts in this age group."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with Gardner grading criteria and ESHRE/ASRM guidelines on blastocyst assessment. Recommendations regarding endometrial thickness thresholds (7-14mm), Day 5 transfer timing, and vitrification efficiency are consistent with current guidelines. The suggestion to consider protocol change (antagonist vs. long agonist) for poor responders is guideline-consistent. Minor deviation: the recommendation to consider PGT-A is appropriately caveated but could more explicitly reference ASRM guidance on PGT-A utility in young patients with single embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer given embryo quality and endometrial readiness, investigate the AMH-yield discrepancy, consider protocol change to antagonist, and address counseling needs. The response provides clear next steps for both this cycle and future planning. Some nuance around the fresh vs. frozen transfer decision could be stronger (e.g., no OHSS risk here given low yield, making fresh transfer straightforward), and the protocol change recommendation could specify gonadotropin dose ranges more concretely."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.019608,
+  "judge_latency_ms": 15633.244124997873,
+  "judge_prompt_tokens": 2971,
+  "judge_completion_tokens": 713
+}

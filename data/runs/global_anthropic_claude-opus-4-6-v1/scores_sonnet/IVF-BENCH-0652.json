@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological analysis consistent with the Gardner 2BA grading provided. It accurately describes the blastocoel cavity, ICM as loosely grouped with visible intercellular spaces, and TE as cohesive and multi-cellular. The description of ZP thickness, granularity observations, and the note about a small structure in the lower right field show attention to image detail. Minor deduction because some descriptions appear to be inferred from the Gardner score rather than independently observed from the image, and the claim about TE grade being 'A' conflicts with the provided Gardner score of 2BA where TE is listed as 'A' but the description says 'many cells forming a cohesive epithelium' which the model correctly identifies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Exceptional integration of all clinical factors. The model correctly identifies the contradiction between the DOR diagnosis and the AMH/FSH values, flags the implausibility of 11 COCs from a natural cycle, notes the unusual Day 4 blastocyst transfer timing, and systematically connects BMI 35.5 to implantation rates, miscarriage risk, endometrial receptivity, and obstetric outcomes. Sperm parameters, endometrial thickness, age, lifestyle factors, and prior cycle history are all meaningfully connected to prognosis rather than merely listed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly structured and internally consistent. The probability estimate is derived transparently through a stepwise adjustment from a documented baseline, with each factor's contribution explicitly quantified. The model correctly identifies data inconsistencies before proceeding, which strengthens rather than undermines the analysis. Conclusions about prognosis, recommendations, and cumulative live birth rate all follow logically from the evidence presented. The distinction between implantation probability, clinical pregnancy rate, and live birth rate is appropriately maintained."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: appropriate Gardner grading interpretation, evidence-based BMI impact quantification, correct luteal phase support recommendations, appropriate PGT-A discussion for age 29, ERA recommendation for recurrent failure, and freeze-all strategy consideration. The recommendation for higher folic acid dose with obesity is evidence-based. Minor deductions: the suggestion of GLP-1 agonists (semaglutide) pre-cycle, while emerging, lacks strong guideline endorsement in reproductive medicine contexts, and the progesterone threshold cited (>10-15 ng/mL) is somewhat variable across guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practically structured. The current cycle section includes specific progesterone dosing (200mg TID), monitoring timelines (β-hCG at 10-12 days, serial every 48h, ultrasound at 6-7 weeks), and lifestyle specifics. Future planning includes quantified weight loss targets, specific gonadotropin dose ranges (225-300 IU), protocol type (GnRH antagonist), culture day recommendations, and a clear decision framework tree. The prioritized summary framework makes clinical decision-making straightforward. Alternatives are considered throughout."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.028575,
+  "judge_latency_ms": 17335.757834000106,
+  "judge_prompt_tokens": 5645,
+  "judge_completion_tokens": 776
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0410",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It overstates the image as 'perfectly' matching 2BC and incorrectly calls grade 2 'fully expanded' with a thin, taut zona; grade 2 is an early blastocyst with blastocoel filling the embryo, and the image does not clearly support a thin zona or robustly defined ICM/TE details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates female age, ovarian reserve, PCOS, prior reproductive history, sperm parameters, partner age, and endometrial thickness with embryo quality reasonably well, though some links (especially paternal age effects) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains notable issues: it labels age 36 as 'prime reproductive age,' calls 2BC a 'good' blastocyst with relatively high implantation potential, and the probability estimate appears optimistic relative to the embryo grade and stated risks."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are several deviations from standard IVF guidance: misinterpretation of Gardner expansion stage 2, overstatement of paternal-age impact on embryo euploidy, and recommending ICSI specifically to mitigate DNA fragmentation is not guideline-based; PGT-A recommendation is also stronger than evidence clearly supports for this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, lifestyle modification, early pregnancy surveillance, and future-cycle considerations, though some recommendations are too generic or not sufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013671,
+  "judge_latency_ms": 6068.912499991711,
+  "judge_prompt_tokens": 2607,
+  "judge_completion_tokens": 390
+}

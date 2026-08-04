@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no usable morphology/lab grade was provided and treats the Gardner score as inapplicable, despite explicit data showing 0DD early blastocyst with absent/degenerative ICM and TE. It fails to analyze the provided embryo morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, AMH/FSH, sperm parameters, endometrium, smoking, and protocol reasonably well, though it misses linking prognosis to the explicitly very poor 0DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but a major premise is flawed: it ignores the provided 0DD morphology and builds prognosis around morphology being unknown, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (single embryo transfer at age 30, smoking cessation, no routine PGT-A), but the dismissal of the provided Gardner score and Day-4 early blastocyst grading is not well aligned with embryology practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer support, smoking cessation, OHSS monitoring, documentation review, and future cycle planning. However, recommendations are less tailored than they should be because the poor 0DD grade was not incorporated."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.014907,
+  "judge_latency_ms": 4538.6771250050515,
+  "judge_prompt_tokens": 3194,
+  "judge_completion_tokens": 355
+}

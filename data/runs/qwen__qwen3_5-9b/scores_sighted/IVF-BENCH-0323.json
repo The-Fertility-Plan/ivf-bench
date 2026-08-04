@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0323",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image-based certainty: the blastocoel, distinct ICM, and cohesive TE are not clearly visualized in this image, yet it describes them as obvious and calls the embryo 'top-tier.' It largely repeats the provided Gardner grade rather than cautiously interpreting the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve markers, uterine factor, prior biochemical pregnancy, sperm data, and endometrial thickness with embryo quality reasonably well, though it somewhat overcalls DOR and does not fully nuance the uterine-factor implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly structured, but there are notable issues: calling 6 MII oocytes 'very low,' implying morphology strongly predicts euploidy, and presenting inconsistent transfer/freeze logic. Probability framing is somewhat mixed between implantation, clinical pregnancy, and live birth."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent (importance of uterine cavity assessment, morphology relevance), but several recommendations are not: suggesting PGT-A after the fact in this transfer context, stating transfer is 'mandatory' if euploid, and especially saying the embryo should be vitrified if this transfer is unsuccessful, which is impossible."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical steps such as proceeding with transfer and confirming uterine cavity evaluation, but future-planning advice is partly generic and includes incorrect or poorly framed actions, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013878,
+  "judge_latency_ms": 6048.065708004287,
+  "judge_prompt_tokens": 2671,
+  "judge_completion_tokens": 391
+}

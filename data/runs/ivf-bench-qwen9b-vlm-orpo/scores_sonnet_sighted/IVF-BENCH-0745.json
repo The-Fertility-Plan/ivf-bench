@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0745",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies an expanded blastocyst with a visible blastocoel and describes the ICM as cohesive and prominent. However, the image actually shows a somewhat irregular, granular embryo with what appears to be a partially collapsed or irregular blastocoel and heterogeneous cytoplasm. The description of 'no major adverse features' and 'no obvious collapse' somewhat contradicts the visible granularity and irregular appearance in the image. The TE description as 'B-level' is reasonable but the response misses some visible morphological concerns like cytoplasmic irregularity and the somewhat fragmented-appearing cellular architecture visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does an excellent job integrating most clinical factors: age 37 and its impact on euploidy rates, the modest oocyte yield (4 COCs/MII), sperm motility concerns, endometrial thickness of 11mm as favorable, BMI, tubal factor diagnosis implications including hydrosalpinx risk, and lifestyle factors. The interaction between age and embryo competence is well-articulated. Minor gap: AMH is N/A and this limitation is not explicitly discussed as a data gap affecting prognosis assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through clinical factors to probability estimate. The 25-40% range is well-justified with clear upper and lower bound reasoning tied to specific factors (ploidy, TE quality, hydrosalpinx). The conclusion aligns with the evidence presented. Minor inconsistency: the response initially describes the embryo as 'good quality' but the image shows more concerning features than acknowledged, creating slight tension between the morphological assessment and the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation, luteal support, hydrosalpinx management before transfer, PGT-A discussion with appropriate caveats about small cohort limitations, sperm optimization suggestions, and uterine cavity assessment. The Gardner grading framework is correctly applied. The nuanced PGT-A discussion (benefits vs. limitations with small cohort) reflects current evidence-based thinking. No recommendations contradict established guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with SET, confirm hydrosalpinx status, consider embryo banking given age and modest response, discuss PGT-A with appropriate caveats, male factor optimization steps, protocol refinement suggestions for future cycles, and endometrial pathology screening. Recommendations are well-organized and clinician-friendly. Could be slightly more specific about hydrosalpinx management protocols or specific luteal support regimens, but overall highly practical."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.022251,
+  "judge_latency_ms": 17040.723083002376,
+  "judge_prompt_tokens": 3967,
+  "judge_completion_tokens": 690
+}

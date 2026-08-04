@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0373",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image findings: the blastocoel is not clearly seen filling the embryo, the ICM is not distinctly identifiable at the stated location, and TE cell borders/cohesive epithelium are not well resolved in this image. It relies heavily on the provided 3AA label rather than visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior biochemical pregnancies, prior live birth, ovarian reserve, sperm parameters, and endometrial thickness with embryo quality reasonably well, though some links (especially paternal age/SDF as a major driver) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: calling 3AA the 'highest' grade is imprecise, implantation/live birth estimates may be optimistic for age 36 with repeated biochemical losses, and causal attribution to paternal age/DNA fragmentation is stronger than the evidence provided."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much is broadly consistent with IVF practice, but recommending aspirin and enhanced luteal support without a defined indication, and suggesting immune/NK-cell workup, are not strongly guideline-based. PGT-A after recurrent biochemical losses is plausible but should be framed more cautiously."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer and future planning, including proceeding with transfer and considering PGT-A/SDF testing. However, some recommendations are insufficiently nuanced and include interventions not routinely recommended."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.01338,
+  "judge_latency_ms": 5583.36099999724,
+  "judge_prompt_tokens": 2615,
+  "judge_completion_tokens": 369
+}

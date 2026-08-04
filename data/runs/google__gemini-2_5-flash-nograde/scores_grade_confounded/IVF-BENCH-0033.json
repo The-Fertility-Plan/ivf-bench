@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the embryo as a Day 4 morula/early blastocyst and states ICM/TE are not discernible, despite the provided lab grade being 2BB full blastocyst with assessable ICM and TE. It adds plausible but uncertain image details, so morphology is only partially accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, male factor, endometrium, smoking, and first-cycle status, and relates them to prognosis. Some interactions are overstated or not fully nuanced, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by the incorrect morphological premise and by a somewhat speculative quantitative penalty attributed to smoking. Probability estimates follow the narrative but are not tightly evidence-grounded."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Smoking cessation counseling, luteal support, and general prognosis discussion are guideline-consistent. However, the morphology interpretation conflicts with Gardner grading provided, Day 4 transfer discussion is somewhat simplistic, and suggesting PGT-A in a 29-year-old first-cycle male-factor case is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, especially around smoking cessation, embryo selection, luteal support, and considering extended culture. Recommendations are useful, though some are generic and not highly tailored."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014967,
+  "judge_latency_ms": 4470.2284170052735,
+  "judge_prompt_tokens": 3054,
+  "judge_completion_tokens": 387
+}

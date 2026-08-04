@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinning zona pellucida, compact tightly-packed ICM at a specific clock position, and cohesive multi-cellular TE epithelium. Mentions cytoplasmic granularity, absence of degeneration and fragmentation. Minor limitation is that some descriptive details (e.g., ICM at '1-2 o'clock position') may be fabricated specifics not verifiable without seeing the actual image, and the description largely mirrors the provided Gardner score data rather than adding independent morphological observations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response connects AMH/age to aneuploidy risk, tubal factor diagnosis to endometrial environment prognosis, BMI to implantation and obstetric risk, alcohol consumption to endometrial receptivity, paternal age to sperm DNA fragmentation, endometrial thickness to receptivity, and FSH to ovarian function. The tension between morphological excellence and age-related aneuploidy is explicitly and correctly identified as the central clinical challenge."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and internally consistent. The probability estimate is derived through an explicit mathematical framework (euploid probability × implantation if euploid + aneuploid probability × implantation if aneuploid), yielding ~32.5% which is then adjusted to 35-45% with clear justification. Live birth rate is further adjusted downward from clinical pregnancy rate with sound reasoning. All conclusions flow logically from the evidence presented, and no contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ESHRE and ASRM guidelines: eSET recommendation for high-quality blastocyst, PGT-A recommendation for age 38 with DOR, luteal phase support following antagonist protocol, ultrasound-guided transfer, ERA consideration for implantation failure, and appropriate aneuploidy rate estimates for age 38 (~40-50%) consistent with published literature. The Gardner grading criteria are correctly applied. Embryo glue mention is evidence-based though evidence is modest."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: immediate alcohol cessation, eSET with specific rationale, luteal support with duration specified (to 10-11 weeks), specific transfer technique adjuncts (ultrasound guidance, embryo glue), PGT-A for future cycles with banking strategy, ERA if implantation failure occurs, SDF testing trigger conditions specified, and BMI target (<25) given. Each recommendation is tied to case-specific reasoning rather than generic advice, and contingency planning for failure is included."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.0201,
+  "judge_latency_ms": 14568.93891600339,
+  "judge_prompt_tokens": 3245,
+  "judge_completion_tokens": 691
+}

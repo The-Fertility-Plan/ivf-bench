@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0030",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as an early blastocyst/cavitating morula and even proposes a lower alternative Gardner grade, despite the provided laboratory grade being 2AB. It also describes unclear ICM and irregular TE in a way that conflicts with the stated morphology and likely overinterprets features from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, sperm parameters, endometrium, BMI, and first-cycle status, and relates them to prognosis. Minor issue: it incorrectly labels the sperm profile as excellent despite the diagnosis being male factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis estimate is explained, but the reasoning is weakened by the central morphological misread and by tension between calling the embryo suboptimal while relying on patient factors to support transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as proceeding with transfer, luteal support, and considering extended culture in future cycles are broadly reasonable. However, the embryo grading discussion is not well aligned with Gardner criteria as provided, and some suggestions (e.g., PGT-A after recurrent failure in a young patient) are only partially aligned and need more nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, counseling, luteal support, follow-up, and future cycle review. It is useful clinically, though some recommendations are generic and based on an inaccurate morphology assessment."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014463,
+  "judge_latency_ms": 4533.705708003254,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 373
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0114",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided 2BB grade. Its description of stage 2/full blastocyst, B-grade ICM, and B-grade TE matches the lab data and is broadly consistent with the image, though it did not add image-specific observations such as indistinct ICM/TE localization or zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior biochemical pregnancy/miscarriage, sperm parameters, endometrial thickness, ovarian response, and lifestyle with embryo quality and prognosis. Some links are somewhat speculative, especially attributing B grading to paternal age/DNA fragmentation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate adjusted for prior losses and embryo grade. Minor issues include calling the embryo 'high-quality' somewhat strongly for a 2BB and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (proceed with transfer, consider RPL workup after losses, assess uterine cavity, APS/thyroid/prolactin). However, 'strongly recommended' PGT-A for future cycles and inherited thrombophilia testing are more aggressive than standard guideline-supported indications, and combined progesterone/serum targets are not universally recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, monitoring, and future evaluation, including specific workup items and male-factor assessment. It is practical, though some recommendations would benefit from more nuance regarding when they are indicated."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014832,
+  "judge_latency_ms": 5046.28470800526,
+  "judge_prompt_tokens": 2984,
+  "judge_completion_tokens": 392
+}

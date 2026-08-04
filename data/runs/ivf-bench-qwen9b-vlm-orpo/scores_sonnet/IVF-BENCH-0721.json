@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description acknowledging expansion, thinned zona, ICM presence, and TE continuity, but hedges extensively with caveats about image quality and static frames. It notes the ICM appears 'near the center' which is atypical for blastocyst anatomy (ICM is usually eccentric), and the description lacks precision. The response appropriately defers to the reported 3AA grade but doesn't add substantial independent morphological insight beyond what was provided in the lab data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age 34 euploidy implications, DOR impact on cumulative vs. single-cycle prognosis, semen parameters, endometrial thickness, BMI, smoking status, and first-cycle status. It correctly distinguishes between DOR affecting quantity vs. quality and notes the 60% maturity rate as a potential optimization point. Minor gap: doesn't explicitly address AMH 1.3 ng/mL in context of expected response benchmarks or FSH 6.1 IU/L significance."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 45-60% implantation follows logically from the presented factors. The distinction between implantation rate and live birth rate is appropriately made. The response correctly identifies untested ploidy status as the primary biological barrier. Minor inconsistency: describes the embryo as 'not quite a flawless textbook 4AA' yet the probability range seems calibrated for a high-quality embryo, which is slightly incongruent but not a major flaw."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for age 34 with good-quality blastocyst, appropriate caution about PGT-A in low-yield DOR cycles, dual-trigger mention, sperm DNA fragmentation as secondary consideration, and uterine cavity assessment for recurrent failure. The response correctly avoids recommending unproven adjuncts. Minor gap: doesn't reference specific Gardner grading criteria validation or ESHRE blastocyst grading consensus documents explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps for both this transfer and future cycle planning, including eSET recommendation, luteal support optimization, lifestyle advice, protocol review considerations (trigger timing, gonadotropin dosing, dual-trigger), PGT-A discussion framework, and uterine assessment triggers. The structured tables and numbered future planning steps are clinically useful. Could be slightly more specific on luteal support protocols or endometrial preparation details, but overall highly practical."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022836,
+  "judge_latency_ms": 14850.781791996269,
+  "judge_prompt_tokens": 4222,
+  "judge_completion_tokens": 678
+}

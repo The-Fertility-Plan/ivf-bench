@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0683",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key features consistent with the Gardner 3AB score (expanded blastocoel, thinning zona, tightly packed ICM, loose TE epithelium), but acknowledges uncertainty about image clarity multiple times ('not perfectly clear in the image'). The description largely mirrors the provided laboratory data rather than demonstrating independent morphological analysis from the image itself, limiting confidence in true image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well, including age, BMI, FSH, sperm parameters, endometrial thickness, and lifestyle factors. It connects BMI to endometrial receptivity and oocyte quality, links age to euploidy likelihood, and addresses stress and alcohol as modifiable factors. Minor gap: AMH is N/A but not discussed as a limitation, and the 'Other' diagnosis is acknowledged but not explored with differential possibilities."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The 60-70% probability estimate is logically derived from the combination of good embryo quality, young age, and optimal endometrial thickness, with appropriate discounting for BMI and stress. The conclusions follow from the evidence presented. Minor inconsistency: the response notes BMI 'more consistently linked to ongoing pregnancy complications' than implantation, yet still uses it to justify a slightly conservative estimate without fully reconciling this."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst in a young patient, luteal phase support mention, PGT-A appropriately deferred for first cycle in a 32-year-old, and lifestyle modification advice. Alcohol cessation and stress management align with evidence-based recommendations. The response correctly notes PGT-A is not typically indicated for first transfer with high-quality embryo at this age."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with rationale, complete alcohol cessation, stress management modalities listed (mindfulness, meditation, yoga, counseling), gradual physical activity increase, luteal phase support reminder, and future cycle planning including weight management with multidisciplinary approach. Could be more specific regarding progesterone protocol details or timing, and weight loss targets could include specific BMI goals with timeline."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.018621,
+  "judge_latency_ms": 12162.480250000954,
+  "judge_prompt_tokens": 3262,
+  "judge_completion_tokens": 589
+}

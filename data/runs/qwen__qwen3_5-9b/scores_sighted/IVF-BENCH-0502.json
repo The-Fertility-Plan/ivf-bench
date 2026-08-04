@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0502",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, claiming the embryo aligns perfectly with 3AA and describing a clearly expanded blastocoel, tightly packed ICM on the left, and cohesive grade A TE. In this image the blastocoel is not clearly prominent, the ICM is not distinctly identifiable as described, and TE detail is limited, so several features appear inferred from the provided grade rather than directly observed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior biochemical pregnancy/miscarriage, sperm parameters, endometrial thickness, and male factor reasonably well with embryo quality. It misses some nuance around absent AMH and does not deeply explore recurrent loss workup or uterine factors, but overall the clinical context is well connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: strong embryo morphology and young age improve prognosis, while BMI and prior losses temper expectations. Minor issues include overconfidence in morphology-based conclusions and somewhat simplified statements about euploidy and failure risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer in a 30-year-old with a good-quality day-5 blastocyst is guideline-concordant, and noting BMI as a modifiable risk factor is appropriate. However, calling 3AA the highest grade/gold standard is imprecise, recommending 'robust progesterone support' specifically because of miscarriage history is not strongly evidence-based, and suggesting PGT-A for this profile is debatable rather than clearly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including proceeding with SET, maintaining luteal support, and addressing BMI for future cycles. They are somewhat generic and would be stronger with more specific next-step evaluation for prior losses or transfer protocol considerations."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014298,
+  "judge_latency_ms": 7328.383833009866,
+  "judge_prompt_tokens": 2461,
+  "judge_completion_tokens": 461
+}

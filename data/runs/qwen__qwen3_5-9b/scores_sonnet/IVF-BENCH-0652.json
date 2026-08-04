@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model repeatedly describes the image as a 'morula' or 'zygote' rather than a blastocyst, and spends most of its response in an internal deliberation loop rather than providing a structured morphological description. It never clearly describes expansion stage, ICM, TE, or zona pellucida features in a coherent way. The response is largely unformatted internal reasoning rather than an actual clinical description."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "The model does identify some clinical contradictions (AMH 6.46 ng/mL vs DOR diagnosis, Day 4 transfer vs Gardner 2BA score) but never delivers a coherent integrated clinical assessment. It lists factors in passing but fails to synthesize them into a meaningful clinical picture. The response never reaches a structured integration section."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is almost entirely an unstructured internal monologue with circular reasoning, repeated contradictions, and no final coherent conclusion. The model loops through the same observations dozens of times without resolution. No probability estimate or structured reasoning chain is ever delivered to the reader."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The model correctly identifies that Gardner grading applies to blastocysts (Day 5/6) and not Day 4 transfers, which shows some guideline awareness. However, no actual guideline-aligned recommendations are made, and the response never reaches a structured clinical output that could be evaluated against ESHRE/ASRM standards."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "No actionable recommendations are provided. The response is entirely internal deliberation and never delivers a structured set of clinical recommendations, next steps, or future cycle planning advice. A clinician would find no practical value in this output."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.036318,
+  "judge_latency_ms": 9488.592834000883,
+  "judge_prompt_tokens": 9861,
+  "judge_completion_tokens": 449
+}

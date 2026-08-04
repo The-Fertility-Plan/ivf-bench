@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner grade blastocyst including expanded blastocoel, thinning zona, prominent ICM, and cohesive TE. However, looking at the actual image, the blastocyst appears somewhat irregular with a fragmented or granular ICM that looks less than ideal for a true 'AA' grade - the model notes 'minor cytoplasmic granularity' and 'small vacuole' but downplays these findings rather than critically assessing whether the image truly matches a 3AA designation. The TE also appears somewhat irregular in the image. The model largely defers to the provided Gardner score rather than independently and critically analyzing the image, which shows features that might warrant a lower grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects endometriosis to endometrial receptivity dysfunction, links the pattern of biochemical pregnancies and miscarriage to implantation maintenance failure, addresses sperm motility in context of DNA fragmentation risk, integrates the suboptimal COC yield relative to AMH suggesting endometriosis impact on ovarian response, and correctly identifies the discordance between embryo quality and repeated failure as the central clinical puzzle. The table format clearly stratifies factors by risk level with mechanistic explanations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability adjustment methodology is transparent and the final estimate of 25-35% follows reasonably from the baseline adjustments. The identification of RIF as the dominant prognostic factor despite good embryo quality is coherent. Minor issue: the response notes 'progression in outcomes' as favorable but this is a weak argument given 5 failed cycles. The reasoning around sperm DNA fragmentation contributing to miscarriage is sound but could be more explicitly connected to the biochemical pregnancy pattern. Overall the conclusions are well-supported by the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE RIF guidelines including ERA testing, hysteroscopy, CD138 biopsy for chronic endometritis, thrombophilia screening, and PGT-A consideration. GnRH agonist downregulation for endometriosis patients prior to FET is evidence-supported. The suggestion of prednisolone and intralipid/IVIG is noted as empiric, which is appropriate given limited evidence. Recommending double embryo transfer is somewhat at odds with current single embryo transfer guidelines, though the response appropriately qualifies this with counseling. Progesterone supplementation recommendations are guideline-consistent. Minor deduction for the DET suggestion."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific drug names, doses, and timing for luteal support. The investigation table clearly prioritizes next steps if this cycle fails with rationale for each test. Future cycle strategy includes specific protocols (GnRH agonist duration, dienogest timing, ERA-guided pET), accumulation strategy rationale, and treatment algorithms contingent on findings (e.g., antibiotic regimen if chronic endometritis confirmed). Lifestyle recommendations include specific quantitative targets. The response provides a clear decision tree that a clinician could directly implement."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.025335,
+  "judge_latency_ms": 30032.901209007832,
+  "judge_prompt_tokens": 4480,
+  "judge_completion_tokens": 793
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0096",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no specific morphology could be assigned, omitting the known expansion, ICM, and TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, sperm parameters, endometrium, and prior IVF failures with prognosis reasonably well, though some links are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable issues such as treating two failed IVF cycles as definitive RIF and building morphology-based reasoning while ignoring the provided 3AA grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but some are debatable or not guideline-strong (e.g., ERA, thrombophilia workup, aspirin, TESE based on SDF concern) and RIF labeling is overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support considerations and possible further testing, though some suggestions are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012609,
+  "judge_latency_ms": 3564.143832998525,
+  "judge_prompt_tokens": 2668,
+  "judge_completion_tokens": 307
+}

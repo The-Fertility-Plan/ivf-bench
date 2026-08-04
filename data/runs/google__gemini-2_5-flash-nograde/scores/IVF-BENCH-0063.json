@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible blastocyst-style description but is overly confident and likely overcalls the embryo as 4AA/4AB without clear image-based support; it also infers detailed ICM/TE quality not clearly verifiable from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, uterine factor, prior failed cycles, sperm parameters, endometrium, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with probability estimates tied to morphology, age-related aneuploidy risk, and prior failures, though some assumptions about embryo quality and prior-cycle implications are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but recommending ERA and immunologic workup after failures is more controversial, and suggesting dual transfer of euploid embryos is not strongly guideline-concordant in most cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps on uterine review, PGT-A considerations, luteal support, and contingency planning, though some recommendations are somewhat generic and include controversial options."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015717,
+  "judge_latency_ms": 3933.247125001799,
+  "judge_prompt_tokens": 3674,
+  "judge_completion_tokens": 313
+}

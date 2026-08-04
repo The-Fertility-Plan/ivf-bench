@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0654",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The model response is entirely composed of internal deliberation and never delivers an actual morphological analysis. It repeatedly loops through contradictions about whether the image is a blastocyst, a degenerating oocyte, or a polar body, but never produces a coherent description of expansion stage, ICM, TE, or zona pellucida. No actual morphological assessment was provided to the user."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 1,
+      "justification": "The model never integrates any clinical factors (age, BMI, PCOS diagnosis, FSH, sperm parameters, endometrial thickness, previous biochemical pregnancy, lifestyle factors) with embryo quality. The entire response is unresolved internal reasoning with no clinical synthesis delivered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is deeply incoherent, consisting of repetitive circular loops of the same contradictory reasoning repeated dozens of times without resolution. No conclusions are reached, no probability estimate is given, and no coherent clinical argument is constructed. The response fails to deliver any usable output."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 1,
+      "justification": "No clinical guidelines (ESHRE, ASRM, Gardner grading criteria) are applied or referenced in any actionable way. The model never reaches the stage of making recommendations or applying evidence-based criteria to the case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "Zero actionable recommendations are provided. The response contains no transfer recommendations, no future cycle planning, no risk stratification, and no implantation probability estimate. The entire output is unresolved internal deliberation with no clinical value."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.03534,
+  "judge_latency_ms": 9215.466250003374,
+  "judge_prompt_tokens": 9745,
+  "judge_completion_tokens": 407
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality blastocyst with poorly defined/absent ICM and sparse irregular TE, broadly consistent with DD grading. However, it overstates stage as at least full blastocyst/possibly expanded despite the provided 1DD and image showing only early blastocoel expansion, and adds limited unsupported detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, semen parameters, endometrium, and first-cycle status well, and appropriately emphasizes embryo morphology as the dominant prognostic factor. Minor overinterpretation of male-factor implications and day-4 timing keeps it from being fully comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor embryo quality drives low prognosis despite favorable maternal factors. Probability estimate follows the narrative, though some assumptions about developmental timing and stage are not fully supported by the case details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner-based interpretation and standard counseling that DD embryos have low potential. But there is some misstatement around grading/stage terminology, and recommendations such as aiming for a smaller cohort are not standard guideline-based advice for this presentation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling for proceeding with transfer if no better embryo exists, realistic expectation setting, and sensible future considerations such as reviewing fertilization/blastulation patterns, sperm DNA fragmentation if recurrent poor quality, and weight optimization. Some suggestions remain somewhat broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.015144,
+  "judge_latency_ms": 6167.222208008752,
+  "judge_prompt_tokens": 3203,
+  "judge_completion_tokens": 369
+}

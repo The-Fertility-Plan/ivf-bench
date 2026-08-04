@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The image is consistent with an early blastocyst/cavitating embryo with a visible blastocoel, but the response misclassifies it as a morula and therefore omits/incorrectly dismisses ICM and TE assessment. Zona and low fragmentation comments are reasonable, but the core stage assessment is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well: age, tubal factor, ovarian response, sperm parameters, endometrium, and lifestyle, and links them to prognosis. It misses some nuance around BMI being normal and overstates residual impact of former smoking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is internally structured, but it is built on a key morphological misclassification. The implantation estimate is therefore only partially supported, and some statements (e.g., lingering former smoking effects) are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and cycle planning is broadly guideline-consistent, but the embryo staging is not aligned with standard Gardner-style blastocyst assessment for this image. Suggesting PGT-A in a first cycle for a 33-year-old without specific indications is somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, counseling, luteal support, pregnancy testing, and future culture strategy. Recommendations are useful, though some are generic and influenced by the incorrect morphology call."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014871,
+  "judge_latency_ms": 5425.3158750070725,
+  "judge_prompt_tokens": 3082,
+  "judge_completion_tokens": 375
+}

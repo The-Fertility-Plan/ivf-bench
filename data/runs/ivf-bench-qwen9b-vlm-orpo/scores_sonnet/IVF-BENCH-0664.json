@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model contradicts the provided Gardner Score of 3AA by suggesting the embryo 'may be at the high 3s / low 4s morphologically' and describing the ICM as 'not exceptionally crisp/compact' and TE as showing 'mild variation' — inconsistent with the AA grading which specifies tightly packed ICM with many cells and cohesive TE epithelium. The model appears to be second-guessing the laboratory data with its own image interpretation, creating inaccuracies relative to the established grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response mentions several relevant clinical factors (maternal age, AMH, BMI, smoking status, endometrial thickness, male factor diagnosis) but does not deeply integrate them. For example, it does not discuss the significance of the previous clinical miscarriage in detail, does not address the mild male factor parameters in context of fertilization outcomes, and does not connect BMI 30.1 to potential implantation or endometrial receptivity concerns."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There is a notable internal contradiction: the Gardner Score is stated as 3AA (a good-quality blastocyst with excellent ICM and TE), yet the model's morphological interpretation suggests lower quality. The response does not reconcile this discrepancy. Additionally, the response is cut off mid-sentence, leaving the reasoning incomplete and the probability estimate and recommendations absent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response is incomplete — it is cut off before providing recommendations, probability estimates, or future cycle planning. What is present does not clearly reference ESHRE/ASRM Gardner grading criteria accurately, and the morphological downgrading of a 3AA embryo without clear justification deviates from standard grading interpretation practices."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is truncated and does not provide any concrete recommendations for this transfer or future cycle planning. No implantation probability range is given, no specific next steps are outlined, and no nuanced guidance is offered. The response is essentially incomplete and therefore not actionable."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01254,
+  "judge_latency_ms": 10728.061125002569,
+  "judge_prompt_tokens": 1530,
+  "judge_completion_tokens": 530
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0660",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fabricates classic 3AA blastocyst features (expanded cavity, clear ICM, cohesive TE, thinning zona) despite repeatedly noting the image appears more like a single cell/oocyte and not a clear blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior IVF failures, sperm quality, endometrium, and lifestyle factors with embryo quality reasonably well, though some claims are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally inconsistent: it repeatedly identifies a major image-text mismatch, then ignores it and concludes the image supports a 3AA blastocyst. Probability reasoning is only partly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on embryo quality, lifestyle optimization, and proceeding with transfer is broadly aligned, but recommending PGT-A strongly for DOR/history and suggesting RIF workup after this history are somewhat overstated and not fully guideline-grounded."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle modification, luteal support consideration, and future-cycle planning, though some recommendations lack nuance and depend on uncertain assumptions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01371,
+  "judge_latency_ms": 7148.938750033267,
+  "judge_prompt_tokens": 8536,
+  "judge_completion_tokens": 304
+}

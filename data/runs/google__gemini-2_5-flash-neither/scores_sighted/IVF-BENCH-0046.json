@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0046",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and did not fabricate actual morphological features from the embryo image. However, it then introduced a hypothetical good-quality blastocyst assumption (e.g., 4AA/5AA), which is not supported by the visible image and weakens morphology-specific accuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, tubal factor, prior biochemical pregnancy, sperm parameters, endometrium, and oocyte yield, and connects them to prognosis. It misses some nuance around uncertainty from absent AMH and the lack of actual embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, clearly separating the inability to assess morphology from the hypothetical prognosis. The main limitation is that the implantation estimate depends on an assumed high-grade embryo rather than observed morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET in a good-prognosis 33-year-old, luteal support, and cautious consideration of further testing only after repeated failure. Minor deviations include somewhat liberal endorsement of ERA/thrombophilia workup, which are not routine after limited failure history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including SET, luteal support, lifestyle advice, and escalation options if unsuccessful. Specificity is good, though some recommendations remain generic because actual embryo morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015633,
+  "judge_latency_ms": 5369.502000001376,
+  "judge_prompt_tokens": 3276,
+  "judge_completion_tokens": 387
+}

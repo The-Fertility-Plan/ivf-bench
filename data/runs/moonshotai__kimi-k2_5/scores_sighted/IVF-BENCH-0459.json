@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0459",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but it inaccurately states the blastocoel is <50% despite the provided grade 1 definition here being at least half the embryo, and it localizes/infers specific image features not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, smoking, ovarian response, endometrial thickness, BMI, sperm quality, and first-cycle status well with embryo prognosis, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a plausible low prognosis tied to embryo grade and patient factors, though the quantitative penalty stacking for implantation probability is somewhat heuristic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF principles regarding poor prognosis of 1DD embryos and counseling, but includes less guideline-based recommendations such as routine oral estrogen for luteal support, growth hormone, and strong claims about smoking effect sizes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for transfer counseling, lifestyle modification, and future cycle planning, though some suggestions are more speculative than evidence-based."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013158,
+  "judge_latency_ms": 4753.112125006737,
+  "judge_prompt_tokens": 2691,
+  "judge_completion_tokens": 339
+}

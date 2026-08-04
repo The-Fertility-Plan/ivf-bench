@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided describing specific visible morphology. It did not fabricate expansion, ICM, or TE findings, though it assumed transferable quality (e.g., ≥3BB) for prognosis, which is speculative rather than image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrated age, AMH, oocyte yield/maturation, BMI, prior failed cycle, male-factor context, sperm parameters, and endometrial thickness into prognosis and future planning in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, blastocyst stage, BMI, prior failure, and maturation concerns. Minor issues include speculative assumptions about embryo quality, trilaminar lining, and possible sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Overall recommendations are broadly consistent with IVF practice: proceed with transfer, optimize luteal support, review trigger strategy for low MII, and avoid routine PGT-A at age 28. Some suggestions are more speculative or center-specific (e.g., dual-route progesterone based on BMI, TESE for high SDF, stress/cortisol effect on implantation)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future cycles, including luteal support review, trigger reassessment, male-factor workup, and lifestyle optimization. It is useful, though some recommendations are not highly individualized or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.014148,
+  "judge_latency_ms": 5295.120416994905,
+  "judge_prompt_tokens": 2841,
+  "judge_completion_tokens": 375
+}

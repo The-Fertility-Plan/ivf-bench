@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0695",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner score (expanded blastocoel, tightly packed ICM on right side, cohesive TE), but relies heavily on the provided Gardner score rather than independent image analysis. The description of hatching/herniating is noted from the lab data rather than clearly identified in the image. Some descriptions are generic rather than image-specific, and the zona pellucida assessment lacks precision regarding the herniation site visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does well integrating the DOR (AMH 0.12), female age 36, male factor diagnosis, paternal age 42, and endometrial thickness. It correctly frames this as a 'high quality embryo in poor responder' scenario and connects male age to aneuploidy risk. Minor gap: FSH of 7.5 is not discussed, and the interaction between DOR and egg quality at age 36 could be more nuanced. The sedentary lifestyle and stress factors are not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to clinical factors to probability estimate. The downward adjustment from theoretical 50-60% to 30-50% is justified with specific reasons (male age, DOR, no PGT-A). The response is internally consistent. Minor issue: the response is cut off before completing Section 5 recommendations, and the probability range is somewhat wide without precise weighting of individual factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines regarding Gardner grading interpretation, DOR management, and endometrial thickness thresholds. The mention of PGT-A is appropriate given the clinical context. However, the response is truncated before completing recommendations, so full guideline alignment cannot be assessed. The 30-50% probability range is reasonable but slightly conservative for a 4AA blastocyst at age 36 per published literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The recommendations section (Section 5) is explicitly cut off mid-sentence ('Immediate Recommendations:') with no actual recommendations provided. This is a significant deficiency. While the analysis sections provide useful clinical context, the absence of concrete transfer recommendations, future cycle planning, or specific next steps severely limits actionability for a clinician."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.016653,
+  "judge_latency_ms": 13555.228624987649,
+  "judge_prompt_tokens": 2616,
+  "judge_completion_tokens": 587
+}

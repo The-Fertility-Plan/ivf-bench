@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0380",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes features consistent with a 1DD grade, noting poor cellular organization, indistinct ICM and TE. However, there's a contradiction: the Gardner grade 1 means the blastocoel is at least half the embryo, but the model states 'the cavity occupies less than half of the embryo's volume.' This is a notable error in interpreting the expansion grade. The description of the embryo as 'messy' and disorganized is reasonable for a DD grade. The zona pellucida is not discussed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates multiple clinical factors including age, AMH, sperm parameters, endometrial thickness, BMI, uterine factor diagnosis, and ectopic history. It correctly identifies the contrast between favorable patient parameters and poor embryo quality. The mention of low BMI as a risk factor and the connection between uterine factor and implantation failure are appropriate. The note about AMH suggesting possible PCOS phenotype is speculative but not unreasonable. Could have discussed the long agonist protocol choice more."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of <10% (1-5%) follows logically from the poor embryo grade and uterine factor. The risk stratification is coherent. One minor issue: the expansion grade contradiction (stating cavity <50% when grade 1 per the provided definition means ≥50%) creates a small inconsistency, but the overall clinical reasoning chain is sound and conclusions are well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with clinical guidelines: hysteroscopy for uterine evaluation, early ectopic monitoring, PGT-A consideration for future cycles, and nutritional counseling for low BMI. The Gardner grading interpretation has the expansion error noted above. The suggestion of GnRH agonists or myomectomy for uterine factors is appropriate. The implantation probability estimate for a 1DD embryo is consistent with published literature showing very poor outcomes for D-grade embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: hysteroscopy, serial beta-hCG monitoring, nutritional counseling, PGT-A for future cycles, and addressing the uterine factor. The counseling recommendation about frank discussion of prognosis is clinically appropriate. Could have been more specific about alternative protocols for future stimulation, consideration of freeze-all strategy, or whether to proceed with this transfer at all given the very poor prognosis. Could also discuss gestational carrier given uterine factor."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.03033,
+  "judge_latency_ms": 19056.50666699512,
+  "judge_prompt_tokens": 2866,
+  "judge_completion_tokens": 640
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocoel with thinning zona, tightly packed ICM, cohesive TE epithelium, and absence of fragmentation/vacuolization. The description is detailed and well-organized. Minor limitation is that it largely echoes the provided Gardner score description rather than independently identifying additional nuanced features from the image, but overall the morphological analysis is accurate and thorough."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all relevant clinical factors: maternal age 37 is correctly flagged as the primary risk despite excellent AMH and oocyte yield; the previous miscarriage is contextualized within age-related aneuploidy risk; endometrial thickness of 10mm is appropriately linked to receptivity; male factor diagnosis is critically examined against the provided sperm parameters with a note about possible DNA fragmentation; BMI and lifestyle factors are also incorporated. The interactions between these factors and embryo quality are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-55% is coherently derived from the interplay of top-tier morphology, maternal age, and aneuploidy risk. The comparison to PGT-A euploid rates (>65%) provides useful context. One minor inconsistency: the response states implantation probability of 45-55% but the section header says 'Estimated Implantation Probability' while the reasoning discusses live birth rates interchangeably, which are distinct endpoints. Otherwise the logic flows well from evidence to conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET is correctly recommended for a top-quality blastocyst, PGT-A is appropriately suggested given age 37 and miscarriage history, luteal phase support is mentioned, and sperm DNA fragmentation testing is a guideline-consistent suggestion for male factor cases with recurrent loss. The Gardner grading criteria are correctly applied. Minor gap: no mention of ERA (Endometrial Receptivity Array) testing which some guidelines suggest after recurrent implantation failure, though this is a first transfer attempt so its omission is defensible."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET is clearly justified, beta-hCG timing (9-10 days post-transfer) is specified, early ultrasound timing is given (6-7 weeks), PGT-A is recommended with clear rationale, sperm DNA fragmentation testing is suggested, and lifestyle modifications are concrete (walking, swimming). The response could be slightly more actionable by specifying progesterone dosing protocols or mentioning ERA testing as a contingency, but overall the clinical next steps are clear and well-tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018744,
+  "judge_latency_ms": 13886.96479099599,
+  "judge_prompt_tokens": 2693,
+  "judge_completion_tokens": 711
+}

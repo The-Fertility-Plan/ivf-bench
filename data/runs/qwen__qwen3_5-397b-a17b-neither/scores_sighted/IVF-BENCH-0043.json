@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0043",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating specific morphology. It correctly noted that expansion, ICM, and TE could not be assessed, though it did assume transferability and Day 5 blastocyst status rather than describing the visibly poor/indeterminate morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, PCOS/high AMH, oocyte maturity, BMI, endometrial thickness, prior ectopic, smoking, and sperm parameters into prognosis reasonably well. Some links are somewhat generic and it overstates oocyte quality from MII conversion alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to age and modifiers such as smoking and ectopic history. Minor issues include assuming a transferable-quality blastocyst and introducing speculative sperm DNA fragmentation concerns."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: luteal support, early beta-hCG and ultrasound after prior ectopic, smoking cessation, and cautious discussion of PGT-A. Small deviations include implying PGT-A may reduce ectopic-like diagnostic uncertainty and suggesting adjunct sperm-selection methods without strong guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including luteal support, timing of beta-hCG checks, early ultrasound, smoking cessation, exercise, and future-cycle considerations. It is useful clinically, though some recommendations remain somewhat general rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.014109,
+  "judge_latency_ms": 5370.507999992697,
+  "judge_prompt_tokens": 2768,
+  "judge_completion_tokens": 387
+}

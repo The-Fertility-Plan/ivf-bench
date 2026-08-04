@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response identifies the blastocoel cavity, trophectoderm, and ICM, and notes the loosely organized ICM consistent with the B grade. However, it incorrectly suggests limited expansion and describes it as 'early-to-intermediate blastocyst transition' when the Gardner score indicates a full blastocyst (grade 2) with blastocoel filling the embryo. The image actually shows a reasonably expanded blastocyst with visible cellular architecture. The TE description is minimal and the zona pellucida is not meaningfully assessed. Some fabricated uncertainty about expansion contradicts the provided grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient age, AMH, FSH, BMI, sperm parameters, and lifestyle to the embryo prognosis. It correctly identifies age 26 as the strongest positive predictor and integrates the unexplained infertility diagnosis thoughtfully. It flags the missing endometrial thickness and the 'no COCs retrieved' data point as clinically meaningful concerns. Minor gap: it doesn't deeply explore the implications of Day 4 transfer timing versus standard Day 5, which is somewhat unusual and worth more discussion."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning is generally logical and the probability estimate of 30-40% follows reasonably from the evidence. However, there are some inconsistencies: the model repeatedly questions the blastocyst expansion despite the Gardner grade clearly stating 'full blastocyst,' creating an internal contradiction. The 'no COCs retrieved' concern is raised but never fully resolved or explained in context. The reasoning about Day 4 transfer is underdeveloped. The conclusion is sound but some intermediate steps contain contradictions with the provided laboratory data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines: single embryo transfer at age 26 is correctly recommended, PGT-A is appropriately deferred for a first cycle with few embryos, luteal support optimization is mentioned, and unproven adjuncts are correctly discouraged without specific indication. The Gardner grading system is referenced appropriately. Minor deduction for not more explicitly addressing the atypical Day 4 transfer timing per standard blastocyst culture guidelines, and for not clarifying the 2BA grade interpretation more precisely per Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps including luteal support optimization, single embryo transfer recommendation, early pregnancy monitoring, and a structured plan if the transfer fails. Future cycle recommendations include protocol adjustment, dual trigger consideration, sperm DNA fragmentation testing, and uterine cavity evaluation. The recommendations are well-organized and clinically practical. Minor deduction for not providing more specific guidance on the unusual Day 4 transfer timing and for the somewhat generic nutritional optimization advice given the BMI of 18."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.022764,
+  "judge_latency_ms": 16300.175999989733,
+  "judge_prompt_tokens": 4038,
+  "judge_completion_tokens": 710
+}

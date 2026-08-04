@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0676",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, describing a large blastocoel filling most of the embryo and a clearly cohesive TE, whereas the image is poorly focused/partial and does not convincingly show a classic full 3AA blastocyst architecture. ICM mention is plausible, but several features appear inferred from the provided grade rather than directly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, DOR diagnosis, ovarian response, sperm parameters, endometrial thickness, and lifestyle with embryo quality in a clinically meaningful way. It misses nuance around absent AMH data and somewhat overinterprets DOR versus actual response, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, linking embryo quality, age, lining, and BMI to prognosis. Minor issues include calling 3AA 'highest' quality without nuance and deriving morphology too confidently from the image, but the probability estimate broadly follows the stated factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer in a good-prognosis 33-year-old and attention to luteal support/metabolic optimization are broadly aligned with IVF practice guidelines. Some suggestions, like embryo banking and PGT-A framing in DOR at age 33, are more debatable and not universally guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, progesterone support considerations, weight management, and possible further evaluation. It is useful clinically, though some recommendations could be more individualized and less speculative."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013938,
+  "judge_latency_ms": 6659.630790993106,
+  "judge_prompt_tokens": 2546,
+  "judge_completion_tokens": 420
+}

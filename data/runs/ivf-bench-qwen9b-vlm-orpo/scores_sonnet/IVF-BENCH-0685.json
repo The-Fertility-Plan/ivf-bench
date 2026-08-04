@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocyst stage, reasonably compact ICM (A grade), and loose/sparse trophectoderm (B grade). The zona pellucida observation and Day 5 timing are appropriately noted. Minor limitation is that the response hedges between 3AB and 4AB without fully committing, and some spatial descriptions (ICM location) may be speculative without confirmed image clarity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age 34, AMH/FSH values, PCOS diagnosis, prior cycle outcomes (no pregnancy + biochemical pregnancy), partner age 44, semen parameters, endometrial thickness, BMI, and lifestyle factors. It explicitly connects each factor to implantation prognosis and identifies meaningful interactions such as PCOS affecting endometrial receptivity, paternal age affecting sperm DNA integrity, and prior biochemical pregnancy suggesting possible embryo aneuploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-45% logically follows from the balance of favorable factors (age 34, Day 5, good reserve) against risk factors (3AB not top-grade, prior failures, PCOS). The distinction between untested vs euploid embryo probabilities is appropriate. Minor issue: slight inconsistency in initially calling it '3AB-4AB' then settling on 3AB, and the reasoning around endometrial thickness being both favorable and potentially concerning in PCOS could be more clearly resolved."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation for age 34, appropriate luteal support emphasis in PCOS antagonist cycles, selective use of PGT-A rather than routine recommendation, caution against empiric immune therapies without indication, and consideration of freeze-all in PCOS. The response correctly notes PGT-A is not automatically necessary at age 34. Minor gap: could more explicitly reference ESHRE PCOS guidelines or specific progesterone threshold recommendations for FET."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: eSET recommendation with rationale, luteal support optimization with specific drug mentions (vaginal micronized progesterone/dydrogesterone), uterine cavity reassessment suggestions (saline sonogram/hysteroscopy), selective adjunct use with explicit discouragement of unproven therapies, sperm DNA fragmentation testing trigger criteria, metabolic workup specifics for PCOS, and protocol modification considerations for future cycles. Future planning section addresses multiple contingencies with clear decision points."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.023724,
+  "judge_latency_ms": 14643.858290997741,
+  "judge_prompt_tokens": 4483,
+  "judge_completion_tokens": 685
+}

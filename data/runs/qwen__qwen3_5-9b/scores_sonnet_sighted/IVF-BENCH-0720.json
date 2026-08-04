@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst, thinning zona pellucida, compact ICM on the left side, and sparse TE cells consistent with the 3AB Gardner score. The description of the ICM as 'dark, granular cluster' and TE as 'sparse' and 'loose' matches the image well. Minor limitation: the description could be more precise about the blastocoel cavity size and the degree of zona thinning visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, AMH, oocyte yield discrepancy, sperm parameters, endometrial thickness, and previous miscarriage. The connection between high AMH and low yield is highlighted as a significant discrepancy. The PCOS inference from AMH is reasonable but not confirmed. The tubal factor diagnosis is mentioned implicitly but not explicitly discussed in relation to transfer strategy (e.g., frozen vs. fresh transfer considerations for tubal factor patients)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-45% follows reasonably from the evidence: young age, good ICM, suboptimal TE, low yield context. The recommendation to proceed with transfer is well-supported. Minor inconsistency: the response suggests PGT-A discussion but then recommends against it, which is slightly contradictory in framing. The low yield concern is appropriately flagged without overstating its impact on this specific embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with ESHRE/ASRM guidelines on blastocyst grading and transfer decisions. However, the suggestion of 'Microdose Flare' protocol for a high-AMH patient is inconsistent with guidelines - microdose flare is typically used for poor responders, not high-reserve patients. The PGT-A discussion is reasonable but the framing around aneuploidy rates (10-15% at age 29) is slightly conservative. Luteal support recommendation is appropriate but lacks specificity on progesterone type/dosing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are largely specific and practical: proceed with transfer, review stimulation protocol, metabolic workup for PCOS, thrombophilia screening if transfer fails, lifestyle reinforcement. The stimulation protocol review section provides concrete action items. The PGT-A discussion offers a clear decision framework. Slight deduction for the incorrect protocol suggestion (microdose flare) and lack of specific progesterone supplementation details, which reduces practical utility for the clinician."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.019269,
+  "judge_latency_ms": 13972.505124998861,
+  "judge_prompt_tokens": 3143,
+  "judge_completion_tokens": 656
+}

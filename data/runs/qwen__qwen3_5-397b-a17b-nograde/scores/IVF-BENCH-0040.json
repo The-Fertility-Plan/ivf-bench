@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst-stage assessment and reasonable ICM/TE grading estimate, but it is somewhat overconfident about specific positional details and stage (3BB vs 4BB) without clear image-based certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, ovarian response, sperm parameters, endometrium, and first-cycle status well, though some claims such as euploidy rate and PCOS endometrial effects are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to age, morphology, and clinical context, though a few assumptions are not directly supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, OHSS awareness, and optional PGT-A at age 31 are broadly aligned with IVF practice guidelines, with only minor overstatement in some prognostic comments."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for transfer and future planning, including SET, monitoring, cryopreservation, and conditional PGT-A discussion, though it could be more specific about fresh vs freeze-all decision criteria."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012123,
+  "judge_latency_ms": 4222.542916999373,
+  "judge_prompt_tokens": 2441,
+  "judge_completion_tokens": 320
+}

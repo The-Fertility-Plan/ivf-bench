@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 2AA features (blastocoel expansion, compact ICM, cohesive TE) but largely relies on the provided score rather than independent image analysis. The description acknowledges image resolution limitations but doesn't add meaningful observations beyond what the score provides, such as noting the visible internal complexity, the somewhat irregular blastocoel shape, or specific zona pellucida characteristics visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most clinical factors well, correctly identifying the thin endometrium (6.0mm) as the primary risk factor, appropriately contextualizing the male factor diagnosis with the good sperm parameters, and noting the favorable age and oocyte yield. Minor gap: doesn't deeply explore the interaction between former smoking history and endometrial receptivity, and AMH absence is noted but not fully contextualized against the good oocyte yield."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and consistent. The probability reduction from ~65% baseline to 30-45% due to thin endometrium is well-justified and follows from the evidence. The recommendation hierarchy (freeze-all preferred over fresh transfer) is coherent with the identified risk. Minor issue: the 30-45% range may still be slightly optimistic given a 6.0mm lining, but the reasoning chain is transparent and internally consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: freeze-all strategy for thin endometrium, endometrial workup including hysteroscopy, consideration of ERA for recurrent implantation failure, and various adjunctive therapies. The 7-8mm threshold cited is consistent with published guidelines. Minor deviation: G-CSF recommendation is mentioned without noting its still-experimental status per current guidelines, and sildenafil is appropriately flagged as off-label."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical, with clear prioritization (freeze-all as preferred option), concrete adjunctive therapies listed, and a structured future cycle planning section. The response provides alternatives (fresh vs. frozen transfer) with clear counseling guidance. Could be improved by specifying estrogen dosing thresholds, timing for re-evaluation, or specific hysteroscopy indications, but overall provides clinically useful next steps."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020844,
+  "judge_latency_ms": 13264.14141699206,
+  "judge_prompt_tokens": 4008,
+  "judge_completion_tokens": 588
+}

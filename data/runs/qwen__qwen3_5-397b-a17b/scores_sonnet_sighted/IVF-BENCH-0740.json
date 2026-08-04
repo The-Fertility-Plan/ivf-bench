@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0740",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately identifies the embryo as a morula or very early blastocyst lacking a defined blastocoel, notes granular appearance and absence of ICM/TE differentiation, and correctly interprets the 0DD Gardner score. It appropriately notes the developmental arrest. Minor omission: no comment on zona pellucida integrity or specific cell count estimation, but overall description matches the image well."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively connects endometriosis to oocyte quality and embryonic arrest, addresses the BMI impact on oocyte competence and implantation, and flags the suboptimal maturation rate (56%) as clinically significant. It integrates sperm parameters and endometrial thickness appropriately. Minor gap: does not discuss the potential role of the long agonist protocol duration on oocyte quality or the specific endometriosis staging, which could further refine the assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological findings to probability estimate to recommendations. The <1-5% implantation probability is well-justified given the 0DD score and degenerative features. The discordance between high AMH and poor embryo quality is coherently explained. Minor inconsistency: the model suggests extended culture to Day 6-7 as a future recommendation while simultaneously noting the degenerative appearance makes this unlikely to help, creating a slight tension in the advice."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: counseling before transfer of poor-quality embryos, consideration of sperm DNA fragmentation testing, dual trigger for suboptimal maturation rates, and continued long agonist for endometriosis. The Gardner grading interpretation is accurate. Slight deviation: ASRM guidelines generally discourage transfer of degenerate embryos more strongly than the model implies; the 'last resort' framing could be more definitive about non-transfer recommendation per standard practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: dual trigger adjustment, SDF testing, weight management targets, ICSI consideration, and extended culture options. The counseling guidance for the current transfer is clear. The response provides concrete next steps for both immediate and future cycle planning. Could be improved by specifying weight loss targets (e.g., BMI <30), suggesting endometriosis surgical evaluation if not recently done, or recommending PGT-A given the poor blastulation rate."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.018042,
+  "judge_latency_ms": 13487.947792003979,
+  "judge_prompt_tokens": 2884,
+  "judge_completion_tokens": 626
+}

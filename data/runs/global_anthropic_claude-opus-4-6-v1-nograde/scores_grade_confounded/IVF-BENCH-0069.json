@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the embryo as 4AB/4BB despite provided lab grading of 2BB, and it fabricates stronger ICM/TE quality than supported. Some generic blastocyst descriptors may fit, but the grading mismatch is a significant morphological error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, ovarian response, sperm parameters, endometrium, and first-cycle status, and connects them to prognosis. A few assumptions are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the prognosis is built on an inflated embryo grade and includes unsupported assumptions (e.g., presumed trilaminar lining, high euploidy estimate, cumulative success >85-90%). This weakens the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and conservative escalation after failure are guideline-consistent, but the embryo grading inconsistency, speculative ERA mention, and somewhat optimistic implantation estimates reduce alignment with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer, luteal support, monitoring, and contingency planning. Recommendations are useful, though some are generic and a few are based on assumptions rather than case-specific confirmed findings."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012951,
+  "judge_latency_ms": 4379.999042001145,
+  "judge_prompt_tokens": 2572,
+  "judge_completion_tokens": 349
+}

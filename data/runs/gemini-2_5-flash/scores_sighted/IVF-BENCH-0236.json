@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0236",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates image certainty: TE is not clearly uniformly cohesive throughout the image, hatching/herniation is speculative, and some details are inferred more from the Gardner score than directly visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most relevant factors well, including age, ovarian reserve, BMI, endometrium, male factor, prior miscarriage, and smoking, and relates them to prognosis. Some links are somewhat generalized and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured, but the implantation estimate is based on an arguably inflated baseline and likely overemphasizes smoking's immediate effect on a single transfer. It is coherent overall but has some unsupported quantitative assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading concepts and counseling about smoking, but calling 3AA 'the highest morphological grade' is imprecise, and the implantation expectations are somewhat optimistic relative to typical single untested day-5 blastocyst outcomes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides some practical advice such as smoking cessation and healthy lifestyle continuation, but the recommendations are truncated and lack fuller transfer-specific and future-cycle planning details requested in the prompt."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013644,
+  "judge_latency_ms": 4905.33479199803,
+  "judge_prompt_tokens": 2798,
+  "judge_completion_tokens": 350
+}

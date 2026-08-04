@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AA criteria (expansion stage, ICM cellularity, TE cohesiveness) based on the provided laboratory data. However, the image observation is vague and hedged ('somewhat low and blurry'), noting only a 'granular cluster in the upper right' without specific morphological details about zona pellucida thinning, blastocoel cavity appearance, or precise ICM/TE delineation from the actual image. The description largely restates the provided Gardner score rather than independently analyzing visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age with euploidy probability, AMH/FSH with ovarian reserve quality, paternal age with aneuploidy risk, BMI with implantation rates, ectopic history with monitoring needs, and stress with implantation. The male factor diagnosis is connected to sperm parameters and paternal age. Minor gap: the two previous failed cycles (no pregnancy + ectopic) could have been more deeply analyzed for recurrent implantation failure considerations, and endometrial thickness integration was brief."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability calculation (85% euploidy × ~70% euploid implantation rate ≈ 60%) is explicitly shown and coherent. The 60-75% range is well-justified. Minor inconsistency: BMI 30.4 is classified as 'obese' when it technically falls in the 'overweight' category (obese is ≥30, borderline here but typically 30.0 is the cutoff - this is a minor point). The reasoning flows well from evidence to conclusions without major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: early beta-hCG monitoring post-ectopic history, PGT-A consideration for recurrent failure and paternal age, endometrial thickness assessment, and single embryo transfer is implied. The PGT-A recommendation for paternal age of 40 is somewhat debated in guidelines (ASRM doesn't strongly recommend PGT-A solely for paternal age), but the rationale combining recurrent failure history is reasonable. BMI classification minor error noted. Overall well-aligned with evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, close beta-hCG monitoring, early ultrasound at 6 weeks, stress management referral, PGT-A for future cycles, BMI optimization, and tubal status review. These are clinically useful next steps. Could be more specific about luteal phase support protocols, progesterone supplementation, or specific beta-hCG monitoring intervals. The future cycle planning section is thorough. Overall provides clear, actionable guidance for the treating clinician."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018816,
+  "judge_latency_ms": 21368.317333995947,
+  "judge_prompt_tokens": 2682,
+  "judge_completion_tokens": 718
+}

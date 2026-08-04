@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0461",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but the image itself is suboptimal and the response likely overcalls ICM/TE quality and zona thinning from a single blurred frame."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, uterine factor, semen parameters, endometrium, prior cycle history, and lifestyle factors with embryo prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and structured, with appropriate caveats about morphology and uterine factors; minor issue is somewhat broad probability framing and confidence despite limited image quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines, including SET in a young patient and avoiding low-evidence add-ons; minor overprecision in miscarriage/probability estimates and some speculative comments."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear next steps for current transfer, uterine evaluation, lifestyle modification, monitoring, and future-cycle planning with practical clinical nuance."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01575,
+  "judge_latency_ms": 5335.01399999659,
+  "judge_prompt_tokens": 3865,
+  "judge_completion_tokens": 277
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Uses cautious language but misstates the stage relative to the provided Gardner 3AA, calling it stage 3 to early 4 and even cavitating/partially expanded, which is inconsistent with the lab grade; morphology description is generic rather than image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior failed cycles, endometrial thickness, BMI, semen parameters, diagnosis, and lifestyle reasonably well with embryo quality, though AMH absence and some cycle details are not deeply contextualized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear: good-quality embryo and favorable lining balanced against 3 prior failed cycles. Probability estimate is explained and recommendations follow from the stated concerns, despite some inconsistency in morphology staging."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice: favors single embryo transfer, notes morphology limits, avoids bed rest, and suggests uterine evaluation after repeated failure. Minor deviations include somewhat loose discussion of PGT-A and recurrent implantation failure workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support adherence, lifestyle optimization, uterine cavity assessment, and selective sperm DNA fragmentation testing; recommendations are useful though not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.017106,
+  "judge_latency_ms": 6768.563790945336,
+  "judge_prompt_tokens": 4067,
+  "judge_completion_tokens": 327
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0194",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the image as a cleavage-stage embryo or degenerating oocyte, whereas the image is consistent with a blastocyst within the zona. It incorrectly states there is no blastocoel/ICM/TE despite visible blastocyst architecture."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, sperm factors, endometrium, and lifestyle reasonably well with prognosis, though some statements are overstated and anchored to an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but built on a major false premise that the embryo is not a blastocyst. It also contains questionable logic such as calling FSH 8.0 elevated and stating age 36 is not advanced maternal age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is mishandled by rejecting a plausible blastocyst image, and recommendations such as donor eggs after a first cycle are premature. Some advice is reasonable, but several conclusions are not well aligned with standard IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical steps like verifying embryo-stage labeling, counseling on alcohol reduction, and discussing future options, but recommendations are skewed by the incorrect image interpretation and include overly aggressive suggestions."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013374,
+  "judge_latency_ms": 4702.691166006844,
+  "judge_prompt_tokens": 2803,
+  "judge_completion_tokens": 331
+}

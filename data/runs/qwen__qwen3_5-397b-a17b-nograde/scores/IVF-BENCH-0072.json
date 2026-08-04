@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0072",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment with expansion, ICM, TE, and zona comments, but some details appear overconfident from a single image and may over-specify features such as exact ICM position and grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, AMH, BMI, prior cycle, sperm quality, and endometrium well with embryo prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with a reasonable probability estimate tied to embryo quality and patient factors; minor overreach includes implying implantation issues after only one failed cycle."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially SET in a young patient and hydrosalpinx evaluation, though suggesting PGT-A and ERA early after a single failed transfer is more aggressive than standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives practical next steps for current transfer and contingency planning, including SET, tubal reassessment, luteal support, and future workup, though some recommendations could be better prioritized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.011823,
+  "judge_latency_ms": 3650.57158300624,
+  "judge_prompt_tokens": 2431,
+  "judge_completion_tokens": 302
+}

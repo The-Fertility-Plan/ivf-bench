@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0432",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the reported 3AA and notes thinning zona/ICM/TE, but overstates what is clearly visible in this single image and says it aligns 'perfectly'; TE and ICM detail are not as definitively discernible as described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, male factor, oocyte maturity, endometrium, smoking, and first-cycle status with prognosis reasonably well, though it overstates sperm quality as 'exceptional' and does not address missing AMH or limits of morphology-based prediction."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable overreaches: claiming very high euploidy probability (>80-90%) for age 34, calling 3AA the highest grade, and linking smoking to a need for 'robust progesterone support' without clear basis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and smoking cessation are guideline-concordant, but several statements are not well aligned with evidence/guidelines, including overstated euploidy likelihood, implying 3AA is the top possible grade, and suggesting PGT-A based mainly on morphology/perfection framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with SET, counseling on smoking cessation, luteal support, cryopreservation, and future-cycle discussion, though some recommendations are somewhat generic and one rationale for progesterone support is weak."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013335,
+  "judge_latency_ms": 6209.914874998503,
+  "judge_prompt_tokens": 2595,
+  "judge_completion_tokens": 370
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes no image was provided, but it incorrectly dismisses the supplied Gardner 2AB morphology due to the Day 4 discrepancy and therefore fails to analyze the stated blastocyst features (full blastocyst, strong ICM, loose/few-cell TE)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH/FSH, tubal factor, prior miscarriage, sperm parameters, and endometrial thickness well with prognosis, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable inconsistency in rejecting the provided morphology while still building prognosis around inferred embryo stage; some probability adjustments are heuristic rather than clearly evidence-based."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but recommending aggressive luteal support/estrogen and suggesting PGT-A after a single miscarriage in a 30-year-old are not strongly guideline-driven; the handling of the Day 4 vs Gardner discrepancy is also imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support review, alcohol cessation, beta-hCG timing, blastocyst culture, and uterine evaluation, though some recommendations are somewhat generic or overextended."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013398,
+  "judge_latency_ms": 4501.0550410006545,
+  "judge_prompt_tokens": 2781,
+  "judge_completion_tokens": 337
+}

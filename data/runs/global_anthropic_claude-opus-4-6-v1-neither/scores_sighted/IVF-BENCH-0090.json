@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0090",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating detailed morphology. However, it then assumed an average-quality 3BB-4BB blastocyst despite the actual image suggesting a poor-quality/degenerating or minimally expanded blastocyst with indistinct ICM and sparse TE, so this assumption limits accuracy."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH/FSH, BMI, prior cycle outcome, sperm parameters, and the Day 5 context well, and correctly highlighted the inconsistency between the DOR label and ovarian reserve markers. It missed some interaction with the likely poor embryo morphology because it could not assess the image."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear explanation for the probability estimate and acknowledgment of uncertainty. Minor issues include treating missing morphology as average quality and applying somewhat arbitrary penalties for unknown endometrial data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but recommending ERA after only one failed cycle and suggesting routine PGT-A in a 28-year-old without stronger indication are not strongly guideline-supported. The rest of the recommendations are generally consistent with standard IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and contingency planning, including clarifying reserve status, checking endometrial factors, and considering cavity evaluation if failures continue. Some recommendations are somewhat generic or premature, but overall it is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.42,
+  "judge_cost_usd": 0.014163,
+  "judge_latency_ms": 5583.951499997056,
+  "judge_prompt_tokens": 2741,
+  "judge_completion_tokens": 396
+}

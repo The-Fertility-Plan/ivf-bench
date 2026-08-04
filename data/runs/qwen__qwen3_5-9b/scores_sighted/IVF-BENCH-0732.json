@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0732",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible and misdescribes expansion: it calls the embryo 'fully expanded' while Gardner 2 is an early blastocyst with blastocoel filling the embryo, not full expansion. It also claims a clear large cavity and distinct central ICM/AA-quality TE from the image, which are not convincingly demonstrable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, tubal factor, endometrial thickness, sperm parameters, ovarian response, and prior cycle history reasonably well with embryo prognosis, though AMH is unavailable and some links (especially paternal age effects) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it labels 2AA as the 'highest possible' morphology, conflates paternal age with a major aneuploidy driver, and drops implantation estimates sharply based on factors that do not directly reduce implantation of an already formed blastocyst to that extent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with evidence-based IVF practice: strong emphasis on paternal age as a major aneuploidy cause, suggesting PGT-A for a single available Day-5 embryo immediately before transfer, and premature donor-oocyte discussion in a 33-year-old after one cycle are not guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives concrete next steps for transfer and future stimulation planning, but some advice is insufficiently nuanced or potentially impractical for this exact case, particularly the PGT-A suggestion and donor egg discussion."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.014142,
+  "judge_latency_ms": 6182.44579101156,
+  "judge_prompt_tokens": 2649,
+  "judge_completion_tokens": 413
+}

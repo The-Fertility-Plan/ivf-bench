@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it had no image and relied on the reported score, but it overcalled the embryo as non-viable and described absent/degenerative ICM and TE with certainty. The image appears more consistent with a compacting/cleavage-stage or morula-like day-4 embryo rather than a clearly degenerative blastocyst, so several morphology claims are not supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior outcomes, sperm parameters, endometrium, and cycle history reasonably well with embryo quality, though some inferences (e.g., likely PCOS, ruling out endometrial factors) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response is structured, but key conclusions are overstated: equating 0DD with absolute non-viability, assigning 0% implantation, and recommending transfer cancellation are not fully supported, especially given the day-4 transfer context and ambiguity of the grading notation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from standard evidence-based practice: declaring the embryo medically contraindicated for transfer, assigning 0% implantation, and broadly recommending PGT-A/immunologic-thrombophilia workup in a 24-year-old after limited losses are stronger than guideline-supported indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps such as cycle review, sperm DNA fragmentation testing, protocol reconsideration, and lab audit. However, some actions are too definitive or insufficiently nuanced for this specific day-4 scenario."
+    }
+  ],
+  "extracted_probability": 0.0,
+  "judge_cost_usd": 0.015018,
+  "judge_latency_ms": 5308.652167004766,
+  "judge_prompt_tokens": 2956,
+  "judge_completion_tokens": 410
+}

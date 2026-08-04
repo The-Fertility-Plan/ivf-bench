@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0217",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst with poorly defined ICM/TE, but it misstates Gardner expansion 1 as blastocoel less than half the embryo despite the provided definition saying at least half, and it overcalls specific degeneration/apoptosis features not reliably discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates age, AMH, oocyte maturity, male-factor context, and lifestyle reasonably well, though some links are speculative (PCOS, trigger issue, sperm DNA fragmentation) without supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are notable issues: it labels the embryo definitively non-viable and predicts essentially zero implantation from morphology alone, and some conclusions extend beyond the available evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but stating the embryo is categorically unsuitable/non-viable and recommending cancellation solely on this basis is stronger than standard morphology-based guidance; some protocol and PGT-A recommendations are also somewhat overgeneralized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions for counseling, protocol review, sperm workup, and future cycle planning, though the immediate recommendation to cancel transfer is overly absolute and not sufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012912,
+  "judge_latency_ms": 4782.6863340014825,
+  "judge_prompt_tokens": 2504,
+  "judge_completion_tokens": 360
+}

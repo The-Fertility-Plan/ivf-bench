@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0728",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies the poor ICM and TE grades consistent with 'DD' designation. However, the expansion grade description contains an error: Gardner Grade 1 actually means the blastocoel is less than half the embryo volume, but the provided lab data states 'blastocoel at least half the embryo' for Grade 1 in this system — the model's interpretation of Grade 1 expansion is inconsistent with the provided scoring key. The image actually shows a reasonably expanded blastocyst with visible cellular structure, and the model's description of the outer layer as 'thin and sparse' is reasonable but lacks detail about the zona pellucida thinning or absence, and the overall compaction pattern visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates key clinical factors including maternal age (38), low AMH (1.71), poor oocyte yield (4 MII), excellent sperm parameters, and optimal endometrial thickness. It correctly identifies the 'poor responder' profile and connects embryo quality to age-related aneuploidy risk. The former smoking history is noted as a risk factor. Minor gap: FSH of 6.2 IU/L is actually reassuring and could have been highlighted as a favorable indicator, and the unexplained infertility diagnosis could have been discussed in more depth relative to implantation failure risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to patient factors to probability estimate. The 5-10% implantation probability is consistent with the evidence presented for a 1DD embryo in a 38-year-old. The model correctly identifies the embryo as the limiting factor while noting favorable uterine and sperm conditions. Minor inconsistency: the model describes Grade 1 expansion somewhat ambiguously given the lab data definition provided, but overall conclusions remain internally consistent and well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines for poor responders. CoQ10 and DHEA supplementation suggestions are evidence-based though DHEA evidence remains mixed per current guidelines. Growth hormone mention is appropriate for poor responders per ESHRE Bologna criteria context. However, the recommendation for 'low-dose aspirin or heparin' without thrombophilic indication is not guideline-supported and the model itself notes this uncertainty. PGT-A discussion is appropriate. The transfer decision framework aligns with clinical practice. Donor egg counseling is appropriately timed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations including counseling points, luteal phase support, specific supplements (CoQ10, DHEA, rhGH), protocol adjustment suggestions, smoking cessation priority, and a pathway to donor eggs. The decision framework for whether to transfer is practical. Recommendations are well-organized into immediate and future planning categories. Could be improved by specifying dosages for supplements, suggesting specific FSH dose adjustments, or recommending ERA testing given unexplained infertility diagnosis, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.020643,
+  "judge_latency_ms": 19891.08375000069,
+  "judge_prompt_tokens": 3056,
+  "judge_completion_tokens": 765
+}

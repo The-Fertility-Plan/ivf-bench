@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0662",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Relies heavily on the provided 0DD label and describes features not confidently visible in the image, including a poorly defined blastocoel and degenerative TE/ICM; the image interpretation is internally uncertain and partly speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, sperm quality, endometrial thickness, BMI, stress, and endometriosis with embryo prognosis well, though it somewhat over-attributes the poor embryo to endometriosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable and the poor prognosis follows from the stated grade, but there are notable inconsistencies in image interpretation and some overstatements about causality and future yield expectations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent that a 0DD embryo has very poor prognosis, but recommendations such as surgery/GnRH suppression, aiming for 20+ oocytes, and blanket freeze-all are stronger than guideline-based evidence would support for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including counseling, transfer decision framing, endometriosis/stress management, and future cycle considerations, though some suggestions are not sufficiently individualized or evidence-calibrated."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.01173125,
+  "judge_latency_ms": 7666.115042055026,
+  "judge_prompt_tokens": 6873,
+  "judge_completion_tokens": 314
+}

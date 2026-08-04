@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score - expanded blastocyst, visible TE layer, discernible ICM, and thinning zona pellucida. However, the description is somewhat generic and largely mirrors the Gardner score definitions provided in the lab data rather than demonstrating independent image analysis. The description of 'no obvious signs of significant fragmentation' and 'uniform size and shape' adds some detail but lacks the precision expected from true image-based morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most clinical factors well - age, FSH, oocyte yield, endometrial thickness, sperm parameters, and lifestyle factors are all connected to the embryo assessment and prognosis. The smoking impact on endometrial receptivity and oocyte quality is well-articulated. Minor gap: AMH is N/A but not addressed, and the 'Other' diagnosis receives only superficial treatment. The interaction between age-related aneuploidy risk and morphological grading is appropriately highlighted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality through patient factors to probability estimate. The 45-60% range is reasonably justified with specific reasoning for each contributing factor. The model correctly identifies that smoking reduces implantation rates and that aneuploidy risk at age 37 is a key uncertainty. One minor inconsistency: the endometrial thickness of 16.5mm is described as 'excellent' and 'ideal' but is actually above the typical optimal range (7-14mm cited by the model itself), which could warrant a note about potential suboptimal receptivity at higher thicknesses."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines - smoking cessation advice, PGT-A discussion for age 37, luteal phase support, ERA consideration for recurrent failure, and Mediterranean diet recommendations are all evidence-based. The probability range is reasonable for a 3AA blastocyst at age 37. Minor issue: the model states 16.5mm endometrial thickness is 'within optimal range' citing 7-14mm, which is self-contradictory and slightly misaligned with guidelines that suggest >14mm may be associated with reduced outcomes."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and well-organized into immediate transfer recommendations and future cycle planning. Smoking cessation, alcohol abstinence, stress reduction, progesterone support, PGT-A discussion, ERA consideration, and psychological support are all practical and clinically relevant. The recommendation to advise smoking cessation 'even a short period before transfer' is appropriately nuanced. Could be improved with more specific dosing or timing recommendations for luteal support, and clearer guidance on whether to proceed with transfer given the smoking status."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.02046,
+  "judge_latency_ms": 15016.763874999015,
+  "judge_prompt_tokens": 3320,
+  "judge_completion_tokens": 700
+}

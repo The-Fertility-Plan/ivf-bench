@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls embryo quality. The image suggests an expanded blastocyst with a large blastocoel, but the ICM is not clearly compact/A-grade and the TE does not appear uniformly numerous/cohesive enough for A. Calling it 4AA/5AA and suggesting early hatching is not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, sperm parameters, endometrium, and cycle history with prognosis reasonably well. Some links are overstated, especially equating thick endometrium with high receptivity and assuming male factor is broadly favorable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but conclusions rely on an inflated morphology assessment and optimistic implantation estimate. There are minor reasoning issues such as inferring euploid likelihood from morphology and overstating the significance of endometrial thickness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are broadly guideline-consistent, but ERA is suggested too readily, PGT-A is framed somewhat simplistically, and morphology grading appears inconsistent with Gardner criteria as visible in the image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, alcohol avoidance, and weight optimization. Some recommendations are generic and a few future options are not tightly tailored to this specific first-cycle scenario."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.015915,
+  "judge_latency_ms": 5450.740500004031,
+  "judge_prompt_tokens": 3415,
+  "judge_completion_tokens": 378
+}

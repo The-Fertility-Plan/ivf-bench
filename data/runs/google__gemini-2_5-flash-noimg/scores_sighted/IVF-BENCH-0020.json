@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0020",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner 2BA grade rather than inventing image-specific findings. Its description of 2BA is broadly consistent with the label, but it repeated the prompt's incorrect interpretation of expansion 2 as a 'full blastocyst' and did not assess visible image features such as zona thinning or the somewhat indistinct ICM."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, BMI, tubal factor, prior live birth, endometrial thickness, sperm parameters, and prior cycle history, and relates them to prognosis. Minor overstatements include calling 4 MII from 7 COCs a clearly 'good yield' and inferring too much from missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly internally consistent, with a plausible prognosis tied to embryo grade and patient factors. The main issue is the unresolved inconsistency between a Day 4 transfer and a blastocyst Gardner score, plus some optimistic interpretation of embryo stage."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are notable deviations: misstatement of Gardner expansion stage 2, somewhat casual endorsement of PGT-A in a 32-year-old with tubal factor after limited prior failure, and emphasis on stress reduction as if it may materially alter implantation odds."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including clarifying developmental day, reinforcing luteal support adherence, and considering protocol review if unsuccessful. Recommendations are useful, though some are generic and not highly tailored."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016524,
+  "judge_latency_ms": 6154.406792004011,
+  "judge_prompt_tokens": 3363,
+  "judge_completion_tokens": 429
+}

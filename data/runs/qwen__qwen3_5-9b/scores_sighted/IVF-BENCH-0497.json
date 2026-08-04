@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0497",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes poor ICM/TE quality consistent with 1DD, but it incorrectly calls the embryo 'fully expanded' and overstates certainty about features not clearly visible; Gardner 1 is an early blastocyst with blastocoel at least half the embryo, not full expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, oocyte yield, prior cycle, endometrium, lifestyle, and sperm data with embryo quality reasonably well, though it somewhat overattributes embryo quality to low AMH and underexplores that sperm parameters are not clearly severe male factor."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: misinterpretation of expansion stage, calling one prior failed cycle 'recurrent implantation failure,' and a somewhat overconfident causal link between ovarian reserve and embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and caution about poor prognosis are aligned, but recommending donor eggs as the next logical step after one cycle in a 35-year-old with 4 MII oocytes is too aggressive, and SDF testing is not universally guideline-driven in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for counseling, proceeding with transfer, and future considerations such as protocol review, possible SDF testing, and PGT-A limitations, though some recommendations are insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013575,
+  "judge_latency_ms": 5078.861791989766,
+  "judge_prompt_tokens": 2640,
+  "judge_completion_tokens": 377
+}

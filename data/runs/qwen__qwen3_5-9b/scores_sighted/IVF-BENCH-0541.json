@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0541",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a blastocyst with a visible ICM-like cluster and generally cohesive outer cell layer, but overstates confidence in expansion and zona thinning from this image and labels it 'top-tier' despite the reported score being 3AA rather than the highest expansion stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior live births, endometrium, and sperm factors with embryo quality reasonably well, though it overcalls the sperm as excellent despite very low motility and gives a speculative interpretation of the PCOS/AMH discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly clear, but there are notable issues: sperm parameters are inconsistently characterized, the AMH/PCOS explanation is speculative, and the implantation estimate is somewhat optimistic relative to the mixed clinical picture."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology is broadly appropriate, but calling 3AA the 'highest morphological grade' is inaccurate, and the response does not clearly reflect evidence-based caution around morphology-only prediction and male factor implications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides risk/favorable factor discussion and a probability estimate, but practical transfer recommendations and future cycle planning are limited and incomplete."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.011793,
+  "judge_latency_ms": 5168.778042003396,
+  "judge_prompt_tokens": 2206,
+  "judge_completion_tokens": 345
+}

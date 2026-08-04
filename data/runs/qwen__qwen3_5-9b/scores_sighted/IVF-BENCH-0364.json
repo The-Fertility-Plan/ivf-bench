@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0364",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst, but it overstates visible certainty: the image does not clearly show hatching, the ICM location/quality is not sharply defined, and TE detail is somewhat inferred from the reported grade rather than plainly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, PCOS, endometrial thickness, sperm parameters, smoking, and prior cycle history with embryo quality in a clinically meaningful way, though AMH is unavailable and some claims about PCOS/aneuploidy are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is mostly structured and internally consistent, but there are notable issues: it calls the embryo 'high-quality/excellent' despite 3BA being good rather than top-tier, suggests hatching from a grade 3 embryo, and links PCOS to higher aneuploidy too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading, smoking cessation, and proceeding with transfer, but it inaccurately implies grade 3 means hatching, overstates PGT-A rationale in a 32-year-old based on limited failure history, and makes some nonstandard claims about PCOS and euploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, counseling on smoking cessation, monitoring endometrial/estradiol context, and future lifestyle optimization; however, recommendations could be more nuanced about fresh vs frozen strategy and indications for additional testing."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.013878,
+  "judge_latency_ms": 5009.112250001635,
+  "judge_prompt_tokens": 2626,
+  "judge_completion_tokens": 400
+}

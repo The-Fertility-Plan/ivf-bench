@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible and misinterprets the expansion stage: a Gardner 2 blastocyst is an early/full blastocyst with blastocoel occupying more than half the embryo, not a hatched or hatching embryo. It also labels the embryo as top-tier despite 2AA not being among the highest expansion stages. ICM/TE comments are broadly consistent with the provided grade but not strongly image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, prior IVF outcomes, endometrial thickness, sperm parameters, BMI, and ovarian response with embryo quality reasonably well. However, it overcalls FSH 7.4 as suggesting DOR without AMH and does not fully nuance the distinction between embryo-related and uterine/tubal factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: calling the embryo both a grade 2 full blastocyst and effectively hatching, claiming euploid success would be >90%, and using aggressive certainty around aneuploidy and implantation rates that are not well supported. The probability estimate is plausible but some supporting claims are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several points deviate from standard IVF guidance: incorrect interpretation of Gardner expansion stage 2, overstatement of morphology-based implantation rates, unsupported claim that euploid transfer success is >90%, and nonstandard beta-hCG timing ('Day 3, Day 7, Day 14'). PGT-A may be considered but is presented too strongly as the key explanation for prior failures."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps including proceeding with transfer, early ectopic surveillance, luteal support, and future considerations such as PGT-A, hysteroscopy, and sperm DNA fragmentation testing. Some recommendations are useful, though a few are overly prescriptive or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015492,
+  "judge_latency_ms": 6655.575583004975,
+  "judge_prompt_tokens": 2734,
+  "judge_completion_tokens": 486
+}

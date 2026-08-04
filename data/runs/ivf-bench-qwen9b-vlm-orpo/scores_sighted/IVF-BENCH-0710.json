@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0710",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a generally plausible blastocyst description and appropriately notes uncertainty from a single still image, but it overstates confidence in ICM/TE quality and questions hatching despite the provided Gardner 4AA label. Some described features (continuous TE, multiple distinct nuclei, no obvious herniation) are not clearly supported by this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, endometrium, sperm parameters, prior cycle history, and smoking with embryo quality and prognosis. However, it mishandles the DOR label by implying overdiagnosis despite AMH and response being inconsistent with classic DOR, rather than more carefully reconciling the discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and the implantation estimate broadly follows from age, day-5 AA morphology, and favorable uterine factors. Minor issues include tension between doubting the hatching stage on image review while still treating the embryo as top-tier 4AA, and some overinterpretation of reserve data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are mostly evidence-based: single embryo transfer, smoking cessation, standard luteal support, no bed rest, and cautious discussion of PGT-A at age 34 are aligned with common IVF guidance. Small deviations include speculative comments about DOR overdiagnosis and some nonessential adjunct suggestions without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer, monitoring, lifestyle modification, and future-cycle considerations. The advice is useful and reasonably specific, though some future-cycle suggestions are somewhat generic and not tightly tailored to a first-cycle patient with otherwise favorable parameters."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.01731,
+  "judge_latency_ms": 5524.796208992484,
+  "judge_prompt_tokens": 3635,
+  "judge_completion_tokens": 427
+}

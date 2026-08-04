@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating detailed morphology. However, it did not analyze the actual visible embryo, which appears blastocyst-stage rather than a Day 4 morula, so morphology assessment is limited and partly mismatched to the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, protocol, endometrial thickness, sperm parameters, BMI, and cycle history into prognosis reasonably well, though some links to embryo-specific quality remain inferential because morphology was not assessed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear explanation for the probability estimate. Minor issues include overinterpreting 100% MII as a strong proxy for embryo quality and some speculative statements about Day 4 transfer rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "It is broadly aligned on age-related prognosis, limited role for PGT-A at age 26, and noting Gardner grading is for blastocysts. However, suggestions such as low-dose aspirin/immunomodulators and combined IM/vaginal progesterone for endometriosis are not strongly guideline-based, and calling long agonist the 'gold standard' is somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next-step recommendations for transfer management and future planning, including luteal support, consideration of FET strategy, and when to consider further sperm testing. Some recommendations are somewhat generic or speculative but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01416,
+  "judge_latency_ms": 5474.003708004602,
+  "judge_prompt_tokens": 2850,
+  "judge_completion_tokens": 374
+}

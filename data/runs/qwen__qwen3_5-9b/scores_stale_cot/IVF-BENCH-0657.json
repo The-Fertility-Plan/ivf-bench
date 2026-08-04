@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0657",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly expresses uncertainty and likely misreads the image, at times calling it a degenerating oocyte, cleavage embryo, morula, or poor-quality blastocyst. Final morphology largely defaults to the provided 3BA label and includes features not confidently visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior biochemical pregnancies/miscarriage, endometrium, sperm parameters, and BMI reasonably well with embryo quality and prognosis, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "There are major internal contradictions in the reasoning, especially around image interpretation and implantation estimates (10-20%, 15-25%, and reference to ~50%). The final conclusion is understandable but the chain of reasoning is inconsistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of age-related aneuploidy risk are appropriate, but statements such as PGT-A being 'mandatory' and claiming it would eliminate miscarriage/biochemical risk are not guideline-consistent. Donor eggs are raised somewhat prematurely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps including proceeding with transfer, luteal support, beta-hCG monitoring, and discussing PGT-A/future workup. Recommendations are useful, though some are too strong or insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.0113925,
+  "judge_latency_ms": 5959.336290950887,
+  "judge_prompt_tokens": 6226,
+  "judge_completion_tokens": 361
+}

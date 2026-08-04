@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite explicit data of 0DD. It fails to describe the known morphology: early blastocyst with blastocoel less than half the embryo and degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most major patient factors well, including age, ovarian reserve, prior outcomes, sperm parameters, BMI, and endometrium, and relates them to prognosis, though it underweights the severe adverse impact of the 0DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but has a major internal flaw: it bases prognosis on absent morphology data when morphology was actually provided and very poor. This leads to an implausibly optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent, but there are notable deviations: routine PGT-A in a 24-year-old is not standard, thrombophilia/MTHFR testing is not routinely recommended, and the embryo-grade omission undermines Gardner-based assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for luteal support, monitoring, future culture strategy, and workup, though some recommendations are overreaching for this specific profile and should have been more tailored to the poor 0DD embryo quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012939,
+  "judge_latency_ms": 4963.035207998473,
+  "judge_prompt_tokens": 2498,
+  "judge_completion_tokens": 363
+}

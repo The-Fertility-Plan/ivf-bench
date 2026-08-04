@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0282",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 2AA label, but it overstates certainty from the image alone, mislabels stage 2 as 'full blastocyst,' and localizes a clearly defined ICM/TE pattern more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, prior IVF outcomes, endometrial thickness, BMI, diagnosis, and semen parameters with embryo quality in a clinically meaningful way, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with the implantation estimate tied to embryo quality and adverse history; minor issues include some overconfident statements about morphology and prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and caution about morphology versus ploidy, but includes adjuncts such as aspirin, sildenafil, L-arginine, and ERA that are not routinely guideline-supported, and overemphasizes PGT-A as highest priority."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and contingency planning, including SET, luteal support optimization, and further workup, though some recommendations are controversial rather than standard."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013224,
+  "judge_latency_ms": 4396.915125005762,
+  "judge_prompt_tokens": 2733,
+  "judge_completion_tokens": 335
+}

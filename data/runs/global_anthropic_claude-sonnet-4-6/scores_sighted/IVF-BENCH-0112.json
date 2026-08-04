@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0112",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a blastocyst and broadly matches the provided 3AB label, but it overstates confidence in ICM/TE detail from this single image and likely fabricates 'several refractile vacuoles/bubbles' and specific quadrant localization not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior failed cycles, sperm parameters, diagnosis, and endometrium with embryo quality in a clinically meaningful way, though some links are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical and the prognosis is internally consistent, but several deductions rely on weak assumptions (vacuolation, former smoking effects, short agonist concerns), and the probability adjustments are somewhat arbitrary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Many points are broadly standard, but recommendations such as aspirin, endometrial scratch, NK testing, broad thrombophilia screening, MTHFR testing, and ERA as routine follow-up are not well aligned with current evidence-based IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for transfer technique, luteal support review, and post-failure workup/future planning, though some suggested interventions are not evidence-based enough for top marks."
+    }
+  ],
+  "extracted_probability": 0.26,
+  "judge_cost_usd": 0.014082,
+  "judge_latency_ms": 5225.930125001469,
+  "judge_prompt_tokens": 3044,
+  "judge_completion_tokens": 330
+}

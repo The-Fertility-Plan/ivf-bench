@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model incorrectly identifies the embryo as an early blastocyst (Grade 2) with a small or forming blastocoel, contradicting the Gardner score description of 'full blastocyst' where blastocoel fills the embryo. The model creates a false discrepancy, claiming the image shows Grade 2 expansion rather than accepting the provided Gardner score. The ICM and TE descriptions are reasonable but the core expansion stage assessment is inaccurate and the model fabricates a contradiction that undermines the morphological analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: female age 30 with PCOS, high AMH and oocyte yield, paternal age 40 with sperm parameters, endometrial thickness, and BMI. It connects these factors to embryo quality and prognosis meaningfully. Minor gaps include insufficient discussion of alcohol consumption (4-6 drinks/week is clinically significant for IVF outcomes) and sedentary lifestyle impact on PCOS management, but overall integration is solid."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally coherent but contains a notable self-contradiction: the model disputes the Gardner score expansion grade based on its own image interpretation, then proceeds to use '2AB' as the basis for probability estimates. The probability range of 40-50% is reasonable but the justification is somewhat circular. The TE grade B discussion contains a minor error where the model momentarily confuses grading direction ('A or C') before self-correcting. Overall logic flows adequately but the manufactured discrepancy weakens coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are mostly aligned with ESHRE/ASRM guidelines. PGT-A discussion is appropriate for age 30. Luteal support recommendation is sound. However, the model incorrectly states 7mm endometrial thickness is 'ideal' when most guidelines consider 7mm as the minimum acceptable threshold, not optimal. The suggestion to consider ICSI for future cycles based solely on paternal age 40 with normal sperm parameters is not well-supported by current evidence-based guidelines. Gardner grading interpretation also deviates from standard criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations: proceed with transfer, consider PGT-A in future cycles if failure occurs, address BMI and lifestyle factors, ensure luteal support, and consider ICSI if needed. Recommendations are practical and case-specific. The alcohol consumption concern (4-6 drinks/week) is notably absent from lifestyle recommendations, which is a clinically important omission. Otherwise, the actionable guidance is well-structured and useful for a clinician."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01836,
+  "judge_latency_ms": 14029.191583002103,
+  "judge_prompt_tokens": 2765,
+  "judge_completion_tokens": 671
+}

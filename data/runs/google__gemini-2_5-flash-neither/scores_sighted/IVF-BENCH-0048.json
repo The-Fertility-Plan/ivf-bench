@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating embryo morphology. It did not describe the visibly poor/degenerate blastocyst features in the actual image, but this omission should not be penalized heavily given the prompt constraint."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, tubal factor, sperm quality, endometrium, prior IVF outcomes, and lifestyle into prognosis reasonably well, though some links to the actual embryo quality are necessarily hypothetical."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to assumptions about embryo quality. Minor issues include speculative assumptions and somewhat overstating implications of normal FSH/oocyte yield."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (eSET, review prior cycles, uterine assessment if recurrent failure persists), but strong endorsement of PGT-A, ERA/EMMA/ALICE, and immunologic workup is more controversial and not uniformly guideline-supported in this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer and future planning, including review of prior cycles, luteal support, transfer technique, and possible further workup. Some suggestions are somewhat generic or contingent on unavailable morphology."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015048,
+  "judge_latency_ms": 4788.185375000467,
+  "judge_prompt_tokens": 3351,
+  "judge_completion_tokens": 333
+}

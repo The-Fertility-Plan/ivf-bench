@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0496",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies very poor morphology with absent/degenerate ICM and TE, but it misinterprets the expansion stage: Gardner 1 means blastocoel at least half the embryo, not less than half, and the image still shows an early blastocoel rather than complete absence."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, BMI, prior IVF outcomes, sperm parameters, and endometrium with embryo quality reasonably well, though it somewhat overstates certainty that age/aneuploidy explains the current morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured, but there are important overreaches: calling the embryo definitively non-viable/arrested from a single image and equating 1DD with zero chance is stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent, but several recommendations are overstated or weakly supported, especially advising transfer cancellation solely on morphology, strong endorsement of PGT-A as preventing transfer of abnormal embryos in this context, and broad thrombophilia/autoimmune workup after one miscarriage."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next-step recommendations for transfer decision-making and future cycle planning, including counseling, testing, and lifestyle measures, though some actions are too categorical rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013149,
+  "judge_latency_ms": 6874.59570899955,
+  "judge_prompt_tokens": 2553,
+  "judge_completion_tokens": 366
+}

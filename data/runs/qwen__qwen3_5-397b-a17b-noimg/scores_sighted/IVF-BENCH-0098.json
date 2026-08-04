@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0098",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided 3AB score, which avoids fabrication. However, it inaccurately described stage 3 as fully expanded with thinning zona (more consistent with stage 4), so morphology is only moderately accurate relative to the actual image/criteria."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, BMI, AMH, PCOS, prior live birth/miscarriage/ectopic, partner age, sperm parameters, and endometrium with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is well organized and mostly logical, with a clear prognosis and rationale. Minor issues include overcalling 3AB as 'top-tier' and some speculative deductions (e.g., AMH/PCOS discordance, paternal-age impact magnitude)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (SET, luteal support, early scan after prior ectopic), but there are deviations: PGT-A is presented too strongly for age 31 based mainly on paternal age/miscarriage history, and 'deep fundal placement' is not standard wording and could be misleading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, progesterone monitoring consideration, early pregnancy surveillance, weight optimization, and possible sperm DNA fragmentation testing. Some recommendations are useful but not fully nuanced."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014811,
+  "judge_latency_ms": 5130.189791001612,
+  "judge_prompt_tokens": 2952,
+  "judge_completion_tokens": 397
+}

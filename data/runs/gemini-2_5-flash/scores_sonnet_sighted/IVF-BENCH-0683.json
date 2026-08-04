@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0683",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AB score (expanded blastocyst, tightly packed ICM, loose TE epithelium), but largely echoes the provided laboratory data rather than independently analyzing the image. The description acknowledges uncertainty ('not perfectly clear in the image'), and doesn't add significant independent morphological observations beyond what was given in the Gardner score metadata. The image shows a partially hatching or expanded blastocyst with visible ICM, and the response captures this adequately but without deep independent analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most clinical factors well, connecting BMI to endometrial receptivity and oocyte quality, age to euploidy likelihood, FSH to ovarian reserve, sperm parameters to embryo quality, and endometrial thickness to implantation potential. It also addresses lifestyle factors including alcohol, stress, diet, and activity level. Minor gap: AMH is listed as N/A but not discussed, and the 'Other' diagnosis is acknowledged but not explored with possible differential considerations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The 60-70% implantation probability estimate is well-supported by the cited favorable factors (age, embryo quality, endometrial thickness) with appropriate acknowledgment of mitigating factors (BMI, stress). The conclusion flows naturally from the evidence. Minor issue: the response slightly underweights the negative impact of BMI 32 on implantation rates, which some literature suggests is more significant than presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst in a 32-year-old is appropriate, luteal phase support is mentioned, PGT-A is correctly positioned as not routinely indicated for first transfer in a young patient, and lifestyle modifications are evidence-based. The alcohol cessation advice aligns with guidelines. Minor gap: no mention of specific progesterone protocols or timing considerations for frozen vs. fresh transfer context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET recommendation with clear rationale, concrete lifestyle modifications (alcohol cessation, stress management, physical activity), endometrial support reminder, and future cycle planning including weight management targets (BMI below 30 or 25), multidisciplinary approach, and conditional PGT-A consideration. Could be improved with more specific timing recommendations, follow-up monitoring suggestions, or specific stress intervention modalities with evidence base."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.020076,
+  "judge_latency_ms": 14640.7287500042,
+  "judge_prompt_tokens": 3532,
+  "judge_completion_tokens": 632
+}

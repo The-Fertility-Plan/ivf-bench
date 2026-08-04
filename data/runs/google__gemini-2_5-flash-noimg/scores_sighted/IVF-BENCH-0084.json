@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states no image was provided and bases morphology on the supplied 3AB grade rather than inventing image-specific findings. However, it repeats an inaccurate definition from the prompt by calling stage 3 'expanded blastocyst with thinning zona' (more consistent with stage 4), so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, tubal factor diagnosis, prior IVF history, sperm parameters, endometrial thickness, and lifestyle with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is clear and internally consistent, and the implantation estimate broadly follows from the favorable profile. Minor issues include overconfidence in some predictors and linking TE grade B to aneuploidy risk without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, especially support for single embryo transfer in a good-prognosis 33-year-old. Small deviations include suggesting assisted hatching and implying TE grade B may indicate aneuploidy, which are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, review of prior cycle, and uterine evaluation if repeated failure occurs. Some suggestions remain somewhat generic rather than highly case-specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014826,
+  "judge_latency_ms": 6417.633791992557,
+  "judge_prompt_tokens": 3132,
+  "judge_completion_tokens": 362
+}

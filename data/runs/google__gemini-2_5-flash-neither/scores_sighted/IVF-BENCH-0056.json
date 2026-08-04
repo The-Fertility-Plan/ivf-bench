@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate embryo morphology. It appropriately declined morphological grading rather than making unsupported claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, tubal factor, sperm quality, endometrium, BMI, smoking, and transfer timing into prognosis well, though without image-based embryo assessment it could not fully connect morphology to outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis adjusted for favorable baseline factors and detractors like smoking and obesity. Minor issue: the quantitative impact estimates are somewhat generalized."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: acknowledge need for morphology, support eSET in a young patient, and emphasize smoking cessation and weight optimization. Slight overreach in calling smoking cessation a non-negotiable condition and in suggesting PGT-A relatively early."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycles, including smoking cessation, weight management, review of embryo grading, and consideration of eSET. Could be more specific on immediate transfer management and counseling thresholds."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.014142,
+  "judge_latency_ms": 4557.0443339966005,
+  "judge_prompt_tokens": 3199,
+  "judge_completion_tokens": 303
+}

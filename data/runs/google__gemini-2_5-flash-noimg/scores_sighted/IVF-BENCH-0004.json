@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states that no image was provided and bases morphology on the supplied Gardner 3AA grade rather than inventing image-specific findings. However, it repeats the prompt's incorrect interpretation that stage 3 is 'expanded blastocyst with thinning zona' (more consistent with stage 4), so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age-related aneuploidy risk, ovarian reserve, prior live birth, endometrial thickness, sperm quality, BMI, and uncertainty around the diagnosis. It connects these factors to prognosis, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is logically structured and generally consistent, with conclusions flowing from embryo grade and patient factors. Minor issues include overconfidence in the implantation estimate and some imprecision around day-4 versus blastocyst-stage timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are broadly guideline-concordant. However, the discussion of a day-4 '3AA blastocyst' is not well reconciled with standard Gardner usage, and the implantation estimate is somewhat high for age 36 without PGT-A."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, pregnancy testing, cryopreservation, and consideration of PGT-A in future cycles. Useful overall, though some recommendations remain generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.015354,
+  "judge_latency_ms": 5125.59524999233,
+  "judge_prompt_tokens": 3168,
+  "judge_completion_tokens": 390
+}

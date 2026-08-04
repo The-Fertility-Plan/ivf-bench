@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0074",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and avoided direct morphology claims. However, it speculated that a Day 5 transfer would typically meet at least a 3BB equivalent, which is not supported by the actual image and introduces an unverified morphology assumption."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, endometrial thickness, male factor context, and first-cycle status into prognosis reasonably well. Some links are somewhat generic and it infers unprovided male-factor details, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis estimates tied to age, blastocyst-stage transfer, and endometrial factors. Minor issues include speculative assumptions about embryo minimum quality and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice, including preference for single embryo transfer in a good-prognosis young patient and appropriate caution about lifestyle factors. Slight overreach appears in implying a typical minimum 3BB threshold and in somewhat strong endorsement of PGT-A in a young good-prognosis patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future planning, including luteal support adherence, alcohol cessation, activity guidance, eSET, and possible sperm DNA fragmentation testing. It is useful, though some advice remains somewhat general rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014256,
+  "judge_latency_ms": 5245.09583300096,
+  "judge_prompt_tokens": 2852,
+  "judge_completion_tokens": 380
+}

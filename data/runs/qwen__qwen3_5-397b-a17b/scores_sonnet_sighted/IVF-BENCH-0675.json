@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expansion stage (Grade 3), ICM location and loosely grouped appearance consistent with Grade B, and TE as sparse/loose epithelium consistent with Grade B. The zona pellucida thinning observation is noted. Minor issue: the response mentions thinning 'particularly on the right side' which is a reasonable interpretation but somewhat speculative. The ICM positional description ('7 o'clock') is a nice specific detail. Overall well-matched to both the image and the Gardner score provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: age (31) as favorable for euploidy, BMI 40.4 as a significant detractor with mechanistic explanation (follicular fluid composition, endocrine disruption), smoking with vascular mechanism, endometriosis inflammatory environment, two prior failed cycles as a red flag for RIF, borderline sperm motility linked to DNA fragmentation, and optimal endometrial thickness as favorable. The interaction between these factors and embryo quality/implantation potential is clearly articulated throughout."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate (25-35%) follows logically from the stepwise adjustment starting from a baseline of 50-60% for age/day, then adjusting downward for embryo grade, BMI, smoking, and history. The reasoning is internally consistent and conclusions are supported by observations. Minor issue: the response is cut off at recommendation #5, suggesting incomplete output. The quantitative adjustments for BMI (-20-30%) and smoking (-20%) are reasonable approximations though somewhat simplified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for high-BMI patients to avoid multiple pregnancy risks, PGT-A discussion for recurrent implantation failure, ERA testing for endometriosis patients, sperm DNA fragmentation testing for borderline parameters, and weight management referral. Luteal support recommendation is appropriate. The response correctly identifies RIF criteria (2 failed cycles). Minor gap: could have mentioned ESHRE endometriosis guidelines more specifically or addressed whether frozen embryo transfer might be preferable given the patient's profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with clear rationale, immediate smoking cessation, dual-route progesterone support, bariatric referral, PGT-A for future cycles, sperm DNA fragmentation testing, and ERA if this transfer fails. The sequencing of recommendations (current transfer vs. future planning) is clinically logical. The response is cut off before completing recommendation #5, which slightly reduces completeness. Could have been more specific about smoking cessation resources or weight loss targets before next transfer."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.019629,
+  "judge_latency_ms": 15935.099916998297,
+  "judge_prompt_tokens": 3118,
+  "judge_completion_tokens": 685
+}

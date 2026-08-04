@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0163",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly identifies a poor-quality early blastocyst/compacted appearance, but it misstates Gardner stage 1 as blastocoel less than half the embryo (rather than at least half), and adds speculative features like dark/granular degeneration not clearly visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, tubal factor, BMI, smoking, prior failed cycles, endometrium, and paternal age with embryo quality reasonably well, though some links (especially paternal age to this specific embryo outcome) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: very poor embryo morphology drives low prognosis despite favorable age and uterine factors. Minor issues include overinterpretation of why Day 4 transfer occurred and causal attribution to sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but there are deviations: incorrect Gardner stage interpretation, overconfident endorsement of PGT-A in a young patient with low embryo yield, and speculative use of adjunct sperm-selection methods without strong guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for counseling, lifestyle modification, male-factor workup, and future cycle review. However, some recommendations are not sufficiently prioritized or nuanced for low-yield cycles."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013596,
+  "judge_latency_ms": 4856.215332998545,
+  "judge_prompt_tokens": 2722,
+  "judge_completion_tokens": 362
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA grading features including zona thinning, expanded blastocoel, tightly packed ICM, and cohesive TE epithelium. The description of ICM location and structural features is consistent with the image. Minor limitation: the acknowledgment of 'optical noise' is appropriate but the model could have provided more granular detail about specific morphological nuances visible in the image. The claim that ICM is on the 'left side' may or may not be precisely accurate depending on image orientation, but is a reasonable observation."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects maternal age to euploidy rates, links low BMI to luteal phase defects and miscarriage risk, appropriately flags the ectopic history as the most critical risk factor, integrates sperm parameters, endometrial thickness, and ovarian reserve markers. The 'perfect storm' framing with the notable outlier is a sophisticated way to present the case. The connection between ectopic history and the 'unexplained' diagnosis is particularly insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical. The probability estimate of 60-70% follows logically from the baseline of 60-75% adjusted downward for risk factors. One minor issue: the recommendation to 'not freeze this embryo unless there is a specific medical contraindication' is somewhat strong given the ectopic history - some clinicians might argue for a frozen transfer to optimize conditions. Also, the statement that a 3AA is a 'strong predictor of high-quality trophectoderm development' is slightly circular since the TE is already graded A. Overall coherent reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied. The recommendation for serial hCG monitoring given ectopic history is appropriate. The suggestion of HSG/laparoscopy for tubal evaluation is guideline-consistent. The note about PGT-A being debatable at age 25 shows awareness of current evidence. Minor deviation: the strong recommendation for fresh transfer without considering whether a freeze-all strategy might be warranted (no mention of OHSS risk assessment or progesterone levels on trigger day). The BMI concern and nutritional counseling recommendation aligns with WHO guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly specific and practical recommendations. The serial beta-hCG monitoring schedule (Day 14, 16, 18) is concrete and actionable. Nutritional counseling with a specific BMI target (19-20) is practical. The conditional future planning (if ectopic or chemical pregnancy, then laparoscopy/HSG) provides clear decision trees. Luteal phase support recommendation is relevant given the low BMI. The PGT-A discussion is appropriately nuanced. The recommendations cover both immediate transfer management and future cycle planning with specific triggers for escalation."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.031755,
+  "judge_latency_ms": 17689.336791983806,
+  "judge_prompt_tokens": 2676,
+  "judge_completion_tokens": 735
+}

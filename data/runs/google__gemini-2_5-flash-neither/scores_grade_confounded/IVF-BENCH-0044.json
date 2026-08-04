@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0044",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that the Gardner score is not available and fails to use the provided 2AB grading data, so it does not assess the embryo morphology that was explicitly given."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, especially maternal age, ovarian reserve, prior miscarriage, tubal factor, sperm parameters, and endometrium, though it misses linking these to the known 2AB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent, but there is a notable inconsistency because the response claims morphology/Gardner score are unavailable despite being provided, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including counseling on age-related aneuploidy and consideration of PGT-A, but suggestions like routine ERA/ReceptivaDx and thrombophilia screening after a single miscarriage are less guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations are practical in a general sense, but they are limited by the failure to use the known 2AB grade and include some non-routine tests, reducing case-specific usefulness."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.014085,
+  "judge_latency_ms": 3839.1550420055864,
+  "judge_prompt_tokens": 3055,
+  "judge_completion_tokens": 328
+}

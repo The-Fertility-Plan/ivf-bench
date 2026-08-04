@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0272",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3BC label: loosely grouped ICM and sparse TE are reasonable. However, it overstates visible features such as a blastocoel occupying most of the embryo and a clearly thinned zona/appropriate for hatching, which are not strongly evident in this image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, BMI, first-cycle status, and endometrial thickness with embryo quality in a clinically meaningful way. Some links, such as inferring a PCOS-like phenotype from AMH alone, are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and generally sensible, but there are notable issues: the embryo is called 'expanded blastocyst (Gardner Stage 3),' which is imprecise, some quantitative penalty estimates are asserted without support, and the probability calculation is truncated/incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly aligns with standard IVF concepts (Gardner grading, importance of age and TE quality), but includes speculative or weakly guideline-based claims such as severe stress and sedentary lifestyle materially impairing implantation, and possible PCOS phenotype based mainly on high AMH."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides some practical considerations (proceed with transfer, consider sperm DNA fragmentation if failure occurs), but the recommendations shown are limited and incomplete, with little concrete transfer-day or future-cycle planning detail in the provided response."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012675,
+  "judge_latency_ms": 5534.37937500712,
+  "judge_prompt_tokens": 2290,
+  "judge_completion_tokens": 387
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response describes the expansion, ICM, and TE features consistent with a 3AA grading. It notes zona thinning, tightly packed ICM, and cohesive TE epithelium. The description is largely accurate and aligns with the Gardner score provided, though the claim that the image 'aligns perfectly' is somewhat formulaic and the model may be partially relying on the lab data rather than independent image analysis. Still, the morphological descriptions are detailed and appropriate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates patient age, sperm parameters, endometrial thickness, previous cycle history (miscarriage and no pregnancy), lifestyle factors, and the low oocyte yield. It correctly identifies the 'high quality, low quantity' scenario. The characterization of 6 COCs as a 'poor response' is somewhat overstated for a tubal factor patient (could be protocol-related), and the AMH being N/A is noted but could have been explored more carefully. The integration of former smoking history with egg quality is appropriate."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logically consistent. The probability estimate of 60-75% follows from the evidence presented. The 'high stakes, high reward' framing is coherent. One minor issue: stating that 2 previous cycles with 'no pregnancy' is slightly inaccurate since one resulted in a clinical miscarriage (which is a pregnancy). The logic connecting low yield to possible DOR is reasonable but could be more nuanced given the tubal factor diagnosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines. The suggestion for luteal phase support, AMH/AFC assessment, and PGT-A consideration are all evidence-based. The recommendation to proceed with fresh transfer given no OHSS risk is appropriate. The nuanced discussion of PGT-A (recommending it if more embryos are available but not for a single embryo) aligns with current practice. The mention of donor oocytes at 33 is premature but the model acknowledges this."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with fresh transfer, robust progesterone support, investigate AMH/AFC, consider PGT-A in future cycles, and lifestyle optimization. The distinction between immediate and future recommendations is helpful. Could have been more specific about progesterone dosing/route, specific stimulation protocol modifications for future cycles (e.g., higher gonadotropin doses, microdose flare), or specific investigations for the miscarriage history (e.g., karyotyping, thrombophilia screen)."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.03048,
+  "judge_latency_ms": 17656.728542002384,
+  "judge_prompt_tokens": 2771,
+  "judge_completion_tokens": 665
+}

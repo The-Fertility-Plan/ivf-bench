@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AA blastocyst features including blastocoel expansion, thinned zona pellucida, compact ICM with many cells, and cohesive TE epithelium. The ICM location description (1-2 o'clock position) adds specificity. Minor issue: the response largely echoes the provided Gardner score data rather than independently analyzing novel image features, but the descriptions are consistent and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all major clinical factors. The response identifies the central paradox between good embryo quality/young age and repeated failures, connects endometriosis to endometrial receptivity issues, links sperm motility (22.9%) to DNA fragmentation risk, addresses the RIF pattern, interprets the biochemical pregnancy history as implantation-vs-maintenance distinction, and considers lifestyle factors like restricted diet. The interaction between multiple factors is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability adjustment methodology (starting from baseline, applying penalties) is transparent and follows from the evidence. The euploidy calculation (0.60 × 0.65 = 39%) is coherent. Minor inconsistency: adding 10% for aneuploid biochemical implantation is somewhat speculative and not fully justified. The response is cut off before completing recommendation section, which slightly undermines overall coherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines on RIF definition, Gardner grading criteria, endometriosis impact on IVF outcomes, and sperm parameter thresholds (correctly citing WHO >32% progressive motility). The euploidy rate estimates for age 27 are consistent with published literature. The recommendation to proceed with transfer is appropriate. Some estimates (35-40% aneuploidy in endometriosis-RIF patients) are on the higher end but defensible. Response is cut off before full recommendations are given."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response begins strong recommendations but is cut off mid-sentence before completing the full recommendations section. What is visible includes proceeding with transfer and some reasoning, but the future cycle planning, specific interventions for RIF (ERA testing, PGT-A, immunological workup, sperm DNA fragmentation testing), and endometriosis management recommendations are either incomplete or missing. The truncation significantly limits actionability despite good setup."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01785,
+  "judge_latency_ms": 13360.97470799723,
+  "judge_prompt_tokens": 2870,
+  "judge_completion_tokens": 616
+}

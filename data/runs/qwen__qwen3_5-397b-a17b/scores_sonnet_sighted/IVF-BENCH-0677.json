@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0677",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the blastocoel cavity, ICM, and TE in general terms consistent with the 2AA grade. However, there is some confusion about the Gardner staging system - the model notes a discrepancy between 'full blastocyst' and Stage 2, showing uncertainty. The zona pellucida observation about thinning is reasonable but not clearly confirmed by the image. The image actually shows a somewhat compact, not fully expanded blastocyst with visible cellular masses, which the model partially captures but doesn't describe with high precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors. The model correctly identifies the two ectopic pregnancies as the dominant clinical concern, connects BMI to endometrial receptivity, notes the significance of the previous live birth, integrates sperm parameters implicitly, and addresses the 'unexplained' diagnosis critically. The Day 4 transfer timing is flagged as a synchrony concern. The interaction between embryo quality and patient history is well-articulated throughout."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate (40-55%) logically follows from the adjustments applied to the baseline rate. The deductions for BMI, ectopic history, and Day 4 transfer are clearly enumerated. Minor inconsistency: the model describes the Gardner Stage 2 as 'full blastocyst' while simultaneously questioning whether it should be Stage 3, creating slight confusion. The PGT-A recommendation linking Day 4 development to chromosomal abnormality risk is a stretch and not well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate, early ectopic surveillance is standard of care, salpingectomy recommendation for tubal pathology aligns with ESHRE hydrosalpinx guidelines, ERA suggestion for RIF is evidence-based. The PGT-A recommendation is reasonable but the stated rationale (Day 4 = chromosomal risk) is not well-supported by current literature. BMI counseling aligns with guidelines. Overall strong guideline adherence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific next steps: mandatory SET with clear rationale, early beta-hCG and 6-week ultrasound for ectopic surveillance, tubal re-evaluation with salpingectomy consideration, weight management targets (5-10% body weight), PGT-A for future embryos, and ERA if this transfer fails. Each recommendation is tied to a specific clinical concern in this case, making it directly useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.018969,
+  "judge_latency_ms": 14297.30954101251,
+  "judge_prompt_tokens": 2968,
+  "judge_completion_tokens": 671
+}

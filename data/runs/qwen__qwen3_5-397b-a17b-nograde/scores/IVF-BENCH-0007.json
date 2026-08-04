@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0007",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible Day 4 morula interpretation, but it fabricates reassuring details not reliably inferable from a single image (symmetry, negligible fragmentation, normal zona/perivitelline space) and does not acknowledge uncertainty. If the image was intended as a blastocyst assessment, it also misclassifies stage."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, prior live birth, male factor, sperm parameters, endometrial thickness, and lifestyle with prognosis reasonably well, though AMH is unavailable and some links (e.g., lifestyle directly optimizing egg quality in this cycle) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: good morphology and favorable uterine/clinical factors increase prognosis, while age-related aneuploidy and Day 4 transfer temper expectations. Minor issues include overconfidence in morphology and assumptions such as likely ICSI."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including luteal support and consideration of blastocyst culture. However, stating PGT-A is 'highly recommended' for all future cycles at age 37 is stronger than guideline-based individualized counseling, and some claims about Day 4 transfer and endometrial timing are simplified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future planning, including proceeding with transfer, maintaining luteal support, considering PGT-A, blastocyst culture, and sperm DNA fragmentation testing. Recommendations are useful, though not highly nuanced or protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012861,
+  "judge_latency_ms": 4620.572749998246,
+  "judge_prompt_tokens": 2217,
+  "judge_completion_tokens": 414
+}

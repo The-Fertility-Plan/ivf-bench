@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0725",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst assessment, but it overstates image quality by calling it top-tier/excellent despite a 2AA being only a full blastocyst, and it infers specific ICM location and TE cohesiveness more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, prior IVF outcomes, endometrial thickness, BMI, and sperm parameters well with embryo quality, though AMH is unavailable and the recurrent failure framing is somewhat stronger than the data alone prove."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible probability estimate tied to age, morphology, and history; minor issues include equating morphology with top-tier status and some speculative modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and acknowledging age-related aneuploidy, but recommendations such as ERA, immune testing, steroids, and aspirin are not routinely guideline-supported for repeated failure without specific indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET and further evaluation options, though some suggestions are broad or controversial rather than tightly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012501,
+  "judge_latency_ms": 4992.224166999222,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 315
+}

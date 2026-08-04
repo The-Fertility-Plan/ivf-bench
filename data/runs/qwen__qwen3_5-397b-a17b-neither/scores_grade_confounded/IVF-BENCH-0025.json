@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0025",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly states that no image was provided and avoids fabricating visual features, but it does not analyze the supplied Gardner grade 1DD itself and overemphasizes the day-4/blastocyst mismatch rather than describing the known poor morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, tubal factor diagnosis, sperm parameters, endometrial thickness, and cycle history with prognosis and embryo context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, especially around data-quality concerns and prognosis, though the implantation estimate is somewhat optimistic for a 1DD embryo and reflects the staging ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "It is largely aligned with IVF practice by noting Gardner grading applies to blastocysts, emphasizing lab verification and luteal support, and being cautious about PGT-A at age 25; minor overreach comes from suggesting transfer despite unresolved discrepancies and limited acknowledgment of very poor 1DD morphology."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "It provides clear next steps: verify embryo stage, audit the COC/MII discrepancy, confirm witnessing/identity, proceed with appropriate luteal support, and outline future culture and counseling considerations."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012618,
+  "judge_latency_ms": 3550.5863330035936,
+  "judge_prompt_tokens": 2601,
+  "judge_completion_tokens": 321
+}

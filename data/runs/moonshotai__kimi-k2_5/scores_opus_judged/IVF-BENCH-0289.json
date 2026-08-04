@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0289",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes a high-quality blastocyst with AA grading for ICM and TE, which aligns with the Gardner score provided. However, there's a notable inconsistency: the Gardner score is 2 (full blastocyst, blastocoel fills the embryo) yet the model describes it as an 'expanded blastocyst' and mentions zona thinning considerations more appropriate for grades 3-4. The description of ICM position at '1-2 o'clock' and specific zona thickness measurements (15-20μm) may be fabricated details not clearly discernible from the image. The overall morphological narrative is reasonable but includes some speculative specifics."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response thoughtfully connects AMH 0.68 with age 32 to highlight the quantitative vs qualitative DOR distinction, links BMI 36 to endometrial receptivity and implantation impairment, considers the Mediterranean diet as a partial offset to obesity-related inflammation, and appropriately contextualizes the good MII rate and blastulation efficiency despite low reserve. The embryo-endometrial synchrony analysis is particularly well done."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely coherent. The probability estimation follows logically from the baseline and adjustments. One minor issue: the model states '9 COCs retrieved from 8 antral follicles (implied)' which conflates COCs with antral follicle count inappropriately—8 was the MII count, not AFC. The tabular risk stratification is clear and the final probability range is well-supported. The distinction between implantation probability and live birth probability is a nice touch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The eSET recommendation is appropriate and well-justified given BMI 36. However, some recommendations are questionable: intralipid emulsion lacks strong evidence and is not standard guideline-supported therapy; LMWH recommendation based solely on BMI without thrombophilia screening is not standard; DHEA and growth hormone recommendations, while used in practice, have mixed evidence. The suggestion of GLP-1 agonists is forward-thinking but not yet in IVF guidelines. Luteal support recommendations are reasonable. The response was cut off before completing protocol modification suggestions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, including dosing details (DHEA 25mg TID, CoQ10 600mg, progesterone routes and doses), timeline for β-hCG testing, weight loss targets (10% reduction with specific BMI goal), and lifestyle modifications. The immediate vs. future cycle planning structure is helpful. However, the response was truncated before completing future protocol modifications, and some recommendations (intralipid, LMWH) could lead clinicians astray without stronger evidence basis. Overall quite actionable for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.385,
+  "judge_cost_usd": 0.03538,
+  "judge_latency_ms": 17932.4116249918,
+  "judge_prompt_tokens": 3431,
+  "judge_completion_tokens": 729
+}

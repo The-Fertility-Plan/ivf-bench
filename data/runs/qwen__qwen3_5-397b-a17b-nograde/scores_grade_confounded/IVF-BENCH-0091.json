@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0091",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided lab grade of 3AB by reclassifying the embryo as 4BB/4BC and downgrading the ICM despite the stated A-grade ICM. Some general blastocyst features are described plausibly, but key morphology calls are inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, endometrial thickness, and first-cycle status reasonably well with prognosis, though some points are speculative (e.g., DNA fragmentation) and not tightly linked to the specific embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical and the probability estimate is explained, but the reasoning is weakened by the internal inconsistency between the supplied Gardner score and the model's own morphology reassessment, plus some overinterpretation of male factor."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but the morphology interpretation does not align with Gardner grading provided, and the statement that PGT-A is 'highly recommended' at age 36 is stronger than guideline-based individualized counseling would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, luteal support consideration, OHSS awareness, lifestyle modification, and possible sperm DNA fragmentation testing, though some recommendations could be more individualized and less generic."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012813,
+  "judge_latency_ms": 4182.522166003764,
+  "judge_prompt_tokens": 2451,
+  "judge_completion_tokens": 364
+}

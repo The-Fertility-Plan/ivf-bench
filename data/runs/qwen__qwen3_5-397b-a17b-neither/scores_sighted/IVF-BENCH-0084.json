@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated that no image was available to it and avoided assigning a specific morphology grade. It did not fabricate visible embryo features; its only morphology comments were framed as general expectations for a Day 5 transfer."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve, BMI, tubal factor diagnosis, prior failed cycle, sperm parameters, and endometrial thickness into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with a probability estimate tied to age and transfer stage. Minor issues include somewhat confident assumptions about embryo transferability and overstating the significance of some factors."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but some recommendations are not strongly guideline-supported for this scenario, including routine PGT-A suggestion at age 33, ERA after limited failure history, and dual progesterone support framed as necessary."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for current transfer and contingency planning, though some suggestions are more speculative than standard after only one failed cycle."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013434,
+  "judge_latency_ms": 4560.067166006775,
+  "judge_prompt_tokens": 2898,
+  "judge_completion_tokens": 316
+}

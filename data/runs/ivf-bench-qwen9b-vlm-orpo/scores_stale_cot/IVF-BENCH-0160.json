@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0160",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3AA label and plausible blastocyst features, but relies heavily on the lab grade and includes some speculative image details (e.g., peripheral compactness/artifact) without clearly image-grounded precision."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, tubal factor, semen parameters, BMI, endometrium, alcohol use, and first-cycle status well, with appropriate emphasis on age-related aneuploidy as the main limiter."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and mostly consistent: strong morphology but reduced prognosis due to maternal age and aneuploidy risk. Minor issues include somewhat broad probability framing and a few speculative points."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with IVF practice: recognition of morphology limits, discussion of PGT-A as optional at age 41, and support for single embryo transfer. Slight overstatement around DET/live birth and some nonessential commentary prevent a top score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, alcohol cessation, prenatal optimization, uterine evaluation, and future PGT-A discussion. Useful and case-specific, though not highly detailed on protocol-level decisions."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.016716,
+  "judge_latency_ms": 6028.4272079588845,
+  "judge_prompt_tokens": 3937,
+  "judge_completion_tokens": 327
+}

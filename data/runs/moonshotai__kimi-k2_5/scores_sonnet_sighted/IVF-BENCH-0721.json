@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0721",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinned zona, compact ICM at approximately the correct position, and cohesive TE layer. The description of Grade 3 expansion, Grade A ICM, and Grade A TE aligns well with the image. Minor issue: the image shows some irregularity in the TE and the blastocoel appears partially collapsed or irregular, which the response doesn't fully capture, describing it as uniformly smooth when the image shows some membrane folding/irregularity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects DOR diagnosis with aneuploidy risk, links age 34 with favorable euploidy rates, integrates sperm parameters with fertilization success, connects endometrial thickness with receptivity, and addresses the quality-vs-quantity paradox inherent in DOR cases. The oocyte-to-blastocyst conversion analysis is clinically insightful and relevant."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate (40-50%) follows coherently from the baseline adjusted for DOR risk. The conditional probability analysis (euploid vs aneuploid scenarios) is sound. Minor inconsistency: the response states 45-55% baseline for 3AA in <35 then adjusts down to 40-50%, but later states 'positive pregnancy test probability ~45%' and 'ongoing pregnancy ~35-40%' without fully reconciling these figures with the implantation probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: eSET recommendation, no assisted hatching for expanded blastocyst, ultrasound-guided transfer, luteal support. PGT-A discussion for DOR patients is evidence-based. ERA recommendation is appropriately conditional. The embryo banking suggestion aligns with current DOR management guidelines. Minor deviation: specific progesterone dosing (600-800mg) stated without knowing current protocol, and low-dose aspirin recommendation lacks strong evidence base in non-thrombophilic patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific transfer technique details, clear eSET rationale, concrete luteal support guidance, specific future cycle options (A, B, C) with clear rationale for each, lifestyle modification specifics (20-30 min walking), and realistic prognostic counseling figures. The tiered approach to future planning (banking vs PGT-A vs ERA) with clear decision triggers is particularly useful for clinical practice."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.020163,
+  "judge_latency_ms": 15388.048249995336,
+  "judge_prompt_tokens": 3456,
+  "judge_completion_tokens": 653
+}

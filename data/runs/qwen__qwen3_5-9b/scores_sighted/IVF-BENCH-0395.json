@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0395",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, calling it cleavage/early blastocyst yet also expanded/hatching, and claims a significant blastocoel and robust cohesive TE that are not clearly appreciable. It relies heavily on the provided Gardner grade rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH/poor response, tubal factor, sperm parameters, endometrial thickness, and prior cycle history reasonably well with embryo prognosis, though some statements about DOR implying poorer egg quality are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: it labels 3AA as the highest quality, describes grade 3 as expanded blastocyst, and uses an overly optimistic euploid implantation assumption (>90%) to derive the estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as proceeding with transfer and SET are appropriate, but there are deviations from standard interpretation of Gardner grading and the strong recommendation for PGT-A/donor eggs after a first cycle at age 39 is more aggressive than guideline-based individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, luteal support, SET, and future counseling, though some recommendations are broad and not sufficiently nuanced for a first IVF cycle with only one embryo."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013788,
+  "judge_latency_ms": 4953.704082989134,
+  "judge_prompt_tokens": 2741,
+  "judge_completion_tokens": 371
+}

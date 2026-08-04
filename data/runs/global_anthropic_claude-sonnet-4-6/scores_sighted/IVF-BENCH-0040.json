@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0040",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as 4AA-5AA/beginning hatching despite the provided lab grade being 2AA and the image not clearly showing hatching. It also claims clearly demarcated compact ICM, cohesive TE, and no fragmentation/anomalies with more certainty than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, PCOS, sperm parameters, first cycle status, endometrium, and embryo quality into prognosis reasonably well, though some points (eg, AMH absence and sperm motility significance) are less impactful than presented."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: morphology is inconsistent with the stated Gardner 2AA, probability modifiers appear somewhat arbitrary, and the recommendation for freeze-all is stronger than the case details alone justify."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are deviations: routine aspirin is not guideline-standard, ERA after a single failed transfer is not generally recommended, and blanket PGT-A recommendation in a 31-year-old first cycle is not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides concrete next steps such as checking trigger progesterone, considering freeze-all vs fresh transfer, luteal support, and future evaluation options. However, some recommendations are more aggressive than necessary for this first-cycle good-prognosis patient."
+    }
+  ],
+  "extracted_probability": 0.515,
+  "judge_cost_usd": 0.015126,
+  "judge_latency_ms": 5206.253625001409,
+  "judge_prompt_tokens": 3237,
+  "judge_completion_tokens": 361
+}

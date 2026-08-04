@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a Day 3/4 morula-like embryo and dismisses the provided Gardner 1DD blastocyst grade as inapplicable. It fabricates favorable features such as good compaction, minimal fragmentation, and good overall quality, which directly conflict with the stated 1DD morphology indicating a very poor-quality early blastocyst with absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant patient factors well, including age, DOR, sperm parameters, endometrial thickness, lifestyle, and cycle history, and relates them to prognosis. However, the integration is undermined by the incorrect assumption that the embryo itself is good quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major contradiction: it ignores the supplied Gardner 1DD grade and concludes the embryo is good quality, leading to an implausibly optimistic implantation estimate. The probability estimate does not follow from the actual embryo grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response departs from standard IVF grading interpretation by rejecting the Gardner score despite it being explicitly provided. Recommendations such as SET and luteal support are broadly guideline-consistent, but the embryo-quality interpretation and prognosis are not aligned with accepted blastocyst assessment principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer, luteal support, follow-up testing, and future cycle planning. Although useful in structure, the recommendations are less reliable because they are based on an overly favorable assessment of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014763,
+  "judge_latency_ms": 4541.053708999243,
+  "judge_prompt_tokens": 2861,
+  "judge_completion_tokens": 412
+}

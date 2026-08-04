@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined morphology assessment because it stated no image was available, avoiding fabricated image details. However, it repeatedly referred to a blastocyst/morula context without analyzing the actual visible embryo, so morphology was not assessed despite the task."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, DOR, oocyte yield, sperm quality, BMI, endometrium, and first-cycle status well, and links these factors to prognosis. Minor overstatement about DOR increasing aneuploidy in a young patient limits a perfect score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to age, endometrium, and assumed embryo quality. Some uncertainty is handled appropriately, though the estimate is somewhat speculative given absent morphology and the discussion mixes day-4 morula and blastocyst framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly standard (proceed with transfer, luteal support, counseling). However, suggesting PGT-A because of DOR in a 28-year-old and mentioning ERA after failures are more controversial and not strongly guideline-driven for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future planning, including luteal support, beta-hCG timing, counseling, and consideration of blastocyst culture. Recommendations are useful, though some are somewhat generic and not tightly tailored to the actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.01554,
+  "judge_latency_ms": 5483.728959006839,
+  "judge_prompt_tokens": 3350,
+  "judge_completion_tokens": 366
+}

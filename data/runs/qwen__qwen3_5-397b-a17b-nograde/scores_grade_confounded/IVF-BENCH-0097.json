@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0097",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response downgrades the provided laboratory grade from 4AA to 4BB and describes only early hatching/preparing to hatch despite the case stating a hatching blastocyst. Some morphology comments are plausible, but key grading elements conflict with the reference data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior cycle, sperm parameters, BMI, diagnosis, and endometrial thickness with prognosis reasonably well, though it somewhat overemphasizes paternal age and unexplained infertility as determinants of this embryo's potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is internally explained, but there are notable issues: it bases prognosis on an incorrect embryo grade and makes some speculative inferences (e.g., functional barrier, strong impact of paternal age) without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as SET and luteal support are aligned, but suggesting PGT-A as highly recommended at age 35 after only one failed cycle and proposing ERA after a second failed transfer are more aggressive than guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, luteal support, and possible further testing, though some suggested tests/interventions may not be appropriately prioritized for this specific history."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012225,
+  "judge_latency_ms": 4528.317166994384,
+  "judge_prompt_tokens": 2360,
+  "judge_completion_tokens": 343
+}

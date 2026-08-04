@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0013",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a good-quality morula/early blastocyst and explicitly rejects the provided Gardner 1DD grade, failing to describe the key poor-quality blastocyst features of absent/degenerate ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian response, sperm parameters, endometrium, and DOR reasonably well, though it underweights the dominant negative prognostic impact of the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally weakened because it bases prognosis on an incorrect morphology assessment, leading to an overly optimistic implantation estimate and conclusions inconsistent with the stated 1DD embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It departs from Gardner grading by dismissing the supplied 1DD score and labeling the embryo a good morula, and its prognosis is not well aligned with evidence for a very poor-quality blastocyst."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations are practical at a general level (proceed/consider blastocyst culture/review reserve), but they are not sufficiently tailored to the poor-grade embryo and lack nuanced counseling about low prognosis and alternative transfer strategies."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.011493,
+  "judge_latency_ms": 4281.6116660033,
+  "judge_prompt_tokens": 2151,
+  "judge_completion_tokens": 336
+}

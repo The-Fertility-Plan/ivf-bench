@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description that aligns with the provided Gardner score data, correctly identifying the blastocoel expansion, ICM quality as 'A' grade (tightly packed, many cells), and TE as 'B' grade (few cells, loose epithelium). However, the model hedges on the expansion stage, suggesting it might be a '2' or 'early 3' and notes some uncertainty about whether the zona pellucida is thick or thinning. This uncertainty and slight inconsistency with the provided 2AB score reduces accuracy. The description largely relies on the provided Gardner score rather than independent image analysis, and some observations appear inferred from the lab data rather than the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: maternal age (28), BMI (22.4), AMH (1.23 ng/mL), FSH (5.4 IU/L), oocyte yield, endometrial thickness (8.3 mm), tubal factor diagnosis, previous failed cycle, sperm parameters, and lifestyle factors. It connects these to embryo quality and prognosis in a meaningful way. Minor gap: AMH of 1.23 ng/mL is actually on the lower end for a 28-year-old (borderline low reserve), which the response characterizes as 'normal/good' without sufficient nuance. This underappreciation of a potentially diminished ovarian reserve is a notable omission."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 55-70% follows reasonably from the favorable factors identified. The response correctly weighs maternal age and blastocyst quality as primary drivers of implantation probability. The acknowledgment of the previous failed cycle as a risk factor while still maintaining an optimistic outlook is balanced. Minor inconsistency: the response initially describes the blastocyst expansion as possibly not fully filling the embryo, then later states '2' means 'full blastocyst' without fully resolving this tension. Overall the conclusions are well-supported by the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommending single embryo transfer (SET) for a young patient with a good-quality blastocyst, appropriate luteal phase support, and evidence-based future investigations (ERA, hysteroscopy, PGT-A consideration, sperm DNA fragmentation). The Gardner grading interpretation is mostly correct. The suggestion of PGT-A is appropriately caveated for age 28. The response correctly identifies that tubal factor is well-addressed by IVF. Minor issue: characterizing AMH 1.23 as indicating 'good ovarian reserve' may not fully align with current guidelines which would consider this borderline for age 28."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering both the current transfer (SET, luteal support, counseling, lifestyle) and future cycle planning (ERA, hysteroscopy, PGT-A, sperm DNA fragmentation, cycle review). The response provides clear next steps with appropriate prioritization. The future planning section is particularly well-structured with logical escalation of investigations. Some recommendations could be more specific (e.g., specific progesterone dosing, timing of ERA relative to transfer), but overall the guidance is clinically useful and appropriately nuanced for a practicing clinician."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.022686,
+  "judge_latency_ms": 18658.829375002824,
+  "judge_prompt_tokens": 3337,
+  "judge_completion_tokens": 845
+}

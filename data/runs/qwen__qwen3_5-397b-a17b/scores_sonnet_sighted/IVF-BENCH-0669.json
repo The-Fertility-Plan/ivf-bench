@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the degenerative nature consistent with 1DD grading and notes absence of discernible ICM/TE. However, the image actually shows what appears to be a fairly expanded blastocyst with visible cellular structure (possibly a morula-to-blastocyst transition or early blastocyst with some compaction), and the description of 'blob of cellular debris' somewhat overstates the degeneration visible. The zona pellucida is visible in the image but not mentioned. The expansion stage assessment is superficial."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively connects endometriosis to oocyte quality issues, links low AMH to limited cycle options, and ties the 5-cycle failure history to the current poor embryo quality. It appropriately notes the good endometrial thickness as a favorable factor. Minor gap: doesn't deeply explore how endometriosis specifically affects blastocyst development or the interaction between RIF workup needs and the ectopic history."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically consistent throughout - the <1% probability estimate follows directly from the 1DD grading explanation, and the recommendation not to transfer is well-supported. The connection between poor embryo quality and the patient's history is coherent. Minor issue: the response states the embryo 'cannot implant' with near-zero probability but doesn't acknowledge the rare possibility of transfer being considered in certain clinical contexts (e.g., no other embryos available)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for RIF patients, endometriosis suppression protocol, sperm DNA fragmentation testing, and donor egg counseling are all evidence-based. The DuoStim suggestion is a more novel but accepted approach. The recommendation not to transfer a 1DD embryo aligns with standard practice. Minor gap: doesn't mention RIF workup (thrombophilia, immunological testing) which ESHRE guidelines suggest for 5 failed cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: named specific tests (SCSA for DNA fragmentation), specific protocols (GnRH agonist suppression with Lupron depot, 2-3 months), specific future strategies (DuoStim, growth hormone, PGT-A, donor eggs). The immediate action (do not transfer) is clear. Could be improved by specifying timing for next cycle, suggesting a formal RIF workup panel, or recommending a multidisciplinary consultation given the complex history."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.018123,
+  "judge_latency_ms": 15402.041708002798,
+  "judge_prompt_tokens": 2766,
+  "judge_completion_tokens": 655
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0691",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological analysis identifying blastocoel presence, ICM compactness consistent with grade A, and TE as grade B with appropriate caveats about limited expansion. It correctly flags the Gardner grading terminology mismatch (stage 2 vs 'full blastocyst' description) and notes the zona pellucida is intact with no hatching. Minor deduction because the analysis relies heavily on the provided grade rather than purely image-derived observations, and some descriptions are hedged with uncertainty typical of limited image quality assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 28 as a top positive predictor for euploidy, AMH 1.23 as modestly low for age, BMI 22.4 as optimal, tubal factor with specific hydrosalpinx risk discussion, prior failed cycle context, sperm parameters noting mild male factor, endometrial thickness adequacy, and lifestyle factors. It explicitly connects how each factor modifies the embryo's implantation prognosis and identifies the hydrosalpinx question as the most clinically critical modifier."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 40-55% logically follows from the combination of young age (positive), Day 5 blastocyst (positive), ICM-A (positive), TE-B and limited expansion (moderating factors), and prior failed cycle (slight negative). The live birth estimate of 30-45% appropriately sits below implantation probability. Minor deduction for slight redundancy in presentation and the grading mismatch discussion, while valid, could create some confusion about whether the model is assessing the image or the provided grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are fully aligned with ESHRE/ASRM guidelines: eSET recommendation for a 28-year-old with a good blastocyst, hydrosalpinx management before transfer per established evidence, appropriate luteal support without unindicated adjuvants (steroids, heparin, intralipids), early ectopic monitoring given tubal factor, measured approach to PGT-A (not routinely recommended after one failed cycle at age 28), and sperm DNA fragmentation testing reserved for recurrent failure. The response correctly avoids recommending bed rest."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practically organized into immediate transfer considerations and future planning. Specific actionable items include: confirming hydrosalpinx status before transfer, cavity assessment timing, serial beta-hCG monitoring for ectopic risk, lifestyle modifications, and a tiered future planning approach covering embryo cohort review, cavity reassessment, male factor workup triggers, conditional PGT-A discussion, and ovarian reserve/banking considerations given modest AMH at age 28. The offer of patient counseling and comparative prognosis tables adds further clinical utility."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.021609,
+  "judge_latency_ms": 15382.56283300143,
+  "judge_prompt_tokens": 3563,
+  "judge_completion_tokens": 728
+}

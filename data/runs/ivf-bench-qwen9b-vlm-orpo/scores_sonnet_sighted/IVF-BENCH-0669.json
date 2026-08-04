@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0669",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model correctly identifies poor ICM and TE consistent with DD grading, and notes sparse/disorganized trophectoderm. However, the image actually shows a reasonably expanded blastocyst (consistent with grade 1 expansion per Gardner - blastocoel at least half the embryo), yet the model states it does 'not see a clearly well-defined, large blastocoel' and describes it as 'minimally expanded or collapsed.' This contradicts the Gardner score of 1 (early blastocyst with blastocoel at least half the embryo) and the visible image showing a substantially filled cavity. The zona pellucida is visible but not described. The model's caveat about transient collapse partially mitigates this error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The model systematically addresses AMH (0.98 ng/mL indicating diminished reserve), age-related aneuploidy risk at 35, endometriosis impact on implantation and reserve, the highly significant 5-cycle failure history including miscarriage and ectopic, adequate semen parameters, favorable endometrial thickness, and lifestyle factors. It correctly identifies interactions between these factors and embryo quality, and discusses how the combination compounds prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The 2-7% implantation estimate follows logically from the DD morphology, age, and history. The model appropriately distinguishes implantation probability from live birth probability. Minor inconsistency: the model states live birth chance is 'below ~2%' while implantation estimate is 2-7%, which is reasonable but could be clearer. The morphological mischaracterization of expansion stage slightly undermines coherence but doesn't derail the overall clinical logic."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation is appropriate, luteal phase support optimization is mentioned, PGT-A discussion is nuanced and appropriately caveated for low-reserve patients, hysteroscopy/chronic endometritis evaluation for recurrent implantation failure aligns with ESHRE RIF guidelines, sperm DNA fragmentation testing is appropriately suggested. The discussion of GnRH agonist suppression for endometriosis pre-transfer reflects current evidence. Bed rest discouragement aligns with current evidence. Minor gap: no mention of ERA or receptivity testing which some guidelines now address for RIF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific, tiered recommendations. For current transfer: SET, luteal support optimization, specific lifestyle guidance. For future planning: structured stepwise approach (A-F) covering cohort review, PGT-A decision framework with explicit conditions, endometriosis management, RIF workup specifics (hysteroscopy, chronic endometritis, thyroid, sperm DNA fragmentation), and ovarian stimulation optimization. Recommendations are appropriately nuanced with conditions specified (e.g., PGT-A only if multiple embryos available). Practical and directly applicable to clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.045,
+  "judge_cost_usd": 0.023034,
+  "judge_latency_ms": 18977.223499998217,
+  "judge_prompt_tokens": 3758,
+  "judge_completion_tokens": 784
+}

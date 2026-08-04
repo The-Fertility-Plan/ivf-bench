@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description noting blastocoel expansion, ICM presence, and TE continuity, consistent with the Gardner 3AA grade. However, the image actually shows a somewhat irregular, possibly degenerating or hatching blastocyst with fragmented appearance and unclear ICM boundaries - the response is overly optimistic and doesn't note the somewhat chaotic internal structure visible in the image. The description is generic rather than image-specific, with caveats about image focus limiting assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects female age, AMH, FSH, BMI, smoking status, endometrial thickness, male factor diagnosis, sperm parameters, and partner age to the embryo quality assessment. It correctly identifies interactions between these factors and implantation probability, noting how smoking modifies the otherwise favorable prognosis, and how male factor diagnosis preserves female-side prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 45-60% logically follows from the favorable age/reserve profile tempered by smoking. The distinction between untested and euploid embryo probabilities is appropriate. Minor issue: the response could better reconcile the 3AA grade (which is good but not top-tier 4AA/5AA) with the 'high-quality' characterization, and the image appearance seems more complex than described."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation for a 24-year-old is appropriate, PGT-A described as optional rather than mandatory at this age aligns with current guidelines, smoking cessation advice is evidence-based, luteal support monitoring is standard of care, and the nuanced discussion of sperm DNA fragmentation testing reflects current male factor guidelines. No recommendations contradict established practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific next steps: proceed with single embryo transfer, immediate smoking cessation, specific exercise targets (150 min/week), caffeine limits (200mg/day), beta-hCG scheduling, luteal support optimization, and conditional recommendations for future testing (sperm DNA fragmentation if failures occur). Future cycle planning is detailed with clear decision trees for PGT-A consideration and male factor follow-up."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.020277,
+  "judge_latency_ms": 13382.235958008096,
+  "judge_prompt_tokens": 3754,
+  "judge_completion_tokens": 601
+}

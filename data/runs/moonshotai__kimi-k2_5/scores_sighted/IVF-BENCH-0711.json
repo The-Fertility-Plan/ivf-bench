@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies a blastocyst and notes visible ICM/TE, but overstates image quality and cohesion; the embryo appears more like an early/full blastocyst with somewhat indistinct ICM and uneven TE, so claims such as clearly visible tight ICM, uniform TE, and no abnormalities are more confident than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, tubal factor, prior failed cycle, sperm parameters, endometrial thickness, and embryo grade into prognosis reasonably well, though some inferences (e.g., borderline reserve from oocyte yield, strong BMI effect) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The structure is logical and the probability estimate is tied to stated factors, but there are minor inconsistencies such as tension between the documented 2AA label and the image-based description, and several quantitative adjustments are presented more definitively than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core recommendation to proceed with single embryo transfer is guideline-concordant, but suggestions such as intensified luteal support for low BMI, aspirin, ERA after limited failure history, and thrombophilia/autoimmune testing are not strongly guideline-based for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including eSET and future workup considerations, though some recommendations may be more aggressive than necessary and not all are evidence-based."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01425,
+  "judge_latency_ms": 4807.31074999494,
+  "judge_prompt_tokens": 2925,
+  "judge_completion_tokens": 365
+}

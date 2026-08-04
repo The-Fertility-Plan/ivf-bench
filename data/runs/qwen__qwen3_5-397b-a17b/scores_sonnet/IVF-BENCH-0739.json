@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 4AA Gardner score: hatching/herniating blastocyst, tightly packed ICM in the lower-left quadrant, and cohesive TE epithelium. The description of the zona pellucida as thin and compromised is appropriate for a hatching blastocyst. Minor limitation is that the description relies heavily on the provided Gardner score rather than independently verifying all features from the image, but the spatial localization of the ICM and TE observations add credibility."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age-related aneuploidy risk, AMH indicating diminished reserve, BMI impact on implantation, male factor with paternal age and sperm DNA fragmentation concerns, endometrial thickness adequacy, and prior miscarriage history. The interaction between male factor and miscarriage risk is noted. Minor gap: the response could more explicitly connect the sperm motility of 32% (borderline by WHO 2021 criteria of ≥42%) to the male factor diagnosis and its specific impact on embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logically structured and the probability estimate of 45-55% follows coherently from the baseline adjustment framework presented. The downward adjustments for age, BMI, and miscarriage history are reasonable. The response avoids major contradictions. Minor issue: the response states aneuploidy rates are ~40-50% at age 36, which is slightly high for this age (typically closer to 30-40%), creating a minor inconsistency with the final probability estimate that doesn't fully account for this risk."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation is appropriate and evidence-based, PGT-A recommendation for age 36 with miscarriage history aligns with current guidelines, luteal support recommendations are standard, and sperm DNA fragmentation testing aligns with male factor workup guidelines. The endometrial thickness range of 7-14mm is consistent with published thresholds. Minor deviation: suggesting 'dual-pathway' progesterone support as a consideration without stronger evidence base for this specific scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: SET is clearly recommended with rationale, PGT-A for future cycles is well-justified, sperm DNA fragmentation testing is a concrete next step, weight management advice is quantified (5-10% loss), and embryo banking strategy is addressed given low AMH. The response provides clear next steps for both this transfer and future planning. Could be slightly more actionable by specifying progesterone dosing protocols or timing of beta-hCG testing, and by providing more specific guidance on PICSI/IMSI criteria."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018498,
+  "judge_latency_ms": 13667.40275000484,
+  "judge_prompt_tokens": 2651,
+  "judge_completion_tokens": 703
+}

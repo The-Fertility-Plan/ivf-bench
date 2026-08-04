@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0049",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately stated it had no image and based morphology on the provided Gardner score, but it then repeated metadata that do not match the visible image well: the embryo does not clearly appear hatching/herniating, the ICM is not obviously tightly packed, and TE does not look like a cohesive many-celled epithelium."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior outcomes, BMI, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though some links are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a logical adjustment from strong embryo quality to a moderated prognosis due to endometriosis and prior history; minor issues include overcalling RIF/RPL concerns from limited history."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but several recommendations are not strongly guideline-supported or are too assertive, including aspirin, ERA, thrombophilia testing after a single miscarriage, and routine PGT-A discussion in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and contingency planning, including luteal support considerations and future FET/endometriosis strategies, though some suggestions would need stronger indication before routine use."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.014208,
+  "judge_latency_ms": 5213.001666998025,
+  "judge_prompt_tokens": 2911,
+  "judge_completion_tokens": 365
+}

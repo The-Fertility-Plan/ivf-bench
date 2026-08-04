@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided describing specific visible morphology. It did not fabricate image features, though it also did not assess the clearly visible blastocyst characteristics in the provided reference image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, uterine factor, sperm quality, endometrial thickness, smoking, and oocyte maturity with prognosis and embryo potential in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate logically tied to age, blastocyst stage, uterine factor, and smoking. Minor overinterpretation exists around inferred embryo competence and MII-rate implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A should be strongly considered at age 33 after one failed transfer is somewhat stronger than guideline-based routine practice, and some numeric claims are generalized."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, uterine evaluation, luteal support, smoking cessation, and future trigger review. Recommendations are useful, though some remain somewhat generic without tailoring to the exact uterine diagnosis."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.013167,
+  "judge_latency_ms": 4977.710834005848,
+  "judge_prompt_tokens": 2719,
+  "judge_completion_tokens": 334
+}

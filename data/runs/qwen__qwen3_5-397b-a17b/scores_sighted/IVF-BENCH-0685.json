@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0685",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible detail from a suboptimal image, confidently identifying a distinct ICM location and TE pattern that are not clearly discernible. It broadly matches the provided 3AB label but includes likely fabricated image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including female age, PCOS, BMI, prior outcomes, endometrium, and paternal age, and relates them to prognosis. Some claims, especially the weight given to paternal age, are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the probability estimate tied to embryo grade and patient factors. Minor issues include overemphasis on paternal age and treating morphology as more certain than the image supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET for a good-quality day-5 blastocyst at age 34 is guideline-consistent, but recommending PGT-A as highly recommended and suggesting ERA after a single failed transfer are not strongly guideline-based for this profile. Aspirin/thrombophilia suggestions are also not routine."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET, luteal support review, metabolic optimization, and possible sperm DNA fragmentation testing. Some recommendations would benefit from stronger prioritization and evidence-based caveats."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013104,
+  "judge_latency_ms": 5048.27916699287,
+  "judge_prompt_tokens": 2658,
+  "judge_completion_tokens": 342
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0128",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image: the ICM is not clearly crisp, TE detail is limited, and calling the embryo 'fully expanded' with obvious thinning/hatching precursor is somewhat stronger than what is directly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Integrates age-related aneuploidy risk, BMI, ovarian reserve, male factor, prior live birth, and endometrial thickness well, and connects these factors to prognosis and transfer strategy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall, with a plausible probability estimate tied to morphology, age, BMI, and prior live birth; minor overconfidence in morphology slightly weakens the chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with IVF practice, especially SET for a good-quality day-5 blastocyst and counseling on BMI/PGT-A; however, some statements are a bit assertive beyond image certainty and PGT-A is presented somewhat strongly rather than as individualized counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including SET, progesterone monitoring consideration, weight optimization, and nutritional review; useful though not highly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.013044,
+  "judge_latency_ms": 5358.403916994575,
+  "judge_prompt_tokens": 2583,
+  "judge_completion_tokens": 353
+}

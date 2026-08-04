@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0487",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/compacting embryo with absent-poor ICM and TE consistent with 0DD, but overstates visible cell count and describes a distinct cavity and trophoblast detail that are not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, lifestyle, sperm motility, diagnosis, and endometrium with embryo prognosis reasonably well, though it overinterprets AMH as implying PCOS and normal sperm parameters despite low motility."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable inconsistencies such as calling sperm normal despite low motility, inferring PCOS too strongly, and suggesting lifestyle changes could affect the current embryo's outcome."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Uses Gardner grading appropriately and lifestyle counseling is reasonable, but several recommendations are not well aligned with evidence/guidelines: freeze-all or cancel transfer for a poor day-4 embryo is questionable, PGT-A is overstated for a 28-year-old first cycle, and high AMH/PCOS is incorrectly linked to higher aneuploidy."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and future-cycle suggestions on smoking/alcohol cessation, metabolic optimization, protocol adjustment, and prognosis, though some recommendations are insufficiently nuanced for this specific day-4 poor-quality embryo."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013938,
+  "judge_latency_ms": 4852.73120799684,
+  "judge_prompt_tokens": 2806,
+  "judge_completion_tokens": 368
+}

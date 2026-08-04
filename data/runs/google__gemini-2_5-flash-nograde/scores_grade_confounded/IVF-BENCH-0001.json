@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0001",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially misclassifies the embryo as a good-quality Day 4 morula/early blastocyst despite the provided Gardner score of 1DD, and it fabricates favorable features such as good compaction, healthy cell number, minimal fragmentation, and possible early hatching rather than recognizing absent/degenerative ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age-related aneuploidy risk, ovarian reserve, tubal factor, prior IVF outcomes, sperm quality, and endometrial thickness, and connects them to prognosis, though this is undermined by the incorrect embryo-quality interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but it is built on a flawed morphological premise and therefore overestimates embryo quality and transfer prospects relative to the stated 1DD grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, such as counseling and considering blastocyst culture/PGT-A in future cycles, but the endorsement of transfer based on an inaccurately favorable morphology and suggestions like ERA/thrombophilia workup are not strongly guideline-driven in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, counseling, and future planning, including PGT-A discussion and uterine cavity assessment, though some recommendations are somewhat generic and not fully tailored to the poor 1DD embryo grade."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015276,
+  "judge_latency_ms": 4453.978208002809,
+  "judge_prompt_tokens": 3142,
+  "judge_completion_tokens": 390
+}

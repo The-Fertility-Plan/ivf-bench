@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0495",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst consistent with 1DD, but it overstates image-specific details such as vacuolation, debris, exact TE cell count, thinned/irregular zona, and partial herniation that are not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, prior IVF failures, sperm parameters, endometrial thickness, and embryo grade into prognosis well, though some links are overstated and AMH absence is noted without changing management much."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis follows from the embryo grade and age, but there are notable issues such as calling 4 prior cycles RIF without transfer details, overstating stress effects, and using unsupported numeric probability adjustments."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic counseling about poor prognosis and considering transfer is reasonable, but several recommendations (NK-cell testing/suppression, immunologic panels, routine thrombophilia workup, ERA as standard RIF workup) are not well supported by major IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear practical next steps for counseling, transfer considerations, and future-cycle planning, though some suggested investigations/interventions are not evidence-based enough to merit a top score."
+    }
+  ],
+  "extracted_probability": 0.04,
+  "judge_cost_usd": 0.014634,
+  "judge_latency_ms": 5197.663957995246,
+  "judge_prompt_tokens": 3103,
+  "judge_completion_tokens": 355
+}

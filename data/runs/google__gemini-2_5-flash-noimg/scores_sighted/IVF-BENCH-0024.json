@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner score rather than inventing image-specific findings. However, it repeated the prompt's inaccurate interpretation of stage 2 as 'full blastocyst' and called 2AA 'among the best grades,' which overstates quality for this image/grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior IVF outcomes, sperm parameters, endometrium, lifestyle, and paternal age with embryo quality in a clinically meaningful way. Some interactions are oversimplified, but most relevant factors are addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable issues: it treats a day-4 transfer as if it were a blastocyst transfer, overstates the embryo grade, and uses a euploid-blastocyst benchmark despite no PGT-A. These weaken the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Lifestyle advice, SET, and consideration of uterine evaluation are guideline-consistent. However, recommending ERA/immunologic testing and broad thrombophilia screening after limited prior failures is not strongly guideline-supported, and the grading interpretation is imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for current transfer and future planning, including smoking/alcohol cessation, luteal support, SET, and further workup if unsuccessful. Some recommendations are somewhat generic or controversial, but overall they are practical."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.016209,
+  "judge_latency_ms": 5294.7584169887705,
+  "judge_prompt_tokens": 3443,
+  "judge_completion_tokens": 392
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0118",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that no image was available and based morphology on the provided Gardner 3AA text. However, it repeated the prompt's inaccurate interpretation that stage 3 is 'fully expanded with thinning zona'; true full expansion/thinning is more consistent with stage 4, and the actual image appears less clearly top-tier than described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, endometrial thickness, prior miscarriage/failed cycle, sperm parameters, BMI, and protocol with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, especially around morphology versus age-related aneuploidy risk. Minor issues include overcalling the embryo as 'premium/highest potential' and some imprecision in the age-based probability framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice, including eSET and caution about morphology not equaling euploidy. Small deviations include overstating PGT-A as 'highly recommended' and suggesting ERA relatively early despite limited guideline support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, monitoring, and contingency planning. Some suggestions are practical and specific, though a few are somewhat generic or not strongly evidence-based for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013893,
+  "judge_latency_ms": 5209.525541999028,
+  "judge_prompt_tokens": 2831,
+  "judge_completion_tokens": 360
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image findings, calling the embryo fully expanded with clearly visible cohesive TE and tightly packed ICM that are not convincingly seen in this image; it relies too heavily on the provided 3AA label rather than the actual morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior IVF outcomes, sperm parameters, endometrial thickness, diagnosis, and ovarian response reasonably well, though it overinterprets low oocyte yield as poor responder/DOR without AMH or AFC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it labels 3AA as the highest possible grade, equates low oocyte number with poor prognosis for this transfer more than warranted, and gives a somewhat optimistic implantation estimate despite prior failures and uncertain morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on general principles, but it inaccurately describes 3AA as the highest possible grade, is too definitive about fresh transfer appropriateness without broader cycle context, and recommends PGT-A somewhat strongly for miscarriage history despite limited evidence in a 33-year-old with few embryos."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including luteal support, reserve testing, and contingency planning, though some recommendations are broader than case-specific and a bit overstated."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.013506,
+  "judge_latency_ms": 5127.275374994497,
+  "judge_prompt_tokens": 2672,
+  "judge_completion_tokens": 366
+}

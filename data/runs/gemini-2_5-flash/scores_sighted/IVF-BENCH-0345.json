@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0345",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label, but it overstates visible certainty from a single image (e.g., 'centrally located' compact ICM, clearly thin zona, no vacuoles/degeneration) and repeats an inaccurate TE wording ('few cells forming a loose epithelium' is closer to C than classic B)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, oocyte yield, male factor, sperm parameters, endometrium, and first-cycle status well with prognosis, though BMI and some nuances (e.g., OHSS/freeze-all considerations with high response) are not explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but the response is incomplete/truncated and does not actually provide the requested implantation probability estimate, limiting the coherence of the final prognostic assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Broadly consistent with standard IVF principles and Gardner-based interpretation, but there are grading-description inaccuracies (TE B vs 'few cells/loose epithelium') and limited evidence-based nuance in recommendations due to the incomplete response."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Provides general favorable-risk framing but lacks clear, specific next-step recommendations for transfer management or future cycle planning, and the answer appears cut off before actionable guidance is delivered."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.012435,
+  "judge_latency_ms": 5312.19295799383,
+  "judge_prompt_tokens": 2345,
+  "judge_completion_tokens": 360
+}

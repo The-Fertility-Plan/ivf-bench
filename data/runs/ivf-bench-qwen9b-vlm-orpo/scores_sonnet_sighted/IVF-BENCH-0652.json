@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst as expanded/full with a visible ICM and peripheral TE layer, consistent with the 2BA grade. However, it acknowledges image blur as a limiting factor and does not provide precise observations about zona pellucida thickness, specific ICM cell count, or detailed TE cell morphology. The description is generally consistent with the image but lacks precision, and the note about 'stage 2 vs stage 4' nomenclature inconsistency shows some confusion about Gardner staging conventions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (29) as the dominant positive predictor, BMI 35.5 as the primary modifiable risk, the apparent contradiction between the DOR diagnosis and the actually favorable AMH/FSH/oocyte yield, sperm parameters, endometrial thickness, and day-4 transfer timing considerations. It explicitly discusses how these factors interact with embryo quality and each other, including the nuanced point that age outweighs BMI effects."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 35-50% follows logically from the identified favorable and adverse factors. The response correctly flags the DOR label inconsistency with lab values. Minor issue: calling a day-4 full blastocyst 'at least as favorable as a typical day-5 2BA' is a reasonable but somewhat speculative claim. The Gardner stage 2 vs stage 4 confusion is noted but not fully resolved, creating a minor inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer for a 29-year-old, evidence-based caution against unproven add-ons, appropriate discussion of PGT-A as optional rather than mandatory at age 29, weight management counseling, and appropriate luteal phase support emphasis. The response correctly avoids recommending double embryo transfer. Minor gap: does not explicitly reference ESHRE blastocyst grading consensus or address the specific implications of a day-4 vs day-5 transfer per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: single ET, luteal support optimization, avoidance of unproven add-ons, structured weight management referral, review of DOR diagnosis, conditional PGT-A discussion, and uterine evaluation only if indicated. The response provides clear decision trees for both success and failure scenarios. Slightly less actionable in not specifying luteal support protocols or progesterone monitoring thresholds, and the weight management advice, while correct, is somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.022932,
+  "judge_latency_ms": 16206.915292001213,
+  "judge_prompt_tokens": 4249,
+  "judge_completion_tokens": 679
+}

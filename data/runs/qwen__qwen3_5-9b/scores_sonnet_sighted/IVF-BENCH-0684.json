@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0684",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst, thinned zona pellucida, well-defined ICM on the left side, and cohesive TE layer. The description aligns well with the visible image features. Minor limitation: does not comment on the slightly irregular/asymmetric zona or the degree of blastocoel expansion in more precise terms, but overall description is accurate and detailed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of most clinical factors including age, AMH, sperm parameters, endometrial thickness, and recurrent pregnancy loss history. Notably identifies the PCOS/low AMH discrepancy as clinically significant. Slightly mischaracterizes the stimulation protocol - 10 COCs from a 'Natural Cycle' is unusual and this inconsistency is noted but not fully interrogated. Former smoking and sedentary lifestyle are connected to outcomes appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through clinical factors to probability estimate and recommendations. The probability range of 45-60% is reasonably derived from the evidence. Minor inconsistency: the response suggests PGT-A for 'future cycles' but doesn't clearly address whether PGT-A should have been done on this embryo before transfer given the RPL history. The adjusted probability reasoning is sound but could better account for the recurrent loss history lowering the estimate further."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines for recurrent pregnancy loss workup, including hysteroscopy and PGT-A consideration. Gardner grading criteria are correctly applied. The suggestion of PGT-A aligns with ESHRE RPL guidelines (2022). Recommendation to consider standard stimulation for future cycles is appropriate. Minor gap: does not mention thrombophilia screening or immunological workup per RPL guidelines, which would be standard of care after 2+ clinical miscarriages."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, consider PGT-A for future cycles, hysteroscopy if this transfer fails, lifestyle optimization, and revised stimulation strategy. Clear next steps are provided. Could be more actionable by specifying timing of hysteroscopy (should ideally be done before this transfer given 2 prior clinical miscarriages), and by recommending specific RPL workup (antiphospholipid antibodies, thrombophilia panel) which are standard pre-transfer considerations in this clinical scenario."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.018678,
+  "judge_latency_ms": 14136.664791003568,
+  "judge_prompt_tokens": 3026,
+  "judge_completion_tokens": 640
+}

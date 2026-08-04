@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0059",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated morphology could not be assessed, omitting the known expansion, ICM, and TE features from the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, AMH, PCOS, BMI, endometrium, sperm parameters, paternal age, and lifestyle, though some links to embryo-specific prognosis are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it undercuts itself by ignoring the provided embryo grade and makes several speculative adjustments (e.g., paternal age, alcohol effect size, PCOS metabolic impact) without strong case-specific support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (SET, luteal support, lifestyle optimization, OHSS awareness), but routine PGT-A and sperm DNA fragmentation testing based mainly on paternal age are not universally guideline-supported, and the morphology discussion does not align with Gardner grading data provided."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, including SET, alcohol cessation, luteal support review, and lifestyle changes, though some recommendations are more generalized than case-tailored."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012969,
+  "judge_latency_ms": 4120.983624998189,
+  "judge_prompt_tokens": 2578,
+  "judge_completion_tokens": 349
+}

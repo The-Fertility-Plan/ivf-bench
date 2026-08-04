@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response identifies a visible blastocoel and relatively weak/indistinct ICM, but it mischaracterizes the embryo as partially/full or early-to-intermediate blastocyst with limited expansion despite the provided Gardner 2BA and image being more consistent with an early blastocyst. It also overstates TE cohesion from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, infertility diagnosis, sperm parameters, and first-cycle status well with embryo quality and prognosis. However, it gives undue weight to the contradictory 'COCs retrieved: None' field rather than recognizing likely data inconsistency with 8 MII oocytes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally understandable, but there are notable inconsistencies: it discusses a day-5 style blastocyst framework despite transfer day 4, and it treats 'no COCs retrieved' plus 8 MII oocytes as clinically meaningful rather than contradictory. The implantation estimate is plausible but only moderately supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer at age 26, avoiding unproven add-ons, and not routinely using PGT-A are guideline-concordant. Still, the morphology interpretation is somewhat off, and some suggestions (e.g., progesterone checks/dual trigger discussion) are speculative given the provided data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future-cycle review, including SET, luteal support, uterine assessment, and protocol review. It is useful clinically, though some actions are based on uncertain or inconsistent data elements."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.016992,
+  "judge_latency_ms": 6115.2974590077065,
+  "judge_prompt_tokens": 3524,
+  "judge_completion_tokens": 428
+}

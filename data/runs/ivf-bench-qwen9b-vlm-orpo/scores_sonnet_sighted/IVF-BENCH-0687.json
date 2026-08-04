@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable morphological description noting thinned zona, blastocyst stage, and comments on ICM and TE. However, it contradicts the provided Gardner score of 3AB (which specifies tightly packed ICM with many cells) by suggesting the ICM is not clearly defined or compact, and downgrades the embryo to 'B to low C' despite the lab data indicating AB quality. The description of possible post-warming collapse is a reasonable observation but the overall morphological assessment conflicts with the provided grading data without sufficient justification."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age 30 is correctly identified as a key favorable factor, AMH 0.94 is appropriately flagged as indicating diminished reserve, prior biochemical pregnancy is noted as evidence of implantation capability, partner age 42 is discussed in context of sperm DNA integrity, and endometrial thickness of 9mm is acknowledged as favorable. The interaction between low AMH and limited embryo cohort is well-articulated. Minor gap: FSH interpretation could be more nuanced given the AMH context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "There is a notable internal inconsistency: the model assigns a Gardner score interpretation of 3AB from lab data but then visually downgrades the embryo to 'B to low C' or 'borderline high-C/low-B' without fully reconciling this discrepancy. The probability estimate of 25-35% is reasonable but the reasoning pathway from morphological downgrade to probability is somewhat circular. The overall narrative is generally logical but the contradiction between accepting the lab grade and visually downgrading creates coherence issues."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: single embryo transfer is recommended appropriately for a 30-year-old, luteal support is mentioned, PGT-A is discussed selectively rather than universally recommended for young patients with limited embryo numbers, and the threshold for recurrent implantation failure workup (2-3 failed transfers) aligns with current guidelines. The cautious approach to ERA and immune testing also aligns with evidence-based practice. Minor issue: could more explicitly reference blastocyst grading standardization per ESHRE guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for the current transfer (proceed, single ET, luteal support, lifestyle) and well-structured future planning including sperm DNA fragmentation testing if failures persist, selective PGT-A discussion, protocol review, and staged workup for recurrent implantation failure. The tiered approach to future investigations is practical. The offer of patient-friendly explanations adds clinical utility. Could be slightly more specific about trigger optimization strategies or specific protocol adjustments for low AMH patients."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.022362,
+  "judge_latency_ms": 16604.559082989,
+  "judge_prompt_tokens": 3939,
+  "judge_completion_tokens": 703
+}

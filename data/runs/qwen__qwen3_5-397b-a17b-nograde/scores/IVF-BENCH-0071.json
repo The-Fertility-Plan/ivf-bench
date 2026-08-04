@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst-stage assessment with reasonable ICM/TE grading, but includes specific positional details and zona observations that may be overconfident from a single image and lacks certainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, AMH, oocyte maturity, tubal factor, endometrium, BMI/lifestyle, and paternal age with embryo prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Reasoning is generally logical, but the response is incomplete/truncated, does not reach the requested implantation estimate, and some conclusions (e.g., trigger timing/oocyte competence issue) are somewhat speculative."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Uses Gardner-style morphology appropriately and makes mostly evidence-consistent points about age-related aneuploidy, endometrial thickness, and tubal factor, with only minor speculative elements."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "Offers limited practical next steps; the response is cut off before concrete transfer or future-cycle recommendations are fully developed."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.00987,
+  "judge_latency_ms": 3356.39141700085,
+  "judge_prompt_tokens": 1805,
+  "judge_completion_tokens": 297
+}

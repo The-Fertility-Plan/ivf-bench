@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0689",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the key morphological features consistent with a 4AA Gardner grade: hatching blastocyst with zona herniation, compact densely cellular ICM, and cohesive trophectoderm epithelium. The tabular format is clear and well-organized. Minor deduction for the speculative note about 'asymmetric blastocoel collapse' which may or may not be visible in the image and could introduce unnecessary uncertainty, and for describing ICM as 'superiorly' located which is a positional detail that may not be verifiable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all relevant clinical factors. The response explicitly connects age 39 to aneuploidy risk, BMI 35.7 to implantation reduction, prior clinical miscarriage to thrombophilia/euploidy concerns, borderline sperm motility to embryo competence, and tubal factor to preserved uterine environment. The 'conflicting signals' section effectively juxtaposes competing positive and negative factors, demonstrating sophisticated multi-variable clinical thinking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured, with explicit adjustments for each risk factor. The final live birth estimate of 25-35% follows coherently from the base rates and penalties applied. Minor issue: the base rate of 45-55% clinical pregnancy for a 4AA at age 39 is slightly optimistic compared to published data, and the distinction between implantation rate (32-42%) and clinical pregnancy rate (35-45%) is counterintuitively reversed (implantation should be lower than or equal to clinical pregnancy rate conceptually, though the model may mean different things by these terms)."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE and ASRM guidelines: luteal phase support, endometrial assessment, thrombophilia workup after miscarriage, PGT-A consideration at age 39, hysteroscopy for RIF workup, and sperm DNA fragmentation testing. The WHO sperm motility threshold cited (≥40%) is slightly outdated as current WHO 2021 criteria set progressive motility at ≥30%, which is a minor inaccuracy. Intralipid/IVIG recommendation is appropriately caveated as low-moderate evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific, tiered recommendations. Immediate transfer checklist, pre-transfer workup checklist with specific tests, adjunct therapy table with evidence levels, and a structured future cycle planning flowchart are all provided. The recommendations are appropriately nuanced (e.g., LMWH only if thrombophilia positive, intralipid only if NK cells elevated). Long-term counseling points including BMI targets and banking strategy add practical value for the treating clinician."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.019656,
+  "judge_latency_ms": 13769.922957995732,
+  "judge_prompt_tokens": 3007,
+  "judge_completion_tokens": 709
+}

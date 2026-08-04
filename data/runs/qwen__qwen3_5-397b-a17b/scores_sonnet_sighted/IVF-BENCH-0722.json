@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features visible in the image: expanded blastocyst, thinning zona, clearly visible ICM on the right side that is tightly packed, and cohesive TE. The model correctly notes a minor discrepancy between the Gardner stage 3 label and the apparent expansion level suggesting stage 4. Minor deduction for not commenting on the somewhat granular/vacuolated appearance of the ICM visible in the image, which could slightly temper the AA grade assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, tubal factor diagnosis, endometrial thickness, sperm parameters, and lifestyle factors. It correctly identifies the hydrosalpinx risk with tubal factor and connects alcohol consumption to implantation risk. Minor gap: does not explicitly address the moderate alcohol consumption's potential impact on oocyte/embryo quality in prior cycles or the specific interaction between BMI and protocol response, though BMI is optimal here."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and the probability estimate of 65-75% logically follows from the evidence presented. The model correctly identifies positive and negative modifiers and applies them consistently. The slight inconsistency is noting the embryo as 'top-tier' and 'highest quality' while only estimating 65-75%, which is reasonable but the reasoning for not reaching higher could be more explicitly tied to the alcohol factor and the image-based morphological nuances rather than just stated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: eSET recommendation for young patient with good prognosis, vitrification of surplus embryos, appropriate de-emphasis of PGT-A for a 28-year-old first-time IVF patient with good morphology, and hydrosalpinx screening. The alcohol cessation advice aligns with reproductive medicine guidelines. Minor issue: the model conflates Gardner stage 3 and 4 descriptions without fully resolving the discrepancy per Gardner's original criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET, alcohol cessation, hydrosalpinx ultrasound confirmation, vitrification of surplus embryos, retention of antagonist protocol, and reasoned argument against PGT-A. These are directly applicable clinical next steps. Could be slightly more actionable by specifying timing of hydrosalpinx check, suggesting ERA (Endometrial Receptivity Array) is not needed given optimal thickness, or addressing luteal phase support protocol specifics."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.018477,
+  "judge_latency_ms": 15584.801292003249,
+  "judge_prompt_tokens": 2874,
+  "judge_completion_tokens": 657
+}

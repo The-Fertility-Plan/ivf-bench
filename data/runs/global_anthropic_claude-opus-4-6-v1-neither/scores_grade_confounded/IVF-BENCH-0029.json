@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 1DD and instead stated there was no Gardner score, then discussed an expected Day 4 morula rather than the documented very poor-quality blastocyst morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant patient factors well, including age, tubal factor, sperm, endometrium, lifestyle, and first-cycle status, though it did not connect these to the actual poor embryo grade because it ignored 1DD."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally organized but rests on a major factual error: it assumes unknown morphology and likely average/good Day 4 morula quality despite the provided 1DD blastocyst grade, leading to an inflated implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but the embryo assessment is not aligned with Gardner grading because 1DD was ignored, and suggestions like considering ICSI in a normozoospermic limited cohort are not clearly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for luteal support, beta-hCG timing, activity, and future planning, though these recommendations are weakened by being based on an incorrect understanding of embryo quality."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012906,
+  "judge_latency_ms": 4031.4178750049905,
+  "judge_prompt_tokens": 2567,
+  "judge_completion_tokens": 347
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0527",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image-based certainty and mislocalizes structures: the ICM is not clearly identifiable in the lower portion, TE is not convincingly grade A throughout the visible circumference, and the image alone does not strongly support a precise 3AA description despite matching the provided lab grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve, sperm parameters, diagnosis, and endometrial thickness with embryo quality reasonably well, though it overemphasizes BMI and makes some assumptions about male factor and endometrial receptivity."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: calling 3AA the highest possible grade, claiming sperm parameters are exceptional despite a male-factor diagnosis, and deriving a fairly confident implantation estimate from morphology plus speculative BMI effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer is guideline-concordant, but recommending metformin or low-dose aspirin to improve receptivity in this scenario is not standard evidence-based practice, and routine PGT-A suggestion in a 31-year-old without recurrent failure is not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with SET and reviewing stimulation if unsuccessful, but some recommendations are insufficiently nuanced or not well supported, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.012909,
+  "judge_latency_ms": 4429.249583001365,
+  "judge_prompt_tokens": 2498,
+  "judge_completion_tokens": 361
+}

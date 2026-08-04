@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0664",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response repeatedly notes the image does not look like a blastocyst, then ultimately describes fabricated blastocyst features (expanded blastocoel, visible ICM/TE, thinning zona) as if confirmed by the image. This is a major mismatch with the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well: age, BMI, ovarian reserve, prior miscarriage, male factor, sperm parameters, endometrium, and embryo grade, and relates them to prognosis. Some inferences, such as implying poor response from 7 oocytes, are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally inconsistent: it oscillates between saying the image is not a blastocyst and treating it as a high-quality blastocyst. Probability and conclusions are only partly supported because morphology assessment is contradictory."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of age/endometrium/BMI effects are broadly aligned with IVF practice. However, overreliance on morphology, speculative comments about poor response and male factor, and somewhat simplistic PGT-A discussion reduce guideline fidelity."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives some practical recommendations (proceed with transfer, weight optimization, consider future PGT-A depending on embryo number, monitor closely), but they are fairly generic and not especially nuanced for this specific case."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.01470375,
+  "judge_latency_ms": 6753.402750007808,
+  "judge_prompt_tokens": 8787,
+  "judge_completion_tokens": 372
+}

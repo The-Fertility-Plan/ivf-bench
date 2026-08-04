@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0293",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response relies heavily on the provided 3AA label rather than the image, and it inaccurately states that grade 3 indicates an expanded or nearly hatched blastocyst; in Gardner grading, 3 is a full blastocyst, while expanded is 4. It also calls 3AA a 'perfect' score and describes features not clearly visible in this focal plane."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including maternal age, prior live birth, BMI, endometrium, ovarian response, partner age, and sperm parameters, and relates them to prognosis. It misses some nuance around AMH/FSH and overstates the significance of some lifestyle factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but there are notable issues: misinterpretation of Gardner stage, calling 3AA 'highest' quality, and some overconfident statements about ovarian response and male factor. The implantation estimate is plausible but only partially justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but the Gardner grading interpretation is incorrect, and describing 3AA as 'perfect' or topmost quality is not guideline-accurate. Recommendations are not fully shown, limiting assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible response provides general prognostic commentary but few concrete, case-specific next steps for transfer management or future cycle planning. Practical recommendations are limited and not sufficiently detailed."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012654,
+  "judge_latency_ms": 5463.4952080086805,
+  "judge_prompt_tokens": 2253,
+  "judge_completion_tokens": 393
+}

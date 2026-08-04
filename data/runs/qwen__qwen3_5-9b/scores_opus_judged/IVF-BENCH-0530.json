@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0530",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes the embryo as expanded with thinning zona pellucida and bulging cells, which may overstate the expansion for a Grade 1 blastocyst (Grade 1 means early blastocyst with blastocoel less than half or just at half the embryo volume, not a fully expanded one with thinning ZP). The Gardner Grade 1 designation indicates an early blastocyst, yet the model describes features more consistent with a Grade 4-5 (thinning ZP, bulging). The ICM and TE descriptions as degenerative/sparse are consistent with D grades. There is a contradiction between describing it as 'clearly expanded' with thinning ZP while the grade is 1 (early blastocyst). This is a notable inaccuracy in expansion assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates DOR, maternal age, paternal age, sperm parameters, endometrial thickness, and previous miscarriage history well with the embryo quality assessment. The connections between advanced paternal age and DNA fragmentation, DOR and oocyte quality, and the history of miscarriage are all clinically relevant. The integration is thorough and considers multiple interacting factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally coherent, but there is an internal contradiction: the model describes the embryo as 'clearly expanded' with thinning zona pellucida (features of Grade 4-5) while simultaneously confirming the Grade 1 designation. The 'survival of the fittest' argument is somewhat speculative. The probability estimate of 5-15% is reasonable for a DD-grade blastocyst but the reasoning path has the noted inconsistency. The suggestion that PGT-A could be considered on the only available embryo while also noting it's usually not recommended creates some ambiguity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation has an error (Grade 1 = early blastocyst, not expanded). The recommendation to proceed with transfer of the only available embryo is appropriate. The suggestion of donor eggs/sperm is premature after only one failed cycle with DOR at age 37 with AMH of 1.61 - many clinics would attempt additional cycles with own gametes first. The PGT-A discussion is reasonable but biopsy of a DD-grade blastocyst is generally not recommended. The mention of thrombophilia workup after one miscarriage is slightly aggressive per ASRM guidelines (typically after 2+ losses)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, emotional support, lifestyle maintenance, hysteroscopy consideration, and future cycle planning including donor gamete discussion. The response provides clear next steps for both the current cycle and future planning. The nuance around PGT-A decision-making is helpful. However, the donor egg/sperm recommendation may be premature and could be more nuanced with intermediate options like modified stimulation protocols or accumulation cycles."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.0322,
+  "judge_latency_ms": 26647.524458996486,
+  "judge_prompt_tokens": 2715,
+  "judge_completion_tokens": 745
+}

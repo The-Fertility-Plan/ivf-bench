@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0009",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality, minimally expanded embryo with poorly defined ICM/TE, but inaccurately states expansion as less than half despite Gardner 1 meaning blastocoel at least half the embryo, and overstates some features not clearly discernible from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, sperm parameters, and male factor diagnosis reasonably well with embryo quality, though discussion of day-4 transfer context and limits of inferring sperm DNA issues could be more nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is clear and the poor prognosis follows from the embryo grade, but there are inconsistencies such as misdefining expansion grade 1 and making absolute statements like 'no viable cells' and 'should not be transferred' from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "While recognizing the embryo as poor quality is appropriate, recommending categorically not to transfer/discard based on morphology alone and suggesting routine PGT-A at age 34 are not well aligned with standard evidence-based IVF guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides concrete next steps such as considering another cycle and sperm DNA fragmentation testing, but recommendations are somewhat overdirective and insufficiently nuanced for a poor-quality embryo in a real clinical decision context."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013029,
+  "judge_latency_ms": 5230.178750003688,
+  "judge_prompt_tokens": 2563,
+  "judge_completion_tokens": 356
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0740",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with the Gardner 0DD score: poor expansion, indistinct cavitation, absent/degenerative ICM, and sparse/uneven TE. It correctly correlates the image findings with the laboratory grading. Minor issue: the response notes a possible terminology mismatch with Gardner '0' vs 'early blastocyst' labeling, which shows good critical thinking. The caveat about transient collapse is clinically appropriate. Overall description aligns well with what a 0DD embryo would look like, though some descriptions are somewhat hedged rather than definitive."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 31 as favorable, AMH/FSH indicating good reserve, endometrial thickness of 9mm as reassuring, excellent semen parameters, endometriosis as a complicating factor, and BMI 31.4 as mildly unfavorable. It correctly identifies the interaction between embryo quality and maternal age. However, it contains a notable error stating '1 MII oocyte from 16 retrieved' when the data shows 9 MII from 16 COCs, which is a reasonable maturation rate (~56%). This factual error somewhat undermines the integration quality but the rest of the clinical reasoning remains sound."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall reasoning structure is logical and the 5-15% implantation probability estimate is reasonably supported by the evidence presented. However, the significant factual error about MII oocyte count (stating 1 MII from 16 retrieved instead of the actual 9 MII from 16) leads to an entire section of flawed reasoning about 'suboptimal maturation' that is not supported by the actual data. This internal inconsistency represents a meaningful logical gap, as the model fabricated a concern that doesn't exist in the case data, which affects the coherence of the overall assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response is broadly aligned with ESHRE/ASRM guidelines: appropriate use of Gardner grading framework, reasonable discussion of PGT-A indications at age 31, appropriate counseling about poor-quality embryo transfer, endometriosis management considerations, and lifestyle recommendations. The suggestion to consider embryo banking and cumulative cycle approach aligns with current evidence. The discussion of GnRH agonist suppression for endometriosis is guideline-consistent. Minor deviations include some imprecision in Gardner score interpretation, but overall the clinical recommendations reflect evidence-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations covering: counseling for this transfer, future stimulation strategy review, embryo banking approach, PGT-A considerations, endometriosis optimization, uterine assessment, and lifestyle modifications. The recommendations are nuanced and case-specific. The framing of 'reasonable to proceed only if patient wants the slim chance' is clinically useful. Slight deduction because the stimulation review recommendations are based on the erroneous MII count interpretation, and some recommendations (e.g., 'double trigger') are based on this incorrect premise, reducing practical utility in that section."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.023373,
+  "judge_latency_ms": 15980.902666000475,
+  "judge_prompt_tokens": 3871,
+  "judge_completion_tokens": 784
+}

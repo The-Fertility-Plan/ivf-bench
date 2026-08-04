@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0673",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3BB Gardner score: expanded blastocoel with thinning zona pellucida, loosely grouped ICM at top right, and few cells forming a loose TE epithelium. The description aligns well with the grading criteria. Minor limitation is that it largely echoes the provided Gardner score description rather than offering independent morphological observations that go beyond the label (e.g., symmetry, color, debris, granularity)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, AMH, FSH, sperm parameters, endometrial thickness, and the DOR diagnosis discrepancy. It correctly identifies the contradiction between the DOR label and the high AMH/good oocyte yield. It connects age to aneuploidy risk and endometrial thickness to receptivity. Minor gap: BMI of 20.7 is not meaningfully integrated, and the lifestyle factors (light drinking, exercise) are not discussed in relation to outcomes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-40% follows reasonably from the embryo grade and patient age. The identification of the DOR/AMH discrepancy is coherent and well-argued. The recommendation to proceed with transfer is well-supported. Minor issue: the aneuploidy risk stated as '<10-15%' for age 29 is slightly conservative (literature suggests ~20-25% for blastocysts at this age), creating a minor inconsistency with the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: single embryo transfer implied, luteal phase support mentioned, PGT-A discussed as optional rather than mandatory for young patients, and freeze-all strategy considered for OHSS risk. The Gardner grading interpretation is consistent with established criteria. Minor deviation: the response does not explicitly recommend single embryo transfer (eSET), which is a key ESHRE/ASRM guideline for good-prognosis patients like this one."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, ensure luteal support, clarify DOR diagnosis, consider PGT-A optionally, and plan for FET in future cycles. The freeze-all strategy consideration adds nuance. However, recommendations could be more specific regarding luteal support protocol details, timing of beta-hCG testing, or specific follow-up steps to resolve the DOR diagnosis discrepancy (e.g., AFC measurement)."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.017808,
+  "judge_latency_ms": 12891.574207998929,
+  "judge_prompt_tokens": 2686,
+  "judge_completion_tokens": 650
+}

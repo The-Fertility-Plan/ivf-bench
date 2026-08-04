@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0041",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response ignored the provided Gardner score 0DD and instead stated no specific morphology could be assigned, then assumed a transferable embryo such as ≥3BB, which directly contradicts the case data and fabricates a better-quality morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, prior cycle, semen data, endometrium, and oocyte maturity reasonably well with prognosis, though the integration is undermined by using an incorrect assumed embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but has a major logical flaw: it bases prognosis on an assumed good-quality blastocyst despite explicit 0DD morphology, leading to an implausibly optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are broadly evidence-based, but key elements are not guideline-concordant for this case: failure to use the actual Gardner grade, overestimating prognosis for a 0DD embryo, and speculative recommendations such as dual-route progesterone and stress/cortisol effects without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer support, trigger review, male-factor workup, and lifestyle optimization, though these are partly misdirected because they are built on an incorrect embryo-quality assumption."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013062,
+  "judge_latency_ms": 4300.786459003575,
+  "judge_prompt_tokens": 2589,
+  "judge_completion_tokens": 353
+}

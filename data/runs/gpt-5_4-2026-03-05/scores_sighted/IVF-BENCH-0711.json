@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0711",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a blastocyst with visible blastocoel, ICM, and TE, and appropriately questions whether the image truly matches a full blastocyst/2AA label. Notes on zona thinning and stage 2-3 appearance are reasonable from the image, though TE/ICM grading remains somewhat inferential from a single focal plane."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Integrates maternal age, BMI, tubal factor, prior failed cycle, ovarian response, endometrial thickness, sperm parameters, and paternal age well, and correctly highlights hydrosalpinx as a key modifier of prognosis in a tubal-factor case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent, with probability estimates tied to embryo stage uncertainty and clinical context. Minor limitation is some emphasis on hydrosalpinx despite it not being explicitly documented in the case details."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "Consistent with Gardner grading criteria, supports single embryo transfer for a 35-year-old with a good-quality day-5 blastocyst, avoids unsupported add-ons, and appropriately frames PGT-A as individualized rather than mandatory."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for proceeding with transfer, checking hydrosalpinx/uterine cavity status, optimizing luteal support, and outlining sensible next steps if unsuccessful. Could be even more specific on transfer protocol details or thresholds for further testing."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01575,
+  "judge_latency_ms": 5189.444457995705,
+  "judge_prompt_tokens": 3420,
+  "judge_completion_tokens": 366
+}

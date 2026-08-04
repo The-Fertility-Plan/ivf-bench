@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0652",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the blastocyst expansion, ICM as loosely grouped (Grade B), and TE as cohesive. However, it inconsistently describes the expansion as 'Grade 2-3' when the Gardner score provided is 2 (full blastocyst, not expanded/hatching). The TE is described as 'Grade A' but the provided Gardner score indicates 'A' for TE, which is consistent, though the image shows a somewhat irregular, granular appearance that warrants more nuanced description. The zona pellucida observation is reasonable but generic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "The response integrates age, endometrial thickness, and sperm parameters reasonably well. However, it inadequately addresses the contradiction between the DOR diagnosis and the relatively high AMH (6.46 ng/mL) and good oocyte yield (11 COCs, 9 MII), which is clinically inconsistent. BMI of 35.5 is mentioned but its impact on implantation and endometrial receptivity is not fully explored. The natural cycle protocol context is not critically evaluated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The response contains a significant internal contradiction: it labels the embryo as Day 4 blastocyst as 'accelerated' and highly favorable, but Day 4 blastocysts are actually morula-to-early blastocyst stage typically, and a full blastocyst on Day 4 could indicate abnormal rapid development potentially associated with aneuploidy rather than being unambiguously positive. The response is also cut off mid-sentence, preventing full evaluation of the probability estimate and its reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The claim that Day 4 blastocysts have '15-20% higher implantation rates' is not well-supported by current literature and may contradict some evidence suggesting very early blastulation can be associated with aneuploidy. The DOR diagnosis with a natural cycle protocol is not critically examined per ESHRE/ASRM guidelines. The response is truncated, preventing full guideline alignment assessment, but visible content shows some deviations from standard interpretive frameworks."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response is cut off mid-sentence before completing the clinical recommendations section. No complete actionable recommendations for transfer protocol, luteal support, future cycle planning, or PGT-A considerations are provided. The truncation renders this section essentially non-functional for clinical use."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.015177,
+  "judge_latency_ms": 14358.76816700329,
+  "judge_prompt_tokens": 1949,
+  "judge_completion_tokens": 622
+}

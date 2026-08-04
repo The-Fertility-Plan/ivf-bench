@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0099",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined to assign morphology because it was told no image was provided, and it did not fabricate embryo-specific features. However, it also did not analyze the visible blastocyst image, so morphology assessment is largely omitted."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, BMI, diagnosis, prior live births/miscarriage, endometrial thickness, sperm factors, and lifestyle risks into prognosis and transfer planning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is logical and internally consistent: it identifies embryo morphology as the main unknown, weighs favorable and unfavorable factors appropriately, and gives a conditional implantation estimate that follows from the evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice guidelines, including single embryo transfer in a good-prognosis 31-year-old, no bed rest, and individualized PGT-A. Minor caution only because some suggestions are somewhat generalized without embryo-specific grading."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for the current transfer and future cycles, including lifestyle modification, embryo data review, male factor reassessment, and possible cavity evaluation. Useful and specific, though limited by lack of image-based morphology."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013626,
+  "judge_latency_ms": 4360.246957992786,
+  "judge_prompt_tokens": 2852,
+  "judge_completion_tokens": 338
+}

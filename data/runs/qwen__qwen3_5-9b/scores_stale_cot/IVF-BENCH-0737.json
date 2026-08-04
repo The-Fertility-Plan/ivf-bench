@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0737",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response fabricates specific blastocyst features (large blastocoel, clear ICM/TE, thinned zona) despite repeatedly noting the image does not clearly resemble a blastocyst. It ultimately relies on the provided Gardner grade rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, ovarian reserve, endometriosis, prior IVF failures, sperm motility, and endometrial thickness, and relates them to prognosis. Some points are overstated or speculative, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by major internal contradictions about the image, oscillating between degenerating oocyte and 3AA blastocyst. Probability estimates also shift (30-50%, 40-60%, >60-70%) without a stable rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent (proceed with transfer, consider recurrent failure workup, note endometriosis impact), but there are deviations: calling 3AA the 'highest quality grade available,' overstating routine immune testing, and strongly recommending PGT-A in a 27-year-old without nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including proceeding with transfer, lifestyle optimization, hysteroscopic/anatomic review, and recurrent failure evaluation. Some recommendations are somewhat generic or controversial, but still clinically usable."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01152,
+  "judge_latency_ms": 6361.259583965875,
+  "judge_prompt_tokens": 6080,
+  "judge_completion_tokens": 392
+}

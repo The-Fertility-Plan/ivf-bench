@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0482",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst with visible cavity and peripheral cells, but overstates features such as 'about to hatch/hatched' and assigns specific ICM/TE details that are not clearly supported by this single image; the note that it might look more like BB/BC reflects some uncertainty."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, prior live birth/miscarriage, endometriosis, smoking, BMI, sperm parameters, and endometrial thickness with embryo quality in a clinically meaningful way, though AMH/FSH and some cycle-context nuances are underused."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and internally consistent: strong morphology is balanced against age-related aneuploidy and lifestyle risks. Minor issues include some overinterpretation of paternal age impact and morphology-image mismatch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with general IVF principles (importance of age, morphology limits, smoking cessation), but some recommendations are not tightly guideline-based or are overstated, such as suggesting PGT-A on existing frozen embryos and routine hysteroscopy without a clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including proceeding with transfer, smoking cessation, lifestyle counseling, and future consideration of PGT-A. However, some advice is somewhat generic and a few recommendations lack case-specific nuance."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013539,
+  "judge_latency_ms": 5234.470583003713,
+  "judge_prompt_tokens": 2663,
+  "judge_completion_tokens": 370
+}

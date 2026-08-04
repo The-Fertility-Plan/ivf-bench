@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states morphology/Gardner scoring cannot be assessed despite explicit provided morphology data (2AA full blastocyst with strong ICM and TE), and instead reframes the case as incompatible with blastocyst grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, BMI, endometrium, male factor, paternal age, and prior cycle history reasonably well, though it is anchored to an incorrect assumption about embryo stage."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning is internally structured but undermined by a major contradiction: it ignores the supplied Gardner 2AA blastocyst data because transfer day is listed as Day 4, leading to flawed downstream conclusions about embryo stage and prognosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard, but the claim that Gardner scoring is not applicable here and the emphasis on Day 4 transfer over the provided blastocyst grade are not well aligned with accepted embryo assessment principles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for luteal support, beta-hCG timing, possible PGT-A, extended culture, and sperm DNA fragmentation testing, though these are partly based on the mistaken staging assumption."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012894,
+  "judge_latency_ms": 4262.543124998047,
+  "judge_prompt_tokens": 2623,
+  "judge_completion_tokens": 335
+}

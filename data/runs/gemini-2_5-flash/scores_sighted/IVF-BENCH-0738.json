@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0738",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst image and the provided 2AA label, but it overstates confidence in ICM/TE quality from a single image and inaccurately equates Gardner 2 with a fully expanded blastocyst; stage 2 is early blastocyst rather than full expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian response, sperm, endometrium, BMI, first-cycle status, and uterine factor reasonably well, with appropriate emphasis on the uterine diagnosis as a key modifier of prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with conclusions tied to embryo quality and uterine factors, though the implantation estimate may be somewhat optimistic given the unspecified uterine factor and grading-stage confusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and importance of uterine cavity assessment, but contains notable deviations such as misinterpreting Gardner expansion stage, suggesting ERA relatively readily, and presenting PGT-A somewhat more favorably than guideline-based routine use would support in this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps including SET, luteal support, uterine cavity clarification, and contingency planning, though some recommendations are broad rather than tightly tailored to the exact uterine-factor diagnosis."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.015462,
+  "judge_latency_ms": 5077.620915995794,
+  "judge_prompt_tokens": 3379,
+  "judge_completion_tokens": 355
+}

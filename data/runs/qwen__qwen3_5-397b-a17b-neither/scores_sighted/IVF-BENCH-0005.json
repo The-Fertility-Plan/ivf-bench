@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided fabricating detailed morphology. Its inferred Day 4 morula/early blastocyst framing is broadly compatible with the image, but it did not analyze the visible embryo features and made limited stage assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, BMI, endometriosis, prior failed cycles, sperm parameters, and endometrial thickness into prognosis and management. Some links were speculative, especially the PCOS inference from AMH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is structured and generally logical, with the implantation estimate tied to age, transfer day, endometriosis, and recurrent failure. Minor issues include overcalling recurrent implantation failure and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but several recommendations are not strongly guideline-supported as routine care, including ERA, immune/thrombophilia-directed empiric treatment, aspirin/heparin without indication, and presenting PGT-A as critical in a 32-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions for luteal support, further evaluation, and future cycle planning. However, some recommendations are more aggressive than standard practice and would need stronger indication before implementation."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.014643,
+  "judge_latency_ms": 8492.935125002987,
+  "judge_prompt_tokens": 3091,
+  "judge_completion_tokens": 358
+}

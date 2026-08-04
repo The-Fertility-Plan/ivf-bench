@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0147",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Includes some correct high-level features of an expanded AA blastocyst, but also several likely fabricated or unsupported image claims (degeneration, hemorrhage/red blood cells, asymmetry details, collapse artifacts), and wavers between stage 3 and 4 despite provided lab grade 3AA."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates most relevant factors well: age 34, tubal factor, prior failed cycle, smoking, BMI, FSH, semen parameters, endometrial thickness, and notes hydrosalpinx as an important modifier."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is reasonable, but there are inconsistencies in morphology interpretation and probability framing, including shifting estimates and an overstated claim about smoking causing a large absolute reduction."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally consistent with IVF practice: recognizes 3AA as favorable, supports single embryo transfer, emphasizes hydrosalpinx exclusion, luteal support, and cautious use of PGT-A at age 34. Minor deviations include speculative comments about thick endometrium and smoking effect size."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including smoking cessation, hydrosalpinx assessment, luteal support, cavity evaluation if repeated failure, and selective further testing."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.020223,
+  "judge_latency_ms": 6759.923500008881,
+  "judge_prompt_tokens": 4956,
+  "judge_completion_tokens": 357
+}

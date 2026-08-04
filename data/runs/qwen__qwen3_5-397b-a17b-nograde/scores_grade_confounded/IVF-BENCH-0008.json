@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "Major mismatch with the provided lab grading: the response calls the embryo a good-quality Day 4 morula and says Gardner scoring cannot be assigned, whereas the case explicitly gives a 0DD early blastocyst with absent/degenerative ICM and TE. It fabricates favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant factors including young age, high ovarian reserve, prior live births/losses, sperm quality, and endometrial thickness, and links them to prognosis, though some inferences (e.g., PCOS/PCOM, intermittent receptivity issues) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a fundamentally incorrect embryo assessment, leading to an implausibly optimistic prognosis and recommendations. The probability estimate does not follow from a 0DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "There are notable deviations from evidence-based practice: misapplication of morphology/Gardner criteria, overcalling embryo quality, and recommending ERA and immune/thrombophilia workup without strong indication. PGT-A suggestion in a 24-year-old is also not routine."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as luteal support review and future culture considerations, but these are weakened by the incorrect morphology interpretation and include some low-yield or non-routine suggestions."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012543,
+  "judge_latency_ms": 4975.920625001891,
+  "judge_prompt_tokens": 2301,
+  "judge_completion_tokens": 376
+}

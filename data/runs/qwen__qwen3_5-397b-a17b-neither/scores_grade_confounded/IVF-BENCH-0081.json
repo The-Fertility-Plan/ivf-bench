@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score (3AA) and instead stated morphology could not be assessed, omitting key known features such as expanded blastocyst, tightly packed ICM, cohesive TE, and thinning zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior failed cycles, endometrial thickness, BMI, sperm parameters, diagnosis, and lifestyle reasonably well with prognosis, though it overemphasizes RIF and adds some speculative factors."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is weakened by ignoring the known 3AA morphology, labeling 3 prior failed cycles as RIF without nuance, and making a notably pessimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly evidence-based, but strong endorsement of PGT-A, ERA, dual-pathway progesterone, and TESA/SDF workup is more aggressive than guideline-supported routine practice for unexplained repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer and future evaluation, including cavity reassessment and lab audit, though some recommendations are not sufficiently prioritized or nuanced."
+    }
+  ],
+  "extracted_probability": 0.225,
+  "judge_cost_usd": 0.012531,
+  "judge_latency_ms": 3830.6750830015517,
+  "judge_prompt_tokens": 2522,
+  "judge_completion_tokens": 331
+}

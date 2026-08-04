@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0190",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes very poor-quality morphology with no clear ICM/TE, but it overstates certainty by calling it an early blastocyst with critical arrest/non-viability and adds features not reliably visible from the image alone; the provided Gardner label 0DD is itself atypical for standard blastocyst grading and the image looks more like a compact morula/very early cavitating embryo than a clearly classifiable blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, endometriosis, prior failed cycles, sperm parameters, and endometrial thickness reasonably well, though some links are speculative (e.g., assuming low oocyte yield for AMH and protocol inadequacy)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the poor prognosis follows from the poor morphology, but there are notable overreaches and unsupported inferences, such as equating morphology with near-certain non-viability and inferring transfer timing/lab intent from the Day 4 transfer."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are broadly consistent with IVF practice, but several recommendations are not well guideline-aligned or are overstated: ERA/EMMA/ALICE are not routine evidence-based workup after repeated failure, aspirin is not standard for this indication, and calling cryopreservation 'contraindicated' or the embryo 'typically discarded' is too absolute."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for counseling, transfer expectations, luteal support, and future-cycle evaluation/planning, though some suggested tests/interventions are controversial or insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014976,
+  "judge_latency_ms": 6186.624124995433,
+  "judge_prompt_tokens": 2872,
+  "judge_completion_tokens": 424
+}

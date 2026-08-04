@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0740",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a very poor-quality, minimally expanded/early blastocyst or compacted morula-like embryo lacking clear ICM and cohesive TE, but it overstates certainty by calling it a morula and misinterprets the provided 0 expansion score as no blastocoel rather than early blastocoel less than half the embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of age, ovarian reserve, BMI, endometriosis, sperm parameters, and endometrial thickness with embryo prognosis, though some links (e.g., trigger issue, sperm DNA fragmentation) are somewhat speculative from the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent overall: very poor morphology drives a very low implantation estimate despite favorable age and lining. Minor issue is the overinterpretation of the exact developmental stage and viability from the image/score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Generally aligned with IVF practice in recognizing 0DD as extremely poor prognosis and emphasizing counseling and alternative embryo selection. Small deviations include nonstandard interpretation of stage 0 and somewhat assertive recommendations about trigger adjustment/ICSI without stronger indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer counseling and future cycle planning, including weight optimization and protocol review. Some recommendations are useful but not fully prioritized or tailored with thresholds/decision points."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.012843,
+  "judge_latency_ms": 5643.711124997935,
+  "judge_prompt_tokens": 2531,
+  "judge_completion_tokens": 350
+}

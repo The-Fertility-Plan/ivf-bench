@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0511",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a single focal-plane image, asserting specific findings such as vacuolization, TE irregularity, and a compact left-center ICM that are not clearly discernible. It partially matches the reported 3AA but includes likely fabricated or uncertain image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor context, endometrium, and smoking with embryo quality and prognosis reasonably well, though some links (e.g., MII rate as a strong implantation modifier) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the conclusions generally follow, but the probability adjustment scheme is somewhat arbitrary and relies on unsupported quantitative penalties/bonuses, especially for smoking, stress, and image-level granularity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and smoking cessation are guideline-consistent, but routine suggestions such as ERA after a single failure, low-dose aspirin for uterine perfusion, and broad endorsement of PGT-A/SDF testing are not strongly guideline-based for this first-cycle good-prognosis case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including SET and lifestyle modification, though some recommendations are more speculative than necessary for this scenario."
+    }
+  ],
+  "extracted_probability": 0.36,
+  "judge_cost_usd": 0.015444,
+  "judge_latency_ms": 5138.278041005833,
+  "judge_prompt_tokens": 3373,
+  "judge_completion_tokens": 355
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was available and relied on the provided 2AA grade rather than inventing image-specific details. However, it repeated an incorrect interpretation from the prompt by calling expansion 2 a 'full blastocyst' and added speculative comments about Day 4 blastocyst behavior not supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, endometrium, prior IVF outcomes, and lifestyle with embryo quality and prognosis. The recurrent failure/biochemical history is appropriately emphasized, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and internally understandable, but there are notable issues: confusion around Gardner expansion stage 2, overinterpretation of a Day 4 blastocyst as unusual/high-risk, and probability reasoning that is plausible but not tightly evidence-based."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines, including ERA/EMMA/ALICE, endometrial scratch, intralipids/IVIG, prednisone, and MTHFR testing. PGT-A as the 'highest priority' in a 28-year-old with male factor is also stronger than guideline-based evidence would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer support and future evaluation, including uterine cavity assessment and thrombophilia/APLS consideration. However, some suggested interventions are controversial or low-value, which limits practical usefulness."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.017517,
+  "judge_latency_ms": 5700.557999996818,
+  "judge_prompt_tokens": 3824,
+  "judge_completion_tokens": 403
+}

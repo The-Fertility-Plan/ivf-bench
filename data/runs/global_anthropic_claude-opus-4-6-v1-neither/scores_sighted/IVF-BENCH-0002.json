@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess morphology because no image was provided to it, avoiding fabricated image-specific claims. However, it then assumed a Day 4 morula-stage expectation, while the actual image appears blastocyst-like/cavitating rather than a compact morula, so morphology discussion is generic and partly mismatched."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, tubal factor, prior miscarriage, sperm parameters, and endometrial thickness into prognosis reasonably well. Some links are somewhat generic and it overinterprets the significance of Day 4 transfer and alcohol intake."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is structured and internally mostly consistent, with a clear prognosis framework and probability rationale. Minor issues include speculative assumptions about why Day 4 transfer was chosen and unsupported weighting of alcohol and transfer timing effects."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly IVF-consistent, but several recommendations are not strongly guideline-based or are outdated/controversial for routine use (acupuncture, routine progesterone monitoring/IM escalation, PGT-A at age 30 after one miscarriage, NK-cell testing, ERA)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides concrete next steps for the current transfer and future planning, including lifestyle modification and contingency planning. Actionability is reduced by inclusion of some low-value or nonstandard interventions."
+    }
+  ],
+  "extracted_probability": 0.405,
+  "judge_cost_usd": 0.013647,
+  "judge_latency_ms": 5709.1433750028955,
+  "judge_prompt_tokens": 2769,
+  "judge_completion_tokens": 356
+}

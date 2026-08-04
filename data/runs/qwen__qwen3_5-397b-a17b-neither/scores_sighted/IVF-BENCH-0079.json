@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not view the image and did not fabricate specific embryo morphology. It only gave generic hypothetical comments about Day 5 blastocysts, so there is no direct morphological assessment of the visible embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, prior failure, endometrial thickness, BMI, protocol, and semen data into prognosis reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with probability estimates tied to age and transfer context. Minor issues include overinterpreting AMH as affecting quality and some speculative male-factor discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but recommending PGT-A as 'highly recommended' in a low-yield 36-year-old with only 3 oocytes is stronger than guideline-supported evidence, and some adjunct suggestions are not guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management and future cycle planning, including protocol review and further sperm evaluation, though some recommendations are more assertive than the evidence warrants."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013794,
+  "judge_latency_ms": 4266.768500005128,
+  "judge_prompt_tokens": 2963,
+  "judge_completion_tokens": 327
+}

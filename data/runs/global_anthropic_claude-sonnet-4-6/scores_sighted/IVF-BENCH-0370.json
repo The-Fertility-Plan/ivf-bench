@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0370",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a blastocyst with visible ICM/TE and thinning zona, but it misstates the expansion as only 60-70%/partially expanded despite the provided Gardner 3AA, and it likely fabricates biopsy/assisted hatching context from the image artifact."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior failed cycle, male factor, BMI, endometrium, and embryo grade into prognosis reasonably well, though some links (stress, sedentary lifestyle) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: speculative inference of PGT-A/biopsy from the image, some unsupported probability modifiers, and recommendations that do not fully follow from the presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer and general prognosis framing are appropriate, but routine suggestions such as aspirin, prednisolone, ERA after one failed cycle, thrombophilia/immunologic testing, and NK cell assessment are not well supported by major IVF guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer and future planning, but several recommendations are overly aggressive or insufficiently evidence-based for this specific case."
+    }
+  ],
+  "extracted_probability": 0.415,
+  "judge_cost_usd": 0.013824,
+  "judge_latency_ms": 4432.202166004572,
+  "judge_prompt_tokens": 2873,
+  "judge_completion_tokens": 347
+}

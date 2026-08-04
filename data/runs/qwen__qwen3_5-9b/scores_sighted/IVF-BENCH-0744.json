@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, incorrectly localizes TE on the right, and claims the embryo is hatching or about to hatch despite a reported stage 3 expanded blastocyst. The image is somewhat limited, and the ICM/TE description is only partially supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, prior cycle history, BMI, endometrium, sperm parameters, and paternal age with embryo quality reasonably well, though AMH is unavailable and some interpretations (e.g., FSH significance) are overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable issues: calling FSH 7.7 elevated/diminished reserve is questionable, and linking TE grade B to needing more progesterone support is not well supported. Probability reasoning is broadly plausible but somewhat loosely justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the response is broadly consistent with IVF practice, but recommending PGT-A on already frozen embryos and suggesting extra luteal support because of TE grade B are not standard guideline-based recommendations. The RIF workup suggestion after only one failed cycle is premature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer and considering future testing, but several recommendations are generic or insufficiently nuanced for this exact case, and some are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01272,
+  "judge_latency_ms": 13587.20979100326,
+  "judge_prompt_tokens": 2465,
+  "judge_completion_tokens": 355
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0653",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately interprets the Gardner score components (expansion, ICM, TE) but relies heavily on the provided score rather than independent visual analysis of the image. The visual assessment is superficial ('blastocoel is visible,' 'distinct cellular structures') without noting specific features like zona pellucida thinning, degree of herniation, or detailed ICM/TE cell characterization visible in the image. No mention of the zona pellucida status or any fragmentation/debris visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient age, AMH, FSH, sperm parameters, and lifestyle to embryo prognosis. It correctly identifies young age as the dominant positive factor and notes the BMI concern. It addresses the unusual 'COCs: None' data point and the Day 4 transfer timing anomaly. Minor gap: sedentary lifestyle as a potential modifiable risk factor is not sufficiently explored, and the interaction between low BMI and endometrial receptivity could be more deeply analyzed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-65% is reasonably supported by the cited factors. The response correctly flags the Day 4 blastocyst timing as unusual and reasons through it appropriately. Minor inconsistency: the response states euploid implantation rates for 26-year-olds 'often exceed 60-70%' but then estimates 55-65%, partially justified by the B-grade ICM, though this downward adjustment could be more explicitly quantified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for young patient with good quality embryo, luteal phase support, endometrial assessment, and conditional PGT-A consideration. Gardner grading interpretation is accurate. The response correctly notes PGT-A is not routinely recommended for 26-year-olds in first cycles. Minor issue: ERA recommendation after a single failed transfer is somewhat premature per current ESHRE guidelines, which typically suggest ERA after recurrent implantation failure (≥3 failures)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET, endometrial thickness targets (7-12mm, trilaminar), luteal support, and a structured future planning pathway. The tiered approach (review embryo cohort → PGT-A → ERA → protocol change) is clinically useful. Could be improved with specific progesterone dosing considerations, timing recommendations for frozen transfer, or nutritional guidance given the low BMI concern. Psychological support inclusion is a valuable addition."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021798,
+  "judge_latency_ms": 15648.017041996354,
+  "judge_prompt_tokens": 3936,
+  "judge_completion_tokens": 666
+}

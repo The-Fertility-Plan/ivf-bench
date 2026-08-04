@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/pre-cavitation embryo and discusses compaction, fragmentation, and excluded cells rather than analyzing the provided Gardner 1DD blastocyst features (early blastocoel, absent/degenerate ICM and TE). This is a major morphology mismatch."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, diagnosis, prior IVF outcomes, oocyte yield, sperm parameters, and endometrial thickness with prognosis reasonably well, though some links are speculative and influenced by the incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is built on a fundamentally incorrect embryo-stage interpretation, making the implantation estimate and downstream conclusions poorly supported. There are also speculative claims such as assuming trilaminar endometrium and attributing Day 4 transfer to lab concern."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some elements are standard (luteal support, AMH assessment, hysteroscopy consideration), but several recommendations are weakly evidence-based or not guideline-supported for this scenario, including ERA after failed cycles, thrombophilia/immunologic workup, NK/cytokine testing, empiric hCG wash/G-CSF/PRP/immunomodulation, and donor oocyte discussion at age 35 with limited data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for monitoring, luteal support, and future-cycle planning, but some recommendations are overly aggressive or not evidence-based, limiting practical appropriateness."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.014859,
+  "judge_latency_ms": 6660.878624999896,
+  "judge_prompt_tokens": 2913,
+  "judge_completion_tokens": 408
+}

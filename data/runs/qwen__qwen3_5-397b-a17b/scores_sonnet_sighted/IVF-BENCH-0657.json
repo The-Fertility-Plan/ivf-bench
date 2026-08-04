@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0657",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinning zona pellucida, loosely grouped ICM, and cohesive TE consistent with Gardner 3BA. The ICM localization attempt (7-8 o'clock) shows engagement with the image. Minor issue: the description of TE as having 'distinct and uniform cell boundaries' may be slightly generous given the image quality, and the zona thinning description could be more precise about its circumferential distribution rather than just 'particularly on the left side.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors. The response connects the recurrent biochemical pregnancy pattern to likely aneuploidy, links maternal age (37) to aneuploidy rates, considers paternal age (40) and sperm DNA fragmentation as contributing factors, notes the adequate endometrial thickness, and contextualizes the low-normal AMH with the retrieval yield. The interaction between embryo genetics and uterine receptivity is well-articulated through the biochemical pregnancy pattern analysis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 25-35% is coherently derived from morphology base rates adjusted downward for recurrent loss history. The conditional probability reasoning (euploid vs aneuploid scenarios) is sound. Minor inconsistency: the base rate cited (35-40% live birth for 3BA at 37) is then adjusted to 25-35%, but the mathematical pathway through the euploid probability (~50-60% euploid × ~60% success if euploid = ~30-36%) actually supports the estimate well, though this calculation isn't explicitly reconciled."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines. PGT-A recommendation for recurrent pregnancy loss at age 37 is evidence-based. ERA recommendation is appropriately positioned as secondary. Sperm DNA fragmentation testing aligns with current guidelines for recurrent loss. Luteal support recommendation is standard. Minor gap: the response doesn't explicitly address ESHRE guidelines on recurrent implantation failure workup thresholds or mention the debate around ERA clinical utility in non-PGT-A cycles."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with clear prioritization. Recommendations are tiered appropriately: immediate transfer decision with specific luteal support suggestion, then future cycle planning with PGT-A as highest priority, followed by sperm DNA fragmentation testing, ERA as conditional next step, and immunological workup as last resort. Each recommendation includes rationale and some include specific interventions (PICSI/IMSI, dual progesterone support). The conditional logic ('if euploid embryos fail') makes the pathway clinically navigable."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.019353,
+  "judge_latency_ms": 16101.597666012822,
+  "judge_prompt_tokens": 2941,
+  "judge_completion_tokens": 702
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0739",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a hatching/expanded blastocyst with visible ICM, TE, and zona opening consistent with 4AA; minor uncertainty and some reliance on provided grade rather than purely image-based detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, prior miscarriage, endometrium, and sperm data with embryo quality well, though it somewhat overstates DOR implications and does not fully nuance that morphology cannot overcome age-related aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical and structured, but there are notable issues: it calls FSH 'slightly elevated' when it is normal, labels age 36 as both not advanced and advanced, and gives an implantation estimate that is likely overly optimistic for an untested embryo at this age."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and general embryo grading interpretation align with IVF practice, but routine thrombophilia screening after a single miscarriage is not guideline-based, and implying 4AA is near-gold-standard/euploid is not evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including SET, uterine cavity evaluation, luteal support, and future consideration of PGT-A and sperm DNA fragmentation; however, some recommendations are broader than necessary for this exact scenario."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0088025,
+  "judge_latency_ms": 6355.472958995961,
+  "judge_prompt_tokens": 4314,
+  "judge_completion_tokens": 341
+}

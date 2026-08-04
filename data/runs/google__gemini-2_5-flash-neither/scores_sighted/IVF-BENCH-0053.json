@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that it could not assess morphology without an image/Gardner score and did not fabricate specific embryo features. However, it provided no actual image-based analysis despite the embryo appearing to be a blastocyst with visible cavity and somewhat loose TE/indistinct ICM."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most key factors well, especially maternal age, endometriosis, prior miscarriage, ovarian response, sperm parameters, and endometrial thickness, and linked them to implantation and aneuploidy risk."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability estimates tied to age-related aneuploidy and prior outcomes. Minor weakness is reliance on assumed embryo quality because morphology was unavailable to the model."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, counseling about PGT-A, considering endometriosis impact), but ERA is suggested somewhat too readily and PGT-A is framed as strongly recommended despite ongoing guideline nuance about universal benefit."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future cycles, including embryo selection, counseling on PGT-A, review of endometriosis management, reserve testing, and psychosocial support. Some recommendations are somewhat generic rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.015672,
+  "judge_latency_ms": 4848.150291989441,
+  "judge_prompt_tokens": 3419,
+  "judge_completion_tokens": 361
+}

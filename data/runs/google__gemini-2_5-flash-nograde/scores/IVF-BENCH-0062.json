@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0062",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a plausible blastocyst-level description but is overly speculative, assigning multiple possible Gardner grades and mentioning features like vacuolization, debris, and fragmentation that may not be reliably visible from a single image. Morphology assessment lacks confidence calibration and likely overinterprets image detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, FSH, male factor diagnosis, oocyte yield, endometrium, and lifestyle factors with embryo prognosis reasonably well. It appropriately notes favorable uterine and age factors versus fair morphology and low oocyte number, though some links (especially alcohol effects on this specific transfer) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with the implantation estimate tied to morphology and patient factors. Minor issues include overemphasis on alcohol as a determinant of immediate implantation and inferring diminished reserve from 4 MII oocytes without AMH/AFC."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including single blastocyst transfer, luteal support, and ovarian reserve reassessment. However, suggesting PGT-A largely because of age 35 and morphology, and mentioning growth hormone as a planning step, are less firmly guideline-based and somewhat overreaching."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next steps for transfer and future cycles, including lifestyle modification, reserve testing, protocol review, and counseling. It is practical, though some recommendations are more speculative than necessary."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015249,
+  "judge_latency_ms": 4400.689499998407,
+  "judge_prompt_tokens": 3178,
+  "judge_completion_tokens": 381
+}

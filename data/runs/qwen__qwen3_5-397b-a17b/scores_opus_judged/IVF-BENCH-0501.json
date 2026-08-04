@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0501",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model provides a detailed morphological description including ICM location, TE cohesiveness, blastocoel expansion, and zona pellucida thinning. It correctly identifies the AA grading features. The model astutely notes the nomenclature discrepancy between 'Stage 2' (full blastocyst) and the typical Gardner staging convention where Stage 3 is the full blastocyst. Minor deductions for not being more specific about subtle features visible in the image, but overall a strong morphological assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model connects the patient's age to euploidy probability, questions the male factor diagnosis given normal SA parameters and suggests DNA fragmentation as a possible explanation, links BMI to inflammation and miscarriage risk, notes the exceptional 100% maturity rate, and critically identifies the recurrent pregnancy loss history as the dominant risk factor. The connection between sperm DNA fragmentation and the miscarriage history is particularly insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logically structured. The implantation probability estimate of 60-70% is well-justified: starting from a high base rate for a young patient with an AA blastocyst, then appropriately tempering it for BMI and RPL history. The distinction between implantation probability and live birth probability given the miscarriage history is thoughtfully addressed. No contradictions detected."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. SET recommendation is appropriate, PGT-A suggestion for future cycles given RPL is evidence-based, and the ERA/chronic endometritis workup recommendation follows current RPL investigation protocols. The mention of low-dose aspirin/heparin is appropriately caveated. Minor deduction because the Gardner staging nomenclature discussion, while correct, could have been more precisely referenced to the standard Gardner and Schoolcraft 1999 criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations covering both the current transfer and future planning. Specific suggestions include: SET, robust luteal support with consideration of aspirin/heparin, sperm DNA fragmentation testing, PGT-A for future cycles, weight management with a specific target (5-10% loss), and ERA/CD138 testing if this transfer fails. Each recommendation is contextualized to this specific patient's profile and history, with clear clinical rationale."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.02905,
+  "judge_latency_ms": 15986.189874995034,
+  "judge_prompt_tokens": 2730,
+  "judge_completion_tokens": 616
+}

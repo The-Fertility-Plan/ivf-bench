@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0277",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and confidently labels the embryo as a clear 3AA with tightly packed ICM and cohesive TE, which are not convincingly visible in this image. It also infers a needle/biopsy artifact not supported by the provided image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, prior IVF failure, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality reasonably well, though some factors are weighted somewhat speculatively."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the implantation estimate follows from age-related aneuploidy risk and borderline lining, though the morphology interpretation is too confident and some lifestyle effects are overstated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are mostly consistent with IVF practice, including SET for a good-quality blastocyst, but calling 3AA 'the highest grade possible' is incorrect and the emphasis on alcohol/stress effects is stronger than guideline-based evidence supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response begins with a practical recommendation for SET and counseling, but the recommendations section is truncated and lacks complete, specific next steps for transfer management or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.013422,
+  "judge_latency_ms": 4275.231750012608,
+  "judge_prompt_tokens": 2889,
+  "judge_completion_tokens": 317
+}

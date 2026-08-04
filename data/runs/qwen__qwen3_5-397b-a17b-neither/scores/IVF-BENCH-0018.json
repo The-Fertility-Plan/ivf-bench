@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly notes that no image was provided and avoids inventing specific blastocyst features, but it still infers expected morphology from oocyte maturity, which cannot substitute for actual image-based assessment."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, AMH, BMI, tubal factor diagnosis, endometrial thickness, sperm parameters, protocol, and lifestyle factors into prognosis and transfer considerations."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent overall, with a sensible probability estimate tied to favorable and unfavorable factors; minor overreach exists in linking 100% MII directly to expected embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "It appropriately distinguishes Day 4 assessment from Gardner blastocyst grading and gives generally evidence-based recommendations; however, PGT-A is presented somewhat favorably for a 33-year-old without stronger nuance about limited routine benefit in good-prognosis patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for the current transfer and future planning, including luteal support, smoking/alcohol cessation, BMI optimization, and consideration of extended culture, though some recommendations remain broad rather than protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012492,
+  "judge_latency_ms": 3618.2352920004632,
+  "judge_prompt_tokens": 2514,
+  "judge_completion_tokens": 330
+}

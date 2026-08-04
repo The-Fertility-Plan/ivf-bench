@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0075",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response failed to use the provided Gardner score of 3AA and instead stated no score was available, then inferred morphology from clinical context. This omits the actual expansion, ICM, and TE features and introduces unsupported assumptions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian response, sperm parameters, tubal factor, prior IVF failures, smoking, and especially thin endometrium into prognosis. AMH was unavailable, but most key factors were meaningfully connected to outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is structured and the thin endometrium concern is clearly emphasized, but there are notable gaps: it ignores the known 3AA embryo quality, over-attributes failure to endometrial thickness alone, and presents some speculative causes and probability adjustments without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are reasonable (consider deferring transfer with very thin endometrium, evaluate uterine factors), but several suggestions are weakly evidence-based or not guideline-supported as routine care, including ERA, NK-cell testing, MTHFR testing, immunologic workup, G-CSF/PRP, and routine PGT-A in a 26-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer decisions, workup, and future planning, with specific interventions and alternatives. However, some actions are overly aggressive or based on limited evidence."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013932,
+  "judge_latency_ms": 5885.884000002989,
+  "judge_prompt_tokens": 2734,
+  "judge_completion_tokens": 382
+}

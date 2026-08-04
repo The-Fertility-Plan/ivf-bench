@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0700",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AB Gardner score: expanded blastocoel, thinning zona pellucida, tightly packed ICM, and loosely organized TE. The description of ICM location ('right side of image') and zona thinning at the pole opposite the ICM adds image-specific detail. Minor limitation is that the description largely mirrors the provided Gardner score labels rather than offering independent morphological observations that go beyond the given data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, oocyte yield, partner age, endometriosis diagnosis, endometrial thickness, and lifestyle factors. It correctly identifies paternal age as a confounding factor and links endometrial thickness to implantation risk. Some interactions are underexplored, such as the interplay between endometriosis and endometrial receptivity beyond just a 'hostile environment' mention, and the BMI of 25.6 is not discussed. The sperm parameters are noted as normal without deeper analysis of DNA fragmentation risk given paternal age."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 30-45% is reasonably derived from the balance of favorable (young age, good morphology) and unfavorable factors (thin lining, paternal age, endometriosis). The conditional reasoning about euploid vs. aneuploid outcomes is sound. Minor inconsistency: the response states 6mm is 'acceptable' in recommendations but flags it as a risk factor, which is slightly contradictory without fuller reconciliation. The euploid probability estimate of >60% is reasonable but stated without strong justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: Day 5 transfer of a 3AB blastocyst is appropriate, endometrial thickness threshold of >7mm aligns with current evidence, PGT-A discussion for advanced paternal age is guideline-consistent, and FET optimization is evidence-based. The suggestion to consider endometrial biopsy for receptivity assessment is reasonable. Minor gap: guidelines do not universally recommend PGT-A for paternal age alone at 40, and this nuance could have been better qualified. Stress management referral is appropriate but not strongly evidence-based in guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: proceed with transfer, optimize estrogen support for thin lining, consider PGT-A for future cycles, aim for FET with better lining preparation, and stress management referral. The response provides clear next steps for both current and future cycles. Could be more specific about estrogen supplementation protocols, progesterone support dosing, or specific endometrial thickness targets for FET. The recommendation to confirm receptivity via biopsy is clinically useful but not always practical in routine IVF settings."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.018615,
+  "judge_latency_ms": 15121.162834002462,
+  "judge_prompt_tokens": 2570,
+  "judge_completion_tokens": 727
+}

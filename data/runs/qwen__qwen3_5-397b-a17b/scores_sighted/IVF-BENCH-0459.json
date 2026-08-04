@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0459",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a poor-quality/degenerating blastocyst with absent-poor ICM and TE, but overstates certainty of non-viability and adds features like vacuolation/fragmentation not clearly discernible; also notes the expansion-score contradiction appropriately."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometriosis, smoking, ovarian reserve, BMI, sperm parameters, and low MII yield with embryo prognosis well, though some links (e.g., smoking as major cause of this specific morphology) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the DD grading, but there are notable overreaches: calling the embryo definitively non-viable, recommending cancellation despite transfer day listed, and inferring arrest/degeneration with near-certainty from a single image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with poor prognosis for a 1DD blastocyst and reasonable future-cycle considerations, but 'do not transfer/cancel transfer' is too absolute, and routine endorsement of PGT-A, ICSI, and supplements is stronger than guideline-based evidence supports in this exact scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps on lifestyle modification, protocol review, trigger timing, and future planning; however, some recommendations are overly prescriptive and insufficiently nuanced for individualized IVF decision-making."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013107,
+  "judge_latency_ms": 4945.68554199941,
+  "judge_prompt_tokens": 2484,
+  "judge_completion_tokens": 377
+}

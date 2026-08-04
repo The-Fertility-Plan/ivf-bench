@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the poor quality associated with a 1DD grade and describes degenerative ICM and TE. However, there is some confusion about the expansion score - the Gardner score says '1' (blastocoel at least half the embryo) but the model initially states expansion of 1 then describes it as occupying at least half, which is more consistent with a score of 2-3. The description of the image features is somewhat generic and relies heavily on the Gardner score rather than independent image analysis. The model does not provide specific observations about zona pellucida, fragmentation patterns, or other visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model thoroughly discusses the discrepancy between the favorable patient profile (young age, tubal factor, good sperm, healthy lifestyle, optimal endometrial thickness) and the poor embryo quality. It appropriately notes the FSH level as borderline for age, mentions the missing AMH data, and considers how each factor interacts with the embryo assessment. The observation about the Day 4 transfer timing and its implications is insightful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The conclusion that a 1DD embryo has near-zero implantation potential is well-supported. The model correctly identifies the discrepancy between patient profile and embryo quality and offers reasonable explanations. Minor issue: the discussion of Day 4 transfer timing is slightly confused, mixing up whether the embryo was assessed early or deteriorated. Overall the logic chain is sound and conclusions follow from evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with Gardner grading criteria and standard IVF clinical practice. The assessment that a 1DD embryo is essentially non-viable is consistent with established guidelines. The recommendation for thorough patient counseling is appropriate. The response correctly identifies that such embryos are generally not recommended for transfer. However, the response was cut off before completing all recommendations, limiting full assessment of guideline alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response was truncated and only begins the recommendations section. It starts with patient counseling advice but does not complete the recommendations for this transfer or future cycle planning. Key actionable items like whether to proceed with transfer, consideration of extended culture, PGT-A for future cycles, protocol modifications, or alternative approaches are missing due to the cutoff. Only one partial recommendation was provided."
+    }
+  ],
+  "extracted_probability": 0.005,
+  "judge_cost_usd": 0.02874,
+  "judge_latency_ms": 25982.961375033483,
+  "judge_prompt_tokens": 2733,
+  "judge_completion_tokens": 603
+}

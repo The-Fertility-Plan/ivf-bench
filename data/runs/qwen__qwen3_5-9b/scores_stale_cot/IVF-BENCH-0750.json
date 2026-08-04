@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly notes the image is blurry/ambiguous and may resemble a morula or degenerating embryo, then defaults to the provided 3AA score and describes features such as full expansion, thinning zona, and distinct AA ICM/TE that are not clearly verifiable from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve markers, oocyte yield, endometrial thickness, diagnosis, sperm parameters, and lifestyle with embryo quality and prognosis, though some links are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: uncertainty about morphology, overstatement that PGT-A would 'eliminate' miscarriage risk, and a questionable aneuploidy/miscarriage framing. Probability estimates are plausible but not tightly justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on age-related aneuploidy are broadly aligned, but recommending PGT-A strongly in this first-cycle unexplained infertility case is more aggressive than guideline-based individualized counseling, and claiming PGT-A eliminates miscarriage risk is not guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps—proceed with transfer, ensure luteal support, consider PGT-A in future planning, and maintain current lifestyle—though some recommendations are broad rather than highly tailored."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.009335,
+  "judge_latency_ms": 7567.6298750331625,
+  "judge_prompt_tokens": 4484,
+  "judge_completion_tokens": 373
+}

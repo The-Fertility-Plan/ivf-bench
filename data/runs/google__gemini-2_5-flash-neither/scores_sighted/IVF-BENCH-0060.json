@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0060",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate image-specific morphology. However, it provided no actual morphological assessment despite the embryo image showing a blastocyst, so accuracy is limited by omission rather than error."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young age, ovarian reserve, BMI, prior ectopic/no pregnancy history, sperm parameters, endometrium, and unexplained infertility, and relates these to prognosis and embryo potential."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with probability ranges tied to hypothetical embryo grades and patient factors. Minor overreach appears in assuming likely good/excellent embryo quality from age alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET in a young patient, luteal support, review of embryo development, and cautious/limited use of PGT-A. Mention of ERA as a future option is somewhat less guideline-supported, preventing a perfect score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, monitoring, luteal support, counseling, and further workup if unsuccessful. Useful but somewhat generic because morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014613,
+  "judge_latency_ms": 4745.917749998625,
+  "judge_prompt_tokens": 3266,
+  "judge_completion_tokens": 321
+}

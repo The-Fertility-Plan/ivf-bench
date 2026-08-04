@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0498",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a blastocyst and generally matches the provided 3AA label, but overstates certainty from the image alone: the ICM is not clearly a tightly compact A-grade cluster, TE does not appear uniformly cohesive throughout, and claims such as homogeneous cytoplasm/no vacuolization are not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates embryo quality with age, AMH, endometriosis, prior IVF failure, lifestyle factors, sperm parameters, and endometrial thickness, and explains how these modify prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and structured, with a clear embryo-versus-host framework and probability adjustment rationale, though some quantitative penalties are asserted with more precision than the case supports and there is minor inconsistency between implantation and pregnancy ranges."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Appropriate support for single embryo transfer and lifestyle optimization, but several recommendations are not strongly guideline-based or are controversial (routine low-dose aspirin, bed rest after transfer, ERA after limited failure, broad endorsement of PGT-A/GH/DHEA in this scenario)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer, counseling, and future planning, including lifestyle modification and protocol considerations, though some suggested adjuncts are not evidence-based enough to merit full marks."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015198,
+  "judge_latency_ms": 5123.978208008339,
+  "judge_prompt_tokens": 3346,
+  "judge_completion_tokens": 344
+}

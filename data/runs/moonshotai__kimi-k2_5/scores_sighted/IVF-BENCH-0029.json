@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but adds some likely overcalled details not clearly visible (e.g., precise 30-40% cavity estimate, cytoplasmic blebbing, dark granularity) and the image/lab context is day-4 early blastocyst rather than a definitive non-transferable blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor diagnosis, first cycle status, endometrial thickness, ovarian response, and semen parameters well, and appropriately contrasts favorable patient factors with poor embryo quality; however, some inferences about expected blastulation and failed fertilization are speculative without full cohort data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the low implantation estimate follows from the poor morphology, but there are notable inconsistencies/speculations: calling the embryo nearly non-viable yet recommending transfer, referring to a 'thin endometrium-embryo interface' despite 12 mm lining, and asserting similar viability across ages for 1DD embryos too strongly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with Gardner grading and the poor prognosis of DD embryos, but several recommendations are weakly guideline-based or overstated (routine karyotyping/DFI after one poor cycle, growth hormone/DHEA suggestions, labeling as non-transferable in most labs, and strong claims about implantation rates)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical counseling, transfer options, and future-cycle considerations with alternatives, but some steps are not tightly evidence-based for a first cycle and could lead to over-investigation after a single poor embryo outcome."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015648,
+  "judge_latency_ms": 5424.417125002947,
+  "judge_prompt_tokens": 3121,
+  "judge_completion_tokens": 419
+}

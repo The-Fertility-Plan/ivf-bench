@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0079",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and did not fabricate embryo morphology. However, it therefore gave no actual morphological assessment despite the task asking for one."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, ovarian reserve markers, prior IVF failure, sperm parameters, endometrium, and lifestyle factors into prognosis reasonably well, though some links to embryo-specific quality are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear explanation of favorable and unfavorable factors. Minor issues include speculative assumptions about embryo quality and somewhat overstating AMH as 'excellent'."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations are largely conventional and evidence-based, but there are some deviations or overstatements, such as implying ERA for recurrent implantation failure and broadly recommending PGT-A after one failed cycle/low embryo yield without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer counseling, luteal support, lifestyle optimization, and future cycle review/protocol adjustment. Some recommendations are broad rather than tightly tailored to this specific low-yield case."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015387,
+  "judge_latency_ms": 4926.4594999986,
+  "judge_prompt_tokens": 3634,
+  "judge_completion_tokens": 299
+}

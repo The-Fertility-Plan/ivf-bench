@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0189",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and mislabels the stage: a Gardner 2 blastocyst is an early blastocyst, not a full blastocyst. The ICM is visible centrally but not clearly a tightly packed superior pole cluster as described, and TE does not appear uniformly cohesive or abundant enough to confidently support the detailed AA description from image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, tubal factor, BMI, prior live birth, sperm parameters, and thin endometrium, and relates them to prognosis. It misses some nuance around day-of-transfer context and overstates sperm findings by inferring no DNA fragmentation issue from routine semen parameters."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it calls stage 2 a full blastocyst, treats Day 4 blastocyst development as clearly favorable without caveat, and gives a relatively optimistic implantation estimate despite acknowledging a thin lining and uncertain morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, especially regarding age, tubal factor, BMI, and endometrial thickness. However, the Gardner staging interpretation is incorrect, and suggestions such as aspirin/thrombophilia workup after only a biochemical pregnancy are not routine guideline-based recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, luteal support, monitoring, endometrial optimization, and weight management. Recommendations are useful, though some are somewhat generic and not fully tailored to the uncertainty around embryo stage/morphology and Day 4 transfer specifics."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.0141,
+  "judge_latency_ms": 5776.396041997941,
+  "judge_prompt_tokens": 2560,
+  "judge_completion_tokens": 428
+}

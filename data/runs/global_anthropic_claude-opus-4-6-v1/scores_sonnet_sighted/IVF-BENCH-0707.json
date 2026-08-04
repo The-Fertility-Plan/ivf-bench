@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a Gardner 3AA blastocyst - expanded blastocoel with thinning zona, prominent densely packed ICM, and well-organized trophectoderm epithelium. The structured table format adds clarity. Minor limitation: the image appears somewhat granular and the ICM/TE distinction is not entirely crisp in the actual image, yet the model describes them with high confidence. The description of 'dark, cohesive cluster in the upper-central region' for ICM is reasonably accurate. Some granularity noted is appropriately acknowledged."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all available clinical factors. The response systematically connects maternal age (37) to aneuploidy risk, smoking to endometrial receptivity and implantation rates, BMI to hormonal milieu, FSH to ovarian reserve, sperm parameters to fertilization potential, and endometrial thickness to potential pathology concerns. The interaction between age and absence of PGT-A is particularly well-articulated, and the cumulative effect of multiple factors on probability estimation is clearly demonstrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning chain is highly coherent and internally consistent. The probability estimate (38-50% implantation) logically follows from the base rate adjustment methodology applied. The conditional reasoning (euploid vs aneuploid scenarios) is particularly strong. Risk factors and favorable indicators are balanced appropriately, and conclusions in the summary statement are fully supported by the preceding analysis. No contradictions identified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Well-aligned with ESHRE/ASRM guidelines. Gardner grading criteria are correctly applied, PGT-A recommendation at age 37 aligns with ASRM guidance, smoking cessation recommendations are evidence-based, and Day 5 transfer rationale is sound. CoQ10 supplementation recommendation is mentioned appropriately with caveats. The ERA recommendation for repeated failure aligns with current practice. Minor issue: the claim that endometrial thickness >14mm is associated with reduced implantation is debated in literature and presented with appropriate hedging but could be more nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with clear prioritization (URGENT/High/Standard). Recommendations are specific and practical: smoking cessation with 90-day timeline rationale, specific CoQ10 dosage range (200-600mg), concrete next-cycle timeline (2-3 months), specific investigations (hysteroscopy, ERA, thrombophilia screening), and a banking strategy with specific numbers (2-3 euploid embryos). The distinction between immediate transfer recommendations and future cycle planning is well-organized and clinically useful."
+    }
+  ],
+  "extracted_probability": 0.44,
+  "judge_cost_usd": 0.020709,
+  "judge_latency_ms": 14642.316249999567,
+  "judge_prompt_tokens": 3498,
+  "judge_completion_tokens": 681
+}

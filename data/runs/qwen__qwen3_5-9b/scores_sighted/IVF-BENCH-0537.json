@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0537",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 3BA blastocyst and correctly identifies a loosely grouped ICM and cohesive TE, but overstates readiness to hatch/in-process hatching and describes quadrant-specific zona thinning not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, prior biochemical pregnancy, BMI, tubal factor, and sperm data with embryo quality reasonably well, though it overemphasizes paternal age and underplays that tubal factor is less relevant after IVF transfer."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but the probability is reduced substantially based largely on paternal age and prior biochemical pregnancy without strong case-specific evidence, creating some overreach."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on embryo grading and proceeding with transfer, but recommending PGT-A as highly indicated primarily for paternal age 45 and one biochemical pregnancy is stronger than guideline-based evidence supports; advice to raise BMI to 20-22 is also not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer and future planning, including counseling and possible SDF testing/PGT-A, though some recommendations are somewhat overprescriptive rather than nuanced."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012549,
+  "judge_latency_ms": 4681.241457990836,
+  "judge_prompt_tokens": 2568,
+  "judge_completion_tokens": 323
+}

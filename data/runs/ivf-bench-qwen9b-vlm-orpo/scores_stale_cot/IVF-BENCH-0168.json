@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0168",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets the image by claiming a discernible compact ICM and no obvious degeneration despite the provided Gardner score of 0DD indicating absent/degenerative ICM and TE. It correctly notes poor expansion and weak TE, but includes likely fabricated favorable features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age 35, BMI, endometriosis, prior IVF failure, semen parameters, endometrial thickness, and developmental timing, and relates them to prognosis. AMH is appropriately noted as missing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is mostly coherent and the low implantation estimate follows from poor morphology, but there are inconsistencies between describing a visible ICM and accepting a 0DD grade, plus some speculative comments about progesterone timing and receptor function."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including realistic counseling, luteal support, avoiding bed rest, and considering PGT-A selectively. However, challenging the grading nomenclature and suggesting technical reinterpretation of 0DD reduces alignment with standard Gardner-based reporting."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for the current transfer and future cycles, including lab review, AMH testing, sperm DNA fragmentation consideration, uterine cavity evaluation, and protocol discussion. Some recommendations are somewhat generic but still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.015987,
+  "judge_latency_ms": 6085.0837079342455,
+  "judge_prompt_tokens": 3569,
+  "judge_completion_tokens": 352
+}

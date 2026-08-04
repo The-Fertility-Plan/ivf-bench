@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0308",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misidentifies the image as a non-blastocyst/degenerating oocyte, whereas the image is consistent with a blastocyst showing a blastocoel, compressed ICM, and surrounding TE within the zona pellucida."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, sperm parameters, and endometrium reasonably well with prognosis, though some conclusions are overstated and tied to an incorrect image interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is structured but undermined by the central incorrect premise that the image is not a blastocyst; it also overstates contradictions and improbability, weakening the logic of downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent (age-related aneuploidy risk, endometrial thickness relevance, considering PGT-A), but the claim that Day 4 transfer cannot involve a blastocyst and the donor-oocyte emphasis are not well aligned with standard nuanced IVF practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It offers practical next steps such as verifying data, considering protocol adjustment, weight optimization, and discussing PGT-A, but recommendations are limited by the incorrect morphological assessment and somewhat premature donor-egg suggestion."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013317,
+  "judge_latency_ms": 4748.610916998587,
+  "judge_prompt_tokens": 2799,
+  "judge_completion_tokens": 328
+}

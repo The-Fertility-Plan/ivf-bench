@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0164",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model describes the embryo as transitioning between morula and blastocyst, which is reasonable for a Grade 2 expansion. The description of ICM as tightly packed and TE as cohesive aligns with the AA grading. However, the claim that the blastocoel occupies approximately 50% is not quite accurate for a Grade 2 (which should fill the embryo per Gardner criteria - 'blastocoel fills the embryo' as stated in the lab data). The model also doesn't mention zona pellucida characteristics or other fine morphological details visible in the image. The description is somewhat generic and could apply to many embryos."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of DOR diagnosis with embryo quality, noting the 'quality over quantity' scenario. Appropriately discusses AMH, sperm parameters, endometrial thickness, and maternal age. The observation about DOR patients potentially having higher aneuploidy risk is relevant. The discussion of how excellent sperm eliminates male factor is appropriate. Could have discussed BMI impact or the choice of Long Agonist protocol for a DOR patient more critically."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but has some issues. The 60-70% implantation probability is quite high and not well-justified - a 2AA on Day 4 transfer does not typically yield 60-70% implantation rates. The model states 'Standard statistics for a Day 4/5 blastocyst with a 2AA grade typically range between 60-70%' which conflates Day 4 and Day 5 transfers and overestimates. There's also a contradiction: the model notes DOR increases aneuploidy risk but doesn't adequately factor this into the probability estimate. The claim that Day 4 transfer means less time for self-selection is valid but then not reflected in the high probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation has an error - Grade 2 is described as 'blastocoel fills the embryo' in the lab data but the model says it occupies ~50%. The discussion of DOR and protocol choice doesn't flag that Long Agonist is generally not the preferred protocol for DOR patients (antagonist or mini-stim protocols are typically preferred per ASRM/ESHRE guidelines). The response doesn't discuss PGT-A considerations which would be relevant for a DOR patient. The implantation probability is overestimated relative to published literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response is notably incomplete - it appears cut off and lacks the full recommendations section. There are no specific recommendations for future cycle planning, no discussion of protocol optimization (e.g., switching from Long Agonist to antagonist protocol for DOR), no mention of PGT-A for future cycles, no discussion of supplementation or adjunct therapies, and no contingency planning if this transfer fails. The assessment identifies issues but doesn't provide concrete next steps."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.02994,
+  "judge_latency_ms": 16711.231416964438,
+  "judge_prompt_tokens": 2288,
+  "judge_completion_tokens": 740
+}

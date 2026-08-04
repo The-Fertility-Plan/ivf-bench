@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0003",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response misclassifies the embryo as a Day 4 compacting morula/M2 and describes absent cavitation, which directly conflicts with the provided Gardner score of 2AA full blastocyst and likely visible blastocyst morphology. It fabricates partial compaction and excluded blastomeres rather than assessing blastocoel, ICM, and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates many relevant factors including age, diagnosis, ovarian response, endometrium, BMI, sperm parameters, and cycle history with prognosis, though some links are speculative and AMH is unavailable but not acknowledged as missing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The structure is clear, but the reasoning is undermined by the incorrect foundational morphology. Probability adjustments and conclusions are therefore built on a misread embryo stage, and there is some inconsistency between implantation and clinical pregnancy estimates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are standard, but several points are weakly supported or not guideline-based for this case, including routine PGT-A mainly for paternal age 41, ERA mention via freeze-all implication, and overinterpretation of lifestyle/exercise effects. Most importantly, it does not align with Gardner grading because it ignores the provided 2AA blastocyst classification."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives concrete next steps for transfer, luteal support, follow-up, and future-cycle considerations. However, actionability is limited by the incorrect embryo assessment and some recommendations that are broader than necessary for this first-cycle tubal factor case."
+    }
+  ],
+  "extracted_probability": 0.36,
+  "judge_cost_usd": 0.013161,
+  "judge_latency_ms": 4830.836542001634,
+  "judge_prompt_tokens": 2347,
+  "judge_completion_tokens": 408
+}

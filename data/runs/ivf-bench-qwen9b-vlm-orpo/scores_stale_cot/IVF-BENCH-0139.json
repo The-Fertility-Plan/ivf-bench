@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0139",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 4BB blastocyst and appropriately identifies B-grade ICM/TE, but it is internally inconsistent about stage/hatching status and mentions possible fragments/collapse that may not be clearly supported from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, uterine factor, prior IVF outcome, semen parameters, endometrial thickness, and lifestyle factors into prognosis, though interaction between specific uterine pathology and embryo potential remains somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable contradictions between calling the embryo unhatched vs hatching and between optimistic baseline estimates and the adjusted implantation estimate; reasoning is acceptable but not fully consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Mostly aligned with standard IVF practice: appropriate interpretation of 4BB quality, caution about uterine factor, lifestyle optimization, luteal support, and uterine cavity evaluation. Minor deviations include somewhat speculative comments on chronic endometritis workup and probability framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, alcohol cessation, nutritional checks, and future uterine evaluation if unsuccessful. Recommendations are useful, though some are broad rather than tightly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.016137,
+  "judge_latency_ms": 5886.8927920702845,
+  "judge_prompt_tokens": 3739,
+  "judge_completion_tokens": 328
+}

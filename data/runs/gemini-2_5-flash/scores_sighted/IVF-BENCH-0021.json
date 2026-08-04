@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality embryo with absent/degenerative ICM and TE, but it overstates the lack of blastocoel and calls it a morula despite the image/lab label being an early blastocyst; it also discusses features not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, smoking, sperm motility, endometrium, and the diagnosis discrepancy with embryo quality reasonably well, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the poor prognosis follows from the described embryo quality, but there are inconsistencies around staging/Gardner interpretation and some conclusions are stronger than the visual evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is broadly aligned in treating a DD-quality early blastocyst as very poor prognosis, but it mishandles Gardner staging terminology and overemphasizes the contradiction of a Day 4 early blastocyst, which can still be clinically encountered."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It offers general concerns and prognosis but provides limited concrete next-step management for this transfer or future cycle planning, and the recommendations are not fully developed."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013137,
+  "judge_latency_ms": 5230.465041997377,
+  "judge_prompt_tokens": 2699,
+  "judge_completion_tokens": 336
+}

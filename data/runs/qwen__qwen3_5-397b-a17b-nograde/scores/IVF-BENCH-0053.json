@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0053",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst-stage assessment and reasonable comments on ICM/TE quality, but some details appear over-interpreted from a single image (e.g., specific vacuole/clear circular structure) and the 3BC/4BC estimate is somewhat uncertain rather than precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well, especially maternal age, prior miscarriage, endometriosis, ovarian response, sperm parameters, and endometrial thickness, though it overstates ovarian reserve inference without AMH and does not fully nuance the limits of morphology in predicting euploidy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent: fair-quality blastocyst plus age-related aneuploidy and endometriosis leads to a modest implantation estimate. Minor issues include some speculative links and broad statements about miscarriage causation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including proceeding with transfer and considering PGT-A in future cycles, but statements such as highly recommending PGT-A, dual-pathway luteal support, and routine sperm DNA fragmentation/TESA are stronger than guideline-based evidence would support for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next-step recommendations for transfer and future planning, including transfer proceeding, luteal support considerations, possible endometriosis suppression before future FET, and discussion of PGT-A. Some suggestions are useful but not fully individualized or evidence-prioritized."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.013032,
+  "judge_latency_ms": 4562.459250002576,
+  "judge_prompt_tokens": 2334,
+  "judge_completion_tokens": 402
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0093",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly identifies a blastocyst and notes visible ICM/TE, but it overstates expansion as 'well-expanded' with a 'well-formed blastocoel.' The image appears more consistent with an early/full but not clearly expanded blastocyst, with indistinct ICM and sparse/irregular TE; assigning 4BB/4BC is likely too optimistic."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, endometrial thickness, sperm data, and low oocyte yield with prognosis reasonably well. It could better distinguish embryo morphology from patient-level implantation factors and avoid overinterpreting sperm parameters in a male-factor case."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but the implantation estimate is somewhat inflated relative to the uncertain/fair morphology described. There is also mild tension between calling the embryo good quality and acknowledging difficulty grading it from the image."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and luteal support are guideline-concordant, but suggesting adjuvants like DHEA or growth hormone is not strongly evidence-based for this profile. The morphology-based prognosis is somewhat more confident than standard cautious grading from a single image would support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, counseling, luteal support, and protocol review if low yield recurs. Some suggestions are generic and a few future-cycle options lack prioritization or evidence nuance."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014991,
+  "judge_latency_ms": 5892.540707995067,
+  "judge_prompt_tokens": 2987,
+  "judge_completion_tokens": 402
+}

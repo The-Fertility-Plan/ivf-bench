@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0241",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 4AB label and notes hatching/expanded blastocyst, but it overstates confidence in visible ICM/TE detail and claims relatively homogeneous cytoplasm without significant granularity despite the image being somewhat degenerate/granular and not sharply resolving these features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, AMH, BMI, sperm data, male-factor context, endometrial thickness, and oocyte maturity with embryo prognosis well, though some inferences (e.g., trigger timing, only one blastocyst assumption) go beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a probability estimate tied to embryo quality and patient factors; minor issues include calling stage 4 'hatching' rather than expanded and making speculative deductions from incomplete cycle data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognosis for a young patient with a good-quality day-5 blastocyst, but there are deviations such as equating 4AB with hatching, suggesting adjuncts like low-dose aspirin without strong indication, and recommending routine sperm DNA fragmentation/PGT-A-related banking somewhat beyond standard guideline-based indications."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including proceeding with SET and reviewing maturation issues, though some recommendations are speculative rather than tightly case-specific."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013833,
+  "judge_latency_ms": 5597.167125000851,
+  "judge_prompt_tokens": 2816,
+  "judge_completion_tokens": 359
+}

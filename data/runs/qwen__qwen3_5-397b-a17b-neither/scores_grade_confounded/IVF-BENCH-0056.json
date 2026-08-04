@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0056",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no specific morphological grading can be assigned despite the provided Gardner score of 2AC, and it fabricates an assumption of a good-quality blastocyst (e.g., 3BB or better) rather than analyzing the given poor-TE morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, tubal factor, ovarian reserve, sperm parameters, BMI, smoking, and endometrial thickness well, though it fails to connect these factors to the actual embryo grade 2AC."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the core reasoning is weakened by ignoring the supplied embryo grade and basing prognosis on an assumed good-quality blastocyst, which likely inflates the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET and smoking cessation are broadly guideline-consistent, but the morphology discussion is not aligned with Gardner grading use, and suggesting PGT-A mainly because of BMI/smoking is not strongly evidence-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support considerations, smoking cessation, and weight management, though recommendations would be stronger if tailored to the actual 2AC embryo quality."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012762,
+  "judge_latency_ms": 4587.9979169985745,
+  "judge_prompt_tokens": 2529,
+  "judge_completion_tokens": 345
+}

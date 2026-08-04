@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0031",
+  "model": "global.anthropic.claude-opus-4-6-v1-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The image appears more consistent with an early blastocyst/cavitating morula rather than a simple compacting morula. The response misclassifies the stage and therefore incorrectly states Gardner scoring is not applicable; fragmentation estimates and some detailed claims are not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior live birth, endometrium, semen, BMI, and smoking with prognosis reasonably well, though some links to embryo-stage-specific prognosis are imperfect."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the core morphology misclassification weakens the downstream probability estimate and recommendations. There are also some speculative assumptions about why Day 4 transfer was chosen."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General counseling on smoking cessation, luteal support, and considering extended culture is broadly aligned, but the morphology framework is off and recommending dual progesterone specifically because of smoking is not standard guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, lifestyle counseling, and future cycle planning. Some recommendations are useful and specific, though a few are somewhat speculative or not tightly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.012585,
+  "judge_latency_ms": 12309.179333999055,
+  "judge_prompt_tokens": 2545,
+  "judge_completion_tokens": 330
+}

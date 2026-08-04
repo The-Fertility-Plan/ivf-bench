@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner score (expanded blastocoel, thin zona, visible ICM and TE). However, it mentions 'cellular debris or fragmentation within the blastocoel' which may be an over-interpretation or fabricated detail not clearly supported by the image. The description largely echoes the provided Gardner score rather than offering independent morphological observations from the image itself, limiting the depth of true image-based analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: BMI impact on endometrial receptivity and oocyte quality, age-related aneuploidy risk, tubal factor prognosis with IVF, endometrial thickness favorability, and sperm parameters. It correctly identifies BMI as the primary risk factor and connects it to multiple outcome dimensions. Minor gap: AMH being N/A is noted but not explored further in terms of what this uncertainty means for cycle planning, and the partner's age of 44 and its potential sperm DNA fragmentation implications are not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate of 45-60% follows reasonably from the positive embryo/endometrial factors moderated by BMI and unknown euploidy status. The stepwise reasoning from baseline rates to adjusted estimates is clear. Minor inconsistency: the response states BMI can reduce rates by '10-20% or more' but the final estimate only reduces from a 55-65% baseline to 45-60%, which is a relatively modest adjustment and could be better justified quantitatively."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: elective single embryo transfer (eSET) recommendation is appropriate for a 35-year-old with a good quality blastocyst, PGT-A consideration is evidence-based, weight management counseling aligns with guidelines on BMI and IVF outcomes, and luteal phase support is standard. The Gardner grading interpretation is accurate. Minor gap: the response does not mention ESHRE guidance on endometrial thickness upper limits (some debate around >14mm) or address whether freeze-all strategy might be preferable given the BMI."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET, luteal support, BMI counseling with referral suggestion, PGT-A consideration, protocol review, and cryopreservation strategy. These provide clear next steps for both immediate transfer and future planning. Could be more actionable by specifying progesterone protocol details, suggesting specific weight loss targets/timelines before next cycle, or addressing whether a freeze-all approach should be considered now given BMI concerns about endometrial receptivity."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.021759,
+  "judge_latency_ms": 14667.742875004478,
+  "judge_prompt_tokens": 3798,
+  "judge_completion_tokens": 691
+}

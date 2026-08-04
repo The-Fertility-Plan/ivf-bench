@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0090",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score is available and fails to use the provided 3AA grading data; it does not describe the known expanded blastocyst, strong ICM, cohesive TE, or thinning zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, FSH, prior IVF failure, sperm quality, BMI/lifestyle, and ovarian response reasonably well, though it does so while ignoring the actual embryo grade and overemphasizing uncertainty."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by a major contradiction: it claims morphology and Gardner score are unavailable despite explicit 3AA data. Probability estimates are therefore based on an incorrect premise."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard (uterine assessment, luteal support, counseling), but suggesting transfer should not proceed without morphology review is inappropriate given morphology was already provided, and routine PGT-A/ERA-style testing is presented too strongly for this profile."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response offers practical next steps, but several are misdirected because they hinge on supposedly missing morphology data; recommendations are only moderately tailored to the actual case."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014067,
+  "judge_latency_ms": 3839.550083001086,
+  "judge_prompt_tokens": 3029,
+  "judge_completion_tokens": 332
+}

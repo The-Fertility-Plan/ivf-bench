@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0071",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no image was provided and declined to describe morphology, avoiding fabrication of embryo features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, AMH, BMI, tubal factor, sperm quality, endometrium, and cycle context into prognosis well, though some links to embryo-specific quality were necessarily limited by absent morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to age-related aneuploidy risk and favorable uterine/male factors; minor issues include a somewhat broad probability estimate despite missing embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, luteal support, caution about alcohol), but suggesting ERA in a first transfer and growth hormone/DHEA are not strongly guideline-supported, and the age framing is slightly imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer and contingency planning, including SET, luteal support, lifestyle advice, and future consideration of PGT-A, though some suggestions are more generic than case-specific."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.015171,
+  "judge_latency_ms": 4119.4573329994455,
+  "judge_prompt_tokens": 3482,
+  "judge_completion_tokens": 315
+}

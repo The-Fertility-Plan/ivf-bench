@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0717",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/degenerative embryo consistent with 0DD, with absent-poor ICM and poor TE. However, it adds some image-specific details that are not clearly visible or are overstated, such as a specific ICM location, a wide perivitelline space, and strong claims about apoptosis/metabolic stress."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, low AMH, oocyte yield, tubal factor, BMI, sperm parameters, and endometrial thickness well with embryo prognosis. Some causal statements are a bit too strong, especially attributing the embryo quality directly to ovarian aging from this single image/cycle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall reasoning is structured and internally consistent, and the low implantation estimate follows from the poor morphology. Minor issues include speculative assumptions about fertilization/blastulation numbers and slightly optimistic justification for the upper end of the probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligns with poor prognosis interpretation of a 0DD embryo and reasonable counseling about low success. However, recommendations such as routine DHEA/testosterone priming, growth hormone, protocol switching claims, ERA mention, and some confidence around transferring/freezing thresholds are not strongly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points, transfer recommendation, and future planning options including embryo banking and reassessment after failure. Actionable overall, though some suggested adjuncts are controversial and not uniformly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.014964,
+  "judge_latency_ms": 6599.95170799084,
+  "judge_prompt_tokens": 3003,
+  "judge_completion_tokens": 397
+}

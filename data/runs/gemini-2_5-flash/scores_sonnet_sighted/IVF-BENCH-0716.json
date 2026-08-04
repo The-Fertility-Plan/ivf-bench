@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0716",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with the Gardner 3AA score (expanded blastocoel, tightly packed ICM, cohesive TE), but largely echoes the provided laboratory data rather than independently analyzing the image. The image itself is quite blurry and low-resolution, making independent morphological assessment difficult. The description adds little beyond restating the provided Gardner score parameters, and some claims (e.g., 'clearly visible and well-defined ICM,' 'uniform and well-organized' TE cells) are difficult to verify from the grainy image provided."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, oocyte yield, endometrial thickness, sperm parameters, BMI, smoking status, and previous cycle failure. It correctly identifies how these factors interact with embryo quality and prognosis. The tubal factor diagnosis is appropriately contextualized as a mechanical issue bypassed by IVF. Minor gap: the partner's age of 40 and its potential impact on sperm DNA fragmentation is not addressed, which could be relevant given the previous failed cycle."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 55-65% is reasonably derived from the embryo quality, patient age, and downward adjustment for smoking. The conclusion that smoking reduces implantation rates by 10-20% is evidence-based and consistently applied. The reasoning flows well from observations to conclusions. Minor issue: the response states smoking reduces rates 'by 10-20% or more' but doesn't clearly show the arithmetic from a theoretical baseline, making the final range somewhat arbitrary."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patients, luteal phase support, smoking cessation counseling, consideration of PGT-A and ERA for recurrent implantation failure, and hysteroscopy workup after multiple failures. The Gardner grading interpretation is correct. The suggestion of PGT-A at age 34 after one failed cycle is slightly aggressive per current guidelines, which typically recommend it after recurrent failures or at more advanced ages, but it is presented conditionally which is appropriate."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended, smoking cessation is prioritized as the most critical intervention, luteal phase support is mentioned, and a tiered approach for future cycle planning is outlined with specific investigations (ERA, PGT-A, hysteroscopy, thrombophilia screening). The response appropriately sequences interventions. Could be improved by specifying smoking cessation timing relative to transfer, providing specific progesterone protocol details, or recommending specific endometrial preparation protocols given the 8.5mm thickness."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.021138,
+  "judge_latency_ms": 16103.458332989248,
+  "judge_prompt_tokens": 3546,
+  "judge_completion_tokens": 700
+}

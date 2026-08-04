@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0107",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but it then described a textbook 3AA embryo as if fully expanded with thinning zona and excellent ICM/TE. The actual image appears more like a lower-quality/less clearly expanded blastocyst with poorly distinct ICM/TE, so these morphology claims do not match the visible embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, endometrium, prior outcomes, diagnosis, lifestyle, and sperm parameters with embryo quality in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate adjusted for prior history. Minor issues include overstating 3AA as the 'highest tier' and some speculative interpretation of prior failures."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and standard luteal support are guideline-concordant, but suggesting ERA, broad immunologic/thrombophilia workup, and TESE based on sperm DNA fragmentation is more controversial and not routinely recommended by major guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including SET, luteal support, and future evaluation options, though some suggested tests are not strongly evidence-based for routine use."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014604,
+  "judge_latency_ms": 4779.526500002248,
+  "judge_prompt_tokens": 3058,
+  "judge_completion_tokens": 362
+}

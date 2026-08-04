@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0385",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality/degenerative blastocyst with poorly defined ICM and TE, but overstates certainty of non-viability and misstates Gardner expansion 1 while relying on contradictory provided stage text rather than image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, BMI, male factor, and cycle history reasonably well, though the link to sperm DNA fragmentation is somewhat speculative from the available data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable issues: it calls the embryo biologically incapable of implantation, treats transfer cancellation as straightforward, and infers hidden sperm pathology too strongly from a single poor embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading is broadly appropriate, but recommending absolute non-transfer and stating essentially zero chance is stronger than guideline-based practice; comments such as 'cancel/coast the fresh transfer' are imprecise and not standard in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps including sperm DNA fragmentation testing, consideration of ICSI, lifestyle optimization, and future cycle planning, though some recommendations are overly definitive and insufficiently nuanced for a poor-quality embryo that may still occasionally be transferred if no alternatives exist."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.012537,
+  "judge_latency_ms": 5065.250666986685,
+  "judge_prompt_tokens": 2529,
+  "judge_completion_tokens": 330
+}

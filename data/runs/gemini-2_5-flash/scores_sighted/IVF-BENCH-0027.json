@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response reasonably identifies a blastocyst with visible ICM and surrounding TE, but it likely undercalls expansion as an early blastocyst/grade 2 despite the image and provided lab score suggesting a more advanced/full blastocyst. Zona pellucida comments are acceptable but not especially image-grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, ovarian reserve, diagnosis, and sperm data with embryo quality, but misses important interactions such as BMI, recurrent prior IVF losses/failures, and the inconsistency of a Day 4 transfer labeled with a blastocyst Gardner score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there is a notable internal tension in overriding the provided descriptive grading with its own interpretation of expansion stage. The logic is otherwise mostly sound, though incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner framework and age-related prognosis is broadly aligned with IVF practice, but the handling of the grading discrepancy is imperfect and the response shown does not fully address evidence-based transfer planning or recurrent implantation/pregnancy loss considerations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The visible portion provides interpretation rather than concrete management steps. It lacks specific recommendations for this transfer, luteal support/monitoring, single-embryo transfer considerations, or future-cycle planning tailored to repeated prior unsuccessful outcomes."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.011085,
+  "judge_latency_ms": 6400.550332997227,
+  "judge_prompt_tokens": 1875,
+  "judge_completion_tokens": 364
+}

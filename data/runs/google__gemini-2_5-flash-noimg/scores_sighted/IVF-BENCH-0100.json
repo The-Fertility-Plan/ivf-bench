@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was available to it and based morphology on the provided Gardner score. Its description broadly matches a 2AB conceptually, but it incorrectly equated expansion 2 with a full blastocyst and stated TE as 'few cells forming a loose epithelium,' which is closer to C than standard B wording; it also did not assess visible image-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated age, ovarian reserve, oocyte yield, diagnosis, sperm parameters, endometrium, lifestyle, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent overall, with conclusions generally supported by the case data. Minor issues include overcalling prognosis and relying on a somewhat inflated implantation estimate for a non-euploid 2AB embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as single embryo transfer, luteal support, and cautious consideration of PGT-A after repeated failures are broadly guideline-consistent. Small deviations include imprecise Gardner grading interpretation and mention of ERA, which is not routinely recommended."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management and contingency planning, though some suggestions are somewhat generic and not highly individualized beyond standard IVF care."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014943,
+  "judge_latency_ms": 4630.588541011093,
+  "judge_prompt_tokens": 3186,
+  "judge_completion_tokens": 359
+}

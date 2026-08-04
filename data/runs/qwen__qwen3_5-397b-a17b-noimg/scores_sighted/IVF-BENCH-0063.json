@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0063",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided 3AB text. Its description broadly matches the lab grade, but it inaccurately states stage 3 is 'fully expanded with thinning zona' and overcalls the embryo as 'top-tier'; TE wording also softens the provided 'few cells forming a loose epithelium.'"
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, uterine factor, prior failed cycles, ovarian response, endometrial thickness, and sperm parameters into prognosis in a clinically meaningful way. Some points are speculative, such as possible PCOS/metabolic implications from AMH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent: good embryo quality is balanced against age and uterine-factor history. Minor issues include overstating embryo quality and introducing stress/cortisol effects with limited evidence, but the probability estimate generally follows the argument."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, including uterine cavity reassessment and cautious consideration of PGT-A. However, calling 3AB 'top-tier,' suggesting dual-pathway progesterone routinely, and mentioning NK-cell testing reduce alignment with evidence-based guideline standards."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for proceeding with transfer, luteal support review, and future uterine evaluation/hysteroscopy, adenomyosis assessment, and consideration of PGT-A. Some recommendations are less evidence-based, but overall it is useful and specific."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.014952,
+  "judge_latency_ms": 7580.706875000033,
+  "judge_prompt_tokens": 2919,
+  "judge_completion_tokens": 413
+}

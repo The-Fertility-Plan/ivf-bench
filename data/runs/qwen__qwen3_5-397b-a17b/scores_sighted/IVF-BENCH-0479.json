@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0479",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality blastocyst with poorly defined ICM/TE and disorganized appearance, but overstates non-viability and misinterprets the Gardner expansion score by asserting stage 1 despite the prompt's conflicting descriptor."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, FSH, endometrium, prior outcomes, male factor, and oocyte maturity reasonably well with embryo quality, though some inferences (e.g., likely sperm DNA fragmentation, poor responder) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured, but there are notable issues: it treats the embryo as definitively non-viable/arrested from morphology alone, recommends no transfer categorically, and labels recurrent implantation failure despite limited nuance and a conflicting stage description."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner grading concepts is partly correct, but the recommendation that a DD embryo is categorically unsuitable and should not be transferred is too absolute; PGT-A and TESE/DNA fragmentation suggestions are presented more strongly than guideline-based evidence supports for this exact case."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for current and future cycles, including sperm evaluation and protocol review, but some advice is overly definitive and insufficiently individualized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.013125,
+  "judge_latency_ms": 5684.032083008788,
+  "judge_prompt_tokens": 2605,
+  "judge_completion_tokens": 354
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0085",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and did not fabricate morphological features. Given the prompt note that the model could not see the image, declining morphology assessment is appropriate and avoids inaccurate claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age-related aneuploidy risk, ovarian reserve, tubal factor, endometrium, sperm, lifestyle, and first-cycle context. It connects these to prognosis, though without image-based embryo assessment the integration cannot be fully comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis appropriately limited by missing morphology. Minor issue: calling age 38 not yet in advanced maternal age territory is imprecise, but overall conclusions remain logical."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET preference, consideration of PGT-A at age 38, standard luteal support, and no ERA in a first cycle without failures. Slight overstatement of PGT-A benefit and some simplification prevent a perfect score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, including obtaining morphology, SET, PGT-A discussion, review of embryology outcomes, and maintaining protocol/lifestyle. Useful but somewhat generic because embryo-specific details are unavailable."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.015594,
+  "judge_latency_ms": 5090.0116249977145,
+  "judge_prompt_tokens": 3503,
+  "judge_completion_tokens": 339
+}

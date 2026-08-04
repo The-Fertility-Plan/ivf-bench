@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0019",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and based morphology on the provided 1DD grade. It correctly identified very poor ICM/TE quality from the grade, but it misstated stage 1 as blastocoel less than half the embryo despite the provided lab definition indicating at least half, and it added strong claims such as 'arrested/non-viable' that are not directly image-based."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, smoking, male factor, prior ectopics, prior live birth, endometrial thickness, and low oocyte yield with embryo prognosis in a clinically meaningful way. It missed AMH being unavailable and somewhat overinterpreted sperm DNA fragmentation from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and the poor prognosis estimate follows from the DD grading, but there are notable logical issues: it prioritizes the numeric stage over the accompanying definition without resolving the discrepancy, treats the embryo as essentially non-viable with high certainty, and recommends cancellation despite the case already being a Day 4 transfer scenario."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based (smoking cessation, ectopic risk review, protocol reassessment), but several recommendations are stronger than guideline-supported evidence, including categorical advice not to transfer/freeze based solely on this grading, routine PGT-A suggestion in a 29-year-old with low embryo numbers, and use of PICSI/IMSI which are not standard guideline-backed interventions."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next steps for counseling, future male-factor workup, stimulation review, and ectopic-risk mitigation. However, some actions are overly definitive or not fully nuanced for real-world practice, especially cancellation advice and adjunct sperm-selection recommendations."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.015624,
+  "judge_latency_ms": 5992.708291989402,
+  "judge_prompt_tokens": 2903,
+  "judge_completion_tokens": 461
+}

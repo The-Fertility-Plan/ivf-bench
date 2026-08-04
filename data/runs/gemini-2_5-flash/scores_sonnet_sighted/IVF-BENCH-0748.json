@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0748",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AA Gardner score (expansion, thinning zona, ICM cluster, cohesive TE layer), but heavily relies on the provided Gardner score rather than independent image analysis. The response acknowledges image blur limitations honestly, but doesn't add meaningful morphological observations beyond what the score already conveys. No mention of specific visible features like blastocoel cavity size, ICM positioning, or TE cell count estimation from the image itself."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age, AMH/FSH, endometrial thickness, male factor diagnosis, BMI, lifestyle factors, and sperm parameters are all connected to prognosis. The interaction between male factor diagnosis and female fertility preservation is noted. The low MII yield (2/5 COCs) is appropriately flagged. Minor gap: doesn't deeply explore the interaction between BMI 30.5 and endometrial receptivity beyond surface mention, and doesn't address the light alcohol use more specifically in context of active treatment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological quality through patient factors to probability estimate. The 60-75% range is well-justified with clear upper and lower bound reasoning. Risk factors appropriately temper the estimate. Minor inconsistency: the response mentions 'euploid 3AA blastocyst' in the probability reasoning but no PGT-A was mentioned in the case data, making this assumption unjustified. Otherwise the chain of reasoning is clear and consistent."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for good-prognosis patient, Day 5 transfer rationale, luteal phase support mention, beta-hCG timing (9-11 days), PGT-A consideration only for recurrent failure at this age. BMI counseling aligns with ASRM obesity guidelines. The suggestion to consider PGT-A for recurrent failure rather than routinely is appropriate. Minor gap: doesn't reference specific ESHRE blastocyst grading consensus or address whether freeze-all vs fresh transfer was considered given the stimulation context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET is clearly recommended with rationale, luteal support is mentioned, lifestyle modifications are detailed with specific targets (BMI below 30/25), alcohol abstinence during treatment is specified, and future cycle planning includes embryo banking, sperm DNA fragmentation testing, and protocol review triggers. The response provides clear decision trees for future scenarios. Slight weakness: doesn't specify progesterone type/route, doesn't address timing of endometrial preparation, and weight management advice lacks referral pathway specificity."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.021504,
+  "judge_latency_ms": 16633.670958006405,
+  "judge_prompt_tokens": 3713,
+  "judge_completion_tokens": 691
+}

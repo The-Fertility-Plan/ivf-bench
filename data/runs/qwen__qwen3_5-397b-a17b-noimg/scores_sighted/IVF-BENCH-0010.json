@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0010",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the reported 2BA grade rather than inventing image-specific findings. Its description of grade 2/ICM B/TE A is broadly consistent with the lab label, but it repeated the prompt's incorrect mapping of stage 2 as 'full blastocyst' and did not comment on the visibly somewhat irregular/collapsed appearance."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, BMI, endometriosis, endometrial thickness, oocyte yield, sperm parameters, and prior cycle history into prognosis reasonably well. It missed some nuance around absent AMH and overemphasized stress, but overall connected patient factors to embryo potential and implantation environment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The response is structured and internally consistent, with a clear chain from embryo grade and age to prognosis, then adjustment for BMI/endometriosis. Minor issues include treating a Day 4 blastocyst as clearly favorable and assigning somewhat confident quantitative effects to stress and endometriosis."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: Gardner stage 2 was mislabeled as full blastocyst, low-dose aspirin was suggested without clear indication, and PGT-A was framed as potentially useful in a 26-year-old largely because of endometriosis, which is not standard guideline-driven reasoning."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gave practical next steps for current transfer and future planning, including proceeding with transfer, luteal support review, AMH testing, weight optimization, and consideration of endometriosis suppression if unsuccessful. Some recommendations are somewhat generic or clinic-dependent, but overall they are usable."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01491,
+  "judge_latency_ms": 5476.149499998428,
+  "judge_prompt_tokens": 2860,
+  "judge_completion_tokens": 422
+}

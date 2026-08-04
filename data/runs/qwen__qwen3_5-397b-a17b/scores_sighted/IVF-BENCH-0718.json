@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0718",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone: the blastocoel does not appear clearly fully expanded, the zona thinning/hatching description is somewhat stronger than visible, and TE/ICM quality are inferred more from the given grade than directly evident."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, PCOS, AMH, prior IVF failures, sperm parameters, and endometrial thickness well with embryo quality, though some interpretations (e.g., low-reserve PCOS phenotype) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and generally logical, with the implantation estimate tied to embryo quality, age, and prior failures; minor issues include treating RIF as established and using somewhat simplified euploid/aneuploid assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely aligned on morphology, prognosis, and considering uterine evaluation after repeated failures, but recommendations such as ERA, aspirin/heparin, and immunologic/thrombophilia framing are not strongly guideline-supported for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next-step recommendations for transfer and contingency planning, including uterine evaluation and metabolic optimization, though some suggested add-ons are not sufficiently qualified by evidence strength."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013707,
+  "judge_latency_ms": 5037.370666992501,
+  "judge_prompt_tokens": 2864,
+  "judge_completion_tokens": 341
+}

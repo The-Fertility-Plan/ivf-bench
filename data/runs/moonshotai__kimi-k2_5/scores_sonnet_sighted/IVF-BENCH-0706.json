@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0706",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the expanded blastocyst with thinned zona pellucida, compact ICM with numerous cells, and cohesive TE epithelium consistent with 3AA grading. The description aligns well with the image showing a well-expanded blastocyst with visible ICM structure. Minor limitation: the image is somewhat low-resolution/blurry making precise TE cell counting difficult, yet the model confidently describes 'uniform morphology' and 'robust cell number' without acknowledging image quality limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all provided clinical factors. The response systematically connects endometriosis to endometrial receptivity issues, links the 7.5mm endometrial thickness to implantation risk, addresses borderline sperm motility as a potential DNA fragmentation concern, and contextualizes the prior failed cycle with the current endometrial environment. The interaction between endometriosis and thin endometrium is specifically highlighted as compounding risk factors, demonstrating sophisticated multi-factor reasoning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate (35-45%) follows logically from the stated baseline (50-60%) with clearly enumerated deductions for each risk factor. The recommendation to proceed with transfer is consistent with the moderate-favorable assessment. Minor inconsistency: the response states euploidy risk ~40-50% for 3AA embryos, which is slightly high for a 29-year-old (typically lower aneuploidy rates at this age), and the baseline implantation rate of 50-60% for 3AA at age 29 may be slightly conservative compared to published data showing higher rates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations largely align with ESHRE/ASRM guidelines including ERA testing for recurrent implantation failure, PGT-A consideration after second failure, and GnRH agonist downregulation for endometriosis. The suggestion of IM progesterone preference over vaginal in endometriosis is a reasonable clinical nuance. However, 'endometrial scratch' has mixed evidence in current guidelines (ESHRE 2020 guidance is cautious), and recommending low-dose aspirin has limited high-quality evidence for routine use. Corticosteroid cover recommendation is not strongly evidence-based per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations covering immediate transfer optimization (luteal support specifics, assisted hatching consideration, embryo glue), lifestyle interventions with clear rationale, and a detailed future cycle planning pathway with specific diagnostic tests (ERA, DFI, hydrosalpinx screening) and therapeutic strategies. The response provides clear decision trees and prioritizes interventions appropriately. The prognosis summary effectively synthesizes the key clinical message for the treating physician."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01968,
+  "judge_latency_ms": 15944.15729198954,
+  "judge_prompt_tokens": 3040,
+  "judge_completion_tokens": 704
+}

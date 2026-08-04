@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0093",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and based morphology on the provided Gardner text. It correctly noted that 'hatching/herniating through zona' is more consistent with grade 5 than 4, but it also called the embryo 'top-tier' and implied optimal ICM/TE solely from the label rather than visible image features. Since no direct image-based morphology was attempted, this is mostly acceptable but not a precise visual analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, low oocyte yield, male factor, paternal age, endometrial thickness, prior live birth, BMI, and lifestyle with embryo quality and prognosis. It misses some nuance around the limited significance of stress and overstates protocol-response expectations somewhat, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, linking embryo quality and patient factors to prognosis and recommendations. Minor issues include speculative assumptions (possible over-suppression, implied biopsy/freeze context) and some overconfidence in morphology as 'highest quality category,' but no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly guideline-consistent, including SET for a good-prognosis day-5 blastocyst. However, it makes speculative statements about PGT-A/biopsy status, somewhat overstates routine recommendation for PGT-A at age 35, and suggests adjuncts like acupuncture/stress reduction with limited evidence for improving implantation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and future planning, including SET, luteal support review, protocol reconsideration, and male-factor workup. Some recommendations are speculative or not tightly tailored to the available data, but overall they are useful and specific."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.016071,
+  "judge_latency_ms": 5988.059583003633,
+  "judge_prompt_tokens": 3102,
+  "judge_completion_tokens": 451
+}

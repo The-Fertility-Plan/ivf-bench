@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies expansion stage and thinning zona pellucida consistent with Grade 3, and notes ICM location and TE cohesion. However, the image appears to show a somewhat degenerate or poor-quality blastocyst with significant vacuolization, granularity, and cellular debris that contradicts the 3AA label. The model partially acknowledges vacuolization but ultimately defers to the provided score rather than critically analyzing the visible discordance between the image and the Gardner score. The description lacks precision about the notably granular cytoplasm and irregular cellular architecture visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, AMH, endometriosis impact on implantation, paternal age and sperm DNA fragmentation risk, endometrial thickness, and lifestyle factors. It correctly identifies endometriosis as the critical variable and connects it to implantation failure risk. Minor gap: does not address the previous failed cycle in more depth (e.g., whether PGT-A was done, what protocol was used) or BMI relevance, and AMH of 6.8 could suggest PCOS overlap worth mentioning."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability deduction from a ~60% base rate downward due to endometriosis and paternal age is coherent and well-explained. The recommendation to proceed with FET over fresh transfer for endometriosis patients is internally consistent. Minor issue: the model states 36 is 'prime reproductive age' and 'optimal age for IVF' which slightly overstates the case, and the PGT-A recommendation logic (don't biopsy if only one embryo) is sound but comes after already discussing transfer, creating slight structural inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE and ASRM guidelines: FET preference for endometriosis patients, PGT-A consideration for advanced paternal age and recurrent implantation failure, ectopic pregnancy vigilance with endometriosis, and single embryo transfer implied. The Gardner grading interpretation is standard. Minor deviations: ASRM/ESHRE do not strongly recommend PGT-A solely for paternal age of 40 without additional indications, and the routine recommendation of PGT-A for all remaining embryos may be slightly overreaching current consensus guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific next steps: proceed with FET, consider PGT-A with nuanced pros/cons and conditional logic, lifestyle modifications, post-transfer monitoring protocol including ectopic risk surveillance. The conditional PGT-A recommendation (only if multiple embryos available) is a practical nuance. Could be improved by specifying endometrial preparation protocol for FET in endometriosis patients, luteal phase support recommendations, or whether ERA testing should be considered given the previous failed cycle."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.019614,
+  "judge_latency_ms": 16259.054541005753,
+  "judge_prompt_tokens": 2813,
+  "judge_completion_tokens": 745
+}

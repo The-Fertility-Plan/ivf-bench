@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0687",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner 3AB grading components (expansion, ICM density, TE looseness) and references the zona pellucida thinning. However, the visual description is somewhat generic and hedged ('consistent with morula-to-blastocyst transition'), and the image actually shows a fairly well-expanded blastocyst. The description doesn't add much beyond restating the provided Gardner score, and some visual observations are vague rather than independently derived from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age (30), AMH/FSH indicating DOR, paternal age (42) and its implications for sperm DNA fragmentation, endometrial thickness (9mm as favorable), and the history of three failed cycles. The 'double hit' concept combining paternal age and DOR is a meaningful clinical insight. Minor gap: BMI and lifestyle factors are not discussed, and the biochemical pregnancy history could have been explored more deeply as a potential implantation vs. embryo quality discriminator."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to clinical factor integration to probability adjustment. The downward adjustment from 40-50% to 25-35% is justified with specific reasons (paternal age aneuploidy risk, prior failures, DOR). The recommendation to transfer rather than biopsy for PGT-A given limited embryo availability is internally consistent. Minor issue: the response is cut off mid-sentence in the recommendations section, leaving the reasoning incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response correctly applies Gardner grading criteria and recommends SET, which aligns with ESHRE/ASRM guidelines. The discussion of PGT-A is appropriate. However, the characterization of FSH 7.4 IU/L as definitively indicating DOR is slightly overstated without additional context. The claim that paternal age 42 'significantly' increases aneuploidy is somewhat overstated per current evidence—paternal age effects are real but modest compared to maternal age effects. The response also doesn't mention endometrial receptivity testing (ERA) despite 3 failed transfers, which current guidelines would suggest considering."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response provides clear direction to proceed with transfer and recommends SET. It mentions PGT-A for future cycles and raises sperm DNA fragmentation testing as a consideration. However, the response is cut off before completing future cycle recommendations. Missing actionable items include: ERA testing given repeated implantation failure, immunological workup, consideration of ICSI with sperm selection techniques (MACS/IMSI) given paternal age, luteal phase support optimization, and specific stimulation protocol adjustments for DOR. The recommendations present are reasonable but incomplete."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.019215,
+  "judge_latency_ms": 16033.592124993447,
+  "judge_prompt_tokens": 2925,
+  "judge_completion_tokens": 696
+}

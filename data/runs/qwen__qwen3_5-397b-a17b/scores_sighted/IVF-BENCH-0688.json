@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0688",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a very early/poor-quality blastocyst with absent-poor ICM and TE and developmental delay on day 5. Minor issue: refers to it as Stage 1 despite the provided expansion label being 0/early blastocyst, and adds granular/dark cytoplasm interpretation that is somewhat subjective."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, BMI/lifestyle, and partner age/semen data well, and correctly frames embryo quality as the dominant prognostic factor. Could be more nuanced about the limited predictive value of paternal age alone and the nonspecific diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor morphology and day-5 delay drive a very low implantation estimate despite favorable uterine and reserve factors. Slight overreach in linking morphology directly to aneuploidy and near-nonviability."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned in recognizing very poor prognosis and counseling accordingly, but recommendations such as broadly 'highly recommending' PGT-A, suggesting testicular sperm for elevated SDF, and stimulation changes from a single poor embryo are somewhat stronger than guideline-supported evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points for transfer versus non-prioritization and practical future-cycle considerations (PGT-A discussion, SDF testing, protocol review, possible ICSI). Some recommendations would benefit from more conditional phrasing and prioritization."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013662,
+  "judge_latency_ms": 5539.055540997651,
+  "judge_prompt_tokens": 2584,
+  "judge_completion_tokens": 394
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the Gardner score components (expansion stage 2, ICM grade A, TE grade B) as provided in the lab data, but relies almost entirely on the provided text description rather than independent image analysis. There is no mention of zona pellucida status, no comment on blastocoel clarity or symmetry, and no independent morphological observations from the image itself. The description is essentially a restatement of the provided Gardner score definitions rather than a genuine image-based analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: age, BMI, AMH/FSH, PCOS diagnosis, stimulation protocol, oocyte yield, endometrial thickness, sperm parameters, and lifestyle factors are all addressed and connected to prognosis. The interaction between PCOS and endometrial receptivity is noted. Minor gap: the partner's age of 40 and its potential contribution to sperm DNA fragmentation is mentioned but not deeply explored, and the interaction between PCOS and the slightly thin endometrium (possibly due to fresh transfer in a stimulated cycle) is not explicitly discussed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-55% follows reasonably from the identified positive and negative factors. The response correctly identifies that strong positives (age, ICM grade) are tempered by the borderline endometrial thickness and BMI. One minor inconsistency: the response initially states typical implantation rates of 45-60% for a 2AB blastocyst in a 30-year-old, then adjusts downward to 40-55%, which is coherent but the downward adjustment for relatively minor risk factors could be better justified quantitatively."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: Day 5 blastocyst transfer rationale is sound, ERA recommendation is appropriately reserved for recurrent implantation failure, PGT-A is correctly framed as optional and not routinely indicated for a first cycle in a 30-year-old, endometrial adjunct therapies (sildenafil, aspirin, G-CSF) are mentioned appropriately as second-line options. The 7mm threshold discussion aligns with current literature. Minor issue: the response does not address OHSS risk, which is a significant concern in a PCOS patient with 17 COCs retrieved and AMH of 6.85, and whether a freeze-all strategy should have been considered."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: lifestyle modifications (alcohol cessation, exercise), endometrial monitoring, embryo banking, and future cycle adjustments are all clearly outlined. The tiered approach (current transfer vs. future planning) is well-organized. However, the notable omission of OHSS risk management and the lack of discussion about whether a freeze-all strategy might have been preferable for this PCOS patient reduces the score. The ERA recommendation context is appropriate but could be more specific about timing."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.022308,
+  "judge_latency_ms": 15037.250832996506,
+  "judge_prompt_tokens": 3666,
+  "judge_completion_tokens": 754
+}

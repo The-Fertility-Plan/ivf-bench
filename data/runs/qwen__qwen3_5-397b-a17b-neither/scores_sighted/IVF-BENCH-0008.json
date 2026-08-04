@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0008",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and avoided detailed fabrication. Its generic suggestion of a Day 4 morula/early blastocyst is broadly compatible with the image, but it did not analyze the actual visible morphology and incorrectly framed the task around blastocyst/Gardner scoring rather than the evident cleavage/compacting Day 4 embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, response to stimulation, endometrial thickness, prior outcomes, and sperm parameters into prognosis reasonably well. However, it overinterpreted some factors, especially inferring PCOS phenotype and emphasizing endometrial causes without clear supporting data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it labels the history as RIF/RPL too readily, assumes Day 4 transfer is inherently lower quality or suggests arrest, and gives a relatively low implantation estimate for a very young patient without strong evidence for such a large downgrade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are guideline-consistent, such as noting Gardner scoring is for blastocysts and recommending appropriate luteal support. But several recommendations are not well aligned with current evidence/guidelines, including ERA as highly recommended, NK-cell testing, broad thrombophilia screening, and suggesting PGT-A at age 24 for this history."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for transfer and future planning, including luteal support review, consideration of freeze-all in high responders, and targeted further evaluation. It loses points because some suggested investigations are not well prioritized or evidence-based."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015441,
+  "judge_latency_ms": 6094.16091600724,
+  "judge_prompt_tokens": 3017,
+  "judge_completion_tokens": 426
+}

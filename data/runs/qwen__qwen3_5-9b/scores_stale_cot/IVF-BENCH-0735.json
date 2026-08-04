@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response repeatedly admits the image is ambiguous and likely not a classic blastocyst view, yet still assigns detailed ICM, TE, blastocoel, and zona features largely from the provided Gardner score rather than visible morphology. This includes likely fabricated image-specific claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, endometrial thickness, prior cycle, male factor context, and lifestyle with embryo quality reasonably well, though some links are overstated and not deeply nuanced."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are inconsistencies: it questions the image identity, then treats morphology as confirmed; it overstates euploid likelihood and gives a somewhat inflated implantation estimate based on morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and general transfer considerations are aligned, but recommending/leaning toward PGT-A after one failed cycle at age 34 with male factor is not strongly guideline-driven, and the euploidy/implantation claims are somewhat overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps such as proceeding with transfer, maintaining current lifestyle, and discussing PGT-A in future cycles, though recommendations remain somewhat generic and lack detailed contingency planning."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.0089225,
+  "judge_latency_ms": 5900.207667029463,
+  "judge_prompt_tokens": 4522,
+  "judge_completion_tokens": 327
+}

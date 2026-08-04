@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies the expansion stage and degenerative ICM/TE consistent with the 0DD Gardner score. However, the image actually appears to show a more expanded blastocyst with visible cellular structure rather than a truly early/collapsed blastocyst - the description of 'amorphous large central area' partially mischaracterizes what is visible. No mention of zona pellucida status or fragmentation visible in the image. The description is serviceable but not precisely matched to the actual image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age, FSH levels, paternal age impact on aneuploidy, sperm parameters in context of male factor diagnosis, endometrial thickness, and prior cycle history. It correctly connects paternal age to DNA fragmentation risk and links the male factor diagnosis to potential sperm DNA integrity issues. Minor gap: AMH being N/A is not addressed, and the two prior failed cycles (miscarriage + no pregnancy) could have been more deeply analyzed for pattern implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment to probability estimate to recommendations. The <5% probability estimate is well-supported by the 0DD grading rationale. The connection between poor embryo quality and the recommendation for PGT-A and SDF testing is coherent. Minor inconsistency: FSH of 6.9 IU/L is described as 'higher end of normal' which is slightly misleading as it is well within normal range for age 35, slightly weakening that reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: PGT-A recommendation for recurrent failure, SDF testing for male factor with poor embryo development, freeze-all strategy consideration, and ICSI recommendation. The Gardner grading interpretation is consistent with standard criteria. The counseling approach for poor-quality embryo transfer is appropriate. Minor gap: no mention of ERA (Endometrial Receptivity Array) testing given two prior failures, which ESHRE guidelines may support in recurrent implantation failure cases."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: PGT-A, SDF testing, ICSI if not already used, freeze-all strategy, and expectation management counseling. These are directly applicable to this case. Could be strengthened by addressing whether to proceed with this transfer at all given the 0DD grade, specific SDF threshold values, or antioxidant supplementation for the male partner. The counseling recommendation is appropriately nuanced but lacks specifics on how to frame the conversation."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.018783,
+  "judge_latency_ms": 15347.698917001253,
+  "judge_prompt_tokens": 2931,
+  "judge_completion_tokens": 666
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0535",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a blastocyst and the reported 3AA grade, but it overstates certainty from the image alone, describes TE as robust/cohesive where it is not crisply visualized throughout, and mentions thinning/ready to hatch somewhat more confidently than the image supports."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, prior miscarriage, sperm parameters, oocyte maturity, and endometrium with embryo quality reasonably well, though AMH is unavailable and the diagnosis is not meaningfully explored."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical structure is good, but there are notable overstatements such as calling this a 'perfect storm,' implying 14 mm is unequivocally ideal, and linking 3AA to the highest likelihood of euploidy too strongly; probability reasoning is plausible but somewhat overconfident."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations deviate from evidence-based guidance: adding extra progesterone solely for prior miscarriage is not standard, PGT-A after a single miscarriage in a 31-year-old is not routinely indicated, and claiming euploid embryos 'virtually guarantee implantation' is incorrect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for proceeding with transfer and considering future evaluation, but some recommendations are insufficiently nuanced and a few are based on overstated premises."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.012759,
+  "judge_latency_ms": 5400.772291002795,
+  "judge_prompt_tokens": 2518,
+  "judge_completion_tokens": 347
+}

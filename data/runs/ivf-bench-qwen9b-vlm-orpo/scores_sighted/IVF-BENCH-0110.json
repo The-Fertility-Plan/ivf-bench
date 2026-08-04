@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0110",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally recognizes a blastocyst with limited visibility of ICM/TE, but overstates confidence by calling it expanded/early-hatching and suggesting AA-level TE/ICM from a single blurry image where these features are not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Thoroughly integrates age, ovarian reserve, BMI, first-cycle status, male-factor context, semen parameters, and transfer timing with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly consistent, with appropriate caveats about morphology and ploidy; minor issue is some tension between uncertainty in image interpretation and fairly confident grading/prognosis statements."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with standard IVF practice, including SET and avoiding unproven add-ons; minor deviations include somewhat loose discussion of Gardner stage terminology and speculative fresh-transfer effects."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Provides clear practical next steps for current transfer and contingency planning, including SET, endometrial review, luteal support, lifestyle guidance, and stepwise evaluation if unsuccessful."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.016371,
+  "judge_latency_ms": 10287.054291009554,
+  "judge_prompt_tokens": 3972,
+  "judge_completion_tokens": 297
+}

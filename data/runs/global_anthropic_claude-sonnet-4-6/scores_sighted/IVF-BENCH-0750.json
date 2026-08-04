@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response over-interprets a low-quality static image, assigning specific findings such as apoptotic/vacuolated blastomere, heterogeneous TE, and downgrade to 3BA/3BB that are not reliably discernible. It only loosely matches the reported 3AA and does not accurately characterize key visible blastocyst landmarks."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrates age, ovarian reserve, stimulation response, sperm parameters, endometrium, diagnosis, and first-cycle status with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with probability estimates tied to age and embryo quality. Minor issues arise from over-weighting uncertain image-based abnormalities and somewhat speculative numerical modifiers."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (eSET, counseling on age-related aneuploidy, luteal support), but some recommendations are weakly guideline-supported or overstated, including strong endorsement of PGT-A, ERA after limited failure, DHEA/antioxidants, and immunologic workup."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, though some suggested tests/interventions are more speculative than standard and could lead to over-management."
+    }
+  ],
+  "extracted_probability": 0.41,
+  "judge_cost_usd": 0.016803,
+  "judge_latency_ms": 6237.953957999707,
+  "judge_prompt_tokens": 3841,
+  "judge_completion_tokens": 352
+}

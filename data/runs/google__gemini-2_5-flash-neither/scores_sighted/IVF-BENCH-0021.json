@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and did not fabricate embryo morphology. It therefore avoided inaccurate claims, but provided no actual image-based assessment despite the embryo appearing to be a day-4 compacting/early cavitating embryo rather than a fully assessable blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated most relevant factors well, including age, ovarian reserve markers, smoking, sperm parameters, endometrium, and transfer timing, and linked them to prognosis. It missed some nuance around the discordant DOR label and overinterpreted AMH as implying oocyte quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a clear explanation for the estimated probability and limitations. Minor issues include overconfidence about AMH/FSH contradicting DOR and some imprecision in interpreting sperm motility and day-4 transfer implications."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (smoking cessation, luteal support, lifestyle optimization), but there are deviations: calling smoking cessation before future cycles 'non-negotiable,' suggesting PGT-A relatively readily in a 30-year-old first-cycle patient, and implying freeze-all may improve outcomes without clear indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for current transfer and future planning, including smoking cessation, diagnosis clarification, culture strategy discussion, and follow-up. Some recommendations are somewhat generic and not tightly tailored to the actual embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.017022,
+  "judge_latency_ms": 5230.298958005733,
+  "judge_prompt_tokens": 3804,
+  "judge_completion_tokens": 374
+}

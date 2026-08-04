@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0712",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model acknowledges image quality limitations and provides a reasonable description of expansion stage, ICM, TE, and zona pellucida. However, the description is hedged with qualifiers like 'soft/collapsed' and 'not perfectly crisp,' and the model relies heavily on the reported Gardner score rather than independently confirming morphological features from the image. The image actually shows a somewhat degenerated or poor-quality blastocyst with granular cytoplasm and vacuolization, which the model does not adequately flag as potentially inconsistent with the reported 3AA grade."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors including age, AMH, FSH, endometrial thickness, sperm parameters, endometriosis diagnosis, prior cycle failure, and lifestyle factors. It correctly identifies maternal age as the dominant limiting factor and discusses how endometriosis may affect implantation. Minor gap: does not deeply explore the interaction between endometriosis and endometrial receptivity or the potential impact of the prior failed cycle on protocol adjustment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 40-55% implantation is reasonably derived from the interplay of good embryo morphology and age-related aneuploidy risk. The distinction between euploid vs. untested embryo outcomes is well-articulated. Minor inconsistency: the model accepts the 3AA grade largely at face value despite noting image quality concerns, which slightly undermines the coherence of the morphological assessment feeding into the probability estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: single embryo transfer recommendation, PGT-A discussion for age 36, luteal phase support, endometriosis staging consideration, and workup for repeated implantation failure. The Gardner grading system is correctly referenced. The suggestion to consider hysteroscopy and chronic endometritis evaluation after failed transfers aligns with current guidelines. No major deviations from evidence-based practice detected."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for the current transfer (SET, luteal support, lifestyle) and future planning (PGT-A consideration, endometriosis staging review, fresh vs. frozen transfer consideration, extended workup if failure recurs). The tiered approach distinguishing immediate vs. future cycle recommendations is practical. Could be slightly more specific about endometriosis management protocols or ERA testing criteria, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.020253,
+  "judge_latency_ms": 13965.75791700161,
+  "judge_prompt_tokens": 3566,
+  "judge_completion_tokens": 637
+}

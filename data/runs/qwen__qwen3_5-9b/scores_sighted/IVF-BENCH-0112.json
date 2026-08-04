@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0112",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally matches a 3AB blastocyst with expanded cavity, compact ICM, and looser TE, but overstates readiness to hatch and identifies 'air bubbles' as artifacts without certainty from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, prior failed cycles, sperm parameters, and endometrium with embryo quality reasonably well, though it somewhat overlabels the patient as DOR/poor responder from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is mostly logical and the implantation estimate is tied to morphology, age-related aneuploidy risk, and prior outcomes; minor issues include speculative statements about embryo robustness and freezing being a waste if potentially aneuploid."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Contains several non-guideline-supported recommendations or emphases, including routine thrombophilia/immune workup for prior failed cycles, strong push for PGT-A in a low-yield case, and donor egg counseling framed prematurely."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as proceeding with transfer, lifestyle optimization, and uterine evaluation, but recommendations are not sufficiently nuanced for this exact scenario and include speculative or potentially inappropriate testing suggestions."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.013242,
+  "judge_latency_ms": 5089.02745800151,
+  "judge_prompt_tokens": 2704,
+  "judge_completion_tokens": 342
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0476",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Describes a generally good-quality expanded blastocyst with compact ICM and cohesive TE, which is broadly consistent with the provided 3AA grade, but adds uncertain image-specific claims such as partial hatching/exfoliation and hedges between A/B grading rather than matching the known AA morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior live birth, ovarian response, semen parameters, BMI, diagnosis, and lifestyle with embryo quality reasonably well, though it overemphasizes endometrial thickness as a negative factor and cannot use AMH because it is unavailable."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "Reasoning has notable inconsistencies: it first incorrectly links a 15 mm lining to cavity fluid, then later treats 15 mm thickness itself as the main adverse factor and even says this places prognosis in the 'upper-middle' of the range. Probability estimates are only partly supported by the discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Single embryo transfer and avoidance of unnecessary add-ons are guideline-concordant, but the response contains non-evidence-based concern that a 15 mm lining implies fluid/reduced implantation and overstates thick endometrium as a major negative modifier without supporting context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with SET, checking transfer/luteal details, considering cavity assessment if indicated, and outlining what to review after failure. Recommendations are useful, though some are based on an overstated concern about lining thickness."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.015393,
+  "judge_latency_ms": 7991.293916013092,
+  "judge_prompt_tokens": 3266,
+  "judge_completion_tokens": 373
+}

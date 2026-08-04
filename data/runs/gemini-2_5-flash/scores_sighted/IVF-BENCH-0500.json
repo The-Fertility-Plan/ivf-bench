@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0500",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly reasonable description of a good-quality blastocyst with visible blastocoel, ICM, and cohesive TE, but it overcalls the expansion as 4/5AA despite the provided 2AA label and image not clearly showing hatching; some features like central ICM location and perivitelline debris are somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates key factors well: maternal age, low BMI, prior IVF failures/biochemical losses/miscarriage, sperm concentration and paternal age, ovarian response, and endometrial thickness, and relates them to prognosis. AMH is unavailable and not discussed, but most relevant interactions are covered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but there are notable inconsistencies: it labels prior outcomes as RIF/RPL somewhat strongly, treats 8 mm endometrium as borderline in a way that may overstate concern, and the morphology discussion conflicts with the supplied Gardner score. The implantation estimate is plausible but somewhat pessimistic without full justification."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with standard IVF concepts and Gardner grading principles, especially in noting the discrepancy between the numeric grade and descriptive text. However, it overinterprets morphology, implies concerns such as immunologic factors without evidence, and may overstate the significance of 8 mm lining and low BMI relative to guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The response provides risk framing and prognosis but offers limited concrete next-step recommendations for this transfer or future cycle planning; practical items such as transfer strategy, miscarriage/RPL workup, sperm DNA fragmentation consideration, or PGT-A counseling are not clearly laid out."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.01497,
+  "judge_latency_ms": 7116.543874988565,
+  "judge_prompt_tokens": 2900,
+  "judge_completion_tokens": 418
+}

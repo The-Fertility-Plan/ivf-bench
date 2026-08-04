@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0218",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a 2AB blastocyst and correctly identifies strong ICM and looser TE, but it overstates visible robustness, suggests the zona is thinning/preparing to hatch, and says it borders on expanded grade 3, which is not clearly supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, tubal factor, ovarian reserve, prior live births, prior failed cycles, BMI/lifestyle, and sperm parameters reasonably well with embryo prognosis, though some inferences (e.g., uterine receptivity certainty, AMH implications) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a plausible probability estimate tied to embryo grade and patient history; minor issues include overinterpreting morphology and making somewhat strong assumptions from prior live births and AMH."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned on SET and general prognosis, but assisted hatching is not routinely recommended on this basis, and PGT-A is presented somewhat too favorably for age 35 with prior mixed outcomes without sufficient nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical recommendations for SET, luteal support, and future protocol review, but some suggestions are not sufficiently individualized or evidence-nuanced, particularly assisted hatching and PGT-A."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013917,
+  "judge_latency_ms": 5235.161542004789,
+  "judge_prompt_tokens": 2839,
+  "judge_completion_tokens": 360
+}

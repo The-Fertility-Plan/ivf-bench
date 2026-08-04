@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0457",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality, minimally expanded/early blastocyst without clear ICM or cohesive TE, broadly consistent with 0DD. However, it overstates certainty by calling it morula/non-viable, says no blastocoel is visible despite some cavitation being plausible, and does not comment on zona features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, male factor, sperm parameters, BMI, and endometrium with embryo prognosis reasonably well. Some links are speculative, especially inferring PCOS and sperm DNA fragmentation from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is structured and the poor prognosis follows from the embryo grade, but there are notable overreaches: labeling the embryo definitively non-viable/arrested, recommending cancellation with absolute certainty, and inferring unlisted etiologies."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and recognition of poor prognosis are aligned, and suggestions like reviewing male factor and protocol are reasonable. However, declaring transfer medically futile, strongly recommending routine PGT-A, and suggesting testicular sperm based on speculation are not fully guideline-concordant."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for current transfer decision-making and future workup, including sperm assessment, protocol review, and lifestyle measures. Actionable overall, though some recommendations are too definitive and insufficiently nuanced."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.01368,
+  "judge_latency_ms": 4953.028709001956,
+  "judge_prompt_tokens": 2660,
+  "judge_completion_tokens": 380
+}

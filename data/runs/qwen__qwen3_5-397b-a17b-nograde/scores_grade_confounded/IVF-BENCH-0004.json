@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response directly contradicts the provided laboratory grading of 3AA by calling the embryo a Day 4 morula/early blastocyst, stating ICM/TE are not visible, and saying Gardner scoring cannot be applied. It fabricates a lower developmental stage and misses the expanded blastocyst features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, endometrial thickness, and sperm parameters into prognosis reasonably well, though it overinterprets the transfer timing and bases some conclusions on an incorrect morphology assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a major false premise about embryo stage and quality. This leads to unsupported conclusions about slower development, lower implantation potential, and why Day 4 transfer occurred."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Use of Gardner criteria is misapplied despite the known 3AA grade, and the recommendation for PGT-A is presented too broadly for a 36-year-old with prior live birth and limited cycle context. Some general points are reasonable, but several statements are not well aligned with evidence-based interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The response gives practical next steps such as proceeding with transfer, maintaining luteal support, and discussing future culture/PGT-A, but recommendations are only moderately specific and are weakened by the incorrect embryo assessment."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.012363,
+  "judge_latency_ms": 4179.099917004351,
+  "judge_prompt_tokens": 2266,
+  "judge_completion_tokens": 371
+}

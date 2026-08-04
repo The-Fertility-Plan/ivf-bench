@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0035",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fundamentally misclassifies the embryo as a compacting morula/early blastocyst, whereas the provided laboratory grading is 2AA full blastocyst. It omits accurate ICM/TE assessment and substitutes fabricated stage-specific features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, endometrial thickness, male factor, paternal age, and prior cycle history reasonably well, though some inferences (e.g., sperm DNA fragmentation) are speculative and it does not fully reconcile these with the stated 2AA grading."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by the incorrect morphological premise. Conclusions about developmental pace, transfer timing, and implantation probability are built on misidentifying the embryo stage, creating a major logical flaw despite otherwise structured discussion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "General recommendations such as proceeding with transfer, luteal support, and considering further evaluation are broadly acceptable, but the misuse of Gardner staging and strong recommendation for PGT-A in a first cycle are not fully guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future workup, including luteal support, possible sperm DNA fragmentation testing, and future cycle considerations, though some advice is based on the incorrect embryo-stage assessment."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.012675,
+  "judge_latency_ms": 4062.3201670023263,
+  "judge_prompt_tokens": 2425,
+  "judge_completion_tokens": 360
+}

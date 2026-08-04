@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0006",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its ICM and TE descriptions match the textual grading, but it incorrectly interprets stage 2 as a 'full blastocyst' and adds speculative claims about Day 4 acceleration/asynchrony rather than image-based morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, endometrial thickness, BMI, and prior miscarriages with embryo quality and prognosis. The recurrent miscarriage history is appropriately emphasized, though some links (e.g., restricted diet, timing concerns) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but it contains notable issues: mislabeling Gardner stage 2 as full blastocyst, overinterpreting Day 4 transfer as atypical/problematic, and deriving a lowered implantation estimate partly from miscarriage history, which affects live birth more directly than implantation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, including RPL workup considerations and caution that morphology does not ensure euploidy. However, recommending broad inherited thrombophilia testing and suggesting PGT-A strongly in a young patient with two miscarriages are not fully aligned with standard guideline-supported routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are clear and practical, including verifying embryo/transfer timing, planning early monitoring, and outlining future RPL evaluation. Some suggestions are less well-supported or overly assertive, but overall the advice is clinically usable."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015528,
+  "judge_latency_ms": 5851.265542005422,
+  "judge_prompt_tokens": 3111,
+  "judge_completion_tokens": 413
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0004",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fails to use the provided Gardner 3AA morphology and instead states no specific grading can be performed, incorrectly reframing the case as a Day 4 morula/early blastocyst context despite explicit blastocyst-grade data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, BMI, sperm quality, and endometrial thickness reasonably well with prognosis, though it does not fully reconcile these with the provided 3AA embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally inconsistent because it ignores the supplied 3AA blastocyst grade and treats the embryo as if morphology were unavailable and transfer timing incompatible with blastocyst assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but the dismissal of Gardner grading due to Day 4 transfer and the morphology discussion are not well aligned with the provided case data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps on luteal support, beta-hCG timing, future Day 5/6 culture, PGT-A discussion, and weight optimization, though some advice is generic."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012561,
+  "judge_latency_ms": 3258.5324170067906,
+  "judge_prompt_tokens": 2562,
+  "judge_completion_tokens": 325
+}

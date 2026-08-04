@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst showing a large cavity and identifiable ICM, but it overstates confidence in features such as clear zona thinning and precise TE quality from this single image; calling it an 'expanded blastocyst' on a Day 4 image is also somewhat uncertain."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates female age, ovarian reserve, tubal factor, sperm motility, endometrial thickness, and embryo grade reasonably well, though some links (such as assuming high cohort quality from one embryo) are a bit overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall structure is logical, but there are notable issues: it treats Day 4 expanded development as both strongly favorable and potentially concerning, assumes uterine asynchrony without enough context, and bases probability partly on speculative euploid weighting."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally follows standard IVF concepts, but there are deviations: PGT-A is presented too strongly as 'highly recommended' in a low-yield patient, ICSI is assumed without evidence, and claims about Day 4 expanded blastocysts having higher aneuploidy risk are not standard guideline-based statements."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including luteal support review and possible protocol considerations, but some recommendations are generic or speculative rather than tightly tailored to the documented case."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.013926,
+  "judge_latency_ms": 5814.65804099571,
+  "judge_prompt_tokens": 2757,
+  "judge_completion_tokens": 377
+}

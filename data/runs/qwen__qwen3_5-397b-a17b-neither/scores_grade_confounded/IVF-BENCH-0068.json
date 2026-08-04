@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0068",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was available, but it fails to use the provided Gardner score 3BA to describe morphology and incorrectly states the Gardner score is not assessable despite sufficient lab grading data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, uterine factor, sperm quality, endometrial thickness, lifestyle, and oocyte maturity with prognosis in a clinically meaningful way, though some links are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible probability range tied to embryo stage and patient risks; minor issues include speculative interpretation of MII rate and some overconfident causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but suggesting PGT-A as 'crucial' at age 33 after one failure and implying standard transfer expectation of ≥3BB are not fully aligned with current guideline nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding if uterine evaluation is adequate, luteal support, smoking cessation, hysteroscopic workup, and trigger review; recommendations are useful though not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.012375,
+  "judge_latency_ms": 3966.275457998563,
+  "judge_prompt_tokens": 2470,
+  "judge_completion_tokens": 331
+}

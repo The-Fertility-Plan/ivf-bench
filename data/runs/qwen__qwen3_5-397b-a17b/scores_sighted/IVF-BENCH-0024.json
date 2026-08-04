@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally identifies a blastocyst with visible blastocoel and references ICM/TE appropriately, but overstates certainty from the image, does not address that the image appearance is not strongly consistent with a classic well-expanded/full blastocyst, and gives limited zona/detail analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, prior outcomes, smoking, paternal age, and sperm factors with embryo quality reasonably well, though some links (e.g., attributing miscarriage to sperm DNA fragmentation) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but it contains notable issues such as treating a Day 4 transfer as a Day 4 blastocyst/advanced blastulation and making unsupported quantitative deductions for smoking, paternal age, and transfer timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "SET recommendation and counseling on smoking are guideline-consistent, but routine PGT-A recommendation at age 32 and suggesting ERA after a failed transfer are not strongly guideline-supported; concern about Day 4 blastocyst asynchrony is also overstated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical steps for current transfer and future workup, including SET, luteal support review, smoking cessation, and sperm DNA fragmentation testing, though some recommendations are more aggressive than evidence warrants."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.013551,
+  "judge_latency_ms": 5542.219165989081,
+  "judge_prompt_tokens": 2682,
+  "judge_completion_tokens": 367
+}

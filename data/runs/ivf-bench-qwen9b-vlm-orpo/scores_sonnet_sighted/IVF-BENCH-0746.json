@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0746",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies blastocoel cavity, thinned zona pellucida, ICM density, and TE continuity. However, it notably flags a Gardner grading inconsistency (3 vs 4) which shows critical thinking, but the image itself is quite blurry and low-resolution making precise morphological assessment difficult. The response appropriately notes the image limitations implicitly by relying heavily on the provided Gardner score rather than purely image-based analysis. The description is reasonable but not highly detailed from image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response systematically connects maternal age (30) to euploidy rates, BMI to implantation and miscarriage risk, male factor diagnosis and partner age 40 to sperm DNA integrity concerns, prior ectopic to recurrence risk and early monitoring needs, AMH/FSH to ovarian reserve adequacy, endometrial thickness to receptivity, and lifestyle factors to outcomes. Interactions between factors are explicitly discussed rather than listed in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 45-60% follows logically from the positive factors (age 30, AA blastocyst, good endometrium) modulated downward by prior failures and ectopic history. The Gardner grading inconsistency is correctly identified. Minor issue: the response simultaneously describes this as a '3AA' and questions whether it should be '4', which could create slight confusion, but this actually demonstrates good clinical knowledge rather than incoherence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer at age 30, early ectopic surveillance with serial hCG and early ultrasound, consideration of PGT-A framed as optional rather than mandatory for age 30, hysteroscopy for recurrent implantation failure workup, sperm DNA fragmentation testing for male factor with repeated failures, and luteal phase support. The Gardner grading critique aligns with standard grading criteria. Minor gap: no explicit mention of endometrial receptivity array (ERA) which some guidelines now discuss for repeated implantation failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific next steps clearly delineated for both current transfer and future planning. Includes concrete recommendations: single ET, luteal support optimization, serial beta-hCG and early TVU for ectopic surveillance, hysteroscopy/saline sonogram if failure recurs, hydrosalpinx assessment given ectopic history, transfer technique review, sperm DNA fragmentation testing, PGT-A discussion framework, weight management targets (5-10% reduction), and stimulation protocol review criteria. Each recommendation is contextualized to this specific patient rather than generic."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022725,
+  "judge_latency_ms": 15556.84058299812,
+  "judge_prompt_tokens": 4090,
+  "judge_completion_tokens": 697
+}

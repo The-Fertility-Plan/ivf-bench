@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0048",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately states that no image was provided and bases morphology on the reported 3AA grade rather than inventing image-specific findings. However, it inaccurately equates stage 3 with an expanded blastocyst and thinning zona, which corresponds more to stage 4, so morphology is only partially accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, prior IVF outcomes, endometrial thickness, sperm quality, and lifestyle, and relates them to prognosis. It misses some nuance around ovarian response and overstates the significance of missing AMH."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to embryo grade, age, and uterine factors while acknowledging prior miscarriage. Minor issues include overreliance on morphology as a proxy for euploidy and the stage-3/stage-4 grading confusion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and luteal support are guideline-concordant, but suggesting ERA, broad thrombophilia screening, immunologic factors, and routine karyotyping after only one miscarriage is more weakly supported and not standard first-line guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical steps for the current transfer and contingency planning for future cycles. Some recommendations are somewhat overinclusive or insufficiently prioritized, but overall it is useful and specific."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015639,
+  "judge_latency_ms": 5008.785124999122,
+  "judge_prompt_tokens": 3288,
+  "judge_completion_tokens": 385
+}

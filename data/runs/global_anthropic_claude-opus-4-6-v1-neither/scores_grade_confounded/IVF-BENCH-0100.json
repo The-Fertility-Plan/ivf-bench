@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was available, despite the provided 2AB grade, and fails to analyze the known morphology. It also speculates about possible grades (e.g., 4AA–3AB), which is unsupported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, endometrium, diagnosis, BMI, lifestyle, and sperm data, and connects them to prognosis, though it misses integrating the actual embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there is a major inconsistency in ignoring the provided Gardner score and then basing prognosis on assumed better-quality embryos, which weakens the probability reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly guideline-consistent (e.g., SET, avoiding ERA first-line, reserving PGT-A), but suggestions like embryo glue and speculative assumptions about embryo quality are less firmly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including SET, luteal support, and contingency planning, though some advice is generic and not tailored to the actual 2AB embryo grade."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.01269,
+  "judge_latency_ms": 3816.2957910026307,
+  "judge_prompt_tokens": 2545,
+  "judge_completion_tokens": 337
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it had no image and relied on the provided Gardner score, avoiding unsupported visual claims. However, it introduced some grading confusion by calling 3 a full blastocyst while also discussing 'expanded blastocyst' text, and labeled 3AB as 'top-tier,' which somewhat overstates morphology. No major image-fabricated features were described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian reserve, tubal factor diagnosis, prior cycle history, sperm parameters, and endometrial thickness into prognosis in a clinically meaningful way. Some points are slightly overstated or speculative, but overall the interaction between patient factors and embryo quality is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is generally structured and logical, but there are notable inconsistencies: it highlights the mismatch between textual expansion description and numeric Gardner grade without resolving it cleanly, overstates Day 5 as 'gold standard,' and gives relatively optimistic implantation/live birth estimates for an untested 3AB embryo. Reasoning is coherent overall but not fully tight."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as elective single embryo transfer at age 33 are guideline-concordant, but some advice is less evidence-based or overstated, including ERA after limited failure history, routine exercise restriction, and relatively strong endorsement of PGT-A after a single failed cycle. Overall mostly aligned with some deviations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and contingency planning, including eSET, luteal support review, and possible future investigations. Some recommendations are more speculative than standard, but the plan is clear and usable."
+    }
+  ],
+  "extracted_probability": 0.65,
+  "judge_cost_usd": 0.015351,
+  "judge_latency_ms": 5937.787125003524,
+  "judge_prompt_tokens": 2967,
+  "judge_completion_tokens": 430
+}

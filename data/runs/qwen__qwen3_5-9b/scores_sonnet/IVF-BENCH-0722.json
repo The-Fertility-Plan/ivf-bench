@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0722",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides accurate and detailed morphological descriptions of the blastocyst, correctly identifying the expansion stage (Grade 3), ICM characteristics (dense, tightly packed cluster), TE appearance (numerous, cohesive cells), and zona pellucida thinning. The description aligns well with the Gardner 3AA score. Minor limitation is that some descriptions feel somewhat generic and templated rather than uniquely image-derived, but no fabricated or clearly erroneous features are introduced."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, including maternal age, AMH, FSH, oocyte yield, endometrial thickness, sperm parameters, and BMI. It correctly identifies age as the dominant predictor and connects it to aneuploidy risk. The tubal factor diagnosis is acknowledged implicitly (first cycle, no uterine scarring mentioned) but not explicitly discussed in terms of its implications for implantation vs. ectopic risk, which is a notable omission given it is the primary diagnosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured, with the probability estimate (60-75%) following reasonably from the presented evidence. The connection between young age, low aneuploidy rates, and high implantation potential is coherent. However, there is a minor inconsistency where the response notes a 10-15% aneuploidy rate but then estimates 60-75% implantation probability without fully reconciling these figures or acknowledging other implantation failure mechanisms beyond aneuploidy."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines, including advocacy for single embryo transfer (SET), standard luteal phase progesterone support, vitrification of surplus embryos, and appropriate beta-hCG follow-up timing. The PGT-A discussion is nuanced and appropriately cautious for a 28-year-old first-cycle patient. The alcohol counseling aligns with current guidance. One gap is the lack of explicit discussion of ectopic pregnancy risk monitoring given the tubal factor diagnosis, which ASRM guidelines specifically highlight."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical, covering SET rationale, luteal support, lifestyle modification, cryopreservation strategy, PGT-A considerations, and follow-up scheduling. The response provides clear next steps. It loses a point for not addressing the tubal factor-specific monitoring (e.g., early ultrasound to rule out ectopic pregnancy, which is particularly important here), and the lifestyle recommendations could be more specific regarding alcohol cessation timing relative to transfer."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.017577,
+  "judge_latency_ms": 12762.791959001333,
+  "judge_prompt_tokens": 2554,
+  "judge_completion_tokens": 661
+}

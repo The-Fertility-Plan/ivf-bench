@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0668",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the Gardner 3AC blastocyst with appropriate characterization of expansion stage (Grade 3 with thinned zona), ICM-A (compact, well-defined cluster), and TE-C (sparse, few large cells). The 'top-heavy' blastocyst description is clinically apt. Minor limitation: cannot fully verify all image-specific details without direct image comparison, but the description aligns well with the provided Gardner score and typical 3AC morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of multiple clinical factors. The response connects smoking to TE dysfunction specifically, links low blastulation rate to oocyte quality concerns, interprets the biochemical pregnancy history meaningfully in context of TE-C grade, considers sperm DNA fragmentation as a contributor to poor TE formation, and appropriately contextualizes AMH/age with the limited embryo pool. The interaction between smoking and trophectoderm invasion is a particularly insightful connection."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate is derived through a stepwise penalty approach that is transparent and logical. The reasoning chain from morphology to patient factors to probability is well-structured. The 'top-heavy' embryo concept is consistently applied throughout. Minor issue: the smoking penalty of 40-50% applied multiplicatively may be somewhat aggressive and the final probability range (15-20% stated, but calculation suggests 10-12%) shows slight internal inconsistency between the narrative estimate and the calculated figure."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: ERA for RIF workup, hysteroscopy, PGT-A counseling, sperm DNA fragmentation testing, and donor oocyte discussion at age 39 with repeated failure are all guideline-supported. Assisted hatching recommendation is appropriately caveated with 'evidence is mixed.' Low-dose aspirin recommendation is somewhat controversial without thrombophilia indication. DHEA/CoQ10 supplementation is mentioned as adjunct which aligns with some but not all guidelines. Overall well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, prioritized recommendations. Smoking cessation is flagged as urgent with a concrete suggestion to consider postponing transfer. Specific medications are named (aspirin 75mg, LMWH, progesterone routes). Future workup is comprehensive and sequenced logically (ERA, hysteroscopy, thrombophilia, DFI). The embryo banking strategy as an alternative is a nuanced addition. Donor egg counseling is appropriately introduced with comparative success rates. The response provides clear decision points for both immediate and future management."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.019218,
+  "judge_latency_ms": 15166.807957997662,
+  "judge_prompt_tokens": 3041,
+  "judge_completion_tokens": 673
+}

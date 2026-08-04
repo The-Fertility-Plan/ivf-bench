@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0735",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a reasonable morphological description acknowledging ICM compactness, TE continuity, and expansion stage, but notes significant uncertainty due to the static image. The description is somewhat generic and hedged, not fully capturing specific visible features like the degree of blastocoel expansion, the clearly visible ICM mass on the left side, or the somewhat irregular/collapsed appearance of the zona. The response correctly identifies limitations of single-plane imaging but misses some specific observable features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors including female age, AMH, FSH, BMI, endometrial thickness, lifestyle factors, male factor diagnosis, sperm parameters, partner age, and prior cycle outcome. The response uses a structured table and explicitly connects each factor to its prognostic relevance. It also addresses nuanced interactions such as sperm DNA fragmentation risk given partner age and male factor diagnosis, and the interplay between morphology and chromosomal competence."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical, with the probability estimate (40-55%) following coherently from the listed favorable and unfavorable factors. The response correctly identifies that morphology cannot predict ploidy as the key uncertainty. Minor issue: the Gardner score notation '3AA' is slightly inconsistently discussed - stage 3 typically means fully expanded blastocyst, but the response conflates this with stage 4/5 terminology without fully clarifying the grading system used."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE and ASRM guidelines: appropriate caution about PGT-A indication at age 34 with one failed cycle, evidence-based dismissal of bed rest, appropriate luteal phase support emphasis, and reasonable threshold for investigating recurrent implantation failure. The recommendation against routine PGT-A after one failure aligns with current guidelines. Minor gap: does not explicitly reference Gardner grading criteria validation or ESHRE consensus on blastocyst assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific, tiered recommendations for both the current transfer and future planning. Includes concrete guidance on luteal support adherence, activity levels, alcohol cessation, PGT-A decision framework with clear indications, sperm DNA fragmentation testing triggers, uterine cavity assessment considerations, and lab performance review questions. Recommendations are appropriately nuanced and case-specific rather than generic, with clear decision points for escalation."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.02061,
+  "judge_latency_ms": 14216.691459005233,
+  "judge_prompt_tokens": 3780,
+  "judge_completion_tokens": 618
+}

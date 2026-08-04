@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0178",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "Accurately identifies a poorly developed low-grade blastocyst with absent/poorly defined ICM and weak TE, consistent with 1DD. Minor issue: it calls the embryo partially collapsed/asymmetric and 'early/indeterminate,' which is somewhat interpretive from a single image and the provided grade already defines expansion."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, PCOS, BMI, endometrium, semen parameters, and first-cycle status well, and appropriately emphasizes embryo morphology as the dominant prognostic factor. Could have more explicitly addressed the unusual day-4 transfer context and developmental timing."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is logical and internally consistent: poor embryo morphology drives low prognosis despite favorable maternal age and lining. Slight weakness is the very low 1-3% estimate without much calibration to day-4 poor-quality transfer outcomes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with Gardner grading concepts and standard counseling, including single transfer if this is the only embryo and no bed rest. However, some recommendations are speculative or weakly guideline-based (e.g., trigger adjustment, avoiding prolonged freezing delays), and the discussion of day-4 'blastocyst' terminology is not fully clarified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future cycle review, including luteal support, activity guidance, cohort review, possible extended culture, selective PGT-A discussion, and sperm DNA fragmentation if recurrent poor outcomes. Some suggestions are broader than necessary but still clinically useful."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.014721,
+  "judge_latency_ms": 10921.54241600656,
+  "judge_prompt_tokens": 2967,
+  "judge_completion_tokens": 388
+}

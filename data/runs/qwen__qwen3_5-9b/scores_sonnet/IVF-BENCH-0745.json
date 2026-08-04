@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0745",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the 3AB Gardner score components: expanded blastocyst with thinning zona, tightly packed ICM in upper-left quadrant, and loosely organized TE. The description of the zona as 'thinned at the poles' and mention of potential hatching adds detail, though the Gardner grade 3 specifically denotes expanded blastocyst with thinning zona rather than hatching (which would be grade 4-6). Minor overreach in describing hatching behavior, but overall morphological characterization is accurate and well-aligned with the provided score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: maternal age 37 with aneuploidy risk, low oocyte yield (4 MII) as a critical limiting factor, paternal age 40 with SDF concern, excellent endometrial thickness of 11mm, and first-cycle status. The tubal factor diagnosis is acknowledged implicitly but not explicitly discussed in terms of its impact on transfer strategy. AMH being N/A is not addressed, which is a minor gap. The interaction between low yield and the 'one-shot' nature of the cycle is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability estimate of 20-35% is logically derived through a weighted average framework considering euploid vs aneuploid probabilities, which is methodologically sound. The reasoning chain from embryo quality to age-adjusted aneuploidy risk to final probability is clear and consistent. Minor issue: the response states FSH of 7.5 IU/L is 'borderline/elevated' when it is actually within normal range (<10 IU/L per most guidelines), slightly undermining the DOR argument. Otherwise, conclusions follow logically from observations."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: appropriate caution about PGT-A when only one embryo is available, recognition of age-related aneuploidy risk, endorsement of Mediterranean diet, and SDF testing recommendation for advanced paternal age. The FSH interpretation as 'borderline/elevated' at 7.5 IU/L is a minor deviation from standard reference ranges. PGT-A counseling for single embryo scenarios aligns with current guidance. The recommendation to proceed with transfer is appropriate and guideline-consistent."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with transfer, conditional PGT-A guidance based on embryo availability, SDF testing for partner, stress management referral, future protocol considerations including potential donor egg counseling. The nuanced PGT-A recommendation (not recommended if only embryo, recommended if others exist) is clinically useful. Could be strengthened by addressing luteal phase support protocols, specific stimulation dose adjustments for future cycles, or ERA/receptivity testing given the tubal factor diagnosis, but overall actionability is strong."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.019428,
+  "judge_latency_ms": 21791.497583995806,
+  "judge_prompt_tokens": 2841,
+  "judge_completion_tokens": 727
+}

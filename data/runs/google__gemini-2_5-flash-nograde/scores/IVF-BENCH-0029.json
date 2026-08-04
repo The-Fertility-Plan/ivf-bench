@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0029",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls the image as a blastocyst with visible ICM, cohesive TE, thinning zona, and possible expansion despite the transfer being Day 4 and the image likely supporting at most a compacting/cavitating embryo or early blastocyst. Several described features are not reliably discernible from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: young age, tubal factor, first cycle, sperm parameters, endometrium, and lifestyle, and connects them appropriately to prognosis. Minor overinterpretation of ovarian reserve and embryo developmental timing prevents a top score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it treats a Day 4 embryo as an expanding/expanded blastocyst, infers favorable morphology beyond what is visible, and then derives a relatively high implantation estimate from those assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as SET in a young good-prognosis patient and luteal support are guideline-consistent, but the morphology discussion is not tightly aligned with Gardner staging for a Day 4 embryo, and the implantation estimate is somewhat optimistic for an untested embryo assessed from limited imaging."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including SET, luteal support, pregnancy testing, cryopreservation, and future-cycle review. Recommendations are useful, though somewhat generic and based partly on uncertain morphology."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.014922,
+  "judge_latency_ms": 5149.192707998736,
+  "judge_prompt_tokens": 3054,
+  "judge_completion_tokens": 384
+}

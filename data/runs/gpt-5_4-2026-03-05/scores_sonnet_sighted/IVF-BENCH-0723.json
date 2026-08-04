@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "gpt-5.4-2026-03-05",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately acknowledges image quality limitations and defers to the embryologist's grading. It correctly identifies blastocyst stage features and notes the ICM as compact. However, it catches a real inconsistency between Gardner score 3 (full blastocyst) and the written description (expanded with thinning zona, which is grade 4), showing analytical attention. The description is somewhat generic due to image blur, and the TE/ICM descriptions lack specificity beyond what the lab data already provided. No fabricated features, but limited independent morphological contribution."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 34 with euploidy probability context, PCOS implications for endometrial receptivity and fresh vs frozen transfer considerations, borderline endometrial thickness of 7mm, prior biochemical pregnancy interpretation, sperm parameters, FSH, lifestyle factors including alcohol and sedentary behavior, and BMI. It explicitly discusses how these factors interact with embryo quality and each other, including PCOS-specific fresh cycle receptivity concerns and metabolic optimization needs."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and internally consistent. The probability estimate of 40-55% implantation follows logically from the identified positive and negative factors. The distinction between implantation, clinical pregnancy, and live birth rates is appropriately layered. The Gardner grading inconsistency catch (3 vs 4) demonstrates careful reasoning. Minor issue: the positive beta-hCG estimate of 50-65% being higher than the implantation estimate of 40-55% is slightly confusing since these terms are often used interchangeably, but the response attempts to differentiate them meaningfully."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: no bed rest recommendation, luteal support emphasis, PGT-A discussion appropriately framed as non-mandatory at age 34 after one biochemical, hysteroscopy suggested only after repeated failures, OHSS monitoring for PCOS patients, and FET preference in PCOS. The euploidy rate estimate of 50-65% at age 34 is consistent with published data. PRP/G-CSF correctly labeled as experimental. The alcohol cessation recommendation aligns with evidence. Minor gap: no mention of progesterone timing or specific luteal support protocols per current guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The response provides highly specific, tiered recommendations covering immediate transfer management (luteal support, alcohol cessation, activity), OHSS monitoring specific to PCOS, and a detailed contingency plan if transfer fails including uterine cavity assessment, metabolic workup, endometrial optimization strategies, FET consideration, and PGT-A discussion with clear criteria for when it becomes more appropriate. Lifestyle modifications are specific. The offer to provide fresh vs frozen comparison adds further practical value. Recommendations are appropriately nuanced for the specific clinical scenario."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.023322,
+  "judge_latency_ms": 17648.27120800328,
+  "judge_prompt_tokens": 4109,
+  "judge_completion_tokens": 733
+}

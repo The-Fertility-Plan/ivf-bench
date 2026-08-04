@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0034",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response incorrectly dismisses the provided Gardner score despite explicit lab data of 1DD, and therefore fails to analyze the stated poor-quality blastocyst morphology (degenerative/absent ICM and TE). It avoids fabrication, but does not accurately assess the embryo described."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, PCOS, ovarian response, sperm parameters, endometrial thickness, and lifestyle factors reasonably well with prognosis, though it underuses the key implication of the very poor 1DD embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there is a notable inconsistency in rejecting blastocyst grading while the case explicitly provides a Gardner score. The implantation estimate is also somewhat optimistic given a 1DD embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice (antagonist in PCOS, consideration of ICSI/PGT-A, lifestyle optimization), but the handling of Gardner grading and the strength of recommending PGT-A are somewhat overstated or imprecise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for luteal support, beta-hCG timing, male factor workup, and future cycle planning. Recommendations are useful, though not sufficiently tailored to the very poor embryo morphology."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013128,
+  "judge_latency_ms": 4070.2373329986585,
+  "judge_prompt_tokens": 2586,
+  "judge_completion_tokens": 358
+}

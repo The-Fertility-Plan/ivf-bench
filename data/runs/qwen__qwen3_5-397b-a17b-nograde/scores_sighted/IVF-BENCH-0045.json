@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls morphology: the image does not clearly show a well-defined ICM or uniformly assessable TE, and calling it a definite fully expanded 4BB is too confident. Zona thinning and hatching readiness are also not clearly demonstrable from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, tubal factor, ovarian reserve, sperm parameters, and endometrium, and relates them to prognosis. Minor overinterpretation of endometrial thickness as 'excellent' and embryo euploidy estimates limits a perfect score."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis range tied to age and embryo quality. The main weakness is that the probability estimate depends on an overly optimistic morphology assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: proceed if appropriate, consider hydrosalpinx exclusion, provide luteal support, and review stimulation if needed. Some statements are a bit stronger than guideline-based evidence, especially around morphology certainty and PGT-A framing in a young patient."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including hydrosalpinx assessment, luteal support, protocol review, and weight counseling. It is useful clinically, though some recommendations remain somewhat generic rather than highly individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.01362,
+  "judge_latency_ms": 5145.261208002921,
+  "judge_prompt_tokens": 2645,
+  "judge_completion_tokens": 379
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0397",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and visibility: the blastocoel does not appear clearly fully expanded, the ICM is not distinctly well-defined/tightly packed on this image, and TE cannot be confidently called uniformly cohesive circumferentially. It relies too heavily on the provided 3AA label rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior failed cycles, endometrial thickness, lifestyle, diagnosis, and sperm parameters with embryo quality in a clinically meaningful way, though some assumptions are made about prior embryo quality and implantation history."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and structured, with the implantation estimate adjusted appropriately for prior failed cycles despite good age and embryo grade. Minor issues include overcalling recurrent implantation failure and inferring maternal-environment problems without enough evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Single embryo transfer and general prognosis framing are guideline-consistent, but recommendations such as ERA, NK-cell/immunologic testing, thrombophilia screening, and assisted hatching for this scenario are not strongly supported by current ASRM/ESHRE guidance for routine use."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for transfer and contingency planning, including eSET and possible protocol adjustments. However, some suggested add-on tests/interventions are insufficiently evidence-based, which limits optimal actionability."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013047,
+  "judge_latency_ms": 5999.75537499995,
+  "judge_prompt_tokens": 2579,
+  "judge_completion_tokens": 354
+}

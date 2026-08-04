@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a detailed morphological analysis with a structured comparison table, correctly identifying expansion stage concordance with Grade 3, and raising legitimate concerns about ICM granularity, TE cohesion irregularity, and vacuolation. The critical discrepancy flag and downward re-grading suggestion (3AA to possible 3BB) shows careful image interpretation. Minor limitation is that some described features (vacuoles, dark inclusions) may be partially inferred rather than definitively visible, but the overall analysis is thorough and clinically grounded."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all available clinical factors. The response systematically connects patient age, FSH, BMI, smoking history, dietary restrictions, stress, sperm parameters, endometrial thickness, and uterine factor diagnosis to embryo quality and implantation prognosis. The risk-benefit matrix clearly shows how each factor interacts with embryo assessment, and the uterine factor is correctly identified as the dominant variable affecting outcome regardless of embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability modeling logically builds from baseline rates through sequential adjustments for morphology, uterine factor status (corrected vs. uncorrected), and lifestyle factors. The final estimate range (30-45% corrected, 15-25% uncorrected) follows coherently from the evidence presented. Minor issue: the -15% morphology penalty for vacuolation is presented with some confidence but the evidence base for this specific adjustment is not fully cited, and the baseline 55-65% for true 3AA may be slightly optimistic by some standards."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response demonstrates strong alignment with ESHRE/ALPHA morphology guidelines, correctly applying Gardner grading criteria and referencing published blastocyst implantation data. Recommendations for ERA, hysteroscopy confirmation, progesterone support, and PGT-A consideration align with current evidence-based practice. The aspirin recommendation is noted as appropriate for uterine perfusion though evidence is mixed. CoQ10 dosing (400-600mg) aligns with current supplementation literature. Minor deduction for not explicitly addressing whether PGT-A is indicated in a first cycle for a 31-year-old without recurrent failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable response with specific pre-transfer checklist, luteal phase protocol details, quantified nutritional recommendations with dosages, structured future cycle planning with branching logic for success vs. failure scenarios, and a clear priority hierarchy. The conditional recommendations based on uterine factor correction status are particularly practical. The checklist format, probability table, and intervention table with rationales make this immediately usable in a clinical setting."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.020973,
+  "judge_latency_ms": 14840.468124995823,
+  "judge_prompt_tokens": 3571,
+  "judge_completion_tokens": 684
+}

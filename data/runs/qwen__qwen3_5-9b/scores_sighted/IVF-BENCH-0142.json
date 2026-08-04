@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0142",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with the provided 3AB label, correctly identifies strong ICM and looser TE, but overstates visible expansion as fully expanded/thinning zona and describes features not clearly discernible from this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, BMI, smoking, male factor, sperm parameters, and endometrium with embryo quality reasonably well, though some links (e.g., presumed DNA fragmentation) are speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and internally consistent, with probability estimate tied to embryo grade and patient factors; minor issues include overstated aneuploidy certainty and some speculative causal claims."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned with standard IVF practice on blastocyst assessment and counseling, but includes less evidence-based points such as routine concern for luteal deficiency due to obesity and optional PGT-A after a single failed transfer in a 23-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps including proceeding with transfer, smoking cessation, weight optimization, and consideration of sperm testing, though recommendations could be more specific regarding transfer strategy and follow-up thresholds."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.012582,
+  "judge_latency_ms": 4473.225666995859,
+  "judge_prompt_tokens": 2544,
+  "judge_completion_tokens": 330
+}

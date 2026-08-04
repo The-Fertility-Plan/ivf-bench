@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0024",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately noted it could not directly assess the image, but its morphology discussion relied on the reported 2AA and incorrectly treated it as a top-tier/full blastocyst with fast Day-4 kinetics. A 2AA is not a full blastocyst by Gardner, and the image appears more consistent with an early blastocyst with indistinct ICM/TE rather than a clearly excellent AA embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: female age, ovarian reserve, prior outcomes, male factor context, paternal age, smoking, and endometrial thickness, and relates them to prognosis. It slightly overstates some implications (e.g., RIF/RPL concerns after only two prior cycles)."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable inconsistencies: it highlights the mismatch between '2' and 'full blastocyst' yet still concludes the embryo is top-tier and unusually advanced; it also gives somewhat assertive quantitative deductions without strong support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based (smoking cessation, consider sperm DNA fragmentation testing, proceed with transfer), but there are deviations: recommending PGT-A as highly recommended in a 32-year-old primarily due to paternal age/miscarriage is stronger than guideline-based consensus, and suggesting aspirin/additional luteal measures without clear indication is not tightly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and future planning, including smoking cessation, luteal support review, nutritional checks, DFI testing, and possible RPL workup. Some recommendations could be more nuanced regarding indications for PGT-A and adjunctive therapies."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.015828,
+  "judge_latency_ms": 5320.559292013058,
+  "judge_prompt_tokens": 3026,
+  "judge_completion_tokens": 450
+}

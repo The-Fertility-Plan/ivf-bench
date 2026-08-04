@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0084",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates confidence in blastocyst quality and likely misclassifies morphology. The image shows a poorly expanded/possibly early or degenerating blastocyst with indistinct ICM and sparse, uneven TE rather than a clearly good-quality 3BB/4BB embryo. Zona and overall architecture are not well addressed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, prior failed cycle, sperm parameters, and endometrium, and relates them to prognosis. Some links are somewhat generic and not sufficiently tempered by the uncertain embryo morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability estimate and optimistic conclusions rely on a likely inflated morphology assessment. There are minor overreaches, such as treating this as a clearly good-quality blastocyst despite limited image support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but recommending ERA after failed transfer is not strongly guideline-supported, and 'strongly consider PGT-A' after one failed cycle at age 33 is more aggressive than standard evidence-based guidance. Morphologic grading application is also questionable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and organized for current transfer and contingency planning, including luteal support and possible future testing. However, some suggested next steps are not ideally prioritized for this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013068,
+  "judge_latency_ms": 4984.392083002604,
+  "judge_prompt_tokens": 2451,
+  "judge_completion_tokens": 381
+}

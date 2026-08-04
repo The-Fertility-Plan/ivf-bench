@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0742",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst with zona pellucida herniation, describes the ICM as tightly packed on the right side, and notes the cohesive TE layer. The description aligns well with the visible image features. Minor deduction for not commenting on the slightly irregular/asymmetric herniation pattern visible in the image and the somewhat granular cytoplasm of the ICM cells, which could warrant more nuanced commentary."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: age (34), BMI, AMH, endometrial thickness, endometriosis diagnosis, smoking status, and sperm parameters. It correctly identifies smoking and endometriosis as the primary modifiers of the otherwise favorable prognosis, and explains the mechanistic interactions (inflammatory environment, reduced uterine blood flow, oxidative stress). Partner age and sperm DNA fragmentation are also considered."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate (40-60%) follows reasonably from the stated deductions for smoking (-15-20%) and endometriosis (-10-15%) from a high base rate. However, the base rate of >70% for a 4AA is slightly overstated compared to published literature (~50-65% for euploid embryos), and the arithmetic of the deductions doesn't perfectly reconcile with the final range, creating a minor inconsistency. Overall logic is sound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE and ASRM guidelines: Day 5 transfer is appropriate, luteal phase support for endometriosis is evidence-based, smoking cessation advice is standard, and PGT-A consideration for failed cycles is guideline-concordant. The suggestion of GnRH agonist down-regulation pre-stimulation for endometriosis aligns with ESHRE endometriosis guidelines. Minor gap: no mention of elective single embryo transfer (eSET) policy considerations or ERA testing for endometriosis-related implantation failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: immediate smoking cessation with a timeframe (2-4 weeks), robust progesterone support specification, PGT-A for failed cycles, GnRH agonist consideration, and sperm DNA fragmentation testing. The response provides clear next steps for both this transfer and future planning. Slight deduction for not specifying progesterone dosing/route more precisely or mentioning ERA testing as a consideration given endometriosis, which would add clinical utility."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.018678,
+  "judge_latency_ms": 14376.663750008447,
+  "judge_prompt_tokens": 2916,
+  "judge_completion_tokens": 662
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Provides a plausible blastocyst assessment and Gardner estimate, but includes uncertain specifics (e.g., debris, irregular TE, precise 3BC/3CB call) that may overinterpret a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, endometrium, BMI, sperm data, diagnosis, and cycle history well, and relates these factors to prognosis and embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is generally logical and internally consistent, with the implantation estimate tied to morphology and age; only minor overreach around aneuploidy risk from morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly consistent with standard IVF practice and Gardner grading concepts, but the strong recommendation for PGT-A in a 33-year-old first cycle with male factor is more aggressive than guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Gives clear next-step recommendations for transfer counseling, luteal support, embryo prioritization, review of cohort development, and future-cycle considerations."
+    }
+  ],
+  "extracted_probability": 0.325,
+  "judge_cost_usd": 0.013758,
+  "judge_latency_ms": 3808.4657910003443,
+  "judge_prompt_tokens": 3181,
+  "judge_completion_tokens": 281
+}

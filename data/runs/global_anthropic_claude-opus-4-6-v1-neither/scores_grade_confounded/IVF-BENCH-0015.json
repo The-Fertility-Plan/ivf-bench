@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0015",
+  "model": "global.anthropic.claude-opus-4-6-v1-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states no Gardner score was available and analyzes a hypothetical Day 4 morula instead of the provided 1DD blastocyst, missing the key morphology of poor ICM and poor TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, AMH, BMI, PCOS label, sperm factors, endometrium, and cycle history reasonably well, though some conclusions are built on the mistaken assumption of an ungraded Day 4 embryo."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but has a major foundational inconsistency: it ignores the provided 1DD grade and bases prognosis on an assumed unscored Day 4 morula, weakening the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly consistent with IVF practice, but the failure to use the Gardner grade and some speculative suggestions (e.g., routine DHEA/CoQ10, protocol criticism without full context) reduce alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical recommendations for transfer support and future cycle planning, though some advice is less tailored because it mischaracterizes the embryo stage/grade."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.013038,
+  "judge_latency_ms": 3933.4298750036396,
+  "judge_prompt_tokens": 2701,
+  "judge_completion_tokens": 329
+}

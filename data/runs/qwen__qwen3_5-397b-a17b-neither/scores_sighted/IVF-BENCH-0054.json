@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0054",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model appropriately stated the image was unavailable and avoided describing specific visible morphology. The only morphology-related inference was that a transferred Day 5 embryo likely met minimum transfer criteria, which is reasonable though somewhat speculative."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, prior miscarriage/no pregnancy, partner age, semen parameters, BMI, lining, and unexplained diagnosis into prognosis well. It misses some nuance around the limits of inferring embryo quality from oocyte yield alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with a plausible probability estimate tied to age-related euploidy and transfer context. Minor issues include speculative assumptions such as likely 3BB quality and hidden sperm DNA fragmentation without direct evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but several recommendations are not strongly guideline-supported or are controversial/routine-use limited, including aspirin for unexplained infertility, thrombophilia/MTHFR and immune testing, ERA, and TESE based only on paternal age/possible DFI concerns."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for luteal support review, pregnancy monitoring, consideration of PGT-A, and possible male-factor workup. Some suggestions are practical, though a few are overly broad or controversial for routine use."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.013782,
+  "judge_latency_ms": 5210.153583000647,
+  "judge_prompt_tokens": 2874,
+  "judge_completion_tokens": 344
+}

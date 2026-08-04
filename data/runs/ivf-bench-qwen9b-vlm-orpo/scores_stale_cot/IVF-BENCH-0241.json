@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0241",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally captures a good-quality Day-5 blastocyst with strong ICM and weaker TE, but introduces uncertainty and some speculative features (e.g., irregular borders/degeneration) and questions the reported expansion stage/grade without firm image-based support."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, BMI, AMH, ovarian response, male factor, endometrial thickness, and first-cycle status well, though some interactions are discussed somewhat generically and without full nuance on fresh vs frozen context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logic is understandable, but there are internal inconsistencies: it calls the embryo good quality yet disputes the 4AB label, alternates between hatching and not fully hatching, and includes some speculative comments that weaken the reasoning chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: single embryo transfer in a 29-year-old, standard luteal support, caution about add-ons, and selective use of PGT-A. Minor deviations include overemphasis on embryo banking and some unsupported commentary about progesterone/fresh transfer context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management, beta-hCG timing, review of cycle metrics, male-factor workup, and future planning. Useful clinically, though some suggestions remain broad rather than tightly tailored."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.017346,
+  "judge_latency_ms": 6718.252666993067,
+  "judge_prompt_tokens": 3952,
+  "judge_completion_tokens": 366
+}

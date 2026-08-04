@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0740",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately describes the embryo as a poor-quality early blastocyst consistent with the 0DD Gardner score, noting lack of distinct ICM, absent clear TE layer, compacted mass without significant expansion, and disorganized/vacuolated appearance. The description aligns well with the provided grading data. Minor deduction for not commenting on zona pellucida status or providing more granular detail about specific cellular features visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age (31) as favorable, endometriosis as a risk factor for oocyte quality, BMI 31.4 as a negative modifier, excellent sperm parameters ruling out male factor, and good endometrial thickness as favorable. The low MII maturation rate (56%) is correctly flagged as suboptimal and linked to embryo quality. AMH 8.8 is noted as indicating good reserve. Minor gap: does not deeply explore how endometriosis specifically interacts with the long agonist protocol or how AMH 8.8 with only 9 MII from 16 COCs might suggest a stimulation optimization issue."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and consistent throughout. The conclusion of <5% implantation probability follows directly from the 0DD morphological assessment, and the recommendation not to transfer is coherent with this assessment. The model correctly identifies embryo quality as the primary limiting factor despite favorable patient characteristics. Minor issue: the model recommends 'do not transfer' yet the case states transfer day is Day 5, implying transfer may have already occurred or is planned, creating a slight disconnect in the clinical narrative framing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines. The Gardner grading interpretation is accurate. The suggestion to not transfer a 0DD embryo aligns with standard practice. BMI management, endometriosis optimization, and protocol review are evidence-based recommendations. PGT-A suggestion is appropriately caveated for age 31. Minor deduction: the maturation rate calculation (56%) is presented as definitively suboptimal without acknowledging that COC-to-MII ratios can vary by retrieval technique, and the dual trigger suggestion conflates antagonist and agonist protocol considerations without full protocol-specific nuance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical: do not transfer, review stimulation protocol, address BMI, manage endometriosis pre-cycle, consider PGT-A, and counsel on expectations. Future cycle planning covers multiple actionable domains. The response could be more specific about what protocol changes to consider (e.g., specific gonadotropin dose adjustments, IVM consideration for immature oocytes) and does not address whether to proceed with freeze-all vs. fresh transfer strategy in future cycles, but overall provides clear clinical guidance."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.018909,
+  "judge_latency_ms": 15343.125040999439,
+  "judge_prompt_tokens": 2698,
+  "judge_completion_tokens": 721
+}

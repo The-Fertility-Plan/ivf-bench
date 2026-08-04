@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0656",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly notes a major mismatch between the image and the stated Gardner 1DD label and recognizes severe poor-quality morphology, but repeatedly mischaracterizes the image as a single cell/zygote or degenerating oocyte rather than a very poor compacting morula/early blastocyst-like embryo."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 2,
+      "justification": "It mentions age, AMH, BMI, male factor, sperm parameters, and oocyte yield, but does not meaningfully integrate these into prognosis or embryo-quality interpretation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 1,
+      "justification": "The response is highly repetitive, internally inconsistent, and never resolves its reasoning into a coherent assessment; it loops on the same contradiction without producing supported conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "It correctly recognizes that Gardner grading applies to blastocysts and that Day 4 transfer is atypical for a Gardner-scored blastocyst, but it does not provide a guideline-based clinical interpretation or recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "It offers essentially no practical recommendations for transfer management, counseling, or future cycle planning."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.031068,
+  "judge_latency_ms": 4376.413124991814,
+  "judge_prompt_tokens": 8821,
+  "judge_completion_tokens": 307
+}

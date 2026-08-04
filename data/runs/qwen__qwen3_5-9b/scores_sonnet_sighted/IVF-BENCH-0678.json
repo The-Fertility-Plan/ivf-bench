@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0678",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately identifies key features like the zona pellucida, ICM, and TE consistent with the Gardner 3AA score. However, the description places the ICM 'on the left side' which is a somewhat imprecise observation, and the description of the blastocoel cavity (which is clearly visible in the image as a large fluid-filled space) is notably absent. The image shows a well-expanded blastocyst with a visible blastocoel, trophectoderm cells around the periphery, and a dense ICM mass, but the model's description lacks detail about the blastocoel and somewhat mischaracterizes the spatial arrangement."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well, connecting maternal age to euploidy rates, AMH/FSH to ovarian reserve, endometrial thickness to receptivity, and sperm parameters to male factor exclusion. The BMI discussion is appropriately nuanced. However, the response could have more deeply explored the interaction between unexplained infertility and potential implantation failure mechanisms, and the Day 4 transfer timing relative to blastocyst development stage could have been better integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured, with the probability estimate (60-80%) following reasonably from the evidence presented. The response correctly identifies age as the strongest predictor and connects embryo morphology to implantation potential. Minor inconsistency: the response mentions 3AA is 'the highest morphological grade possible' which is slightly inaccurate (4AA or 5AA would be higher expansion grades), and the probability range is somewhat broad without clear delineation of what drives the lower vs upper bound."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with ESHRE/ASRM guidelines but contains some deviations. The Gardner grading description is mostly correct but calling 3AA 'the highest morphological grade possible' is inaccurate per Gardner criteria (grades 4-6 represent further expansion/hatching). The recommendation for Day 4 blastocyst transfer is unusual and not well-addressed per standard guidelines which favor Day 5/6. PGT-A recommendation for a 27-year-old first-cycle patient is not strongly evidence-based per current ASRM guidelines which don't routinely recommend PGT-A for young patients."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are generally specific and practical, covering transfer proceed/defer decisions, progesterone support, lifestyle maintenance, and future cycle planning with PGT-A. The response appropriately addresses vitrification as an alternative. However, the Day 4 transfer concern is raised but not definitively resolved, and more specific guidance on luteal phase support protocols or endometrial preparation would enhance actionability. The PGT-A recommendation, while debatable, does provide a concrete future planning option."
+    }
+  ],
+  "extracted_probability": 0.7,
+  "judge_cost_usd": 0.018924,
+  "judge_latency_ms": 15077.013332993374,
+  "judge_prompt_tokens": 2693,
+  "judge_completion_tokens": 723
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0108",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed it could not see the image and based morphology on the provided 3AA label. Its description is broadly consistent with the lab grade, but it inaccurately equated stage 3 with a fully expanded blastocyst with thinning zona/pre-hatching features, which corresponds more to stage 4+, so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates maternal age, ovarian reserve, PCOS, BMI, prior live birth/biochemical loss, endometrial thickness, sperm parameters, and lifestyle factors with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with a clear link from embryo quality and patient factors to prognosis. Minor issues include overconfident statements about embryo quality being the highest available and some speculative causal claims about stress and sperm DNA fragmentation."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly evidence-based, but there are notable deviations: incorrect Gardner stage interpretation, strong endorsement of PGT-A after a single further failure in a 30-year-old, suggestion of ERA despite limited evidence, and recommending dual-route luteal support/metformin in a way that is more practice-based than guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer, counseling, luteal support review, and future-cycle considerations. It is useful, though some recommendations are more aggressive or less evidence-based than ideal."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014955,
+  "judge_latency_ms": 5150.373416006914,
+  "judge_prompt_tokens": 3025,
+  "judge_completion_tokens": 392
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0081",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner score was provided, despite the case explicitly giving 3AA, and therefore fails to analyze the known morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, BMI, FSH, prior failed cycles, semen parameters, and endometrial thickness, though it misses linking the known 3AA grade to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is undermined by the false premise that morphology/grade were unavailable, which weakens the probability estimate and conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with IVF practice, including caution about add-on tests and appropriate consideration of uterine evaluation and PGT-A after repeated failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer and future planning, but actionability is reduced because it asks for data that were already provided and does not tailor advice to the known 3AA embryo."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.01389,
+  "judge_latency_ms": 3359.8393329957617,
+  "judge_prompt_tokens": 3225,
+  "judge_completion_tokens": 281
+}

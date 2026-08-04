@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0703",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response provides a solid morphological description that aligns well with the Gardner Score 3AA, correctly identifying the expanded blastocyst, thinning zona pellucida, compact ICM, and cohesive TE. The description is appropriately detailed and correlates each visual feature to the grading criteria. Minor limitation is some hedging language ('appears,' 'implied by') suggesting uncertainty about image clarity, but overall the description is accurate and well-structured."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: patient age (30, favorable), BMI (33.4, obese, negative), AMH/FSH (normal, favorable), male factor diagnosis with likely ICSI use, endometrial thickness (6.5mm, suboptimal), smoking and alcohol use, previous failed cycle, and sperm parameters. It clearly explains how each factor interacts with embryo quality and implantation potential, showing nuanced understanding of how these variables compound each other."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and logical, moving from embryo quality to patient factors to probability estimation. The probability reduction framework (starting at 60-70% intrinsic potential and applying deductions for each risk factor) is coherent and transparent. Minor issue: the additive deduction approach for risk factors (10-20% each) is somewhat simplistic and may overstate independent effects, but the final estimate of 30-45% is reasonable and the logic chain is clear and consistent throughout."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines on Gardner grading, endometrial thickness thresholds (≥7mm), lifestyle modification recommendations, and considerations for ERA testing and PGT-A. Recommendations for hysteroscopy, freeze-all strategy, and smoking cessation are evidence-based. The 7mm threshold cited is consistent with literature. Minor deduction for suggesting adjunctive therapies (sildenafil, G-CSF, L-arginine, Vitamin E) which have limited or inconclusive evidence bases and are not standard guideline recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical, covering both immediate transfer considerations (progesterone optimization, patient counseling, adjunctive therapy review) and future cycle planning (smoking cessation programs, weight management referrals, hysteroscopy, ERA testing, PGT-A consideration, freeze-all strategy, endometrial preparation protocol review). Each recommendation is contextualized to this specific patient's risk profile, and alternatives are considered. The response provides clear next steps for both the current and future cycles."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.021309,
+  "judge_latency_ms": 14625.80079199688,
+  "judge_prompt_tokens": 3803,
+  "judge_completion_tokens": 660
+}

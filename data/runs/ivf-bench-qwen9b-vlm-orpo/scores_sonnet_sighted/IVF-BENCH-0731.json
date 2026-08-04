@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0731",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocyst expansion stage, blastocoel filling, ICM compactness, and TE cohesiveness, correlating well with the Gardner 2AA grade. Minor issue: the response notes the embryo appears visually between stage 3-4 while the lab reports stage 2, showing appropriate critical thinking. No fabricated features, though the zona pellucida is not explicitly discussed despite being visible in the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of maternal age, FSH, male factor diagnosis, sperm parameters, lifestyle factors, and endometrial thickness with embryo quality. Correctly identifies the paradox of high-quality embryo vs. suboptimal endometrium. Appropriately notes the semen parameters are actually good despite male factor diagnosis and raises the possibility of morphology/DNA fragmentation issues. Minor gap: doesn't deeply explore the implications of the 'Other' stimulation protocol on endometrial development."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical but the implantation probability estimate of 15-20% seems notably conservative for a 2AA Day 5 blastocyst in a 33-year-old, even accounting for the thin endometrium. Published data typically shows higher rates for AA-grade blastocysts at this age. The response also somewhat contradicts itself by calling this 'very good quality' embryo but then estimating lower than typical published implantation rates, without fully reconciling this discrepancy. The endometrial concern is valid but may be overweighted."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: single embryo transfer recommendation for young patient, appropriate PGT-A discussion (optional at 33 in first cycle), cavity evaluation suggestions, luteal support mention, and no recommendation for unproven adjuncts without indication. Correctly avoids recommending bed rest. The 7mm endometrial threshold discussion aligns with published literature, though some guidelines accept 6mm as borderline rather than clearly suboptimal."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Response provides clear, specific recommendations including transfer technique considerations, luteal support optimization, lifestyle maintenance, and a structured future planning pathway. The tiered approach to workup if transfer fails is practical. Specific suggestions for cavity evaluation modalities (saline sonogram, hysteroscopy) and endometrial adjuncts with appropriate caveats add clinical value. Could be improved with more specific medication/protocol suggestions for endometrial optimization in future cycles."
+    }
+  ],
+  "extracted_probability": 0.175,
+  "judge_cost_usd": 0.021162,
+  "judge_latency_ms": 15321.328500009258,
+  "judge_prompt_tokens": 3879,
+  "judge_completion_tokens": 635
+}

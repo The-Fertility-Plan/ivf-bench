@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0292",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It identifies a blastocyst and mentions ICM/TE/zona, but several image-based claims appear overstated or not clearly visible, such as intracytoplasmic debris within the blastocoel, partial TE discontinuity, and confident re-grading to 3BB-3AB from a single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, BMI, ovarian reserve, male factor context, endometrium, and cycle history with embryo quality reasonably well, though some links are somewhat generic and not tightly evidence-calibrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but the probability adjustment scheme is somewhat ad hoc and double-counts uncertainty by penalizing both age-related aneuploidy and lack of PGT-A; some morphology concerns are also inferred more strongly than the image supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are broadly standard (SET, luteal support, lifestyle counseling), but routine PGT-A recommendation, ERA after a single failure, thrombophilia testing, and strong claims about alcohol exceed or are not consistently supported by major guideline-based practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer and future planning, including SET, follow-up timing, and additional male-factor workup, though some suggested tests/interventions may be more aggressive than necessary for this first cycle."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.015438,
+  "judge_latency_ms": 5582.0840840024175,
+  "judge_prompt_tokens": 3376,
+  "judge_completion_tokens": 354
+}

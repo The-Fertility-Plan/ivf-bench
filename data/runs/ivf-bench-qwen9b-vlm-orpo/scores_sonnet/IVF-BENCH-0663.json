@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0663",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the blastocoel expansion, ICM compactness (A-grade), and TE sparseness (B-grade), consistent with the 2AB Gardner score provided. It notes the absence of gross degeneration and comments on symmetry. Minor limitation is that it hedges on TE possibly being C-grade without strong image evidence, and doesn't comment on zona pellucida status, but overall the morphological narrative aligns well with the provided grading data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response systematically integrates all major clinical factors: female age 30, AMH, FSH, oocyte yield, PCOS diagnosis, BMI, endometrial thickness, partner age, sperm parameters, and lifestyle factors. It uses structured tables to show how each factor modifies prognosis, correctly identifies chromosomal status as the dominant unknown variable, and appropriately contextualizes PCOS effects on implantation versus ovarian response. The interaction between untested embryo status and age-related aneuploidy risk is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 18-28% follows logically from the intermediate embryo quality and favorable patient factors. The distinction between implantation probability and live birth rate is appropriately made. Minor issue: the response characterizes the embryo as 'below the elite AA/AB group' but the Gardner score is 2AB, which is actually a reasonably good grade, creating slight tension. The live birth estimate of 12-18% is somewhat conservative but defensible."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: eSET recommendation at age 30, appropriate luteal support mention, discouraging non-evidence-based add-ons (ERA, routine anticoagulation, immune therapies), selective PGT-A discussion, and antagonist protocol validation for PCOS. The response correctly notes PGT-A is not automatically required at age 30. Minor gap: doesn't explicitly reference OHSS risk management protocols specific to PCOS with high AMH, which ESHRE guidelines emphasize strongly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET, luteal support, lifestyle modifications (stop alcohol, exercise, folate), post-failure workup checklist (TSH, prolactin, vitamin D, HbA1c), cavity review trigger, and future stimulation considerations. The response provides clear decision trees for both success and failure scenarios. Slight deduction because some recommendations (e.g., 'dual trigger consideration') lack specificity about when/why, and the OHSS risk management given high AMH/PCOS could be more concretely addressed."
+    }
+  ],
+  "extracted_probability": 0.23,
+  "judge_cost_usd": 0.022245,
+  "judge_latency_ms": 15129.698000004282,
+  "judge_prompt_tokens": 3940,
+  "judge_completion_tokens": 695
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0472",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overcalls image features: it describes a compact ICM in the upper-left and strong cohesive TE/multiple cell layers, which are not clearly discernible in this image. It also labels the embryo as expanded/3AA despite the image appearing somewhat ambiguous/collapsed and not cleanly demonstrating classic AA morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age-related aneuploidy risk, PCOS, BMI, ovarian reserve markers, sperm parameters, endometrial thickness, and day-5 development, and relates them to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with morphology, age, and endometrial factors logically tied to prognosis. Minor weakness is that the probability estimate leans optimistic given the uncertain image-based morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with standard IVF practice: caution about morphology vs euploidy, reasonable luteal support comments, avoidance of unnecessary add-ons, and thoughtful discussion of PGT-A. Minor deviations include some speculative statements about PCOS/oocyte quality and fresh-transfer suppression effects without cycle hormone data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including luteal support, alcohol cessation, prenatal optimization, and when to consider PGT-A or further male-factor workup. Useful and specific, though some suggestions remain somewhat general."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.016467,
+  "judge_latency_ms": 5655.578582998714,
+  "judge_prompt_tokens": 3574,
+  "judge_completion_tokens": 383
+}

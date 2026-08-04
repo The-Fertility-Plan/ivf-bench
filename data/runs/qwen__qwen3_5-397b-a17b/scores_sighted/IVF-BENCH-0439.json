@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0439",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and closely mirrors the provided Gardner label rather than the visible morphology. It describes a clearly expanded, top-tier 3AA blastocyst with prominent ICM and cohesive TE, but the image shows a less clearly defined ICM, irregular/collapsed appearance, and TE that is not obviously uniformly cohesive."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, endometrium, male factor, prior outcomes, and sperm motility with embryo assessment reasonably well, though some links (e.g., male factor directly implying aneuploidy risk) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but there are notable issues: it treats 3AA as 'highest' quality without nuance, says morphology 'aligns perfectly' with the image despite ambiguity, and infers immunologic/genetic concerns beyond the available data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are deviations: calling 3AA 'highest' quality imprecisely, suggesting aspirin/heparin for biochemical history without clear indication, and recommending PGT-A as strongly advised at age 35 with limited supporting context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer and future planning, including confirming transfer timing, luteal support, and considering sperm DNA fragmentation testing. Some recommendations are useful but a few are not sufficiently evidence-based or individualized."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.013638,
+  "judge_latency_ms": 5902.901749999728,
+  "judge_prompt_tokens": 2536,
+  "judge_completion_tokens": 402
+}

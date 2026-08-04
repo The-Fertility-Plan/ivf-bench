@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0704",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 0DD, but adds image features such as vacuolation, coarse granularity, irregular zona, and peripheral debris/blebs that are not clearly verifiable from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF outcomes, male factor context, semen parameters, BMI, endometrium, and ovarian response with embryo quality well, though some inferences (e.g., only one blastocyst available, lab issues) go beyond the provided data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and consistent: severely poor morphology drives prognosis despite favorable uterine and general health factors. Probability estimates and conclusions are broadly supported, though a few speculative causal explanations weaken the chain slightly."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Core interpretation of 0DD and cautious counseling are aligned with IVF practice, but several recommendations are not strongly guideline-based or are overreaching for this case (routine thrombophilia/MTHFR testing, ERA, growth hormone, IMSI/PICSI/TESE without stronger indication)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear immediate counseling and future-cycle planning with concrete next steps, but some suggested tests/interventions are excessive or insufficiently prioritized relative to evidence strength."
+    }
+  ],
+  "extracted_probability": 0.055,
+  "judge_cost_usd": 0.014922,
+  "judge_latency_ms": 5510.912958998233,
+  "judge_prompt_tokens": 3134,
+  "judge_completion_tokens": 368
+}

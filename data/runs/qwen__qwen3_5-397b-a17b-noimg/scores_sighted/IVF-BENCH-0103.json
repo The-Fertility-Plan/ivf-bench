@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0103",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not see the image and based morphology on the provided Gardner score. Its textual interpretation was mostly reasonable, but it incorrectly called 3AB a high-quality/top-tier embryo and accepted the inconsistent lab description of 'expanded' with grade 3; image-specific morphology was not assessed."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve/yield, prior miscarriage, sperm parameters, BMI, lifestyle, and especially thin endometrium with embryo quality and prognosis. Some points were somewhat overstated, but overall integration was strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally logical, with the implantation estimate tied to embryo quality, age-related aneuploidy risk, and thin lining. Minor issues include overemphasis on 100% MII as evidence of oocyte quality and some overstatement of embryo ranking."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but there are notable deviations: recommending PGT-A strongly in a low-yield DOR patient is debatable, and adjuncts like aspirin/sildenafil are not guideline-supported routine measures. It also correctly noted the Gardner inconsistency between grade 3 and 'expanded.'"
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer management and future planning, including luteal support review, uterine cavity evaluation, protocol reconsideration, and lifestyle counseling. Some recommendations are more speculative than standard, but overall they are practical."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014997,
+  "judge_latency_ms": 4772.437915991759,
+  "judge_prompt_tokens": 3014,
+  "judge_completion_tokens": 397
+}

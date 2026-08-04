@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0022",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no lab grade was provided and does not analyze the supplied Gardner score of 1DD. It fails to describe the poor-quality blastocyst morphology implied by expansion 1 with degenerative/absent ICM and TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, tubal factor, prior live birth, AMH, endometrium, BMI, and sperm parameters, though it does not connect these to the explicitly poor embryo grade provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but it is undermined by the major premise error that morphology was unavailable. This leads to probability estimates that are overly optimistic for a 1DD embryo and not fully supported by the provided data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are guideline-consistent, such as SET in a young good-prognosis patient and avoiding unsupported add-ons. However, ignoring the provided Gardner grade and treating this as an unspecified Day 4 embryo weakens alignment with standard embryo grading interpretation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical recommendations on SET, hydrosalpinx evaluation, luteal support, and future cycle review. It is useful overall, though less tailored than it should be because it does not act on the known poor 1DD morphology."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01455,
+  "judge_latency_ms": 4326.705250001396,
+  "judge_prompt_tokens": 3005,
+  "judge_completion_tokens": 369
+}

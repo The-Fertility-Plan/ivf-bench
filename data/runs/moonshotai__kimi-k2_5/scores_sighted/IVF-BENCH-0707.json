@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0707",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates image quality and fabricates clearly visible features: the blastocoel is not obviously fully expanded, the ICM is not clearly compact/tightly packed, and the TE does not appear as a smooth cohesive epithelium. It relies too heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, smoking, sperm parameters, ovarian response, transfer day, and endometrial thickness with embryo quality and prognosis. Some interpretations are somewhat overstated, but overall the clinical factors are meaningfully connected to outcome."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but several steps are weak or inconsistent, such as implying low oocyte yield suggests DOR without AMH, assuming morphology makes euploidy more likely, and assigning specific penalties for smoking/endometrial thickness with limited support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations like single embryo transfer, smoking cessation, and luteal support are guideline-consistent, but strong endorsement of PGT-A, ERA after one failure, GH/DHEA, and protocol changes are more controversial and not uniformly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for transfer and future planning, including eSET, smoking cessation, endometrial review, and possible further testing. Some suggestions are overly aggressive or not well-indicated, but the advice is practical overall."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.01461,
+  "judge_latency_ms": 5383.2919580017915,
+  "judge_prompt_tokens": 2910,
+  "judge_completion_tokens": 392
+}

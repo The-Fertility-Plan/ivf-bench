@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately declined image-based morphology because no image was provided to it and did not fabricate visible features. It correctly noted that Gardner scoring is for blastocysts and that Day 4 embryos are often morula/early blastocyst, but it did not assess the actual embryo image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, low AMH, tubal factor, endometrial thickness, BMI, sperm parameters, and partner age into prognosis reasonably well, with good discussion of aneuploidy risk and cohort size."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, and the implantation estimate is tied to age, transfer day, diagnosis, and unknown morphology. Minor issues include some speculative statements and broad assumptions about Day 4 transfer rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but some recommendations are weakly guideline-supported or controversial (routine ERA after one failure, acupuncture/stress effects, DHEA/CoQ10 specifics, SDF/TESE suggestions, and strong endorsement of PGT-A in a low-yield patient)."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for current transfer and future planning, including luteal support review, hydrosalpinx assessment, protocol reconsideration, and discussion of culture strategy, though some suggestions are more speculative than standard."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.014775,
+  "judge_latency_ms": 4902.914958001929,
+  "judge_prompt_tokens": 3140,
+  "judge_completion_tokens": 357
+}

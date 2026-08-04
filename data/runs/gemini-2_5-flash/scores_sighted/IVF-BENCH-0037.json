@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst with absent/degenerate ICM and TE consistent with 1DD, but inaccurately states the blastocoel is less than half the embryo despite the provided grade indicating at least half, and adds some speculative features not clearly visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF failures/biochemicals, sperm parameters, endometrial thickness, BMI, and ovarian reserve context with embryo prognosis well, though some links (e.g., BMI impact, assigning poor morphology mainly to oocyte quality) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall reasoning is logical and the very low implantation estimate follows from the poor embryo grade and clinical history, but there are minor issues such as calling this recurrent implantation failure and overinterpreting Day 4 blastulation timing."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally consistent with poor prognosis for a 1DD embryo and appropriate counseling, but several recommendations (ERA, EMMA/ALICE, NK/immunologic testing, broad thrombophilia workup) are not routinely guideline-supported for repeated implantation failure."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear counseling points and practical future-cycle considerations such as protocol review, cavity assessment, and possible PGT-A, though some suggested investigations are overly broad and not sufficiently prioritized."
+    }
+  ],
+  "extracted_probability": 0.01,
+  "judge_cost_usd": 0.014832,
+  "judge_latency_ms": 5574.581999986549,
+  "judge_prompt_tokens": 3104,
+  "judge_completion_tokens": 368
+}

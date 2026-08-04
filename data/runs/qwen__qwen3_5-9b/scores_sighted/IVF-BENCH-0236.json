@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0236",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a blastocyst and the provided 3AA label, but it overstates certainty from the image alone, inaccurately says it is ready for hatching/has hatched, and describes TE as clearly cohesive despite limited image clarity."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, endometrium, prior miscarriage, smoking, and male factor reasonably well with embryo quality, though some links (especially paternal age impact) are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logical and structured, with conclusions generally following from morphology and clinical context; minor issues include overemphasis on smoking and paternal age in deriving the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Largely consistent with standard IVF principles and Gardner grading, but contains some non-guideline-level claims such as strong quantitative smoking effect and implying a 3AA embryo is essentially top-tier/ready for hatching from this image."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical advice to proceed with transfer and counsel smoking cessation, but future cycle planning is incomplete/truncated and lacks more specific contingency planning or workup recommendations after prior miscarriage."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.011667,
+  "judge_latency_ms": 5457.470749999629,
+  "judge_prompt_tokens": 2344,
+  "judge_completion_tokens": 309
+}

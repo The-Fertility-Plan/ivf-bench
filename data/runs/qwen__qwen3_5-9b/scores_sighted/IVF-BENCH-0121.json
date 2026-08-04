@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0121",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with the provided 3BB label, but the image is suboptimal and the response overstates visibility of specific features such as a clear ICM cluster and localized zona thinning/hatching details that are not confidently discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, AMH, endometrium, prior cycle history, and sperm data with embryo quality reasonably well, though it makes unsupported assumptions about fertilization/blast yield and overinterprets the male-factor discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall structure is logical, but there are notable inconsistencies: it assumes a 100% fertilization rate without data, infers poor blast yield from a single shown embryo, and links AMH/sperm motility to uterine environment inappropriately."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and general transfer suitability are aligned with standard practice, but several statements are not guideline-grounded, including assumed fertilization outcomes and somewhat inflated certainty around prognosis from limited data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "It recommends proceeding with transfer, but the recommendations are incomplete and truncated, with limited practical detail for luteal support, counseling, fresh-vs-freeze considerations, or future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012186,
+  "judge_latency_ms": 4569.249458989361,
+  "judge_prompt_tokens": 2332,
+  "judge_completion_tokens": 346
+}

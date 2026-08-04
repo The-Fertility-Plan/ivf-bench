@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0695",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 4AA Gardner score: hatching blastocyst with zona pellucida herniation, tightly packed ICM described at '2 o'clock position,' and cohesive TE epithelium. The description aligns well with the provided grading criteria. Minor limitation is that the ICM localization detail ('2 o'clock') may be speculative without confirmed image correlation, but overall the description is detailed and accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates multiple clinical factors: DOR (AMH 0.12) contextualized against embryo quality, the apparent discrepancy in male factor diagnosis vs. normal semen parameters (raising morphology/DNA fragmentation as possibilities), optimal endometrial thickness, maternal age impact on aneuploidy risk, paternal age implications for sperm DNA fragmentation, and lifestyle factors. The 'quality vs. quantity' framing is clinically apt and all factors are meaningfully connected to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and logical. The probability estimate (50-65%) follows coherently from the evidence: baseline rates for 4AA embryos, age-adjusted euploidy estimates, positive modifiers (hatching, endometrium), and negative modifiers (male factor, paternal age). One minor inconsistency: the response notes ~60% baseline for under-37 patients but then applies a euploidy discount that could push below 50%, yet the final range stays at 50-65%, which is slightly optimistic given the stated aneuploidy risk of 40-50%."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, appropriate luteal support mention, reasoned argument against PGT-A for single embryo (risk-benefit analysis), DuoStim banking strategy for DOR, and SDF testing for advanced paternal age. The DHEA recommendation is appropriately flagged as controversial. The response correctly notes 7-14mm as optimal endometrial thickness range. Minor gap: no mention of ERA (endometrial receptivity array) consideration given this is a first transfer with high-stakes single embryo."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: clear SET recommendation with rationale, explicit PGT-A risk-benefit analysis for single embryo scenario, DuoStim protocol suggestion for future banking, SDF testing with antioxidant therapy for partner, protocol adjustment considerations, and psychological counseling regarding reserve limitations. Each recommendation is tailored to this specific case's constraints (single embryo, DOR, male factor) rather than generic advice, making it immediately useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.018969,
+  "judge_latency_ms": 16386.97654200223,
+  "judge_prompt_tokens": 2848,
+  "judge_completion_tokens": 695
+}

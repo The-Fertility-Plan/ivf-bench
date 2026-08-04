@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0394",
+  "model": "gemini-2.5-flash",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality early blastocyst with poorly defined/absent ICM and compromised TE, broadly consistent with 1DD. However, it inaccurately states the blastocoel is less than half the embryo despite the provided Gardner score indicating at least half, and it adds some interpretive detail (e.g., fragmentation/arrest) that is not definitively visible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, ovarian response, sperm parameters, endometrial thickness, diagnosis, and lifestyle with embryo prognosis in a clinically meaningful way. It misses AMH being unavailable and could better nuance the male-factor interpretation, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is internally consistent: very poor morphology plus age-related aneuploidy risk leads to very low implantation potential. The probability estimate and counseling recommendations follow logically, though the morphology-stage mismatch slightly weakens the chain."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, including counseling, prognosis discussion, and consideration of PGT-A in future cycles. However, the strong recommendation to not transfer a 1DD embryo is somewhat overstated, as practices vary and poor-quality embryos may still be considered for transfer after counseling if no alternatives exist."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for counseling, transfer decision-making, future testing, protocol review, and lifestyle optimization. It is useful and specific, though some recommendations are somewhat generic and not prioritized by likely impact."
+    }
+  ],
+  "extracted_probability": 0.02,
+  "judge_cost_usd": 0.015276,
+  "judge_latency_ms": 8652.876041000127,
+  "judge_prompt_tokens": 3072,
+  "judge_completion_tokens": 404
+}

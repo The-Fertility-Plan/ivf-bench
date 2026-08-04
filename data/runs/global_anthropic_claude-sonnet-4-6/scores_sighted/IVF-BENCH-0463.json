@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0463",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response gives a plausible blastocyst description and generally matches the reported 3AA, but it overstates confidence from a suboptimal image, infers a well-defined ICM/TE and thinning zona that are not clearly discernible, and labels it broadly consistent with full blastocyst despite the lab grade being expanded blastocyst."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve markers, prior cycle history, sperm parameters, BMI, endometrium, and lifestyle with embryo quality in a clinically meaningful way. However, it somewhat overinterprets AMH as DOR and prior failure as suggesting implantation dysfunction without enough context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the prognosis estimate is in a reasonable range, but there are notable leaps: assigning numeric impacts without basis, treating one prior failed cycle as a moderate negative factor, and mixing implantation and live birth benchmarks. Some conclusions are stronger than the evidence supports."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Basic points like proceeding with SET are guideline-concordant, but several recommendations are not evidence-based or not routinely recommended after a single failed cycle, including ERA, thrombophilia screening, NK cell testing, MTHFR testing, routine immune profiling, and strong endorsement of DHEA/PGT-A in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear next-step recommendations for transfer and future planning, including SET, luteal support considerations, and counseling. However, some suggested tests/interventions are overly aggressive or low-value for this specific case, which limits appropriateness."
+    }
+  ],
+  "extracted_probability": 0.485,
+  "judge_cost_usd": 0.015189,
+  "judge_latency_ms": 5576.57604200358,
+  "judge_prompt_tokens": 3083,
+  "judge_completion_tokens": 396
+}

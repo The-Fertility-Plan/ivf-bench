@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0723",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response appropriately acknowledges image quality limitations and attempts to correlate visible features with the Gardner score. It identifies the denser ICM region, outer trophectoderm layer, and thinning zona pellucida. However, it heavily defers to the provided Gardner score rather than independently analyzing the image, and the description of 'darker granular areas' and 'spherical structures' is somewhat vague. The image actually shows a complex blastocyst with notable granularity and vacuolation that could warrant more specific commentary."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most key clinical factors well: age 34, PCOS diagnosis, previous biochemical pregnancy, endometrial thickness of 7.0mm, sperm parameters, and lifestyle factors including alcohol consumption. It connects these factors to implantation prognosis in a meaningful way. Minor gap: AMH being N/A is not addressed, and the interaction between PCOS and endometrial receptivity could be explored more deeply. The alcohol consumption flag (4-6/week) is appropriately highlighted."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimation. The probability range of 45-60% is reasonably derived from the baseline 3AA rate adjusted downward for endometrial thickness concerns. The reasoning is consistent throughout with no major contradictions. Minor issue: the stated baseline of 55-80% being reduced to 45-60% represents a larger reduction than the cited 5-15% drop, creating a slight inconsistency in the quantitative reasoning."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: progesterone support optimization, consideration of ERA for recurrent implantation failure, hysteroscopy/SIS for uterine assessment, PGT-A consideration after recurrent failure, and freeze-all strategy. The 7mm endometrial threshold discussion aligns with published literature. Adjunctive therapies mentioned (sildenafil, G-CSF) are acknowledged as investigational rather than standard, which is appropriate. Minor deviation: G-CSF recommendation should note limited evidence base more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides clear, specific recommendations for both the current transfer and future cycle planning. Specific interventions are named (ERA, hysteroscopy, extended estrogen, vaginal sildenafil, G-CSF, PGT-A, freeze-all). The recommendation to check progesterone levels on transfer day is clinically specific. Lifestyle counseling regarding alcohol cessation is direct. Could be improved by specifying progesterone dosing ranges, specific estrogen extension protocols, or timing of beta-hCG testing more precisely (9-11 days is appropriate but could specify by transfer type)."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.022899,
+  "judge_latency_ms": 15761.570707996725,
+  "judge_prompt_tokens": 4153,
+  "judge_completion_tokens": 696
+}

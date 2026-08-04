@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0082",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided and does not analyze the known 4BB morphology from the case data, so it fails the morphology task."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, diagnosis, prior cycle, semen parameters, and endometrium well, though it misses linking these specifically to the known 4BB embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but it is undermined by the major premise error that morphology was unavailable despite the provided 4BB grade."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines, including SET at age 28, avoiding unproven add-ons, and not routinely recommending PGT-A; however, failure to use the provided Gardner score limits full alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical transfer and future-cycle recommendations, including SET, luteal support review, lab performance review, and trigger strategy considerations, though advice would be stronger if tailored to the actual 4BB embryo."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.013788,
+  "judge_latency_ms": 3483.00691699842,
+  "judge_prompt_tokens": 3046,
+  "judge_completion_tokens": 310
+}

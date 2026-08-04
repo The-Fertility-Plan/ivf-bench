@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0699",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "It correctly identifies a very poor-quality early blastocyst/early cavitating embryo with absent-poor ICM and TE consistent with 0DD, but it overstates certainty about non-viability and adds features like marked degeneration/granularity not clearly discernible from the image alone."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, prior live birth, BMI, endometrium, and sperm motility with embryo quality well, though some links (e.g., attributing severe cohort-wide developmental failure from one embryo and emphasizing sperm motility as causal) are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and the low implantation estimate follows from the poor morphology and maternal age, but there are minor inconsistencies such as calling the embryo biologically impossible yet still assigning a non-zero chance, and inferring broad cycle conclusions from limited data."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is broadly consistent with IVF practice for a very poor-quality embryo, but several recommendations are not strongly guideline-based or are overstated, including framing transfer as 'diagnostic,' suggesting donor oocytes too aggressively from this single embryo, and proposing add-ons like PICSI/IMSI/mitochondrial supplements without strong evidence."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step recommendations for counseling, transfer expectations, and future workup/planning, but some suggestions are overly definitive or insufficiently nuanced for this specific dataset."
+    }
+  ],
+  "extracted_probability": 0.03,
+  "judge_cost_usd": 0.013896,
+  "judge_latency_ms": 6694.143083004747,
+  "judge_prompt_tokens": 2667,
+  "judge_completion_tokens": 393
+}

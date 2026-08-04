@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0163",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality early blastocyst/degenerate embryo overall, but it misstates the expansion detail by saying the blastocoel is less than half the embryo despite the provided Gardner 1 definition indicating at least half, and it asserts non-viability more strongly than morphology alone can prove from the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates several relevant factors including age, ovarian reserve/response, BMI, smoking, tubal factor, and prior failed cycles with embryo quality, though the visible excerpt does not clearly address all factors such as sperm age/parameters and endometrium in a balanced way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and links poor morphology to poor prognosis, but there is a notable inconsistency between the stated blastocoel size and the assigned Gardner score, and the conclusion of developmental incompetence is somewhat overstated from morphology alone."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner terminology and recognition of D/D as very poor prognosis are broadly aligned with IVF practice, but the response appears to overinterpret morphology as proving non-viability and may not fully reflect the nuance typically used in guideline-consistent counseling."
+    },
+    {
+      "rubric": "actionability",
+      "score": 2,
+      "justification": "The excerpt provides limited concrete next-step recommendations for transfer management or future cycle planning; it is more descriptive than practically directive."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.01068,
+  "judge_latency_ms": 5562.030250002863,
+  "judge_prompt_tokens": 1730,
+  "judge_completion_tokens": 366
+}

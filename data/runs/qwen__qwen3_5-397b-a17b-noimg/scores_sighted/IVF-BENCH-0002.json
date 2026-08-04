@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0002",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately disclosed that it could not see the image and based morphology on the provided Gardner score. Its ICM/TE characterization broadly follows the text label, but it incorrectly states that stage 2 is a full blastocyst and says the embryo has initiated hatching, which is not consistent with Gardner staging or the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve/response, BMI, tubal factor, prior miscarriage, sperm parameters, and endometrial thickness with embryo quality and prognosis. Minor overinterpretation is present around AMH/PCOS-metabolic implications."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: mislabeling Gardner stage 2 as full blastocyst, inferring hatching, and treating the day-4/blastocyst discrepancy as a likely asynchrony problem without sufficient nuance. Probability adjustments are somewhat ad hoc."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly consistent with IVF practice, but there are deviations: Gardner staging is misstated, PGT-A is recommended too strongly for a 30-year-old with only one prior miscarriage, and routine metabolic screening based mainly on high AMH despite normal BMI is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, luteal support, lifestyle modification, clarification of the day discrepancy, and contingency planning after another loss. Some recommendations are useful though a few are more speculative than necessary."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.014721,
+  "judge_latency_ms": 5474.764667000272,
+  "judge_prompt_tokens": 2902,
+  "judge_completion_tokens": 401
+}

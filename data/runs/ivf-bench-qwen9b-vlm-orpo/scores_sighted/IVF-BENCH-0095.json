@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0095",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 2BB blastocyst, correctly noting loose ICM and sparse/irregular TE, but it inaccurately calls it non-expanding/early-to-full and repeats the prompt's mistaken mapping of stage 2 as full blastocyst rather than blastocoel >50%."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF history, miscarriage/ectopic history, endometrium, BMI, lifestyle, and semen parameters well with embryo quality, though it could better distinguish embryo-related versus uterine/tubal factors and note missing AMH more cautiously."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and generally logical, with conclusions tied to age, morphology, and prior history; however, the implantation estimate is somewhat optimistic for an untested D5 2BB embryo with repeated prior failures."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: single embryo transfer at age 29, luteal support, early ectopic surveillance, and uterine reassessment after failure. Minor issue is overemphasis on PGT-A/sperm DNA fragmentation without strong indication."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, monitoring, uterine evaluation, and cycle review. Useful and specific, though not highly tailored to fresh vs frozen transfer details or prior workup status."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.014019,
+  "judge_latency_ms": 17769.33983300114,
+  "judge_prompt_tokens": 2893,
+  "judge_completion_tokens": 356
+}

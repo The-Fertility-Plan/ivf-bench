@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0057",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately noted that no image was provided to it and based morphology on the supplied Gardner 3AA grade rather than inventing image-specific details. However, it inaccurately equated stage 3 with an expanded blastocyst/thinning zona (more consistent with stage 4), so morphology is only partly accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, male factor context, prior biochemical pregnancy, endometrial thickness, and lifestyle factors with embryo quality in a clinically meaningful way. Some links are somewhat overstated, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with the implantation estimate tied to embryo quality and smoking risk. Minor issues include overconfidence in morphology implying genetic potential and some overinterpretation of biochemical pregnancy/endometrial thickness."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (single good-quality blastocyst prognosis, smoking cessation, luteal support, lifestyle optimization). However, recommending ERA after a single failure and strongly endorsing PGT-A at age 35/after one biochemical pregnancy is more aggressive than guideline-based routine practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical next steps for the current transfer and contingency planning for future cycles, including smoking cessation, luteal support, and possible further testing. Some suggestions could be better prioritized and more nuanced regarding indications."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.015321,
+  "judge_latency_ms": 4906.312042003265,
+  "judge_prompt_tokens": 3317,
+  "judge_completion_tokens": 358
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0733",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the key features of a 3BB blastocyst including expansion with thinning zona, loosely grouped ICM, and sparse TE. However, it mentions specific visual details like 'a slight bleb or vacuole visible on the left periphery' and 'thinning particularly at the superior aspect' that appear to be fabricated or over-interpreted features not clearly verifiable from the image description, which slightly undermines accuracy. The core grading interpretation is correct but some embellishments reduce confidence."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo quality - linking age 35 to oocyte quality, AMH/FSH to aneuploidy risk, previous live birth as a positive predictor, and sperm parameters to fertilization potential. It appropriately contextualizes the 3BB grade within the patient's diminished reserve. Minor gap: BMI of 23.5 (favorable) is not explicitly integrated, and the interaction between high stress and HPA axis effects on implantation could be more mechanistically explained."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphological assessment through patient factors to probability estimate and recommendations. The probability range of 40-55% is reasonably justified by the cited factors. The response correctly identifies that previous live birth boosts baseline rates. Minor inconsistency: calling age 35 'prime age for IVF' while simultaneously noting diminished reserve indicators creates slight tension, though this is not a major contradiction. The dampening factors are appropriately balanced against positive indicators."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with ESHRE/ASRM guidelines - Day 5 transfer for blastocysts, progesterone support, endometrial thickness assessment (9.5mm is within acceptable range per guidelines), and PGT-A consideration for diminished reserve patients. The SDF testing recommendation aligns with current male factor workup guidelines. Minor issue: describing age 35 as 'prime' slightly conflicts with ASRM's advanced maternal age considerations beginning at 35. The recommendation to not freeze without specific reason is reasonable but could acknowledge freeze-all strategies more explicitly."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are specific and practical - proceed with transfer, stress management interventions, progesterone support, SDF testing, PGT-A consideration for future cycles, and ongoing reserve monitoring. These are clinically actionable steps. Could be improved by specifying progesterone dosing considerations, timing of SDF testing relative to future cycles, or specific stress reduction protocols. The future planning section is well-structured with clear decision points, though it lacks specificity on stimulation protocol adjustments given the diminished reserve."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.018111,
+  "judge_latency_ms": 14577.243667001312,
+  "judge_prompt_tokens": 2662,
+  "judge_completion_tokens": 675
+}

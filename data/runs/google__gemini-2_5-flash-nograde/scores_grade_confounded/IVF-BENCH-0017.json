@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0017",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "Major morphological misclassification: the response describes a cleavage/morula-stage embryo and states it cannot be classified as a blastocyst, directly conflicting with the provided Gardner 2BB full blastocyst assessment and likely visible blastocoel/ICM/TE features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key clinical factors well, including age, ovarian reserve, endometriosis, prior outcomes, sperm motility, and thin endometrium, and relates them to prognosis, though the embryo-stage error weakens the integration."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured, but a major inconsistency undermines it: conclusions and implantation estimates are built on an incorrect embryo-stage interpretation, creating a significant logical gap."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points align with IVF practice (importance of age, SET, luteal support, concern about thin endometrium), but several recommendations are weakly evidence-based or not guideline-supported as routine care (ERA, scratch, G-CSF, sildenafil), and the Gardner-stage interpretation is incorrect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear practical suggestions for current transfer counseling, endometrial optimization, luteal support, future protocol review, and lifestyle changes, though some proposed adjuncts are not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.275,
+  "judge_cost_usd": 0.015933,
+  "judge_latency_ms": 4069.590208993759,
+  "judge_prompt_tokens": 3526,
+  "judge_completion_tokens": 357
+}

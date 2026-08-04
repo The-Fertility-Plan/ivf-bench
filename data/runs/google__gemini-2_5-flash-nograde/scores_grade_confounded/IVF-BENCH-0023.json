@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0023",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response substantially mischaracterizes the embryo as a good-quality morula/early blastocyst and ignores the provided Gardner grade 1DD, which indicates a very poor-quality early blastocyst with absent/degenerative ICM and TE. It fabricates favorable features not supported by the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, tubal factor, prior IVF outcomes, sperm parameters, endometrium, and lifestyle, though it overstates ovarian reserve from FSH alone and fails to appropriately weigh the very poor embryo grade."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is internally structured but rests on a flawed premise that the embryo is good quality. This leads to an implausibly optimistic implantation estimate and conclusions inconsistent with the stated 1DD morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "The response conflicts with Gardner grading by dismissing the provided 1DD score and suggesting good embryo quality. It is otherwise broadly conventional, but recommendations such as ERA are not strongly guideline-supported in this context."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer support and future planning, including uterine cavity assessment and consideration of PGT-A, though these are not sufficiently tailored to the poor-grade embryo and some suggestions are somewhat generic."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.01479,
+  "judge_latency_ms": 4109.571708002477,
+  "judge_prompt_tokens": 3135,
+  "judge_completion_tokens": 359
+}

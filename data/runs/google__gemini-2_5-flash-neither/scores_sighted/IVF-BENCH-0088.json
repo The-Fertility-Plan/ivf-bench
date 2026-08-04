@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0088",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model appropriately stated that no image was provided to it and did not fabricate any morphological features, which is the correct behavior under the prompt constraints."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, BMI, ovarian reserve, prior IVF failure, sperm motility, endometrium, and lifestyle, and relates them to prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with conditional implantation estimates tied to assumed embryo quality; minor issues include somewhat strong causal claims about some factors without case-specific evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly guideline-consistent (SET preference, lifestyle optimization, cavity evaluation), but recommending PGT-A strongly for DOR/one failed cycle and suggesting ERA relatively early are more controversial and not universally guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next steps for transfer counseling and future workup, including lifestyle changes, luteal support, sperm DNA fragmentation testing, and uterine cavity assessment, though some recommendations are not tightly prioritized."
+    }
+  ],
+  "extracted_probability": 0.35,
+  "judge_cost_usd": 0.015588,
+  "judge_latency_ms": 4506.6617090051295,
+  "judge_prompt_tokens": 3601,
+  "judge_completion_tokens": 319
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0694",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst stage, thinning zona pellucida, compact ICM in the upper right quadrant, and cohesive TE layer consistent with the 3AA Gardner score. The description of the blastocoel cavity and structural integrity is appropriate. Minor limitation: the image is quite dark and low-contrast, making definitive morphological confirmation challenging, yet the model confidently maps features without acknowledging image quality limitations."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all key clinical factors: maternal age 32 with good AMH, tubal factor diagnosis (correctly identified as favorable for IVF prognosis), optimal endometrial thickness of 12mm, paternal age consideration with sperm DNA fragmentation risk, lifestyle factors, and the lower-than-expected oocyte maturation rate. The response meaningfully connects each factor to the embryo quality and expected outcome rather than listing them in isolation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability range of 60-75% follows logically from the evidence presented, with clear positive and negative adjustments explained. The hydrosalpinx caveat is appropriately flagged. Minor issue: the response states euploidy likelihood is ~60-70% for this embryo but then estimates implantation at 60-75%, which slightly conflates morphological implantation probability with euploid embryo transfer rates without fully distinguishing the two concepts."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Strong alignment with ESHRE/ASRM guidelines: eSET recommendation for a 32-year-old with top-grade blastocyst is correct and evidence-based, luteal support mention is appropriate, Gardner grading criteria are correctly applied, and PGT-A discussion is nuanced and balanced. The endometrial thickness optimal range cited (8-14mm) aligns with current literature. Minor gap: no mention of ERA (Endometrial Receptivity Array) or progesterone level monitoring on transfer day, which are increasingly guideline-supported considerations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET is clearly advocated with rationale, hydrosalpinx pre-transfer ultrasound check is a concrete actionable step, trigger protocol review for future cycles addresses the maturation rate concern, and PGT-A is presented with two clear options (A and B) with decision criteria. Slight deduction because luteal support recommendation lacks specificity (no mention of progesterone type, route, or dosing considerations), and no mention of post-transfer beta-hCG timing or follow-up protocol."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.018987,
+  "judge_latency_ms": 14377.69529200159,
+  "judge_prompt_tokens": 3014,
+  "judge_completion_tokens": 663
+}

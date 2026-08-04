@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0027",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was provided, but it fails to use the available Gardner grade 2AA for morphology and instead discusses generic Day 4 morula features, which is inconsistent with the supplied blastocyst grading data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, prior IVF outcomes, endometrium, and sperm data well, though it misses the inconsistency between transfer day and Gardner blastocyst grading and overemphasizes speculative causes."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but there are notable issues: it assumes morphology cannot be assessed despite provided grading, frames the embryo as Day 4 morula-like rather than 2AA blastocyst, and gives scenario-based probabilities built on that mismatch."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling is broadly evidence-based, but recommendations such as ERA, immunologic testing/treatments, routine thrombophilia workup, and strong endorsement of PGT-A in a young patient with male factor/RPL history go beyond or are only weakly supported by major guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides clear next-step suggestions for transfer planning and future workup, including uterine evaluation and sperm DNA fragmentation testing, though some recommendations are overly broad or controversial."
+    }
+  ],
+  "extracted_probability": 0.25,
+  "judge_cost_usd": 0.01551,
+  "judge_latency_ms": 4595.729916996788,
+  "judge_prompt_tokens": 3460,
+  "judge_completion_tokens": 342
+}

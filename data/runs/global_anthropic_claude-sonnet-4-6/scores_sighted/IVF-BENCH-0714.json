@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0714",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response broadly matches the provided 3AA label and notes thinning zona and blastocyst structure, but it overstates certainty from a single image and adds likely non-reliable features such as vacuolation, blastocoel asymmetry, and minimal fragmentation that are not clearly discernible."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, sperm parameters, tubal factor, endometrium, and cycle context well, linking them to prognosis, though some assumptions (e.g., trilaminar lining) and overemphasis on lifestyle effects weaken completeness."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and conclusions generally follow, but the probability adjustment scheme is somewhat arbitrary and double-counts age/aneuploidy with 'no PGT-A'; several effect sizes are presented with more precision than justified."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the assessment is consistent with standard IVF practice, including attention to hydrosalpinx and age-related aneuploidy, but recommendations such as routine low-dose aspirin, ERA after limited failure, growth hormone/DHEA, and strong claims about alcohol/stress are not firmly guideline-based."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives clear next steps for transfer and future planning, including hydrosalpinx evaluation and discussion of PGT-A, but some suggestions are overly broad or not strongly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.33,
+  "judge_cost_usd": 0.01563,
+  "judge_latency_ms": 5778.396749999956,
+  "judge_prompt_tokens": 3320,
+  "judge_completion_tokens": 378
+}

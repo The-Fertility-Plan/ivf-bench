@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "Correctly recognizes a very poor-quality/degenerative embryo with absent clear ICM and poor TE, but inaccurately describes it as having no visible blastocoel and even suggests it resembles a degenerating oocyte or 1-cell embryo, which is a major overreach."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, smoking, endometrium, sperm, oocyte maturity, and the AMH/diagnosis discrepancy with embryo prognosis well, though some conclusions about oocyte quality are somewhat speculative."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The overall poor prognosis is logical, but the reasoning is weakened by internal inconsistencies, especially calling the embryo blastocyst-like while also suggesting it may be a 1-cell/oocyte, and by unsupported recommendations such as donor eggs after a first cycle in a 30-year-old."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Acknowledging 0DD as extremely poor prognosis is aligned, but recommending 'do not transfer' categorically and suggesting vitrification of a non-viable 0DD embryo are not guideline-consistent; donor eggs and PGT-A are also premature in this first-cycle 30-year-old."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides some practical next steps such as clarifying staging/data discrepancies, reviewing the cycle, and smoking cessation, but several recommendations are poorly calibrated or inappropriate, limiting clinical usefulness."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.013281,
+  "judge_latency_ms": 4561.855790991103,
+  "judge_prompt_tokens": 2667,
+  "judge_completion_tokens": 352
+}

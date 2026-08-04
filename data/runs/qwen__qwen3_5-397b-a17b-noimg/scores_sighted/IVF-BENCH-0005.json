@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0005",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The model appropriately disclosed that it could not see the image, but its morphology discussion relied on the provided 2AA label and included inaccuracies: it called stage 2 a 'full blastocyst' and stated this indicates initiation of hatching, which is incorrect in Gardner grading. It did not fabricate image-specific details, but the morphology interpretation itself was partly wrong."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, prior failed cycles, endometriosis, AMH, BMI, sperm parameters, and endometrial thickness with embryo quality and prognosis in a clinically meaningful way. Some points were overstated or speculative, but overall integration was strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The response is structured and mostly logical, but there are notable issues: it treats a Day 4 blastocyst as inherently problematic/asynchronous, overstates RIF implications, and builds several conclusions on speculative assumptions. The implantation estimate is internally explained but rests partly on shaky premises."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Several recommendations are not well aligned with current evidence/guidelines: strong endorsement of PGT-A in a 32-year-old based solely on repeated failures, endorsement of ERA for RIF, and suggestion to screen NK cells/MTHFR are not guideline-supported routine practices. Some elements, like considering hysteroscopy/chronic endometritis evaluation and endometriosis suppression strategies, are reasonable."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear next-step suggestions for transfer review, luteal support considerations, and future workup/planning. Although some recommendations are controversial or not evidence-based, they are specific and practically framed."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.015441,
+  "judge_latency_ms": 6161.624041007599,
+  "judge_prompt_tokens": 3027,
+  "judge_completion_tokens": 424
+}

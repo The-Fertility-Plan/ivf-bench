@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0703",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately describes the key morphological features consistent with a 3AA Gardner score: expanded blastocyst with thinning zona, dense and tightly packed ICM, and cohesive TE epithelium. The description of zona thinning 'particularly in the upper right quadrant' shows image-specific observation. Minor limitation: does not comment on the somewhat irregular/asymmetric appearance of the blastocyst visible in the image, and the expansion stage description could be more precise (Grade 3 vs. Grade 4/5 distinction)."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all major clinical factors: maternal age, BMI, AMH, sperm parameters, endometrial thickness, smoking status, and previous cycle failure. It correctly identifies the 'high-quality embryo in suboptimal environment' paradigm and connects each factor to its specific impact on implantation probability. The linkage between low sperm motility and potential DNA fragmentation as a hidden risk factor demonstrates sophisticated clinical thinking."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and the probability estimate (35-50%) logically follows from the base rate adjustments described. The deductions for smoking (-10-15%), BMI/endometrium (-10-15%), and male factor are reasonable. Minor inconsistency: the response recommends against freezing the embryo citing risk, yet later recommends FET strategy for future cycles with thicker lining, creating a slight tension. The recommendation to 'not freeze' a 3AA contradicts standard vitrification safety data showing excellent survival rates."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations align with ESHRE/ASRM guidelines. However, the recommendation to 'not freeze' the embryo because vitrification is too risky contradicts current evidence showing vitrified-warmed blastocysts have survival rates >95% and often superior outcomes in FET cycles, especially with a suboptimal endometrium (6.5mm). ESHRE guidelines would support considering freeze-all given the thin endometrium. The ERA recommendation for a thin lining case is also somewhat misaligned - ERA addresses timing, not thickness. Sperm DNA fragmentation testing recommendation is well-aligned with guidelines."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: smoking cessation with timeline, progesterone support details, antioxidant supplementation, SDF testing, ERA consideration, and FET strategy with target lining thickness (>8mm). The future cycle planning section is particularly actionable. Slight deduction for the potentially counterproductive 'do not freeze' recommendation which could lead to a suboptimal transfer outcome, and for not addressing the thin endometrium more aggressively (e.g., considering cycle cancellation/freeze-all given 6.5mm lining)."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.019662,
+  "judge_latency_ms": 17201.382457991713,
+  "judge_prompt_tokens": 3009,
+  "judge_completion_tokens": 709
+}

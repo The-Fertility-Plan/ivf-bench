@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0744",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response accurately describes the general features consistent with a 3AB Gardner score (expanded blastocyst, thinned zona, distinct ICM cluster, TE forming epithelium). However, the image is quite blurry and the description adds some detail that may be extrapolated from the Gardner score label rather than directly observed in the image. The visible cellular structures on the left side of the image (likely ICM with surrounding cells) are acknowledged, but the description doesn't fully account for the image's limited resolution or note the difficulty in precise morphological assessment from this particular image quality."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job connecting patient factors to embryo assessment. It correctly identifies age 39 as the dominant variable affecting aneuploidy risk, links male factor diagnosis to presumed normal female reproductive environment, integrates endometrial thickness favorably, and considers lifestyle factors. The sperm parameters (64.6M/mL, 60.5% motile) are not deeply analyzed in context of male factor diagnosis, and AMH being N/A is not addressed as a limitation for prognosis. Overall integration is solid but not exhaustive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from morphology to patient factors to probability estimate. The probability derivation (starting from younger-patient baseline, applying age-related aneuploidy discount, TE grade adjustment, endometrial quality bonus) is transparent and internally consistent. The distinction between implantation probability (25-35%), clinical pregnancy (30-40%), and live birth (25-30%) is slightly inconsistent as clinical pregnancy should not exceed implantation probability. This minor contradiction slightly reduces the score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with ESHRE/ASRM guidelines: SET recommendation for good-quality blastocyst, luteal phase support, ultrasound-guided transfer, PGT-A consideration for age 39 with prior failure, ERA for recurrent implantation failure workup. The suggestion of low-dose aspirin is somewhat controversial without clear indication (not standard ESHRE guideline without thrombophilia or thin endometrium). 'Embryo glue' recommendation is evidence-limited but not contraindicated. Overall well-aligned."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides specific, practical recommendations covering immediate transfer decisions (SET, luteal support, aspirin, alcohol cessation), transfer technique details, and a structured future cycle plan (PGT-A, ERA, thrombophilia screening, lifestyle modifications, stimulation adjustments). Recommendations are appropriately nuanced for the clinical scenario. Could be slightly more specific about progesterone dosing protocols or timing, and the sperm DNA fragmentation recommendation, while valid, could be better justified given the apparently normal sperm parameters provided."
+    }
+  ],
+  "extracted_probability": 0.3,
+  "judge_cost_usd": 0.020145,
+  "judge_latency_ms": 17123.252041987143,
+  "judge_prompt_tokens": 3230,
+  "judge_completion_tokens": 697
+}

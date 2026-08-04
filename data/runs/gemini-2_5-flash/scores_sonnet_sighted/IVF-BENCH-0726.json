@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0726",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies key features consistent with the Gardner score (expanded blastocoel, thin zona, ICM presence, TE layer). However, the image appears to show a somewhat degenerating or poor-quality blastocyst with significant granularity, debris, and irregular cell boundaries that the model underplays. The model describes it as 'good quality' and 'consistent with 3BA' without critically noting the visible cytoplasmic irregularities, extensive debris/fragmentation visible centrally, and the somewhat disorganized appearance that may not fully support a 'BA' grade visually. The description is somewhat generic and overly optimistic relative to what the image actually shows."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response does a good job integrating most clinical factors: BMI impact on endometrial receptivity and oocyte quality, age-related aneuploidy risk, tubal factor prognosis with IVF, endometrial thickness favorability, sperm parameters, and lifestyle factors. It correctly identifies BMI as the primary risk factor and connects it mechanistically to outcomes. Minor gap: AMH being N/A is noted but not explored further in terms of what that uncertainty means for reserve assessment alongside FSH alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and well-structured. The probability estimate of 45-60% follows reasonably from the stated positive factors (3BA, 15mm endometrium) moderated by BMI and unknown euploidy status. The stepwise reasoning from baseline rates to adjusted rates is coherent. Minor inconsistency: the model describes the embryo image as showing 'good quality' morphology while also noting 'minor debris,' but doesn't reconcile the visual appearance more critically with the assigned grade, which slightly weakens the chain of evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: elective single embryo transfer (eSET) recommendation for a good-quality blastocyst at age 35 is appropriate, luteal phase support is mentioned, PGT-A consideration is evidence-based, and weight management advice aligns with published guidance on BMI and IVF outcomes. The Gardner grading interpretation is accurate. Minor gap: no mention of ERA (endometrial receptivity array) consideration given the thick endometrium (15mm is at the upper limit and some guidelines suggest evaluation), and no discussion of freeze-all strategy which some guidelines favor in certain contexts."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: eSET is clearly recommended with rationale, luteal support is mentioned, BMI counseling with referral to nutritionist is concrete, PGT-A consideration for future cycles is specific, and stimulation protocol review is suggested. The response provides clear next steps for both this transfer and future planning. Could be improved by specifying progesterone type/route, discussing freeze-all vs. fresh transfer considerations, or addressing whether to proceed given the image quality concerns."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.023319,
+  "judge_latency_ms": 17321.374374994775,
+  "judge_prompt_tokens": 4068,
+  "judge_completion_tokens": 741
+}

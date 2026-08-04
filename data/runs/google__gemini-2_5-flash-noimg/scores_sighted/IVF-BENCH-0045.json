@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was provided and based morphology on the supplied Gardner 3AA grade rather than inventing image-specific findings. However, it repeated the prompt's interpretation that stage 3 means an expanded blastocyst with thinning zona, which is not strictly accurate under Gardner staging and does not reflect the actual image details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well: age, BMI, ovarian reserve, tubal factor, sperm parameters, endometrium, and first-cycle status, and connects them to prognosis. Some links are somewhat generalized and it overstates ovarian reserve as 'excellent' from limited data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with prognosis tied to embryo grade and patient factors. The main weakness is a somewhat optimistic implantation estimate and a few overconfident statements about endometrial receptivity and embryo quality."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as single embryo transfer and not routinely recommending PGT-A in a first cycle at age 33 are guideline-concordant. However, the morphology interpretation of Gardner stage 3 is imprecise, the implantation estimate is on the high side, and suggesting ERA/immunologic testing as part of recurrent implantation failure workup is not strongly guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, monitoring, and future planning including weight optimization and protocol review. It is useful clinically, though some recommendations remain generic and not tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.015234,
+  "judge_latency_ms": 5514.845666999463,
+  "judge_prompt_tokens": 3063,
+  "judge_completion_tokens": 403
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "gpt-5.4-2026-03-05-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated it could not assess the image directly and based morphology on the provided 3AA label. It avoided fabricating image-specific details, but it repeated the prompt's incorrect mapping of expansion 3 as 'expanded blastocyst with thinning zona' rather than true Gardner stage 3 full blastocyst, so morphology is only moderately accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It thoroughly integrated maternal age, BMI, prior IVF/live birth history, endometrial thickness, ovarian response, semen parameters, paternal age, and lifestyle factors with embryo quality and prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is clear and internally consistent, especially around morphology versus aneuploidy risk and prognosis. Minor issue: it accepts the supplied expansion-stage description without noting the Gardner inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely evidence-based and consistent with standard IVF practice: single embryo transfer, caution about add-ons, uterine cavity reassessment if failures continue, and nuanced discussion of PGT-A. Small deduction for the grading-stage imprecision."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "It gives practical next steps for the current transfer and contingency planning for future cycles, including transfer strategy, luteal support adherence, uterine evaluation, selective PGT-A discussion, and targeted optimization of modifiable factors."
+    }
+  ],
+  "extracted_probability": 0.425,
+  "judge_cost_usd": 0.016269,
+  "judge_latency_ms": 4653.615207993425,
+  "judge_prompt_tokens": 3608,
+  "judge_completion_tokens": 363
+}

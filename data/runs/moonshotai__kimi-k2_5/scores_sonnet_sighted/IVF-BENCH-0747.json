@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0747",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocyst with thinning zona, compact ICM, and cohesive TE layer consistent with Gardner 3AA. The ICM localization at '10-11 o'clock' is a reasonable attempt at spatial description. However, the image actually shows a somewhat granular, darker central mass and multiple vesicular structures that could indicate cytoplasmic fragmentation or vacuolation - features the model does not address. The description is largely accurate but misses some potentially concerning morphological details visible in the image such as the irregular texture and possible vacuoles in the TE/blastocoel region."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response demonstrates comprehensive integration of all provided clinical factors: maternal age, BMI, FSH, oocyte maturity rate, endometrial thickness, uterine factor diagnosis, sperm parameters, lifestyle factors (former smoking, restricted diet, stress), and first IVF cycle status. It correctly identifies the uterine factor as the dominant variable and explains mechanistic interactions between each factor and implantation probability. The table format effectively contrasts favorable vs. risk factors with quantified adjustments."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability derivation is transparent and logically structured, starting from a baseline and applying directional adjustments for each factor. The conditional reasoning around the uterine factor (treated vs. untreated) is appropriately nuanced. Minor inconsistency: the response states 'Clinical Pregnancy Rate 50-65%' as higher than the implantation probability of '45-60%', which is technically inverted (clinical pregnancy rate should be lower than or equal to implantation rate). The live birth estimate of 45-55% is reasonable but the hierarchy of estimates contains this logical inversion."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: eSET recommendation for uterine factor patients, luteal phase support protocols, hysteroscopic cavity assessment, ERA consideration for failed implantation, and GnRH agonist for adenomyosis. The assisted hatching recommendation for uterine factor is debatable - current ESHRE guidelines do not strongly support routine assisted hatching and evidence is limited. Progesterone dosing (600-800mg vaginal) aligns with standard protocols. PGT-A banking suggestion is appropriate given age and limited oocyte cohort."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and clinically actionable: exact progesterone dosing regimens, specific timing for hysteroscopy, named adjuvant interventions (ERA, MBSR, specific supplement doses like CoQ10 200mg), conditional pathways based on transfer outcome, and differentiated future planning based on uterine factor type. The response provides clear decision trees for both success and failure scenarios, addresses lifestyle modifications with specific targets (protein >60g/day, vitamin D >40ng/mL), and includes embryo banking strategy considerations."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.021738,
+  "judge_latency_ms": 16716.571833007038,
+  "judge_prompt_tokens": 3551,
+  "judge_completion_tokens": 739
+}

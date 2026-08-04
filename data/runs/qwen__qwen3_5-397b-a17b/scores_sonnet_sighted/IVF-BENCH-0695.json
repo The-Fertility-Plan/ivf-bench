@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0695",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the hatching blastocyst stage, describes the zona pellucida thinning/breaking, notes the expanded blastocoel, and correctly localizes the ICM as a dense cluster. The TE description as cohesive and continuous is appropriate. Minor issue: the ICM location described as '2 o'clock position' is reasonable but the image shows the dark mass more centrally-right. Overall the description aligns well with the Gardner 4AA score and visible image features without fabricating unseen details."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response excellently integrates all key clinical factors: DOR (AMH 0.12) contextualized against embryo quality, the apparent discrepancy in the 'male factor' diagnosis vs. normal semen parameters (correctly flagging possible morphology/DNA fragmentation issues), maternal age 36 and its aneuploidy implications, paternal age 42 and sperm DNA fragmentation risk, endometrial thickness as a positive modifier, and lifestyle factors. The 'quality vs. quantity' framing is clinically apt and the interactions between factors are clearly articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is well-structured and largely consistent. The probability estimate of 50-65% logically follows from the baseline for 4AA blastocysts, adjusted downward for aneuploidy risk at age 36 and male factor uncertainty. The recommendation against PGT-A is coherently justified given single embryo availability. Minor inconsistency: the response states blastocyst formation 'argues against severe fragmentation' yet still flags male factor as a negative modifier for implantation probability, creating slight tension. The 33% blastocyst rate calculation is correct but framed as 'excellent' when it represents only 1 of 3 oocytes."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly aligned with ESHRE/ASRM guidelines: SET recommendation for high-quality blastocyst, appropriate luteal support mention, DuoStim banking strategy for DOR patients, SDF testing for advanced paternal age, and the nuanced PGT-A discussion. The advice against PGT-A for a single embryo aligns with current guidance. Slight gap: no mention of ERA (Endometrial Receptivity Array) testing which some guidelines suggest for DOR patients, and DHEA is correctly flagged as controversial but CoQ10 evidence base could have been better qualified."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: clear SET recommendation with rationale, explicit luteal support reminder, well-reasoned PGT-A decision framework, DuoStim protocol suggestion for future banking, SDF testing with antioxidant therapy consideration, protocol dosage review, and patient counseling guidance on reserve prognosis. Each recommendation is tailored to this specific case's unique challenges (single embryo, DOR, male factor, no backup) and provides clear next steps for both immediate transfer and future cycle planning."
+    }
+  ],
+  "extracted_probability": 0.575,
+  "judge_cost_usd": 0.020619,
+  "judge_latency_ms": 16650.350249998155,
+  "judge_prompt_tokens": 3118,
+  "judge_completion_tokens": 751
+}

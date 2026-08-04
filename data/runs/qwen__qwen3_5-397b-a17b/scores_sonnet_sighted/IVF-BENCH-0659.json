@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0659",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expanded blastocoel, thinned zona pellucida, compact ICM, and cohesive TE consistent with a 3AA Gardner score. The description of ICM location and cell density is reasonable. However, the image appears to show some irregularity or collapse artifacts that the model does not address, and the description of the TE as showing 'no obvious signs of degeneration' may be slightly optimistic given the image quality. Overall solid morphological description with good detail."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: maternal age (24) as the strongest positive predictor, AMH and 100% maturation rate indicating ovarian quality, endometrial thickness as optimal, sperm parameters contextualized against the Male Factor diagnosis, BMI flagged with PCOS suspicion, and smoking as a critical modifier. The interaction between embryo quality and patient factors is explicitly discussed, including the 'gold standard' framing of young age plus top-tier morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning flows logically from baseline probability (>70% for age/grade) downward due to smoking (-10-20%) and BMI, arriving at 55-65%. The probability adjustment is internally consistent and well-explained. Minor issue: the PCOS suspicion based solely on AMH 6.15 and BMI 29.2 is somewhat speculative without additional diagnostic criteria, and the model acknowledges this is less of a concern, maintaining coherence. The conclusion follows clearly from the evidence presented."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: fresh transfer with adequate endometrial thickness, luteal phase support, smoking cessation counseling, and vitrification of surplus embryos. The Gardner grading interpretation is accurate. The suggestion for sperm DNA fragmentation testing in case of failure is evidence-based. Slight deviation: the model does not mention elective single embryo transfer (eSET) policy explicitly, which ESHRE strongly recommends for good-prognosis patients, though single embryo transfer is implied."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: proceed with fresh Day 5 transfer, ensure luteal support, urgent smoking cessation counseling, weight management, SDF testing if cycle fails, and cryopreservation of surplus embryos. The prioritization of smoking cessation as 'urgent' adds clinical nuance. Could be improved by specifying progesterone type/dosing, mentioning eSET explicitly, or discussing whether PGT-A would add value given the young age and good prognosis, but overall highly actionable for a clinician."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.019002,
+  "judge_latency_ms": 15714.265540998895,
+  "judge_prompt_tokens": 2924,
+  "judge_completion_tokens": 682
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0675",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies thinning zona pellucida, a developed blastocoelic cavity, and notes uncertainty about ICM quality. However, the image actually shows a fairly identifiable ICM cluster in the lower-left region, and the response overstates ambiguity. The TE description is vague. The analysis is consistent with the Gardner 3BB score provided but doesn't add much precision beyond what the score already conveys. Some fabricated uncertainty about features that are actually visible reduces the score."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "The response comprehensively integrates all provided clinical factors: age 31, BMI 40.4, AMH 4.61, FSH 5.5, endometriosis diagnosis, two prior failed cycles, sperm parameters, endometrial thickness 11mm, smoking status, and lifestyle factors. It clearly explains how each factor interacts with embryo quality and prognosis, distinguishing favorable from unfavorable factors and explaining their combined effect on implantation probability."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and consistent. The probability estimate of 30-45% follows logically from the balance of favorable and unfavorable factors identified. The distinction between implantation probability and live birth rate is appropriate. Minor inconsistency: the response describes the embryo as 'not poor quality' and 'legitimate/usable' while simultaneously emphasizing significant morphological uncertainty, creating slight tension. Overall the logic chain is sound and conclusions are supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines: recommends single embryo transfer for a 31-year-old, appropriately positions PGT-A as optional rather than mandatory at this age, addresses luteal support optimization, recommends uterine cavity assessment, and correctly identifies smoking and BMI as modifiable risk factors. Gardner grading criteria are correctly applied. Minor gap: does not specifically address ESHRE endometriosis guidelines regarding surgical intervention timing relative to IVF."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: immediate smoking cessation, 5-10% weight reduction target, single embryo transfer confirmation, luteal support optimization checklist, specific endometriosis workup items (hydrosalpinx, adenomyosis, endometriomas), uterine cavity review checklist (polyps, fibroids, chronic endometritis), endocrine screening panel, and strategic PGT-A considerations. The response also offers follow-up options and distinguishes between immediate transfer recommendations and future cycle planning with clear rationale for each."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.02301,
+  "judge_latency_ms": 15875.381083998946,
+  "judge_prompt_tokens": 4410,
+  "judge_completion_tokens": 652
+}

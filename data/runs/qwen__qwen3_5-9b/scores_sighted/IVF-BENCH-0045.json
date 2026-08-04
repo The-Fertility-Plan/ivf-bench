@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0045",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly flags a discrepancy between the image and the stated 3AA grade, but its direct image description is inaccurate and speculative (e.g., 'single large cell,' 'polar body,' 'degenerating oocyte'). It largely relies on the provided lab grade rather than the visible morphology."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including maternal age, BMI, ovarian reserve markers, tubal factor, sperm parameters, endometrial thickness, and lifestyle, and relates them to prognosis. Some claims, such as interpreting FSH 6.7 as suggesting low response despite normal AMH, are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable inconsistencies: it calls the embryo top-tier while also saying the image does not resemble a blastocyst, labels grade 3 as 'expanded' rather than full blastocyst, and makes somewhat unsupported inferences about low responder status and OHSS monitoring."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the advice is broadly consistent with IVF practice, but there are deviations: Gardner stage 3 is mischaracterized as expanded, sperm DNA fragmentation testing is suggested somewhat routinely, and PGT-A is framed loosely despite limited indication in a 33-year-old with no prior losses."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The recommendations are practical and clinically usable, including proceeding with transfer, luteal support, weight optimization, and future protocol review. However, some suggestions are generic or not tightly tailored to this specific case."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.014349,
+  "judge_latency_ms": 5605.793291993905,
+  "judge_prompt_tokens": 2733,
+  "judge_completion_tokens": 410
+}

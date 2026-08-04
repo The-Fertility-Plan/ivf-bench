@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "ivf-bench-qwen9b-vlm-orpo",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a transferable blastocyst and the provided 2AB label, but it shows uncertainty/possible mismatch on expansion stage (calling it early-full/borderline stage 3 despite given Gardner 2AB) and adds image-specific details that may not be firmly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, ovarian reserve, semen parameters, BMI, endometrium, diagnosis, and first-cycle status well, with appropriate discussion of how these factors modify prognosis, though some interactions are somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly internally consistent, with probability estimates tied to morphology and patient factors; minor inconsistency remains around staging and fresh-vs-frozen discussion without clear case-specific necessity."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based: single embryo transfer, cautious use of add-ons, and realistic counseling about morphology vs euploidy. Small deviations include speculative comments about extended culture/freeze decisions and some loose wording around Gardner staging."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer, luteal support, lifestyle, and what to review if unsuccessful. Useful and nuanced, though not highly specific on protocol-level management details."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.018009,
+  "judge_latency_ms": 6053.4218329703435,
+  "judge_prompt_tokens": 4293,
+  "judge_completion_tokens": 342
+}

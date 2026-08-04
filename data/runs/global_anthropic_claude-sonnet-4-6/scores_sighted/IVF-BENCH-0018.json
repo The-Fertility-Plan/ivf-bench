@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0018",
+  "model": "global.anthropic.claude-sonnet-4-6",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response includes several morphology inaccuracies and overcalls: it labels the zona as uniform with no thinning and the blastocoel as fully occupying the embryo, while the image appears more like an early/full but not clearly fully expanded blastocyst with a relatively thick zona. It also infers vacuolation and cytoplasmic granularity that are not reliably assessable from this image. ICM and TE being loose/sparse is broadly reasonable."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, tubal factor, sperm parameters, endometrium, BMI, smoking, alcohol, and first-cycle status, and relates them to prognosis. Some effects are overstated, but overall integration is strong."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical, but there are notable issues: it treats Day 4 blastulation as clearly accelerated/beneficial, applies large unsupported percentage penalties for lifestyle factors, and bases the probability estimate on a somewhat inflated baseline for a 2BB embryo. Conclusions are generally coherent but not fully well-supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Many recommendations are standard (proceed with transfer, luteal support per protocol, smoking/alcohol cessation), but several suggestions are not guideline-driven for this scenario, such as routine ERA after a single failure, thrombophilia testing, estradiol supplementation due to low BMI, and broad endorsement of PGT-A at age 33. Gardner stage interpretation is also imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer management and future planning, including lifestyle counseling and contingency planning. However, some proposed tests/interventions may be premature or not evidence-based, limiting top-tier actionability."
+    }
+  ],
+  "extracted_probability": 0.315,
+  "judge_cost_usd": 0.017475,
+  "judge_latency_ms": 6225.105334000546,
+  "judge_prompt_tokens": 3695,
+  "judge_completion_tokens": 426
+}

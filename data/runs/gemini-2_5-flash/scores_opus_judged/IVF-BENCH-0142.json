@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0142",
+  "model": "gemini-2.5-flash",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response describes the Gardner 3AB grading components reasonably well, but contains an error in Section 3 where it refers to 'Gardner Grade B for TE and ICM' when the ICM is actually graded A. The visual descriptions of expansion, ICM, and TE are generally consistent with the provided grading but rely heavily on restating the lab data rather than independent image analysis. The descriptions are adequate but not exceptionally detailed or precise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Good integration of patient factors including age, AMH, FSH, BMI, smoking status, endometrial thickness, and male factor diagnosis. The response correctly identifies the interplay between favorable factors (young age, good ovarian reserve, optimal endometrium) and risk factors (smoking, obesity). However, it could have more specifically quantified how smoking and BMI might modulate the implantation probability or discussed the sperm parameters in more detail."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical and well-structured, but there is an internal contradiction: the ICM is correctly identified as Grade A in Section 1 but then listed as Grade B in Section 3's risk factors. Additionally, the response was truncated before completing the favorable indicators list, the implantation probability estimate, and the recommendations sections, which significantly undermines the coherence of the overall assessment."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The Gardner grading interpretation is mostly aligned with established criteria. The discussion of smoking and BMI as risk factors is consistent with ASRM/ESHRE guidance. However, the response was cut off before providing the implantation probability estimate and recommendations, so alignment with clinical guidelines for transfer decisions and future planning cannot be fully assessed. The ICM grading error in Section 3 is a deviation."
+    },
+    {
+      "rubric": "actionability",
+      "score": 1,
+      "justification": "The response was truncated before reaching the implantation probability estimate (Section 4) and recommendations (Section 5). No specific actionable recommendations were provided for this transfer or future cycle planning. The clinician would not receive the most critical decision-support elements from this incomplete response."
+    }
+  ],
+  "extracted_probability": null,
+  "judge_cost_usd": 0.025675,
+  "judge_latency_ms": 23387.092207965907,
+  "judge_prompt_tokens": 2565,
+  "judge_completion_tokens": 514
+}

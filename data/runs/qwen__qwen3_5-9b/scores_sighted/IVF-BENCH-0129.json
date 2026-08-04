@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0129",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates visible features: the image does not clearly show a large blastocoel occupying most of the embryo, a distinctly central tightly packed ICM, or a clearly cohesive circumferential TE. It largely repeats the provided 3AA label rather than matching the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, BMI, male factor, endometrial thickness, and cycle history with embryo quality reasonably well, though it overinterprets fertilization/blastulation details not actually provided."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but there are notable issues: it claims an ~85% fertilization rate from MII oocytes without fertilization data, assumes likely surplus embryos, and gives an optimistic euploidy estimate for age 35."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but calling age 35 'optimal/prime,' implying morphology alone makes this a 'best-case scenario,' and suggesting PGT-A to minimize miscarriage without stronger nuance are mild departures from evidence-based framing."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps such as proceeding with transfer, luteal support, and general future planning, but recommendations remain somewhat generic and omit more specific transfer-cycle considerations."
+    }
+  ],
+  "extracted_probability": 0.55,
+  "judge_cost_usd": 0.012837,
+  "judge_latency_ms": 4797.84495900094,
+  "judge_prompt_tokens": 2494,
+  "judge_completion_tokens": 357
+}

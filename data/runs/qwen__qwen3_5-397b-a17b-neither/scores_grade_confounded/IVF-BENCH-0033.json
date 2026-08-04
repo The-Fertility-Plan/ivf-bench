@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0033",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response fails to use the provided Gardner score of 2BB and instead claims no specific morphology can be assessed, incorrectly framing the embryo as a Day 4 morula/early blastocyst rather than describing the documented full blastocyst with loosely grouped ICM and loose TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, ovarian reserve, male factor, BMI, endometrium, and smoking, and connects them to prognosis, though it misses the key interaction between the provided 2BB embryo quality and the clinical context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 2,
+      "justification": "The reasoning is undermined by a major internal inconsistency: it ignores the supplied blastocyst grade and argues Gardner scoring is inappropriate for Day 4, leading to a prognosis based on an incorrect developmental-stage assumption."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some recommendations are evidence-based (smoking cessation, luteal support, no routine PGT-A at age 29), but the statement that Gardner scoring is not applicable here conflicts with the provided lab grading, and suggestions like routine ICSI for all MII oocytes and testicular sperm/TESA are too strong for the presented data."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer and future planning, including smoking cessation, luteal support, male-factor workup, and culture strategy, though some recommendations are overreaching given the available evidence."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.01356,
+  "judge_latency_ms": 4420.730332996754,
+  "judge_prompt_tokens": 2690,
+  "judge_completion_tokens": 366
+}

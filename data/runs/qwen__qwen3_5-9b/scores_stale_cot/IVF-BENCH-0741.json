@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response largely states the image does not depict a blastocyst and then relies on the provided 3AA text grade rather than visible morphology. It gives correct generic Gardner 3AA descriptors, but these are not image-based and include some imprecise wording about thinning zona/readiness to hatch."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age-related aneuploidy risk, ovarian reserve, prior miscarriage, sperm parameters, endometrial thickness, and lifestyle factors with embryo quality reasonably well, though some interactions are simplified."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable, but the response is internally wavering about what the image shows and gives somewhat inconsistent probability framing. It mixes implantation, clinical pregnancy, and live birth concepts."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Use of Gardner grading and emphasis on age-related aneuploidy are appropriate, and suggesting discussion of PGT-A is reasonable. However, the implantation/live birth estimates are somewhat overstated for age 37 untested embryos, and some recommendations are generic rather than guideline-nuanced."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps: proceed with transfer, counsel regarding age-related aneuploidy, discuss PGT-A for future cycles, maintain luteal support, and optimize lifestyle. Specificity is decent but not highly tailored."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012275,
+  "judge_latency_ms": 6378.170958021656,
+  "judge_prompt_tokens": 7036,
+  "judge_completion_tokens": 348
+}

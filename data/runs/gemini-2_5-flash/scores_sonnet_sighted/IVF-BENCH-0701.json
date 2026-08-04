@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0701",
+  "model": "gemini-2.5-flash",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model acknowledges a discrepancy between the image appearance and the Gardner score, noting the blastocoel is not clearly visible and the embryo appears more like a morula/early blastocyst. This honest observation is appropriate, but the description lacks precision about specific visible features like the ICM cluster location, TE cell arrangement, and zona thinning. The model appropriately defers to the provided Gardner score rather than fabricating features, but the morphological analysis remains somewhat superficial."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response effectively integrates most key clinical factors: maternal age (31) linked to lower aneuploidy risk, male factor diagnosis contextualized with sperm parameters, endometrial thickness assessed as optimal, oocyte yield interpreted as adequate ovarian response, and lifestyle factors noted. The absence of AMH is flagged appropriately. Minor gap: BMI of 26.7 is not discussed in relation to outcomes, and the interaction between male factor severity and ICSI vs. IVF choice is not addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and consistent. The probability estimate of 60-75% follows reasonably from the cited factors (3AA grade, young age, optimal endometrium). The model correctly identifies the image-score discrepancy without contradicting itself. The recommendation for SET is well-supported by the reasoning. Minor issue: the model states 3AA typically yields 50-65% implantation then estimates 60-75%, slightly inconsistent but within acceptable range given the additional favorable factors cited."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations align well with ESHRE/ASRM guidelines: SET recommendation for young patient with good quality blastocyst, Day 5 transfer rationale, luteal phase support mention, and appropriate PGT-A discussion with balanced risk-benefit framing. Gardner grading criteria are correctly applied. The suggestion to consider sperm DNA fragmentation testing if failures occur aligns with current male factor guidelines. No major deviations from established practice."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Recommendations are specific and practical: SET with luteal support, patient counseling on realistic expectations, cryopreservation of remaining embryos, and conditional future planning including PGT-A consideration and sperm DNA fragmentation testing. The response provides clear decision trees for both success and failure scenarios. Slight limitation: no specific progesterone protocol details, no mention of freeze-all vs. fresh transfer considerations, and no specific follow-up timeline for beta-hCG testing."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.020763,
+  "judge_latency_ms": 15233.44020798686,
+  "judge_prompt_tokens": 3736,
+  "judge_completion_tokens": 637
+}

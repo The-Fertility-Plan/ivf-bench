@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available to it and did not fabricate visible embryo features. However, it provided no morphology assessment despite the actual image showing a blastocyst with a large blastocoel and indistinct ICM/TE, so accuracy is limited by omission."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates key factors well: young age, normal BMI, strong oocyte maturity yield, normal sperm parameters, endometrial thickness, first cycle, and endometriosis. It reasonably links these to prognosis, though interaction with the specific transferred embryo is constrained by absent morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and internally consistent, with the probability estimate tied to age, ovarian response, endometriosis, and unknown embryo quality. Minor weakness is that the estimate may be somewhat confident given the lack of embryo morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly evidence-based and consistent with standard IVF practice, including luteal support, embryo selection, cryopreservation, and cautious discussion of endometriosis management. Slight downgrade because routine PGT-A consideration in a 26-year-old after one failed transfer is not strongly guideline-driven."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer, counseling, luteal support, embryo freezing, and contingency planning for future cycles. It is useful clinically, though some suggestions remain somewhat general rather than tightly protocol-specific."
+    }
+  ],
+  "extracted_probability": 0.525,
+  "judge_cost_usd": 0.015294,
+  "judge_latency_ms": 6247.080750006717,
+  "judge_prompt_tokens": 3188,
+  "judge_completion_tokens": 382
+}

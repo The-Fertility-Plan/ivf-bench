@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0709",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The response accurately identifies the expansion stage (full blastocyst), describes the ICM as loosely grouped (consistent with B grade), and notes the TE as sparse with few large cells (C grade). The zona pellucida thinning observation is reasonable. The ICM localization attempt (8-9 o'clock) shows engagement with the image. Minor deduction for not noting the somewhat irregular/collapsed appearance of the blastocoel visible in the image, and the zona description as 'thin' may be slightly overstated given the image shows a relatively intact zona."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration across all clinical dimensions. The response connects maternal age (41) with aneuploidy risk, correctly contextualizes the AMH/FSH values as surprisingly good for age, links male factor diagnosis to potential sperm DNA fragmentation affecting blastocyst quality, and ties endometrial thickness to receptivity. The interaction between embryo grade and age-related chromosomal risk is well-articulated, and the previous failed cycle is incorporated into the risk assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimate of 10-20% is logically derived from age-based baselines, embryo grade adjustments, and the euploidy wildcard calculation. The euploidy probability (~20-25%) and its conditional impact on outcomes is coherently presented. Minor issue: the response states the zona appears thin suggesting hatching preparation, but the Gardner score is 2 (not 3+), which typically doesn't involve zona thinning to that degree—a slight inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 5,
+      "justification": "The response demonstrates strong alignment with ESHRE/ASRM guidelines and Gardner grading criteria. PGT-A recommendation for age 41 is consistent with current evidence-based practice. Sperm DNA fragmentation testing recommendation aligns with ESHRE male factor guidelines. The freeze-all strategy with FET for PGT-A cycles is consistent with current best practices. Probability estimates for aneuploidy at age 41 (70-80%) and euploid implantation rates (50-60%) are consistent with published literature."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Recommendations are highly specific and practical: proceed with transfer given optimal endometrial conditions, counsel on realistic expectations, recommend PGT-A for future cycles with clear rationale, suggest SDF testing with specific interventions if positive (antioxidants, TESA), and advise continuing antagonist protocol with freeze-all strategy. Each recommendation is tied to specific clinical findings and includes reasoning, making them immediately useful for clinical decision-making."
+    }
+  ],
+  "extracted_probability": 0.15,
+  "judge_cost_usd": 0.018987,
+  "judge_latency_ms": 14562.041790995863,
+  "judge_prompt_tokens": 2984,
+  "judge_completion_tokens": 669
+}

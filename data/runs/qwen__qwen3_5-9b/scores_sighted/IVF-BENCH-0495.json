@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0495",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "It correctly recognizes a very poor-quality blastocyst with absent/degenerate ICM and TE, but it misstates the expansion stage: Gardner 1 is an early blastocyst, not an expanded blastocyst, and claims significant zona thinning/pressure that are not well supported by the image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 3,
+      "justification": "It integrates age, prior IVF failures, sperm parameters, and endometrial thickness reasonably, but overstates FSH 7.2 as elevated/DOR, ignores missing AMH, and makes unsupported assumptions about embryo yield and maternal causation."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The overall logic is understandable and the low implantation estimate is directionally consistent with a 1DD embryo, but there are notable inconsistencies such as calling the embryo both grade 1 and clearly expanded, and inferring poor responder/DOR from data that do not clearly support it."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "Some points are aligned (poor prognosis for 1DD, age-related aneuploidy risk), but several recommendations are weakly evidence-based or not guideline-supported, including ERA/thrombophilia-immunology workup as routine, L-arginine/CoQ10 for current transfer support, and overconfident attribution of embryo quality to maternal factors."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "It gives practical next steps such as proceeding with transfer if this is the only embryo and considering protocol changes/further evaluation, but recommendations are somewhat generic and include questionable adjuncts without sufficient nuance."
+    }
+  ],
+  "extracted_probability": 0.075,
+  "judge_cost_usd": 0.014037,
+  "judge_latency_ms": 5904.438249999657,
+  "judge_prompt_tokens": 2659,
+  "judge_completion_tokens": 404
+}

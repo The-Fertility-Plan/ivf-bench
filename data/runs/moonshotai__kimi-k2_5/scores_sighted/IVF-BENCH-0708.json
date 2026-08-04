@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0708",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response correctly identifies a very poor-quality early blastocyst with poorly defined ICM and TE, consistent with the provided 0DD label. However, it overstates image-specific certainty by describing irregular cavitation and degeneration patterns that are difficult to confirm from the single image, and it repeats an inaccurate interpretation of 'Expansion Grade 0' as early blastocyst rather than standard Gardner numbering."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, low AMH, prior failed cycle, sperm motility, tubal factor, BMI, and endometrial thickness into prognosis reasonably well. Some links are somewhat speculative, especially attributing embryo quality strongly to male factor or implying ICSI without explicit data."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and generally consistent: very poor morphology plus limited ovarian reserve and suboptimal sperm support a very low implantation estimate. Minor issues include overconfident claims about aneuploidy risk and some speculative causal inferences."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the counseling and emphasis on poor prognosis are aligned with IVF practice, but several recommendations go beyond guideline-based evidence or are weakly supported (growth hormone, IMSI/PICSI, routine DHEA, donor gamete counseling after one similar cycle). The Gardner grading interpretation is also not fully precise."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for transfer counseling, luteal support, and future-cycle considerations, including protocol review and sperm testing. It is useful clinically, though some suggestions are more aggressive or less evidence-based than ideal."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.014454,
+  "judge_latency_ms": 5867.856207987643,
+  "judge_prompt_tokens": 2843,
+  "judge_completion_tokens": 395
+}

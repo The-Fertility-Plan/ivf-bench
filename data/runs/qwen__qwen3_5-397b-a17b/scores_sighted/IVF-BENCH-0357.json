@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0357",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Generally consistent with a good-quality blastocyst, but it overstates image certainty: the ICM location/density and fully cohesive TE are not clearly demonstrable from this single image, and calling 3AA the highest possible score is inaccurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates maternal age, ovarian reserve, prior failed cycle, endometrial thickness, BMI, lifestyle, and paternal age with embryo quality in a clinically meaningful way, though diagnosis-specific implications are limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning is structured and mostly logical, with a plausible link between morphology, age-related aneuploidy risk, and implantation estimate; minor overconfidence in morphology-to-euploidy inference prevents a top score."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Mostly aligned with standard IVF principles, but recommending PGT-A as highly recommended after one failed cycle and suggesting ERA after a second failed transfer are stronger than current evidence/guideline support; also 3AA is not the highest possible Gardner score."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including luteal support review and possible further testing, though some recommendations would benefit from more nuance about indications and evidence."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012441,
+  "judge_latency_ms": 4553.79874999926,
+  "judge_prompt_tokens": 2437,
+  "judge_completion_tokens": 342
+}

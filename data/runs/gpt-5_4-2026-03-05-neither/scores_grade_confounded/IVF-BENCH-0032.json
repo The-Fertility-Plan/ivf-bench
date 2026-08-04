@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0032",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes that no image was provided and avoids fabricating visual details, but it fails to use the supplied Gardner score 0DD, which indicates a very poor-quality early blastocyst with absent/degenerative ICM and TE. By treating morphology as unknown and discussing generic Day 4 possibilities, it misses key provided morphological information."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age, ovarian reserve, BMI, tubal factor, endometrium, semen parameters, prior biochemical pregnancy, and low MII yield, and connects them to prognosis. The main limitation is insufficient integration of the explicitly poor embryo grade into the overall assessment."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and logical, but there is a notable inconsistency: it says morphology cannot be assessed while ignoring the provided 0DD grade, then gives implantation estimates based on hypothetical better-quality Day 4 embryos. This weakens support for the final probability range."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Most recommendations are consistent with IVF practice: caution about Day 4 grading, preference for single embryo transfer, hydrosalpinx consideration, luteal support, and nuanced discussion of PGT-A and sperm DNA fragmentation. However, not incorporating the poor 0DD grade into prognosis is a meaningful deviation from morphology-based assessment standards."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for transfer management and future cycle optimization, including review of trigger timing, follicle sizes, possible dual trigger, culture strategy, hydrosalpinx evaluation, and when to consider additional testing. It is useful, though less tailored than it could be because it does not act on the 0DD morphology."
+    }
+  ],
+  "extracted_probability": 0.2,
+  "judge_cost_usd": 0.015618,
+  "judge_latency_ms": 5196.04870799958,
+  "judge_prompt_tokens": 2986,
+  "judge_completion_tokens": 444
+}

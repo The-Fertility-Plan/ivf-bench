@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0037",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Correctly identifies a very poor-quality early blastocyst/compact embryo with poorly defined ICM and TE, but misstates Gardner stage 1 as blastocoel less than half the embryo and does not discuss zona features; image/lab discrepancy is noted but morphology interpretation is somewhat imprecise."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, prior IVF failures/biochemical pregnancies, sperm parameters, BMI, endometrium, and transfer timing with embryo prognosis reasonably well, though it overstates DOR from limited ovarian reserve data and lacks AMH context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Overall logic is clear and the poor prognosis estimate follows from the embryo grade and age/history, but there are minor inconsistencies such as calling FSH 8.5 elevated/strongly suggestive of DOR and some uncertainty around day-4 versus blastocyst grading."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Generally aligned in recognizing very poor prognosis and counseling realistically, but PGT-A is presented too strongly as the key recommendation, thrombophilia testing is overextended for biochemical losses, and donor egg discussion is somewhat premature without fuller reserve/response assessment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for current transfer counseling and future evaluation, including uterine assessment and consideration of genetic testing, though some recommendations are broad and not fully prioritized."
+    }
+  ],
+  "extracted_probability": 0.1,
+  "judge_cost_usd": 0.013572,
+  "judge_latency_ms": 7265.16699999047,
+  "judge_prompt_tokens": 2774,
+  "judge_completion_tokens": 350
+}

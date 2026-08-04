@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0720",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "Mostly consistent with a 3AB blastocyst, correctly identifies a compact ICM and relatively sparse TE, but overstates certainty about expansion/thinned zona and describes cavity prominence less clearly supported by this single image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "Integrates age, endometrium, sperm quality, prior miscarriage, and ovarian reserve with embryo quality well, though it overinterprets the high AMH as likely PCOS and gives limited attention to BMI/tubal factor beyond background context."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "Overall logical and structured, but there are notable gaps: calling the embryo both grade 3 and 'expanded with thinning zona,' inferring protocol inadequacy from low oocyte yield alone, and linking stronger luteal support to TE grade lacks clear rationale."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 2,
+      "justification": "General transfer recommendation is reasonable, but several points are not well aligned with guidelines: suggesting PGT-A discussion for a single fresh-transfer embryo at age 29, implying TE grade affects luteal support, and recommending thrombophilia/APS workup after one miscarriage/failed transfer is not standard."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "Provides practical next steps such as proceeding with transfer and reviewing stimulation in future cycles, but some recommendations are too generic or based on weak premises, and alternatives are not well individualized."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.013461,
+  "judge_latency_ms": 5758.996249991469,
+  "judge_prompt_tokens": 2777,
+  "judge_completion_tokens": 342
+}

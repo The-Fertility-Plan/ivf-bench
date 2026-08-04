@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0047",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response conflicts with the provided laboratory grading of 3AA by reclassifying the embryo as 4BB, downgrading both ICM and TE, and describing possible hatching not established by the case data. Some general blastocyst features are reasonable, but there are notable inaccuracies."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates maternal age, BMI, prior IVF outcomes, sperm parameters, partner age, and endometrial thickness with prognosis reasonably well, though AMH is unavailable and the discussion of diagnosis is limited."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured, but there are inconsistencies: it calls the embryo 4BB despite the supplied 3AA grade, refers to Stage 4 while labeling 4BB yet the task data specify expanded blastocyst/3AA, and it speculates about protocol discrepancy and hatching without firm support."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly consistent with IVF practice, but strongly recommending PGT-A based mainly on age 36/partner age 42 and emphasizing sperm DNA fragmentation testing are more debatable than guideline-mandated. Misapplication of Gardner grading also weakens alignment."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for proceeding with transfer, luteal support, clarifying cycle type, and considering future testing/lifestyle optimization. Recommendations are useful, though some are somewhat generic and not fully individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.012597,
+  "judge_latency_ms": 4317.617792003148,
+  "judge_prompt_tokens": 2284,
+  "judge_completion_tokens": 383
+}

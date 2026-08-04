@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0067",
+  "model": "qwen/qwen3.5-397b-a17b-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model appropriately stated that no image was available and based morphology on the provided Gardner score. Its description of a 3AA blastocyst is generally consistent with the lab label, but it overstates this as 'top-tier'/'highest' and says 'fully expanded' rather than more precisely stage 3 expanded; it does not verify visible image features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "It integrates age, AMH, ovarian response, prior miscarriage, BMI, diagnosis, sperm parameters, endometrium, and lifestyle with embryo quality and prognosis in a clinically meaningful way."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly logical, with the implantation estimate tied to age, morphology, and history. Minor issues include some overconfidence in morphology-euploidy linkage and broad assumptions from AMH discordance."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice: SET in a young patient with a good blastocyst, standard luteal support, and RPL workup only after another loss. Slight deviations include suggesting aspirin despite mixed evidence and raising PGT-A despite limited routine indication at age 27."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides clear next steps for transfer management, monitoring, and future planning. It is practical and case-specific, though some suggestions (aspirin, embryo banking, PGT-A) would benefit from stronger qualification."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014463,
+  "judge_latency_ms": 5308.807292007259,
+  "judge_prompt_tokens": 2936,
+  "judge_completion_tokens": 377
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0100",
+  "model": "qwen/qwen3.5-397b-a17b-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response substantially conflicts with the provided lab grade of 2AB by reclassifying the embryo as 4BB/early 5BB, misgrading the ICM as B instead of A, and adding specific visual claims (thinning zona, hatching transition, clock-face ICM location) that are not reliably supported here."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most key factors well, including age, ovarian reserve, endometrium, male-factor context, and lifestyle, and relates them to prognosis, though it misses some nuance around BMI and overinterprets the male-factor discrepancy."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical overall, but the prognosis is built on an internally inconsistent embryo assessment because it replaces the stated 2AB with 4BB/5BB, which weakens the support for the implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Recommendations such as eSET and vitrification are broadly guideline-consistent, but suggesting PGT-A partly because of male factor/DNA fragmentation is not strongly guideline-based, and the morphology interpretation does not adhere to the provided Gardner criteria."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It gives practical next steps for transfer, embryo banking, optional further male evaluation, and lifestyle advice, though some recommendations are somewhat generic and depend on assumptions not established in the case."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.012336,
+  "judge_latency_ms": 4624.822458004928,
+  "judge_prompt_tokens": 2287,
+  "judge_completion_tokens": 365
+}

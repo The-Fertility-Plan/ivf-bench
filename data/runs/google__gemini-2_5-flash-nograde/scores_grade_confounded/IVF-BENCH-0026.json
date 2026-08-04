@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a generic blastocyst description but does not align well with the provided lab grade of 3AB, hedges excessively, and incorrectly suggests 3BB/4BB despite known grading data. It also adds uncertain visual claims not clearly supported."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age-related aneuploidy risk, low AMH/low oocyte yield, tubal factor, sperm motility, and endometrial thickness, and connects these to prognosis."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally logical, but there are notable issues: calling age 37 'not advanced maternal age' is inaccurate, and discussing a Day 4 transfer while describing the embryo as a likely Day 5 blastocyst creates some inconsistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based, but there are deviations: age 37 should be considered AMA, routine strong endorsement of PGT-A is more nuanced in low-yield patients, and some protocol suggestions are speculative without case-specific support."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response provides practical next steps for transfer, counseling, luteal support, and future-cycle considerations, though some recommendations remain somewhat generic rather than tightly individualized."
+    }
+  ],
+  "extracted_probability": 0.4,
+  "judge_cost_usd": 0.014463,
+  "judge_latency_ms": 4118.213542002195,
+  "judge_prompt_tokens": 3056,
+  "judge_completion_tokens": 353
+}

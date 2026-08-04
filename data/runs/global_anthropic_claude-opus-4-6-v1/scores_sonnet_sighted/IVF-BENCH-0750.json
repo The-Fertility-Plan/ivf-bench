@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0750",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The response provides a structured morphological analysis consistent with the Gardner 3AA grade, correctly identifying expansion, ICM location, and TE cohesion. However, the image appears to show a somewhat degenerating or poor-quality blastocyst with significant debris, fragmentation, and irregular cellular structures that don't clearly match a 3AA grade. The model largely defers to the provided Gardner score rather than critically analyzing the image, noting only 'minor debris' and 'possible small vacuoles' when the image shows considerably more concerning features including large vacuolated cells and substantial intracellular debris."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical parameters. The response systematically connects AMH, FSH, age, BMI, sperm parameters, endometrial thickness, and lifestyle factors to the embryo assessment. It correctly identifies age 37 as the critical inflection point for aneuploidy, contextualizes the borderline AMH within the age framework, addresses the borderline sperm motility, and integrates the unexplained infertility diagnosis with potential occult factors. The tabular presentation of interactions is clear and comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The probability modeling is transparent and logically structured, with clear step-by-step adjustments from base rates through age-related aneuploidy risk to final estimates. The distinction between euploid and aneuploid scenarios is well-reasoned. Minor inconsistency: the response accepts the 3AA morphological grade at face value despite the image showing potentially concerning features, which slightly undermines the coherence of the morphology-to-prognosis chain. The final 40-50% estimate follows logically from the stated assumptions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are well-aligned with ESHRE/ASRM guidelines: SET recommendation, luteal phase progesterone support, vitrification of remaining embryos, PGT-A discussion for age 37, and ERA consideration for unexplained infertility. The aneuploidy rate cited (~40-50% at age 37) is consistent with published literature. Low-dose aspirin recommendation is appropriately caveated as having modest evidence. The suggestion of growth hormone as adjunct is evidence-limited but acknowledged as such. CoQ10 recommendation is beyond strong guideline support but commonly discussed."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific dosing (progesterone 200mg TID), timing (hCG day 11-14 post-transfer), and clear decision trees for both successful and unsuccessful outcomes. The banking strategy recommendation with batch PGT-A testing is practically useful given the patient's reserve. Timeline urgency is quantified (3-6 months). The response distinguishes short-term and long-term recommendations and provides specific follow-up investigations (ERA, hysteroscopy, immunological workup) with appropriate clinical rationale for each."
+    }
+  ],
+  "extracted_probability": 0.45,
+  "judge_cost_usd": 0.022803,
+  "judge_latency_ms": 16495.424792010454,
+  "judge_prompt_tokens": 4011,
+  "judge_completion_tokens": 718
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0174",
+  "model": "global.anthropic.claude-opus-4-6-v1",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response misclassifies the image as a compacting morula/early blastocyst transitioning, whereas the provided lab grade is 2CA and the image is consistent with a blastocyst with a large blastocoel. It adds speculative details such as minimal fragmentation, cytoplasmic granularity, and asynchronous division history that are not reliably assessable from this image, though it correctly notes sparse ICM and relatively good TE."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, prior live birth, endometrial thickness, sperm parameters, BMI, PCOS diagnosis, and low oocyte yield with embryo quality and prognosis. Some points are overinterpreted, but overall the interaction between patient factors and embryo assessment is well addressed."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The structure is logical and the probability estimate is explained, but the reasoning is weakened by the initial morphological misclassification and by several speculative quantitative adjustments and claims that are not firmly supported."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly consistent with IVF practice, but there are notable deviations: ERA is overrecommended, PGT-A is framed too strongly, and adjuncts such as DHEA, growth hormone, acupuncture, and estradiol support are not guideline-based routine recommendations."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives clear practical next steps for proceeding with transfer, counseling, and future-cycle evaluation. However, some recommendations are overly specific or not strongly evidence-based, which limits top-tier actionability."
+    }
+  ],
+  "extracted_probability": 0.24,
+  "judge_cost_usd": 0.019593,
+  "judge_latency_ms": 5350.129708996974,
+  "judge_prompt_tokens": 4536,
+  "judge_completion_tokens": 399
+}

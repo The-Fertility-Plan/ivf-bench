@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0092",
+  "model": "google/gemini-2.5-flash-nograde",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response gives a broad blastocyst description but overstates certainty and assigns a very high-grade range (4AA/4AB/5AA/5AB) without image-grounded specificity; it fabricates details like uniform TE and tightly packed ICM rather than carefully limiting claims to visible features."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant factors well, including age-related aneuploidy risk, ovarian reserve, prior live birth, PCOS, sperm motility, and endometrium, though some links to embryo competence are somewhat overstated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it overweights prior live birth and morphology while underappreciating age-related euploidy limits, leading to an optimistic implantation estimate."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations such as SET for a good-quality day-5 blastocyst and consideration of PGT-A at age 38 are broadly guideline-consistent, though the prognosis framing is somewhat more confident than evidence typically supports."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "It provides practical next steps for transfer, luteal support, monitoring, cryopreservation, and future-cycle discussion, but lacks more nuanced contingency planning and specifics around counseling on age-related miscarriage/aneuploidy risk."
+    }
+  ],
+  "extracted_probability": 0.675,
+  "judge_cost_usd": 0.01311,
+  "judge_latency_ms": 4288.514542000485,
+  "judge_prompt_tokens": 2675,
+  "judge_completion_tokens": 339
+}

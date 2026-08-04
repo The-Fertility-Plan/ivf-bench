@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0345",
+  "model": "qwen/qwen3.5-9b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The morphological description generally aligns with the Gardner 3AB grading provided in the lab data. The ICM and TE descriptions are reasonable. However, there is a notable error: the response states Grade 4/5 corresponds to 'fully hatched,' when Grade 4 is actually an expanded blastocyst and Grades 5/6 refer to hatching/hatched. Also, the description of the zona as 'thinned in areas' and 'ready for hatching' slightly overstates what a Grade 3 typically shows. The comparison '3AA or 3AB' in the risk section is contradictory (comparing 3AB unfavorably to itself). The description is largely driven by the lab data rather than independent image analysis."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "The response integrates most relevant clinical factors well: maternal age, AMH, FSH, oocyte yield and maturity rate, sperm parameters, endometrial thickness, and lifestyle factors. The connection between male factor diagnosis and embryo quality is appropriately discussed. The mention of sperm DNA fragmentation as a theoretical concern is relevant. BMI is not explicitly discussed as a factor, which is a minor omission. Overall, the integration is thorough and clinically meaningful."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally coherent but contains a notable contradiction: in the risk factors section, the response states 'the Grade B Trophectoderm suggests a slightly lower implantation potential compared to a 3AA or 3AB embryo' — comparing the embryo unfavorably to its own grade (3AB). The probability estimate of 40-55% is reasonable and follows from the evidence presented, though the reasoning could be more precise. The euploidy rate discussion is appropriate but the jump from euploidy rate to implantation probability could be better articulated."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "The response is mostly aligned with clinical guidelines. The Gardner grading interpretation is largely correct but has the expansion scale error (Grade 4/5 description). The WHO reference for sperm concentration (15 M/mL) is correctly cited. The PGT-A discussion is appropriate for a 29-year-old first-cycle patient. However, the recommendation section conflates fresh and frozen transfer without clear guidance, and the 'future planning' advice about uterine over-distension from multiple pregnancies is oddly placed and not standard counseling in this context. The motility threshold discussion could note that 38.2% is actually below the WHO lower reference limit of 40%."
+    },
+    {
+      "rubric": "actionability",
+      "score": 3,
+      "justification": "The recommendations include proceeding with transfer, lifestyle maintenance, post-transfer monitoring, and future planning considerations. However, they lack specificity in several areas: no specific progesterone support recommendations, no discussion of luteal phase support, no mention of cryopreservation of remaining embryos from this cohort (22 COCs retrieved), and the future planning advice is somewhat generic. The PGT-A discussion is appropriately nuanced. The recommendation to 'avoid alcohol' is practical but the freeze-all suggestion for future cycles is somewhat confusing given the context."
+    }
+  ],
+  "extracted_probability": 0.475,
+  "judge_cost_usd": 0.032625,
+  "judge_latency_ms": 18748.938957985956,
+  "judge_prompt_tokens": 2685,
+  "judge_completion_tokens": 768
+}

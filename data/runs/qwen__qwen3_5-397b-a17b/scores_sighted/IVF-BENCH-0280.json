@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0280",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response overstates what is visible in the image, describing a clearly distinct blastocoel, a localized ICM at 9-11 o'clock, cohesive TE, and thinning zona/pre-hatching features that are not convincingly identifiable in this single frame. It relies heavily on the provided 3AA label rather than the actual image."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, BMI, male factor, endometrial thickness, first cycle status, and oocyte maturity with embryo prognosis reasonably well. It misses some nuance around absent AMH data and overinterprets the 100% MII rate as evidence of oocyte competence, but overall connects clinical factors to outcome appropriately."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally logical and internally consistent, with a plausible prognosis based on age, embryo grade, and lining. Minor issues include overconfidence from morphology alone and some speculative links (e.g., sperm DNA integrity, BMI effect), but no major contradictions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are mostly consistent with IVF practice: SET for a good-quality day-5 blastocyst in a 34-year-old, luteal support, and counseling on alcohol cessation are guideline-concordant. The suggestion to consider PGT-A after one failed transfer in a young first-cycle patient with male factor is more debatable and somewhat beyond standard routine guidance."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next steps for this transfer and future planning, including SET, luteal support, lifestyle counseling, nutritional review, and possible sperm DNA fragmentation testing. It is useful clinically, though some recommendations are somewhat generic and not highly individualized."
+    }
+  ],
+  "extracted_probability": 0.6,
+  "judge_cost_usd": 0.014019,
+  "judge_latency_ms": 6418.340208008885,
+  "judge_prompt_tokens": 2518,
+  "judge_completion_tokens": 431
+}

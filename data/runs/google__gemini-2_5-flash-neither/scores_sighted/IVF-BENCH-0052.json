@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0052",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated no image was provided and declined to describe morphology, avoiding fabricated claims; therefore it made no inaccurate morphological assertions."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated key factors well: young age, normal BMI, good oocyte maturity, unexplained infertility, normal sperm, endometrial thickness, and first cycle status, though AMH was unavailable and some links were somewhat generic."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "Reasoning was logical and internally consistent, clearly separating assumptions about embryo quality from patient-based prognosis; minor issue is that probability estimates rely heavily on assumed good morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations were broadly consistent with IVF practice, especially favoring SET in a young good-prognosis patient and not routinely recommending PGT-A initially; however, suggesting hysteroscopy/SIS or ERA/ReceptivaDx as routine considerations is somewhat more aggressive than guideline-based standard care."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and contingency planning, including SET, luteal support, cryopreservation, and future evaluation, though some advice remains generic because morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013296,
+  "judge_latency_ms": 4693.950333006796,
+  "judge_prompt_tokens": 2922,
+  "judge_completion_tokens": 302
+}

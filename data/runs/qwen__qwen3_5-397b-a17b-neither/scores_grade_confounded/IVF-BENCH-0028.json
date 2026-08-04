@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0028",
+  "model": "qwen/qwen3.5-397b-a17b-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response correctly notes no image was provided, but it fails to use the supplied Gardner 3AA morphology and instead questions the day/grade consistency, omitting the actual expansion, ICM, and TE features available in the case data."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, endometriosis, protocol, endometrial thickness, sperm parameters, BMI, and prior cycle history reasonably well with prognosis, though some links are somewhat generalized."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is mostly structured and understandable, but there is a notable inconsistency in discounting morphology as unknown despite a provided 3AA grade, and some assumptions about day-4 transfer reduce internal consistency."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Much of the discussion is broadly evidence-based, but recommendations such as aspirin/immunomodulators and combined progesterone without clear indication are not strongly guideline-supported, and the handling of Gardner grading/day mismatch is imperfect."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "The response gives practical next-step recommendations for transfer support and future planning, though some suggestions are somewhat nonspecific or not tightly evidence-based."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.012618,
+  "judge_latency_ms": 3685.676250002871,
+  "judge_prompt_tokens": 2601,
+  "judge_completion_tokens": 321
+}

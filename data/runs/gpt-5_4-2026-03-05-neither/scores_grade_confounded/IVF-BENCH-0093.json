@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0093",
+  "model": "gpt-5.4-2026-03-05-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 1,
+      "justification": "The response incorrectly states that no Gardner grade was provided, despite explicit data showing a 4AA hatching blastocyst. It therefore fails to describe the known morphology and omits key features available from the case."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates most relevant patient factors well, including age, prior live birth, ovarian reserve, endometrium, male factor, partner age, and cohort size, though it misses the important interaction with the known high-quality 4AA morphology."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 3,
+      "justification": "The reasoning is generally structured and internally consistent, but it is built on a major false premise that morphology is unknown, which weakens the probability estimate and downstream conclusions."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely consistent with IVF practice guidelines: single embryo transfer, standard luteal support, no bed rest, cautious use of PGT-A, and limited investigation after one failed transfer. Minor downgrade because the embryo grading data were overlooked."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer management and future cycle review, including stimulation-response assessment and male-factor workup if needed. It is useful, though less tailored than it should be because it ignores the provided 4AA grade."
+    }
+  ],
+  "extracted_probability": 0.375,
+  "judge_cost_usd": 0.01386,
+  "judge_latency_ms": 3934.359583996411,
+  "judge_prompt_tokens": 2905,
+  "judge_completion_tokens": 343
+}

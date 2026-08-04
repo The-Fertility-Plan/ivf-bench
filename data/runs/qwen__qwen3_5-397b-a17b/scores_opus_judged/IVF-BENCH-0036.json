@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0036",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately identifies the embryo as a compacted morula or very early blastocyst lacking a distinct blastocoel cavity, consistent with the 0DD Gardner score. It correctly notes granular cytoplasm, lack of distinguishable ICM/TE, and potential vacuolization/fragmentation. The description of the zona pellucida and overall appearance aligns well with the image. Minor speculation about vacuolization could be debated, but overall the morphological assessment is detailed and largely accurate."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The response connects maternal age (38) and paternal age (42) to aneuploidy risk and embryo degeneration, links DOR diagnosis to limited embryo availability, notes the favorable prior live birth as a positive predictor, contextualizes the Day 4 transfer decision, evaluates endometrial thickness relative to optimal thresholds, and appropriately notes the contradiction between low FSH and DOR diagnosis. Sperm parameters are also well-integrated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly coherent and logically structured. The <5% implantation probability follows directly from the degenerate morphology grade, developmental delay, and age-related aneuploidy risk. The model correctly prioritizes morphology as the strongest predictor while layering additional risk factors. No contradictions are present, and the conclusion that this is a low-probability transfer is well-supported by all presented evidence."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with ESHRE/ASRM guidelines. Gardner grading interpretation is accurate (D = degenerate). Recommendations for PGT-A, protocol adjustment, luteal support, and lifestyle modifications are evidence-based. The suggestion of DHEA supplementation is reasonable but somewhat controversial. The mention of 8mm endometrial thickness threshold is consistent with literature though debated. The recommendation to consider donor gametes is appropriately placed as a later consideration."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable recommendations covering both immediate and future planning. Specific suggestions include: robust progesterone support for borderline endometrium, PGT-A for future cycles, protocol change from long agonist to antagonist/DuoStim, sperm DNA fragmentation testing, specific supplements (CoQ10, DHEA), lifestyle interventions (stress management, exercise), and a clear escalation pathway to donor gametes. Counseling on expectations is also appropriately emphasized."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.02951,
+  "judge_latency_ms": 14627.587374998257,
+  "judge_prompt_tokens": 2772,
+  "judge_completion_tokens": 626
+}

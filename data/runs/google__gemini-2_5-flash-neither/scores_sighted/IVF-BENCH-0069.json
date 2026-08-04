@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0069",
+  "model": "google/gemini-2.5-flash-neither",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 5,
+      "justification": "The model explicitly stated that no embryo image was available to it and declined to fabricate morphology. It made no incorrect morphological claims."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrated age, ovarian reserve, BMI, tubal factor, sperm parameters, endometrium, and lifestyle well with expected prognosis, though this was necessarily conditional on assumed embryo quality."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is logical and internally consistent, with probability estimates tied to assumed blastocyst quality and favorable patient factors. Minor limitation is reliance on hypothetical morphology."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are broadly consistent with IVF practice: SET in a good-prognosis 31-year-old, morphology-based selection, luteal support, and cautious/optional PGT-A. Mention of ERA/thrombophilia screening is more controversial and less routinely guideline-supported."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, embryo selection, cryopreservation, and contingency planning, though some advice remains generic because morphology was unavailable."
+    }
+  ],
+  "extracted_probability": 0.625,
+  "judge_cost_usd": 0.013446,
+  "judge_latency_ms": 4245.004208001774,
+  "judge_prompt_tokens": 3047,
+  "judge_completion_tokens": 287
+}

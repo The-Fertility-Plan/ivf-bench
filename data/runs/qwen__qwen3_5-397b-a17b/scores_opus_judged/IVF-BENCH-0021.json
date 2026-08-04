@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0021",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "judge_model": "us.anthropic.claude-opus-4-6-v1",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 4,
+      "justification": "The model accurately describes the embryo as a morula or very early blastocyst with no visible blastocoel cavity, tightly packed cells, granular/uneven texture, and no distinguishable ICM or TE. The description of a 'mottled' appearance suggesting degeneration or arrest aligns well with the 0DD Gardner score. The mention of no distinct zona pellucida boundary is slightly imprecise (zona pellucida is typically visible even in arrested embryos), but overall the morphological assessment is detailed and consistent with the provided grading."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of clinical factors. The model astutely identifies the discrepancy between the DOR diagnosis and the high AMH (8.41 ng/mL) with 17 COCs retrieved. It connects smoking to poor embryo quality despite young age, notes the suboptimal sperm motility (36.5%), recognizes the favorable endometrial thickness (12mm), and discusses how the patient's age should have yielded better embryo quality. The integration of all these factors into a coherent clinical picture is comprehensive."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 5,
+      "justification": "The reasoning is highly logical and consistent throughout. The model correctly identifies that a 0DD embryo is essentially non-viable, logically connects smoking as a likely contributor to poor embryo quality despite favorable age and ovarian response, and the <5% implantation probability estimate follows directly from the evidence. The recommendation not to transfer is well-supported by the observations. No contradictions are present."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "The response aligns well with clinical guidelines. The Gardner grading interpretation is correct, the recommendation against transferring a 0DD embryo is appropriate, and the suggestion for extended culture to Day 5/6 in future cycles is standard practice. The sperm motility threshold mentioned (>40-50%) is slightly high compared to WHO 2021 reference values (>42% total motility), but this is a minor point. The smoking cessation recommendation is strongly evidence-based. The recommendation to cancel transfer of a degenerative embryo is clinically sound."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "The recommendations are highly specific and practical: (1) cancel this transfer, (2) immediate smoking cessation, (3) repeat semen analysis with antioxidant therapy consideration, (4) re-evaluate the DOR diagnosis, (5) extended culture to Day 5/6 in future cycles, and (6) focus on gamete health optimization. Each recommendation is tied to specific findings in the case and provides clear next steps for the clinician. The response also considers the possibility that other embryos from the cohort may have developed better."
+    }
+  ],
+  "extracted_probability": 0.05,
+  "judge_cost_usd": 0.029635,
+  "judge_latency_ms": 18139.24412499182,
+  "judge_prompt_tokens": 2592,
+  "judge_completion_tokens": 667
+}

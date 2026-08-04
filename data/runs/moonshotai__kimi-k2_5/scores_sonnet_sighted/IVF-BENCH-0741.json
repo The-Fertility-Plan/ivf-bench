@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0741",
+  "model": "moonshotai/kimi-k2.5",
+  "judge_model": "global.anthropic.claude-sonnet-4-6",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 3,
+      "justification": "The model provides a reasonable description aligned with the Gardner 3AA score, but the image appears to show a partially collapsed or degenerating blastocyst with fragmented/irregular internal structures rather than a pristine expanded blastocyst. The model largely echoes the provided Gardner score rather than critically analyzing the actual image, which shows concerning features like irregular cell boundaries and possible fragmentation. The description of a 'well-expanded blastocoel cavity occupying the majority of the embryonic volume' does not fully match the grainy, irregular appearance visible in the micrograph."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 5,
+      "justification": "Excellent integration of all clinical factors. The model thoughtfully connects AMH 5.8 with age-adjusted aneuploidy risk, addresses the male factor diagnosis with sperm parameters, interprets the previous miscarriage as proof of endometrial receptivity while flagging recurrence risk, and considers lifestyle factors (sedentary, former smoker, stress) in the context of implantation. The interaction between high ovarian reserve and egg quality at age 37 is well-articulated."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is generally well-structured and internally consistent. The probability estimates flow logically from the evidence, with appropriate sensitivity analysis for PGT-A status. The euploidy probability reasoning is sound. Minor issue: the model slightly overstates the protective effect of high AMH on aneuploidy rates, as the evidence for this correlation is not as strong as implied. The response was also cut off at the end, leaving the final clinical impression incomplete."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 4,
+      "justification": "Recommendations are largely aligned with ESHRE/ASRM guidelines: eSET recommendation is appropriate, progesterone luteal support is standard, aspirin recommendation for miscarriage history is reasonable though not universally guideline-mandated without thrombophilia workup, LMWH caveat is appropriately conditional, NIPT recommendation at 37 is guideline-consistent. PGT-A recommendation for future cycles given age and miscarriage history aligns with current practice. EmbryoGlue mention is evidence-weak but not contraindicated."
+    },
+    {
+      "rubric": "actionability",
+      "score": 5,
+      "justification": "Highly actionable with specific drug dosages (aspirin 75-100mg, progesterone 400-600mg twice daily), clear transfer technique recommendations, detailed contingency planning for both positive and negative outcomes, specific future workup suggestions (ERA, hysteroscopy, CD138, thrombophilia panel), and lifestyle modification specifics. The branching structure (if negative/if positive beta-hCG) provides a practical clinical roadmap."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.020736,
+  "judge_latency_ms": 14750.412749999668,
+  "judge_prompt_tokens": 3597,
+  "judge_completion_tokens": 663
+}

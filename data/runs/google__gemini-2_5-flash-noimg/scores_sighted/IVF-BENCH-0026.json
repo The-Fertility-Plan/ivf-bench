@@ -1,0 +1,37 @@
+{
+  "case_id": "IVF-BENCH-0026",
+  "model": "google/gemini-2.5-flash-noimg",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "rubrics": [
+    {
+      "rubric": "morphological_accuracy",
+      "score": 2,
+      "justification": "The response appropriately notes that no image was available and bases morphology on the provided 3AB score, but it repeats an incorrect interpretation of expansion 3 as 'expanded blastocyst' and adds image-level claims such as thinning zona and beginning to hatch that are not reliably supported by the actual image/day-4 context."
+    },
+    {
+      "rubric": "clinical_integration",
+      "score": 4,
+      "justification": "It integrates age, ovarian reserve, tubal factor, sperm parameters, endometrium, prior cycle history, and lifestyle with embryo quality in a clinically meaningful way, though it could better address the unusual day-4 transfer context and uncertainty around prognosis from morphology alone."
+    },
+    {
+      "rubric": "reasoning_coherence",
+      "score": 4,
+      "justification": "The reasoning is structured and mostly consistent, with age-related aneuploidy appropriately tempering optimism from morphology. Minor issues include overcalling 3AB as 'excellent' and giving a somewhat optimistic implantation estimate for a 37-year-old untested embryo."
+    },
+    {
+      "rubric": "guideline_alignment",
+      "score": 3,
+      "justification": "Most recommendations are broadly evidence-based (SET, luteal support, counseling), but there are deviations: Gardner stage 3 is misdescribed, PGT-A is presented somewhat strongly despite limited embryo numbers/DOR, and the implantation estimate is higher than many guideline-consistent expectations for this scenario."
+    },
+    {
+      "rubric": "actionability",
+      "score": 4,
+      "justification": "Provides practical next steps for transfer and future planning, including SET, luteal support, counseling, and review of cycle response. Some advice is generic lifestyle counseling rather than highly case-specific management."
+    }
+  ],
+  "extracted_probability": 0.5,
+  "judge_cost_usd": 0.015711,
+  "judge_latency_ms": 5455.4012500011595,
+  "judge_prompt_tokens": 3272,
+  "judge_completion_tokens": 393
+}
