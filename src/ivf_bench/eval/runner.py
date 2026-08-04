@@ -35,8 +35,25 @@ def _load_image_b64(images_dir: Path, image_path: str) -> str:
     return base64.b64encode(img.read_bytes()).decode("ascii")
 
 
+def _strip_grade(text: str) -> str:
+    """Remove the Gardner grade line, leaving the rest of the case intact.
+
+    Withholding the grade rather than the image is the other half of the two-by-two
+    that separates a model which cannot read the embryo from one for which the
+    grade had already answered the question.
+    """
+    out = []
+    for line in text.splitlines():
+        if line.strip().startswith("- Gardner Score:"):
+            out.append("- Gardner Score: [NOT PROVIDED - assess morphology from the image]")
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def _build_messages(
-    case: BenchmarkCase, images_dir: Path, include_image: bool = True
+    case: BenchmarkCase, images_dir: Path, include_image: bool = True,
+    include_grade: bool = True,
 ) -> list[dict]:
     """Build chat messages with image (works for both OpenRouter and OpenAI).
 
@@ -45,8 +62,9 @@ def _build_messages(
     score comes from looking at the embryo rather than from the Gardner grade and
     patient data it is given in text.
     """
+    prompt = case.prompt if include_grade else _strip_grade(case.prompt)
     if not include_image:
-        text = case.prompt.replace(
+        text = prompt.replace(
             "[IMAGE ATTACHED]", "[NO IMAGE PROVIDED - reason from the data below]"
         )
         return [{"role": "user", "content": [{"type": "text", "text": text}]}]
@@ -62,7 +80,7 @@ def _build_messages(
                 },
                 {
                     "type": "text",
-                    "text": case.prompt,
+                    "text": prompt,
                 },
             ],
         }
@@ -367,6 +385,7 @@ async def _call_bedrock(
     case_id: str,
     region: str = "us-east-1",
     include_image: bool = True,
+    include_grade: bool = True,
 ) -> tuple[ModelResponse, dict | None]:
     """Returns (ModelResponse, raw_api_response_dict).
 
@@ -381,14 +400,15 @@ async def _call_bedrock(
             "bedrock-runtime", region_name=region,
             config=BotoConfig(read_timeout=300, connect_timeout=10, retries={"max_attempts": 0}),
         )
+        prompt = case.prompt if include_grade else _strip_grade(case.prompt)
         if include_image:
             img_bytes = (images_dir / case.image_path).read_bytes()
             content = [
                 {"image": {"format": "png", "source": {"bytes": img_bytes}}},
-                {"text": case.prompt},
+                {"text": prompt},
             ]
         else:
-            content = [{"text": case.prompt.replace(
+            content = [{"text": prompt.replace(
                 "[IMAGE ATTACHED]",
                 "[NO IMAGE PROVIDED - reason from the data below]")}]
         messages = [{"role": "user", "content": content}]
@@ -544,6 +564,7 @@ async def run_model(
     backend: str = "openrouter",
     force_rerun: bool = False,
     include_image: bool = True,
+    include_grade: bool = True,
     run_suffix: str = "",
 ) -> Path:
     """Run inference for a model on all cases. Returns run_dir.
@@ -592,11 +613,12 @@ async def run_model(
         nonlocal total_cost, completed, errors
         async with sem:
             try:
-                messages = _build_messages(case, images_dir, include_image=include_image)
+                messages = _build_messages(case, images_dir, include_image=include_image, include_grade=include_grade)
 
                 if backend == "bedrock":
                     resp, raw = await _call_bedrock(
-                        model, case, images_dir, case.case_id, include_image=include_image)
+                        model, case, images_dir, case.case_id,
+                        include_image=include_image, include_grade=include_grade)
                 elif backend == "openai":
                     resp, raw = await _call_openai(api_key, model, messages, case.case_id)
                 elif backend == "gemini":
@@ -644,6 +666,7 @@ async def run_model(
         "model": model + run_suffix,
         "base_model": model,
         "include_image": include_image,
+        "include_grade": include_grade,
         "model_slug": _slug(model + run_suffix),
         "split": split,
         "backend": backend,
@@ -653,6 +676,16 @@ async def run_model(
         "total_cost_usd": total_cost,
         "input_price_per_m": input_price,
         "output_price_per_m": output_price,
+        # Sampling and budget come from the environment, so record what was
+        # actually in force. Without this a finished run cannot say how it was
+        # decoded, and a comparison between two runs cannot be checked.
+        "sampling": {
+            "temperature": float(os.environ.get("IVFBENCH_TEMPERATURE", "0.0")),
+            "top_p": os.environ.get("IVFBENCH_TOP_P"),
+            "top_k": os.environ.get("IVFBENCH_TOP_K"),
+            "repetition_penalty": os.environ.get("IVFBENCH_REPETITION_PENALTY"),
+            "max_tokens": int(os.environ.get("IVFBENCH_MAX_TOKENS", "4096")),
+        },
     }
     (run_dir / "run_meta.json").write_text(json.dumps(meta, indent=2))
 

@@ -22,7 +22,7 @@ RUBRIC_KEYS = [
 ]
 
 
-def summarize_run(run_dir: Path, cases_dir: Path) -> RunSummary:
+def summarize_run(run_dir: Path, cases_dir: Path, scores_dirname: str = "scores") -> RunSummary:
     """Compute summary statistics for a single model run.
 
     Only includes responses/scores whose case_id exists in `cases_dir`, so the
@@ -30,7 +30,7 @@ def summarize_run(run_dir: Path, cases_dir: Path) -> RunSummary:
     """
     meta = json.loads((run_dir / "run_meta.json").read_text())
     responses_dir = run_dir / "responses"
-    scores_dir = run_dir / "scores"
+    scores_dir = run_dir / scores_dirname
 
     split_case_ids = {p.stem for p in cases_dir.glob("IVF-BENCH-*.json")}
 
@@ -107,7 +107,7 @@ def summarize_run(run_dir: Path, cases_dir: Path) -> RunSummary:
     )
 
 
-def build_leaderboard(runs_dir: Path, cases_dir: Path) -> list[LeaderboardEntry]:
+def build_leaderboard(runs_dir: Path, cases_dir: Path, scores_dirname: str = "scores") -> list[LeaderboardEntry]:
     """Build leaderboard from all model runs."""
     entries: list[LeaderboardEntry] = []
 
@@ -115,12 +115,16 @@ def build_leaderboard(runs_dir: Path, cases_dir: Path) -> list[LeaderboardEntry]
         if not run_dir.is_dir() or not (run_dir / "run_meta.json").exists():
             continue
 
-        summary = summarize_run(run_dir, cases_dir)
+        # Ablation arms are separate experiments, not leaderboard entries.
+        meta = json.loads((run_dir / "run_meta.json").read_text())
+        if not meta.get("include_image", True) or not meta.get("include_grade", True):
+            continue
 
-        # Only include runs that have scores
+        summary = summarize_run(run_dir, cases_dir, scores_dirname)
+
+        # A run with no usable scores for this split is not a leaderboard row.
         if not any(v > 0 for v in summary.mean_scores.values()):
-            # Include unscored runs too, but with 0 scores
-            pass
+            continue
 
         entries.append(LeaderboardEntry(
             rank=0,

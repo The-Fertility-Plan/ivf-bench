@@ -8,6 +8,7 @@ Supports three judge backends:
 from __future__ import annotations
 
 import asyncio
+import base64
 import json
 import random
 import re
@@ -309,19 +310,29 @@ async def _call_bedrock(
     input_price: float,
     output_price: float,
     region: str = "us-east-1",
+    image_b64: Optional[str] = None,
 ) -> dict:
-    """Call Bedrock Converse API (sync, wrapped in executor for async compat)."""
+    """Call Bedrock Converse API (sync, wrapped in executor for async compat).
+
+    image_b64 attaches the same embryo image the model was shown, so that a
+    cross-judge check runs under the same information condition as the judge it
+    is checking.
+    """
     import boto3
 
     def _sync_call() -> dict:
         client = boto3.client("bedrock-runtime", region_name=region)
         t0 = time.monotonic()
+        content = ([{"text": prompt}] if image_b64 is None else
+                   [{"image": {"format": "png",
+                               "source": {"bytes": base64.b64decode(image_b64)}}},
+                    {"text": prompt}])
         try:
             resp = client.converse(
                 modelId=judge_model,
                 messages=[{
                     "role": "user",
-                    "content": [{"text": prompt}],
+                    "content": content,
                 }],
                 inferenceConfig={"maxTokens": 2048, "temperature": 0.0},
             )
@@ -358,16 +369,27 @@ async def _call_openai(
     api_key: str,
     input_price: float,
     output_price: float,
+    image_b64: Optional[str] = None,
 ) -> dict:
-    """Call OpenAI Chat Completions API."""
+    """Call OpenAI Chat Completions API.
+
+    image_b64 attaches the same embryo image the model was shown. Without it the
+    judge cannot verify a morphological description against anything, which makes
+    the morphology rubric a consistency check against the Gardner grade rather
+    than a measurement of image reading.
+    """
     from openai import AsyncOpenAI
 
     client = AsyncOpenAI(api_key=api_key)
+    content = ([{"type": "text", "text": prompt}] if image_b64 is None else
+               [{"type": "image_url",
+                 "image_url": {"url": f"data:image/png;base64,{image_b64}"}},
+                {"type": "text", "text": prompt}])
     t0 = time.monotonic()
     try:
         resp = await client.chat.completions.create(
             model=judge_model,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": content}],
             max_completion_tokens=2048,
             temperature=0.0,
         )
@@ -407,6 +429,7 @@ async def _judge_one(
     input_price: float = 0.0,
     output_price: float = 0.0,
     bedrock_region: str = "us-east-1",
+    image_b64: Optional[str] = None,
 ) -> JudgeResult:
     """Score one model response using the judge via any backend."""
     prompt = JUDGE_PROMPT_TEMPLATE.format(
@@ -417,10 +440,10 @@ async def _judge_one(
 
     if backend == "bedrock":
         call = lambda: _call_bedrock(  # noqa: E731
-            prompt, judge_model, input_price, output_price, bedrock_region)
+            prompt, judge_model, input_price, output_price, bedrock_region, image_b64)
     elif backend == "openai":
         call = lambda: _call_openai(  # noqa: E731
-            prompt, judge_model, api_key, input_price, output_price)
+            prompt, judge_model, api_key, input_price, output_price, image_b64)
     else:
         call = lambda: _call_openrouter(  # noqa: E731
             prompt, judge_model, api_key, input_price, output_price)
@@ -484,19 +507,29 @@ async def score_run(
     backend: str = "openrouter",
     bedrock_region: str = "us-east-1",
     max_cost_usd: Optional[float] = None,
+    scores_dirname: str = "scores",
+    images_dir: Optional[Path] = None,
+    image_as_reference: bool = False,
 ) -> Path:
     """Score all responses in a run directory. Returns scores_dir.
 
     max_cost_usd stops dispatching new judge calls once accumulated spend crosses
     the cap. Already-written scores are kept, so a capped run resumes cleanly.
+
+    image_as_reference attaches the embryo to the judge even for an arm where the
+    model was denied it, and tells the judge so. Ablation arms need this: holding
+    the judge's own eyesight constant across arms is what keeps a drop in score
+    attributable to the model losing an input rather than to the judge gaining
+    the ability to catch mistakes it previously had to accept.
     """
     responses_dir = run_dir / "responses"
-    scores_dir = run_dir / "scores"
+    scores_dir = run_dir / scores_dirname
     scores_dir.mkdir(exist_ok=True)
 
     meta = json.loads((run_dir / "run_meta.json").read_text())
     model = meta["model"]
     run_included_image = meta.get("include_image", True)
+    run_included_grade = meta.get("include_grade", True)
 
     resp_files = sorted(responses_dir.glob("IVF-BENCH-*.json"))
     rubric_text = _build_rubric_text()
@@ -547,14 +580,31 @@ async def score_run(
             case_file = cases_dir / f"{case_id}.json"
             case_data = json.loads(case_file.read_text())
             case_prompt = case_data.get("prompt", "")
-            # For a text-only ablation arm the model was told no image was
-            # supplied. Showing the judge the unmodified prompt makes it penalise
-            # a model for correctly reporting that it had nothing to describe, so
-            # the judge must see the prompt the model actually received.
+            # The judge must see exactly the prompt the model received. Showing
+            # it the unmodified case makes it penalise a model for failing to
+            # describe an image it was told it did not have, or for contradicting
+            # a Gardner grade it was never shown.
             if not run_included_image:
                 case_prompt = case_prompt.replace(
                     "[IMAGE ATTACHED]",
-                    "[NO IMAGE PROVIDED - reason from the data below]")
+                    "[NO IMAGE PROVIDED - reason from the data below]"
+                    if not image_as_reference else
+                    "[NO IMAGE PROVIDED TO THE MODEL - the model could not see the "
+                    "embryo and must not be penalised for declining to describe it. "
+                    "The image is attached to this message for your reference only, "
+                    "so that you can check any morphological claim the model does "
+                    "make against what is actually there.]")
+            if not run_included_grade:
+                case_prompt = "\n".join(
+                    "- Gardner Score: [NOT PROVIDED - assess morphology from the image]"
+                    if ln.strip().startswith("- Gardner Score:") else ln
+                    for ln in case_prompt.splitlines())
+
+            image_b64 = None
+            if images_dir is not None and (run_included_image or image_as_reference):
+                img = images_dir / case_data["image_path"]
+                if img.exists():
+                    image_b64 = base64.b64encode(img.read_bytes()).decode("ascii")
 
             result = await _judge_one(
                 backend, api_key, judge_model,
@@ -563,6 +613,7 @@ async def score_run(
                 input_price=input_price,
                 output_price=output_price,
                 bedrock_region=bedrock_region,
+                image_b64=image_b64,
             )
 
             total_judge_cost += result.judge_cost_usd

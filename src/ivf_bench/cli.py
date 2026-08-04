@@ -142,6 +142,7 @@ def run(
     output_price: float = typer.Option(0.0, "--output-price", help="$/M output tokens"),
     force: bool = typer.Option(False, "--force", "-f", help="Force re-run even if responses exist"),
     no_image: bool = typer.Option(False, "--no-image", help="Text-only ablation: drop the embryo image"),
+    no_grade: bool = typer.Option(False, "--no-grade", help="Ablation: withhold the Gardner grade"),
     run_suffix: str = typer.Option("", "--run-suffix", help="Suffix for the run directory, e.g. -noimg"),
 ) -> None:
     """Run VLM inference on benchmark cases via OpenRouter or OpenAI."""
@@ -187,6 +188,7 @@ def run(
         backend=backend,
         force_rerun=force,
         include_image=not no_image,
+        include_grade=not no_grade,
         run_suffix=run_suffix,
     ))
     console.print(f"\nRun saved to: [bold]{run_dir}[/bold]")
@@ -229,6 +231,9 @@ def score(
     bedrock_region: str = typer.Option("us-east-1", "--bedrock-region"),
     split: str = typer.Option("test", "--split", "-s", help="test / validation / held_out (selects cases_dir)"),
     max_cost: Optional[float] = typer.Option(None, "--max-cost", help="Abort once judge spend exceeds this many USD"),
+    scores_dir: str = typer.Option("scores", "--scores-dir", help="Subdirectory to write scores into (use a second name for a second judge)"),
+    with_image: bool = typer.Option(False, "--with-image", help="Show the judge the embryo image, so morphology can be scored against it"),
+    image_as_reference: bool = typer.Option(False, "--image-as-reference", help="Attach the image to the judge even in an arm where the model was denied it, telling the judge so. Keeps judge eyesight constant across ablation arms"),
 ) -> None:
     """Score model responses using LLM-as-judge (Health-SCORE rubrics)."""
     api_key = _get_judge_api_key(backend)
@@ -260,6 +265,9 @@ def score(
         backend=backend,
         bedrock_region=bedrock_region,
         max_cost_usd=max_cost,
+        scores_dirname=scores_dir,
+        images_dir=config.paths.images_dir if (with_image or image_as_reference) else None,
+        image_as_reference=image_as_reference,
     ))
 
 
@@ -329,6 +337,7 @@ def score_all(
 @app.command(name="leaderboard")
 def leaderboard_cmd(
     config_path: Optional[Path] = typer.Option(None, "--config", "-c"),
+    scores_dir: str = typer.Option("scores", "--scores-dir", help="Which scores subdirectory to build from"),
     split: str = typer.Option("test", "--split", "-s", help="test / validation / held_out"),
 ) -> None:
     """Generate and display the leaderboard from all scored runs."""
@@ -353,7 +362,7 @@ def leaderboard_cmd(
         cases_dir = config.paths.cases_dir
         suffix = ""
 
-    entries = build_leaderboard(RUNS_DIR, cases_dir)
+    entries = build_leaderboard(RUNS_DIR, cases_dir, scores_dir)
     if not entries:
         console.print("[yellow]No model runs found.[/yellow]")
         raise typer.Exit(1)

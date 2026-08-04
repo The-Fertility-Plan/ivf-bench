@@ -18,10 +18,11 @@ data/raw/
 data/orpo/
 data/runs/*/raw/
 data/runs/*/responses_raw_with_cot/
-data/runs/*/scores_stale_cot/
-data/runs/*/scores_zero_judge_failure/
-data/runs/*/scores_opus_judged/
 data/runs/_zero_score_backup/
+
+# The superseded score sets are small and are the evidence Appendix D points to,
+# so they ship. Only the bulky raw API envelopes stay out; the provider field we
+# cite from them is extracted into data/runs/provider_manifest.json.
 
 # LaTeX build products
 arxiv/*.aux
@@ -83,3 +84,11 @@ docs/
 configs/training_orpo_qwen_vlm.yaml
 configs/training_orpo_qwen_vlm_sweep.yaml
 configs/training_orpo_qwen_vlm_sweep_v2.yaml
+
+# Quarantined material: a shell error that produced empty run dirs, and score
+# sets written under a mixed judge condition. Neither backs a reported number.
+data/runs/_junk_broken_loop/
+data/runs/_superseded_blind_ablation/
+
+# rev2 is a copy of arxiv/ivf_bench.pdf for circulation, not a separate artifact
+arxiv/ivf_bench_rev2.pdf
