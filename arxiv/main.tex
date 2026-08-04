@@ -85,30 +85,27 @@ proposes.
 
 FIG_PIPELINE_PLACEHOLDER
 
-We argue that the limitation lies in the framing rather than in the
-architecture. The embryo image captures only part of what determines whether a
-transfer succeeds; the remainder is patient-level, comprising ovarian reserve,
-endometrial receptivity, body mass index and lifestyle, the history of previous
-cycles, and the andrology profile. In clinical practice most of this information
+We argue the limitation lies in the framing rather than the architecture. The
+image captures only part of what determines whether a transfer succeeds; the rest
+is patient-level, comprising ovarian reserve, endometrial receptivity, body mass
+index and lifestyle, previous cycles, and the andrology profile. Most of that
 resides with the treating physician and rarely reaches the embryologist at the
 microscope, still less the imaging model, so a system operating on pixels alone
-is not so much failing at prediction as being asked to predict without the
+is not failing at prediction so much as being asked to predict without the
 covariates that govern the outcome.
 
-Vision-language models are, in principle, capable of consuming both modalities,
-but the claim has never been testable, because the data required to test it are
-not publicly available: embryo images are sensitive clinical records,
-outcome-linked patient context is more sensitive still, and the regulatory and
-privacy requirements for assembling the two together are stringent enough that
-essentially every substantial dataset in this field remains private. This, rather
-than model capacity, is the binding constraint, and it motivates the first
-contribution of this work, which is an instrument for measuring whether a model
-can use patient context at all.
+Vision-language models can in principle consume both modalities, but the claim
+has never been testable, because embryo images are sensitive clinical records,
+outcome-linked patient context more sensitive still, and the review required to
+assemble the two is stringent enough that essentially every substantial dataset
+in this field stays private. That, rather than model capacity, is the binding
+constraint, and it motivates an instrument for measuring whether a model can use
+patient context at all.
 
-\textbf{IVF-Bench} comprises 753 blastocyst cases imaged on day 5, of which 641
-were transferred on day 5 and 112 on day 4, each pairing a real
-embryo image and its silver-standard Gardner annotation with the cycle data and recorded
-outcomes of the same patient, together with the patient-history fields that no
+\textbf{IVF-Bench} comprises 753 blastocyst cases, each imaged on the day the
+embryo reached the blastocyst stage and was transferred, 641 on day 5 and 112 on
+day 4, and each pairing a real embryo image and its silver-standard Gardner
+annotation with the cycle data and recorded outcomes of the same patient, together with the patient-history fields that no
 public dataset supplies and that we therefore generate from published population
 distributions, labeling each as generated and defending the choice in
 Section~\ref{sec:synthetic}. A model is asked to describe the embryo, integrate
@@ -124,30 +121,31 @@ We evaluate seven frontier and open-weight systems and then post-train a 9B open
 model on preference pairs derived from the benchmark, obtaining the following results:
 
 \begin{enumerate}
-\item Targeted post-training substitutes for scale on this task: 500 training
-      pairs are sufficient to move a 9B open model past Claude Opus 4.6 into
-      second position of eight at roughly one seventh of the marginal inference
-      cost, indicating that the reasoning component of embryo assessment is
-      accessible to models well below frontier scale, though the comparison is
-      made by a single judge and Section~\ref{sec:robustness} bounds what that
-      permits us to conclude.
-\item The improvement is distributed across all five rubrics rather than
-      concentrated in one, which distinguishes a procedure that improves the
-      assessment as a whole from one that optimizes a single reported quantity.
-\item Outcome discrimination remains weak for every system evaluated, and we
-      quantify the deficit against a baseline that ignores its inputs entirely,
-      attributing the ceiling to the available data rather than to model
-      capacity, for the reason given above.
-\item Morphology grounding and guideline alignment are the two weak rubrics,
-      averaging roughly a point below clinical integration, and because our judge
-      does not observe the image we treat morphology scores as an upper bound on
-      image comprehension. Removing the image entirely costs between 0.07 and
-      0.23 points on a five-point scale, and nothing measurable for half the
-      systems tested, so once the expert grade is supplied in text the pixels add
-      very little that current systems can use, which is the same conclusion the
-      negative randomized trial of image-only ranking reached by a different
-      route.
+\item \textbf{Five hundred preference pairs raise a 9B open model 24.6\% over its
+      own base on the held-out split}, and a judge from a different family
+      independently puts the same gain at 15.5\%. This is the paper's central
+      training result, a within-model comparison no leaderboard convention can
+      distort, and it says the reasoning half of embryo assessment is reachable
+      far below frontier scale. The gain is also enough to place the model second
+      of eight ahead of Claude Opus 4.6 at roughly one seventh of the marginal
+      inference cost, but that ranking is GPT-5.4's and reverses under Sonnet 4.6,
+      so we report it as a consequence rather than as the claim.
+\item The improvement spreads across all five rubrics rather than concentrating
+      in one, which separates a procedure that raises the assessment from one
+      that optimizes a reported quantity.
+\item Outcome discrimination stays weak for every system, and we quantify the
+      deficit against a baseline that ignores its inputs entirely, placing the
+      ceiling in the data rather than in model capacity.
+\item Morphology grounding is the weakest of the five rubrics, roughly 1.4 points
+      below clinical integration, and putting the judge in front of the embryo is
+      what revealed it: the same responses scored half a point higher under a
+      judge that could not check them.
 \end{enumerate}
+
+Building the instrument surfaced four properties of rubric-based judging that
+affect any benchmark of this shape, one of which withdraws a quantitative claim
+the earlier release carried. They are incidental to the argument above and are
+collected in Section~\ref{sec:judgelessons}.
 
 The practical implication is that progress in this area depends less on model
 development than on the construction of a public dataset linking embryo images to
@@ -200,23 +198,25 @@ methods opened up by DPO \citep{rafailov2023dpo}.
 Open embryo data is rare, because embryo images are sensitive clinical records
 and most published systems are trained on private single-clinic collections. We
 build on the Kromp blastocyst dataset \citep{kromp2023}, which is public under CC
-BY 4.0 and links day-5 embryo images to Gardner grades, selected cycle variables, and
-pregnancy outcomes. The clinical annotation file contains 754 records spanning 732 patients, one of
+BY 4.0 and links blastocyst images to Gardner grades, selected cycle variables,
+and pregnancy outcomes. Culture ran to the blastocyst stage and transfer followed
+on day 4 where blastocysts were already available and on day 5 otherwise, so each
+image is taken on its own case's transfer day rather than on a fixed day for
+every case; the dataset records that day and we pass it to the model. The clinical annotation file contains 754 records spanning 732 patients, one of
 which references an image absent from the distributed archive, leaving 753 usable
 cases from 731 patients.
 
-Preparing the source data required more correction than we anticipated, and we
-document it because anyone reusing the dataset will encounter the same issues.
-The clinical annotation file is semicolon-separated and Latin-1 encoded, and had
-at some point been opened in a German-locale spreadsheet, which silently
-converted 500 AMH values and 144 endometrial thickness values into dates, so that
-a value of 1.26 appears as \texttt{J\"an.26}; we recover these by mapping the
-month abbreviations back to numbers. Oocyte counts occasionally appear in
-additive form such as \texttt{7+1}, which we sum, and missing values remain
-missing, presented to models as ``not available'' rather than imputed. One record
+Preparing it took more correction than we expected, and we document that because
+anyone reusing the dataset will meet the same issues. The annotation file is
+semicolon-separated, Latin-1 encoded, and had at some point been opened in a
+German-locale spreadsheet, which silently turned 501 AMH values and 144
+endometrial thickness values into dates, so that 1.26 appears as
+\texttt{J\"an.26}; we map the month abbreviations back. Oocyte counts sometimes
+appear additively, as \texttt{7+1}, which we sum, and missing values stay
+missing, shown to models as ``not available'' rather than imputed. One record
 carries a live birth without the clinical pregnancy that must precede it, and we
-retain it unaltered, on the view that silently repairing a source dataset is less
-defensible than reporting the inconsistency.
+leave it unaltered, since silently repairing a source dataset is less defensible
+than reporting the inconsistency.
 
 \subsection{What a case contains}
 
@@ -256,8 +256,10 @@ reproduced entirely from public sources, at two costs that bear directly on the
 interpretation of our results. First, the generated fields are sampled without reference to the recorded
 outcomes. Two of them are nonetheless conditioned on the patient's real age,
 namely basal FSH and partner age, which correlate with it at 0.32 and 0.73
-respectively, and each therefore functions as a weak age proxy: taken alone they
-reach AUROC 0.527 and 0.532 against clinical pregnancy. Because age is itself
+respectively, and each therefore functions as a weak age proxy: taken alone, and
+read in the direction that makes them predictive at all, with higher values
+indicating a poorer prognosis, they reach AUROC 0.527 and 0.532 against clinical
+pregnancy. Because age is itself
 supplied as a measured field, these fields add no information a model did not
 already have, but the stronger claim that the generated context is entirely
 uninformative is not one we can make. The outcome metrics in
@@ -369,6 +371,12 @@ ORPO_PLACEHOLDER
 ROBUSTNESS_PLACEHOLDER
 
 % ============================================================
+\section{Four things we learned about grading with a language model}
+\label{sec:judgelessons}
+
+JUDGELESSONS_PLACEHOLDER
+
+% ============================================================
 \section{Limitations}
 \label{sec:limitations}
 
@@ -380,10 +388,10 @@ LIMITATIONS_PLACEHOLDER
 
 RELEASE_PLACEHOLDER
 
-\clearpage
+% no \clearpage: the references and appendix flow on rather than each claiming a
+% fresh page, which was costing two nearly-empty pages
 \bibliography{references}
 
-\clearpage
 \appendix
 \section{Case prompt template}
 \label{app:prompt}
@@ -397,7 +405,7 @@ RUBRIC_APPENDIX_PLACEHOLDER
 \label{app:distributions}
 DISTRIBUTION_APPENDIX_PLACEHOLDER
 
-\section{Two evaluation defects}
+\section{Three evaluation defects}
 \label{app:defects}
 DEFECTS_APPENDIX_PLACEHOLDER
 

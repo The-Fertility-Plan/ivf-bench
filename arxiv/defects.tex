@@ -1,27 +1,51 @@
-\textbf{Two evaluation defects and their correction.} We report both because
-each is easy to reproduce inadvertently and neither is visible in the resulting
-scores.
+We report all three because each is easy to reproduce inadvertently, none is
+visible in the resulting scores, and the third produced a published-looking
+result that was entirely an artifact.
 
-The first concerns failed judge calls: when a call errored, the pipeline
-persisted a score record containing five zeros and continued, and because
-subsequent runs skip cases for which a score record already exists, those
-failures became permanent. In our initial pass this silently invalidated 231 of
-the test-split scores, 211 of which belonged to a single model, so that the
-model's reported row was computed from 309 of 550 cases while the accompanying
-table indicated 520. The judge now declines to persist a failed score, leaving
-the case pending for a subsequent run.
+\textbf{Failed judge calls were persisted.} When a call errored the pipeline
+wrote a score record of five zeros and continued, and because later runs skip
+cases that already have a record, those failures became permanent. In our initial
+pass this silently invalidated 231 test-split scores, 211 of them on a single
+model, so that model's row was computed from 309 of 550 cases while the table
+said 520. The judge now declines to persist a failed score.
 
-The second concerns how reasoning traces are delivered. Our post-trained model
-was served through vLLM without a reasoning parser, and because Qwen chat
-templates pre-fill \texttt{<think>} in the generation prompt, the model emits its
-reasoning, a closing \texttt{</think>}, and then its answer within a single
-field, whereas every hosted API returns reasoning in a separate field. Our model
-was consequently graded on approximately 4,000 characters of unfiltered reasoning
-prepended to its answer while all other systems were graded on the answer alone;
-correcting this raised its test-split score from 3.81 to 4.17 and moved it from
-third position to second. The general point is that comparisons between locally
-served reasoning models and hosted APIs require verifying the contents of the
-string being graded.
+\textbf{Reasoning was graded as answer.} Our model was served through vLLM
+without a reasoning parser, and because Qwen chat templates pre-fill
+\texttt{<think>} the model emits its reasoning, a closing \texttt{</think>} and
+then its answer in one field, whereas hosted APIs return reasoning separately.
+Ours was graded on roughly 4,000 characters of unfiltered reasoning prepended to
+its answer while every other system was graded on the answer alone; correcting
+this raised its test score by 0.36 points and moved it from third to second.
+Comparisons between locally served reasoning models and hosted APIs require
+checking what is actually in the string being graded.
 
-All results reported in this paper follow both corrections: every score in the study is
-produced by GPT-5.4, and no score record contains a judge failure.
+\textbf{The judge saw inputs the model had been denied.} This occurred twice, on
+two different fields. We first ran the image
+ablation with the judge reading the stored prompt, which still said
+\texttt{[IMAGE ATTACHED]}, while the model in the withheld arm had been told
+otherwise. The models behaved correctly and said they could not describe an
+embryo they had not seen; the judge, believing an image was attached, marked that
+down. GPT-5.4's morphology score appeared to fall from 3.94 to 1.98, and 35 of 40
+sampled justifications cited the missing description as the reason. Read at face
+value it was a striking demonstration that the vision channel carries substantial
+information. It was an artifact of our own prompt handling. Having fixed the
+image marker we ran the two-by-two and reproduced the same mistake on the Gardner
+grade: arms that withheld the grade from the model still showed it to the judge,
+whose justifications then objected that a description ``conflicts with the
+provided lab grade of 1DD'' about a grade the model never received. On one
+representative case morphology grounding moved from 2 to 4 once the judge's copy
+matched the model's.
+
+Both were fixed in one place. The judge now derives its copy of the prompt from
+the run metadata recording what the model was given. Fixing only the text would
+have introduced a third asymmetry, this time in the judge, since a judge denied
+the image in one arm and given it in another is a different instrument in each;
+in the ablation arms the embryo is therefore still attached to the judge call
+even when the model was denied it, together with an instruction that the model
+could not see it and must not be penalised for declining to describe it.
+
+All results in this paper follow all three corrections: every score is produced
+by GPT-5.4 with the embryo in front of it, no score record contains a judge
+failure, and in every arm the judge was told exactly what the model had been
+given. The confounded score sets ship alongside the corrected ones, under
+directory names identifying the confound.

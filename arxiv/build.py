@@ -18,36 +18,27 @@ ARXIV = ROOT / "arxiv"
 sys.path.insert(0, str(ROOT / "src"))
 
 ABSTRACT = r"""
-Embryo selection in {IVF} remains a morphology-driven judgment, and the deep
-learning systems built to standardize it operate on images alone, ranking
-blastocysts without the patient context that clinicians actually weigh; the
-largest randomized trial of that approach did not demonstrate noninferiority to
-trained embryologists. We present IVF-Bench, a rubric-based benchmark for
-evaluating whether vision-language models can perform the full assessment: 753
-blastocyst cases from the public Kromp dataset, each pairing a real embryo
-image and its Gardner annotation with real cycle data and outcomes, together
-with patient-history fields sampled from published population distributions and
-explicitly labeled as generated, since no public dataset links such context to
-embryo images. Models produce open-ended assessments graded on five clinical
-rubrics by an {LLM} judge, and their stated implantation probabilities are scored
-against recorded outcomes. Across eight systems, seven of them frontier or open-weight baselines,
-clinical integration is uniformly strong while outcome discrimination is not,
-with {AUROC} never exceeding 0.562 and every system scoring a worse Brier than a
-constant set to the cohort pregnancy rate. Post-training Qwen 3.5-9B with {ORPO}
-on 500 benchmark-derived training pairs improves all five rubrics and places it
-second of eight, ahead of Claude Opus 4.6 (4.11 against 4.01 held out,
-$p{=}0.007$, as scored by a single judge that also authored most of the training
-targets) at roughly one seventh of the marginal inference cost, indicating that the
-reasoning component of embryo assessment does not require frontier-scale models,
-while the prediction ceiling reflects the absence of context-linked outcome data
-rather than a limitation of the models themselves. We release the benchmark, the
-trained model, and all 5,194 responses with judge transcripts.
+Embryo selection in {IVF} still rests on morphology, and the systems built to
+standardise it rank blastocysts from images alone, without the patient context
+clinicians weigh. We present IVF-Bench: 753 blastocyst cases from the public
+Kromp dataset, each pairing a real embryo image and its Gardner annotation with
+that patient's cycle data and recorded outcome, plus patient-history fields
+sampled from published distributions and labelled as generated. Models write an
+open-ended assessment, scored on five clinical rubrics by a judge shown the same
+embryo and on the implantation probability they state. Across eight systems,
+clinical integration is uniformly strong and outcome discrimination is not:
+{AUROC} never exceeds 0.562, which a logistic regression on the measured fields
+alone matches, placing the ceiling in the data rather than the models.
+Post-training Qwen 3.5-9B with {ORPO} on 500 benchmark-derived pairs raises it
+24.6\% over its own base, a gain a second judge puts at 15.5\%; the second place
+it buys, ahead of Claude Opus 4.6, holds under one judge and not the other,
+because judges favour their own lineage. We release the benchmark, the model, and
+all 5,194 responses with transcripts from both judges.
 """
 
 CITATION = r"""@article{correa2026ivfbench,
   author  = {Correa, Andrew G. A. and Yoon, Brittany},
-  title   = {{IVF-Bench}: A Rubric-Based Standard for Evaluating
-             Vision-Language Models on {IVF} Clinical Reasoning},
+  title   = {{IVF-Bench}: Evaluating Vision-Language Models on IVF Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }"""
@@ -153,19 +144,33 @@ def distribution_appendix() -> str:
 
 def artifact_appendix() -> str:
     return (
-        "The benchmark, the evaluation code, every model response, every judge "
-        "transcript, and the analysis that produced each interval reported here "
-        "are available at \\url{https://github.com/The-Fertility-Plan/ivf-bench}. "
+        "The benchmark, the evaluation code, every response and judge transcript, and "
+        "the analysis behind each interval are at "
+        "\\url{https://github.com/The-Fertility-Plan/ivf-bench}. "
         "The post-trained model is at "
         "\\url{https://huggingface.co/thefertilityplan/ivf-bench-qwen9b-vlm-orpo} "
         "and the preference dataset at "
         "\\url{https://huggingface.co/datasets/thefertilityplan/ivf-bench-orpo-qwen9b-clipped}. "
         "Code is released under Apache 2.0.\n\n"
+        "\\begin{sloppypar}\n"
+        "Judge transcripts are grouped by the condition the judge was in, so any "
+        "comparison here can be recomputed and any claim about a confound checked. "
+        "\\texttt{scores\\_sighted} holds the scores reported throughout, produced "
+        "by a judge shown the embryo; \\texttt{scores} holds the earlier blind "
+        "judge, which Section~\\ref{sec:robustness} compares against; "
+        "\\texttt{scores\\_sonnet\\_sighted} holds the cross-judge pass; and the "
+        "directories named for a confound hold the superseded runs described in "
+        "Appendix~\\ref{app:defects}. "
+        "\\texttt{provider\\_manifest.json} records which third-party host served "
+        "each call, so the provider mixture noted in Section~\\ref{sec:setup} can "
+        "be recomputed. We do not ship the full raw API envelopes, which run to "
+        "125\\,MB and add nothing the response and manifest files do not "
+        "already carry.\n\\end{sloppypar}\n\n"
         "We do not redistribute the embryo images. They belong to the Kromp "
         "blastocyst dataset \\citep{kromp2023}, are available under CC BY 4.0 at "
         "\\url{https://doi.org/10.6084/m9.figshare.20123153.v3}, and our release "
         "rebuilds every case from that source deterministically.\n\n"
-        "To cite this work:\n\n\\begin{lstlisting}\n" + CITATION + "\n\\end{lstlisting}\n"
+        "To cite:\n\\vspace{-0.4em}\n\\begin{lstlisting}[frame=none, backgroundcolor=\\color{white}]\n" + CITATION + "\n\\end{lstlisting}\n"
     )
 
 
@@ -179,6 +184,7 @@ def main() -> None:
         ("RESULTS_PLACEHOLDER", section("RESULTS", sec)),
         ("ORPO_PLACEHOLDER", section("ORPO", sec)),
         ("ROBUSTNESS_PLACEHOLDER", section("ROBUSTNESS", sec)),
+        ("JUDGELESSONS_PLACEHOLDER", section("JUDGELESSONS", sec)),
         ("LIMITATIONS_PLACEHOLDER", section("LIMITATIONS", sec)),
         ("RELEASE_PLACEHOLDER", section("RELEASE", sec)),
         ("PROMPT_APPENDIX_PLACEHOLDER", prompt_appendix()),
@@ -188,7 +194,6 @@ def main() -> None:
         ("ARTIFACT_APPENDIX_PLACEHOLDER", artifact_appendix()),
         ("FIG_PIPELINE_PLACEHOLDER", figure("FIG_PIPELINE")),
         ("FIG_RUBRICS_PLACEHOLDER", figure("FIG_RUBRICS")),
-        ("FIG_ABLATION_PLACEHOLDER", figure("FIG_ABLATION")),
         ("FIG_BASERATE_PLACEHOLDER", figure("FIG_BASERATE")),
     ]:
         if placeholder not in tpl:
